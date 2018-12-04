@@ -1,0 +1,9 @@
+{
+    "type": "InlineHtml",
+    "config": {
+        "className": "bottom-by",
+        "text": "Created by the Geoforms Lab",
+        "template": "",
+        "templateVariablesScript": ""
+    }
+}

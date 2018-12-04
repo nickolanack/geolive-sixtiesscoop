@@ -1,0 +1,9 @@
+{
+    "type": "InlineHtml",
+    "config": {
+        "className": "site-title site-logo",
+        "text": "<h1>Mapping the indigenous adoptee diaspora<\/h1>",
+        "template": "",
+        "templateVariablesScript": ""
+    }
+}

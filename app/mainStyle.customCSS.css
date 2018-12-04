@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.view-main {
+    text-align: center;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-title h1 {
+    font-weight: 100;
+    float: left;
+    margin: 0;
+    text-indent: 100px;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+
+.site-logo h1{
+    
+    height: 100px;
+    background-image: url(https://sixtiesscoopnetwork.org/wp-content/uploads/2018/01/LOGO300.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+}
+
+
+
+.ui-view.section-top {
+    background-color: rgba(0,0,0,0.1);
+    display: block;
+    padding: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    z-index: 1;
+    height: 100px;
+}
+
+
+
+.bottom-by {
+    float: right;
+}
