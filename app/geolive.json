@@ -693,7 +693,7 @@
         "parameters": {
             "widgetTitle": "",
             "target": "forTheMap",
-            "offset": "100",
+            "offset": "150",
             "maxHeight": "1000",
             "minHeight": "400",
             "customScript": "",
