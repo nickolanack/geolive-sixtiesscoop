@@ -737,7 +737,7 @@
                                     "formatModuleScript": "",
                                     "resolveItemScript": "return item",
                                     "filterModulesScript": "return list",
-                                    "itemButtonsScript": "return [];",
+                                    "itemButtonsScript": "scoopStoryView.metadata.positions.content.modules.1.config.itemButtonsScript.js",
                                     "insertAtTop": false,
                                     "targetName": "",
                                     "getItemListScript": "return [];",
