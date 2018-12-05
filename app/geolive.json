@@ -723,7 +723,7 @@
                                 "type": "UIListView",
                                 "config": {
                                     "listClassName": "story-list",
-                                    "className": "",
+                                    "className": "story-card",
                                     "viewType": "view",
                                     "namedView": "scoopStoryDetail",
                                     "shouldRender": true,
