@@ -792,6 +792,15 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "",
+                                    "text": "<h3>label<\/h3>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
+                            },
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
                                     "text": "<p>content<\/p>",
                                     "template": "",
                                     "templateVariablesScript": ""

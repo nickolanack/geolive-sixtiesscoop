@@ -2,7 +2,7 @@
     "type": "InlineHtml",
     "config": {
         "className": "",
-        "text": "<h3>label<\/h3>",
+        "text": "<div class=\"card-img\"><\/div>",
         "template": "",
         "templateVariablesScript": ""
     }
