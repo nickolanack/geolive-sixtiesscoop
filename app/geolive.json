@@ -800,7 +800,7 @@
         "name": "Side Panel",
         "instance": "SidePanel",
         "parameters": {
-            "target": "map.1",
+            "target": "forTheMap",
             "customScript": "",
             "widgetTitle": "",
             "readAccess": "public",
