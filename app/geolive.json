@@ -655,7 +655,7 @@
         "parameters": {
             "widgetTitle": "Scoop Story",
             "target": "forTheMap",
-            "className": "",
+            "className": "overlay-bar",
             "viewType": "view",
             "namedView": "scoopStoryView",
             "shouldRender": true,
