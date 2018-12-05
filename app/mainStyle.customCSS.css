@@ -37,6 +37,11 @@
 }
 
 
+.MapOverlayView.bottom-center.UIMapControl {
+    width: 100%;
+    background: white;
+}
+
 
 .bottom-by {
     float: right;
