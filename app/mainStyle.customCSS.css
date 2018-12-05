@@ -81,7 +81,11 @@
 .SideBarWidget {
     width: 0;
 }
-
+.SideBarWidget.right>.toggle-button, .SideBarWidget.right.active>.toggle-button {
+    background-color: white;
+    background-image: url(https://sixtyscoop.geoforms.ca/php-core-app/assets/Control%20Panel%20Icons/search.png);
+    background-size: 60%;
+}
 
 
  
