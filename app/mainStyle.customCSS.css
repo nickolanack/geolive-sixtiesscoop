@@ -41,3 +41,13 @@
 .bottom-by {
     float: right;
 }
+
+span.array-module.ui-list-view.story-list .ui-view {
+    display: inline-block;
+    height: 100px;
+    width: 80px;
+    background: white;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
