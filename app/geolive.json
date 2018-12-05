@@ -722,7 +722,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "",
+                                    "listClassName": "story-list",
                                     "className": "",
                                     "viewType": "view",
                                     "namedView": "scoopStoryDetail",
