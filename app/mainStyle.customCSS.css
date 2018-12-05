@@ -42,7 +42,7 @@
     float: right;
 }
 
-span.array-module.ui-list-view.story-list .ui-view {
+.ui-view.story-card {
     display: inline-block;
     height: 100px;
     width: 80px;
