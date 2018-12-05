@@ -795,5 +795,12 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.15": {
+        "name": "Side Panel",
+        "instance": "SidePanel",
+        "parameters": {
+            "target": "map.1"
+        }
     }
 }
