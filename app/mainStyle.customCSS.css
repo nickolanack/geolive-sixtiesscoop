@@ -58,5 +58,14 @@
     background-color: rgba(0,0,0,0.3);
 }
 
+.story-card h3 {
+    margin: 2px;
+    text-align: left;
+}
+
+.story-card p {
+    text-align: left;
+    margin: 2px;
+}
 
 
