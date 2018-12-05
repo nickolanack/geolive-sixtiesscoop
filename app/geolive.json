@@ -43,7 +43,14 @@
             "uploadViewInlineCss": "",
             "uploadViewPageScript": "",
             "enableFileAttributes": false,
-            "fileAttributesTableName": "filesystemAttributes"
+            "fileAttributesTableName": "filesystemAttributes",
+            "useS3Storage": true,
+            "bucket": "nickolanackbucket",
+            "folder": "sixties-scoop",
+            "region": "us-west-2",
+            "version": "latest",
+            "key": "XXXX-XXXX",
+            "secret": "XXXX-XXXX"
         }
     },
     "plugin.8": {
