@@ -1,10 +1,21 @@
 {
-    "type": "WizardTitleField",
+    "type": "FormTextField",
     "config": {
-        "label": "Title",
-        "message": "add a title",
         "className": "",
+        "label": "Email",
+        "placeholder": "email",
+        "lines": 1,
         "maxChars": 0,
-        "textFormatScript": ""
+        "mandatory": false,
+        "multiEntry": false,
+        "muliTemplate": "lines",
+        "multiMessage": "add another value",
+        "formatter": "none",
+        "onRenderTextFieldScript": "inputElement.disabled=true;",
+        "formatValueScript": "",
+        "getValueScript": " return item.options.metadata.email",
+        "updateValueScript": " object.value=value ",
+        "submitValueScript": "",
+        "validateValueScript": " return defaultValidationFn() "
     }
 }

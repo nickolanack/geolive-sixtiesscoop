@@ -1080,16 +1080,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 148,
-                            "y": 280
+                            "x": 158,
+                            "y": 290
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 108,
-                                    "y": 446
+                                    "x": 118,
+                                    "y": 456
                                 }
                             }
                         ],
@@ -1102,7 +1102,38 @@
                                 },
                                 "content": {
                                     "modules": [
-                                        "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                        "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "User Name",
+                                                "placeholder": "username",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "onRenderTextFieldScript": "inputElement.disabled=true;",
+                                                "formatValueScript": "",
+                                                "getValueScript": "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.1.config.getValueScript.js",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardTitleField",
+                                            "config": {
+                                                "label": "Title",
+                                                "message": "add a title",
+                                                "className": "",
+                                                "maxChars": 0,
+                                                "textFormatScript": ""
+                                            }
+                                        }
                                     ]
                                 },
                                 "footer": {
