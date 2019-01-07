@@ -50,7 +50,9 @@
             "region": "us-west-2",
             "version": "latest",
             "key": "XXXX-XXXX",
-            "secret": "XXXX-XXXX"
+            "secret": "XXXX-XXXX",
+            "useCloudFront": false,
+            "cloudFrontDomain": ""
         }
     },
     "plugin.8": {
@@ -137,7 +139,8 @@
         "parameters": {
             "clientSecretUrl": "XXXX-XXXX",
             "clientPublicUrl": "https:\/\/251d6338a77e4fc3a8f3ad3acef598e0@sentry.io\/1335281",
-            "enabled": true
+            "enabled": true,
+            "enabledFrontEnd": false
         }
     },
     "plugin.16": {
@@ -157,6 +160,11 @@
             "layerDisplayFilterScript": "",
             "formatMapitemScript": ""
         }
+    },
+    "plugin.18": {
+        "name": "Pusher Message Server",
+        "instance": "PusherMessages",
+        "parameters": "_PusherMessages.json"
     },
     "widget.1": {
         "name": "Detail View",
@@ -245,9 +253,11 @@
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
+            "cacheable": false,
+            "link": false,
+            "widgetTitle": "mainStyle",
             "target": "mainStyle",
             "customCSS": "mainStyle.customCSS.css",
-            "widgetTitle": "mainStyle",
             "readAccess": "public"
         }
     },
