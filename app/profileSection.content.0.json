@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "if(AppClient.getUserType()!==\"guest\"){\n    \n    \n    \n}\n\nreturn [\n        new ModalFormButtonModule(application, item, {\n             \n                label: \"Register\",\n                formName: \"registerFormView\",\n                \"class\": \"primary-btn share\"\n    \n        \n         }),\n         new ModalFormButtonModule(application, item, {\n             \n                label: \"Login\",\n                formName: \"loginFormView\",\n                \"class\": \"primary-btn share\"\n    \n        \n         })\n    \n    \n    ]",
+        "script": "if(AppClient.getUserType()!==\"guest\"){\n    \n    \n    \n}\n\nreturn [\n        new ModalFormButtonModule(application, item, {\n             \n                label: \"Register\",\n                formName: \"registerFormView\",\n                \"class\": \"primary-btn register\"\n    \n        \n         }),\n         new ModalFormButtonModule(application, item, {\n             \n                label: \"Login\",\n                formName: \"loginFormView\",\n                \"class\": \"primary-btn login\"\n    \n        \n         })\n    \n    \n    ]",
         "description": "Info about my custom script"
     }
 }
