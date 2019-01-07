@@ -88,7 +88,7 @@
     background-size: 60%;
 }
 
-.profile-section .array-module .primary-btn {
+.profile-section  .primary-btn {
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -101,15 +101,15 @@
     margin-top: 25px;
 }
 
-.profile-section .array-module .primary-btn:hover {
+.profile-section .primary-btn:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     background-color: #4987cc;
 }
 
 
-.profile-section .array-module .login {}
-.profile-section .array-module .logout {}
-.profile-section .array-module .register {}
+.profile-section .login {}
+.profile-section .logout {}
+.profile-section .register {}
 
 .ui-view.profile-section {
     float: right;
@@ -129,6 +129,22 @@
 .profile-section .array-module>div {
     display: inline-block;
     vertical-align: top;
+}
+
+.profile-section span.user-name {
+    line-height: 80px;
+    }
+
+.profile-section .inline-btn.profile {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
+
+.profile-section .inline-btn{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #5ea5e9;
 }
 
 
