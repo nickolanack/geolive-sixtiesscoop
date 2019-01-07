@@ -1,4 +1,4 @@
 {
-    "type": "WizardLogin",
+    "type": "plugin.SingleSignOn.FacebookLogin",
     "config": {}
 }
