@@ -88,7 +88,7 @@
     background-size: 60%;
 }
 
-primary-btn, .inline-btn {
+.primary-btn, .inline-btn {
     cursor: pointer;
 }
 .profile-section  .primary-btn {
