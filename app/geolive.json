@@ -23,7 +23,7 @@
         "name": "Monolog Plugin",
         "instance": "Monolog",
         "parameters": {
-            "enabled": true,
+            "enabled": false,
             "logPath": "{core}\/..\/logs",
             "logToSentry": false
         }
