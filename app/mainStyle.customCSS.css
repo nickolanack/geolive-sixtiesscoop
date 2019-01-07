@@ -88,6 +88,9 @@
     background-size: 60%;
 }
 
+primary-btn, .inline-btn {
+    cursor: pointer;
+}
 .profile-section  .primary-btn {
     background-color: #549ae6;
     border: none;
@@ -99,13 +102,23 @@
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
     font-size: 22px;
     margin-top: 25px;
+    border-radius:3px;
+}
+
+.profile-section .inline-btn{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #5ea5e9;
 }
 
 .profile-section .primary-btn:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     background-color: #4987cc;
 }
-
+.profile-section .inline-btn:hover {
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-color: #4987cc;
+}
 
 .profile-section .login {}
 .profile-section .logout {}
@@ -141,11 +154,7 @@
     left: 20px;
 }
 
-.profile-section .inline-btn{
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px solid #5ea5e9;
-}
+
 
 
 
