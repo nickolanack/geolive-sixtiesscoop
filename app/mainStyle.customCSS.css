@@ -120,7 +120,12 @@
     border-color: #4987cc;
 }
 
-.profile-section .login {}
+.profile-section .login {
+    background-color: #639d16;
+}
+.profile-section .login:hover {
+    background-color: #5e8e12;
+}
 .profile-section .logout {}
 .profile-section .register {}
 
