@@ -166,6 +166,15 @@
         "instance": "PusherMessages",
         "parameters": "_PusherMessages.json"
     },
+    "plugin.19": {
+        "name": "Single SignOn Plugin",
+        "instance": "SingleSignOn",
+        "parameters": {
+            "facebookAppId": "",
+            "facebookAppSecret": "",
+            "googleAuthClientId": ""
+        }
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
