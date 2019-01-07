@@ -571,7 +571,7 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "",
+                                    "className": "profile-section",
                                     "viewType": "view",
                                     "namedView": "profileSection",
                                     "shouldRender": true,
