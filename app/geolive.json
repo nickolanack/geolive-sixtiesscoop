@@ -1080,11 +1080,18 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 128,
-                            "y": 260
+                            "x": 138,
+                            "y": 270
                         },
                         "children": [
-                            "profileFormView.metadata.children.1.children.0.json"
+                            "profileFormView.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 98,
+                                    "y": 436
+                                }
+                            }
                         ],
                         "builderMetadata": {
                             "positions": {
@@ -1112,7 +1119,8 @@
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)"
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
@@ -1131,7 +1139,10 @@
                                 "content",
                                 "footer",
                                 "menu"
-                            ]
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
                         }
                     }
                 ]
