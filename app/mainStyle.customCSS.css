@@ -162,4 +162,31 @@
 
 
 
+/*Forms*/
+
+
+textarea[disabled] {
+    background: rgba(0,0,0,0.1);
+    color: #549ae6;
+}
+
+.uitext-container .label {
+    font-size:15px;
+    color: gray;
+    padding: 5px 0;
+    font-weight: 100;
+}
+
+
+
+.text-input {
+    border-radius: 2px;
+    border-color: gray;
+}
+
+.uitext-container {
+    margin-bottom: 15px;
+}
+
+
 
