@@ -1,4 +1,8 @@
 {
     "type": "WizardScriptElement",
-    "config": {}
+    "config": {
+        "name": "My Custom Script",
+        "script": "return \"profile section\"",
+        "description": "Info about my custom script"
+    }
 }
