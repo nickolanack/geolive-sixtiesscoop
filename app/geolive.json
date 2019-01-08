@@ -1169,44 +1169,5 @@
             "onLoadScript": "",
             "readAccess": "public"
         }
-    },
-    "widget.20": {
-        "name": "Detail View",
-        "instance": "DetailView",
-        "parameters": {
-            "widgetTitle": "yourStoryView",
-            "target": "yourStoryView",
-            "templateName": "yourStoryView",
-            "requireTarget": true,
-            "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
-            "notifyViewer": false,
-            "metadata": {
-                "positions": {
-                    "title": {
-                        "modules": []
-                    },
-                    "content": {
-                        "modules": [
-                            "yourStoryView.metadata.positions.content.modules.0.json"
-                        ]
-                    },
-                    "footer": {
-                        "modules": []
-                    },
-                    "menu": {
-                        "modules": []
-                    }
-                },
-                "positionList": [
-                    "title",
-                    "content",
-                    "footer",
-                    "menu"
-                ],
-                "_diagramState": []
-            },
-            "readAccess": "public"
-        }
     }
 }
