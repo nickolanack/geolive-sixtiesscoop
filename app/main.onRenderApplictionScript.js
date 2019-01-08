@@ -2,8 +2,8 @@ GetWidget("mainStyle")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 GetWidget("loginFormView")->display($targetInstance);
 GetWidget("profileFormView")->display($targetInstance);
-GetWidget("addCardView")->display($targetInstance);
-GetWidget("createStoryForm")->display($targetInstance);
+//GetWidget("addCardView")->display($targetInstance);
+//GetWidget("createStoryForm")->display($targetInstance);
 
 
 
