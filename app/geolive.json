@@ -766,7 +766,37 @@
                     },
                     "content": {
                         "modules": [
-                            "scoopStoryView.metadata.positions.content.modules.0.json"
+                            "scoopStoryView.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "story-list",
+                                    "className": "story-card",
+                                    "viewType": "view",
+                                    "namedView": "scoopStoryDetail",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "scoopStoryView.metadata.positions.content.modules.1.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
                         ]
                     },
                     "footer": {
