@@ -763,7 +763,7 @@
             "templateName": "scoopStoryView",
             "requireTarget": true,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "scoopStoryView.onRenderApplictionScript.js",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
