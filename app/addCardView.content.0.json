@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "return new ModalFormButtonModule(application, item, {\n         \n            label: \"Add Place Card\",\n            formName: \"createStoryForm\",\n            \"class\": \"add-card\"\n\n    \n});",
+        "script": "var button =new Element('button',{html:\"Add Card\", \"class\":\"add-card\"});\nnew UIModalFormButton(\n                            button, \n                            application, item, \n                            {\n                                formName:\"createStoryForm\", \n                                formOptions:{template:\"form\"}\n                                \n                            }\n                        );\n                        \n                        \n                        \n                        return button;",
         "description": "Info about my custom script"
     }
 }
