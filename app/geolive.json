@@ -1204,13 +1204,13 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none",
+            "target": "demoConfig",
             "contentTemplate": "",
             "comments": "",
             "formatParametersScript": "return $parameters;",
             "formatOutputScript": "return $parameters;",
             "parameters": [
-                "widget.Configuration.21.parameters.0.json",
+                "demoConfig.parameters.0.json",
                 {
                     "type": "input",
                     "name": "item0Name",
@@ -1229,7 +1229,7 @@
             ],
             "item0Name": "",
             "item0Description": "",
-            "widgetTitle": "",
+            "widgetTitle": "demoConfig",
             "readAccess": "public"
         }
     }
