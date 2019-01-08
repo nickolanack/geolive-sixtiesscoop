@@ -1,7 +1,7 @@
 {
     "type": "FormTextField",
     "config": {
-        "className": "",
+        "className": "readonly",
         "label": "Email",
         "placeholder": "email",
         "lines": 1,
@@ -11,7 +11,7 @@
         "muliTemplate": "lines",
         "multiMessage": "add another value",
         "formatter": "none",
-        "onRenderTextFieldScript": "inputElement.disabled=true;",
+        "onRenderTextFieldScript": "inputElement.disabled=true; ",
         "formatValueScript": "",
         "getValueScript": " return item.options.metadata.email",
         "updateValueScript": " object.value=value ",
