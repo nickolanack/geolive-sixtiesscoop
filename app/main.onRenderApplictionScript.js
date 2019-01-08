@@ -39,8 +39,8 @@ IncludeJSBlock('
         Extends: StoryCard
     });
     
-    var OriginCard=new Class({
-        Extends: StoryCard
+    var AddCard=new Class({
+       Extends: MockDataTypeItem
     });
     
     
