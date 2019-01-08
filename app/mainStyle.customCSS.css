@@ -189,4 +189,13 @@ textarea[disabled] {
 }
 
 
+.uitext-container.readonly .label:after {
+    content: " read only";
+    font-size: .6em;
+    float: right;
+    font-style: italic;
+    position: relative;
+    top: 9px;
+}
+
 
