@@ -1248,7 +1248,7 @@
             "target": "addCardView",
             "templateName": "addCardView",
             "requireTarget": true,
-            "resolveItemScript": "return item",
+            "resolveItemScript": "addCardView.resolveItemScript.js",
             "onRenderApplictionScript": "",
             "notifyViewer": false,
             "metadata": {
