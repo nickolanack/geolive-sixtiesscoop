@@ -1237,16 +1237,16 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none",
+            "target": "siteConfig",
             "contentTemplate": "",
             "comments": "",
             "formatParametersScript": "return $parameters;",
             "formatOutputScript": "return $parameters;",
             "parameters": [
-                "widget.Configuration.22.parameters.0.json"
+                "siteConfig.parameters.0.json"
             ],
             "siteLogo": [],
-            "widgetTitle": "",
+            "widgetTitle": "siteConfig",
             "readAccess": "public"
         }
     }
