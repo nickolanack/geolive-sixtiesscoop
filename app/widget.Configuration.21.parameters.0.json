@@ -1,0 +1,9 @@
+{
+    "type": "images",
+    "name": "item0Image",
+    "default": [],
+    "label": "Image",
+    "maxHeight": 256,
+    "maxWidth": 256,
+    "limit": 1
+}

@@ -1204,7 +1204,31 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none"
+            "target": "none",
+            "contentTemplate": "",
+            "comments": "",
+            "formatParametersScript": "return $parameters;",
+            "formatOutputScript": "return $parameters;",
+            "parameters": [
+                "widget.Configuration.21.parameters.0.json",
+                {
+                    "type": "input",
+                    "name": "item0Name",
+                    "default": "",
+                    "label": "Name"
+                },
+                {
+                    "type": "input",
+                    "name": "item0Description",
+                    "default": "",
+                    "label": "Description"
+                }
+            ],
+            "item0Image": [],
+            "item0Name": "",
+            "item0Description": "",
+            "widgetTitle": "",
+            "readAccess": "public"
         }
     }
 }
