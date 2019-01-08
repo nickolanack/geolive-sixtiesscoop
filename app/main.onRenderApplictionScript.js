@@ -6,6 +6,19 @@ GetWidget("profileFormView")->display($targetInstance);
 
 IncludeJSBlock('
 
+
+    var ScoopStories={
+        getCurrentCards:function(callback){
+            
+            callback([
+                new OriginCard({}),  
+                new StoryCard({}),
+                new AddCard({}),
+            ]);
+            
+        }
+    }
+
     var StoryCard=new Class({
         Extends: DataTypeObject,
 		Implements: [Events],
