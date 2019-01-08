@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "return new ModalFormButtonModule(application, new GeoliveMarker(application, application, {}), {\n         \n            label: \"Add Place Card\",\n            formName: \"createStoryForm\",\n            \"class\": \"add-card\"\n\n    \n});",
+        "script": "return new ModalFormButtonModule(application, application.createMapFeature('point', {}), {\n         \n            label: \"Add Place Card\",\n            formName: \"createStoryForm\",\n            \"class\": \"add-card\"\n\n    \n});",
         "description": "Info about my custom script"
     }
 }
