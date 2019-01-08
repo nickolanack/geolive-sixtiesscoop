@@ -1,7 +1,7 @@
 {
     "type": "FormTextField",
     "config": {
-        "className": "readonly",
+        "className": "readonly col-2",
         "label": "Email",
         "placeholder": "email",
         "lines": 1,

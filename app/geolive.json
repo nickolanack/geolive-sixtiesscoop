@@ -1080,16 +1080,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 178,
-                            "y": 310
+                            "x": 188,
+                            "y": 320
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 138,
-                                    "y": 486
+                                    "x": 148,
+                                    "y": 496
                                 }
                             }
                         ],
@@ -1106,7 +1106,7 @@
                                         {
                                             "type": "FormTextField",
                                             "config": {
-                                                "className": "readonly",
+                                                "className": "readonly col-2",
                                                 "label": "User Name",
                                                 "placeholder": "username",
                                                 "lines": 1,
