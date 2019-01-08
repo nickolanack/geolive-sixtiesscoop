@@ -19,7 +19,7 @@
 .site-logo h1{
     
     height: 100px;
-    background-image: url(https://sixtiesscoopnetwork.org/wp-content/uploads/2018/01/LOGO300.png);
+    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('siteLogo')[0].'?thumb=>100x>100');?>);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto 100%;
