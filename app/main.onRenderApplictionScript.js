@@ -13,6 +13,11 @@ IncludeJSBlock('
 		    var me=this;
 		    me.type = "Route.card";
 			me._id = config.id||-1;
+			me._config=JSON.parse(JSON.stringify(config));
+			
+			me.getConfig=function(){
+			    return JSON.parse(JSON.stringify(me._config));
+			};
 			
     		(["name", "description", "latlng"]).forEach(function(k){
     		    me["_"+k]=config[k]||"{"+k+"}";
@@ -29,6 +34,17 @@ IncludeJSBlock('
     
      
     });
+    
+    var OriginCard=new Class({
+        Extends: StoryCard
+    });
+    
+    var OriginCard=new Class({
+        Extends: StoryCard
+    });
+    
+    
+    
 
 
 
