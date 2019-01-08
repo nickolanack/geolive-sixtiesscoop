@@ -175,6 +175,12 @@
             "googleAuthClientId": ""
         }
     },
+    "plugin.20": {
+        "name": "Attributes",
+        "instance": "Attributes",
+        "parameters": {},
+        "attributes": "plugin.Attributes.20.attributes.json"
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
