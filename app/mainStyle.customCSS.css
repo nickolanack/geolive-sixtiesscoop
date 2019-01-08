@@ -50,7 +50,9 @@
 .bottom-by {
     float: right;
 }
-
+.story-list
+    vertical-align: top;
+}
 .ui-view.story-card {
     display: inline-block;
     height: 100px;
