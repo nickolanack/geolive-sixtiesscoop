@@ -34,6 +34,9 @@ IncludeJSBlock('
 			me.getConfig=function(){
 			    return JSON.parse(JSON.stringify(me._config));
 			};
+			me.getAddress:function(){
+			    return me.getLatlng();
+			}
 			
     		(["name", "description", "latlng"]).forEach(function(k){
     		    me["_"+k]=config[k]||"{"+k+"}";
