@@ -1,5 +1,5 @@
-if(AppClient.getUserType()!=="guest"){
-    return "yourStoryView";
-}
+// if(AppClient.getUserType()!=="guest"){
+//     return "yourStoryView";
+// }
 
 return namedView
