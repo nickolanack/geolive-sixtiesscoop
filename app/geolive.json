@@ -1174,9 +1174,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "yourStoryDetail",
-            "target": "none",
-            "templateName": "{target}",
+            "widgetTitle": "yourStoryView",
+            "target": "yourStoryView",
+            "templateName": "yourStoryView",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -1191,17 +1191,17 @@
                 "positions": {
                     "title": {
                         "modules": [
-                            "yourStoryDetail.metadata.positions.title.modules.0.json"
+                            "yourStoryView.metadata.positions.title.modules.0.json"
                         ]
                     },
                     "content": {
                         "modules": [
-                            "yourStoryDetail.metadata.positions.content.modules.0.json"
+                            "yourStoryView.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
                         "modules": [
-                            "yourStoryDetail.metadata.positions.footer.modules.0.json"
+                            "yourStoryView.metadata.positions.footer.modules.0.json"
                         ]
                     },
                     "menu": {
