@@ -1199,5 +1199,12 @@
             "onLoadScript": "",
             "readAccess": "public"
         }
+    },
+    "widget.21": {
+        "name": "Configuration",
+        "instance": "Configuration",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
