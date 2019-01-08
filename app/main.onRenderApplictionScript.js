@@ -4,6 +4,36 @@ GetWidget("loginFormView")->display($targetInstance);
 GetWidget("profileFormView")->display($targetInstance);
 
 
+IncludeJSBlock('
+
+    var StoryCard=new Class({
+        Extends: DataTypeObject,
+		Implements: [Events],
+		initialize: function(config) {
+		    me.type = 'Route.card';
+			me._id = config.id||-1
+			
+    		(["name", "description", "latlng"]).forEach(function(k){
+    		    me['_'+k]=config[k]||'{'+k+'}';
+    		    me['set'+k.capitalize()]=function(v){
+    		         me['_'+k]=v;
+    		    };
+    		    me['get'+k.capitalize()]=function(){
+    		         return me['_'+k];
+    		    }
+    		    
+    		})
+			
+		}
+    
+     
+    });
+
+
+
+');
+
+
 HtmlDocument()->META(HtmlDocument()->website(), 'base');
 
 
