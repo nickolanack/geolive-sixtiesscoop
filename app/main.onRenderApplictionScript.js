@@ -10,6 +10,7 @@ IncludeJSBlock('
         Extends: DataTypeObject,
 		Implements: [Events],
 		initialize: function(config) {
+		    var me=this;
 		    me.type = "Route.card";
 			me._id = config.id||-1
 			
