@@ -707,7 +707,7 @@
             "viewType": "view",
             "namedView": "scoopStoryView",
             "shouldRender": true,
-            "namedViewScript": "Scoop Story.namedViewScript.js",
+            "namedViewScript": "\r\n\r\nreturn namedView",
             "showInlineEdit": false,
             "namedFormView": "defaultView",
             "formOptions": "{}",
