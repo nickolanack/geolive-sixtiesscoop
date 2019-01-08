@@ -1224,7 +1224,9 @@
                     "label": "Description"
                 }
             ],
-            "item0Image": [],
+            "item0Image": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/6Z6_[ImAgE]_[G]_Y66_ylY.png"
+            ],
             "item0Name": "",
             "item0Description": "",
             "widgetTitle": "",
