@@ -10,16 +10,16 @@ IncludeJSBlock('
         Extends: DataTypeObject,
 		Implements: [Events],
 		initialize: function(config) {
-		    me.type = 'Route.card';
+		    me.type = "Route.card";
 			me._id = config.id||-1
 			
     		(["name", "description", "latlng"]).forEach(function(k){
-    		    me['_'+k]=config[k]||'{'+k+'}';
-    		    me['set'+k.capitalize()]=function(v){
-    		         me['_'+k]=v;
+    		    me["_"+k]=config[k]||"{"+k+"}";
+    		    me["set"+k.capitalize()]=function(v){
+    		         me["_"+k]=v;
     		    };
-    		    me['get'+k.capitalize()]=function(){
-    		         return me['_'+k];
+    		    me["get"+k.capitalize()]=function(){
+    		         return me["_"+k];
     		    }
     		    
     		})
