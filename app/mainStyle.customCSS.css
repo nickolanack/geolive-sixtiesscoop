@@ -181,7 +181,7 @@ textarea[disabled] {
 
 .text-input {
     border-radius: 2px;
-    border-color: gray;
+    border: 1px solid gray;
 }
 
 .uitext-container {
