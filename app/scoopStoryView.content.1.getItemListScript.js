@@ -1,8 +1,8 @@
 return [
-    new MockDataTypeItem({type:"story", id:-1}),
-    new MockDataTypeItem({type:"story", id:-1}),
-    new MockDataTypeItem({type:"story", id:-1}),
-    new MockDataTypeItem({type:"story", id:-1}),
-    new MockDataTypeItem({type:"story", id:-1}),
-    new MockDataTypeItem({type:"story", id:-1})
+    new StoryCard({id:-1, name:"Jon Brown"}),
+    new StoryCard({id:-1, name:"Vince Brown"}),
+    new StoryCard({id:-1, name:"Jon Brown"}),
+    new StoryCard({id:-1, name:"Jon Brown"}),
+    new StoryCard({id:-1, name:"Jon Brown"}),
+    new StoryCard({id:-1, name:"Jon Brown"})
     ];
