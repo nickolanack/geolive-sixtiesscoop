@@ -1245,7 +1245,9 @@
             "parameters": [
                 "siteConfig.parameters.0.json"
             ],
-            "siteLogo": [],
+            "siteLogo": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/HOf_[ImAgE]_RQa_[G]_BlH.png"
+            ],
             "widgetTitle": "siteConfig",
             "readAccess": "public"
         }
