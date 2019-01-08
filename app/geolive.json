@@ -835,33 +835,7 @@
                     },
                     "content": {
                         "modules": [
-                            "scoopStoryDetail.metadata.positions.content.modules.0.json",
-                            {
-                                "type": "InlineHtml",
-                                "config": {
-                                    "className": "",
-                                    "text": "<h3>label<\/h3>",
-                                    "template": "",
-                                    "templateVariablesScript": ""
-                                }
-                            },
-                            {
-                                "type": "InlineHtml",
-                                "config": {
-                                    "className": "",
-                                    "text": "<p>content<\/p>",
-                                    "template": "",
-                                    "templateVariablesScript": ""
-                                }
-                            },
-                            {
-                                "type": "WizardScriptElement",
-                                "config": {
-                                    "name": "My Custom Script",
-                                    "script": "scoopStoryDetail.metadata.positions.content.modules.3.config.script.js",
-                                    "description": "Info about my custom script"
-                                }
-                            }
+                            "scoopStoryDetail.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {

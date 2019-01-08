@@ -1,9 +1,8 @@
 {
-    "type": "InlineHtml",
+    "type": "WizardScriptElement",
     "config": {
-        "className": "",
-        "text": "<div class=\"card-img\"><\/div>",
-        "template": "",
-        "templateVariablesScript": ""
+        "name": "My Custom Script",
+        "script": "return [\n    new Element('div', {\"class\":\"card-img\"}),\n    new Element('h4', {\"html\":item.getName()}),\n    new Element('p', {\"html\":item.getDescription()})\n    \n    ]",
+        "description": "Info about my custom script"
     }
 }
