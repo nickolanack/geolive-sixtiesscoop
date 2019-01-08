@@ -12,7 +12,7 @@ IncludeJSBlock('
 		initialize: function(config) {
 		    var me=this;
 		    me.type = "Route.card";
-			me._id = config.id||-1
+			me._id = config.id||-1;
 			
     		(["name", "description", "latlng"]).forEach(function(k){
     		    me["_"+k]=config[k]||"{"+k+"}";
@@ -23,7 +23,7 @@ IncludeJSBlock('
     		         return me["_"+k];
     		    }
     		    
-    		})
+    		});
 			
 		}
     
