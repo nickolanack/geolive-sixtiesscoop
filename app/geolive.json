@@ -148,16 +148,18 @@
         "name": "Users",
         "instance": "Users",
         "parameters": {
-            "customUserGroups": [],
+            "customUserGroups": [
+                ""
+            ],
             "customUserScript": "",
             "customGroupMemberOfGroupScript": "",
             "defaultImage": [],
             "userProfileImageScript": "return $defaultImage;",
             "validateEmail": true,
             "magicLinkUrl": "",
-            "useRecaptcha": false,
-            "recaptchaKey": false,
-            "recaptchaSecret": false
+            "useRecaptcha": true,
+            "recaptchaKey": "XXXX-XXXX",
+            "recaptchaSecret": "XXXX-XXXX"
         }
     },
     "plugin.15": {
