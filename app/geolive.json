@@ -12,7 +12,23 @@
     "plugin.3": {
         "name": "Email",
         "instance": "Email",
-        "parameters": {}
+        "parameters": {
+            "fromEmail": "",
+            "fromEmailName": "",
+            "useSmtp": false,
+            "smtpHost": "",
+            "username": "",
+            "password": "",
+            "port": "587",
+            "useMailgun": false,
+            "domain": "",
+            "apiKey": "",
+            "validateSenderDomain": false,
+            "useGlobalMailTemplate": false,
+            "globalTemplate": "DefaultMailerTemplate",
+            "recieveMail": false,
+            "recieveMailSecretToken": "XXXX-XXXX"
+        }
     },
     "plugin.4": {
         "name": "Events",
@@ -131,7 +147,18 @@
     "plugin.14": {
         "name": "Users",
         "instance": "Users",
-        "parameters": {}
+        "parameters": {
+            "customUserGroups": [],
+            "customUserScript": "",
+            "customGroupMemberOfGroupScript": "",
+            "defaultImage": [],
+            "userProfileImageScript": "return $defaultImage;",
+            "validateEmail": true,
+            "magicLinkUrl": "",
+            "useRecaptcha": false,
+            "recaptchaKey": false,
+            "recaptchaSecret": false
+        }
     },
     "plugin.15": {
         "name": "Sentry IO Error reporting",
@@ -530,7 +557,7 @@
             },
             "widgetTitle": "Create Story",
             "templateName": "createStoryForm",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
