@@ -59,7 +59,8 @@ IncludeJSBlock('
     });
     
     var AddCard=new Class({
-       Extends: MockDataTypeItem
+       Extends: MockDataTypeItem,
+       getAddress:function(){return false;}
     });
     
     
