@@ -1036,16 +1036,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 208,
-                            "y": 340
+                            "x": 218,
+                            "y": 350
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 168,
-                                    "y": 516
+                                    "x": 178,
+                                    "y": 538
                                 }
                             }
                         ],
@@ -1086,7 +1086,7 @@
                                                 "attributeFields": [
                                                     "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
-                                                "label": "{field.label}",
+                                                "label": "Your Profile Image",
                                                 "message": "add a description",
                                                 "lines": 3,
                                                 "mandatory": true,
@@ -1094,7 +1094,7 @@
                                                 "showImages": true,
                                                 "showDocuments": true,
                                                 "showVideos": true,
-                                                "className": "Your Profile Image",
+                                                "className": "",
                                                 "maxChars": 0,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
