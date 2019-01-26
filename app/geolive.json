@@ -1652,16 +1652,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 295,
-                            "y": 151
+                            "x": 305,
+                            "y": 161
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 255,
-                                    "y": 317
+                                    "x": 265,
+                                    "y": 327
                                 }
                             }
                         ],
@@ -1694,6 +1694,48 @@
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardDescriptionField",
+                                            "config": {
+                                                "label": "Description",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": false,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "hidden-uploads",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "label": "{field.label}",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "hidden-input",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
