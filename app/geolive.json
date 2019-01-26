@@ -1320,15 +1320,15 @@
             "metadata": {
                 "title": "profileAttributes",
                 "_tableDiagramState": {
-                    "x": 388,
-                    "y": 188
+                    "x": 331,
+                    "y": 265
                 },
                 "_diagramState": {
-                    "x": 388,
-                    "y": 188
+                    "x": 331,
+                    "y": 265
                 },
                 "appliesTo": [
-                    "marker"
+                    "user"
                 ],
                 "_typeDiagramState": {
                     "x": 100,
@@ -1338,7 +1338,9 @@
                 "maxEntries": 1,
                 "createAutomatically": 1,
                 "description": "",
-                "fields": []
+                "fields": [
+                    "widget.AttributesTable.24.metadata.fields.0.json"
+                ]
             },
             "target": "profileAttributes",
             "readAccess": "public",

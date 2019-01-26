@@ -9,12 +9,45 @@
             "title": "profileAttributes",
             "readAccess": "public",
             "appliesTo": [
-                "marker"
+                "user"
             ],
             "id": "1",
             "suffix": "_2634",
             "description": "",
-            "fields": []
+            "fields": [
+                {
+                    "visibility": "public",
+                    "tableId": "1",
+                    "tableName": "profileAttributes",
+                    "tableSuffix": "_2634",
+                    "title": "icon",
+                    "label": "icon",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                }
+            ]
         }
     },
     {
