@@ -339,16 +339,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 235,
-                            "y": 91
+                            "x": 245,
+                            "y": 101
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 195,
-                                    "y": 292
+                                    "x": 205,
+                                    "y": 302
                                 }
                             }
                         ],
@@ -402,40 +402,6 @@
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "",
                                                 "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
-                                            "type": "FormTextField",
-                                            "config": {
-                                                "className": "",
-                                                "label": "When you were taken, were you placed in?",
-                                                "placeholder": "add value",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "none",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardGeocodeAddress",
-                                            "config": {
-                                                "label": "When you were taken, where were you placed?",
-                                                "message": "where were you placed",
-                                                "className": "css class name",
-                                                "maxChars": 0,
-                                                "textFormatScript": "",
-                                                "getValueScript": "return item.getAddress();",
-                                                "updateValueScript": " object.value=value; ",
-                                                "submitValueScript": "Create Story.metadata.children.1.builderMetadata.positions.content.modules.4.config.submitValueScript.js"
                                             }
                                         }
                                     ]
