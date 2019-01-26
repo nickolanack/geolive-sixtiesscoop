@@ -1218,7 +1218,9 @@
             "storyIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/shv_%5BImAgE%5D_d3r_%5BG%5D_g3M.png"
             ],
-            "repatriationIcon": [],
+            "repatriationIcon": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/VE4_dUd_[G]_bgL_[ImAgE].png"
+            ],
             "publishingOptionsIcon": []
         }
     },
