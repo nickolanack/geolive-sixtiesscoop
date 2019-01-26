@@ -1169,13 +1169,33 @@
             "formatParametersScript": "return $parameters;",
             "formatOutputScript": "return $parameters;",
             "parameters": [
-                "siteConfig.parameters.0.json"
+                "siteConfig.parameters.0.json",
+                {
+                    "type": "images",
+                    "name": "birthIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 256,
+                    "maxWidth": 256,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "storyIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 256,
+                    "maxWidth": 256,
+                    "limit": 1
+                }
             ],
             "siteLogo": [
                 "php-core-app\/users_files\/user_files_1\/Uploads\/HOf_[ImAgE]_RQa_[G]_BlH.png"
             ],
             "widgetTitle": "siteConfig",
-            "readAccess": "public"
+            "readAccess": "public",
+            "birthIcon": [],
+            "storyIcon": []
         }
     },
     "widget.23": {
