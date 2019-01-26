@@ -36,7 +36,7 @@
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('repatriationIcon')[0].'?thumb=>100x>100');?>");
 }
 .publishing-options-card .icon{
-    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>"");
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
 }
 
 
