@@ -247,5 +247,22 @@ textarea[disabled] {
 }
 
 
+.upload-btns span.image {
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.upload-btns span.image:after {
+    content: "add image";
+    white-space: nowrap;
+    position: absolute;
+    left: 30px;
+    line-height: 30px;
+    color: cornflowerblue;
+}
+
 
 
