@@ -1,3 +1,6 @@
+
+GetWidget('mainStyle')->display($targetInstance);
+
 $apikey=GetPlugin('Maps')->getParameter('googleMapsServerApiKey', '');
         if(!empty($apikey)){
             $apikey='&key='.$apikey;
