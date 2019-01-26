@@ -1652,16 +1652,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 335,
-                            "y": 191
+                            "x": 345,
+                            "y": 201
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 295,
-                                    "y": 379
+                                    "x": 305,
+                                    "y": 389
                                 }
                             }
                         ],
@@ -1725,7 +1725,7 @@
                                                 "label": "{field.label}",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
