@@ -1695,7 +1695,7 @@
             "widgetTitle": "inline-birth-form",
             "target": "inline-birth-form",
             "templateName": "inline-birth-form",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "notifyViewer": false,
