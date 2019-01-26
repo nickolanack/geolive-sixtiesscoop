@@ -1812,5 +1812,18 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.29": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false
+        }
     }
 }
