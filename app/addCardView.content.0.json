@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "var button =new Element('button',{html:item.getLabel(), \"class\":item.getClassNames()});\nbutton.appendChild('span', {\"class\":\"icon\"});\n\nnew UIModalFormButton(\n                            button, \n                            application, item, \n                            {\n                                formName:item.getFormView(), \n                                formOptions:{template:\"form\"}\n                                \n                            }\n                        );\n                        \n                        \n                        \n                        return button;",
+        "script": "var button =new Element('button',{html:item.getLabel(), \"class\":item.getClassNames()});\nbutton.appendChild(new Element('span', {\"class\":\"icon\"}));\n\nnew UIModalFormButton(\n                            button, \n                            application, item, \n                            {\n                                formName:item.getFormView(), \n                                formOptions:{template:\"form\"}\n                                \n                            }\n                        );\n                        \n                        \n                        \n                        return button;",
         "description": "Info about my custom script"
     }
 }
