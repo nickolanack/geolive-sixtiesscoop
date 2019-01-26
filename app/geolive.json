@@ -961,23 +961,25 @@
                             "registerFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 138,
-                            "y": 270
+                            "x": 162,
+                            "y": 167
                         },
                         "children": [
                             "registerFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 98,
-                                    "y": 436
+                                    "x": 122,
+                                    "y": 333
                                 }
                             }
                         ],
                         "builderMetadata": {
                             "positions": {
                                 "title": {
-                                    "modules": []
+                                    "modules": [
+                                        "registerFormView.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
                                 },
                                 "content": {
                                     "modules": [
