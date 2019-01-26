@@ -1355,25 +1355,27 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 327,
-                    "y": 257
+                    "x": 342,
+                    "y": 139
                 },
                 "_diagramState": {
-                    "x": 327,
-                    "y": 257
+                    "x": 342,
+                    "y": 139
                 },
                 "appliesTo": [
                     "marker"
                 ],
                 "_typeDiagramState": {
-                    "x": 100,
-                    "y": 300
+                    "x": 99,
+                    "y": 271
                 },
                 "readAccess": "public",
                 "maxEntries": 1,
                 "createAutomatically": 1,
                 "description": "",
-                "fields": []
+                "fields": [
+                    "widget.AttributesTable.25.metadata.fields.0.json"
+                ]
             },
             "target": "storyAttributes",
             "readAccess": "public",
