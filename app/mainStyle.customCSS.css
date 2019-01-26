@@ -33,6 +33,16 @@
     background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('storyIcon')[0].'?thumb=>100x>100');?>);
 }
 
+.add-card>.icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: 100%;
+    top: -10px;
+    left: -10px;
+}
+
 
 
 .ui-view.section-top {
