@@ -236,6 +236,8 @@ textarea[disabled] {
     cursor: pointer;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    font-weight: 100;
+    font-size: 15px;
 }
 
 .form-navigation-btns .btn:hover{
