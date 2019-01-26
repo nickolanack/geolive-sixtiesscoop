@@ -2,12 +2,12 @@
     "type": "WizardGeocodeAddress",
     "config": {
         "label": "Where were you born?",
-        "message": "enter location",
+        "message": "where were you born",
         "className": "css class name",
         "maxChars": 0,
         "textFormatScript": "",
         "getValueScript": "return item.getAddress();",
         "updateValueScript": " object.value=value; ",
-        "submitValueScript": "wizardDataSet.address=object.value; item.setAddress(object.value);"
+        "submitValueScript": "wizardDataSet.address=object.value; \nif(object._location){\n    wizardDataSet.location=object._location;\n    \n}"
     }
 }
