@@ -1475,58 +1475,88 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": -17,
+                    "y": 183
                 },
                 "children": [
-                    "createRepatriationStoryForm.metadata.children.0.json",
+                    "Create Story.metadata.children.0.json",
                     {
                         "title": "New Empty Step",
                         "class": "AttributesTableNode",
                         "fields": [
-                            "createRepatriationStoryForm.metadata.children.1.fields.0.json"
+                            "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 128,
-                            "y": 260
+                            "x": 245,
+                            "y": 101
                         },
                         "children": [
-                            "createRepatriationStoryForm.metadata.children.1.children.0.json"
+                            "Create Story.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 205,
+                                    "y": 302
+                                }
+                            }
                         ],
                         "builderMetadata": {
                             "positions": {
                                 "title": {
                                     "modules": [
-                                        "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                        "Create Story.metadata.children.1.builderMetadata.positions.title.modules.0.json"
                                     ]
                                 },
                                 "content": {
                                     "modules": [
-                                        "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        "Create Story.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "WizardDescriptionField",
+                                            "type": "FormTextField",
                                             "config": {
-                                                "label": "Description",
-                                                "message": "add a description",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
                                                 "className": "",
+                                                "label": "When were you born?",
+                                                "placeholder": "when",
+                                                "lines": 1,
                                                 "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)"
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "date",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "How old were you when you taken from your family?",
+                                                "placeholder": "how old",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "numeric",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
                                             }
                                         }
                                     ]
                                 },
                                 "footer": {
                                     "modules": [
-                                        "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                        "Create Story.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
                                     ]
                                 },
                                 "menu": {
@@ -1538,14 +1568,17 @@
                                 "content",
                                 "footer",
                                 "menu"
-                            ]
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
                         }
                     }
                 ]
             },
-            "widgetTitle": "createRepatriationStoryForm",
+            "widgetTitle": "Create Story",
             "templateName": "createRepatriationStoryForm",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
@@ -1563,58 +1596,88 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": -17,
+                    "y": 183
                 },
                 "children": [
-                    "createBirthStoryForm.metadata.children.0.json",
+                    "Create Story.metadata.children.0.json",
                     {
                         "title": "New Empty Step",
                         "class": "AttributesTableNode",
                         "fields": [
-                            "createBirthStoryForm.metadata.children.1.fields.0.json"
+                            "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 128,
-                            "y": 260
+                            "x": 245,
+                            "y": 101
                         },
                         "children": [
-                            "createBirthStoryForm.metadata.children.1.children.0.json"
+                            "Create Story.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 205,
+                                    "y": 302
+                                }
+                            }
                         ],
                         "builderMetadata": {
                             "positions": {
                                 "title": {
                                     "modules": [
-                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                        "Create Story.metadata.children.1.builderMetadata.positions.title.modules.0.json"
                                     ]
                                 },
                                 "content": {
                                     "modules": [
-                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        "Create Story.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "WizardDescriptionField",
+                                            "type": "FormTextField",
                                             "config": {
-                                                "label": "Description",
-                                                "message": "add a description",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
                                                 "className": "",
+                                                "label": "When were you born?",
+                                                "placeholder": "when",
+                                                "lines": 1,
                                                 "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)"
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "date",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "How old were you when you taken from your family?",
+                                                "placeholder": "how old",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "numeric",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
                                             }
                                         }
                                     ]
                                 },
                                 "footer": {
                                     "modules": [
-                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                        "Create Story.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
                                     ]
                                 },
                                 "menu": {
@@ -1626,14 +1689,17 @@
                                 "content",
                                 "footer",
                                 "menu"
-                            ]
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
                         }
                     }
                 ]
             },
-            "widgetTitle": "createBirthStoryForm",
-            "templateName": "createBirthStoryForm",
-            "requireTarget": true,
+            "widgetTitle": "Create Story",
+            "templateName": "createStoryForm",
+            "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
