@@ -1697,7 +1697,7 @@
             "templateName": "inline-birth-form",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "inline-birth-form.onRenderApplictionScript.js",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
