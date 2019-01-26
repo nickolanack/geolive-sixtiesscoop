@@ -21,8 +21,8 @@ IncludeJSBlock('
             
             callback([
                 new OriginCard({}),  
-                new StoryCard({}),
-                new AddCard({}),
+                //new StoryCard({}),
+                new AddCard({})
             ]);
             
         }
@@ -69,6 +69,7 @@ IncludeJSBlock('
        getAddress:function(){return false;}
     });
     
+ 
     
     
 
