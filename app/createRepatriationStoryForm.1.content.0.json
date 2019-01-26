@@ -1,0 +1,13 @@
+{
+    "type": "WizardGeocodeAddress",
+    "config": {
+        "label": "Where were you born?",
+        "message": "where were you born",
+        "className": "css class name",
+        "maxChars": 0,
+        "textFormatScript": "",
+        "getValueScript": "return item.getAddress();",
+        "updateValueScript": " object.value=value; ",
+        "submitValueScript": "wizardDataSet.address=object.value; item.setAddress(object.value);"
+    }
+}
