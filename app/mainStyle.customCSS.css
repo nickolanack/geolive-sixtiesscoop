@@ -267,6 +267,9 @@ textarea[disabled] {
 .hidden {
     display: none;
 }
+.input-hidden>.text-input {
+    display: none;
+}
 
 
 
