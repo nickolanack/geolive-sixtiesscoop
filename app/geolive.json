@@ -334,116 +334,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 78,
-                            "y": 127
+                            "x": 235,
+                            "y": 91
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 38,
-                                    "y": 328
-                                }
-                            },
-                            {
-                                "title": "New Empty Step",
-                                "class": "AttributesTableNode",
-                                "fields": [
-                                    "Create Story.metadata.children.1.children.2.fields.0.json"
-                                ],
-                                "_diagramState": {
-                                    "x": 491,
-                                    "y": 41
-                                },
-                                "children": [
-                                    "Create Story.metadata.children.1.children.2.children.0.json",
-                                    {
-                                        "class": "InsertNode",
-                                        "_diagramState": {
-                                            "x": 451,
-                                            "y": 207
-                                        }
-                                    },
-                                    {
-                                        "title": "New Empty Step",
-                                        "class": "AttributesTableNode",
-                                        "fields": [
-                                            "Create Story.metadata.children.1.children.2.children.2.fields.0.json"
-                                        ],
-                                        "_diagramState": {
-                                            "x": 587,
-                                            "y": 424
-                                        },
-                                        "children": [
-                                            "Create Story.metadata.children.1.children.2.children.2.children.0.json",
-                                            {
-                                                "class": "InsertNode",
-                                                "_diagramState": {
-                                                    "x": 547,
-                                                    "y": 590
-                                                }
-                                            }
-                                        ],
-                                        "builderMetadata": {
-                                            "positions": {
-                                                "title": {
-                                                    "modules": [
-                                                        "Create Story.metadata.children.1.children.2.children.2.builderMetadata.positions.title.modules.0.json"
-                                                    ]
-                                                },
-                                                "content": {
-                                                    "modules": []
-                                                },
-                                                "footer": {
-                                                    "modules": [
-                                                        "Create Story.metadata.children.1.children.2.children.2.builderMetadata.positions.footer.modules.0.json"
-                                                    ]
-                                                },
-                                                "menu": {
-                                                    "modules": []
-                                                }
-                                            },
-                                            "positionList": [
-                                                "title",
-                                                "content",
-                                                "footer",
-                                                "menu"
-                                            ],
-                                            "_diagramState": {
-                                                "minimized": false
-                                            }
-                                        }
-                                    }
-                                ],
-                                "builderMetadata": {
-                                    "positions": {
-                                        "title": {
-                                            "modules": [
-                                                "Create Story.metadata.children.1.children.2.builderMetadata.positions.title.modules.0.json"
-                                            ]
-                                        },
-                                        "content": {
-                                            "modules": []
-                                        },
-                                        "footer": {
-                                            "modules": [
-                                                "Create Story.metadata.children.1.children.2.builderMetadata.positions.footer.modules.0.json"
-                                            ]
-                                        },
-                                        "menu": {
-                                            "modules": []
-                                        }
-                                    },
-                                    "positionList": [
-                                        "title",
-                                        "content",
-                                        "footer",
-                                        "menu"
-                                    ],
-                                    "_diagramState": {
-                                        "minimized": false
-                                    }
+                                    "x": 195,
+                                    "y": 292
                                 }
                             }
                         ],
