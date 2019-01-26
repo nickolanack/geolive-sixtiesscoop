@@ -264,5 +264,9 @@ textarea[disabled] {
     color: cornflowerblue;
 }
 
+.hidden {
+    display: none;
+}
+
 
 
