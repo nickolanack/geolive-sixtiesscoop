@@ -1187,6 +1187,24 @@
                     "maxHeight": 64,
                     "maxWidth": 64,
                     "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "repatriationIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "publishingOptionsIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
                 }
             ],
             "siteLogo": [
@@ -1199,7 +1217,9 @@
             ],
             "storyIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/shv_%5BImAgE%5D_d3r_%5BG%5D_g3M.png"
-            ]
+            ],
+            "repatriationIcon": [],
+            "publishingOptionsIcon": []
         }
     },
     "widget.23": {
