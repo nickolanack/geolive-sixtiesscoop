@@ -1036,16 +1036,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 198,
-                            "y": 330
+                            "x": 208,
+                            "y": 340
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 158,
-                                    "y": 506
+                                    "x": 168,
+                                    "y": 516
                                 }
                             }
                         ],
@@ -1081,10 +1081,32 @@
                                             }
                                         },
                                         {
-                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
                                             "config": {
                                                 "attributeFields": [
                                                     "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
+                                                "label": "{field.label}",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "Your Profile Image",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
                                                 "label": "Your Full Name",
