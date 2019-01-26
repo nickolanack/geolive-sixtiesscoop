@@ -16,5 +16,23 @@
             "description": "",
             "fields": []
         }
+    },
+    {
+        "id": "2",
+        "name": "storyAttributes",
+        "description": "",
+        "label": "",
+        "suffix": "_2497",
+        "metadata": {
+            "title": "storyAttributes",
+            "readAccess": "public",
+            "appliesTo": [
+                "marker"
+            ],
+            "id": "2",
+            "suffix": "_2497",
+            "description": "",
+            "fields": []
+        }
     }
 ]

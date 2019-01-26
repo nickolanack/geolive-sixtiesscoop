@@ -1350,8 +1350,32 @@
         "instance": "AttributesTable",
         "parameters": {
             "widgetTitle": "",
-            "metadata": [],
-            "target": "none"
+            "metadata": {
+                "title": "storyAttributes",
+                "_tableDiagramState": {
+                    "x": 327,
+                    "y": 257
+                },
+                "_diagramState": {
+                    "x": 327,
+                    "y": 257
+                },
+                "appliesTo": [
+                    "marker"
+                ],
+                "_typeDiagramState": {
+                    "x": 100,
+                    "y": 300
+                },
+                "readAccess": "public",
+                "maxEntries": 1,
+                "createAutomatically": 1,
+                "description": "",
+                "fields": []
+            },
+            "target": "storyAttributes",
+            "readAccess": "public",
+            "position": ""
         }
     }
 }
