@@ -1036,16 +1036,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 188,
-                            "y": 320
+                            "x": 198,
+                            "y": 330
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 148,
-                                    "y": 496
+                                    "x": 158,
+                                    "y": 506
                                 }
                             }
                         ],
@@ -1081,13 +1081,25 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardTitleField",
+                                            "type": "plugin.Attributes.WizardTextAttribute",
                                             "config": {
-                                                "label": "Your Full Name",
-                                                "message": "add your full name",
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
                                                 "className": "",
+                                                "label": "Your Full Name",
+                                                "message": "",
+                                                "lines": 1,
                                                 "maxChars": 0,
-                                                "textFormatScript": ""
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
                                             }
                                         }
                                     ]
