@@ -215,3 +215,27 @@ textarea[disabled] {
 }
 
 
+.form-navigation-btns {
+    text-align: right;
+    display: block;
+    margin: 10px 5px;
+    padding: 10px 0;
+    height: 30px;
+}
+
+.form-navigation-btns .btn {
+    float: right;
+    height: 30px;
+    margin-left: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 2px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+
+
