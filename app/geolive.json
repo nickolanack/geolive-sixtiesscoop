@@ -1679,7 +1679,7 @@
             "widgetTitle": "createBirthStoryForm",
             "templateName": "createBirthStoryForm",
             "requireTarget": true,
-            "resolveItemScript": "createBirthStoryForm.resolveItemScript.js",
+            "resolveItemScript": "\r\nreturn item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
             "onUpdateScript": "",
