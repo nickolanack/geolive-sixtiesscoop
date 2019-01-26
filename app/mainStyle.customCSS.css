@@ -118,6 +118,11 @@
     border: none;
     background-color: rgba(0,0,0,0.1);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.story-card .add-card:hover, .story-card .add-card.hover {
+    
 }
 
 
