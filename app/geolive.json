@@ -1600,19 +1600,19 @@
                     "y": 183
                 },
                 "children": [
-                    "Create Story.metadata.children.0.json",
+                    "createBirthStoryForm.metadata.children.0.json",
                     {
                         "title": "New Empty Step",
                         "class": "AttributesTableNode",
                         "fields": [
-                            "Create Story.metadata.children.1.fields.0.json"
+                            "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
                             "x": 245,
                             "y": 101
                         },
                         "children": [
-                            "Create Story.metadata.children.1.children.0.json",
+                            "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
@@ -1625,12 +1625,12 @@
                             "positions": {
                                 "title": {
                                     "modules": [
-                                        "Create Story.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
                                     ]
                                 },
                                 "content": {
                                     "modules": [
-                                        "Create Story.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
                                             "type": "FormTextField",
                                             "config": {
@@ -1677,7 +1677,7 @@
                                 },
                                 "footer": {
                                     "modules": [
-                                        "Create Story.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                        "createBirthStoryForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
                                     ]
                                 },
                                 "menu": {
@@ -1697,8 +1697,8 @@
                     }
                 ]
             },
-            "widgetTitle": "Create Story",
-            "templateName": "createStoryForm",
+            "widgetTitle": "createBirthStoryForm",
+            "templateName": "createBirthStoryForm",
             "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
