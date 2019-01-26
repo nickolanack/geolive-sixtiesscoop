@@ -26,6 +26,14 @@
 }
 
 
+.birth-card:after{
+    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>);
+}
+.story-card:after{
+    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>);
+}
+
+
 
 .ui-view.section-top {
     background-color: rgba(0,0,0,0.1);
