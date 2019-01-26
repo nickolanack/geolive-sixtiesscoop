@@ -210,6 +210,11 @@
         "parameters": {},
         "attributes": "plugin.Attributes.20.attributes.json"
     },
+    "plugin.21": {
+        "name": "Create Map Stories",
+        "instance": "MapStory",
+        "parameters": {}
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
