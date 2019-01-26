@@ -1175,8 +1175,8 @@
                     "name": "birthIcon",
                     "default": [],
                     "label": "Image",
-                    "maxHeight": 256,
-                    "maxWidth": 256,
+                    "maxHeight": 64,
+                    "maxWidth": 64,
                     "limit": 1
                 },
                 {
@@ -1184,8 +1184,8 @@
                     "name": "storyIcon",
                     "default": [],
                     "label": "Image",
-                    "maxHeight": 256,
-                    "maxWidth": 256,
+                    "maxHeight": 64,
+                    "maxWidth": 64,
                     "limit": 1
                 }
             ],
