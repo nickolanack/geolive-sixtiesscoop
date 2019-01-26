@@ -30,7 +30,7 @@
     background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>);
 }
 .story-card:after{
-    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>);
+    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('storyIcon')[0].'?thumb=>100x>100');?>);
 }
 
 
