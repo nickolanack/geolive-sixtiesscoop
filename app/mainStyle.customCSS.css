@@ -303,5 +303,9 @@ textarea[disabled] {
     display: none;
 }
 
+.uploads-hidden .media-bar, .uploads-hidden .media-selection {
+    display: none;
+}
+
 
 
