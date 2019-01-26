@@ -1311,5 +1311,14 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.24": {
+        "name": "Attributes Table",
+        "instance": "AttributesTable",
+        "parameters": {
+            "widgetTitle": "",
+            "metadata": [],
+            "target": "none"
+        }
     }
 }
