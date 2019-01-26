@@ -1194,8 +1194,12 @@
             ],
             "widgetTitle": "siteConfig",
             "readAccess": "public",
-            "birthIcon": [],
-            "storyIcon": []
+            "birthIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/7pW_da6_%5BImAgE%5D_%5BG%5D_noG.png"
+            ],
+            "storyIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/shv_%5BImAgE%5D_d3r_%5BG%5D_g3M.png"
+            ]
         }
     },
     "widget.23": {
