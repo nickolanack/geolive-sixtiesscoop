@@ -1819,7 +1819,7 @@
         "parameters": {
             "widgetTitle": "Info Window Detail",
             "target": "forTheMap",
-            "templateName": "forTheMap",
+            "templateName": "default",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
