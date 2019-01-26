@@ -1318,21 +1318,21 @@
         "parameters": {
             "widgetTitle": "",
             "metadata": {
-                "title": "attribute_3361",
+                "title": "profileAttributes",
                 "_tableDiagramState": {
-                    "x": 0,
-                    "y": 0
+                    "x": 388,
+                    "y": 188
                 },
                 "_diagramState": {
-                    "x": 0,
-                    "y": 0
+                    "x": 388,
+                    "y": 188
                 },
                 "appliesTo": [
                     "marker"
                 ],
                 "_typeDiagramState": {
-                    "x": 0,
-                    "y": 0
+                    "x": 100,
+                    "y": 300
                 },
                 "readAccess": "public",
                 "maxEntries": 1,
@@ -1340,7 +1340,7 @@
                 "description": "",
                 "fields": []
             },
-            "target": "attribute_3361",
+            "target": "profileAttributes",
             "readAccess": "public",
             "position": ""
         }

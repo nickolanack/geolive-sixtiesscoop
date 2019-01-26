@@ -1,12 +1,12 @@
 [
     {
         "id": "1",
-        "name": "attribute_3361",
+        "name": "profileAttributes",
         "description": "",
         "label": "",
         "suffix": "_2634",
         "metadata": {
-            "title": "attribute_3361",
+            "title": "profileAttributes",
             "readAccess": "public",
             "appliesTo": [
                 "marker"
