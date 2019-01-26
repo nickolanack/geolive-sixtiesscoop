@@ -3,11 +3,11 @@
     "config": {
         "className": "",
         "viewType": "form",
-        "namedView": "defaultView",
+        "namedView": "createBirthStoryForm",
         "shouldRender": true,
         "namedViewScript": "return namedView",
         "showInlineEdit": false,
-        "namedFormView": "defaultView",
+        "namedFormView": "createBirthStoryForm",
         "formOptions": "\"{}\"",
         "showDeleteButton": false,
         "deleteItemScript": "defaultBehaviorFn()",
