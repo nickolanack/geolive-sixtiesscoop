@@ -1,1 +1,0 @@
-wizardDataSet.date=object.value;

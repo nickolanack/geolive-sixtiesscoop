@@ -1652,16 +1652,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 345,
-                            "y": 201
+                            "x": 355,
+                            "y": 211
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 305,
-                                    "y": 389
+                                    "x": 315,
+                                    "y": 399
                                 }
                             }
                         ],
@@ -1676,24 +1676,25 @@
                                     "modules": [
                                         "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "FormTextField",
+                                            "type": "plugin.Attributes.WizardTextAttribute",
                                             "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
                                                 "className": "",
-                                                "label": "When were you born?",
-                                                "placeholder": "when",
+                                                "label": "{field.label}",
+                                                "message": "",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
+                                                "multiMessage": "",
                                                 "formatter": "date",
+                                                "iconTint": "rgb(100, 149, 237)",
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
-                                                "validateValueScript": " return defaultValidationFn() "
+                                                "formatValueScript": ""
                                             }
                                         },
                                         {
