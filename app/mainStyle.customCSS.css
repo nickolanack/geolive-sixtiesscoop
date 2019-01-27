@@ -235,6 +235,7 @@ textarea[disabled] {
 
 .uitext-container {
     margin-bottom: 15px;
+    display: block;
 }
 
 
