@@ -1,0 +1,32 @@
+{
+    "visibility": "public",
+    "tableId": "2",
+    "tableName": "storyAttributes",
+    "tableSuffix": "_2497",
+    "title": "locationAgeEnd",
+    "label": "Location Age End",
+    "description": "only applies to birth story",
+    "fieldType": "text",
+    "color": "rgb(NaN, NaN, NaN)",
+    "searchability": "public",
+    "editability": "registered",
+    "fieldTextOptions": {
+        "textType": "input",
+        "inputOptions": {
+            "buildAutocomplete": false,
+            "requireModeration": false,
+            "limitMaxChars": 0,
+            "limitMaxWords": 0,
+            "allowHtml": false,
+            "allowMedia": true,
+            "allowLinks": true
+        },
+        "listOptions": {
+            "takeSugesstions": true,
+            "buildTree": false,
+            "iconize": false,
+            "colorize": false
+        }
+    },
+    "allowMultiple": false
+}
