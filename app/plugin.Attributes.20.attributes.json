@@ -343,6 +343,28 @@
                         "falseIcon": false
                     },
                     "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "2",
+                    "tableName": "storyAttributes",
+                    "tableSuffix": "_2497",
+                    "title": "isBirthStory",
+                    "label": "Is Birth Story",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false,
+                        "trueIcon": false,
+                        "falseIcon": false
+                    },
+                    "allowMultiple": false
                 }
             ]
         }
