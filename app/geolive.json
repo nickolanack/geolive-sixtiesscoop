@@ -1784,16 +1784,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 365,
-                            "y": 221
+                            "x": 375,
+                            "y": 231
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 325,
-                                    "y": 409
+                                    "x": 335,
+                                    "y": 419
                                 }
                             }
                         ],
@@ -1827,48 +1827,6 @@
                                                 "iconTint": "rgb(100, 149, 237)",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": ""
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardDescriptionField",
-                                            "config": {
-                                                "label": "Location Story and Memories",
-                                                "message": "add a description",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "uploads-hidden",
-                                                "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)",
-                                                "onRenderModuleFn": ""
-                                            }
-                                        },
-                                        {
-                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
-                                            "config": {
-                                                "attributeFields": [
-                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
-                                                ],
-                                                "label": "{field.label}",
-                                                "message": "add a description",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "input-hidden",
-                                                "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
