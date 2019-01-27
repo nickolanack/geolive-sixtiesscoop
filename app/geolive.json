@@ -1866,16 +1866,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 415,
-                            "y": 271
+                            "x": 425,
+                            "y": 281
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 375,
-                                    "y": 459
+                                    "x": 385,
+                                    "y": 469
                                 }
                             }
                         ],
@@ -1934,25 +1934,23 @@
                                             }
                                         },
                                         {
-                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "type": "plugin.Attributes.WizardTagCloud",
                                             "config": {
                                                 "attributeFields": [
                                                     "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
+                                                "showLabel": false,
+                                                "showAddWord": false,
                                                 "label": "When you were taken, were you placed in?",
-                                                "message": "",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "autocomplete": true,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "",
-                                                "formatter": "none",
-                                                "iconTint": "rgb(100, 149, 237)",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "addWordPlaceholder": "add a keyword",
+                                                "fontColor": "rgb(0, 0, 0)",
+                                                "hoverColor": "rgb(143, 188, 143)",
+                                                "selectedColor": "rgb(143, 188, 143)",
+                                                "shuffleTags": false,
+                                                "tags": "[\n    \"foster care\",\n    \"adopted\",\n    \"other\"\n]",
+                                                "getItemTagsScript": "return defaultTags;",
+                                                "formatModule": ""
                                             }
                                         }
                                     ]
