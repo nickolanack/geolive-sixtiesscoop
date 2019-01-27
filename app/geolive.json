@@ -339,16 +339,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 245,
-                            "y": 101
+                            "x": 255,
+                            "y": 111
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 205,
-                                    "y": 302
+                                    "x": 215,
+                                    "y": 287
                                 }
                             }
                         ],
