@@ -267,13 +267,13 @@
                     "label": "Location Type",
                     "description": "",
                     "fieldType": "text",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldTextOptions": {
-                        "textType": "input",
+                        "textType": "options",
                         "inputOptions": {
-                            "buildAutocomplete": false,
+                            "buildAutocomplete": true,
                             "requireModeration": false,
                             "limitMaxChars": 0,
                             "limitMaxWords": 0,
