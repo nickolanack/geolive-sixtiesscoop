@@ -1910,16 +1910,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 445,
-                            "y": 301
+                            "x": 455,
+                            "y": 311
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 405,
-                                    "y": 489
+                                    "x": 415,
+                                    "y": 499
                                 }
                             }
                         ],
@@ -1995,6 +1995,16 @@
                                                 "tags": "[\n    \"foster care\",\n    \"adopted\",\n    \"other\"\n]",
                                                 "getItemTagsScript": "return defaultTags;",
                                                 "formatModule": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": false
                                             }
                                         }
                                     ]
