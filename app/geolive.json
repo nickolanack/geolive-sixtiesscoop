@@ -1910,16 +1910,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 465,
-                            "y": 321
+                            "x": 326,
+                            "y": 84
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 425,
-                                    "y": 522
+                                    "x": 286,
+                                    "y": 285
                                 }
                             }
                         ],
@@ -2002,6 +2002,16 @@
                                             "config": {
                                                 "attributeFieldArray": [
                                                     "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": true
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
