@@ -339,16 +339,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 275,
-                            "y": 131
+                            "x": 285,
+                            "y": 141
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 235,
-                                    "y": 319
+                                    "x": 245,
+                                    "y": 342
                                 }
                             }
                         ],
@@ -405,43 +405,25 @@
                                             }
                                         },
                                         {
-                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
                                             "config": {
-                                                "attributeFields": [],
-                                                "className": "",
-                                                "label": "{field.label}",
-                                                "message": "",
-                                                "lines": 1,
+                                                "attributeFields": [
+                                                    "Create Story.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Do you have any photos of this place that you would like to share?\n",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
                                                 "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "autocomplete": true,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "",
-                                                "formatter": "none",
-                                                "iconTint": "rgb(100, 149, 237)",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
-                                            }
-                                        },
-                                        {
-                                            "type": "plugin.Attributes.WizardTextAttribute",
-                                            "config": {
-                                                "attributeFields": [],
-                                                "className": "",
-                                                "label": "{field.label}",
-                                                "message": "",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "autocomplete": true,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "",
-                                                "formatter": "none",
-                                                "iconTint": "rgb(100, 149, 237)",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
