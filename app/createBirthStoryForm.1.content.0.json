@@ -2,7 +2,7 @@
     "type": "WizardGeocodeAddress",
     "config": {
         "label": "Where were you born?",
-        "message": "where were you born",
+        "message": "search location",
         "className": "css class name",
         "maxChars": 0,
         "textFormatScript": "",
