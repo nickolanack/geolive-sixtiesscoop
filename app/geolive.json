@@ -1784,16 +1784,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 375,
-                            "y": 231
+                            "x": 385,
+                            "y": 241
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 335,
-                                    "y": 419
+                                    "x": 345,
+                                    "y": 407
                                 }
                             }
                         ],
@@ -1828,6 +1828,30 @@
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": ""
                                             }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [],
+                                                "className": "",
+                                                "label": "How old were you when you taken from your family?",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "numeric",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": []
                                         }
                                     ]
                                 },
