@@ -233,9 +233,9 @@
                     "tableSuffix": "_2497",
                     "title": "locationAgeEnd",
                     "label": "Location Age End",
-                    "description": "",
+                    "description": "only applies to birth story",
                     "fieldType": "text",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldTextOptions": {
