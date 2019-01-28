@@ -2009,16 +2009,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 255,
-                            "y": 111
+                            "x": 265,
+                            "y": 121
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 215,
-                                    "y": 287
+                                    "x": 225,
+                                    "y": 309
                                 }
                             }
                         ],
@@ -2033,6 +2033,28 @@
                                     "modules": [
                                         "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "When were you repatriated?",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "date",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
                                             "type": "WizardGeocodeAddress",
                                             "config": {
                                                 "label": "Where were you born?",
@@ -2042,49 +2064,7 @@
                                                 "textFormatScript": "",
                                                 "getValueScript": "return item.getAddress();",
                                                 "updateValueScript": " object.value=value; ",
-                                                "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js"
-                                            }
-                                        },
-                                        {
-                                            "type": "FormTextField",
-                                            "config": {
-                                                "className": "",
-                                                "label": "When were you born?",
-                                                "placeholder": "when",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "date",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
-                                            "type": "FormTextField",
-                                            "config": {
-                                                "className": "",
-                                                "label": "How old were you when you taken from your family?",
-                                                "placeholder": "how old",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "numeric",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
+                                                "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js"
                                             }
                                         }
                                     ]
