@@ -2009,16 +2009,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 295,
-                            "y": 151
+                            "x": 305,
+                            "y": 161
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 255,
-                                    "y": 327
+                                    "x": 265,
+                                    "y": 349
                                 }
                             }
                         ],
@@ -2085,6 +2085,26 @@
                                                 "textFormatScript": "",
                                                 "mediaIconTint": "rgb(100, 149, 237)",
                                                 "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTagCloud",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "className": " uitext-container",
+                                                "showLabel": false,
+                                                "showAddWord": false,
+                                                "label": "Are you looking for your parents, siblings or family members?",
+                                                "addWordPlaceholder": "add a keyword",
+                                                "fontColor": "rgb(0, 0, 0)",
+                                                "hoverColor": "rgb(143, 188, 143)",
+                                                "selectedColor": "rgb(143, 188, 143)",
+                                                "shuffleTags": false,
+                                                "tags": "[\n    \"Yes, I am looking for my parents.\",\n\"Yes, I am looking for my siblings.\",\n\"Yes, I am looking for extended family.\",\n\"No, I am not looking for any family members.\"\n\n]",
+                                                "getItemTagsScript": "return defaultTags;",
+                                                "formatModule": ""
                                             }
                                         }
                                     ]
