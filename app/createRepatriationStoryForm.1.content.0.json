@@ -35,7 +35,7 @@
                 "allowMultiple": false
             }
         ],
-        "className": "uitext-container",
+        "className": " uitext-container",
         "showLabel": false,
         "showAddWord": false,
         "label": "Have you been repatriated?",
