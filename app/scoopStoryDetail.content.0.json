@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "return new ModuleArray([\n    new Element('span', {\"class\":\"icon\"}),\n    new Element('div', {\"class\":\"card-img\"}),\n    new Element('h3', {\"html\":item.getName()}),\n    new Element('p', {\"html\":item.getDescription()})\n    \n    ],{\"class\":item.getClassNames()});",
+        "script": "return new ModuleArray([\n    new Element('span', {\"class\":\"icon\"}),\n    ScoopStories.StyleCardImage(new Element('div', {\"class\":\"card-img\"}), item),\n    new Element('h3', {\"html\":item.getName()}),\n    new Element('p', {\"html\":item.getDescription()})\n    \n    ],{\"class\":item.getClassNames()});",
         "description": "Info about my custom script"
     }
 }
