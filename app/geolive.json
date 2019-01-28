@@ -2053,16 +2053,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 345,
-                            "y": 201
+                            "x": 355,
+                            "y": 211
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 305,
-                                    "y": 427
+                                    "x": 315,
+                                    "y": 399
                                 }
                             }
                         ],
@@ -2129,6 +2129,16 @@
                                                 "textFormatScript": "",
                                                 "mediaIconTint": "rgb(100, 149, 237)",
                                                 "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": true
                                             }
                                         }
                                     ]
