@@ -2009,16 +2009,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 285,
-                            "y": 141
+                            "x": 295,
+                            "y": 151
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 245,
-                                    "y": 317
+                                    "x": 255,
+                                    "y": 327
                                 }
                             }
                         ],
@@ -2065,6 +2065,26 @@
                                                 "getValueScript": "return item.getAddress();",
                                                 "updateValueScript": " object.value=value; ",
                                                 "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js"
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardDescriptionField",
+                                            "config": {
+                                                "label": "If you would like to tell us more about your repatriation, please do so below.",
+                                                "message": "add a description or additional info",
+                                                "lines": 3,
+                                                "mandatory": false,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "uploads-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
