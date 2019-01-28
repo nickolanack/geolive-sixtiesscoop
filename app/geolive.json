@@ -2451,16 +2451,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 335,
-                            "y": 191
+                            "x": 345,
+                            "y": 201
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 295,
-                                    "y": 404
+                                    "x": 305,
+                                    "y": 427
                                 }
                             }
                         ],
@@ -2475,85 +2475,10 @@
                                     "modules": [
                                         "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "plugin.Attributes.WizardTextAttribute",
-                                            "config": {
-                                                "attributeFields": [
-                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
-                                                ],
-                                                "className": "",
-                                                "label": "When were you repatriated?",
-                                                "message": "",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "autocomplete": true,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "",
-                                                "formatter": "date",
-                                                "iconTint": "rgb(100, 149, 237)",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardGeocodeAddress",
-                                            "config": {
-                                                "label": "When were you repatriated to?",
-                                                "message": "search location",
-                                                "className": "css class name",
-                                                "maxChars": 0,
-                                                "textFormatScript": "",
-                                                "getValueScript": "return item.getAddress();",
-                                                "updateValueScript": " object.value=value; ",
-                                                "submitValueScript": "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js"
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardDescriptionField",
-                                            "config": {
-                                                "label": "If you would like to tell us more about your repatriation, please do so below.",
-                                                "message": "add a description or additional info",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "uploads-hidden",
-                                                "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)",
-                                                "onRenderModuleFn": ""
-                                            }
-                                        },
-                                        {
-                                            "type": "plugin.Attributes.WizardTagCloud",
-                                            "config": {
-                                                "attributeFields": [
-                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
-                                                ],
-                                                "className": " uitext-container",
-                                                "showLabel": false,
-                                                "showAddWord": false,
-                                                "label": "Are you looking for your parents, siblings or family members?",
-                                                "addWordPlaceholder": "add a keyword",
-                                                "fontColor": "rgb(0, 0, 0)",
-                                                "hoverColor": "rgb(143, 188, 143)",
-                                                "selectedColor": "rgb(143, 188, 143)",
-                                                "shuffleTags": false,
-                                                "tags": "[\n    \"Yes, I am looking for my parents.\",\n\"Yes, I am looking for my siblings.\",\n\"Yes, I am looking for extended family.\",\n\"No, I am not looking for any family members.\"\n\n]",
-                                                "getItemTagsScript": "return defaultTags;",
-                                                "formatModule": ""
-                                            }
-                                        },
-                                        {
                                             "type": "plugin.Attributes.WizardDescriptionAttribute",
                                             "config": {
                                                 "attributeFields": [
-                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
                                                 ],
                                                 "label": "Do you have any information about your birth family that you would share publicly?",
                                                 "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
@@ -2575,7 +2500,7 @@
                                             "type": "plugin.Attributes.WizardDescriptionAttribute",
                                             "config": {
                                                 "attributeFields": [
-                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.6.config.attributeFields.0.json"
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
                                                 "label": "Add Images",
                                                 "message": "add a description",
