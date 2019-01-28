@@ -121,6 +121,14 @@
     cursor: pointer;
 }
 
+.add-card>.icon:after {
+    content: "+";
+    font-size: 20px;
+}
+.help-card>.icon:after {
+    display:none;
+}
+
 .story-card .add-card:hover, .story-card .add-card.hover {
     background-color: rgba(0,0,0,0.2);
 }
