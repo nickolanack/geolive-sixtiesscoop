@@ -1,8 +1,8 @@
 {
     "visibility": "public",
-    "tableId": "2",
-    "tableName": "storyAttributes",
-    "tableSuffix": "_2497",
+    "tableId": "1",
+    "tableName": "profileAttributes",
+    "tableSuffix": "_2634",
     "title": "birthFamilyInfo",
     "label": "Birth Family Additional Info",
     "description": "",

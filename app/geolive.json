@@ -2519,16 +2519,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 345,
-                            "y": 201
+                            "x": 355,
+                            "y": 211
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 305,
-                                    "y": 427
+                                    "x": 315,
+                                    "y": 387
                                 }
                             }
                         ],
@@ -2584,6 +2584,22 @@
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
                                                 "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
+                                                "showLabel": false,
+                                                "presentationStyle": "checkbox",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
                                             }
                                         }
                                     ]
