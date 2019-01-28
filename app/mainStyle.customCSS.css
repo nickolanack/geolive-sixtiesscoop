@@ -318,4 +318,36 @@ textarea[disabled] {
 }
 
 
+span.image-file.media-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    min-width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+span.remove-btn:after {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    height: 13px;
+    width: 13px;
+    content: "⌫";
+    line-height: 12px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: larger;
+    cursor: pointer;
+    color: crimson;
+}
+
+span.image-file.media-item img {
+    margin-top: 13px;
+}
+
 
