@@ -1,0 +1,22 @@
+{
+    "visibility": "public",
+    "tableId": "2",
+    "tableName": "storyAttributes",
+    "tableSuffix": "_2497",
+    "title": "hasAnotherLocation",
+    "label": "Has Another Location",
+    "description": "",
+    "fieldType": "boolean",
+    "color": "rgb(undefined, undefined, undefined)",
+    "searchability": "public",
+    "editability": "registered",
+    "fieldBooleanOptions": {
+        "hideFalse": true,
+        "trueLabel": "",
+        "falseLabel": "",
+        "useFieldIcon": false,
+        "trueIcon": false,
+        "falseIcon": false
+    },
+    "allowMultiple": false
+}

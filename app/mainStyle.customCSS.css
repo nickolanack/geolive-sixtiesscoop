@@ -26,6 +26,33 @@
 }
 
 
+.birth-card .icon{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>");
+}
+.journey-card .icon{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('storyIcon')[0].'?thumb=>100x>100');?>");
+}
+.repatriation-card .icon{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('repatriationIcon')[0].'?thumb=>100x>100');?>");
+}
+.publishing-options-card .icon{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
+}
+
+
+
+
+.story-card .icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: 100%;
+    top: -10px;
+    left: -10px;
+}
+
+
 
 .ui-view.section-top {
     background-color: rgba(0,0,0,0.1);
@@ -70,6 +97,7 @@
     height: 55px;
     background-color: rgba(0,0,0,0.3);
     border-radius: 3px 3px 0 0;
+    background-size: cover;
 }
 
 .story-card h3 {
@@ -91,6 +119,19 @@
     border: none;
     background-color: rgba(0,0,0,0.1);
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-card>.icon:after {
+    content: "+";
+    font-size: 20px;
+}
+.help-card>.icon:after {
+    display:none;
+}
+
+.story-card .add-card:hover, .story-card .add-card.hover {
+    background-color: rgba(0,0,0,0.2);
 }
 
 
@@ -158,6 +199,7 @@
     margin: 5px 10px;
     border: 3px solid rgba(0,0,0,0.1);
     box-sizing: border-box;
+    background-size:cover;
 }
 
 .profile-section .array-module>div {
@@ -202,6 +244,7 @@ textarea[disabled] {
 
 .uitext-container {
     margin-bottom: 15px;
+    display: block;
 }
 
 
@@ -246,5 +289,65 @@ textarea[disabled] {
 }
 
 
+.upload-btns span.image {
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.upload-btns span.image:after {
+    content: "add image";
+    white-space: nowrap;
+    position: absolute;
+    left: 30px;
+    line-height: 30px;
+    color: cornflowerblue;
+}
+
+.hidden {
+    display: none;
+}
+.input-hidden>.text-input {
+    display: none;
+}
+
+.uploads-hidden .media-bar, .uploads-hidden .media-selection {
+    display: none;
+}
+
+
+span.image-file.media-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    min-width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+span.remove-btn:after {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    height: 13px;
+    width: 13px;
+    content: "⌫";
+    line-height: 12px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: larger;
+    cursor: pointer;
+    color: crimson;
+}
+
+span.image-file.media-item img {
+    margin-top: 13px;
+}
 
 

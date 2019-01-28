@@ -10,6 +10,7 @@
         "labelForCancel": "cancel",
         "labelForSubmit": "submit",
         "labelForNext": "next",
-        "labelForPrevious": "previous"
+        "labelForPrevious": "previous",
+        "formatButton": "return button;"
     }
 }

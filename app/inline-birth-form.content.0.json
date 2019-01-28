@@ -1,0 +1,22 @@
+{
+    "type": "UIView",
+    "config": {
+        "className": "",
+        "viewType": "form",
+        "namedView": "createBirthStoryForm",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "createBirthStoryForm",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "",
+        "resolveItemScript": "\r\n\r\nvar MockCard = new Class({\r\n        Extends: MockDataTypeItem,\r\n        getDescription:function(){\r\n            return '';\r\n        },\r\n        getAddress: function() {\r\n            return false;\r\n        },\r\n        setAddress: function(address) {\r\n    \r\n    \r\n        },\r\n        setDate: function(address) {\r\n    \r\n    \r\n        },\r\n        getFormView: function() {\r\n            if (this._getFormView) {\r\n                return this._getFormView();\r\n            }\r\n            return \"createStoryForm\"\r\n        },\r\n        getLabel: function() {\r\n            if (this._getLabel) {\r\n                return this._getLabel();\r\n            }\r\n            return \"Add Card\"\r\n        },\r\n        getClassNames: function() {\r\n            if (this._getClassNames) {\r\n                return this._getClassNames();\r\n            }\r\n            return \"add-card\";\r\n        },\r\n    \r\n    \r\n        save:function(callback){\r\n            callback(false);\r\n        }\r\n    \r\n    \r\n    });\r\n    \r\n    return new MockCard();\r\n",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": ""
+    }
+}

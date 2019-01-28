@@ -210,6 +210,11 @@
         "parameters": {},
         "attributes": "plugin.Attributes.20.attributes.json"
     },
+    "plugin.21": {
+        "name": "Create Map Stories",
+        "instance": "MapStory",
+        "parameters": {}
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
@@ -334,16 +339,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 235,
-                            "y": 91
+                            "x": 315,
+                            "y": 171
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 195,
-                                    "y": 292
+                                    "x": 275,
+                                    "y": 372
                                 }
                             }
                         ],
@@ -358,79 +363,83 @@
                                     "modules": [
                                         "Create Story.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "FormTextField",
+                                            "type": "plugin.Attributes.WizardTextAttribute",
                                             "config": {
+                                                "attributeFields": [
+                                                    "Create Story.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
                                                 "className": "",
-                                                "label": "When were you born?",
-                                                "placeholder": "when",
+                                                "label": "When were you placed here?",
+                                                "message": "",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
+                                                "multiMessage": "",
                                                 "formatter": "date",
+                                                "iconTint": "rgb(100, 149, 237)",
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
+                                                "formatValueScript": ""
                                             }
                                         },
                                         {
-                                            "type": "FormTextField",
+                                            "type": "WizardDescriptionField",
                                             "config": {
-                                                "className": "",
-                                                "label": "How old were you when you taken from your family?",
-                                                "placeholder": "how old",
-                                                "lines": 1,
-                                                "maxChars": 0,
+                                                "label": "What memories do you have of this place?",
+                                                "message": "add memories or discription",
+                                                "lines": 3,
                                                 "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "numeric",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
-                                            "type": "FormTextField",
-                                            "config": {
-                                                "className": "",
-                                                "label": "When you were taken, were you placed in?",
-                                                "placeholder": "add value",
-                                                "lines": 1,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "uploads-hidden",
                                                 "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "none",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardGeocodeAddress",
-                                            "config": {
-                                                "label": "When you were taken, where were you placed?",
-                                                "message": "where were you placed",
-                                                "className": "css class name",
-                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "getValueScript": "return item.getAddress();",
-                                                "updateValueScript": " object.value=value; ",
-                                                "submitValueScript": "Create Story.metadata.children.1.builderMetadata.positions.content.modules.4.config.submitValueScript.js"
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "Create Story.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Do you have any photos of this place that you would like to share?\n",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "Create Story.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Were you fostered or moved to another another location?",
+                                                "showLabel": false,
+                                                "presentationStyle": "radio",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
                                             }
                                         }
                                     ]
@@ -1031,16 +1040,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 188,
-                            "y": 320
+                            "x": 238,
+                            "y": 370
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 148,
-                                    "y": 496
+                                    "x": 198,
+                                    "y": 558
                                 }
                             }
                         ],
@@ -1067,7 +1076,7 @@
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "add another value",
                                                 "formatter": "none",
-                                                "onRenderTextFieldScript": "inputElement.disabled=true;",
+                                                "onRenderTextFieldScript": "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.1.config.onRenderTextFieldScript.js",
                                                 "formatValueScript": "",
                                                 "getValueScript": "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.1.config.getValueScript.js",
                                                 "updateValueScript": " object.value=value ",
@@ -1076,13 +1085,47 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardTitleField",
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
                                             "config": {
-                                                "label": "Your Full Name",
-                                                "message": "add your full name",
-                                                "className": "",
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Your Profile Image",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
                                                 "maxChars": 0,
-                                                "textFormatScript": ""
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Your Full Name",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
                                             }
                                         }
                                     ]
@@ -1164,13 +1207,61 @@
             "formatParametersScript": "return $parameters;",
             "formatOutputScript": "return $parameters;",
             "parameters": [
-                "siteConfig.parameters.0.json"
+                "siteConfig.parameters.0.json",
+                {
+                    "type": "images",
+                    "name": "birthIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "storyIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "repatriationIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "publishingOptionsIcon",
+                    "default": [],
+                    "label": "Image",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                }
             ],
             "siteLogo": [
                 "php-core-app\/users_files\/user_files_1\/Uploads\/HOf_[ImAgE]_RQa_[G]_BlH.png"
             ],
             "widgetTitle": "siteConfig",
-            "readAccess": "public"
+            "readAccess": "public",
+            "birthIcon": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/7pW_da6_[ImAgE]_[G]_noG.png"
+            ],
+            "storyIcon": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/shv_[ImAgE]_d3r_[G]_g3M.png"
+            ],
+            "repatriationIcon": [
+                "php-core-app\/users_files\/user_files_1\/Uploads\/VE4_dUd_[G]_bgL_[ImAgE].png"
+            ],
+            "publishingOptionsIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/0kz_%5BImAgE%5D_%5BG%5D_nZF_1HL.png"
+            ]
         }
     },
     "widget.23": {
@@ -1220,12 +1311,12 @@
             "metadata": {
                 "title": "profileAttributes",
                 "_tableDiagramState": {
-                    "x": 331,
-                    "y": 265
+                    "x": 325,
+                    "y": 256
                 },
                 "_diagramState": {
-                    "x": 331,
-                    "y": 265
+                    "x": 325,
+                    "y": 256
                 },
                 "appliesTo": [
                     "user"
@@ -1239,7 +1330,227 @@
                 "createAutomatically": 1,
                 "description": "",
                 "fields": [
-                    "widget.AttributesTable.24.metadata.fields.0.json"
+                    "widget.AttributesTable.24.metadata.fields.0.json",
+                    {
+                        "was": "",
+                        "title": "name",
+                        "label": "Name",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "searchingFor",
+                        "label": "Searching For",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "options",
+                            "inputOptions": {
+                                "buildAutocomplete": true,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "birthFamilyInfo",
+                        "label": "Birth Family Additional Info",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "birthFamilyImages",
+                        "label": "Birth Family Images",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "publishStory",
+                        "label": "Publish Story",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    }
                 ]
             },
             "target": "profileAttributes",
@@ -1255,12 +1566,12 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 357,
-                    "y": 132
+                    "x": 300,
+                    "y": 246
                 },
                 "_diagramState": {
-                    "x": 357,
-                    "y": 132
+                    "x": 300,
+                    "y": 246
                 },
                 "appliesTo": [
                     "marker"
@@ -1362,6 +1673,358 @@
                             "trueIcon": [],
                             "falseIcon": []
                         }
+                    },
+                    {
+                        "was": "",
+                        "title": "locationImages",
+                        "label": "Location Images",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "locationAgeEnd",
+                        "label": "Location Age End",
+                        "description": "only applies to birth story",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "locationType",
+                        "label": "Location Type",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "options",
+                            "inputOptions": {
+                                "buildAutocomplete": true,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "locationTypeOther",
+                        "label": "Location Type Other",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "hasAnotherLocation",
+                        "label": "Has Another Location",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "isBirthStory",
+                        "label": "Is Birth Story",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "isRepatriationStory",
+                        "label": "Is Repatriation Story",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "repatriationType",
+                        "label": "Repatriation Type",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "options",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
                     }
                 ]
             },
@@ -1378,8 +2041,8 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": -17,
+                    "y": 183
                 },
                 "children": [
                     "createRepatriationStoryForm.metadata.children.0.json",
@@ -1390,11 +2053,18 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 128,
-                            "y": 260
+                            "x": 365,
+                            "y": 221
                         },
                         "children": [
-                            "createRepatriationStoryForm.metadata.children.1.children.0.json"
+                            "createRepatriationStoryForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 325,
+                                    "y": 422
+                                }
+                            }
                         ],
                         "builderMetadata": {
                             "positions": {
@@ -1407,22 +2077,68 @@
                                     "modules": [
                                         "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "When were you repatriated?",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "date",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardGeocodeAddress",
+                                            "config": {
+                                                "label": "When were you repatriated to?",
+                                                "message": "search location",
+                                                "className": "css class name",
+                                                "maxChars": 0,
+                                                "textFormatScript": "",
+                                                "getValueScript": "return item.getAddress();",
+                                                "updateValueScript": " object.value=value; ",
+                                                "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js"
+                                            }
+                                        },
+                                        {
                                             "type": "WizardDescriptionField",
                                             "config": {
-                                                "label": "Description",
-                                                "message": "add a description",
+                                                "label": "If you would like to tell us more about your repatriation, please do so below.",
+                                                "message": "add a description or additional info",
                                                 "lines": 3,
                                                 "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
                                                 "showVideos": true,
-                                                "className": "",
+                                                "className": "uploads-hidden",
                                                 "maxChars": 0,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)"
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": true
                                             }
                                         }
                                     ]
@@ -1441,14 +2157,17 @@
                                 "content",
                                 "footer",
                                 "menu"
-                            ]
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
                         }
                     }
                 ]
             },
             "widgetTitle": "createRepatriationStoryForm",
             "templateName": "createRepatriationStoryForm",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
@@ -1466,8 +2185,8 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": -17,
+                    "y": 183
                 },
                 "children": [
                     "createBirthStoryForm.metadata.children.0.json",
@@ -1478,11 +2197,18 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 128,
-                            "y": 260
+                            "x": 326,
+                            "y": 84
                         },
                         "children": [
-                            "createBirthStoryForm.metadata.children.1.children.0.json"
+                            "createBirthStoryForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 286,
+                                    "y": 285
+                                }
+                            }
                         ],
                         "builderMetadata": {
                             "positions": {
@@ -1495,22 +2221,87 @@
                                     "modules": [
                                         "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "WizardDescriptionField",
+                                            "type": "plugin.Attributes.WizardTextAttribute",
                                             "config": {
-                                                "label": "Description",
-                                                "message": "add a description",
-                                                "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
                                                 "className": "",
+                                                "label": "When where you born?",
+                                                "message": "",
+                                                "lines": 1,
                                                 "maxChars": 0,
-                                                "showExpandInput": true,
-                                                "toolbarPosition": "bottom",
-                                                "textFormatScript": "",
-                                                "mediaIconTint": "rgb(100, 149, 237)"
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "date",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "How old were you when you taken from your family?",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "numeric",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTagCloud",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "className": " uitext-container",
+                                                "showLabel": false,
+                                                "showAddWord": false,
+                                                "label": "When you were taken, were you placed in?",
+                                                "addWordPlaceholder": "add a keyword",
+                                                "fontColor": "rgb(0, 0, 0)",
+                                                "hoverColor": "rgb(143, 188, 143)",
+                                                "selectedColor": "rgb(143, 188, 143)",
+                                                "shuffleTags": false,
+                                                "tags": "[\n    \"foster care\",\n    \"adopted\",\n    \"other\"\n]",
+                                                "getItemTagsScript": "return defaultTags;",
+                                                "formatModule": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": true
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardHiddenAttribute",
+                                            "config": {
+                                                "attributeFieldArray": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
+                                                ],
+                                                "value": "true",
+                                                "isJavascript": true
                                             }
                                         }
                                     ]
@@ -1529,7 +2320,10 @@
                                 "content",
                                 "footer",
                                 "menu"
-                            ]
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
                         }
                     }
                 ]
@@ -1537,6 +2331,226 @@
             "widgetTitle": "createBirthStoryForm",
             "templateName": "createBirthStoryForm",
             "requireTarget": true,
+            "resolveItemScript": "\r\nreturn item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "readAccess": "public"
+        }
+    },
+    "widget.28": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "inline-birth-form",
+            "target": "inline-birth-form",
+            "templateName": "inline-birth-form",
+            "requireTarget": false,
+            "resolveItemScript": "    \r\n   return $item;",
+            "onRenderApplictionScript": "inline-birth-form.onRenderApplictionScript.js",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "inline-birth-form.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.29": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "Info Window Detail",
+            "target": "forTheMap",
+            "templateName": "default",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "Info Window Detail.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "Info Window Detail.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "Info Window Detail.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                }
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.30": {
+        "name": "Form View",
+        "instance": "UserWizardBuilder",
+        "parameters": {
+            "target": "publishingOptionsForm",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": -17,
+                    "y": 183
+                },
+                "children": [
+                    "publishingOptionsForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "publishingOptionsForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 365,
+                            "y": 221
+                        },
+                        "children": [
+                            "publishingOptionsForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 325,
+                                    "y": 409
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "publishingOptionsForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Do you have any information about your birth family that you would share publicly?",
+                                                "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "uploads-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Add Images",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": true,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
+                                                "showLabel": false,
+                                                "presentationStyle": "checkbox",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        "publishingOptionsForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "widgetTitle": "publishingOptionsForm",
+            "templateName": "publishingOptionsForm",
+            "requireTarget": false,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",

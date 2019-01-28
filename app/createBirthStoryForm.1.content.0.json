@@ -1,10 +1,13 @@
 {
-    "type": "WizardTitleField",
+    "type": "WizardGeocodeAddress",
     "config": {
-        "label": "Title",
-        "message": "add a title",
-        "className": "",
+        "label": "Where were you born?",
+        "message": "search location",
+        "className": "css class name",
         "maxChars": 0,
-        "textFormatScript": ""
+        "textFormatScript": "",
+        "getValueScript": "return item.getAddress();",
+        "updateValueScript": " object.value=value; ",
+        "submitValueScript": "wizardDataSet.address=object.value; \nif(object._location){\n    wizardDataSet.location=object._location;\n    \n}"
     }
 }
