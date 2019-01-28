@@ -1311,12 +1311,12 @@
             "metadata": {
                 "title": "profileAttributes",
                 "_tableDiagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 325,
+                    "y": 256
                 },
                 "_diagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 325,
+                    "y": 256
                 },
                 "appliesTo": [
                     "user"
@@ -1465,8 +1465,8 @@
                     },
                     {
                         "was": "",
-                        "title": "publishStory",
-                        "label": "Publish Story",
+                        "title": "birthFamilyImages",
+                        "label": "Birth Family Images",
                         "description": "",
                         "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
@@ -1474,7 +1474,7 @@
                         "editability": "registered",
                         "searchability": "public",
                         "allowMultiple": false,
-                        "fieldType": "boolean",
+                        "fieldType": "text",
                         "fieldTextOptions": {
                             "textType": "input",
                             "inputOptions": {
@@ -1509,8 +1509,8 @@
                     },
                     {
                         "was": "",
-                        "title": "birthFamilyImages",
-                        "label": "Birth Family Images",
+                        "title": "publishStory",
+                        "label": "Publish Story",
                         "description": "",
                         "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
@@ -1518,7 +1518,7 @@
                         "editability": "registered",
                         "searchability": "public",
                         "allowMultiple": false,
-                        "fieldType": "text",
+                        "fieldType": "boolean",
                         "fieldTextOptions": {
                             "textType": "input",
                             "inputOptions": {
