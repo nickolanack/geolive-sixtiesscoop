@@ -394,7 +394,39 @@
                     "tableName": "storyAttributes",
                     "tableSuffix": "_2497",
                     "title": "repatriationType",
-                    "label": "repatriationType",
+                    "label": "Repatriation Type",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "options",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "2",
+                    "tableName": "storyAttributes",
+                    "tableSuffix": "_2497",
+                    "title": "searchingFor",
+                    "label": "Searching For",
                     "description": "",
                     "fieldType": "text",
                     "color": "rgb(undefined, undefined, undefined)",
