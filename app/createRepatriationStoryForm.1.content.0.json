@@ -1,13 +1,51 @@
 {
-    "type": "WizardGeocodeAddress",
+    "type": "plugin.Attributes.WizardTagCloud",
     "config": {
-        "label": "Where were you born?",
-        "message": "where were you born",
-        "className": "css class name",
-        "maxChars": 0,
-        "textFormatScript": "",
-        "getValueScript": "return item.getAddress();",
-        "updateValueScript": " object.value=value; ",
-        "submitValueScript": "wizardDataSet.address=object.value; item.setAddress(object.value);"
+        "attributeFields": [
+            {
+                "visibility": "public",
+                "tableId": "2",
+                "tableName": "storyAttributes",
+                "tableSuffix": "_2497",
+                "title": "repatriationType",
+                "label": "Repatriation Type",
+                "description": "",
+                "fieldType": "text",
+                "color": "rgb(NaN, NaN, NaN)",
+                "searchability": "public",
+                "editability": "registered",
+                "fieldTextOptions": {
+                    "textType": "options",
+                    "inputOptions": {
+                        "buildAutocomplete": false,
+                        "requireModeration": false,
+                        "limitMaxChars": 0,
+                        "limitMaxWords": 0,
+                        "allowHtml": false,
+                        "allowMedia": true,
+                        "allowLinks": true
+                    },
+                    "listOptions": {
+                        "takeSugesstions": true,
+                        "buildTree": false,
+                        "iconize": false,
+                        "colorize": false
+                    }
+                },
+                "allowMultiple": false
+            }
+        ],
+        "className": "uitext-container",
+        "showLabel": false,
+        "showAddWord": false,
+        "label": "Have you been repatriated?",
+        "addWordPlaceholder": "add a keyword",
+        "fontColor": "rgb(0, 0, 0)",
+        "hoverColor": "rgb(143, 188, 143)",
+        "selectedColor": "rgb(143, 188, 143)",
+        "shuffleTags": false,
+        "tags": "[\n    \"I have returned to my family.\",\n    \"I have returned to my community\/nation\/reservation.\",\n    \"I have returned to Canada after living in another country.\",\n    \"No, I have not connected with my family or my community.\"\n]",
+        "getItemTagsScript": "return defaultTags;",
+        "formatModule": ""
     }
 }
