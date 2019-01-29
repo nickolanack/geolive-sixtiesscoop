@@ -2559,5 +2559,23 @@
             "onLoadScript": "",
             "readAccess": "public"
         }
+    },
+    "widget.31": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "contentTemplate": "Subject",
+            "widgetTitle": "email.VerifyEmailLink.subject",
+            "target": "email.VerifyEmailLink.subject"
+        }
+    },
+    "widget.32": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "contentTemplate": "Message Content",
+            "widgetTitle": "email.VerifyEmailLink.content",
+            "target": "email.VerifyEmailLink.content"
+        }
     }
 }
