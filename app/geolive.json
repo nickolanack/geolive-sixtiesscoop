@@ -2575,9 +2575,11 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "Message Content",
+            "contentTemplate": "email-VerifyEmailLink-content.contentTemplate.html",
             "widgetTitle": "email.VerifyEmailLink.content",
-            "target": "email.VerifyEmailLink.content"
+            "target": "email.VerifyEmailLink.content",
+            "comments": "",
+            "readAccess": "public"
         }
     }
 }
