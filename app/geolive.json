@@ -155,7 +155,7 @@
             "customGroupMemberOfGroupScript": "",
             "defaultImage": [],
             "userProfileImageScript": "return $defaultImage;",
-            "validateEmail": true,
+            "validateEmail": false,
             "magicLinkUrl": "",
             "useRecaptcha": true,
             "recaptchaKey": "XXXX-XXXX",
