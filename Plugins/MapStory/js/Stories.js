@@ -94,6 +94,21 @@ var ScoopStories = {
         return btn;
     }
 
+    GetCardModule:function(item, application){
+
+        var module = new ModuleArray([
+        new Element('span', {"class":"icon"}),
+        ScoopStories.StyleCardImage(new Element('div', {"class":"card-img"}), item),
+        new Element('h3', {"html":item.getName()}),
+        new Element('p', {"html":item.getDescription()})
+        
+        ],{"class":item.getClassNames()});
+
+        module.getElement().addEvent('click',function())   
+
+        return module;
+    }
+
 
 }
 
