@@ -2586,7 +2586,10 @@
         "name": "Javascript",
         "instance": "CustomBehaviorScript",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "customScript": "Map Initialization.customScript.js",
+            "widgetTitle": "Map Initialization",
+            "readAccess": "public"
         }
     }
 }

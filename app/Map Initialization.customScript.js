@@ -1,0 +1,1 @@
+ScoopStories.initializeMap(application);
