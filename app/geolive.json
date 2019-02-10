@@ -2581,5 +2581,12 @@
             "comments": "",
             "readAccess": "public"
         }
+    },
+    "widget.33": {
+        "name": "Javascript",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
