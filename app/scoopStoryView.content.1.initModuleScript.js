@@ -1,0 +1,1 @@
+ScoopStories.initializeStoryView(module);
