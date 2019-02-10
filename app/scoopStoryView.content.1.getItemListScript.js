@@ -1,1 +1,1 @@
-ScoopStories.getCurrentCards(callback);
+ScoopStories.getCurrentCards(application, callback);
