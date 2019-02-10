@@ -351,3 +351,25 @@ span.image-file.media-item img {
 }
 
 
+.story-card .active:after {
+    content: "";
+    position: absolute;
+    width: calc( 100% + 10px );
+    height: calc( 100% + 10px );
+    background: #66b7ed;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
