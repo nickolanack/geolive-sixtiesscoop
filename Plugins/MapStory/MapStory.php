@@ -86,6 +86,31 @@ class MapStory extends \Plugin implements
 
 	}
 
+
+	public function getFeaturesMetadata($featureIds){
+
+		GetPlugin('Maps');
+		GetPlugin('Attributes');
+		$attr=(new \attributes\Record('storyAttributes'));
+		$list=array();
+		(new \spatial\Features())
+			->listLayerFeatures($this->getStoryLayerId())
+			->withFeatures($featureIds)
+			->iterate(function ($feature) use(&$list, &$attr){
+
+				$attributes=$attr->getValues($feature['id'], $feature['type']);
+
+				$list[]=$this->formatFeatureMetadata($feature, $attributes);
+
+
+			});
+
+
+		return $list;
+
+
+	}
+
 	public function getUsersStoryMetadata($userId = -1) {
 
 		if ($userId == -1) {

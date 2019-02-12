@@ -1,5 +1,6 @@
 {
 
 	"save_story_item":{},
-	"get_story":{}
+	"get_story":{},
+	"get_story_with_item":{}
 }

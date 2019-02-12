@@ -57,6 +57,16 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 	}	
 
 
+	protected function getStoryWithItem($json){
+
+		$list=$this->getPlugin()->getFeaturesMetadata($json->item);
+		$user=$list[0]['uid'];
+
+		return  array('features'=>$list, 'story'=>$this->getPlugin()->getUsersStoryMetadata($user), 'user'=>$this->getPlugin()->getUsersMetadata($user));
+
+
+	}
+
 	protected function getStory($json){
 
 		return  array('story'=>$this->getPlugin()->getUsersStoryMetadata(), 'user'=>$this->getPlugin()->getUsersMetadata());
