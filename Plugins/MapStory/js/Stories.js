@@ -145,6 +145,9 @@ var StoryMapController = new Class({
             me.getMap().panTo(marker.getLatLng());
             me.scaleIcon(marker, 40);
 
+            
+
+
 
         });
 
@@ -654,12 +657,14 @@ var StoryUser = new Class({
 
             var cards = [];
             if (!me.hasBirthStory()) {
-                cards.push(new AddCard({
-                    label: "Create Birth Story",
-                    formView: "createBirthStoryForm",
-                    classNames: "add-card birth-card",
-                    type: 'MapStory.birthStory'
-                }));
+                if(me.canEdit()){
+                    cards.push(new AddCard({
+                        label: "Create Birth Story",
+                        formView: "createBirthStoryForm",
+                        classNames: "add-card birth-card",
+                        type: 'MapStory.birthStory'
+                    }));
+                }
             }
 
             if (me.hasBirthStory()) {
@@ -669,33 +674,37 @@ var StoryUser = new Class({
             cards = cards.concat(journeyStories);
 
 
-
-            cards.push(new AddCard({
-                label: journeyStories.length ? "Add More Locations Along Your Story" : "Add A Location Along Your Story",
-                formView: "createStoryForm",
-                classNames: "add-card journey-card",
-                type: 'MapStory.story'
-            }));
-
+            if(me.canEdit()){
+                cards.push(new AddCard({
+                    label: journeyStories.length ? "Add More Locations Along Your Story" : "Add A Location Along Your Story",
+                    formView: "createStoryForm",
+                    classNames: "add-card journey-card",
+                    type: 'MapStory.story'
+                }));
+            }
 
             if (me.hasRepatriationStory()) {
                 cards.push(me.getRepatriationStory());
             }
 
             if (!me.hasRepatriationStory()) {
-                cards.push(new AddCard({
-                    label: "Add A Repatriation Story",
-                    formView: "createRepatriationStoryForm",
-                    classNames: "add-card repatriation-card",
-                    type: 'MapStory.repatriationStory'
-                }));
+                if(me.canEdit()){
+                    cards.push(new AddCard({
+                        label: "Add A Repatriation Story",
+                        formView: "createRepatriationStoryForm",
+                        classNames: "add-card repatriation-card",
+                        type: 'MapStory.repatriationStory'
+                    }));
+                }
             }
 
-            cards.push(new AddCard({
-                label: "Help Family Find You",
-                formView: "publishingOptionsForm",
-                classNames: "help-card add-card publishing-options-card"
-            }));
+            if(me.canEdit()){
+                cards.push(new AddCard({
+                    label: "Help Family Find You",
+                    formView: "publishingOptionsForm",
+                    classNames: "help-card add-card publishing-options-card"
+                }));
+            }
 
 
             callback(cards);
@@ -703,6 +712,9 @@ var StoryUser = new Class({
         })
 
 
+    },
+    canEdit:function(){
+        return AppClient.getUserType() === "admin";
     },
     getCardsLabel: function(callback) {
 
@@ -742,7 +754,9 @@ var AppClientStoryUser = new Class({
 
 
     },
-
+    canEdit:function(){
+        return true;
+    },
     getCards: function(callback) {
 
         var me = this;
