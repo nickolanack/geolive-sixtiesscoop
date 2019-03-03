@@ -2623,7 +2623,7 @@
         "instance": "DetailView",
         "parameters": {
             "widgetTitle": "sidePanelDetail",
-            "target": "sidePanelDetail",
+            "target": "forTheMap",
             "templateName": "sidePanelDetail",
             "requireTarget": true,
             "resolveItemScript": "return item",
