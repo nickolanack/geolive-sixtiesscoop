@@ -365,7 +365,10 @@ span.image-file.media-item img {
 
 
 
-
+.user-name {
+    cursor: pointer;
+    color: #5ea5e9;
+}
 
 
 
