@@ -2665,7 +2665,7 @@
         "instance": "CustomBehaviorScript",
         "parameters": {
             "target": "initializeApplication",
-            "customScript": "",
+            "customScript": "App Initialization.customScript.js",
             "widgetTitle": "App Initialization",
             "readAccess": "public"
         }

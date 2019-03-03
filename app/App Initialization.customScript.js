@@ -1,0 +1,1 @@
+ScoopStories.initializeApplication(application);
