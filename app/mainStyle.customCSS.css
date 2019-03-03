@@ -41,6 +41,16 @@
 
 
 
+.edit-btn{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('editIcon')[0].'?thumb=>100x>100');?>");
+}
+
+.delete-btn{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('deleteIcon')[0].'?thumb=>100x>100');?>");
+}
+
+
+
 
 .story-card .icon {
     position: absolute;
@@ -141,7 +151,7 @@
 }
 .SideBarWidget.right>.toggle-button, .SideBarWidget.right.active>.toggle-button {
     background-color: white;
-    background-image: url(https://sixtyscoop.geoforms.ca/php-core-app/assets/Control%20Panel%20Icons/search.png);
+    background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/search.png'); ?>");
     background-size: 60%;
 }
 
