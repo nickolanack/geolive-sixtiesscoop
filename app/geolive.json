@@ -2664,7 +2664,10 @@
         "name": "Javascript",
         "instance": "CustomBehaviorScript",
         "parameters": {
-            "target": "none"
+            "target": "initializeApplication",
+            "customScript": "",
+            "widgetTitle": "App Initialization",
+            "readAccess": "public"
         }
     }
 }
