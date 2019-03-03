@@ -2659,5 +2659,12 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.35": {
+        "name": "Javascript",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
