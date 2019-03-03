@@ -39,7 +39,29 @@
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
 }
 
+span.delete-btn, span.edit-btn {
+    width: 20px;
+    height: 20px;
+    background-size: 90%;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
 
+
+}
+
+span.delete-btn {
+    left: -7px;
+    bottom: -10px;
+}
+
+span.edit-btn {
+    left: -5px;
+    top: -7px;
+    background-size: 60%;
+}
 
 .edit-btn{
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('editIcon')[0].'?thumb=>100x>100');?>");
@@ -49,7 +71,9 @@
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('deleteIcon')[0].'?thumb=>100x>100');?>");
 }
 
-
+.edit-btn:hover{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('editIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
+}
 
 
 .story-card .icon {
