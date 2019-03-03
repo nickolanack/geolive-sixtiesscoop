@@ -47,7 +47,9 @@
     "plugin.6": {
         "name": "External Content",
         "instance": "ExternalContent",
-        "parameters": {}
+        "parameters": {
+            "youtube-api-key": ""
+        }
     },
     "plugin.7": {
         "name": "Filesystem",
