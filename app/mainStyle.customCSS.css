@@ -39,6 +39,13 @@
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
 }
 
+
+
+
+span.delete-btn, span.edit-btn {
+    opacity:0;
+}
+
 .story-card:hover span.delete-btn, .story-card:hover span.edit-btn {
     width: 20px;
     height: 20px;
@@ -49,6 +56,8 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    opacity:1;
+    transition:opacity 1.2s;
 
 }
 
