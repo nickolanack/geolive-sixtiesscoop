@@ -807,7 +807,7 @@
         "instance": "SidePanel",
         "parameters": {
             "target": "forTheMap",
-            "customScript": "",
+            "customScript": "widget.SidePanel.15.customScript.js",
             "widgetTitle": "",
             "readAccess": "public",
             "position": "RIGHT_CENTER"
