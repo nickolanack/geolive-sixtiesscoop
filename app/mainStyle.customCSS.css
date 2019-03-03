@@ -39,7 +39,7 @@
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('publishingOptionsIcon')[0].'?thumb=>100x>100&tint=rgb(99, 157, 22)');?>");
 }
 
-span.delete-btn, span.edit-btn {
+.story-card:hover span.delete-btn, .story-card:hover span.edit-btn {
     width: 20px;
     height: 20px;
     background-size: 90%;
@@ -52,12 +52,12 @@ span.delete-btn, span.edit-btn {
 
 }
 
-span.delete-btn {
+.story-card:hover span.delete-btn {
     left: -7px;
     bottom: -10px;
 }
 
-span.edit-btn {
+.story-card:hover span.edit-btn {
     left: -5px;
     top: -7px;
     background-size: 60%;
