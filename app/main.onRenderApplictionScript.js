@@ -1,3 +1,6 @@
+
+
+GetWidget("initializeApplication")->display($targetInstance);
 GetWidget("mainStyle")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 GetWidget("loginFormView")->display($targetInstance);
