@@ -1,2 +1,2 @@
-var sidePanelViewer = new ContentModuleViewer(map, detailContent, {});
+var sidePanelViewer = new ContentModuleViewer(map, container, {});
 ScoopStories.initializeSidePanel(sidePanelViewer, sidePanel);
