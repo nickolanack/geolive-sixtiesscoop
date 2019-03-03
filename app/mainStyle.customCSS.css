@@ -182,10 +182,14 @@ span.delete-btn, span.edit-btn {
     width: 0;
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
-.SideBarWidget.right>.toggle-button, .SideBarWidget.right.active>.toggle-button {
+.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button {
     background-color: white;
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/search.png'); ?>");
     background-size: 60%;
+}
+
+.SideBarWidget.right>div.toggle-button:hover{
+     background-color: #549ae6;
 }
 
 .primary-btn, .inline-btn {
