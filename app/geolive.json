@@ -2666,5 +2666,12 @@
             "widgetTitle": "App Initialization",
             "readAccess": "public"
         }
+    },
+    "widget.36": {
+        "name": "Form View",
+        "instance": "UserWizardBuilder",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
