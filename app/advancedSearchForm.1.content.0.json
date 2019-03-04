@@ -1,7 +1,7 @@
 {
     "type": "InlineHtml",
     "config": {
-        "className": "",
+        "className": "section-label",
         "text": "Refine your search",
         "template": "",
         "templateVariablesScript": ""
