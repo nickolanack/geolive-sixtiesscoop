@@ -5,10 +5,10 @@
         "reduceOpacity": false,
         "onCompleteScript": "defaultBehaviorFn();",
         "showFinish": true,
-        "showCancel": true,
+        "showCancel": false,
         "showBack": true,
         "labelForCancel": "cancel",
-        "labelForSubmit": "submit",
+        "labelForSubmit": "Search",
         "labelForNext": "next",
         "labelForPrevious": "previous",
         "formatButton": "return button;"
