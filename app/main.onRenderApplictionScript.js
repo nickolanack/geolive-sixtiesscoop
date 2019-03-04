@@ -6,7 +6,7 @@ GetWidget("registerFormView")->display($targetInstance);
 GetWidget("loginFormView")->display($targetInstance);
 GetWidget("profileFormView")->display($targetInstance);
 GetWidget("sidePanelDetail")->display($targetInstance);
-
+GetWidget("dialogForm")->display($targetInstance);
 GetWidget("advancedSearchForm")->display($targetInstance);
 //GetWidget("addCardView")->display($targetInstance);
 //GetWidget("createStoryForm")->display($targetInstance);
