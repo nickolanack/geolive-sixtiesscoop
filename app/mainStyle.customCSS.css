@@ -475,5 +475,23 @@ span.search-bar-btn.left.search {
 }
 
 
+.uitext-container.w-dy textarea {
+    display: inline-block;
+    width: 30px;
+}
+
+.uitext-container.w-dy, .uitext-container.w-mn, .uitext-container.w-yr {
+    width: 30px;
+    display: inline-block;
+}
+
+.uitext-container.w-dy .label {
+    white-space: nowrap;
+}
+
+.uitext-container.w-yr {
+    width: 60px;
+}
+
 
 
