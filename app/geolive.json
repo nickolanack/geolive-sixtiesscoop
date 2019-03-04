@@ -2697,8 +2697,8 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": 1,
+                    "y": 172
                 },
                 "children": [
                     "advancedSearchForm.metadata.children.0.json",
@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 156,
-                            "y": 194
+                            "x": 166,
+                            "y": 204
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 116,
-                                    "y": 382
+                                    "x": 126,
+                                    "y": 392
                                 }
                             }
                         ],
@@ -2779,6 +2779,69 @@
                                             "config": {
                                                 "className": "w-yr",
                                                 "label": "",
+                                                "placeholder": "add value",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "Place of birth",
+                                                "placeholder": "add value",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "Name at birth",
+                                                "placeholder": "add value",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"Hello World\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "Year adopted",
                                                 "placeholder": "add value",
                                                 "lines": 1,
                                                 "maxChars": 0,
