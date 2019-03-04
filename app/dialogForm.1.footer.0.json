@@ -7,7 +7,7 @@
         "showFinish": true,
         "showCancel": true,
         "showBack": true,
-        "labelForCancel": "No",
+        "labelForCancel": "Cancel",
         "labelForSubmit": "Yes",
         "labelForNext": "next",
         "labelForPrevious": "previous",
