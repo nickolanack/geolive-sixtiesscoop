@@ -433,8 +433,13 @@ span.user-link {
     display: inline;
 }
 
+.search-container, .advanced-search {
+    margin: 0 10px;
+    display: inline-block;
+}
+
 input.search-input {
-    width: 380px;
+    width: 368px;
     height: 30px;
     line-height: 30px;
     text-indent: 14px;
@@ -445,7 +450,7 @@ input.search-input {
 
 span.search-bar-btn.left.search, .section-label {
     display: block;
-    width: 380px;
+    width: 368px;
     text-align: left;
     margin-top: 30px;
     text-indent: 4px;
