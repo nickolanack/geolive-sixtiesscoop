@@ -1,21 +1,9 @@
 {
-    "type": "FormTextField",
+    "type": "InlineHtml",
     "config": {
         "className": "",
-        "label": "Name",
-        "placeholder": "search names",
-        "lines": 1,
-        "maxChars": 0,
-        "mandatory": false,
-        "multiEntry": false,
-        "muliTemplate": "lines",
-        "multiMessage": "add another value",
-        "formatter": "none",
-        "onRenderTextFieldScript": "",
-        "formatValueScript": "",
-        "getValueScript": " return \"\"; ",
-        "updateValueScript": " object.value=value ",
-        "submitValueScript": "",
-        "validateValueScript": " return defaultValidationFn() "
+        "text": "Refine your search",
+        "template": "",
+        "templateVariablesScript": ""
     }
 }
