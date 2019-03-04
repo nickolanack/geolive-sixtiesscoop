@@ -1,7 +1,7 @@
 {
     "type": "Search",
     "config": {
-        "getAggregatorsScript": "ScoopStories.getSearchAggregators(search);",
+        "getAggregatorsScript": "return ScoopStories.getSearchAggregators(search);",
         "placeholder": "search items"
     }
 }
