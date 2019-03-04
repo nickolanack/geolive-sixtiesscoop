@@ -426,7 +426,14 @@ span.user-link {
 
 
 .search-card .card-img {
-    display:none;
+    display: inline-block;
+    float: left;
+    width: 21px;
+    height: 21px;
+    margin: 2px;
+    margin-right: 5px;
+    margin-left: 0;
+    border-radius: 100%;
 }
 
 .search-card h3, .search-card p, .search-card div {
