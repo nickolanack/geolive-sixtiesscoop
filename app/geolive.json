@@ -2640,7 +2640,7 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "",
+                                    "className": "advanced-search",
                                     "viewType": "form",
                                     "namedView": "advancedSearchForm",
                                     "shouldRender": true,
