@@ -2935,5 +2935,12 @@
             "onLoadScript": "",
             "readAccess": "public"
         }
+    },
+    "widget.37": {
+        "name": "Form View",
+        "instance": "UserWizardBuilder",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
