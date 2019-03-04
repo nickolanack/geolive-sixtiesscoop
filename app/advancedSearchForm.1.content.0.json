@@ -3,7 +3,7 @@
     "config": {
         "className": "",
         "label": "Name",
-        "placeholder": "add value",
+        "placeholder": "search names",
         "lines": 1,
         "maxChars": 0,
         "mandatory": false,
@@ -13,7 +13,7 @@
         "formatter": "none",
         "onRenderTextFieldScript": "",
         "formatValueScript": "",
-        "getValueScript": " return \"Hello World\"; ",
+        "getValueScript": " return \"\"; ",
         "updateValueScript": " object.value=value ",
         "submitValueScript": "",
         "validateValueScript": " return defaultValidationFn() "

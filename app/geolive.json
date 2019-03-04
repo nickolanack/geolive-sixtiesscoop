@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 166,
-                            "y": 204
+                            "x": 176,
+                            "y": 214
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 126,
-                                    "y": 392
+                                    "x": 136,
+                                    "y": 440
                                 }
                             }
                         ],
@@ -2737,7 +2737,7 @@
                                             "config": {
                                                 "className": "w-dy",
                                                 "label": "Date of birth (dd, mm, yyyy)",
-                                                "placeholder": "add value",
+                                                "placeholder": "dd",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -2747,7 +2747,7 @@
                                                 "formatter": "none",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
+                                                "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "",
                                                 "validateValueScript": " return defaultValidationFn() "
@@ -2758,7 +2758,7 @@
                                             "config": {
                                                 "className": "w-mn",
                                                 "label": "",
-                                                "placeholder": "add value",
+                                                "placeholder": "mm",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -2768,7 +2768,7 @@
                                                 "formatter": "none",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
+                                                "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "",
                                                 "validateValueScript": " return defaultValidationFn() "
@@ -2789,7 +2789,7 @@
                                                 "formatter": "none",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": "",
-                                                "getValueScript": " return \"Hello World\"; ",
+                                                "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "",
                                                 "validateValueScript": " return defaultValidationFn() "
