@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 226,
-                            "y": 264
+                            "x": 236,
+                            "y": 274
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 186,
-                                    "y": 515
+                                    "x": 196,
+                                    "y": 537
                                 }
                             }
                         ],
@@ -2817,27 +2817,6 @@
                                             }
                                         },
                                         {
-                                            "type": "FormTextField",
-                                            "config": {
-                                                "className": "",
-                                                "label": "Place of birth",
-                                                "placeholder": "search locations",
-                                                "lines": 1,
-                                                "maxChars": 0,
-                                                "mandatory": false,
-                                                "multiEntry": false,
-                                                "muliTemplate": "lines",
-                                                "multiMessage": "add another value",
-                                                "formatter": "none",
-                                                "onRenderTextFieldScript": "",
-                                                "formatValueScript": "",
-                                                "getValueScript": " return \"\"; ",
-                                                "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
-                                                "validateValueScript": " return defaultValidationFn() "
-                                            }
-                                        },
-                                        {
                                             "type": "plugin.Maps.FormLocationField",
                                             "config": {
                                                 "className": "",
@@ -2901,7 +2880,7 @@
                                             }
                                         },
                                         {
-                                            "type": "FormTextField",
+                                            "type": "plugin.Maps.FormLocationField",
                                             "config": {
                                                 "className": "",
                                                 "label": "Location lived",
@@ -2915,7 +2894,7 @@
                                                 "formatter": "none",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": "",
-                                                "getValueScript": " return \"\"; ",
+                                                "getValueScript": " return \"Hello World\"; ",
                                                 "updateValueScript": " object.value=value ",
                                                 "submitValueScript": "",
                                                 "validateValueScript": " return defaultValidationFn() "
