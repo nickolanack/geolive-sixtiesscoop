@@ -445,7 +445,7 @@ span.user-link {
     display: inline-block;
 }
 
-.search-result-list.hybrid {
+.sidebar-view .search-result-list.hybrid {
     margin-left: 10px;
 }
 
