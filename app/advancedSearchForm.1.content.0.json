@@ -2,7 +2,7 @@
     "type": "FormTextField",
     "config": {
         "className": "",
-        "label": "Some Field",
+        "label": "Name",
         "placeholder": "add value",
         "lines": 1,
         "maxChars": 0,

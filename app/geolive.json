@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 136,
-                            "y": 174
+                            "x": 146,
+                            "y": 184
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 96,
-                                    "y": 362
+                                    "x": 106,
+                                    "y": 372
                                 }
                             }
                         ],
@@ -2736,7 +2736,7 @@
                                             "type": "FormTextField",
                                             "config": {
                                                 "className": "",
-                                                "label": "Some Field",
+                                                "label": "Date of birth (dd, mm, yyyy)",
                                                 "placeholder": "add value",
                                                 "lines": 1,
                                                 "maxChars": 0,
@@ -2757,7 +2757,7 @@
                                             "type": "FormTextField",
                                             "config": {
                                                 "className": "",
-                                                "label": "Some Field",
+                                                "label": "",
                                                 "placeholder": "add value",
                                                 "lines": 1,
                                                 "maxChars": 0,
@@ -2778,7 +2778,7 @@
                                             "type": "FormTextField",
                                             "config": {
                                                 "className": "",
-                                                "label": "Some Field",
+                                                "label": "",
                                                 "placeholder": "add value",
                                                 "lines": 1,
                                                 "maxChars": 0,
