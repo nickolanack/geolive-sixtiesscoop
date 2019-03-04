@@ -425,5 +425,14 @@ span.user-link {
 
 
 
+.search-card .card-img {
+    display:none;
+}
+
+.search-card h3, .search-card p, .search-card div {
+    display: inline;
+}
+
+
 
 

@@ -806,11 +806,11 @@
         "name": "Side Panel",
         "instance": "SidePanel",
         "parameters": {
-            "target": "forTheMap",
-            "customScript": "widget.SidePanel.15.customScript.js",
             "widgetTitle": "",
-            "readAccess": "public",
-            "position": "RIGHT_CENTER"
+            "target": "forTheMap",
+            "position": "RIGHT_CENTER",
+            "customScript": "widget.SidePanel.15.customScript.js",
+            "readAccess": "public"
         }
     },
     "widget.16": {
