@@ -442,12 +442,12 @@ input.search-input {
     background-color: white;
 }
 
-span.search-bar-btn.left.search {
+span.search-bar-btn.left.search, .section-label {
     display: block;
     width: 380px;
     text-align: left;
     margin-top: 30px;
-    text-indent: 14px;
+    text-indent: 4px;
     height: 30px;
     line-height: 30px;
     font-size: 20px;
