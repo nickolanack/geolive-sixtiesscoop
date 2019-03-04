@@ -438,6 +438,10 @@ span.user-link {
     display: inline-block;
 }
 
+.search-result-list.hybrid {
+    margin-left: 10px;
+}
+
 input.search-input {
     width: 368px;
     height: 30px;
