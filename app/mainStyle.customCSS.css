@@ -452,8 +452,23 @@ span.search-bar-btn.left.search {
     line-height: 30px;
     font-size: 20px;
     font-weight: 100;
-    color: #67b7ee;
+    color: #5ea5e9;
 }
+
+
+.pb-c {
+    background-color: #f0f0f0;
+}
+
+.uitext-container .label {
+    color: #5ea5e9;
+}
+
+.text-input {
+ 
+    border: none;
+}
+
 
 
 
