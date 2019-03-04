@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 186,
-                            "y": 224
+                            "x": 196,
+                            "y": 234
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 146,
-                                    "y": 450
+                                    "x": 156,
+                                    "y": 460
                                 }
                             }
                         ],
@@ -2800,7 +2800,7 @@
                                             "config": {
                                                 "className": "",
                                                 "label": "Place of birth",
-                                                "placeholder": "search location",
+                                                "placeholder": "search locations",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -2843,6 +2843,27 @@
                                                 "className": "",
                                                 "label": "Year adopted",
                                                 "placeholder": "yyyy",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "Location lived",
+                                                "placeholder": "search locations",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
