@@ -472,6 +472,21 @@ span.search-bar-btn.left.search, .section-label {
     color: #5ea5e9;
 }
 
+span.search-bar-btn.left.search {
+    text-transform: lowercase;
+}
+
+span.search-bar-btn.left.search:before {
+    content: "Quick ";
+    text-transform: capitalize;
+}
+
+.section-label {
+    margin-top: 10px;
+    padding-top: 3px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
 
 .pb-c {
     background-color: #f0f0f0;
