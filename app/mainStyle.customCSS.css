@@ -440,6 +440,7 @@ input.search-input {
     text-indent: 14px;
     border: none;
     background-color: white;
+        margin-left: 5px;
 }
 
 span.search-bar-btn.left.search, .section-label {
