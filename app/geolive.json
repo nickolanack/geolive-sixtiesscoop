@@ -2709,16 +2709,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 146,
-                            "y": 184
+                            "x": 156,
+                            "y": 194
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 106,
-                                    "y": 372
+                                    "x": 116,
+                                    "y": 382
                                 }
                             }
                         ],
@@ -2735,7 +2735,7 @@
                                         {
                                             "type": "FormTextField",
                                             "config": {
-                                                "className": "",
+                                                "className": "w-dy",
                                                 "label": "Date of birth (dd, mm, yyyy)",
                                                 "placeholder": "add value",
                                                 "lines": 1,
@@ -2756,7 +2756,7 @@
                                         {
                                             "type": "FormTextField",
                                             "config": {
-                                                "className": "",
+                                                "className": "w-mn",
                                                 "label": "",
                                                 "placeholder": "add value",
                                                 "lines": 1,
@@ -2777,7 +2777,7 @@
                                         {
                                             "type": "FormTextField",
                                             "config": {
-                                                "className": "",
+                                                "className": "w-yr",
                                                 "label": "",
                                                 "placeholder": "add value",
                                                 "lines": 1,
