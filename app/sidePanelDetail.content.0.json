@@ -2,6 +2,6 @@
     "type": "Search",
     "config": {
         "getAggregatorsScript": "return ScoopStories.getSearchAggregators(search);",
-        "placeholder": "search items"
+        "placeholder": "search for stories"
     }
 }
