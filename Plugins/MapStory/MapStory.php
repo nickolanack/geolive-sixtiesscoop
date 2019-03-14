@@ -3,10 +3,11 @@
 namespace Plugin;
 
 class MapStory extends \Plugin implements
-\core\ViewController, \core\AjaxControllerProvider, \core\EventListener {
+\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\PluginDataTypeProvider{
 
 	use \core\AjaxControllerProviderTrait;
 	use \core\EventListenerTrait;
+	use \core\PluginDataTypeProviderTrait;
 
 	protected $name = 'Create Map Stories';
 	protected $description = 'Allows users to create stories by connecting map items';
@@ -129,6 +130,52 @@ class MapStory extends \Plugin implements
 				$attributes=$attr->getValues($feature['id'], $feature['type']);
 
 				$list[]=$this->formatFeatureMetadata($feature, $attributes);
+
+
+			});
+
+		return $list;
+
+	}
+
+
+	public function searchStories($keyword) {
+
+		GetPlugin('Maps');
+		GetPlugin('Attributes');
+		$attr=(new \attributes\Record('storyAttributes'));
+		$list=array();
+
+		$users=array();
+
+		(new \spatial\Features())
+			->withFilter(array(array(
+				"join"=>'OR',
+				array(
+					'field'=>'name',
+					'comparator' => ' LIKE ',
+					'value' => '%'.$keyword.'%'
+				),
+				array(
+					'field'=>'description',
+					'comparator' => ' LIKE ',
+					'value' => '%'.$keyword.'%'
+				)
+
+			)))
+			->iterate(function ($feature) use(&$list, &$attr, &$users){
+
+				$attributes=$attr->getValues($feature['id'], $feature['type']);
+
+				$result=$this->formatFeatureMetadata($feature, $attributes);
+
+				if(!key_exists($result['uid'], $users)){
+					$users[$result['uid']]=$this->getUsersMetadata($result['uid']);
+				}
+
+				$result['userData']=$users[$result['uid']];
+
+				$list[]=$result;
 
 
 			});

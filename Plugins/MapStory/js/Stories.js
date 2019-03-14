@@ -14,17 +14,21 @@ var StoryMapController = new Class({
             });
         });
 
-        me.addEvent('setCards', function(cards) {
+        me.addEvent('setCards', function(cards, group) {
             me.markersForCards(cards, function(marker){
                  me.scaleIcon(marker, 20);
             });
-            me.linkCardsOnMap(cards);
-
+            if(group instanceof StoryUser){
+                me.linkCardsOnMap(cards);
+            }
+            me.focusCurrentStory();
         });
 
     },
 
-    getCurrentCards: function(application, callback) {
+
+
+    getCurrentCards: function(callback) {
 
 
         var me = this;
@@ -38,7 +42,7 @@ var StoryMapController = new Class({
             group.getCards(function(cards) {
                 me._cards = cards;
                 callback(me._cards.slice(0));
-                me.fireEvent('setCards', [me._cards.slice(0)]);
+                me.fireEvent('setCards', [me._cards.slice(0), group]);
 
             });
         });
@@ -82,6 +86,8 @@ var StoryMapController = new Class({
 
     },
 
+
+
     initializeStoryView: function(storyView) {
 
         var me = this;
@@ -91,21 +97,40 @@ var StoryMapController = new Class({
 
     },
 
+    initializeSidePanel:function(sidePanel, el){
+        var me=this;
+        var sidePanelViewer = new ContentModuleViewer(el, {});
+
+
+        me.getApp(function(app){
+            app.getDisplayController().display('sidePanelDetail', AppClient, sidePanelViewer);
+        });
+
+
+    },
+
+    getSearchAggregators:function(search){
+
+        return [
+            new StorySearch(search,{})
+        ];
+
+    },
+    initializeApplication: function(app) {
+        var me = this;
+        me._app = app;
+
+        me.fireEvent('loadApp', [app]);
+    },
+    
     initializeMap: function(map) {
 
         var me = this;
         me._map = map;
         map.setMapitemSelectFn(function(item) {
 
-            if (me.hasCard(item.getId())) {
-                me.focusCard(me.getCard(item.getId()));
-                return;
-            }
-
-            me.loadCardGroupWithCardId(item.getId(), function() {
-                me.focusCard(me.getCard(item.getId()))
-            });
-
+            me.selectCard(item.getId());
+          
         });
 
 
@@ -121,6 +146,72 @@ var StoryMapController = new Class({
 
         me.fireEvent('loadMap', [map]);
 
+
+    },
+
+    selectCard:function(id){
+        var me=this;
+
+        if (me.hasCard(id)) {
+            me.focusCard(me.getCard(id));
+            return;
+        }
+
+        me.loadCardGroupWithCardId(id, function() {
+            setTimeout(function(){
+                //TODO loading card group already moves the map
+                me.focusCard(me.getCard(id))
+            }, 250);
+        });
+
+    },
+
+    focusCurrentStory:function(){
+
+        var me=this;
+        me.getCurrentCards(function(cards){
+
+            var markers=[];
+            var addMarker=function(marker){
+                markers.push(marker);
+            }
+
+            var _timeout=null;
+            var fitBounds=function(){
+
+                if(_timeout){
+                    clearTimeout(_timeout);
+                }
+
+                _timeout=setTimeout(function(){
+                    _timeout=null;
+                    if(markers.length==1){
+                        me.getMap().panTo(markers[0].getLatLng());
+                        return;
+                    }
+
+                    me.getMap().fitBounds(SpatialCalculator.calculateBounds(markers));
+
+                }, 250);
+                
+
+            }
+
+            me.markersForCards(cards, function(marker){
+                 addMarker(marker);
+            });
+
+            
+            fitBounds();
+            
+           
+            addMarker=function(marker){
+                markers.push(marker);
+                fitBounds();
+            }
+
+
+        });
 
     },
 
@@ -142,7 +233,7 @@ var StoryMapController = new Class({
 
             me._activeMarker = marker;
 
-            me.getMap().panTo(marker.getLatLng());
+            //me.getMap().panTo(marker.getLatLng());
             me.scaleIcon(marker, 40);
 
             
@@ -206,9 +297,39 @@ var StoryMapController = new Class({
 
         var me = this;
 
+
+
         (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
             "plugin": "MapStory",
             "item": id
+        })).addEvent("success", function(resp) {
+
+
+            me.setCardGroup(new StoryUser(resp), callback);
+
+
+        }).execute();
+
+
+        //throw 'load card group with card: '+id;
+
+    },
+
+     loadCardGroupWithUserId: function(id, callback) {
+
+
+        var me = this;
+
+
+        if(id==-1&&AppClient.getUserType()=="guest"){
+            me.setCardGroup(new AppClientStoryUser(), callback);
+            return;
+        }
+
+
+        (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_user", {
+            "plugin": "MapStory",
+            "user": id
         })).addEvent("success", function(resp) {
 
 
@@ -233,7 +354,7 @@ var StoryMapController = new Class({
             }
 
             me._cards = cards;
-            me.fireEvent('setCards', [me._cards.slice(0)]);
+            me.fireEvent('setCards', [me._cards.slice(0), group]);
             me.redraw(callback)
         })
 
@@ -284,7 +405,7 @@ var StoryMapController = new Class({
         throw 'cards:' + id + ' is not available';
     },
     getCardEl: function(id) {
-        return $$('.card-id-' + id)[0];
+        return $$('.story-list .card-id-' + id)[0];
     },
 
 
@@ -300,12 +421,58 @@ var StoryMapController = new Class({
         var me = this;
         var setCardLabel = function() {
             me.getCurrentCardLabel(function(label) {
-                el.innerHTML = label;
+                if(typeof label=="string"){
+                    el.innerHTML = label; 
+                    return;
+                }
+
+                el.innerHTML = ""; 
+                if(label){
+                    el.appendChild(label);
+                }
             });
+                
         }
         setCardLabel();
 
+
+        new WeakEvent(el, me, 'setCards', setCardLabel);
+        //me.addEvent('setCards', setCardLabel);
+
         return el;
+    },
+
+
+
+    GetAddCardModule:function(item, application){
+
+        var me=this;
+        var button =new Element('button',{html:item.getLabel(), "class":item.getClassNames()});
+        button.appendChild(new Element('span', {"class":"icon"}));
+
+        if(item.hasFn()){
+            
+            
+            button.addEvent('click', item.executeFn.bind(item));
+            return button;
+            
+        }
+
+
+        new UIModalFormButton(
+            button, 
+            application, item, 
+            {
+                formName:item.getFormView(), 
+                formOptions:{template:"form"}
+                
+            }
+        );
+        
+        
+        
+        return button;
+
     },
 
     getMap: function(callback) {
@@ -334,6 +501,32 @@ var StoryMapController = new Class({
         return me._map;
     },
 
+    getApp: function(callback) {
+        var me = this;
+
+        if (callback) {
+
+            if (!me._app) {
+
+                me.addEvent('loadApp:once', function(app) {
+                    callback(app);
+                });
+                return;
+            }
+
+
+            callback(me._app);
+            return;
+
+
+        }
+
+        if (!me._app) {
+            throw 'app is not initialized'
+        }
+        return me._app;
+    },
+
 
 
     StyleUserIcon: function(el) {
@@ -360,6 +553,9 @@ var StoryMapController = new Class({
     StyleCardImage: function(el, card) {
 
         card.getCardBackgroundImage(function(icon) {
+            if(!icon){
+                return;
+            }
             el.setStyle("background-image", 'url("' + icon + '")');
         });
 
@@ -374,7 +570,7 @@ var StoryMapController = new Class({
 
         var me = this;
 
-        var module = new ModuleArray([
+        var modules=[
             new Element('span', {
                 "class": "icon"
             }),
@@ -388,7 +584,42 @@ var StoryMapController = new Class({
                 "html": item.getDescription()
             })
 
-        ], {
+        ];
+
+        if(item.canEdit()){
+            modules=modules.concat([
+                new Element('span', {
+                    "class": "edit-btn",
+                    events:{click:function(e){
+
+                        
+                        application.getDisplayController().displayPopoverForm(
+                            item.getFormView(),
+                            item, 
+                            {template:"form"}
+                        );
+                    }}
+                }),
+                new Element('span', {
+                    "class": "delete-btn",
+                    events:{click:function(e){
+                        (new UIModalDialog(me.getApp(), {name:"Confirmation", description:"Are you sure you want to delete this card"}, {
+                            "formName": "dialogForm",
+                            "formOptions": {
+                                "template": "form",
+                                "className": "confirm-view"
+                            }
+                        })).show(function(answer){
+
+
+
+                        });
+                    }}
+                })
+            ]);
+        }
+
+        var module = new ModuleArray(modules, {
             "class": item.getClassNames()
         });
 
@@ -399,7 +630,7 @@ var StoryMapController = new Class({
 
             //marker.activate();
             //item.setActive();
-            me.focusCard(item);
+            me.selectCard(item.getId());
 
         });
 
@@ -414,6 +645,8 @@ var StoryMapController = new Class({
             map.getLayerManager().filterMarkerById(id, callback);
         })
     },
+
+    
 
     linkCardsOnMap: function(cards) {
 
@@ -582,6 +815,33 @@ var StoryUser = new Class({
         return me;
 
     },
+    getFirstStory:function(){
+        var me=this;
+        return me._birthStory||(me._journeyStories&&me._journeyStories.length?me._journeyStories[0]:me._repatriationStory)||null;
+    },
+    isCurrentUser:function(){
+        var me=this;
+        return me.getUserId()===AppClient.getId();
+    },
+
+    getUsersName:function(){
+        var me=this;
+        if(me._userData){
+            return me._userData.name;
+        }
+
+        return 'Unknown';
+    },
+
+    getUserId:function(){
+
+        var me=this;
+        if(me._userData){
+            return parseInt(me._userData.id);
+        }
+
+        return -1;
+    },
     hasBirthStory: function() {
         return !!this._birthStory;
     },
@@ -714,9 +974,44 @@ var StoryUser = new Class({
 
     },
     canEdit:function(){
+        var me=this;
+
+        if(me._userData&&parseInt(me._userData.id)===AppClient.getId()){
+            return true;
+        }
+
         return AppClient.getUserType() === "admin";
     },
     getCardsLabel: function(callback) {
+
+        var me=this;
+        
+
+        if(!me.isCurrentUser()){
+
+            var div=new Element('div');
+            div.appendChild(new Element('span', {
+                "class":"user-name",
+                "html":me.getUsersName()+"'s "
+            }));
+            div.appendChild(new Element('span', {
+                "html":"Sixties Scoop Survivor Story "
+            }))
+            div.appendChild(new Element('span', {
+                "class":"user-link",
+                "html":"Go to your own story",
+                events:{
+                    click:function(){
+                        ScoopStories.loadCardGroupWithUserId(AppClient.getId(), function(){
+                            //ScoopStories.focusCurrentStory();
+                        })
+                    }
+                }
+            }))
+
+            callback(div);
+            return;
+        }
 
         if (AppClient.getUserType() === "guest") {
 
@@ -826,6 +1121,8 @@ var StoryCard = new Class({
 
     },
 
+    
+
     getConfig: function() {
         var me = this;
         return JSON.parse(JSON.stringify(me._config));
@@ -837,6 +1134,24 @@ var StoryCard = new Class({
         me._user = user;
 
         return me;
+    },
+
+    isBirthStory:function(){
+        var me=this;
+        return me._user&&me._user.hasBirthStory()&&me._user.getBirthStory()===me;
+    },
+    isRepatriationStory:function(){
+        var me=this;
+        return me._user&&me._user.hasRepatriationStory()&&me._user.getRepatriationStory()===me;
+    },
+
+    canEdit:function(){
+        var me=this;
+        if(!me._user){
+            return false;
+        }
+
+        return parseInt(me._user.getUserId())===AppClient.getId()||AppClient.getUserType()==="admin";
     },
 
     getAddress: function() {
@@ -865,9 +1180,20 @@ var StoryCard = new Class({
         return this;
     },
     getFormView: function() {
+
+        var me=this;
         if (this._getFormView) {
             return this._getFormView();
         }
+
+        if(me.isBirthStory()){
+            return 'createBirthStoryForm';
+        }
+
+        if(me.isRepatriationStory()){
+            return 'createRepatriationStoryForm';
+        }
+
         return "createStoryForm"
     },
     getLabel: function() {
@@ -889,6 +1215,11 @@ var StoryCard = new Class({
     },
 
     getCardBackgroundImage: function(callback) {
+        var me=this;
+        if(!me._user){
+            callback(null);
+            return null;
+        }
         return this._user.getIcon(callback);
     },
 
@@ -916,10 +1247,18 @@ var StoryCard = new Class({
 });
 
 
+
+
+
+
+
 var AddCard = new Class({
     Extends: StoryCard,
     hasFn: function() {
         return !!this._click;
+    },
+    canEdit:function(){
+        return false;
     },
     executeFn: function(e) {
         var me = this;
@@ -930,3 +1269,63 @@ var AddCard = new Class({
 
     }
 });
+
+var AdvancedStorySearch=new Class({
+    Extends: MockDataTypeItem,
+    initialize: function(options) {
+        var me = this;
+        me.parent(options);
+        
+    },
+    save: function(cb) {
+
+        
+    }
+})
+
+var StorySearch = new Class({
+    Extends: UISearchListAggregator,
+    initialize: function(search, options) {
+        //var me = this;
+        this.parent(search, Object.append({
+
+            PreviousTemplate: UIListAggregator.PreviousTemplate,
+            MoreTemplate: UIListAggregator.MoreTemplate,
+            ResultTemplate: UIListAggregator.NamedViewTemplate(ScoopStories.getMap.bind(ScoopStories), {
+                namedView: "scoopStoryDetail",
+                formatResult:function(data){
+
+
+                    var card= new StoryCard(Object.append(data, {classNames: "search-card"}));
+                    var user=new StoryUser({"story":[], "user":Object.append({}, data.userData)});
+                    card.setUser(user)
+
+                    return card;
+                },
+                events: {
+                    click: function() {
+
+                        
+                    }
+                }
+            })
+
+        }, options));
+    },
+    _getRequest: function(filters) {
+        var me = this;
+        var string = me.currentSearchString;
+
+        var args = {
+            search: string,
+            searchOptions: filters
+        };
+
+        return new AjaxControlQuery(CoreAjaxUrlRoot, 'search', Object.append({
+            'plugin': 'MapStory'
+        }, args));
+
+
+    }
+});
+
