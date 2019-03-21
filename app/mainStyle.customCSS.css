@@ -530,6 +530,16 @@ span.search-bar-btn.left.search:before {
 }
 
 
+.registration-module.activation>* {
+    display: none;
+}
+
+.registration-module.activation>.progress {
+    display: block;
+    position: absolute;
+    top: 40%;
+}
+
 
 
 
