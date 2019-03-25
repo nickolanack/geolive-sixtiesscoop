@@ -341,16 +341,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 315,
-                            "y": 171
+                            "x": 325,
+                            "y": 181
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 275,
-                                    "y": 372
+                                    "x": 285,
+                                    "y": 382
                                 }
                             }
                         ],
@@ -415,7 +415,7 @@
                                                 "label": "Do you have any photos of this place that you would like to share?\n",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
