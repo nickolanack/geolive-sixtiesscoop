@@ -5,6 +5,9 @@ GetWidget("createRepatriationStoryForm")->display($targetInstance);
 GetWidget("publishingOptionsForm")->display($targetInstance);
 
 
+GetWidget("sortCardView")->display($targetInstance);
+GetWidget("profileSummaryCardView")->display($targetInstance);
+
 GetWidget("loginFormView")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 
