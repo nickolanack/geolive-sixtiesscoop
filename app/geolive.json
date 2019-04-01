@@ -3023,5 +3023,31 @@
             "onLoadScript": "",
             "readAccess": "public"
         }
+    },
+    "widget.38": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false
+        }
+    },
+    "widget.39": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false
+        }
     }
 }
