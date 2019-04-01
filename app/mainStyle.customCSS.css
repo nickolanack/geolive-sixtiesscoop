@@ -173,6 +173,18 @@ span.delete-btn, span.edit-btn {
 .story-card p {
     text-align: left;
     margin: 2px;
+    position:relative;
+}
+
+.story-card p:after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    bottom: 1px;
+    left: 0;
+    background-image: -webkit-linear-gradient(top, transparent, white);
+    border-radius: 0 0 3px 3px;
 }
 
 .story-card .add-card {
