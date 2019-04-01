@@ -136,7 +136,7 @@ span.delete-btn, span.edit-btn {
 }
 
 
-.ui-view.summary.story-card {
+.ui-view.summary.story-card, .ui-view.sort.story-card {
     width: auto;
     box-shadow: none;
     border-right: 1px solid black;
