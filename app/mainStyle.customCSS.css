@@ -217,7 +217,7 @@ span.delete-btn, span.edit-btn {
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
-.profile-section  .primary-btn {
+.profile-section  .primary-btn, .sort-card button {
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -231,13 +231,19 @@ span.delete-btn, span.edit-btn {
     border-radius:3px;
 }
 
+.sort-card button {
+    padding: 1px 7px;
+    margin: 5px;
+    font-size: 11px;
+}
+
 .profile-section .inline-btn{
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #5ea5e9;
 }
 
-.profile-section .primary-btn:hover {
+.profile-section .primary-btn:hover, .sort-card button:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     background-color: #4987cc;
 }
