@@ -3,5 +3,5 @@ if(child instanceof ProfileSummaryCard){
 }
 
 if(child instanceof SortCard){
-    childView.getElement().addClass("sort")
+    childView.getElement().addClass("summary sort")
 }
