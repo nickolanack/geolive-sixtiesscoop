@@ -238,6 +238,12 @@ span.delete-btn, span.edit-btn {
     display: block;
 }
 
+.sort-card button.disabled {
+    background-color: white;
+    color: gray;
+    text-shadow: none;
+}
+
 .profile-section .inline-btn{
     border: none;
     background-color: transparent;
