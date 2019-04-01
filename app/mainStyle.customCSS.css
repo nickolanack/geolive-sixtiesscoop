@@ -135,6 +135,16 @@ span.delete-btn, span.edit-btn {
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
+
+.ui-view.summary.story-card {
+    width: auto;
+    box-shadow: none;
+    border-right: 1px solid black;
+    border-radius: 0;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
 .card-img {
     width: 100%;
     height: 55px;
