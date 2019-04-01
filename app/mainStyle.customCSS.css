@@ -235,6 +235,7 @@ span.delete-btn, span.edit-btn {
     padding: 1px 7px;
     margin: 5px;
     font-size: 11px;
+    display: block;
 }
 
 .profile-section .inline-btn{
