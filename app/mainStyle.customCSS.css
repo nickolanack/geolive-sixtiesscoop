@@ -262,6 +262,10 @@ span.TileButtonsFunctionsSection {
     border-radius:3px;
 }
 
+.sort-card button.current {
+    background-color: #639d16;
+}
+
 .sort-card button {
     padding: 1px 7px;
     margin: 3px;
