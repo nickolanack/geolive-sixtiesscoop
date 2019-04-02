@@ -3114,7 +3114,7 @@
             "iconset": false,
             "login": false,
             "logout": false,
-            "controlColor": "rgb(48,84,107)",
+            "controlColor": "rgb(84, 154, 230)",
             "subControlColor": "rgb(100, 149, 237)",
             "tileIcon": [],
             "displayMapSave": true,
