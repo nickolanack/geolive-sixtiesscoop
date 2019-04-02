@@ -3107,19 +3107,19 @@
         "instance": "TileButtons",
         "parameters": {
             "widgetTitle": "",
-            "target": "map.1",
-            "position": "LEFT_TOP",
-            "fullscreen": true,
+            "target": "forTheMap",
+            "position": "RIGHT_BOTTOM",
+            "fullscreen": false,
             "home": true,
-            "iconset": true,
-            "login": true,
-            "logout": true,
+            "iconset": false,
+            "login": false,
+            "logout": false,
             "controlColor": "rgb(48,84,107)",
             "subControlColor": "rgb(100, 149, 237)",
             "tileIcon": [],
             "displayMapSave": true,
-            "tileSize": 50,
-            "markerSize": 32,
+            "tileSize": "50",
+            "markerSize": "32",
             "markerIconset": [],
             "iconsetMetadata": [],
             "groupIcon": [],
@@ -3130,7 +3130,10 @@
             "guestLoginDrag": true,
             "onDragEndScript": "defaultBehaviorFn();",
             "onDisplayTileScript": "",
-            "onProfileClickScript": ""
+            "onProfileClickScript": "",
+            "layerMap": [],
+            "tipMap": [],
+            "readAccess": "public"
         }
     }
 }
