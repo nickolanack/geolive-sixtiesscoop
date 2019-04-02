@@ -29,7 +29,7 @@ class MapStory extends \Plugin implements
 		$icon='<img src="'.$photoUrl.'" />';
 
 		(new \attributes\Record('profileAttributes'))->setValues($params->user, "user", array(
-			"icon"=>'<img src="'.$photoUrl.'" />',
+			"icon"=>$icon,
 			"name"=>$params->fbuser->name
 		));
 
@@ -51,6 +51,12 @@ class MapStory extends \Plugin implements
 
 		GetPlugin('Maps');
 
+		$itemId=(int)$itemId;
+		if($itemId>0){
+			$feature=(new \spatial\FeatureLoader())->fromId($itemId);
+			return $feature;
+		}
+
 		$feature = new \Marker();
 		$feature->setUserId(GetClient()->getUserId());
 		
@@ -70,6 +76,21 @@ class MapStory extends \Plugin implements
 		//if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
 			$attributes['locationImages']='<img src="'.UrlFrom(GetWidget('demoConfig')->getParameter('item0Image')[0] . '?thumb=>48>48').'" />';
 		//}
+		
+		if(empty($attributes['locationName'])){
+			GetPlugin('GoogleMaps');
+			$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
+				$feature['coordinates'][0], 
+				$feature['coordinates'][1],
+				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
+			);
+			if(key_exists('results',$geocode)&&count($geocode->results)){
+				$attributes['geocode']=$geocode->results[0];
+			}
+			
+		}
+
+
 		$feature['attributes']=$attributes;
 
 		return $feature;
@@ -122,12 +143,32 @@ class MapStory extends \Plugin implements
 		GetPlugin('Attributes');
 		$attr=(new \attributes\Record('storyAttributes'));
 		$list=array();
+
+		$hasBirthStory=false;
+		$hasRepatriationStory=false;
+
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withOwner($userId)
-			->iterate(function ($feature) use(&$list, &$attr){
+			->iterate(function ($feature) use(&$list, &$attr, &$hasBirthStory, &$hasRepatriationStory){
 
 				$attributes=$attr->getValues($feature['id'], $feature['type']);
+
+
+				if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
+					if($hasBirthStory){
+						$attributes['isBirthStory']=false;
+					}else{
+						$hasBirthStory=true;
+					}
+				}
+				if($attributes['isRepatriationStory']==="true"||$attributes['isRepatriationStory']===true){
+					if($hasRepatriationStory){
+						$attributes['isRepatriationStory']=false;
+					}else{
+						$hasRepatriationStory=true;
+					}
+				}
 
 				$list[]=$this->formatFeatureMetadata($feature, $attributes);
 
@@ -181,6 +222,40 @@ class MapStory extends \Plugin implements
 			});
 
 		return $list;
+
+	}
+
+	public function getFeatureListMetadata($featureIds){
+
+		GetPlugin('Maps');
+		GetPlugin('Attributes');
+		$attr=(new \attributes\Record('storyAttributes'));
+		$list=array();
+
+		$users=array();
+
+		(new \spatial\Features())
+			->listLayerFeatures($this->getStoryLayerId())
+			->withFeatures($featureIds)
+			->iterate(function ($feature) use(&$list, &$attr, &$users){
+
+				$attributes=$attr->getValues($feature['id'], $feature['type']);
+
+				$result=$this->formatFeatureMetadata($feature, $attributes);
+
+				if(!key_exists($result['uid'], $users)){
+					$users[$result['uid']]=$this->getUsersMetadata($result['uid']);
+				}
+
+				$result['userData']=$users[$result['uid']];
+
+				$list[]=$result;
+
+			});
+
+
+		return $list;
+
 
 	}
 

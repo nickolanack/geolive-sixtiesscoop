@@ -4,21 +4,25 @@ var StoryMapController = new Class({
 
 
         var me = this;
+        me.setSortFn(function(){
+            //random
+            return Math.round((Math.random()*2.0)-1.0);
+        });
 
         me.addEvent('clearCards', function(cards) {
-            me.markersForCards(cards, function(marker){
-                if(marker===me._activeMarker){
-                    me._activeMarker=null;
+            me.markersForCards(cards, function(marker) {
+                if (marker === me._activeMarker) {
+                    me._activeMarker = null;
                 }
                 me.scaleIcon(marker, 10);
             });
         });
 
         me.addEvent('setCards', function(cards, group) {
-            me.markersForCards(cards, function(marker){
-                 me.scaleIcon(marker, 20);
+            me.markersForCards(cards, function(marker) {
+                me.scaleIcon(marker, 20);
             });
-            if(group instanceof StoryUser){
+            if (group instanceof StoryUser) {
                 me.linkCardsOnMap(cards);
             }
             me.focusCurrentStory();
@@ -54,7 +58,40 @@ var StoryMapController = new Class({
         var me = this;
         me.getCurrentCardGroup(function(group) {
 
-            group.getCardsLabel(callback);
+            group.getCardsLabel(function(label) {
+
+                var div = label;
+
+                if (!(div && div.tagName)) {
+                    div = new Element('div');
+                }
+
+                if (typeof label == "string") {
+
+                    div.appendChild(new Element('span', {
+                        "html": label
+                    }));
+                }
+
+                if (!(group instanceof StoryUser && (group.isCurrentUser()))) {
+                    div.appendChild(new Element('span', {
+                        "class": "user-link",
+                        "html": " Go to your own story",
+                        events: {
+                            click: function() {
+                                ScoopStories.loadCardGroupWithUserId(AppClient.getId(), function() {
+                                    //ScoopStories.focusCurrentStory();
+                                })
+                            }
+                        }
+                    }));
+                }
+
+
+
+                callback(div);
+
+            });
         });
 
     },
@@ -97,22 +134,35 @@ var StoryMapController = new Class({
 
     },
 
-    initializeSidePanel:function(sidePanel, el){
-        var me=this;
+    initializeSidePanel: function(sidePanel, el) {
+        var me = this;
         var sidePanelViewer = new ContentModuleViewer(el, {});
 
 
-        me.getApp(function(app){
+        me.getApp(function(app) {
             app.getDisplayController().display('sidePanelDetail', AppClient, sidePanelViewer);
         });
 
+        
+
+        sidePanel.addEvent('show', function(){
+
+            $$('.TileButtonsFunctionsSection')[0].addClass('shifted');
+
+        }).addEvent('hide', function(){
+
+            $$('.TileButtonsFunctionsSection')[0].removeClass('shifted');
+
+        })
+
+        
 
     },
 
-    getSearchAggregators:function(search){
+    getSearchAggregators: function(search) {
 
         return [
-            new StorySearch(search,{})
+            new StorySearch(search, {})
         ];
 
     },
@@ -122,7 +172,7 @@ var StoryMapController = new Class({
 
         me.fireEvent('loadApp', [app]);
     },
-    
+
     initializeMap: function(map) {
 
         var me = this;
@@ -130,7 +180,7 @@ var StoryMapController = new Class({
         map.setMapitemSelectFn(function(item) {
 
             me.selectCard(item.getId());
-          
+
         });
 
 
@@ -149,8 +199,8 @@ var StoryMapController = new Class({
 
     },
 
-    selectCard:function(id){
-        var me=this;
+    selectCard: function(id) {
+        var me = this;
 
         if (me.hasCard(id)) {
             me.focusCard(me.getCard(id));
@@ -158,7 +208,7 @@ var StoryMapController = new Class({
         }
 
         me.loadCardGroupWithCardId(id, function() {
-            setTimeout(function(){
+            setTimeout(function() {
                 //TODO loading card group already moves the map
                 me.focusCard(me.getCard(id))
             }, 250);
@@ -166,26 +216,29 @@ var StoryMapController = new Class({
 
     },
 
-    focusCurrentStory:function(){
+    focusCurrentStory: function() {
 
-        var me=this;
-        me.getCurrentCards(function(cards){
+        var me = this;
+        me.getCurrentCards(function(cards) {
 
-            var markers=[];
-            var addMarker=function(marker){
+            var markers = [];
+            var addMarker = function(marker) {
                 markers.push(marker);
             }
 
-            var _timeout=null;
-            var fitBounds=function(){
+            var _timeout = null;
+            var fitBounds = function() {
 
-                if(_timeout){
+                if (_timeout) {
                     clearTimeout(_timeout);
                 }
 
-                _timeout=setTimeout(function(){
-                    _timeout=null;
-                    if(markers.length==1){
+                _timeout = setTimeout(function() {
+                    _timeout = null;
+                    if (markers.length == 0) {
+                        return;
+                    }
+                    if (markers.length == 1) {
                         me.getMap().panTo(markers[0].getLatLng());
                         return;
                     }
@@ -193,19 +246,19 @@ var StoryMapController = new Class({
                     me.getMap().fitBounds(SpatialCalculator.calculateBounds(markers));
 
                 }, 250);
-                
+
 
             }
 
-            me.markersForCards(cards, function(marker){
-                 addMarker(marker);
+            me.markersForCards(cards, function(marker) {
+                addMarker(marker);
             });
 
-            
+
             fitBounds();
-            
-           
-            addMarker=function(marker){
+
+
+            addMarker = function(marker) {
                 markers.push(marker);
                 fitBounds();
             }
@@ -235,8 +288,6 @@ var StoryMapController = new Class({
 
             //me.getMap().panTo(marker.getLatLng());
             me.scaleIcon(marker, 40);
-
-            
 
 
 
@@ -315,13 +366,13 @@ var StoryMapController = new Class({
 
     },
 
-     loadCardGroupWithUserId: function(id, callback) {
+    loadCardGroupWithUserId: function(id, callback) {
 
 
         var me = this;
 
 
-        if(id==-1&&AppClient.getUserType()=="guest"){
+        if (id == -1 && AppClient.getUserType() == "guest") {
             me.setCardGroup(new AppClientStoryUser(), callback);
             return;
         }
@@ -415,23 +466,40 @@ var StoryMapController = new Class({
 
 
     },
+    setSortFn: function(fn, name){
+        
+        var me=this;
+        me._sortFn=fn;
+        me._sortName=name;
+        return me;
 
+    },
+    getSortName:function(){
+        var me=this;
+        return me._sortName;
+    },
+    getSortFn:function(){
+
+        var me=this;
+        return me._sortFn;
+
+    },
     StyleCardGroupLabel: function(el) {
 
         var me = this;
         var setCardLabel = function() {
             me.getCurrentCardLabel(function(label) {
-                if(typeof label=="string"){
-                    el.innerHTML = label; 
+                if (typeof label == "string") {
+                    el.innerHTML = label;
                     return;
                 }
 
-                el.innerHTML = ""; 
-                if(label){
+                el.innerHTML = "";
+                if (label) {
                     el.appendChild(label);
                 }
             });
-                
+
         }
         setCardLabel();
 
@@ -444,34 +512,155 @@ var StoryMapController = new Class({
 
 
 
-    GetAddCardModule:function(item, application){
+    GetAddCardModule: function(item, application) {
 
-        var me=this;
-        var button =new Element('button',{html:item.getLabel(), "class":item.getClassNames()});
-        button.appendChild(new Element('span', {"class":"icon"}));
+        var me = this;
+        var button = new Element('button', {
+            html: item.getLabel(),
+            "class": item.getClassNames()
+        });
+        button.appendChild(new Element('span', {
+            "class": "icon"
+        }));
 
-        if(item.hasFn()){
-            
-            
+        if (item.hasFn()) {
+
+
             button.addEvent('click', item.executeFn.bind(item));
             return button;
-            
+
         }
 
 
         new UIModalFormButton(
-            button, 
-            application, item, 
-            {
-                formName:item.getFormView(), 
-                formOptions:{template:"form"}
-                
+            button,
+            application, item, {
+                formName: item.getFormView(),
+                formOptions: {
+                    template: "form"
+                }
+
             }
         );
-        
-        
-        
+
+
+
         return button;
+
+    },
+
+    GetSortCardModule: function(item, application) {
+
+        var me = this;
+        var div = new Element('div', {
+            "class": item.getClassNames()
+        });
+
+        var sortBtn = function(btnOptions) {
+
+            var btn=new Element('button', {
+                "html":btnOptions.label,
+                "class":(me.getSortName()==btnOptions.sortName?"current":""),
+                "events":{
+                    "click":function(){
+                        me.setSortFn(btnOptions.sortFn, btnOptions.sortName);
+                        me._cards=null;
+                        me.redraw();
+                    }
+                }
+            });
+
+
+
+            if (item.hasResults()) {
+                return btn;
+            }
+            btn.addClass('disabled');
+            btn.setAttribute('disabled', true);
+
+
+            return btn;
+        }
+
+
+        div.appendChild(new Element('h3', {
+            "html": "Sort"
+        }));
+
+
+        div.appendChild(sortBtn({
+            "label": "<h3>Alphabetically name</h3>",
+            "sortFn":function(a, b){
+                //random
+                return Math.round((Math.random()*2.0)-1.0);
+            },
+            "sortName":'name'
+        }));
+
+        div.appendChild(sortBtn({
+            "label": "<h3>Date of birth</h3>",
+            "sortFn": function(a, b){
+                //random
+                return Math.round((Math.random()*2.0)-1.0);
+            },
+            "sortName": 'birth-date'
+        }));
+        div.appendChild(sortBtn({
+            "label": "<h3>Alpabetically name at birth</h3>",
+            "sortFn": function(a, b){
+                //random
+                return Math.round((Math.random()*2.0)-1.0);
+            },
+            "sortName": 'birth-name'
+        }));
+        div.appendChild(sortBtn({
+            "label": "<h3>Year adompted</h3>",
+            "sortFn": function(a, b){
+                //random
+                return Math.round((Math.random()*2.0)-1.0);
+            },
+            "sortName": 'adopted-year'
+        }));
+
+        return div;
+
+    },
+
+    GetProfileSummaryCardModule: function(item, application) {
+
+        var me = this;
+        var div = new Element('div', {
+            "class": item.getClassNames()
+        });
+        div.appendChild(new Element('h3', {
+            "html": "Name: "+item.getUsersName()
+        }));
+
+        var user=item.getUser();
+        var birthdate="unknown";
+        if(user.hasBirthStory()){
+            birthdate=user.getBirthStory().getYear();
+        }
+
+        div.appendChild(new Element('h4', {
+            "html": "Date of birth: "+birthdate
+        }));
+        div.appendChild(new Element('h4', {
+            "html": "Place of birth: {birthplace}"
+        }));
+        div.appendChild(new Element('h4', {
+            "html": "Name at birth: {birthname}"
+        }));
+        div.appendChild(new Element('h4', {
+            "html": "Year adopted: {adoptedyear}"
+        }));
+        div.appendChild(new Element('h4', {
+            "html": "Reunited with family: {reunited?}"
+        }));
+        div.appendChild(new Element('h4', {
+            "html": "Looking for family: {looking?}"
+        }));
+        return div;
 
     },
 
@@ -553,7 +742,7 @@ var StoryMapController = new Class({
     StyleCardImage: function(el, card) {
 
         card.getCardBackgroundImage(function(icon) {
-            if(!icon){
+            if (!icon) {
                 return;
             }
             el.setStyle("background-image", 'url("' + icon + '")');
@@ -570,7 +759,33 @@ var StoryMapController = new Class({
 
         var me = this;
 
-        var modules=[
+
+
+        var getCardName=function(card){
+            var me=this;
+
+            var name=card.getName();
+
+            if(card.isBirthStory()){
+                name="birth story"
+            }
+            return name;
+        };
+
+        var getCardDescription=function(card){
+            var me=this;
+
+            var name=card.getName();
+
+            if(card.isBirthStory()){
+                var userWas=card.belongsToCurrentUser()?"You were":card.getUsersName()+" was";
+                name=userWas+" born in "+card.getYear();
+            }
+            return name;
+        };
+
+
+        var modules = [
             new Element('span', {
                 "class": "icon"
             }),
@@ -578,43 +793,51 @@ var StoryMapController = new Class({
                 "class": "card-img"
             }), item),
             new Element('h3', {
-                "html": item.getName()
+                "html": getCardName(item)
             }),
             new Element('p', {
-                "html": item.getDescription()
+                "html": getCardDescription(item)
             })
 
         ];
 
-        if(item.canEdit()){
-            modules=modules.concat([
+        if (item.canEdit()) {
+            modules = modules.concat([
                 new Element('span', {
                     "class": "edit-btn",
-                    events:{click:function(e){
+                    events: {
+                        click: function(e) {
 
-                        
-                        application.getDisplayController().displayPopoverForm(
-                            item.getFormView(),
-                            item, 
-                            {template:"form"}
-                        );
-                    }}
+
+                            application.getDisplayController().displayPopoverForm(
+                                item.getFormView(),
+                                item, {
+                                    template: "form"
+                                }
+                            );
+                        }
+                    }
                 }),
                 new Element('span', {
                     "class": "delete-btn",
-                    events:{click:function(e){
-                        (new UIModalDialog(me.getApp(), {name:"Confirmation", description:"Are you sure you want to delete this card"}, {
-                            "formName": "dialogForm",
-                            "formOptions": {
-                                "template": "form",
-                                "className": "confirm-view"
-                            }
-                        })).show(function(answer){
+                    events: {
+                        click: function(e) {
+                            (new UIModalDialog(me.getApp(), {
+                                name: "Confirmation",
+                                description: "Are you sure you want to delete this card"
+                            }, {
+                                "formName": "dialogForm",
+                                "formOptions": {
+                                    "template": "form",
+                                    "className": "confirm-view"
+                                }
+                            })).show(function(answer) {
 
 
 
-                        });
-                    }}
+                            });
+                        }
+                    }
                 })
             ]);
         }
@@ -646,7 +869,7 @@ var StoryMapController = new Class({
         })
     },
 
-    
+
 
     linkCardsOnMap: function(cards) {
 
@@ -724,16 +947,16 @@ var StoryMapController = new Class({
         });
     },
     markersForCards: function(cards, callback) {
-        var me=this;
+        var me = this;
         me.getMap(function(map) {
-            me._markerCardsFilter(cards).forEach(function(card){
+            me._markerCardsFilter(cards).forEach(function(card) {
                 map.getLayerManager().filterMarkerById(card.getId(), callback);
             });
         });
     },
     _markerCardsFilter: function(cards) {
         return cards.filter(function(card) {
-            return (card instanceof StoryCard && (!(card instanceof AddCard)));
+            return (card instanceof StoryCard && (!(card instanceof AddCard || card instanceof ProfileSummaryCard || card instanceof SortCard)));
         });
     }
 
@@ -815,28 +1038,28 @@ var StoryUser = new Class({
         return me;
 
     },
-    getFirstStory:function(){
-        var me=this;
-        return me._birthStory||(me._journeyStories&&me._journeyStories.length?me._journeyStories[0]:me._repatriationStory)||null;
+    getFirstStory: function() {
+        var me = this;
+        return me._birthStory || (me._journeyStories && me._journeyStories.length ? me._journeyStories[0] : me._repatriationStory) || null;
     },
-    isCurrentUser:function(){
-        var me=this;
-        return me.getUserId()===AppClient.getId();
+    isCurrentUser: function() {
+        var me = this;
+        return me.getUserId() === AppClient.getId();
     },
 
-    getUsersName:function(){
-        var me=this;
-        if(me._userData){
+    getUsersName: function() {
+        var me = this;
+        if (me._userData) {
             return me._userData.name;
         }
 
         return 'Unknown';
     },
 
-    getUserId:function(){
+    getUserId: function() {
 
-        var me=this;
-        if(me._userData){
+        var me = this;
+        if (me._userData) {
             return parseInt(me._userData.id);
         }
 
@@ -916,8 +1139,17 @@ var StoryUser = new Class({
         me.runOnceOnLoad(function() {
 
             var cards = [];
+
+            cards.push(
+                (new ProfileSummaryCard(Object.append({
+
+                }, {
+                    classNames: "summary-card",
+                }))).setUser(me)
+            );
+
             if (!me.hasBirthStory()) {
-                if(me.canEdit()){
+                if (me.canEdit()) {
                     cards.push(new AddCard({
                         label: "Create Birth Story",
                         formView: "createBirthStoryForm",
@@ -934,7 +1166,7 @@ var StoryUser = new Class({
             cards = cards.concat(journeyStories);
 
 
-            if(me.canEdit()){
+            if (me.canEdit()) {
                 cards.push(new AddCard({
                     label: journeyStories.length ? "Add More Locations Along Your Story" : "Add A Location Along Your Story",
                     formView: "createStoryForm",
@@ -948,7 +1180,7 @@ var StoryUser = new Class({
             }
 
             if (!me.hasRepatriationStory()) {
-                if(me.canEdit()){
+                if (me.canEdit()) {
                     cards.push(new AddCard({
                         label: "Add A Repatriation Story",
                         formView: "createRepatriationStoryForm",
@@ -958,7 +1190,7 @@ var StoryUser = new Class({
                 }
             }
 
-            if(me.canEdit()){
+            if (me.canEdit()) {
                 cards.push(new AddCard({
                     label: "Help Family Find You",
                     formView: "publishingOptionsForm",
@@ -973,10 +1205,10 @@ var StoryUser = new Class({
 
 
     },
-    canEdit:function(){
-        var me=this;
+    canEdit: function() {
+        var me = this;
 
-        if(me._userData&&parseInt(me._userData.id)===AppClient.getId()){
+        if (me._userData && parseInt(me._userData.id) === AppClient.getId()) {
             return true;
         }
 
@@ -984,29 +1216,18 @@ var StoryUser = new Class({
     },
     getCardsLabel: function(callback) {
 
-        var me=this;
-        
+        var me = this;
 
-        if(!me.isCurrentUser()){
 
-            var div=new Element('div');
+        if (!me.isCurrentUser()) {
+
+            var div = new Element('div');
             div.appendChild(new Element('span', {
-                "class":"user-name",
-                "html":me.getUsersName()+"'s "
+                "class": "user-name",
+                "html": me.getUsersName() + "'s "
             }));
             div.appendChild(new Element('span', {
-                "html":"Sixties Scoop Survivor Story "
-            }))
-            div.appendChild(new Element('span', {
-                "class":"user-link",
-                "html":"Go to your own story",
-                events:{
-                    click:function(){
-                        ScoopStories.loadCardGroupWithUserId(AppClient.getId(), function(){
-                            //ScoopStories.focusCurrentStory();
-                        })
-                    }
-                }
+                "html": "Sixties Scoop Survivor Story "
             }))
 
             callback(div);
@@ -1049,7 +1270,7 @@ var AppClientStoryUser = new Class({
 
 
     },
-    canEdit:function(){
+    canEdit: function() {
         return true;
     },
     getCards: function(callback) {
@@ -1121,7 +1342,34 @@ var StoryCard = new Class({
 
     },
 
-    
+    getYear:function(){
+        var me=this;
+        if(me._config.attributes.locationDate&&me._config.attributes.locationDate!=''){
+            return me._config.attributes.locationDate.split('-').shift();
+        }
+
+        return '{year}';
+            
+
+    },
+
+    getUsersName: function() {
+        var me = this;
+        if (me._user) {
+            return me._user.getUsersName();
+        }
+
+        return 'Unknown';
+    },
+
+    belongsToCurrentUser: function() {
+        var me = this;
+        if (me._user) {
+            return me._user.isCurrentUser();
+        }
+
+        return false;
+    },
 
     getConfig: function() {
         var me = this;
@@ -1136,22 +1384,27 @@ var StoryCard = new Class({
         return me;
     },
 
-    isBirthStory:function(){
+    getUser:function(){
         var me=this;
-        return me._user&&me._user.hasBirthStory()&&me._user.getBirthStory()===me;
-    },
-    isRepatriationStory:function(){
-        var me=this;
-        return me._user&&me._user.hasRepatriationStory()&&me._user.getRepatriationStory()===me;
+        return me._user;
     },
 
-    canEdit:function(){
-        var me=this;
-        if(!me._user){
+    isBirthStory: function() {
+        var me = this;
+        return me._user && me._user.hasBirthStory() && me._user.getBirthStory() === me;
+    },
+    isRepatriationStory: function() {
+        var me = this;
+        return me._user && me._user.hasRepatriationStory() && me._user.getRepatriationStory() === me;
+    },
+
+    canEdit: function() {
+        var me = this;
+        if (!me._user) {
             return false;
         }
 
-        return parseInt(me._user.getUserId())===AppClient.getId()||AppClient.getUserType()==="admin";
+        return parseInt(me._user.getUserId()) === AppClient.getId() || AppClient.getUserType() === "admin";
     },
 
     getAddress: function() {
@@ -1168,6 +1421,9 @@ var StoryCard = new Class({
     getDescription: function() {
         return this._description || '';
     },
+
+
+
     setDescription: function(desc) {
         this._description = desc;
         return this;
@@ -1181,16 +1437,16 @@ var StoryCard = new Class({
     },
     getFormView: function() {
 
-        var me=this;
+        var me = this;
         if (this._getFormView) {
             return this._getFormView();
         }
 
-        if(me.isBirthStory()){
+        if (me.isBirthStory()) {
             return 'createBirthStoryForm';
         }
 
-        if(me.isRepatriationStory()){
+        if (me.isRepatriationStory()) {
             return 'createRepatriationStoryForm';
         }
 
@@ -1215,8 +1471,8 @@ var StoryCard = new Class({
     },
 
     getCardBackgroundImage: function(callback) {
-        var me=this;
-        if(!me._user){
+        var me = this;
+        if (!me._user) {
             callback(null);
             return null;
         }
@@ -1248,7 +1504,23 @@ var StoryCard = new Class({
 
 
 
+var SortCard = new Class({
+    Extends: StoryCard,
+    canEdit: function() {
+        return false;
+    },
+    hasResults: function() {
+        var me = this;
+        return me._results().length;;
+    }
+});
 
+var ProfileSummaryCard = new Class({
+    Extends: StoryCard,
+    canEdit: function() {
+        return false;
+    }
+});
 
 
 
@@ -1257,7 +1529,7 @@ var AddCard = new Class({
     hasFn: function() {
         return !!this._click;
     },
-    canEdit:function(){
+    canEdit: function() {
         return false;
     },
     executeFn: function(e) {
@@ -1270,16 +1542,117 @@ var AddCard = new Class({
     }
 });
 
-var AdvancedStorySearch=new Class({
+
+
+var AdvancedStorySearch = new Class({
     Extends: MockDataTypeItem,
     initialize: function(options) {
         var me = this;
         me.parent(options);
-        
+
     },
     save: function(cb) {
 
-        
+        var me = this;
+        ScoopStories.setCardGroup(me, function() {
+
+        });
+
+    },
+    getCards: function(cb) {
+
+
+
+        var me = this;
+
+
+        if(me._cards){
+            cb(me._padCards(me._cards));
+            return;
+        }
+
+
+        ScoopStories.getMap(function(map) {
+            var randomIds = map.getLayerManager().filterMapitems(function() {
+
+                var r = Math.round(Math.random()) >= 1;
+                return r;
+
+            }).map(function(feature) {
+                return feature.getId();
+            });
+
+
+          
+
+            (new AjaxControlQuery(CoreAjaxUrlRoot, 'get_feature_list', {
+                'plugin': 'MapStory',
+                'items': randomIds
+            })).addEvent('success', function(resp) {
+
+                var randomSearchCards =resp.results.map(function(data){
+
+                    var card = new StoryCard(Object.append(data, {
+                        classNames: "search-card-detail"
+                    }));
+                    var user = new StoryUser({
+                        "story": [],
+                        "user": Object.append({}, data.userData)
+                    });
+                    card.setUser(user);
+                    return card;
+                });
+
+                me._cards=randomSearchCards;
+                cb(me._padCards(randomSearchCards));
+
+            }).execute();
+
+           
+
+
+        })
+
+
+
+    },
+    _padCards:function(searchCards){
+
+
+        var cards = [
+            new SortCard(Object.append({
+                results: function() {
+                    return searchCards;
+                }
+            }, {
+                classNames: "sort-card summary-card",
+            }))
+        ];
+
+
+        if (searchCards.length == 0) {
+            cards.push(new AddCard({
+
+                label: "Empty Search Results",
+
+                classNames: "help-card add-card publishing-options-card",
+                click: function() {
+                    console.log('todo');
+                }
+
+            }));
+
+            return cards;
+        }
+
+
+        return cards.concat(searchCards.sort(ScoopStories.getSortFn()));
+
+
+    },
+    getCardsLabel: function(cb) {
+
+        return cb("Search Results");
     }
 })
 
@@ -1293,11 +1666,16 @@ var StorySearch = new Class({
             MoreTemplate: UIListAggregator.MoreTemplate,
             ResultTemplate: UIListAggregator.NamedViewTemplate(ScoopStories.getMap.bind(ScoopStories), {
                 namedView: "scoopStoryDetail",
-                formatResult:function(data){
+                formatResult: function(data) {
 
 
-                    var card= new StoryCard(Object.append(data, {classNames: "search-card"}));
-                    var user=new StoryUser({"story":[], "user":Object.append({}, data.userData)});
+                    var card = new StoryCard(Object.append(data, {
+                        classNames: "search-card"
+                    }));
+                    var user = new StoryUser({
+                        "story": [],
+                        "user": Object.append({}, data.userData)
+                    });
                     card.setUser(user)
 
                     return card;
@@ -1305,7 +1683,7 @@ var StorySearch = new Class({
                 events: {
                     click: function() {
 
-                        
+
                     }
                 }
             })
@@ -1328,4 +1706,3 @@ var StorySearch = new Class({
 
     }
 });
-

@@ -4,5 +4,6 @@
 	"get_story":{},
 	"get_story_with_item":{},
 	"get_story_with_user":{},
-	"search":{}
+	"search":{},
+	"get_feature_list":{}
 }

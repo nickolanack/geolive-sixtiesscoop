@@ -68,6 +68,9 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	}
 
+
+	
+
 	protected function getStoryWithUser($json){
 
 
@@ -87,6 +90,14 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 	protected function search($json){
 
 		return  array('results'=>$this->getPlugin()->searchStories($json->search));
+
+
+	}
+
+	protected function getFeatureList($json){
+
+		$list=$this->getPlugin()->getFeatureListMetadata($json->items);
+		return  array('results'=>$list);
 
 
 	}
