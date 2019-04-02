@@ -233,6 +233,18 @@ span.delete-btn, span.edit-btn {
      background-color: #549ae6;
 }
 
+span.TileButtonsFunctionsSection.shifted {
+    position: relative;
+    right: 400px;
+}
+
+span.TileButtonsFunctionsSection {
+    position: relative;
+    right: 30px;
+}
+
+
+
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
