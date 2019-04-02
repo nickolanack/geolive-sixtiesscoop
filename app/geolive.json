@@ -3108,7 +3108,7 @@
         "parameters": {
             "widgetTitle": "",
             "target": "forTheMap",
-            "position": "RIGHT_TOP",
+            "position": "RIGHT_CENTER",
             "fullscreen": false,
             "home": true,
             "iconset": false,
