@@ -3101,5 +3101,36 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.40": {
+        "name": "Tile Buttons",
+        "instance": "TileButtons",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "map.1",
+            "position": "LEFT_TOP",
+            "fullscreen": true,
+            "home": true,
+            "iconset": true,
+            "login": true,
+            "logout": true,
+            "controlColor": "rgb(48,84,107)",
+            "subControlColor": "rgb(100, 149, 237)",
+            "tileIcon": [],
+            "displayMapSave": true,
+            "tileSize": 50,
+            "markerSize": 32,
+            "markerIconset": [],
+            "iconsetMetadata": [],
+            "groupIcon": [],
+            "showToolTips": false,
+            "useTipIconsetLayerTitle": false,
+            "showLogoutProfile": false,
+            "formatTipScript": "",
+            "guestLoginDrag": true,
+            "onDragEndScript": "defaultBehaviorFn();",
+            "onDisplayTileScript": "",
+            "onProfileClickScript": ""
+        }
     }
 }
