@@ -1636,12 +1636,12 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 312,
-                    "y": 161
+                    "x": 322,
+                    "y": 275
                 },
                 "_diagramState": {
-                    "x": 312,
-                    "y": 161
+                    "x": 322,
+                    "y": 275
                 },
                 "appliesTo": [
                     "marker"
