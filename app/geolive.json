@@ -949,16 +949,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 208,
-                            "y": 340
+                            "x": 218,
+                            "y": 350
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 168,
-                                    "y": 516
+                                    "x": 178,
+                                    "y": 538
                                 }
                             }
                         ],
@@ -991,8 +991,8 @@
                                         {
                                             "type": "InlineHtml",
                                             "config": {
-                                                "className": "",
-                                                "text": "Don't have an account yet?",
+                                                "className": "uitext-container",
+                                                "text": "<span class=\"label\">Don't have an account yet?<\/span>",
                                                 "template": "",
                                                 "templateVariablesScript": ""
                                             }
