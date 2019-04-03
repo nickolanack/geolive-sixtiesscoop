@@ -1,7 +1,4 @@
 {
-    "type": "plugin.SingleSignOn.FacebookLogin",
-    "config": {
-        "reloadOnSuccess": true,
-        "reloadUrl": ""
-    }
+    "type": "WizardScriptElement",
+    "config": {}
 }
