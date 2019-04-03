@@ -872,16 +872,16 @@
                             "registerFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 172,
-                            "y": 177
+                            "x": 182,
+                            "y": 187
                         },
                         "children": [
                             "registerFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 132,
-                                    "y": 343
+                                    "x": 142,
+                                    "y": 353
                                 }
                             }
                         ],
@@ -894,7 +894,27 @@
                                 },
                                 "content": {
                                     "modules": [
-                                        "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                        "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "plugin.SingleSignOn.GoogleLogin",
+                                            "config": []
+                                        },
+                                        {
+                                            "type": "WizardRegistration",
+                                            "config": {
+                                                "className": "",
+                                                "showCancel": true,
+                                                "showNext": true,
+                                                "showName": true,
+                                                "showUsername": false,
+                                                "showReenterPassword": false,
+                                                "labelForCancel": "cancel",
+                                                "labelForSubmit": "submit",
+                                                "validateRegistrationFieldsScript": "return defaultValidationFn();",
+                                                "onSuccessfulRegistrationScript": "defaultBehaviorFn();",
+                                                "formatRegistrationFieldsScript": "return fields;"
+                                            }
+                                        }
                                     ]
                                 },
                                 "footer": {
