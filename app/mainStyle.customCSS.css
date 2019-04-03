@@ -310,6 +310,17 @@ span.TileButtonsFunctionsSection {
 .profile-section .logout {}
 .profile-section .register {}
 
+
+.fb-login-button {
+    float:left;
+    width:190px;
+}
+
+.sso-btn.google {
+    margin-bottom:30px;
+}
+
+
 .ui-view.profile-section {
     float: right;
 }
