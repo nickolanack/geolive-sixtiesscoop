@@ -949,16 +949,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 198,
-                            "y": 330
+                            "x": 208,
+                            "y": 340
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 158,
-                                    "y": 506
+                                    "x": 168,
+                                    "y": 516
                                 }
                             }
                         ],
@@ -989,10 +989,19 @@
                                             }
                                         },
                                         {
+                                            "type": "InlineHtml",
+                                            "config": {
+                                                "className": "",
+                                                "text": "Don't have an account yet?",
+                                                "template": "",
+                                                "templateVariablesScript": ""
+                                            }
+                                        },
+                                        {
                                             "type": "WizardScriptElement",
                                             "config": {
                                                 "name": "My Custom Script",
-                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.script.js",
+                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.3.config.script.js",
                                                 "description": "Info about my custom script"
                                             }
                                         }
