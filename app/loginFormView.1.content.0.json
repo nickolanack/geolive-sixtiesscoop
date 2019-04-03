@@ -1,4 +1,8 @@
 {
     "type": "WizardScriptElement",
-    "config": {}
+    "config": {
+        "name": "My Custom Script",
+        "script": "return new ModalFormButtonModule(application, AppClient, {\n             \n                label: \"Register\",\n                formName: \"registerFormView\",\n                \"class\": \"inline-btn register\"\n    \n        \n         });",
+        "description": "Info about my custom script"
+    }
 }
