@@ -203,7 +203,7 @@
         "parameters": {
             "facebookAppId": "331904550992320",
             "facebookAppSecret": "XXXX-XXXX",
-            "googleAuthClientId": "AIzaSyAHzvSIi0WWzYCDWYx3lbWiPFYRGZ8nmhw"
+            "googleAuthClientId": "XXXX-XXXX"
         }
     },
     "plugin.20": {
