@@ -949,16 +949,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 188,
-                            "y": 320
+                            "x": 198,
+                            "y": 330
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 148,
-                                    "y": 496
+                                    "x": 158,
+                                    "y": 506
                                 }
                             }
                         ],
@@ -973,13 +973,6 @@
                                     "modules": [
                                         "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
-                                            "type": "plugin.SingleSignOn.FacebookLogin",
-                                            "config": {
-                                                "reloadOnSuccess": true,
-                                                "reloadUrl": ""
-                                            }
-                                        },
-                                        {
                                             "type": "WizardLogin",
                                             "config": {
                                                 "className": "",
@@ -993,6 +986,14 @@
                                                 "reloadUrl": "",
                                                 "showForgotPassword": false,
                                                 "forgotPasswordCustomScript": "XXXX-XXXX"
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardScriptElement",
+                                            "config": {
+                                                "name": "My Custom Script",
+                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.2.config.script.js",
+                                                "description": "Info about my custom script"
                                             }
                                         }
                                     ]
