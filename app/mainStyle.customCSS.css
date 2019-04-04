@@ -168,6 +168,9 @@ span.delete-btn, span.edit-btn {
 .story-card h3 {
     margin: 2px;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .story-card p {
