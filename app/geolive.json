@@ -2311,16 +2311,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 326,
-                            "y": 84
+                            "x": 336,
+                            "y": 94
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 286,
-                                    "y": 285
+                                    "x": 296,
+                                    "y": 307
                                 }
                             }
                         ],
@@ -2399,10 +2399,32 @@
                                             }
                                         },
                                         {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Do you have any photos you would like to share?",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": false,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
                                             "type": "plugin.Attributes.WizardHiddenAttribute",
                                             "config": {
                                                 "attributeFieldArray": [
-                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
@@ -2412,7 +2434,7 @@
                                             "type": "plugin.Attributes.WizardHiddenAttribute",
                                             "config": {
                                                 "attributeFieldArray": [
-                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.6.config.attributeFieldArray.0.json"
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
