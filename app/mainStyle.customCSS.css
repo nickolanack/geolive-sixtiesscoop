@@ -632,7 +632,9 @@ span.search-bar-btn.left.search:before {
 }
 
 
-
+.module-wizard .upload-btns span.image {
+    background-image: url(https://trapline.geolive.ca/php-core-app/users_files/user_files_1/Uploads/oOY_AsU_ccD_[ImAgE]_[G].png);
+}
 
 
 
