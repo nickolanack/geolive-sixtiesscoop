@@ -257,10 +257,10 @@
                     "tableName": "profileAttributes",
                     "tableSuffix": "_2634",
                     "title": "indigenousAffiliation",
-                    "label": "Indigenous affiliation",
+                    "label": "Indigenous Affiliation",
                     "description": "",
                     "fieldType": "text",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldTextOptions": {
@@ -281,7 +281,7 @@
                             "colorize": false
                         }
                     },
-                    "allowMultiple": true
+                    "allowMultiple": false
                 }
             ]
         }

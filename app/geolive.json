@@ -1381,12 +1381,12 @@
             "metadata": {
                 "title": "profileAttributes",
                 "_tableDiagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 325,
+                    "y": 215
                 },
                 "_diagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 325,
+                    "y": 215
                 },
                 "appliesTo": [
                     "user"
@@ -1712,14 +1712,14 @@
                     {
                         "was": "",
                         "title": "indigenousAffiliation",
-                        "label": "Indigenous affiliation",
+                        "label": "Indigenous Affiliation",
                         "description": "",
                         "icon": [],
-                        "color": "rgb(undefined, undefined, undefined)",
+                        "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
                         "searchability": "public",
-                        "allowMultiple": true,
+                        "allowMultiple": false,
                         "fieldType": "text",
                         "fieldTextOptions": {
                             "textType": "input",
