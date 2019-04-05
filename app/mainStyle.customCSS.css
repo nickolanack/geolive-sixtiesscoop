@@ -350,23 +350,27 @@ span.TileButtonsFunctionsSection {
     top: 0px;
     right: 240px;
     line-height: 20px;
+    white-space:nowrap;
 }
 
 .profile-section .inline-btn.profile {
     position: absolute;
     top: 20px;
     right: 240px;
+    white-space:nowrap;
 }
 .profile-section .inline-btn.publishing-options {
     position: absolute;
     top: 40px;
     right: 240px;
+    white-space:nowrap;
 }
 
 .profile-section .inline-btn.your-story {
     position: absolute;
     top: 60px;
     right: 240px;
+    white-space:nowrap;
 }
 
 
