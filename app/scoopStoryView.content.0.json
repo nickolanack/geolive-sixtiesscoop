@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "\n\n\nreturn [ScoopStories.StyleCardGroupLabel(new Element('h2', {\"html\":\"{current list label}\"}))]",
+        "script": "\n\n\n\/\/return [ScoopStories.StyleCardGroupLabel(new Element('h2', {\"html\":\"{current list label}\"}))]",
         "description": "Info about my custom script"
     }
 }
