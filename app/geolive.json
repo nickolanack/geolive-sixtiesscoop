@@ -2767,16 +2767,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 375,
-                            "y": 231
+                            "x": 385,
+                            "y": 241
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 335,
-                                    "y": 419
+                                    "x": 345,
+                                    "y": 429
                                 }
                             }
                         ],
@@ -2799,7 +2799,7 @@
                                                 "label": "Do you have any information about your birth family that you would share publicly?",
                                                 "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
