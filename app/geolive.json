@@ -1086,16 +1086,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 248,
-                            "y": 380
+                            "x": 258,
+                            "y": 390
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 208,
-                                    "y": 568
+                                    "x": 218,
+                                    "y": 603
                                 }
                             }
                         ],
@@ -1210,6 +1210,26 @@
                                                 "iconTint": "rgb(100, 149, 237)",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTagCloud",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.6.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "showLabel": false,
+                                                "showAddWord": false,
+                                                "label": "{field.label}",
+                                                "addWordPlaceholder": "add a keyword",
+                                                "fontColor": "rgb(0, 0, 0)",
+                                                "hoverColor": "rgb(143, 188, 143)",
+                                                "selectedColor": "rgb(143, 188, 143)",
+                                                "shuffleTags": false,
+                                                "tags": "[\n    \"First Nation\",\n    \"Inuit\",\n    \"M\u00e9tis\"\n]",
+                                                "getItemTagsScript": "return defaultTags;",
+                                                "formatModule": ""
                                             }
                                         }
                                     ]
