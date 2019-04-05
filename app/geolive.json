@@ -1086,16 +1086,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 258,
-                            "y": 390
+                            "x": 268,
+                            "y": 400
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 218,
-                                    "y": 603
+                                    "x": 228,
+                                    "y": 626
                                 }
                             }
                         ],
@@ -1221,7 +1221,7 @@
                                                 "className": "",
                                                 "showLabel": false,
                                                 "showAddWord": false,
-                                                "label": "{field.label}",
+                                                "label": "What is your Indigenous affiliation?",
                                                 "addWordPlaceholder": "add a keyword",
                                                 "fontColor": "rgb(0, 0, 0)",
                                                 "hoverColor": "rgb(143, 188, 143)",
