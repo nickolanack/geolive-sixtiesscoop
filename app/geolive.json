@@ -2767,16 +2767,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 365,
-                            "y": 221
+                            "x": 375,
+                            "y": 231
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 325,
-                                    "y": 409
+                                    "x": 335,
+                                    "y": 419
                                 }
                             }
                         ],
@@ -2821,7 +2821,7 @@
                                                 "label": "Add Images",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
