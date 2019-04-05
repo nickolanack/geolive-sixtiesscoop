@@ -11,6 +11,8 @@ GetWidget("advancedSearchForm")->display($targetInstance);
 //GetWidget("addCardView")->display($targetInstance);
 //GetWidget("createStoryForm")->display($targetInstance);
 
+GetWidget("publishingOptionsForm")->display($targetInstance);
+
 IncludeJSBlock('
 TemplateModule.SetTemplate(\'form\',\'<div><div data-template="title" class="template-title"></div><div data-template="content" class="template-content"></div><div data-template="footer" class="template-footer"></div></div>\');
 ');
