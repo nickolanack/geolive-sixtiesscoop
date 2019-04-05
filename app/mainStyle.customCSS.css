@@ -346,18 +346,27 @@ span.TileButtonsFunctionsSection {
 }
 
 .profile-section span.user-name {
-    line-height: 80px;
-    }
+    position: absolute;
+    top: 0px;
+    right: 240px;
+    line-height: 20px;
+}
 
 .profile-section .inline-btn.profile {
     position: absolute;
-    top: 55px;
-    left: 20px;
+    top: 20px;
+    right: 240px;
 }
 .profile-section .inline-btn.publishing-options {
     position: absolute;
-    top: 36px;
-    left: 20px;
+    top: 40px;
+    right: 240px;
+}
+
+.profile-section .inline-btn.your-story {
+    position: absolute;
+    top: 60px;
+    right: 240px;
 }
 
 
