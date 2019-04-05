@@ -121,6 +121,10 @@ span.delete-btn, span.edit-btn {
     float: right;
 }
 
+span.array-module.ui-list-view.story-list {
+    margin-top: 10px;
+}
+
 .story-list .story-card{
     vertical-align: top;
 }
