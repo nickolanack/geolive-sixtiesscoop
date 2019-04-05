@@ -354,6 +354,11 @@ span.TileButtonsFunctionsSection {
     top: 55px;
     left: 20px;
 }
+.profile-section .inline-btn.publishing-options {
+    position: absolute;
+    top: 36px;
+    left: 20px;
+}
 
 
 
