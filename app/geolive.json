@@ -3458,7 +3458,7 @@
             "filterFieldsScript": "return true;",
             "widgetTitle": "Export Data",
             "readAccess": "public",
-            "position": "LEFT_BOTTOM"
+            "position": "LEFT_CENTER"
         }
     }
 }
