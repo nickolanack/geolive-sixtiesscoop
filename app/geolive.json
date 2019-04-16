@@ -3440,7 +3440,25 @@
         "name": "Attr CSV Export",
         "instance": "AttributesCSVExport",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "downloadImage": [],
+            "uploadImage": [],
+            "controlColor": "rgb(48,84,107)",
+            "tileHoverTip": "Download CSV File",
+            "exportMetadata": {
+                "fields": "DEFAULT"
+            },
+            "showImport": false,
+            "tileIcon": [],
+            "exportEncoding": "UTF-8",
+            "importEncoding": "UTF-8",
+            "showImportEncoding": false,
+            "filename": "Geolive Export DATE[Y-m-d (H.i.s)]",
+            "filterRowScript": "return true;",
+            "filterFieldsScript": "return true;",
+            "widgetTitle": "Export Data",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
         }
     }
 }
