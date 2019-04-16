@@ -3435,5 +3435,12 @@
             "tipMap": [],
             "readAccess": "public"
         }
+    },
+    "widget.41": {
+        "name": "Attr CSV Export",
+        "instance": "AttributesCSVExport",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
