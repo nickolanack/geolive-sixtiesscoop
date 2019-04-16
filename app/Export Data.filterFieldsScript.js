@@ -1,5 +1,5 @@
 
-if(strpos($fieldFormat['field'], 'attributes.profile')===0){
+if(strpos($fieldFormat['field'], 'attributes.profile')!==false){
     return false;
 }
 
