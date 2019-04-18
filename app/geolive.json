@@ -3438,7 +3438,7 @@
     },
     "widget.41": {
         "name": "Attr CSV Export",
-        "instance": "AttributesCSVExport",
+        "instance": "ExportData",
         "parameters": {
             "widgetTitle": "Export Data",
             "target": "forTheMap",
