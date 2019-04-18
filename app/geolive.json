@@ -3446,6 +3446,7 @@
             "downloadImage": [],
             "controlColor": "rgb(48,84,107)",
             "tileHoverTip": "Download CSV File",
+            "skipConsitencyCheck": true,
             "exportEncoding": "UTF-8",
             "filename": "Geolive Export DATE[Y-m-d (H.i.s)]",
             "exportMetadata": {
