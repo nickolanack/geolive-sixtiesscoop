@@ -296,7 +296,7 @@
             "title": "storyAttributes",
             "readAccess": "public",
             "appliesTo": [
-                "card"
+                "marker"
             ],
             "id": "2",
             "suffix": "_2497",

@@ -1834,11 +1834,11 @@
                     "y": 275
                 },
                 "appliesTo": [
-                    "card"
+                    "marker"
                 ],
                 "_typeDiagramState": {
-                    "x": 100,
-                    "y": 300
+                    "x": 73,
+                    "y": 318
                 },
                 "readAccess": "public",
                 "maxEntries": 1,
