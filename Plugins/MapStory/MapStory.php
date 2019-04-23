@@ -119,38 +119,20 @@ class MapStory extends \Plugin implements
 		$hasBirthStory=false;
 		$hasRepatriationStory=false;
 
+		
+
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withOwner($userId)
 			->iterate(function ($feature) use(&$list, &$attr, &$hasBirthStory, &$hasRepatriationStory){
 
 				$attributes=$attr->getValues($feature['id'], "MapStory.card");
-
-
-				if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
-
-
-
-					if($hasBirthStory){
-						$attributes['isBirthStory']=false;
-					}else{
-						$hasBirthStory=true;
-					}
-				}
-				if($attributes['isRepatriationStory']==="true"||$attributes['isRepatriationStory']===true){
-					if($hasRepatriationStory){
-						$attributes['isRepatriationStory']=false;
-					}else{
-						$hasRepatriationStory=true;
-					}
-				}
-
 				$list[]=$this->formatFeatureMetadata($feature, $attributes);
-
 
 			});
 
-		return $list;
+		return (new \MapStory\StoryFormatter())->format($list);
+
 
 	}
 

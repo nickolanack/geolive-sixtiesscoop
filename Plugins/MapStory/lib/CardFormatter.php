@@ -6,6 +6,9 @@ class CardFormatter {
 
 	public function format($feature, $attributes = null) {
 
+		
+		
+
 		if (!$attributes) {
 			GetPlugin('Attributes');
 			$attr = (new \attributes\Record('storyAttributes'));
