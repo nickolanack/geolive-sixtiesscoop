@@ -7,6 +7,7 @@ GetWidget("loginFormView")->display($targetInstance);
 GetWidget("profileFormView")->display($targetInstance);
 
 GetWidget("sidePanelDetail")->display($targetInstance);
+GetWidget("sidePanelEmptyDetail")->display($targetInstance);
 GetWidget("sidePanelInfoDetail")->display($targetInstance);
 
 GetWidget("dialogForm")->display($targetInstance);
