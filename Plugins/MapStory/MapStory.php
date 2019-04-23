@@ -97,7 +97,7 @@ class MapStory extends \Plugin implements
 
 	}
 
-	protected getLocationName($itemId, $attributes){
+	protected function getLocationName($itemId, $attributes){
 		
 		$locationName=false;
 		foreach($attributes['locationData']->geocode->address_components as $addressResult){
@@ -116,7 +116,7 @@ class MapStory extends \Plugin implements
 		return $locationName;
 	}
 
-	protected getLocationData($featureMeta){
+	protected function getLocationData($featureMeta){
 		GetPlugin('GoogleMaps');
 		$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
 			$featureMeta['coordinates'][0], 
