@@ -47,7 +47,7 @@ class MapStory extends \Plugin implements
 
 	
 
-	public function getUsersStoryMarker($itemId, $userId = -1) {
+	public function getUsersStoryMarker($itemId) {
 
 		GetPlugin('Maps');
 
@@ -72,39 +72,12 @@ class MapStory extends \Plugin implements
 			$attributes=$attr->getValues($feature['id'], "MapStory.card");
 		}
 
-
-		// if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
-		// 	$attributes['locationImages']='<img src="'.UrlFrom(GetWidget('demoConfig')->getParameter('item0Image')[0] . '?thumb=>48>48').'" />';
-		// }
-		//
-		if(!empty($attributes['locationData'])){
-			//check that location data matches latlng
-		}	
 		
 		if(empty($attributes['locationData'])){
-			GetPlugin('GoogleMaps');
-			$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
-				$feature['coordinates'][0], 
-				$feature['coordinates'][1],
-				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
-			);
-			error_log(json_encode($geocode));
-			if(key_exists('results',$geocode)&&count($geocode->results)){
-				
 
-				$locationData=array(
-					"coordinates"=>$feature['coordinates'],
-					"geocode"=>$geocode->results[0]
-				);
-
-
-				$jsonLocationData=json_encode($locationData);
-				(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
-					"locationData"=>$jsonLocationData
-				));
-
+			$jsonLocationData=$this->getLocationData($feature);
+			if(!empty($jsonLocationData)){
 				$attributes['locationData']=$jsonLocationData;
-
 			}
 		}
 		
@@ -112,31 +85,64 @@ class MapStory extends \Plugin implements
 
 		if(empty($attributes['locationName'])||$attributes['locationName']==="false"){
 			
-			
-			$locationName=false;
-			foreach($attributes['locationData']->geocode->address_components as $addressResult){
-				if(in_array('locality', $addressResult->types)){
-					$locationName=$addressResult->long_name;
-					break;
-				}
-			}
-
-
-			if($locationName&&$locationName!="false"){
-				(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
-					"locationName"=>$locationName
-				));
-			}
-			$attributes['locationName']=$locationName;
-
+			$attributes['locationName']=$this->getLocationName($feature['id'], $attributes);
 		
 			
 		}
 
-
 		$feature['attributes']=$attributes;
 
 		return $feature;
+
+
+	}
+
+	protected getLocationName($itemId, $attributes){
+		
+		$locationName=false;
+		foreach($attributes['locationData']->geocode->address_components as $addressResult){
+			if(in_array('locality', $addressResult->types)){
+				$locationName=$addressResult->long_name;
+				break;
+			}
+		}
+
+		if($locationName&&$locationName!="false"){
+			(new \attributes\Record('storyAttributes'))->setValues($itemId, "MapStory.card", array(
+				"locationName"=>$locationName
+			));
+		}
+
+		return $locationName;
+	}
+
+	protected getLocationData($featureMeta){
+		GetPlugin('GoogleMaps');
+		$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
+			$featureMeta['coordinates'][0], 
+			$featureMeta['coordinates'][1],
+			GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
+		);
+		error_log(json_encode($geocode));
+		if(key_exists('results',$geocode)&&count($geocode->results)){
+			
+
+			$locationData=array(
+				"coordinates"=>$featureMeta['coordinates'],
+				"geocode"=>$geocode->results[0]
+			);
+
+
+			$jsonLocationData=json_encode($locationData);
+			(new \attributes\Record('storyAttributes'))->setValues($featureMeta['id'], "MapStory.card", array(
+				"locationData"=>$jsonLocationData
+			));
+
+			return $jsonLocationData;
+
+		}
+
+		return null;
 
 
 	}
