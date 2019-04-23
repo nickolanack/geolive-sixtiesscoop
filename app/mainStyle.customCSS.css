@@ -226,10 +226,15 @@ span.array-module.ui-list-view.story-list {
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
-.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button {
+.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button,
+.SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
     background-color: white;
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/search.png'); ?>");
     background-size: 60%;
+}
+.SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
+    background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/draggable.png'); ?>");
+    background-size: 45%;
 }
 
 .SideBarWidget.right.active>div.toggle-button {
