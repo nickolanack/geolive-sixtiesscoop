@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "return \"Empty section - todo get active story card\";",
+        "script": "return ScoopStories.getEmptySelectionHtml();",
         "description": "Info about my custom script"
     }
 }
