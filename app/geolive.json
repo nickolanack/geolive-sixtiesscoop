@@ -806,10 +806,10 @@
         "name": "Side Panel",
         "instance": "SidePanel",
         "parameters": {
-            "widgetTitle": "",
+            "widgetTitle": "Search Panel",
             "target": "forTheMap",
             "position": "RIGHT_CENTER",
-            "customScript": "widget.SidePanel.15.customScript.js",
+            "customScript": "Search Panel.customScript.js",
             "readAccess": "public"
         }
     },
