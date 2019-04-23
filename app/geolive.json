@@ -3479,13 +3479,42 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "templateName": "{target}",
+            "widgetTitle": "sidePanelInfoDetail",
+            "target": "sidePanelInfoDetail",
+            "templateName": "sidePanelInfoDetail",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
-            "notifyViewer": false
+            "notifyViewer": false,
+            "metadata": {
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                }
+            },
+            "readAccess": "public"
         }
     }
 }
