@@ -255,6 +255,16 @@ span.TileButtonsFunctionsSection {
     right: 30px;
 }
 
+.left-center.UIMapControl .tileButtonContainer.shifted {
+        position: relative;
+        left: 400px;
+}
+
+.left-center.UIMapControl .tileButtonContainer {
+    position: relative;
+    left: 30px;
+}
+
 
 
 .primary-btn, .inline-btn {
