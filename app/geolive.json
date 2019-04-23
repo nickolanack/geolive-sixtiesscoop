@@ -3463,5 +3463,15 @@
             "tileIcon": [],
             "readAccess": "public"
         }
+    },
+    "widget.42": {
+        "name": "Side Panel",
+        "instance": "SidePanel",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "position": "LEFT_TOP",
+            "customScript": ""
+        }
     }
 }
