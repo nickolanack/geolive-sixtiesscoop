@@ -10,59 +10,9 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 			return $this->setError('No access');
 		}
 
-		$feature=$this->getPlugin()->getUsersStoryMarker($json->id);
-
-		if($feature->getId()<=0&&empty($json->location)){
-			return $this->setError('Requires location');
-		}
-
-		$feature->setName("some name");
-		$feature->setDescription($json->description);
-
-
-
-		if(!empty($json->location)){
-			$feature->setCoordinates($json->location->lat,$json->location->lng);
-		}
-
-
-		$feature->setLayerId($this->getPlugin()->getStoryLayerId());
-
-
-		$defaultIcon=UrlFrom(GetWidget('siteConfig')->getParameter('storyIcon')[0] . '?thumb=>48>48');
-		$feature->setIcon($defaultIcon);
-
-		if (key_exists('attributes', $json)){
-			if(key_exists('storyAttributes', $json->attributes)){
-				$attrs=$json->attributes->storyAttributes;
-				if(key_exists('isBirthStory', $attrs)&&$attrs->isBirthStory){
-					$defaultIcon=UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0] . '?thumb=>48>48');
-					$feature->setIcon($defaultIcon);
-				}
-
-				if(key_exists('isRepatriationStory', $attrs)&&$attrs->isRepatriationStory){
-					$defaultIcon=UrlFrom(GetWidget('siteConfig')->getParameter('repatriationIcon')[0] . '?thumb=>48>48');
-					$feature->setIcon($defaultIcon);
-				}
-			}
-		}
-
-		(new \spatial\FeatureLoader())->save($feature);
 		
 
-		GetPlugin('Attributes');
-		if (key_exists('attributes', $json)) {
-			foreach ($json->attributes as $table => $fields) {
-				(new \attributes\Record($table))->setValues($feature->getId(), "MapStory.card", $fields);
-			}
-		}
-
-		(new \attributes\Record($table))->setValues($feature->getId(), "MapStory.card", array(
-			"locationName"=>$json->address
-		));
-
-
-
+		$feature=(new \MapStory\FeatureUpdater())->fromJson($feature, $json);
 
 		
 		return array('item'=>$this->getPlugin()->formatFeatureMetadata($feature->getMetadata()), 'story'=>$this->getPlugin()->getUsersStoryMetadata());
