@@ -65,7 +65,7 @@ class MapStory extends \Plugin implements
 	}
 
 	public function formatFeatureMetadata($feature, $attributes=null){
-		return (new \MapStory\CardFormatter()->format($feature, $attributes));
+		return (new \MapStory\CardFormatter())->format($feature, $attributes);
 	}
 
 	
