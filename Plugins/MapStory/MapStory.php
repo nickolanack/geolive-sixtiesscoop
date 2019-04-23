@@ -75,7 +75,7 @@ class MapStory extends \Plugin implements
 		
 		if(empty($attributes['locationData'])){
 
-			$jsonLocationData=$this->getLocationData($feature);
+			$jsonLocationData=$this->parseLocationData($feature);
 			if(!empty($jsonLocationData)){
 				$attributes['locationData']=$jsonLocationData;
 			}
@@ -85,7 +85,7 @@ class MapStory extends \Plugin implements
 
 		if(empty($attributes['locationName'])||$attributes['locationName']==="false"){
 			
-			$attributes['locationName']=$this->getLocationName($feature['id'], $attributes);
+			$attributes['locationName']=$this->parseLocationName($feature['id'], $attributes);
 		
 			
 		}
@@ -97,7 +97,7 @@ class MapStory extends \Plugin implements
 
 	}
 
-	protected function getLocationName($itemId, $attributes){
+	protected function parseLocationName($itemId, $attributes){
 		
 		$locationName=false;
 		foreach($attributes['locationData']->geocode->address_components as $addressResult){
@@ -116,7 +116,7 @@ class MapStory extends \Plugin implements
 		return $locationName;
 	}
 
-	protected function getLocationData($featureMeta){
+	protected function parseLocationData($featureMeta){
 		GetPlugin('GoogleMaps');
 		$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
 			$featureMeta['coordinates'][0], 
@@ -205,6 +205,9 @@ class MapStory extends \Plugin implements
 
 
 				if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
+
+
+
 					if($hasBirthStory){
 						$attributes['isBirthStory']=false;
 					}else{
