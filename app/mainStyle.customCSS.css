@@ -121,6 +121,10 @@ span.delete-btn, span.edit-btn {
     float: right;
 }
 
+span.array-module.ui-list-view.story-list {
+    margin-top: 10px;
+}
+
 .story-list .story-card{
     vertical-align: top;
 }
@@ -168,6 +172,9 @@ span.delete-btn, span.edit-btn {
 .story-card h3 {
     margin: 2px;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .story-card p {
@@ -219,10 +226,15 @@ span.delete-btn, span.edit-btn {
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
-.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button {
+.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button,
+.SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
     background-color: white;
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/search.png'); ?>");
     background-size: 60%;
+}
+.SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
+    background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/draggable.png'); ?>");
+    background-size: 45%;
 }
 
 .SideBarWidget.right.active>div.toggle-button {
@@ -243,12 +255,22 @@ span.TileButtonsFunctionsSection {
     right: 30px;
 }
 
+.left-center.UIMapControl .tileButtonContainer.shifted {
+        position: relative;
+        left: 400px;
+}
+
+.left-center.UIMapControl .tileButtonContainer {
+    position: relative;
+    left: 30px;
+}
+
 
 
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
-.profile-section  .primary-btn, .sort-card button {
+.profile-section  .primary-btn, .sort-card button, .module-wizard .form-btn.register {
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -260,6 +282,13 @@ span.TileButtonsFunctionsSection {
     font-size: 22px;
     margin-top: 25px;
     border-radius:3px;
+}
+
+
+.module-wizard .form-btn.register {
+    margin-top: 5px;
+    float: right;
+    margin-bottom: 30px;
 }
 
 .sort-card button.current {
@@ -285,7 +314,7 @@ span.TileButtonsFunctionsSection {
     border-bottom: 1px solid #5ea5e9;
 }
 
-.profile-section .primary-btn:hover, .sort-card button:hover {
+.profile-section .primary-btn:hover, .sort-card button:hover, .module-wizard .form-btn.register:hover{
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     background-color: #4987cc;
 }
@@ -302,6 +331,17 @@ span.TileButtonsFunctionsSection {
 }
 .profile-section .logout {}
 .profile-section .register {}
+
+
+.fb-login-button {
+    float:left;
+    width:190px;
+}
+
+.sso-btn.google {
+    margin-bottom:30px;
+}
+
 
 .ui-view.profile-section {
     float: right;
@@ -325,13 +365,31 @@ span.TileButtonsFunctionsSection {
 }
 
 .profile-section span.user-name {
-    line-height: 80px;
-    }
+    position: absolute;
+    top: 0px;
+    right: 240px;
+    line-height: 20px;
+    white-space:nowrap;
+}
 
 .profile-section .inline-btn.profile {
     position: absolute;
-    top: 55px;
-    left: 20px;
+    top: 20px;
+    right: 240px;
+    white-space:nowrap;
+}
+.profile-section .inline-btn.publishing-options {
+    position: absolute;
+    top: 40px;
+    right: 240px;
+    white-space:nowrap;
+}
+
+.profile-section .inline-btn.your-story {
+    position: absolute;
+    top: 60px;
+    right: 240px;
+    white-space:nowrap;
 }
 
 
@@ -609,6 +667,32 @@ span.search-bar-btn.left.search:before {
     position: absolute;
     top: 40%;
 }
+
+
+.module-wizard .upload-btns span.image {
+    background-image: url(https://trapline.geolive.ca/php-core-app/users_files/user_files_1/Uploads/oOY_AsU_ccD_[ImAgE]_[G].png?tint=rgb(255,0,0));
+    cursor: pointer;
+    text-indent: 5px;
+}
+
+
+
+
+div.empty-section {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding: 75px;
+    box-sizing: border-box;
+}
+
+.empty-section>* {
+    text-align: -webkit-auto;
+}
+
+
 
 
 

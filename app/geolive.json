@@ -39,7 +39,7 @@
         "name": "Monolog Plugin",
         "instance": "Monolog",
         "parameters": {
-            "enabled": false,
+            "enabled": true,
             "logPath": "{core}\/..\/logs",
             "logToSentry": false
         }
@@ -203,7 +203,7 @@
         "parameters": {
             "facebookAppId": "331904550992320",
             "facebookAppSecret": "XXXX-XXXX",
-            "googleAuthClientId": ""
+            "googleAuthClientId": "XXXX-XXXX"
         }
     },
     "plugin.20": {
@@ -806,10 +806,10 @@
         "name": "Side Panel",
         "instance": "SidePanel",
         "parameters": {
-            "widgetTitle": "",
+            "widgetTitle": "Search Panel",
             "target": "forTheMap",
             "position": "RIGHT_CENTER",
-            "customScript": "widget.SidePanel.15.customScript.js",
+            "customScript": "Search Panel.customScript.js",
             "readAccess": "public"
         }
     },
@@ -872,16 +872,16 @@
                             "registerFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 162,
-                            "y": 167
+                            "x": 182,
+                            "y": 187
                         },
                         "children": [
                             "registerFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 122,
-                                    "y": 333
+                                    "x": 142,
+                                    "y": 353
                                 }
                             }
                         ],
@@ -894,7 +894,27 @@
                                 },
                                 "content": {
                                     "modules": [
-                                        "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                        "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "plugin.SingleSignOn.GoogleLogin",
+                                            "config": []
+                                        },
+                                        {
+                                            "type": "WizardRegistration",
+                                            "config": {
+                                                "className": "",
+                                                "showCancel": true,
+                                                "showNext": true,
+                                                "showName": true,
+                                                "showUsername": false,
+                                                "showReenterPassword": false,
+                                                "labelForCancel": "cancel",
+                                                "labelForSubmit": "submit",
+                                                "validateRegistrationFieldsScript": "return defaultValidationFn();",
+                                                "onSuccessfulRegistrationScript": "defaultBehaviorFn();",
+                                                "formatRegistrationFieldsScript": "return fields;"
+                                            }
+                                        }
                                     ]
                                 },
                                 "footer": {
@@ -949,16 +969,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 158,
-                            "y": 290
+                            "x": 238,
+                            "y": 370
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 118,
-                                    "y": 456
+                                    "x": 198,
+                                    "y": 558
                                 }
                             }
                         ],
@@ -973,6 +993,13 @@
                                     "modules": [
                                         "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "plugin.SingleSignOn.GoogleLogin",
+                                            "config": {
+                                                "reloadOnSuccess": true,
+                                                "reloadUrl": ""
+                                            }
+                                        },
+                                        {
                                             "type": "WizardLogin",
                                             "config": {
                                                 "className": "",
@@ -986,6 +1013,23 @@
                                                 "reloadUrl": "",
                                                 "showForgotPassword": false,
                                                 "forgotPasswordCustomScript": "XXXX-XXXX"
+                                            }
+                                        },
+                                        {
+                                            "type": "InlineHtml",
+                                            "config": {
+                                                "className": "uitext-container",
+                                                "text": "<span class=\"label\" style=\"margin-top:30px;\">Don't have an account yet?<\/span>",
+                                                "template": "",
+                                                "templateVariablesScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardScriptElement",
+                                            "config": {
+                                                "name": "My Custom Script",
+                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.4.config.script.js",
+                                                "description": "Info about my custom script"
                                             }
                                         }
                                     ]
@@ -1042,16 +1086,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 238,
-                            "y": 370
+                            "x": 268,
+                            "y": 400
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 198,
-                                    "y": 558
+                                    "x": 228,
+                                    "y": 626
                                 }
                             }
                         ],
@@ -1128,6 +1172,64 @@
                                                 "iconTint": "rgb(100, 149, 237)",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Original Name at Birth",
+                                                "showLabel": false,
+                                                "presentationStyle": "radio",
+                                                "presentationRadioTrueLabel": "Yes, I know my birth name.",
+                                                "presentationRadioFalseLabel": "No, I do not know my birth name.",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Original Birth Name (if known)",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "autocomplete": true,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTagCloud",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.6.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "showLabel": false,
+                                                "showAddWord": false,
+                                                "label": "What is your Indigenous affiliation?",
+                                                "addWordPlaceholder": "add a keyword",
+                                                "fontColor": "rgb(0, 0, 0)",
+                                                "hoverColor": "rgb(143, 188, 143)",
+                                                "selectedColor": "rgb(143, 188, 143)",
+                                                "shuffleTags": false,
+                                                "tags": "[\n    \"First Nation\",\n    \"Inuit\",\n    \"M\u00e9tis\"\n]",
+                                                "getItemTagsScript": "return defaultTags;",
+                                                "formatModule": ""
                                             }
                                         }
                                     ]
@@ -1338,11 +1440,11 @@
                 "title": "profileAttributes",
                 "_tableDiagramState": {
                     "x": 325,
-                    "y": 256
+                    "y": 215
                 },
                 "_diagramState": {
                     "x": 325,
-                    "y": 256
+                    "y": 215
                 },
                 "appliesTo": [
                     "user"
@@ -1576,6 +1678,138 @@
                             "trueIcon": [],
                             "falseIcon": []
                         }
+                    },
+                    {
+                        "was": "",
+                        "title": "knowsBirthName",
+                        "label": "Know Birth Name",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "birthName",
+                        "label": "Birth Name",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "indigenousAffiliation",
+                        "label": "Indigenous Affiliation",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(NaN, NaN, NaN)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
                     }
                 ]
             },
@@ -1592,19 +1826,19 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 300,
-                    "y": 246
+                    "x": 322,
+                    "y": 275
                 },
                 "_diagramState": {
-                    "x": 300,
-                    "y": 246
+                    "x": 322,
+                    "y": 275
                 },
                 "appliesTo": [
                     "marker"
                 ],
                 "_typeDiagramState": {
-                    "x": 100,
-                    "y": 300
+                    "x": 73,
+                    "y": 318
                 },
                 "readAccess": "public",
                 "maxEntries": 1,
@@ -2051,6 +2285,50 @@
                             "trueIcon": [],
                             "falseIcon": []
                         }
+                    },
+                    {
+                        "was": "",
+                        "title": "locationData",
+                        "label": "Location Data",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
                     }
                 ]
             },
@@ -2223,16 +2501,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 326,
-                            "y": 84
+                            "x": 336,
+                            "y": 94
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 286,
-                                    "y": 285
+                                    "x": 296,
+                                    "y": 307
                                 }
                             }
                         ],
@@ -2311,10 +2589,32 @@
                                             }
                                         },
                                         {
+                                            "type": "plugin.Attributes.WizardDescriptionAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "label": "Do you have any photos you would like to share?",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": false,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "input-hidden",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
                                             "type": "plugin.Attributes.WizardHiddenAttribute",
                                             "config": {
                                                 "attributeFieldArray": [
-                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFieldArray.0.json"
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
@@ -2324,7 +2624,7 @@
                                             "type": "plugin.Attributes.WizardHiddenAttribute",
                                             "config": {
                                                 "attributeFieldArray": [
-                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFieldArray.0.json"
+                                                    "createBirthStoryForm.metadata.children.1.builderMetadata.positions.content.modules.6.config.attributeFieldArray.0.json"
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
@@ -2467,16 +2767,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 365,
-                            "y": 221
+                            "x": 385,
+                            "y": 241
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 325,
-                                    "y": 409
+                                    "x": 345,
+                                    "y": 429
                                 }
                             }
                         ],
@@ -2499,7 +2799,7 @@
                                                 "label": "Do you have any information about your birth family that you would share publicly?",
                                                 "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
@@ -2521,7 +2821,7 @@
                                                 "label": "Add Images",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": true,
+                                                "mandatory": false,
                                                 "showAudios": true,
                                                 "showImages": true,
                                                 "showDocuments": true,
@@ -3133,6 +3433,126 @@
             "onProfileClickScript": "",
             "layerMap": [],
             "tipMap": [],
+            "readAccess": "public"
+        }
+    },
+    "widget.41": {
+        "name": "Attr CSV Export",
+        "instance": "ExportData",
+        "parameters": {
+            "widgetTitle": "Export Data",
+            "target": "forTheMap",
+            "position": "LEFT_CENTER",
+            "downloadImage": [],
+            "controlColor": "rgb(48,84,107)",
+            "tileHoverTip": "Download CSV File",
+            "skipConsitencyCheck": true,
+            "exportEncoding": "UTF-8",
+            "filename": "Geolive Export DATE[Y-m-d (H.i.s)]",
+            "exportMetadata": {
+                "fields": "DEFAULT"
+            },
+            "showImportEncoding": false,
+            "importEncoding": "UTF-8",
+            "showImport": false,
+            "filterFieldsScript": "Export Data.filterFieldsScript.js",
+            "filterRowScript": "return true;",
+            "formatFieldsScript": "return $fields;",
+            "formatRowScript": "return $record;",
+            "uploadImage": [],
+            "tileIcon": [],
+            "readAccess": "public"
+        }
+    },
+    "widget.42": {
+        "name": "Side Panel",
+        "instance": "SidePanel",
+        "parameters": {
+            "widgetTitle": "Info Panel",
+            "target": "forTheMap",
+            "position": "LEFT_CENTER",
+            "customScript": "Info Panel.customScript.js",
+            "readAccess": "public"
+        }
+    },
+    "widget.43": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "sidePanelInfoDetail",
+            "target": "sidePanelInfoDetail",
+            "templateName": "sidePanelInfoDetail",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "sidePanelInfoDetail.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                }
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.44": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "sidePanelEmptyDetail",
+            "target": "sidePanelEmptyDetail",
+            "templateName": "sidePanelEmptyDetail",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "sidePanelEmptyDetail.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
             "readAccess": "public"
         }
     }

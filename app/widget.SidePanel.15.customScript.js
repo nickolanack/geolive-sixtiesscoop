@@ -1,2 +1,0 @@
-
-ScoopStories.initializeSidePanel(sidePanel, container);
