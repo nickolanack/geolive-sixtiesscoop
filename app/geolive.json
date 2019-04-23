@@ -3468,10 +3468,11 @@
         "name": "Side Panel",
         "instance": "SidePanel",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "position": "LEFT_TOP",
-            "customScript": ""
+            "widgetTitle": "Info Panel",
+            "target": "forTheMap",
+            "position": "LEFT_CENTER",
+            "customScript": "",
+            "readAccess": "public"
         }
     }
 }
