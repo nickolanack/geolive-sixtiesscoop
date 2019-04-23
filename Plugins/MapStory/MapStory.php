@@ -116,15 +116,12 @@ class MapStory extends \Plugin implements
 		$attr=(new \attributes\Record('storyAttributes'));
 		$list=array();
 
-		$hasBirthStory=false;
-		$hasRepatriationStory=false;
-
 		
 
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withOwner($userId)
-			->iterate(function ($feature) use(&$list, &$attr, &$hasBirthStory, &$hasRepatriationStory){
+			->iterate(function ($feature) use(&$list, &$attr){
 
 				$attributes=$attr->getValues($feature['id'], "MapStory.card");
 				$list[]=$this->formatFeatureMetadata($feature, $attributes);
