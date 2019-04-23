@@ -3471,7 +3471,7 @@
             "widgetTitle": "Info Panel",
             "target": "forTheMap",
             "position": "LEFT_CENTER",
-            "customScript": "",
+            "customScript": "Info Panel.customScript.js",
             "readAccess": "public"
         }
     }
