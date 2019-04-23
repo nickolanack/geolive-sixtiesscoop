@@ -677,3 +677,25 @@ span.search-bar-btn.left.search:before {
 
 
 
+
+div.empty-section {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding: 75px;
+    box-sizing: border-box;
+}
+
+.empty-section>* {
+    text-align: -webkit-auto;
+}
+
+
+
+
+
+
+
+
