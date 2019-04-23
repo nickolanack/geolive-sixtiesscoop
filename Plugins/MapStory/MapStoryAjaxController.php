@@ -5,13 +5,27 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	protected function saveStoryItem($json){
 
-		$feature=$this->getPlugin()->getUsersStoryMarker($json->id, $json->type);
 
+		if(!Auth('write', $json->id, $json->type)){
+			return $this->setError('No access');
+		}
+
+		$feature=$this->getPlugin()->getUsersStoryMarker($json->id);
+
+		if($feature->getId()<=0&&empty($json->location)){
+			return $this->setError('Requires location');
+		}
 
 		$feature->setName("some name");
 		$feature->setDescription($json->description);
-		$feature->setCoordinates($json->location->lat,$json->location->lng);
-	
+
+
+
+		if(!empty($json->location)){
+			$feature->setCoordinates($json->location->lat,$json->location->lng);
+		}
+
+
 		$feature->setLayerId($this->getPlugin()->getStoryLayerId());
 
 
@@ -33,29 +47,39 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 			}
 		}
 
-
-		\MapController::StoreMapFeature($feature);
-
+		(new \spatial\FeatureLoader())->save($feature);
 		
 
-
+		GetPlugin('Attributes');
 		if (key_exists('attributes', $json)) {
-
-
-
-
-
-			GetPlugin('Attributes');
 			foreach ($json->attributes as $table => $fields) {
-				(new \attributes\Record($table))->setValues($feature->getId(), $feature->getType(), $fields);
+				(new \attributes\Record($table))->setValues($feature->getId(), "MapStory.card", $fields);
 			}
 		}
+
+		(new \attributes\Record($table))->setValues($feature->getId(), "MapStory.card", array(
+			"locationName"=>$json->address
+		));
+
+
+
 
 		
 		return array('item'=>$this->getPlugin()->formatFeatureMetadata($feature->getMetadata()), 'story'=>$this->getPlugin()->getUsersStoryMetadata());
 
 	}	
 
+	protected function deleteStoryItem($json){
+
+		if(!Auth('write', $json->id, $json->type)){
+			return $this->setError('No access');
+		}
+
+		GetPlugin('Maps');
+		return !!(new \spatial\FeatureLoader())->delete((new \spatial\FeatureLoader())->fromId($json->id));
+		
+
+	}
 
 	protected function getStoryWithItem($json){
 

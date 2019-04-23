@@ -23,8 +23,8 @@ class CardDataType extends \core\PluginDataType {
             return true;
         }
 
-        error_log($item);
 
-        return false;
+       return  Auth($task, $item, "marker");
+        
     }
 }

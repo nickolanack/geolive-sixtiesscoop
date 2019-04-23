@@ -31,7 +31,11 @@ var StoryMapController = new Class({
     },
 
 
-
+    clearCards:function(){
+        var me=this;
+        me._cards=null;
+        return me;
+    },
     getCurrentCards: function(callback) {
 
 
@@ -134,7 +138,42 @@ var StoryMapController = new Class({
 
     },
 
-    initializeSidePanel: function(sidePanel, el) {
+    initializeSidePanelLeft:function(sidePanel, el){
+        var me = this;
+        var sidePanelViewer = new ContentModuleViewer(el, {});
+
+        me.getApp(function(app) {
+            app.getDisplayController().display('sidePanelEmptyDetail', AppClient, sidePanelViewer);
+        });
+
+
+        me.addEvent('focusCard',function(card){
+             me.getApp(function(app) {
+                 app.getDisplayController().display('sidePanelInfoDetail', card, sidePanelViewer);
+             });
+        });
+
+
+        sidePanel.addEvent('show', function(){
+
+            $$('.left-center.UIMapControl .tileButtonContainer')[0].addClass('shifted');
+
+        }).addEvent('hide', function(){
+
+            $$('.left-center.UIMapControl .tileButtonContainer')[0].removeClass('shifted');
+
+        })
+    },
+
+    getEmptySelectionHtml:function(){
+
+        var div =new Element('div',{"class":"empty-section"});
+        div.appendChild(new Element('h3',{'html':'Empty selection'}));
+        div.appendChild(new Element('p',{'html':'click a marker on the map, or search a story to see details here.'}));
+        return div;
+    },
+
+    initializeSidePanelRight: function(sidePanel, el) {
         var me = this;
         var sidePanelViewer = new ContentModuleViewer(el, {});
 
@@ -192,6 +231,11 @@ var StoryMapController = new Class({
 
             //layer.addEvent('')
 
+        });
+        map.getLayerManager().addEvent('addLayer',function(layer){
+            layer.getItems().forEach(function(marker) {
+                me.scaleIcon(marker, 10);
+            });
         })
 
         me.fireEvent('loadMap', [map]);
@@ -298,6 +342,7 @@ var StoryMapController = new Class({
         cardEl = me.getCardEl(card.getId());
         if (cardEl) {
             cardEl.addClass('active');
+            me.fireEvent('focusCard',[card]);
             return;
         }
 
@@ -486,6 +531,7 @@ var StoryMapController = new Class({
     },
     StyleCardGroupLabel: function(el) {
 
+
         var me = this;
         var setCardLabel = function() {
             me.getCurrentCardLabel(function(label) {
@@ -532,7 +578,7 @@ var StoryMapController = new Class({
         }
 
 
-        new UIModalFormButton(
+        (new UIModalFormButton(
             button,
             application, item, {
                 formName: item.getFormView(),
@@ -541,7 +587,10 @@ var StoryMapController = new Class({
                 }
 
             }
-        );
+        )).addEvent('complete',function(){
+            ScoopStories.clearCards();
+            ScoopStories.redraw();
+        })
 
 
 
@@ -564,7 +613,7 @@ var StoryMapController = new Class({
                 "events":{
                     "click":function(){
                         me.setSortFn(btnOptions.sortFn, btnOptions.sortName);
-                        me._cards=null;
+                        me.clearCards()
                         me.redraw();
                     }
                 }
@@ -642,23 +691,33 @@ var StoryMapController = new Class({
             birthdate=user.getBirthStory().getYear();
         }
 
+
+        var birthplace="unknown";
+        if(user.hasBirthStory()){
+            birthplace=user.getBirthStory().getAddress();
+        }
+
         div.appendChild(new Element('h4', {
             "html": "Date of birth: "+birthdate
         }));
         div.appendChild(new Element('h4', {
-            "html": "Place of birth: {birthplace}"
+            "html": "Place of birth: "+birthplace
         }));
         div.appendChild(new Element('h4', {
-            "html": "Name at birth: {birthname}"
+            "html": "Name at birth: "+(user.knowsBirthName()?user.getBirthName():"unknown")
+        }));
+
+
+        var journey=user.getFirstJourneyStory();
+
+        div.appendChild(new Element('h4', {
+            "html": "Year adopted: "+(journey?journey.getYear():"unknown")
         }));
         div.appendChild(new Element('h4', {
-            "html": "Year adopted: {adoptedyear}"
+            "html": "Reunited with family: "+(user.hasRepatriationStory()?"yes":"no")
         }));
         div.appendChild(new Element('h4', {
-            "html": "Reunited with family: {reunited?}"
-        }));
-        div.appendChild(new Element('h4', {
-            "html": "Looking for family: {looking?}"
+            "html": "Looking for family: "+(user.isLookingForFamily()?"yes":"no")
         }));
         return div;
 
@@ -764,24 +823,14 @@ var StoryMapController = new Class({
         var getCardName=function(card){
             var me=this;
 
-            var name=card.getName();
-
-            if(card.isBirthStory()){
-                name="birth story"
-            }
+            var name=card.getAddress();
             return name;
         };
 
         var getCardDescription=function(card){
             var me=this;
-
-            var name=card.getName();
-
-            if(card.isBirthStory()){
-                var userWas=card.belongsToCurrentUser()?"You were":card.getUsersName()+" was";
-                name=userWas+" born in "+card.getYear();
-            }
-            return name;
+            var description= card.getYear();
+            return description;
         };
 
 
@@ -834,6 +883,18 @@ var StoryMapController = new Class({
                             })).show(function(answer) {
 
 
+                                if(answer==true){
+
+                                        (new AjaxControlQuery(CoreAjaxUrlRoot, "delete_story_item", {
+                                            'plugin':'MapStory',
+                                            'id': item.getId(),
+                                            'type': item.getType()
+                                        })).addEvent("success", function(resp) {
+                                            ScoopStories.clearCards()
+                                            ScoopStories.redraw();
+                                        }).execute();
+
+                                }
 
                             });
                         }
@@ -1038,9 +1099,13 @@ var StoryUser = new Class({
         return me;
 
     },
+    getFirstJourneyStory:function(){
+        var me=this;
+        return me._journeyStories && me._journeyStories.length ? me._journeyStories[0]:false;
+    },
     getFirstStory: function() {
         var me = this;
-        return me._birthStory || (me._journeyStories && me._journeyStories.length ? me._journeyStories[0] : me._repatriationStory) || null;
+        return me._birthStory || me.getFirstJourneyStory() || me._repatriationStory || null;
     },
     isCurrentUser: function() {
         var me = this;
@@ -1075,6 +1140,38 @@ var StoryUser = new Class({
         }
         return me._birthStory;
     },
+
+    getBirthName:function(){
+
+        var me=this;
+        if(me._userData&&typeof me._userData.birthName=="string"){
+            return me._userData.birthName;
+        }
+       
+
+        return "";
+    },
+    knowsBirthName:function(){
+
+        var me=this;
+        if(me._userData){
+            return (me._userData.knowsBirthName===true||me._userData.knowsBirthName==="true")&&typeof me._userData.birthName=="string"&&me._userData.birthName!="";
+        }
+       
+
+        return false;
+    },
+
+    isLookingForFamily:function(){
+
+        var me=this;
+        if(me._userData&&typeof me._userData.searchingFor=="string"){
+            
+        }
+
+        return false;
+    },
+
     _setRepatriationStoryData: function(data) {
         var me = this;
         if (me._repatriationStory) {
@@ -1111,6 +1208,7 @@ var StoryUser = new Class({
 
         //sort...
     },
+
     getJourneyStories: function() {
         var me = this;
         return me._journeyStories || [];
@@ -1191,11 +1289,11 @@ var StoryUser = new Class({
             }
 
             if (me.canEdit()) {
-                cards.push(new AddCard({
-                    label: "Help Family Find You",
-                    formView: "publishingOptionsForm",
-                    classNames: "help-card add-card publishing-options-card"
-                }));
+                // cards.push(new AddCard({
+                //     label: "Help Family Find You",
+                //     formView: "publishingOptionsForm",
+                //     classNames: "help-card add-card publishing-options-card"
+                // }));
             }
 
 
@@ -1342,9 +1440,30 @@ var StoryCard = new Class({
 
     },
 
+    _getAttr:function(field, defaultValue){
+
+        if(
+            me._config.attributes&&
+            me._config.attributes[field]&&
+            me._config.attributes[field]!=''&&
+            me._config.attributes[field]!='false'
+            ){
+
+            return me._config.attributes[field];
+        }
+
+        return defaultValue;
+
+    },
+
     getYear:function(){
         var me=this;
-        if(me._config.attributes.locationDate&&me._config.attributes.locationDate!=''){
+        if(
+            me._config.attributes&&
+            me._config.attributes.locationDate&&
+            me._config.attributes.locationDate!=''&&
+            me._config.attributes.locationDate!='false'){
+
             return me._config.attributes.locationDate.split('-').shift();
         }
 
@@ -1408,7 +1527,23 @@ var StoryCard = new Class({
     },
 
     getAddress: function() {
-        return this._address || false;
+        var me=this;
+        if(me._address){
+            return this._address
+        }
+       
+
+        if(
+            me._config.attributes&&
+            me._config.attributes.locationName&&
+            me._config.attributes.locationName!=''&&
+            me._config.attributes.locationName!='false'){
+
+            return  this._config.attributes.locationName;
+        }
+
+        return false;
+       
     },
     setAddress: function(address) {
         this._address = address;
@@ -1471,7 +1606,24 @@ var StoryCard = new Class({
     },
 
     getCardBackgroundImage: function(callback) {
+
         var me = this;
+
+
+        if(
+            me._config.attributes&&
+            me._config.attributes.locationImages
+            ){
+
+            var images=JSTextUtilities.ParseImages(me._config.attributes.locationImages);
+            if(images.length){
+                callback(images[0].url);
+                return;
+            }
+
+        }
+
+
         if (!me._user) {
             callback(null);
             return null;
@@ -1490,6 +1642,7 @@ var StoryCard = new Class({
             'description': me.getDescription(),
             'attributes': me._attributes || {},
             'location': me._location || null,
+          
             'id': me.getId(),
             'type': me.getType()
 

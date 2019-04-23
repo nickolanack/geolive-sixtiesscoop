@@ -47,7 +47,7 @@ class MapStory extends \Plugin implements
 
 	
 
-	public function getUsersStoryMarker($itemId, $itemType, $userId = -1) {
+	public function getUsersStoryMarker($itemId, $userId = -1) {
 
 		GetPlugin('Maps');
 
@@ -69,24 +69,67 @@ class MapStory extends \Plugin implements
 		if(!$attributes){
 			GetPlugin('Attributes');
 			$attr=(new \attributes\Record('storyAttributes'));
-			$attributes=$attr->getValues($feature['id'], $feature['type']);
+			$attributes=$attr->getValues($feature['id'], "MapStory.card");
 		}
 
 
-		//if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
-			$attributes['locationImages']='<img src="'.UrlFrom(GetWidget('demoConfig')->getParameter('item0Image')[0] . '?thumb=>48>48').'" />';
-		//}
+		// if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
+		// 	$attributes['locationImages']='<img src="'.UrlFrom(GetWidget('demoConfig')->getParameter('item0Image')[0] . '?thumb=>48>48').'" />';
+		// }
+		//
+		if(!empty($attributes['locationData'])){
+			//check that location data matches latlng
+		}	
 		
-		if(empty($attributes['locationName'])){
+		if(empty($attributes['locationData'])){
 			GetPlugin('GoogleMaps');
 			$geocode=(new \GoogleMaps\Geocoder())->fromCoordinates(
 				$feature['coordinates'][0], 
 				$feature['coordinates'][1],
 				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
 			);
+			error_log(json_encode($geocode));
 			if(key_exists('results',$geocode)&&count($geocode->results)){
-				$attributes['geocode']=$geocode->results[0];
+				
+
+				$locationData=array(
+					"coordinates"=>$feature['coordinates'],
+					"geocode"=>$geocode->results[0]
+				);
+
+
+				$jsonLocationData=json_encode($locationData);
+				(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
+					"locationData"=>$jsonLocationData
+				));
+
+				$attributes['locationData']=$jsonLocationData;
+
 			}
+		}
+		
+		$attributes['locationData']=json_decode($attributes['locationData']);
+
+		if(empty($attributes['locationName'])||$attributes['locationName']==="false"){
+			
+			
+			$locationName=false;
+			foreach($attributes['locationData']->geocode->address_components as $addressResult){
+				if(in_array('locality', $addressResult->types)){
+					$locationName=$addressResult->long_name;
+					break;
+				}
+			}
+
+
+			if($locationName&&$locationName!="false"){
+				(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
+					"locationName"=>$locationName
+				));
+			}
+			$attributes['locationName']=$locationName;
+
+		
 			
 		}
 
@@ -120,7 +163,7 @@ class MapStory extends \Plugin implements
 			->withFeatures($featureIds)
 			->iterate(function ($feature) use(&$list, &$attr){
 
-				$attributes=$attr->getValues($feature['id'], $feature['type']);
+				$attributes=$attr->getValues($feature['id'], "MapStory.card");
 
 				$list[]=$this->formatFeatureMetadata($feature, $attributes);
 
@@ -152,7 +195,7 @@ class MapStory extends \Plugin implements
 			->withOwner($userId)
 			->iterate(function ($feature) use(&$list, &$attr, &$hasBirthStory, &$hasRepatriationStory){
 
-				$attributes=$attr->getValues($feature['id'], $feature['type']);
+				$attributes=$attr->getValues($feature['id'], "MapStory.card");
 
 
 				if($attributes['isBirthStory']==="true"||$attributes['isBirthStory']===true){
@@ -206,7 +249,7 @@ class MapStory extends \Plugin implements
 			)))
 			->iterate(function ($feature) use(&$list, &$attr, &$users){
 
-				$attributes=$attr->getValues($feature['id'], $feature['type']);
+				$attributes=$attr->getValues($feature['id'], "MapStory.card");
 
 				$result=$this->formatFeatureMetadata($feature, $attributes);
 
@@ -239,7 +282,7 @@ class MapStory extends \Plugin implements
 			->withFeatures($featureIds)
 			->iterate(function ($feature) use(&$list, &$attr, &$users){
 
-				$attributes=$attr->getValues($feature['id'], $feature['type']);
+				$attributes=$attr->getValues($feature['id'], "MapStory.card");
 
 				$result=$this->formatFeatureMetadata($feature, $attributes);
 
