@@ -12,7 +12,7 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 		
 
-		$feature=(new \MapStory\FeatureUpdater())->fromJson($feature, $json);
+		$feature=(new \MapStory\FeatureUpdater())->fromObject($json);
 
 		
 		return array('item'=>$this->getPlugin()->formatFeatureMetadata($feature->getMetadata()), 'story'=>$this->getPlugin()->getUsersStoryMetadata());

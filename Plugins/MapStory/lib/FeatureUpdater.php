@@ -15,7 +15,7 @@ class FeatureUpdater{
 		$feature=$this->getPlugin()->getUsersStoryMarker($json->id);
 
 		if($feature->getId()<=0&&empty($json->location)){
-			return $this->setError('Requires location');
+			throw new \Exception('Requires location for new items: '.$feature->getId());
 		}
 
 		$feature->setName("some name");
@@ -64,7 +64,7 @@ class FeatureUpdater{
 			"locationName"=>$json->address
 		));
 
-
+		return $feature;
 
 	}
 
