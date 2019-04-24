@@ -568,6 +568,14 @@ span.user-link {
     display: inline;
 }
 
+.story-card h3.user-name {
+    display: none;
+}
+
+.search-card h3 {
+    margin-right: 5px;
+}
+
 .search-container, .advanced-search {
     margin: 0 10px;
     display: inline-block;
