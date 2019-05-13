@@ -193,9 +193,9 @@
         }
     },
     "plugin.18": {
-        "name": "Pusher Message Server",
-        "instance": "PusherMessages",
-        "parameters": "_PusherMessages.json"
+        "name": "Message Subscription Server",
+        "instance": "MessageSystem",
+        "parameters": "_MessageSystem.json"
     },
     "plugin.19": {
         "name": "Single SignOn Plugin",
@@ -3554,6 +3554,13 @@
                 "_diagramState": []
             },
             "readAccess": "public"
+        }
+    },
+    "widget.45": {
+        "name": "Custom Tile Control Script",
+        "instance": "CustomTileControlScript",
+        "parameters": {
+            "target": "none"
         }
     }
 }
