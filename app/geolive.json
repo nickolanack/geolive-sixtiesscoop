@@ -3562,7 +3562,9 @@
         "parameters": {
             "target": "forTheMap",
             "customScript": "",
-            "tileIcon": [],
+            "tileIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/%5BImAgE%5D_%5BG%5D_yvQ_QX8_q1d.png"
+            ],
             "hoverTip": "Show adoptions",
             "className": "",
             "widgetTitle": "Visualization",
