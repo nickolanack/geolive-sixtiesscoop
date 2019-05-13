@@ -3560,7 +3560,14 @@
         "name": "Custom Tile Control Script",
         "instance": "CustomTileControlScript",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "customScript": "",
+            "tileIcon": [],
+            "hoverTip": "Show adoptions",
+            "className": "",
+            "widgetTitle": "Visualization",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
         }
     }
 }
