@@ -3561,13 +3561,13 @@
         "instance": "CustomTileControlScript",
         "parameters": {
             "target": "forTheMap",
-            "customScript": "",
+            "customScript": "Adoption Visualization.customScript.js",
             "tileIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/%5BImAgE%5D_SO_%5BG%5D_cvB_pA1.png"
             ],
             "hoverTip": "Show adoptions",
             "className": "",
-            "widgetTitle": "Visualization",
+            "widgetTitle": "Adoption Visualization",
             "readAccess": "public",
             "position": "LEFT_CENTER"
         }
