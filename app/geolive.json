@@ -3567,7 +3567,7 @@
             "className": "",
             "widgetTitle": "Visualization",
             "readAccess": "public",
-            "position": "TOP_LEFT"
+            "position": "LEFT_CENTER"
         }
     }
 }
