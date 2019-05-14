@@ -26,12 +26,9 @@ var WidgetTarget = 41;
 
 
 function onOpen() {
-
 	//enableSync();
 	drawMenu();
 }
-
-
 
 function drawMenu() {
 

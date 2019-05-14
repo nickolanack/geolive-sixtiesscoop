@@ -6,5 +6,6 @@
 	"get_story_with_item":{},
 	"get_story_with_user":{},
 	"search":{},
-	"get_feature_list":{}
+	"get_feature_list":{},
+	"get_dispersion_graph":{}
 }

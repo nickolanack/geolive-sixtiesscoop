@@ -27,7 +27,8 @@ class FeatureUpdater{
 			throw new \Exception('Requires location for new items: '.$feature->getId());
 		}
 
-		$feature->setName("some name");
+		$this->setName($json);
+		
 		$feature->setDescription($json->description);
 
 
@@ -44,16 +45,53 @@ class FeatureUpdater{
 		$feature->setIcon($defaultIcon);
 
 		$this->setIcon($json);
-
-
 		(new \spatial\FeatureLoader())->save($feature);
-
-
 		$this->setAttributes($json);
 		
 
+		
+
+
+
 		return $feature;
 
+	}
+
+	protected function setName($json){
+
+		GetPlugin('Attributes');
+
+		$feature=$this->getFeature($json);
+		$profile=(new \attributes\Record('profileAttributes'))->getValues($feature->getUserId(), "user");
+
+
+		$list=array();
+
+		
+		$legalName=trim($profile['name']);
+		$birthName=trim($profile['birthName']);
+
+
+		if(!empty($legalName)){
+			$list[]=$legalName;
+			if(!empty($birthName)){
+				$list[0].=' ('.$birthName.')';
+			}
+		}
+		if(empty($legalName)&&(!empty($birthName))){
+			$list[]=$birthName;
+		}
+		if(!empty($json->address)){
+			$list[]=$json->address;
+		}
+
+		if (key_exists('attributes', $json)&&
+			key_exists('storyAttributes', $json->attributes)&&
+			(!empty($json->attributes->storyAttributes->locationDate))) {
+			$list[]=$json->attributes->storyAttributes->locationDate;
+		}
+
+		$feature->setName(implode(', ', $list));
 	}
 
 	protected function setAttributes($json){

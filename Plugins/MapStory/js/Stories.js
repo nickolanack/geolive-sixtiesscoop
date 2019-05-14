@@ -150,6 +150,7 @@ var StoryMapController = new Class({
         me.addEvent('focusCard',function(card){
              me.getApp(function(app) {
                  app.getDisplayController().display('sidePanelInfoDetail', card, sidePanelViewer);
+                 sidePanel.show();
              });
         });
 
@@ -171,6 +172,37 @@ var StoryMapController = new Class({
         div.appendChild(new Element('h3',{'html':'Empty selection'}));
         div.appendChild(new Element('p',{'html':'click a marker on the map, or search a story to see details here.'}));
         return div;
+    },
+
+
+    initializeAdoptionTile: function(map, tile, control) {
+
+        tile.addEvent('click',function(){
+    
+    
+            map.resetView();
+            map.getLayerManager().getLayers().forEach(function(layer) {
+                layer.hide();
+            });
+
+
+
+            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
+                "plugin": "MapStory"
+            })).addEvent("success", function(resp) {
+
+
+              
+
+
+            }).execute();
+
+
+            
+        })
+
+
+
     },
 
     initializeSidePanelRight: function(sidePanel, el) {
@@ -225,16 +257,20 @@ var StoryMapController = new Class({
 
         map.getLayerManager().getLayers().forEach(function(layer) {
 
-            layer.getItems().forEach(function(marker) {
-                me.scaleIcon(marker, 10);
+            layer.runOnceOnLoad(function(){
+                layer.getItems().forEach(function(marker) {
+                    me.scaleIcon(marker, 10);
+                });
             });
 
             //layer.addEvent('')
 
         });
         map.getLayerManager().addEvent('addLayer',function(layer){
-            layer.getItems().forEach(function(marker) {
-                me.scaleIcon(marker, 10);
+            layer.runOnceOnLoad(function(){
+                layer.getItems().forEach(function(marker) {
+                    me.scaleIcon(marker, 10);
+                });
             });
         })
 
@@ -820,10 +856,17 @@ var StoryMapController = new Class({
 
 
 
-        var getCardName=function(card){
+        var getCardLocation=function(card){
             var me=this;
 
             var name=card.getAddress();
+            return name;
+        };
+
+        var getCardUserName=function(card){
+            var me=this;
+
+            var name=card.getUsersName();
             return name;
         };
 
@@ -842,7 +885,13 @@ var StoryMapController = new Class({
                 "class": "card-img"
             }), item),
             new Element('h3', {
-                "html": getCardName(item)
+                "html": getCardUserName(item),
+                "class":"user-name"
+            }),
+
+            new Element('h3', {
+                "html": getCardLocation(item),
+                "class":"location-name"
             }),
             new Element('p', {
                 "html": getCardDescription(item)
@@ -1812,7 +1861,7 @@ var AdvancedStorySearch = new Class({
 var StorySearch = new Class({
     Extends: UISearchListAggregator,
     initialize: function(search, options) {
-        //var me = this;
+        var me = this;
         this.parent(search, Object.append({
 
             PreviousTemplate: UIListAggregator.PreviousTemplate,
@@ -1821,6 +1870,7 @@ var StorySearch = new Class({
                 namedView: "scoopStoryDetail",
                 formatResult: function(data) {
 
+                    var keyword=me.getSearchString();
 
                     var card = new StoryCard(Object.append(data, {
                         classNames: "search-card"
