@@ -3441,6 +3441,7 @@
         "instance": "ExportData",
         "parameters": {
             "widgetTitle": "Export Data",
+            "readAccess": "public",
             "target": "none",
             "position": "LEFT_CENTER",
             "downloadImage": [],
@@ -3459,9 +3460,9 @@
             "filterRowScript": "return true;",
             "formatFieldsScript": "return $fields;",
             "formatRowScript": "return $record;",
+            "formatMapTile": "",
             "uploadImage": [],
-            "tileIcon": [],
-            "readAccess": "public"
+            "tileIcon": []
         }
     },
     "widget.42": {
