@@ -687,7 +687,7 @@
         "parameters": {
             "widgetTitle": "",
             "target": "forTheMap",
-            "offset": "150",
+            "offset": "135",
             "maxHeight": "1000",
             "minHeight": "400",
             "customScript": "",
@@ -3605,16 +3605,17 @@
         "name": "Custom Tile Control Script",
         "instance": "CustomTileControlScript",
         "parameters": {
+            "widgetTitle": "Adoption Visualization",
             "target": "forTheMap",
+            "readAccess": "public",
+            "position": "LEFT_CENTER",
             "customScript": "Adoption Visualization.customScript.js",
+            "hoverTip": "Show adoptions",
+            "className": "",
             "tileIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/%5BImAgE%5D_SO_%5BG%5D_cvB_pA1.png"
             ],
-            "hoverTip": "Show adoptions",
-            "className": "",
-            "widgetTitle": "Adoption Visualization",
-            "readAccess": "public",
-            "position": "LEFT_CENTER"
+            "subTileIcons": []
         }
     }
 }
