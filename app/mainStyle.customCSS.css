@@ -42,6 +42,24 @@
 
 
 
+.left-center .tileButtonContainer.active {
+    border: 2px solid limegreen;
+}
+
+.left-center .tileButtonContainer {
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.left-center .tileButtonContainer>.tileButton {
+    margin-top:7px;
+}
+
+.left-center .tileButtonContainer.active .tileOptionContainer {
+    display: inline-block;
+}
+
+
 span.delete-btn, span.edit-btn {
     opacity:0;
 }
