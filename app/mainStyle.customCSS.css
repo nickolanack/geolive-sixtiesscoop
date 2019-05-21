@@ -60,6 +60,30 @@
 }
 
 
+.ltr .tileOptionContainer.vert-1 {
+    top: 40px;
+}
+.ltr .tileOptionContainer.vert-2 {
+    top: -40px;
+}
+.ltr .tileOptionContainer.vert-3 {
+    top: 80px;
+}
+
+@media screen and (max-width: 767px), screen and (max-height: 600px) {
+    .ltr .tileOptionContainer.vert-1 {
+        top: 30px;
+    }
+    .ltr .tileOptionContainer.vert-2 {
+        top: -30px;
+    }
+    .ltr .tileOptionContainer.vert-3 {
+        top: 60px;
+    }
+    
+}
+
+
 span.delete-btn, span.edit-btn {
     opacity:0;
 }
