@@ -3623,7 +3623,7 @@
         "instance": "TutorialModeTile",
         "parameters": {
             "target": "forTheMap",
-            "controlColor": "rgb(48,84,107)",
+            "controlColor": "rgb(84, 154, 230)",
             "showContentRight": true,
             "showContentBottom": true,
             "showContentLeft": true,
