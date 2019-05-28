@@ -1,0 +1,1 @@
+return item.isBirthStory()?'':item.getDescription();
