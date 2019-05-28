@@ -4,7 +4,7 @@
         "listClassName": "",
         "className": "",
         "viewType": "view",
-        "namedView": "defaultView",
+        "namedView": "sidePanelInfoDetail",
         "shouldRender": true,
         "namedViewScript": "return namedView",
         "showInlineEdit": false,
