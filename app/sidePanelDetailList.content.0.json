@@ -6,7 +6,7 @@
         "viewType": "view",
         "namedView": "sidePanelInfoDetail",
         "shouldRender": true,
-        "namedViewScript": "return namedView",
+        "namedViewScript": "\nif(item instanceof StoryUser){\n    return 'sidePanelUserInfoDetail'\n}\n\nreturn namedView",
         "showInlineEdit": false,
         "namedFormView": "defaultView",
         "formOptions": "\"{}\"",
