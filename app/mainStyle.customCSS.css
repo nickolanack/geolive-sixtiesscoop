@@ -354,7 +354,7 @@ span.array-module.ui-list-view.story-list {
     right: 30px;
 }
 
-.ltr>.shifted {
+.left-center.ltr>.shifted {
         position: relative;
         left: 400px;
 }
