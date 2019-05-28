@@ -359,7 +359,7 @@ span.array-module.ui-list-view.story-list {
         left: 400px;
 }
 
-.ltr>* {
+.left-center.ltr>* {
     position: relative;
     left: 30px;
 }
