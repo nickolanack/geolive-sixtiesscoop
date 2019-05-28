@@ -3622,7 +3622,66 @@
         "name": "Tutorial Button",
         "instance": "TutorialModeTile",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "controlColor": "rgb(48,84,107)",
+            "showContentRight": true,
+            "showContentBottom": true,
+            "showContentLeft": true,
+            "showContentTop": true,
+            "contentRight": "",
+            "contentBottom": "",
+            "contentLeft": "",
+            "contentTop": "",
+            "contentRightMargin": "0",
+            "contentBottomMargin": "0",
+            "contentLeftMargin": "0",
+            "contentTopMargin": "0",
+            "onTutorialStart": "",
+            "onTutorialEnd": "",
+            "startTutorial": "defaultStartFn();",
+            "metadata": {
+                "positions": {
+                    "content": {
+                        "modules": [
+                            "widget.TutorialModeTile.46.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "BOTTOM_CENTER",
+                                    "content": "",
+                                    "contentMargin": 0
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "LEFT_CENTER",
+                                    "content": "",
+                                    "contentMargin": 0
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "TOP_CENTER",
+                                    "content": "",
+                                    "contentMargin": 0
+                                }
+                            }
+                        ]
+                    }
+                },
+                "positionList": [
+                    "content"
+                ],
+                "_diagramState": []
+            },
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
         }
     }
 }
