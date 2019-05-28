@@ -752,6 +752,9 @@ div.empty-section {
     cursor:pointer
 }
 
+.help-section.empty-section:hover {
+    background-color: rgba(0,0,0,0.05);
+}
 
 
 
