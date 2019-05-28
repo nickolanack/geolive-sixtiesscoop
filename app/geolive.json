@@ -3872,9 +3872,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "sidePanelGraphDetail ",
-            "target": "sidePanelGraphDetail ",
-            "templateName": "sidePanelGraphDetail ",
+            "widgetTitle": "sidePanelGraphDetail",
+            "target": "sidePanelGraphDetail",
+            "templateName": "sidePanelGraphDetail",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -3889,17 +3889,17 @@
                 "positions": {
                     "title": {
                         "modules": [
-                            "sidePanelGraphDetail .metadata.positions.title.modules.0.json"
+                            "sidePanelGraphDetail.metadata.positions.title.modules.0.json"
                         ]
                     },
                     "content": {
                         "modules": [
-                            "sidePanelGraphDetail .metadata.positions.content.modules.0.json"
+                            "sidePanelGraphDetail.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
                         "modules": [
-                            "sidePanelGraphDetail .metadata.positions.footer.modules.0.json"
+                            "sidePanelGraphDetail.metadata.positions.footer.modules.0.json"
                         ]
                     },
                     "menu": {
