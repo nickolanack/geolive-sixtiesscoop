@@ -148,6 +148,20 @@ span.delete-btn, span.edit-btn {
 }
 
 
+.story-navigation {
+    text-align: right;
+}
+
+.story-navigation button {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: none;
+    background-color: #549ae6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+
 
 .ui-view.section-top {
     background-color: rgba(0,0,0,0.1);
