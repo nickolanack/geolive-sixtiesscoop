@@ -144,6 +144,7 @@ span.delete-btn, span.edit-btn {
     background-size: 100%;
     top: -10px;
     left: -10px;
+    font-size: 0;
 }
 
 
