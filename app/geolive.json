@@ -3532,12 +3532,6 @@
             "onRenderApplictionScript": "",
             "notifyViewer": false,
             "metadata": {
-                "positionList": [
-                    "title",
-                    "content",
-                    "footer",
-                    "menu"
-                ],
                 "positions": {
                     "title": {
                         "modules": [
@@ -3546,7 +3540,34 @@
                     },
                     "content": {
                         "modules": [
-                            "sidePanelInfoDetail.metadata.positions.content.modules.0.json"
+                            "sidePanelInfoDetail.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "FormattedText",
+                                "config": {
+                                    "textValueScript": "return item.getDescription();",
+                                    "formatModuleScript": "",
+                                    "className": "",
+                                    "imageWidth": 300,
+                                    "imageHeight": 240,
+                                    "multiImageWidth": 100,
+                                    "multiImageHeight": 75,
+                                    "portraitImageWidth": 75,
+                                    "portraitImageHeight": 100,
+                                    "autoArrange": true,
+                                    "oneLine": true,
+                                    "maxChars": 0,
+                                    "maxWidth": 0,
+                                    "showAudios": true,
+                                    "showVideos": true,
+                                    "showDocuments": true,
+                                    "showImages": true,
+                                    "showLinks": true,
+                                    "showExternalContent": true,
+                                    "embedPortrait": true,
+                                    "preferLocalContent": true,
+                                    "portraitClip": true
+                                }
+                            }
                         ]
                     },
                     "footer": {
@@ -3557,7 +3578,14 @@
                     "menu": {
                         "modules": []
                     }
-                }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
             },
             "readAccess": "public"
         }
