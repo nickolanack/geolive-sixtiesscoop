@@ -287,22 +287,22 @@ span.array-module.ui-list-view.story-list {
      background-color: #549ae6;
 }
 
-span.TileButtonsFunctionsSection.shifted {
+.rtl>.shifted {
     position: relative;
     right: 400px;
 }
 
-span.TileButtonsFunctionsSection {
+.rtl>* {
     position: relative;
     right: 30px;
 }
 
-.left-center.UIMapControl .tileButtonContainer.shifted {
+.ltr>.shifted {
         position: relative;
         left: 400px;
 }
 
-.left-center.UIMapControl .tileButtonContainer {
+.ltr>* {
     position: relative;
     left: 30px;
 }
