@@ -742,7 +742,15 @@ div.empty-section {
     text-align: -webkit-auto;
 }
 
-
+.help-section.empty-section {
+    padding: 10px;
+    top: 165px;
+    color: rgba(100, 149, 237, 1);
+    border: 1px solid rgba(100, 149, 237, 0.2);
+    width: 250px;
+    border-radius: 2px;
+    cursor:pointer
+}
 
 
 
