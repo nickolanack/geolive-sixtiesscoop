@@ -1408,8 +1408,12 @@
             "deleteIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/6Td_3d1_%5BImAgE%5D_%5BG%5D_XW2.png"
             ],
-            "leftIcon": [],
-            "rightIcon": []
+            "leftIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/%5BImAgE%5D_7pv_NAD_%5BG%5D_vyI.png"
+            ],
+            "rightIcon": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/xw7_%5BG%5D_%5BImAgE%5D_bbr_OjI.png"
+            ]
         }
     },
     "widget.23": {
