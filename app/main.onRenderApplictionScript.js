@@ -8,6 +8,8 @@ GetWidget("profileFormView")->display($targetInstance);
 
 GetWidget("sidePanelDetail")->display($targetInstance);
 GetWidget("sidePanelEmptyDetail")->display($targetInstance);
+GetWidget("sidePanelGraphDetail")->display($targetInstance);
+
 
 GetWidget("sidePanelInfoDetail")->display($targetInstance);
 GetWidget("sidePanelUserInfoDetail")->display($targetInstance);
