@@ -13,7 +13,7 @@
         "showDeleteButton": false,
         "deleteItemScript": "defaultBehaviorFn()",
         "initModuleScript": "",
-        "formatModuleScript": "",
+        "formatModuleScript": "if(item.isBirthStory&&item.isBirthStory()){\n    module.getElement().addClass('birth-card');\n}\n\nif(item.isRepatriationStory&&item.isRepatriationStory()){\n    module.getElement().addClass('repatriation-card');\n}",
         "resolveItemScript": "return item",
         "filterModulesScript": "return list",
         "itemButtonsScript": "return [];",
