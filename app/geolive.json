@@ -3544,7 +3544,7 @@
                                 "config": {
                                     "textValueScript": "sidePanelInfoDetail.metadata.positions.content.modules.1.config.textValueScript.js",
                                     "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.1.config.formatModuleScript.js",
-                                    "className": "",
+                                    "className": "description-field",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
                                     "multiImageWidth": 100,
