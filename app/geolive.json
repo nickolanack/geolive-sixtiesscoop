@@ -3592,6 +3592,15 @@
                                     "preferLocalContent": true,
                                     "portraitClip": true
                                 }
+                            },
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "icon",
+                                    "text": "",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
                             }
                         ]
                     },
