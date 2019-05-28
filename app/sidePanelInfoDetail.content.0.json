@@ -1,7 +1,7 @@
 {
     "type": "FormattedText",
     "config": {
-        "textValueScript": "return item.getTitle();",
+        "textValueScript": "return item.getName();",
         "formatModuleScript": "",
         "className": "",
         "imageWidth": 300,
