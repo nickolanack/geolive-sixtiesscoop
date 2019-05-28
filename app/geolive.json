@@ -3597,7 +3597,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "icon",
-                                    "text": "",
+                                    "text": "icon",
                                     "template": "",
                                     "templateVariablesScript": ""
                                 }
