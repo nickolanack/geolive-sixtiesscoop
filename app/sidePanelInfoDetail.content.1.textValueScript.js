@@ -1,1 +1,1 @@
-return (item.isBirthStory&&item.isBirthStory())?'':item.getDescription();
+callback((item.isBirthStory&&item.isBirthStory())?'':item.getDescription());
