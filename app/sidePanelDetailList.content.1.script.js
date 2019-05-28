@@ -1,1 +1,1 @@
-return ScoopStories.getNavigationHtml();
+return ScoopStories.getNavigationHtml(item);
