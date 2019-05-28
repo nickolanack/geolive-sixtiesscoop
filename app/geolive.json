@@ -1365,6 +1365,24 @@
                     "maxHeight": 64,
                     "maxWidth": 64,
                     "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "leftIcon",
+                    "default": [],
+                    "label": "leftIcon",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "rightIcon",
+                    "default": [],
+                    "label": "rightIcon",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
                 }
             ],
             "siteLogo": [
@@ -1389,7 +1407,9 @@
             ],
             "deleteIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/6Td_3d1_%5BImAgE%5D_%5BG%5D_XW2.png"
-            ]
+            ],
+            "leftIcon": [],
+            "rightIcon": []
         }
     },
     "widget.23": {
