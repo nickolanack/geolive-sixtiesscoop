@@ -1383,6 +1383,15 @@
                     "maxHeight": 64,
                     "maxWidth": 64,
                     "limit": 1
+                },
+                {
+                    "type": "images",
+                    "name": "checkIcon",
+                    "default": [],
+                    "label": "checkIcon",
+                    "maxHeight": 64,
+                    "maxWidth": 64,
+                    "limit": 1
                 }
             ],
             "siteLogo": [
@@ -1413,7 +1422,8 @@
             ],
             "rightIcon": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop\/1\/Uploads\/xw7_%5BG%5D_%5BImAgE%5D_bbr_OjI.png"
-            ]
+            ],
+            "checkIcon": []
         }
     },
     "widget.23": {
