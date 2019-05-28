@@ -50,7 +50,7 @@ button.forward{
     echo UrlFrom(GetWidget('siteConfig')->getParameter('rightIcon')[0].'?thumb=>48x>48&tint=rgb(255, 255, 255)');?>");
 }
 
-.tileButtonContainer.province{
+.tileOptionContainer.province{
     background-image: url("<?php 
     echo UrlFrom(GetWidget('siteConfig')->getParameter('checkIcon')[0].'?thumb=>48x>48&tint=rgb(60, 179, 113)');?>");
 }
