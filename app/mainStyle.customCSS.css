@@ -41,6 +41,15 @@
 
 
 
+.button.back{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('leftIcon')[0].'?thumb=>48x>48');?>");
+}
+.button.forward{
+    background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('rightIcon')[0].'?thumb=>48x>48');?>");
+}
+
+
+
 
 .left-center .tileButtonContainer.active {
     border: 2px solid limegreen;
