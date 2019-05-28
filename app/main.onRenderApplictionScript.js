@@ -10,6 +10,9 @@ GetWidget("sidePanelDetail")->display($targetInstance);
 GetWidget("sidePanelEmptyDetail")->display($targetInstance);
 GetWidget("sidePanelInfoDetail")->display($targetInstance);
 
+GetWidget("sidePanelDetailList")->display($targetInstance);
+
+
 GetWidget("dialogForm")->display($targetInstance);
 GetWidget("advancedSearchForm")->display($targetInstance);
 //GetWidget("addCardView")->display($targetInstance);
