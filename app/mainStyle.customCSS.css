@@ -171,6 +171,9 @@ span.delete-btn, span.edit-btn {
     background-color: rgba(84, 154, 230, 0.1);
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     border-radius: 2px;
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .story-navigation button.active {
     background-color: rgb(84, 154, 230);
