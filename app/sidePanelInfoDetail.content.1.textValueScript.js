@@ -1,1 +1,1 @@
-return item.isBirthStory()?'':item.getDescription();
+return /*item.isBirthStory()?'':*/item.getDescription();
