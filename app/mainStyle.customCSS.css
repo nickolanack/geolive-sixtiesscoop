@@ -161,15 +161,16 @@ span.delete-btn, span.edit-btn {
     top: -10px;
     left: -10px;
 }
-.ui-view .icon {
+.sidebar-view .ui-view .icon {
     position: absolute;
     width: 30px;
     height: 30px;
     display: inline-block;
     background-size: 100%;
-    top: -10px;
-    left: -10px;
+    top: 10px;
+    left: unset;
     font-size: 0;
+    right: 10px;
 }
 
 
@@ -830,6 +831,7 @@ div.empty-section {
 .content.title-field {
     font-size: 1.2em;
     font-weight: 500;
+    margin-right: 30px;
 }
 
 .content.description-field {
