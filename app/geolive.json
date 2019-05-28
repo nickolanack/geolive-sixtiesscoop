@@ -3617,5 +3617,12 @@
             ],
             "subTileIcons": []
         }
+    },
+    "widget.46": {
+        "name": "Tutorial Button",
+        "instance": "TutorialModeTile",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
