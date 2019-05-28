@@ -1,6 +1,8 @@
 {
-    "type": "DefaultDescription",
+    "type": "FormattedText",
     "config": {
+        "textValueScript": "return item.isBirthStory()?'':item.getDescription();",
+        "formatModuleScript": "",
         "className": "",
         "imageWidth": 300,
         "imageHeight": 240,
@@ -14,8 +16,8 @@
         "maxWidth": 0,
         "showAudios": true,
         "showVideos": true,
-        "showImages": true,
         "showDocuments": true,
+        "showImages": true,
         "showLinks": true,
         "showExternalContent": true,
         "embedPortrait": true,
