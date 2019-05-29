@@ -838,3 +838,20 @@ div.empty-section {
     margin: 5px 0;
 }
 
+
+.graph-analytics .ui-list-view>.ui-view>* {
+    display: inline-block;
+    width: 180px;
+    transform: scale(0.5);
+    transform-origin: top left;
+}
+
+.graph-analytics .ui-list-view>.ui-view{
+    display:inline-block;
+    width: 90px;
+    margin: 5px;
+}
+.graph-analytics .ui-list-view{
+    text-align:center;
+}
+
