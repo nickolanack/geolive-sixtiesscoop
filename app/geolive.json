@@ -217,6 +217,22 @@
         "instance": "MapStory",
         "parameters": {}
     },
+    "plugin.22": {
+        "name": "Keen I O",
+        "instance": "KeenIO",
+        "parameters": {
+            "enabled": true,
+            "projectId": "",
+            "writeKey": "",
+            "readKey": "",
+            "ignoreEvents": [
+                "onManipulateMap",
+                "onDisplayView",
+                "onDisplayMap"
+            ],
+            "eventPrefix": ""
+        }
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
