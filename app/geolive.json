@@ -3903,7 +3903,16 @@
                     },
                     "content": {
                         "modules": [
-                            "sidePanelGraphDetail.metadata.positions.content.modules.0.json"
+                            "sidePanelGraphDetail.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "plugin.KeenIO.Analytic",
+                                "config": {
+                                    "title": "Number of ...",
+                                    "type": "metric",
+                                    "height": "240",
+                                    "getDataScript": "callback({result:123});"
+                                }
+                            }
                         ]
                     },
                     "footer": {
