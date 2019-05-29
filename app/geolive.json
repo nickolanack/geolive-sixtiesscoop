@@ -3933,6 +3933,15 @@
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
                                 }
+                            },
+                            {
+                                "type": "plugin.KeenIO.Analytic",
+                                "config": {
+                                    "title": "Some Title",
+                                    "type": "area",
+                                    "height": "240",
+                                    "getDataScript": "sidePanelGraphDetail.metadata.positions.content.modules.2.config.getDataScript.js"
+                                }
                             }
                         ]
                     },
