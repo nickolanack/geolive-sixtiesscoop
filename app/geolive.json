@@ -3932,9 +3932,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "templateName": "{target}",
+            "widgetTitle": "graphDetailAnalytic",
+            "target": "graphDetailAnalytic",
+            "templateName": "graphDetailAnalytic",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -3946,7 +3946,7 @@
                     },
                     "content": {
                         "modules": [
-                            "widget.DetailView.52.metadata.positions.content.modules.0.json"
+                            "graphDetailAnalytic.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
