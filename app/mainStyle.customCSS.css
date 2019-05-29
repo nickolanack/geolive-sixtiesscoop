@@ -838,7 +838,9 @@ div.empty-section {
     margin: 5px 0;
 }
 
-
+.graph-analytics span.keen-dataviz-metric-value {
+    margin-top: -70px;
+}
 .graph-analytics .ui-list-view>.ui-view>* {
     display: inline-block;
     width: 180px;
@@ -847,11 +849,14 @@ div.empty-section {
 }
 
 .graph-analytics .ui-list-view>.ui-view{
-    display:inline-block;
+    display: inline-block;
     width: 90px;
     margin: 5px;
+    height: 85px;
+    overflow: hidden;
+    border-radius: 3px;;
 }
 .graph-analytics .ui-list-view{
-    text-align:center;
+        text-align: left;
 }
 
