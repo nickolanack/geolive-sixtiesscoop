@@ -4,6 +4,6 @@
         "title": "Some Title",
         "type": "metric",
         "height": "240",
-        "getDataScript": "callback({result:123});"
+        "getDataScript": "callback({result:item.getCount()});"
     }
 }
