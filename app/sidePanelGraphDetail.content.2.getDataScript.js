@@ -1,4 +1,4 @@
-callback({result:{
+callback({
     data: {
         columns: [
             ['data1', 300, 350, 300, 0, 0, 0],
@@ -9,4 +9,4 @@ callback({result:{
             data2: 'area-spline'
         }
     }
-}});
+});
