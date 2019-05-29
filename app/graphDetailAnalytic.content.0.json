@@ -3,7 +3,7 @@
     "config": {
         "title": "Some Title",
         "type": "metric",
-        "height": "200",
+        "height": "240",
         "getDataScript": "callback({result:123});"
     }
 }
