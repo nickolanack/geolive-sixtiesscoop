@@ -3906,7 +3906,33 @@
                             "sidePanelGraphDetail.metadata.positions.content.modules.0.json",
                             {
                                 "type": "UIListView",
-                                "config": []
+                                "config": {
+                                    "listClassName": "",
+                                    "className": "",
+                                    "viewType": "view",
+                                    "namedView": "graphDetailAnalytic",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "{}",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return [item, item, item];",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "return item;",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
                             }
                         ]
                     },
