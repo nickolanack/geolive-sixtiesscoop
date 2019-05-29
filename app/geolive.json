@@ -3909,7 +3909,7 @@
                                 "config": {
                                     "title": "Number of ...",
                                     "type": "metric",
-                                    "height": "100",
+                                    "height": "240",
                                     "getDataScript": "callback({result:123});"
                                 }
                             }
