@@ -4,6 +4,6 @@
         "title": "Some Title",
         "type": "metric",
         "height": "240",
-        "getDataScript": "callback({result:item.getCount()});"
+        "getDataScript": "\nchart.title(item.getTitle());\ncallback({result:item.getCount()});"
     }
 }
