@@ -3938,7 +3938,7 @@
                                 "type": "plugin.KeenIO.Analytic",
                                 "config": {
                                     "title": "Some Title",
-                                    "type": "area",
+                                    "type": "area-step",
                                     "height": "240",
                                     "getDataScript": "sidePanelGraphDetail.metadata.positions.content.modules.2.config.getDataScript.js"
                                 }
