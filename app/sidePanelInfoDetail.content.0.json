@@ -1,9 +1,9 @@
 {
     "type": "FormattedText",
     "config": {
-        "textValueScript": "callback((item.isBirthStory&&item.isBirthStory())?'':item.getDescription());",
-        "formatModuleScript": "if(item.getDescription().trim()==\"\"){\n    module.getElement().addClass('empty');\n}",
-        "className": "description-field",
+        "textValueScript": "return \"<h2>\"+item.getTypeOfCard()+\" Story<\/h2>\"",
+        "formatModuleScript": "",
+        "className": "",
         "imageWidth": 300,
         "imageHeight": 240,
         "multiImageWidth": 100,
