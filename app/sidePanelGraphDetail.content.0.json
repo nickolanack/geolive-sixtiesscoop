@@ -2,7 +2,7 @@
     "type": "InlineHtml",
     "config": {
         "className": "",
-        "text": "<h2>Adoptions visualization<\/h2>\n<div style=\"\ncolor: #4D4D4D;\n    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 14px;\n    font-weight: 200;\n    line-height: 32px;\n\">How to use the side graph<\/div>",
+        "text": "<h2>Adoptions visualization<\/h2>\n<div style=\"\ncolor: #4D4D4D;\n    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 14px;\n    font-weight: 200;\n    line-height: 32px;\n\">Adoptions by province<\/div>",
         "template": "",
         "templateVariablesScript": ""
     }
