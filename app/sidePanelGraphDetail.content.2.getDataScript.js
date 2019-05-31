@@ -2,7 +2,7 @@ setTimeout(function(){
 callback(
     
         
-          return  {"result": [
+           {"result": [
                
                ([60, 61, 62, 63, 64, 65, 66]).map(function(yr){
                   
