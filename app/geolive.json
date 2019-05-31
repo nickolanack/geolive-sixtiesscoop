@@ -222,6 +222,8 @@
         "instance": "KeenIO",
         "parameters": {
             "enabled": false,
+            "exportData": true,
+            "exportDataPath": "{front}\/..\/export",
             "projectId": "",
             "writeKey": "",
             "readKey": "",
@@ -3785,7 +3787,16 @@
                 "positions": {
                     "content": {
                         "modules": [
-                            "widget.TutorialModeTile.46.metadata.positions.content.modules.0.json"
+                            "widget.TutorialModeTile.46.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "BOTTOM_CENTER",
+                                    "content": "The bottom area shows story cards",
+                                    "contentMargin": ""
+                                }
+                            }
                         ]
                     }
                 },
