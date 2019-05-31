@@ -813,7 +813,7 @@ div.empty-section {
     background-color: rgba(0,0,0,0.05);
 }
 
-.SideBarWidget>.sidebar-view.item-content {
+.SideBarWidget>.sidebar-view.item-content, .SideBarWidget>.sidebar-view.graph-analytics{
     padding: 30px;
     box-sizing: border-box;
 }
