@@ -3,7 +3,7 @@
     "config": {
         "showContent": true,
         "contentAnchor": ".home.tileButtonContainer",
-        "content": "",
+        "content": "test",
         "contentMargin": "0"
     }
 }
