@@ -3796,6 +3796,15 @@
                                     "content": "The bottom area shows story cards",
                                     "contentMargin": ""
                                 }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "LEFT_CENTER",
+                                    "content": "Toggle adoption data visualization",
+                                    "contentMargin": ""
+                                }
                             }
                         ]
                     }
