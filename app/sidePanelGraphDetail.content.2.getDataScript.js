@@ -1,8 +1,6 @@
 setTimeout(function(){
-callback(
     
-        
-           {"result": [
+         var data={"result": [
                
                ([60, 61, 62, 63, 64, 65, 66]).map(function(yr){
                   
@@ -15,9 +13,7 @@ callback(
                })
                
                ]}
-          
-        
     
-);
+callback(data);
 }, 100);
 
