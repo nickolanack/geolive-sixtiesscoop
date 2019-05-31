@@ -2,7 +2,7 @@ setTimeout(function(){
     
          var data={"result": [
                
-               ([60, 61, 62, 63, 64, 65, 66]).map(function(yr){
+               ([60, 61, 62]).map(function(yr){
                   
                   return  {"value": 
                       item.getProviceCodeItems().slice(0,4).map(function(item){
