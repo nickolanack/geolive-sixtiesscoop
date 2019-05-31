@@ -21,7 +21,7 @@
         "targetName": "",
         "getItemListScript": "var items= [item.getUser()];\n\nif(!(item.isBirthStory&&item.isBirthStory())){\n    if(item.getUser().hasBirthStory()){\n        items.push(item.getUser().getBirthStory());\n    }\n}\nitems.push(item);\n\n\nreturn items;",
         "formatItemListScript": "return list;",
-        "formatListItemModuleScript": "if(child.isBirthStory&&child.isBirthStory()){\n    childView.getElement().addClass('birth-card');\n    return;\n}\n\nif(child.isRepatriationStory&&child.isRepatriationStory()){\n    childView.getElement().addClass('repatriation-card');\n    return;\n}\n\nchildView.getElement().addClass('journey-card');",
+        "formatListItemModuleScript": "\nif(item===child){\n     childView.getElement().addClass('active');\n}\n\nif(child.isBirthStory&&child.isBirthStory()){\n    childView.getElement().addClass('birth-card');\n    return;\n}\n\nif(child.isRepatriationStory&&child.isRepatriationStory()){\n    childView.getElement().addClass('repatriation-card');\n    return;\n}\n\n\n\nchildView.getElement().addClass('journey-card');",
         "emptyNamedView": "emptyListView",
         "filterItemsScript": "return true;",
         "sortItemsScript": "",
