@@ -2,8 +2,8 @@
     "type": "widget.46.TutorialStep",
     "config": {
         "showContent": true,
-        "contentAnchor": "RIGHT_CENTER",
+        "contentAnchor": ".home.tileButtonContainer",
         "content": "",
-        "contentMargin": 0
+        "contentMargin": "0"
     }
 }

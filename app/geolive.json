@@ -3785,34 +3785,7 @@
                 "positions": {
                     "content": {
                         "modules": [
-                            "widget.TutorialModeTile.46.metadata.positions.content.modules.0.json",
-                            {
-                                "type": "widget.46.TutorialStep",
-                                "config": {
-                                    "showContent": true,
-                                    "contentAnchor": "BOTTOM_CENTER",
-                                    "content": "",
-                                    "contentMargin": 0
-                                }
-                            },
-                            {
-                                "type": "widget.46.TutorialStep",
-                                "config": {
-                                    "showContent": true,
-                                    "contentAnchor": "LEFT_CENTER",
-                                    "content": "",
-                                    "contentMargin": 0
-                                }
-                            },
-                            {
-                                "type": "widget.46.TutorialStep",
-                                "config": {
-                                    "showContent": true,
-                                    "contentAnchor": "TOP_CENTER",
-                                    "content": "",
-                                    "contentMargin": 0
-                                }
-                            }
+                            "widget.TutorialModeTile.46.metadata.positions.content.modules.0.json"
                         ]
                     }
                 },
