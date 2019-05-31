@@ -3,7 +3,7 @@
     "config": {
         "showContent": true,
         "contentAnchor": "RIGHT_CENTER",
-        "content": "test",
+        "content": "Reset the map",
         "contentMargin": "0"
     }
 }
