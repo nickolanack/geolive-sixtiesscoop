@@ -10,7 +10,7 @@ callback(
                       item.getProviceCodeItems().map(function(item){
                           return {"province": item.getTitle(), "result": Math.floor(Math.random() * Math.floor(50))};
                       }), 
-               "timeframe": {"start": "+(1900+yr)+"-01-01T00:00:00.000Z", "end": "+(1900+yr+1)+"-01-01T00:00:00.000Z"}};
+               "timeframe": {"start": (1900+yr)+"-01-01T00:00:00.000Z", "end": (1900+yr+1)+"-01-01T00:00:00.000Z"}};
                    
                })
                
