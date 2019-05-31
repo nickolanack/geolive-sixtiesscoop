@@ -1,3 +1,4 @@
+setTimeout(function(){
 callback(
     
         
@@ -6,3 +7,6 @@ callback(
         
     
 );
+}, 100);
+
+chart.palette('modern');
