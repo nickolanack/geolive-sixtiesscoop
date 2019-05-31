@@ -625,7 +625,7 @@ span.image-file.media-item img {
 }
 
 
-.story-card .active:after {
+.story-card .active:after, .sidebar-view .ui-view.active:after {
     content: "";
     position: absolute;
     width: calc( 100% + 10px );
