@@ -1,7 +1,7 @@
 {
     "type": "FormattedText",
     "config": {
-        "textValueScript": "return \"<h2>\"+item.getUsersName()+\"<\/h2>\";",
+        "textValueScript": "return \"<h2>\"+(item.getUsersName()||\"Unknown\")+\"<\/h2>\";",
         "formatModuleScript": "",
         "className": "",
         "imageWidth": 300,
