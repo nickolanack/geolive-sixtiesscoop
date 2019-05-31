@@ -3888,7 +3888,7 @@
                             {
                                 "type": "FormattedText",
                                 "config": {
-                                    "textValueScript": "return item.getName();",
+                                    "textValueScript": "return item.getUsersName();",
                                     "formatModuleScript": "",
                                     "className": "",
                                     "imageWidth": 300,
