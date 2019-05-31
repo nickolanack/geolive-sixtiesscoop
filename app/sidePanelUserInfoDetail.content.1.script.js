@@ -1,0 +1,1 @@
+return new Element('div',{"class":"user-icon"});

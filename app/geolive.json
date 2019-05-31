@@ -3884,7 +3884,15 @@
                     },
                     "content": {
                         "modules": [
-                            "sidePanelUserInfoDetail.metadata.positions.content.modules.0.json"
+                            "sidePanelUserInfoDetail.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "sidePanelUserInfoDetail.metadata.positions.content.modules.1.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
+                            }
                         ]
                     },
                     "footer": {
