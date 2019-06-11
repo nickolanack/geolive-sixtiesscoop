@@ -1,1 +1,1 @@
-return new Element('div',{"class":"user-icon"});
+return ScoopStories.GetProfileSummaryUserModule(item, application);

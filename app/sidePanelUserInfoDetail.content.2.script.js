@@ -1,1 +1,0 @@
-return ScoopStories.GetProfileSummaryUserModule(item, application);
