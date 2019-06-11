@@ -1,0 +1,1 @@
+return ScoopStories.GetProfileSummaryCardModule(item, application);
