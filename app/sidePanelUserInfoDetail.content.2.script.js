@@ -1,1 +1,1 @@
-return ScoopStories.GetProfileSummaryCardModule(item, application);
+return ScoopStories.GetProfileSummaryUserModule(item, application);
