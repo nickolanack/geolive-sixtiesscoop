@@ -1,0 +1,1 @@
+wizardDataSet.location=object.value;

@@ -1,0 +1,1 @@
+wizardDataSet.lob=object.value;
