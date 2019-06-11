@@ -5,7 +5,7 @@
         "reduceOpacity": false,
         "onCompleteScript": "defaultBehaviorFn();",
         "showFinish": true,
-        "showCancel": false,
+        "showCancel": true,
         "showBack": true,
         "labelForCancel": "cancel",
         "labelForSubmit": "Search",

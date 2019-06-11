@@ -3108,16 +3108,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 246,
-                            "y": 284
+                            "x": 256,
+                            "y": 294
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 206,
-                                    "y": 535
+                                    "x": 216,
+                                    "y": 545
                                 }
                             }
                         ],
@@ -3148,7 +3148,7 @@
                                                 "formatValueScript": "",
                                                 "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
+                                                "submitValueScript": "advancedSearchForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
                                             }
                                         },
@@ -3169,7 +3169,7 @@
                                                 "formatValueScript": "",
                                                 "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
+                                                "submitValueScript": "advancedSearchForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
                                             }
                                         },
@@ -3190,7 +3190,7 @@
                                                 "formatValueScript": "",
                                                 "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
+                                                "submitValueScript": "advancedSearchForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
                                             }
                                         },
@@ -3211,7 +3211,7 @@
                                                 "formatValueScript": "",
                                                 "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "",
+                                                "submitValueScript": "advancedSearchForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
                                             }
                                         },
