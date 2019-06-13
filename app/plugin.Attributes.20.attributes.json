@@ -575,6 +575,28 @@
                     "tableId": "2",
                     "tableName": "storyAttributes",
                     "tableSuffix": "_2497",
+                    "title": "isAdoptionStory",
+                    "label": "Is Adoption Story",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false,
+                        "trueIcon": false,
+                        "falseIcon": false
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "2",
+                    "tableName": "storyAttributes",
+                    "tableSuffix": "_2497",
                     "title": "isRepatriationStory",
                     "label": "Is Repatriation Story",
                     "description": "",
@@ -685,28 +707,6 @@
                             "iconize": false,
                             "colorize": false
                         }
-                    },
-                    "allowMultiple": false
-                },
-                {
-                    "visibility": "public",
-                    "tableId": "2",
-                    "tableName": "storyAttributes",
-                    "tableSuffix": "_2497",
-                    "title": "isAdoptionStory",
-                    "label": "Is Adoption Story",
-                    "description": "",
-                    "fieldType": "boolean",
-                    "color": "rgb(undefined, undefined, undefined)",
-                    "searchability": "public",
-                    "editability": "registered",
-                    "fieldBooleanOptions": {
-                        "hideFalse": true,
-                        "trueLabel": "",
-                        "falseLabel": "",
-                        "useFieldIcon": false,
-                        "trueIcon": false,
-                        "falseIcon": false
                     },
                     "allowMultiple": false
                 }
