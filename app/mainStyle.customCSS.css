@@ -609,6 +609,8 @@ span.image-file.media-item, span.external-file.media-item, span.video-file.media
     background: rgba(0,0,0,0.1);
     border-radius: 5px;
     text-align: center;
+        margin-right: 5px;
+    vertical-align: top;
 }
 
 
