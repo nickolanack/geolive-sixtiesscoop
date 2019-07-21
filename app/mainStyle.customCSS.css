@@ -579,6 +579,14 @@ textarea[disabled] {
     line-height: 30px;
     color: cornflowerblue;
 }
+.upload-btns span.video:after {
+    content: "add video";
+    white-space: nowrap;
+    position: absolute;
+    left: 30px;
+    line-height: 30px;
+    color: cornflowerblue;
+}
 
 .hidden {
     display: none;
