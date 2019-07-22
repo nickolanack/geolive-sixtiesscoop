@@ -1105,16 +1105,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 268,
-                            "y": 400
+                            "x": 278,
+                            "y": 410
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 228,
-                                    "y": 626
+                                    "x": 238,
+                                    "y": 636
                                 }
                             }
                         ],
@@ -1184,13 +1184,14 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
-                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
                                                 "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": [],
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "formatdefaultScript": ""
                                             }
                                         },
                                         {
@@ -1222,13 +1223,14 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
-                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
                                                 "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": [],
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "formatdefaultScript": ""
                                             }
                                         },
                                         {
@@ -1249,6 +1251,29 @@
                                                 "tags": "[\n    \"First Nation\",\n    \"Inuit\",\n    \"M\u00e9tis\"\n]",
                                                 "getItemTagsScript": "return defaultTags;",
                                                 "formatModule": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.7.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Do you know which First Nation, Metis Settlement or Inuit community you are from?",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add more values",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": "{}",
+                                                "onRenderTextFieldScript": "",
+                                                "formatdefaultScript": ""
                                             }
                                         }
                                     ]
