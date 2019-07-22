@@ -2713,16 +2713,16 @@
                             "createBirthStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 336,
-                            "y": 94
+                            "x": 346,
+                            "y": 104
                         },
                         "children": [
                             "createBirthStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 296,
-                                    "y": 307
+                                    "x": 306,
+                                    "y": 330
                                 }
                             }
                         ],
@@ -2749,13 +2749,14 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
-                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "date",
                                                 "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": [],
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "formatdefaultScript": ""
                                             }
                                         },
                                         {
@@ -2771,13 +2772,14 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
-                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
-                                                "formatter": "numeric",
+                                                "formatter": "none",
                                                 "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": "{}",
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "formatdefaultScript": ""
                                             }
                                         },
                                         {
