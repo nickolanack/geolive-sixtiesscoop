@@ -4199,7 +4199,9 @@
                         "modules": []
                     },
                     "content": {
-                        "modules": []
+                        "modules": [
+                            "Disclaimer.metadata.positions.content.modules.0.json"
+                        ]
                     },
                     "footer": {
                         "modules": []
