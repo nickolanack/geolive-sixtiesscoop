@@ -4182,11 +4182,17 @@
             "readAccess": "public"
         }
     },
-    "widget.53": {
-        "name": "Content",
-        "instance": "CustomContent",
+    "widget.54": {
+        "name": "Detail View",
+        "instance": "DetailView",
         "parameters": {
-            "target": "none"
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "notifyViewer": false
         }
     }
 }
