@@ -143,7 +143,16 @@
                 "plugin": "UserInterface",
                 "pluginView": "widget",
                 "widget": "main"
-            }
+            },
+            "routes": [
+                "plugin.UserInterface.13.routes.0.json",
+                {
+                    "name": "disclaimer",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "disclaimer"
+                }
+            ]
         }
     },
     "plugin.14": {
