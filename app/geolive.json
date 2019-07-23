@@ -4204,7 +4204,7 @@
                             {
                                 "type": "InlineHtml",
                                 "config": {
-                                    "className": "",
+                                    "className": "section-main",
                                     "text": "<h1>Disclaimer<\/h2>\n<p>Hello world<\/p>",
                                     "template": "",
                                     "templateVariablesScript": ""
