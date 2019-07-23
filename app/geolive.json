@@ -147,10 +147,10 @@
             "routes": [
                 "plugin.UserInterface.13.routes.0.json",
                 {
-                    "name": "disclaimer",
                     "view": "plugin",
                     "plugin": "UserInterface",
-                    "pluginView": "disclaimer"
+                    "pluginView": "widget",
+                    "widget": "disclaimer"
                 }
             ]
         }
