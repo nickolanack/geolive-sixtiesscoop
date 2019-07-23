@@ -1,9 +1,22 @@
 {
-    "type": "InlineHtml",
+    "type": "UIView",
     "config": {
         "className": "",
-        "text": "<h1>Disclaimer<\/h2>\n<p>Hello world<\/p>",
-        "template": "",
-        "templateVariablesScript": ""
+        "viewType": "view",
+        "namedView": "topSection",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "defaultView",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "",
+        "resolveItemScript": "return item",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": ""
     }
 }

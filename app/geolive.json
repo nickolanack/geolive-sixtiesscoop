@@ -4200,7 +4200,16 @@
                     },
                     "content": {
                         "modules": [
-                            "Disclaimer.metadata.positions.content.modules.0.json"
+                            "Disclaimer.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
+                                    "text": "<h1>Disclaimer<\/h2>\n<p>Hello world<\/p>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
+                            }
                         ]
                     },
                     "footer": {
