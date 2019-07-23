@@ -4189,7 +4189,7 @@
             "widgetTitle": "Disclaimer",
             "target": "disclaimer",
             "templateName": "disclaimer",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "Disclaimer.onRenderApplictionScript.js",
             "notifyViewer": false,
