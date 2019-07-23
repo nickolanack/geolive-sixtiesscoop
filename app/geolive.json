@@ -2623,16 +2623,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 365,
-                            "y": 221
+                            "x": 375,
+                            "y": 231
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 325,
-                                    "y": 422
+                                    "x": 335,
+                                    "y": 432
                                 }
                             }
                         ],
@@ -2659,13 +2659,14 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
-                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "date",
                                                 "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": [],
                                                 "onRenderTextFieldScript": "",
-                                                "formatValueScript": ""
+                                                "formatdefaultScript": ""
                                             }
                                         },
                                         {
@@ -2709,6 +2710,29 @@
                                                 ],
                                                 "value": "true",
                                                 "isJavascript": true
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Are you seeking more information on resources? If so, what kind of resources?",
+                                                "message": "",
+                                                "lines": 2,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add more values",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": "{}",
+                                                "onRenderTextFieldScript": "",
+                                                "formatdefaultScript": ""
                                             }
                                         }
                                     ]
