@@ -1960,12 +1960,12 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 336,
-                    "y": 253
+                    "x": 322,
+                    "y": 275
                 },
                 "_diagramState": {
-                    "x": 336,
-                    "y": 253
+                    "x": 322,
+                    "y": 275
                 },
                 "appliesTo": [
                     "marker"
@@ -2512,6 +2512,50 @@
                         "was": "",
                         "title": "nextLocationData",
                         "label": "Next Location Data",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "seekingInfo",
+                        "label": "Seeking Information",
                         "description": "",
                         "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
