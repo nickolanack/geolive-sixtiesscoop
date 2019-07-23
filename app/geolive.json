@@ -4181,5 +4181,12 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.53": {
+        "name": "Content",
+        "instance": "CustomContent",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
