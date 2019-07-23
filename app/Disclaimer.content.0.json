@@ -1,7 +1,7 @@
 {
     "type": "UIView",
     "config": {
-        "className": "",
+        "className": "section-top",
         "viewType": "view",
         "namedView": "topSection",
         "shouldRender": true,
