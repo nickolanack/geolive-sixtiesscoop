@@ -1,0 +1,1 @@
+GetWidget("mainStyle")->display($targetInstance);

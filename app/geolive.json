@@ -4191,7 +4191,7 @@
             "templateName": "disclaimer",
             "requireTarget": true,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "Disclaimer.onRenderApplictionScript.js",
             "notifyViewer": false,
             "metadata": {
                 "positionList": [
