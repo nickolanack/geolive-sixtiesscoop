@@ -196,7 +196,7 @@
             "enableLayerSyncronization": true,
             "onlyShowMarkersInIconset": false,
             "googleMapsServerApiKey": "XXXX-XXXX",
-            "googleMapsVersion": "",
+            "googleMapsVersion": "quarterly",
             "tileCachePath": "{site}\/..\/map-tiles",
             "layerDisplayFilterScript": "",
             "formatMapitemScript": ""
