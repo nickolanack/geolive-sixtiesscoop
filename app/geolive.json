@@ -48,7 +48,7 @@
         "name": "External Content",
         "instance": "ExternalContent",
         "parameters": {
-            "youtube-api-key": ""
+            "youtube-api-key": "XXXX-XXXX"
         }
     },
     "plugin.7": {
