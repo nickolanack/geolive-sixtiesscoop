@@ -25,6 +25,21 @@
     background-size: auto 100%;
 }
 
+.menu-links {
+    position: absolute;
+    left: 675px;
+    top: 35px;
+}
+
+.menu-links a {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.menu-links a h2 {
+    color: #549ae6;
+}
+
 
 .birth-card .icon{
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>");
