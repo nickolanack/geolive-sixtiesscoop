@@ -553,6 +553,15 @@
                         "modules": [
                             "topSection.metadata.positions.content.modules.0.json",
                             {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "menu-links",
+                                    "text": "<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
+                            },
+                            {
                                 "type": "UIView",
                                 "config": {
                                     "className": "profile-section",

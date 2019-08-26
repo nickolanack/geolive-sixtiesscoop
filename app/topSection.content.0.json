@@ -2,7 +2,7 @@
     "type": "InlineHtml",
     "config": {
         "className": "site-title site-logo",
-        "text": "<h1>Mapping the indigenous adoptee diaspora<\/h1>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>",
+        "text": "<h1>Mapping the indigenous adoptee diaspora<\/h1>\n",
         "template": "",
         "templateVariablesScript": ""
     }
