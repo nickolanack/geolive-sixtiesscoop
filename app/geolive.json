@@ -4277,6 +4277,15 @@
                                     "template": "",
                                     "templateVariablesScript": ""
                                 }
+                            },
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
+                                    "text": "<style>\n\n.WordSection1 {\n    margin: auto;\n    max-width: 700px;\n    width: 80%;\n    margin-top: 40px;\n}\n\n<\/style>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
                             }
                         ]
                     },
