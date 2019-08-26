@@ -556,7 +556,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "menu-links",
-                                    "text": "<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>",
+                                    "text": "<a id=\"map-link\" href=\"\/\"><h2>Map<\/h2><\/a>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>",
                                     "template": "",
                                     "templateVariablesScript": ""
                                 }
