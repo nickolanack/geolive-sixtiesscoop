@@ -199,7 +199,8 @@
             "googleMapsVersion": "quarterly",
             "tileCachePath": "{site}\/..\/map-tiles",
             "layerDisplayFilterScript": "",
-            "formatMapitemScript": ""
+            "formatMapitemScript": "",
+            "featureUrlScript": ""
         }
     },
     "plugin.18": {

@@ -188,6 +188,43 @@ span.delete-btn, span.edit-btn {
     right: 10px;
 }
 
+.SideBarWidget.left .toggle-button:after, .SideBarWidget.right .toggle-button:after {
+    content: "Click here to reopen this tab";
+    position:absolute;
+    left: 40px;
+    z-index:1;
+    color:white;
+    background:black;
+    border-radius:4px;
+    padding: 10px;
+    top: 10px;
+    pointer-events:none;
+    text-align: left;
+    width: 104px;
+    opacity: 0;
+    font-weight:100;
+    font-size:12px;
+    transition: opacity 1s;
+  
+
+}
+
+
+
+
+.SideBarWidget.right .toggle-button:after {
+    right: 40px;
+    left:unset;
+  
+
+}
+
+.SideBarWidget.left .toggle-button.just-closed:after, .SideBarWidget.right .toggle-button.just-closed:after {
+    opacity: 1; 
+    transition: opacity 1s;
+    pointer-events:all;
+}
+
 
 .story-navigation {
     text-align: right;
