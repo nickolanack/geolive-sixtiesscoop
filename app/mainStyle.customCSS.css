@@ -45,6 +45,15 @@
     background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('starIcon')[0].'?thumb=>100x>100');?>);
 }
 
+span.is-looking-for-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-size: 100%;
+}
+
 
 .birth-card .icon{
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>");
