@@ -54,6 +54,7 @@ span.is-looking-for-icon, span.not-looking-for-icon {
     background-size: 100%;
 }
 span.not-looking-for-icon {
+    filter: grayscale(1);
 }
 
 
