@@ -40,18 +40,20 @@
     color: #549ae6;
 }
 
-.is-looking-for-icon{
+.is-looking-for-icon, .not-looking-for-icon{
 
     background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('starIcon')[0].'?thumb=>100x>100');?>);
 }
 
-span.is-looking-for-icon {
+span.is-looking-for-icon, span.not-looking-for-icon {
     width: 25px;
     height: 25px;
     position: absolute;
     top: 25px;
     right: 25px;
     background-size: 100%;
+}
+span.not-looking-for-icon {
 }
 
 
