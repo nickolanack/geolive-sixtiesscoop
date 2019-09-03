@@ -79,7 +79,23 @@ button.forward{
     background: none;
 }
 
-
+button.disclaimer.primary-btn {
+    background-color: #549ae6;
+    border: none;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 5px;
+    padding: 10px 25px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    font-size: 22px;
+    margin-top: 25px;
+    border-radius: 3px;
+    float: right;
+    position: absolute;
+    bottom: 13px;
+    right: 24px;
+}
 
 
 .left-center .tileButtonContainer.active {
