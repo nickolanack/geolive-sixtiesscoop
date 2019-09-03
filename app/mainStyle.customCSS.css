@@ -475,6 +475,22 @@ span.array-module.ui-list-view.story-list {
 }
 
 
+.flow-left {
+    position: absolute;
+    right: calc( 100% + 10px );
+    top: calc( 50% - 50px );
+    z-index: 1;
+    white-space:  nowrap;
+}
+.flow-right {
+    position: absolute;
+    left: calc( 100% + 10px );
+    top: calc( 50% - 50px );
+    z-index: 1;
+    white-space:  nowrap;
+}
+
+
 .module-wizard .form-btn.register {
     margin-top: 5px;
     float: right;
