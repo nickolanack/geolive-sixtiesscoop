@@ -40,6 +40,11 @@
     color: #549ae6;
 }
 
+.is-looking-for-icon{
+
+    background-image: url(<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('starIcon')[0].'?thumb=>100x>100');?>);
+}
+
 
 .birth-card .icon{
     background-image: url("<?php echo UrlFrom(GetWidget('siteConfig')->getParameter('birthIcon')[0].'?thumb=>100x>100');?>");
