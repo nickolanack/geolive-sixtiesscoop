@@ -76,7 +76,7 @@ class StoryFormatter {
 				}
 				if(!empty($updates)){
 					error_log(print_r($updates, true));
-					error_log(print_r($attributesOriginal));
+					error_log(print_r($attributesOriginal, true));
 					//(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", $updates);
 				}
 			}
