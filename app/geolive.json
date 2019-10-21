@@ -48,7 +48,8 @@
         "name": "External Content",
         "instance": "ExternalContent",
         "parameters": {
-            "youtube-api-key": "XXXX-XXXX"
+            "youtube-api-key": "XXXX-XXXX",
+            "thumbnailUrls": true
         }
     },
     "plugin.7": {
@@ -688,6 +689,7 @@
         "parameters": {
             "widgetTitle": "Scoop Story",
             "target": "forTheMap",
+            "position": "BOTTOM_CENTER",
             "className": "overlay-bar",
             "viewType": "view",
             "namedView": "scoopStoryView",
@@ -706,8 +708,7 @@
             "insertAtTop": false,
             "targetName": "",
             "customScript": "",
-            "readAccess": "public",
-            "position": "BOTTOM_CENTER"
+            "readAccess": "public"
         }
     },
     "widget.11": {
@@ -849,6 +850,7 @@
             "target": "forTheMap",
             "position": "RIGHT_CENTER",
             "customScript": "Search Panel.customScript.js",
+            "namedView": "",
             "readAccess": "public"
         }
     },
@@ -3790,6 +3792,7 @@
             "target": "forTheMap",
             "position": "LEFT_CENTER",
             "customScript": "Info Panel.customScript.js",
+            "namedView": "",
             "readAccess": "public"
         }
     },
