@@ -763,7 +763,7 @@ var StoryMapController = new Class({
         var card = me._activeCard;
         me._activeCard = null;
 
-        cardEl = me.getCardEl(card.getId());
+        var cardEl = me.getCardEl(card.getId());
         if (cardEl) {
             cardEl.removeClass('active');
         }
