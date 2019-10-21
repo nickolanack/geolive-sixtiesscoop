@@ -70,8 +70,12 @@ class StoryFormatter {
 			if($this->makeChanges){
 				$updates=array();
 				foreach($attributes as $key=>$value){
-					if($value!==$attributesOriginal[$key]){
+					if((!is_bool($value))&&$value!==$attributesOriginal[$key]){
 						$updates[$key]=$value;
+					}
+
+					if(is_bool($value)&&($value?"true":"false")!==$attributesOriginal[$key]){
+						$updates[$key]=($value?"true":"false");
 					}
 				}
 				if(!empty($updates)){
