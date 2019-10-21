@@ -1,3 +1,5 @@
+'use strict';
+
 var StoryMapController = new Class({
     Implements: [Events],
     initialize: function() {
@@ -28,7 +30,7 @@ var StoryMapController = new Class({
             me.focusCurrentStory();
         });
 
-        var needsDisclaimer=function(){
+        var needsDisclaimer = function() {
             return localStorage.getItem("hasViewedDisclaimer") !== "Yes";
         }
 
@@ -39,32 +41,38 @@ var StoryMapController = new Class({
                     "widget": "disclaimer"
                 })).addEvent("success", function(resp) {
 
-                    var d=new Element('div');
-                    var p=new Element('p', {
+                    var d = new Element('div');
+                    var p = new Element('p', {
                         style: "padding: 30px;",
                         html: "<h1>Disclaimer</h1>" + resp.metadata.positions.content.modules[1].config.text
                     });
                     d.appendChild(p);
                     //if(needsDisclaimer()){
-                    var button=d.appendChild(new Element('button',{"html":"Accept", "class":"disclaimer primary-btn "+(!needsDisclaimer()?"disabled":""), events:{click:function(){
-                        box.close();
-                    }}}));
-                    if(!needsDisclaimer()){
-                        new UIPopover(button,{
-                            description:"You've already accepted the terms",
-                            anchor:UIPopover.AnchorAuto()
+                    var button = d.appendChild(new Element('button', {
+                        "html": "Accept",
+                        "class": "disclaimer primary-btn " + (!needsDisclaimer() ? "disabled" : ""),
+                        events: {
+                            click: function() {
+                                box.close();
+                            }
+                        }
+                    }));
+                    if (!needsDisclaimer()) {
+                        new UIPopover(button, {
+                            description: "You've already accepted the terms",
+                            anchor: UIPopover.AnchorAuto()
                         });
-                    }else{
-                        new UIPopover(button,{
-                            description:"You must accept the terms to use this site",
-                            anchor:UIPopover.AnchorAuto()
+                    } else {
+                        new UIPopover(button, {
+                            description: "You must accept the terms to use this site",
+                            anchor: UIPopover.AnchorAuto()
                         });
                     }
 
 
-                    var box=PushBox.Open(d, {
+                    var box = PushBox.Open(d, {
                         handler: 'append',
-                        closable:!needsDisclaimer(),
+                        closable: !needsDisclaimer(),
                         size: {
                             x: 700,
                             y: 500
@@ -205,25 +213,24 @@ var StoryMapController = new Class({
     setSidePanelView: function(view, item, className) {
 
         var me = this;
-        
-            me.getApp(function(app) {
-                
 
-                me._sidePanel.useDisplayController(app.getDisplayController());
-                me._sidePanel.renderNamedView(view, item);
-                
-                if (me._sidePanelClassName) {
-                    me._sidePanel.getElement().removeClass(me._sidePanelClassName);
-                    delete me._sidePanelClassName
-                }
-                if (className) {
-                    me._sidePanelClassName = className
-                    me._sidePanel.getElement().addClass(me._sidePanelClassName)
-                }
+        me.getApp(function(app) {
 
 
-            });
+            me._sidePanel.useDisplayController(app.getDisplayController());
+            me._sidePanel.renderNamedView(view, item);
 
+            if (me._sidePanelClassName) {
+                me._sidePanel.getElement().removeClass(me._sidePanelClassName);
+                delete me._sidePanelClassName
+            }
+            if (className) {
+                me._sidePanelClassName = className
+                me._sidePanel.getElement().addClass(me._sidePanelClassName)
+            }
+
+
+        });
 
 
 
@@ -275,7 +282,7 @@ var StoryMapController = new Class({
     },
 
 
-    CardGroupsBefore: function(item){
+    CardGroupsBefore: function(item) {
         var me = this;
         var items = [];
 
@@ -311,7 +318,7 @@ var StoryMapController = new Class({
     },
 
 
-    CardGroupsAfter: function(item){
+    CardGroupsAfter: function(item) {
         var me = this;
         var items = [];
 
@@ -346,13 +353,13 @@ var StoryMapController = new Class({
             items.push(new StoryGroup({
                 type: "Repatriation Story",
                 description: "",
-                isRepatriationStory:true,
+                isRepatriationStory: true,
                 cards: repatriation
             }));
         }
 
         return items;
-          
+
     },
 
 
@@ -362,9 +369,9 @@ var StoryMapController = new Class({
         var me = this;
         var items = [item.getUser()];
 
-        items=items.concat(me.CardGroupsBefore(item))
+        items = items.concat(me.CardGroupsBefore(item))
         items.push(item);
-        items=items.concat(me.CardGroupsAfter(item))
+        items = items.concat(me.CardGroupsAfter(item))
 
         return items;
 
@@ -958,7 +965,7 @@ var StoryMapController = new Class({
         }
 
 
-        var formButton=(new UIModalFormButton(
+        var formButton = (new UIModalFormButton(
             button,
             application, item, {
                 formName: item.getFormView(),
@@ -976,8 +983,8 @@ var StoryMapController = new Class({
                 me.chainStoryForm(application);
             }
 
-        }).addEvent('show', function(){
-            var wizard=formButton.getWizard();
+        }).addEvent('show', function() {
+            var wizard = formButton.getWizard();
             me.displayWizardFlow(item, wizard)
         })
 
@@ -987,33 +994,41 @@ var StoryMapController = new Class({
 
     },
 
-    displayWizardFlow:function(item, wizard){
-        var me=this;
-        wizard.getViewer().addEvent('open:once', function(){
-            var el=wizard.getElement();
-           
-            var before=me.CardGroupsBefore(item);
-            if(before.length){
-                 var beforeEl=el.appendChild(new Element('div',{"class":"flow-left"}));
-                 beforeEl.setAttribute("data-groups-count", before.length);
-                 before.forEach(function(group){
-                     beforeEl.appendChild(new Element('div',{"class":"ui-view story-card"}));
-                 });
+    displayWizardFlow: function(item, wizard) {
+        var me = this;
+        wizard.getViewer().addEvent('open:once', function() {
+            var el = wizard.getElement();
+
+            var before = me.CardGroupsBefore(item);
+            if (before.length) {
+                var beforeEl = el.appendChild(new Element('div', {
+                    "class": "flow-left"
+                }));
+                beforeEl.setAttribute("data-groups-count", before.length);
+                before.forEach(function(group) {
+                    beforeEl.appendChild(new Element('div', {
+                        "class": "ui-view story-card"
+                    }));
+                });
             }
 
-            var after=me.CardGroupsAfter(item);
-            if(after.length){
-                 var afterEl=el.appendChild(new Element('div',{"class":"flow-right"}));
-                 afterEl.setAttribute("data-groups-count", after.length);
-                 after.forEach(function(group){
-                     afterEl.appendChild(new Element('div',{"class":"ui-view story-card"}));
-                 });
+            var after = me.CardGroupsAfter(item);
+            if (after.length) {
+                var afterEl = el.appendChild(new Element('div', {
+                    "class": "flow-right"
+                }));
+                afterEl.setAttribute("data-groups-count", after.length);
+                after.forEach(function(group) {
+                    afterEl.appendChild(new Element('div', {
+                        "class": "ui-view story-card"
+                    }));
+                });
             }
 
-            
+
         });
 
-        
+
     },
 
 
@@ -1031,7 +1046,7 @@ var StoryMapController = new Class({
             type: 'MapStory.story'
         });
 
-        var formButton=(new UIModalDialog(
+        var formButton = (new UIModalDialog(
             application, item, {
                 formName: item.getFormView(),
                 formOptions: {
@@ -1048,8 +1063,8 @@ var StoryMapController = new Class({
                 me.chainStoryForm(application);
             }
 
-        }).addEvent("show",function(){
-            var wizard=formButton.getWizard();
+        }).addEvent("show", function() {
+            var wizard = formButton.getWizard();
             me.displayWizardFlow(item, wizard)
         }).show();
 
@@ -1176,11 +1191,13 @@ var StoryMapController = new Class({
             "html": "Looking for family: " + (user.isLookingForFamily() ? "yes" : "no")
         }));
         //if(user.isLookingForFamily()){
-            var looking=div.appendChild(new Element("span",{"class":(user.isLookingForFamily()?"is-looking-for-icon":"not-looking-for-icon")}));
-            new UIPopover(looking,{
-                description:(user.isLookingForFamily()?"Searching family":"Not searching for family"),
-                anchor:UIPopover.AnchorAuto()
-            });
+        var looking = div.appendChild(new Element("span", {
+            "class": (user.isLookingForFamily() ? "is-looking-for-icon" : "not-looking-for-icon")
+        }));
+        new UIPopover(looking, {
+            description: (user.isLookingForFamily() ? "Searching family" : "Not searching for family"),
+            anchor: UIPopover.AnchorAuto()
+        });
         //}
         return div;
 
@@ -1347,8 +1364,8 @@ var StoryMapController = new Class({
                                 item, {
                                     template: "form"
                                 },
-                                function(wizard){
-                                    wizard.addEvent("openStep:once",function(){
+                                function(wizard) {
+                                    wizard.addEvent("openStep:once", function() {
                                         me.displayWizardFlow(item, wizard)
                                     });
                                 }
@@ -1515,1030 +1532,3 @@ var StoryMapController = new Class({
 
 
 var ScoopStories = new StoryMapController();
-
-
-var StoryGroup = new Class({
-    Extends:MockDataTypeItem,
-    initialize: function(config) {
-        var me = this;
-        me._type = "CardGroup";
-        me._config = config;
-    },
-    getCards: function(callback) {
-        var me = this;
-        callback(me._config.cards || []);
-    },
-    getDescription: function() {
-        var me = this;
-        return (typeof me._config.description == "string") ? me._config.description : "Some group of cards";
-    },
-    getTypeOfCard: function() {
-        var me = this;
-        return (typeof me._config.type == "string") ? me._config.type : "Group of cards";
-    },
-    getAddress: function() {
-        return "";
-    },
-    getYear: function() {
-        return "";
-    },
-    getCardMedia: function() {
-        return "";
-    },
-
-    isBirthStory: function() {
-        var me = this;
-        return !!me._config.isBirthStory;
-    },
-    isRepatriationStory: function() {
-        var me = this;
-        return !!me._config.isRepatriationStory;
-    },
-    isAdoptionStory: function() {
-        var me = this;
-        return !!me._config.isAdoptionStory;
-    }
-
-});
-
-var StoryUser = new Class({
-    Implements: [Events],
-    initialize: function(config) {
-
-        var me = this;
-        me._setStoryData(config.story);
-        me._setUserData(config.user);
-        me._loaded = true;
-        me.fireEvent('load');
-
-    },
-    runOnceOnLoad: function(fn) {
-
-        var me = this;
-        if (me._loaded) {
-            setTimeout(function() {
-                fn(me);
-            }, 0);
-            return;
-        }
-
-        me.addEvent('load:once', function() {
-            fn(me);
-        });
-
-    },
-    _setStoryData: function(stories) {
-        var me = this;
-
-        me._storyData = stories;
-        stories.forEach(function(story) {
-
-            if (story.attributes.isBirthStory === "true" || story.attributes.isBirthStory === true) {
-                me._setBirthStoryData(story);
-                return;
-            }
-
-            if (story.attributes.isAdoptionStory === "true" || story.attributes.isAdoptionStory === true) {
-                me._setAdoptionStoryData(story);
-                return;
-            }
-
-
-            if (story.attributes.isRepatriationStory === "true" || story.attributes.isRepatriationStory === true) {
-                me._setRepatriationStoryData(story);
-                return;
-            }
-
-
-            me._addJourneyStoryData(story)
-
-
-
-        });
-        return me;
-    },
-    _setUserData: function(user) {
-        var me = this;
-        me._userData = user;
-        return me;
-
-    },
-    _setBirthStoryData: function(data) {
-        var me = this;
-        if (me._birthStory) {
-            throw 'Already have birth story';
-        }
-
-
-        me._birthStory = new StoryCard(Object.append(data, {
-            classNames: "birth-card",
-        })).setUser(me);
-
-        return me;
-
-    },
-    _setAdoptionStoryData: function(data) {
-
-        var me = this;
-        if (me._adoptionStory) {
-            throw 'Already have adoption story';
-        }
-
-
-        me._adoptionStory = new StoryCard(Object.append(data, {
-            classNames: "adoption-card journey-card",
-        })).setUser(me);
-
-        return me;
-
-    },
-    getFirstJourneyStory: function() {
-        var me = this;
-        return me._journeyStories && me._journeyStories.length ? me._journeyStories[0] : false;
-    },
-    getFirstStory: function() {
-        var me = this;
-        return me._birthStory || me.getFirstJourneyStory() || me._repatriationStory || null;
-    },
-    isCurrentUser: function() {
-        var me = this;
-        return me.getUserId() === AppClient.getId();
-    },
-
-    getUsersName: function() {
-        var me = this;
-        if (me._userData) {
-            return me._userData.name;
-        }
-
-        return 'Unknown';
-    },
-
-    getUserId: function() {
-
-        var me = this;
-        if (me._userData) {
-            return parseInt(me._userData.id);
-        }
-
-        return -1;
-    },
-    hasBirthStory: function() {
-        return !!this._birthStory;
-    },
-    getBirthStory: function() {
-        var me = this;
-        if (!me._birthStory) {
-            throw 'StoryUser does not have birth story';
-        }
-        return me._birthStory;
-    },
-
-    hasAdoptionStory: function() {
-        return !!this._adoptionStory;
-    },
-    getAdoptionStory: function() {
-        var me = this;
-        if (!me._adoptionStory) {
-            throw 'StoryUser does not have adoption story';
-        }
-        return me._adoptionStory;
-    },
-
-    getBirthName: function() {
-
-        var me = this;
-        if (me._userData && typeof me._userData.birthName == "string") {
-            return me._userData.birthName;
-        }
-
-
-        return "";
-    },
-    knowsBirthName: function() {
-
-        var me = this;
-        if (me._userData) {
-            return (me._userData.knowsBirthName === true || me._userData.knowsBirthName === "true") && typeof me._userData.birthName == "string" && me._userData.birthName != "";
-        }
-
-
-        return false;
-    },
-
-    isLookingForFamily: function() {
-
-        var me = this;
-        if (me._userData && typeof me._userData.searchingFor == "string") {
-            return me._userData.searchingFor.indexOf("Yes")>=0;
-        }
-
-        return false;
-    },
-
-    _setRepatriationStoryData: function(data) {
-        var me = this;
-        if (me._repatriationStory) {
-            throw 'Already have birth story';
-        }
-
-
-        me._repatriationStory = new StoryCard(Object.append(data, {
-            classNames: "repatriation-card"
-        })).setUser(me);
-        return me;
-
-    },
-    hasRepatriationStory: function() {
-        return !!this._repatriationStory;
-    },
-    getRepatriationStory: function() {
-        var me = this;
-        if (!me._repatriationStory) {
-            throw 'StoryUser does not have repatriation story';
-        }
-        return me._repatriationStory;
-    },
-    _addJourneyStoryData: function(data) {
-        var me = this;
-
-        if (!me._journeyStories) {
-            me._journeyStories = [];
-        }
-
-        me._journeyStories.push(new StoryCard(Object.append(data, {
-            classNames: "journey-card"
-        })).setUser(me));
-
-        //sort...
-    },
-
-    getJourneyStories: function() {
-        var me = this;
-        return me._journeyStories || [];
-    },
-    getIcon: function(callback) {
-
-        var me = this;
-        me.runOnceOnLoad(function() {
-
-            callback(me._userData.icon.split('"')[1]);
-        });
-
-        // (new AjaxControlQuery(CoreAjaxUrlRoot, "get_configuration_field", {
-        //     "widget": "demoConfig",
-        //     "field": "item0Image"
-        // })).addEvent("success", function(resp) {
-        //     callback(resp.value);
-        // }).execute();
-
-
-    },
-    getRealCardsSync: function() {
-
-        var me = this;
-        var cards = [];
-        if (me.hasBirthStory()) {
-            cards.push(me.getBirthStory());
-        }
-
-        if (me.hasAdoptionStory()) {
-            cards.push(me.getAdoptionStory());
-        }
-        var journeyStories = me.getJourneyStories();
-        cards = cards.concat(journeyStories);
-
-        if (me.hasRepatriationStory()) {
-            cards.push(me.getRepatriationStory());
-        }
-
-        return cards;
-
-    },
-
-    getCards: function(callback) {
-
-        var me = this;
-
-        me.runOnceOnLoad(function() {
-
-            var cards = [];
-            /*
-             * TODO use profile for search results, or get rid of them 
-             *
-            cards.push(
-                (new ProfileSummaryCard(Object.append({
-
-                }, {
-                    classNames: "summary-card",
-                }))).setUser(me)
-            );
-            */
-
-            if (!me.hasBirthStory()) {
-                if (me.canEdit()) {
-                    cards.push(new AddCard({
-                        label: "Create Birth Story",
-                        formView: "createBirthStoryForm",
-                        classNames: "add-card birth-card",
-                        type: 'MapStory.birthStory'
-                    }));
-                }
-            }
-
-            if (me.hasBirthStory()) {
-                cards.push(me.getBirthStory());
-            }
-            if (me.hasAdoptionStory()) {
-                cards.push(me.getAdoptionStory());
-            }
-            var journeyStories = me.getJourneyStories();
-            cards = cards.concat(journeyStories);
-
-
-            if (me.canEdit()) {
-                cards.push(new AddCard({
-                    label: journeyStories.length ? "Add More Locations Along Your Story" : "Add A Location Along Your Story",
-                    formView: "createStoryForm",
-                    classNames: "add-card journey-card",
-                    type: 'MapStory.story'
-                }));
-            }
-
-            if (me.hasRepatriationStory()) {
-                cards.push(me.getRepatriationStory());
-            }
-
-            if (!me.hasRepatriationStory()) {
-                if (me.canEdit()) {
-                    cards.push(new AddCard({
-                        label: "Add A Repatriation Story",
-                        formView: "createRepatriationStoryForm",
-                        classNames: "add-card repatriation-card",
-                        type: 'MapStory.repatriationStory'
-                    }));
-                }
-            }
-
-            if (me.canEdit()) {
-                // cards.push(new AddCard({
-                //     label: "Help Family Find You",
-                //     formView: "publishingOptionsForm",
-                //     classNames: "help-card add-card publishing-options-card"
-                // }));
-            }
-
-
-            callback(cards);
-
-        })
-
-
-    },
-    canEdit: function() {
-        var me = this;
-
-        if (me._userData && parseInt(me._userData.id) === AppClient.getId()) {
-            return true;
-        }
-
-        return AppClient.getUserType() === "admin";
-    },
-    getCardsLabel: function(callback) {
-
-        var me = this;
-
-
-        if (!me.isCurrentUser()) {
-
-            var div = new Element('div');
-            div.appendChild(new Element('span', {
-                "class": "user-name",
-                "html": me.getUsersName() + "'s "
-            }));
-            div.appendChild(new Element('span', {
-                "html": "Sixties Scoop Survivor Story "
-            }))
-
-            callback(div);
-            return;
-        }
-
-        if (AppClient.getUserType() === "guest") {
-
-            callback("Get Started With The Sixties Scoop Survivor Stories");
-            return;
-        }
-
-        callback("Create Your Own Sixties Scoop Survivor Story");
-    },
-    getCardsDescription: function(callback) {
-        callback("");
-    },
-
-
-});
-
-
-var AppClientStoryUser = new Class({
-    Extends: StoryUser,
-    initialize: function() {
-
-        var me = this;
-
-        (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story", {
-            "plugin": "MapStory",
-        })).addEvent("success", function(resp) {
-
-
-            me._setStoryData(resp.story);
-            me._setUserData(resp.user);
-            me._loaded = true;
-            me.fireEvent('load');
-
-        }).execute();
-
-
-    },
-    canEdit: function() {
-        return true;
-    },
-    getCards: function(callback) {
-
-        var me = this;
-
-        if (AppClient.getUserType() === "guest") {
-            callback([new AddCard({
-
-                label: "Create Your Story",
-                formView: "loginFormView",
-                classNames: "add-card journey-card"
-
-            }), new AddCard({
-
-                label: "Search Stories",
-
-                classNames: "help-card add-card publishing-options-card",
-                click: function() {
-                    console.log('todo');
-                }
-
-            })]);
-            return;
-
-        }
-
-        me.parent(callback);
-    }
-
-
-
-})
-
-var StoryCard = new Class({
-    Extends: DataTypeObject,
-    Implements: [Events],
-    initialize: function(config) {
-        var me = this;
-        me.type = "MapStory.card";
-        me._id = config.id || -1;
-        me._config = JSON.parse(JSON.stringify(config));
-
-
-        (Object.keys(config)).forEach(function(k) {
-            me["_" + k] = config[k] || "{" + k + "}";
-            var setFn = function(v) {
-                me["_" + k] = v;
-                return me;
-            };
-
-            var setMethod = "set" + k.capitalize();
-            if (me[setMethod]) {
-                setMethod = '_' + setMethod;
-            }
-            me[setMethod] = setFn;
-
-            var getfn = function() {
-                return me["_" + k];
-            }
-
-            var getMethod = "get" + k.capitalize();
-            if (me[getMethod]) {
-                getMethod = '_' + getMethod;
-            }
-            me[getMethod] = getfn;
-
-        });
-
-    },
-
-    _getAttr: function(field, defaultValue) {
-
-        if (
-            me._config.attributes &&
-            me._config.attributes[field] &&
-            me._config.attributes[field] != '' &&
-            me._config.attributes[field] != 'false'
-        ) {
-
-            return me._config.attributes[field];
-        }
-
-        return defaultValue;
-
-    },
-
-    getYear: function() {
-        var me = this;
-        if (
-            me._config.attributes &&
-            me._config.attributes.locationDate &&
-            me._config.attributes.locationDate != '' &&
-            me._config.attributes.locationDate != 'false') {
-
-            return me._config.attributes.locationDate.split('-').shift();
-        }
-
-        return '{year}';
-
-
-    },
-
-    getUsersName: function() {
-        var me = this;
-        if (me._user) {
-            return me._user.getUsersName();
-        }
-
-        return 'Unknown';
-    },
-
-    belongsToCurrentUser: function() {
-        var me = this;
-        if (me._user) {
-            return me._user.isCurrentUser();
-        }
-
-        return false;
-    },
-
-    getConfig: function() {
-        var me = this;
-        return JSON.parse(JSON.stringify(me._config));
-    },
-
-    setUser: function(user) {
-        var me = this;
-
-        me._user = user;
-
-        return me;
-    },
-
-    getUser: function() {
-        var me = this;
-        return me._user;
-    },
-
-    getTypeOfCard: function() {
-        var me = this;
-
-        if (me.isBirthStory()) {
-            return "Birth";
-        }
-
-        if (me.isRepatriationStory()) {
-            return "Repatriation";
-        }
-
-        if (me.isAdoptionStory()) {
-            return "Adoption";
-        }
-
-
-        return "Journey";
-
-    },
-    isAdoptionStory: function() {
-        var me = this;
-        return me._user && me._user.hasAdoptionStory() && me._user.getAdoptionStory() === me;
-    },
-    isBirthStory: function() {
-        var me = this;
-        return me._user && me._user.hasBirthStory() && me._user.getBirthStory() === me;
-    },
-    isRepatriationStory: function() {
-        var me = this;
-        return me._user && me._user.hasRepatriationStory() && me._user.getRepatriationStory() === me;
-    },
-
-    canEdit: function() {
-        var me = this;
-        if (!me._user) {
-            return false;
-        }
-
-        return parseInt(me._user.getUserId()) === AppClient.getId() || AppClient.getUserType() === "admin";
-    },
-
-    getAddress: function() {
-        var me = this;
-        if (me._address) {
-            return this._address
-        }
-
-
-        if (
-            me._config.attributes &&
-            me._config.attributes.locationName &&
-            me._config.attributes.locationName != '' &&
-            me._config.attributes.locationName != 'false') {
-
-            return this._config.attributes.locationName;
-        }
-
-        return false;
-
-    },
-    setAddress: function(address) {
-        this._address = address;
-        return this;
-    },
-    setLocation: function(location) {
-        this._location = location;
-    },
-
-    getDescription: function() {
-        return this._description || '';
-    },
-
-
-
-    setDescription: function(desc) {
-        this._description = desc;
-        return this;
-    },
-    getDate: function(date) {
-        return this._date || null;
-    },
-    setDate: function(date) {
-        this._date = date;
-        return this;
-    },
-    getFormView: function() {
-
-        var me = this;
-        if (this._getFormView) {
-            return this._getFormView();
-        }
-
-        if (me.isBirthStory()) {
-            return 'createBirthStoryForm';
-        }
-
-        if (me.isRepatriationStory()) {
-            return 'createRepatriationStoryForm';
-        }
-
-        return "createStoryForm"
-    },
-    getLabel: function() {
-        if (this._getLabel) {
-            return this._getLabel();
-        }
-        return "Add Card"
-    },
-    getClassNames: function() {
-        if (this._getClassNames) {
-            return this._getClassNames();
-        }
-        return "add-card";
-    },
-
-    setAttributes: function(attrs) {
-        this._attributes = attrs;
-        return this;
-    },
-
-    getCardBackgroundImage: function(callback) {
-
-        var me = this;
-
-
-        if (
-            me._config.attributes &&
-            me._config.attributes.locationImages
-        ) {
-
-            var images = JSTextUtilities.ParseImages(me._config.attributes.locationImages);
-            if (images.length) {
-                callback(images[0].url);
-                return;
-            }
-
-        }
-
-
-        if (!me._user) {
-            callback(null);
-            return null;
-        }
-        return this._user.getIcon(callback);
-    },
-    getCardMedia: function() {
-
-        var me = this;
-
-        if (
-            me._config.attributes &&
-            me._config.attributes.locationImages) {
-            return me._config.attributes.locationImages;
-        }
-        return '';
-    },
-
-    save: function(callback) {
-        var me = this;
-
-        (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story_item", {
-
-            "plugin": "MapStory",
-            'address': me.getAddress(),
-            'date': me.getDate(),
-            'description': me.getDescription(),
-            'attributes': me._attributes || {},
-            'location': me._location || null,
-
-            'id': me.getId(),
-            'type': me.getType()
-
-
-        })).addEvent("success", function(resp) {
-            callback(true);
-        }).execute();
-    }
-
-
-});
-
-
-
-var SortCard = new Class({
-    Extends: StoryCard,
-    canEdit: function() {
-        return false;
-    },
-    hasResults: function() {
-        var me = this;
-        return me._results().length;;
-    }
-});
-
-var ProfileSummaryCard = new Class({
-    Extends: StoryCard,
-    canEdit: function() {
-        return false;
-    }
-});
-
-
-
-var AddCard = new Class({
-    Extends: StoryCard,
-    hasFn: function() {
-        return !!this._click;
-    },
-    canEdit: function() {
-        return false;
-    },
-    executeFn: function(e) {
-        var me = this;
-        if (!me.hasFn()) {
-            throw 'Does not have user function'
-        }
-        me._click(e);
-
-    }
-});
-
-
-
-var AdvancedStorySearch = new Class({
-    Extends: MockDataTypeItem,
-    initialize: function(options) {
-        var me = this;
-        me._searchData = {};
-        me.parent(options);
-
-    },
-    save: function(cb) {
-
-        var me = this;
-
-        ScoopStories.setCardGroup(me, function() {
-
-        });
-
-    },
-
-    /*form fields*/
-
-    setName: function(name) {
-
-        var me = this;
-        me._searchData.name = name;
-
-    },
-    setDob: function(day) {
-
-        var me = this;
-        me._searchData.dob = day;
-
-    },
-    setMob: function(month) {
-
-        var me = this;
-        me._searchData.mob = month;
-
-    },
-    setYob: function(year) {
-
-        var me = this;
-        me._searchData.yob = year;
-
-    },
-
-    setLob: function(loc) {
-
-        var me = this;
-        me._searchData.lob = loc;
-
-    },
-    setNob: function(name) {
-
-        var me = this;
-        me._searchData.nob = name;
-
-    },
-    setYa: function(year) {
-
-        var me = this;
-        me._searchData.ya = year;
-
-    },
-    setLocation: function(loc) {
-
-        var me = this;
-        me._searchData.location = loc;
-
-    },
-
-
-
-    getCards: function(cb) {
-
-
-
-        var me = this;
-
-
-        if (me._cards) {
-            cb(me._padCards(me._cards));
-            return;
-        }
-
-
-        ScoopStories.getMap(function(map) {
-            var randomIds = map.getLayerManager().filterMapitems(function() {
-
-                var r = Math.round(Math.random()) >= 1;
-                return r;
-
-            }).map(function(feature) {
-                return feature.getId();
-            });
-
-
-
-            (new AjaxControlQuery(CoreAjaxUrlRoot, 'advanced_search', {
-                'plugin': 'MapStory',
-                'search': me._searchData
-            })).addEvent('success', function(resp) {
-
-                var randomSearchCards = resp.results.map(function(data) {
-
-                    var card = new StoryCard(Object.append(data, {
-                        classNames: "search-card-detail"
-                    }));
-                    var user = new StoryUser({
-                        "story": [],
-                        "user": Object.append({}, data.userData)
-                    });
-                    card.setUser(user);
-                    return card;
-                });
-
-                me._cards = randomSearchCards;
-                cb(me._padCards(randomSearchCards));
-
-            }).execute();
-
-            me._searchData = {};
-
-
-        })
-
-
-
-    },
-    _padCards: function(searchCards) {
-
-
-        var cards = [
-            new SortCard(Object.append({
-                results: function() {
-                    return searchCards;
-                }
-            }, {
-                classNames: "sort-card summary-card",
-            }))
-        ];
-
-
-        if (searchCards.length == 0) {
-            cards.push(new AddCard({
-
-                label: "Empty Search Results",
-
-                classNames: "help-card add-card publishing-options-card",
-                click: function() {
-                    console.log('todo');
-                }
-
-            }));
-
-            return cards;
-        }
-
-
-        return cards.concat(searchCards.sort(ScoopStories.getSortFn()));
-
-
-    },
-    getCardsLabel: function(cb) {
-
-        return cb("Search Results");
-    }
-})
-
-var StorySearch = new Class({
-    Extends: UISearchListAggregator,
-    initialize: function(search, options) {
-        var me = this;
-        this.parent(search, Object.append({
-
-            PreviousTemplate: UIListAggregator.PreviousTemplate,
-            MoreTemplate: UIListAggregator.MoreTemplate,
-            ResultTemplate: UIListAggregator.NamedViewTemplate(ScoopStories.getMap.bind(ScoopStories), {
-                namedView: "scoopStoryDetail",
-                formatResult: function(data) {
-
-                    var keyword = me.getSearchString();
-
-                    var card = new StoryCard(Object.append(data, {
-                        classNames: "search-card"
-                    }));
-                    var user = new StoryUser({
-                        "story": [],
-                        "user": Object.append({}, data.userData)
-                    });
-                    card.setUser(user)
-
-                    return card;
-                },
-                events: {
-                    click: function() {
-
-
-                    }
-                }
-            })
-
-        }, options));
-    },
-    _getRequest: function(filters) {
-        var me = this;
-        var string = me.currentSearchString;
-
-        var args = {
-            search: string,
-            searchOptions: filters
-        };
-
-        return new AjaxControlQuery(CoreAjaxUrlRoot, 'search', Object.append({
-            'plugin': 'MapStory'
-        }, args));
-
-
-    }
-});

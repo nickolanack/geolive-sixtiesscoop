@@ -35,6 +35,11 @@ class MapStory extends \Plugin implements
 	public function includeScripts() {
 
 		IncludeJS($this->getPath() . '/js/Stories.js');
+		IncludeJS($this->getPath() . '/js/StoryGroup.js');
+		IncludeJS($this->getPath() . '/js/StoryCard.js');
+		IncludeJS($this->getPath() . '/js/StoryUser.js');
+		IncludeJS($this->getPath() . '/js/StorySearch.js');
+		IncludeJS($this->getPath() . '/js/AdvancedStorySearch.js');
 		IncludeJS($this->getPath() . '/js/UIDispersionGraph.js');
 
 	}
