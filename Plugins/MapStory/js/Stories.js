@@ -718,7 +718,7 @@ var StoryMapController = new Class({
 
 
 
-        cardEl = me.getCardEl(card.getId());
+        var cardEl = me.getCardEl(card.getId());
         if (cardEl) {
             cardEl.addClass('active');
             me.fireEvent('focusCard', [card]);
