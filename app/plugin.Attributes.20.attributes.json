@@ -773,6 +773,25 @@
                         }
                     },
                     "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "2",
+                    "tableName": "storyAttributes",
+                    "tableSuffix": "_2497",
+                    "title": "storyUser",
+                    "label": "storyUser",
+                    "description": "",
+                    "fieldType": "number",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldNumberOptions": {
+                        "precision": 0,
+                        "limitMinValue": "",
+                        "limitMaxValue": ""
+                    },
+                    "allowMultiple": false
                 }
             ]
         }
