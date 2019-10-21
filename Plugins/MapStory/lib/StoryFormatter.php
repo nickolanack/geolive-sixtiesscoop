@@ -75,13 +75,13 @@ class StoryFormatter {
 					}
 
 					if(is_bool($value)&&($value?"true":"false")!==$attributesOriginal[$key]){
-						$updates[$key]=($value?"true":"false");
+						$updates[$key]=$value;
 					}
 				}
 				if(!empty($updates)){
-					error_log(json_encode($updates));
-					error_log(json_encode($attributesOriginal));
-					//(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", $updates);
+					//error_log(json_encode($updates));
+					//error_log(json_encode($attributesOriginal));
+					(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", $updates);
 				}
 			}
 
