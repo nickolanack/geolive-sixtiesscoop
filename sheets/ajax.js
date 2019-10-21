@@ -2,7 +2,7 @@
 //var AjaxUrl = "https://" + AppDomain + "/php-core-app/core.php?iam=googlesheets?0=1&format=ajax";
 function request(task, json, callback){
 
-
+  console.log("Ajax: "+AjaxUrl+"&task="+task);
   
   var options = {
 		"method": "POST",
@@ -13,7 +13,7 @@ function request(task, json, callback){
 		"muteHttpExceptions": true
 	};
 
-	
+	console.log(options);
 
 	var response = UrlFetchApp.fetch(AjaxUrl+"&task="+task, options);
 
@@ -25,8 +25,13 @@ function request(task, json, callback){
 		callback('Error: '+responseCode);
 	}
 
-	var responseData = JSON.parse(responseContent);
-	if((responseData && responseData.success === true)){
+	var responseData =null;
+  try{
+    responseData=JSON.parse(responseContent);
+  }catch(e){
+  
+  }
+    if((responseData && responseData.success === true)){
 		callback(null, responseData);
 		return;
 	}

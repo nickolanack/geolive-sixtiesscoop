@@ -15,6 +15,15 @@ class CardFormatter {
 			$attributes = $attr->getValues($feature['id'], "MapStory.card");
 		}
 
+		if(!empty($attributes['locationData'])){
+
+			$location=json_decode($attributes['locationData']);
+			if(json_encode($location->coordinates)!==json_encode($feature['coordinates'])){
+				$attributes['locationData']=null;
+			}
+
+		}
+
 		if (empty($attributes['locationData'])) {
 
 			$jsonLocationData = $this->parseLocationData($feature);

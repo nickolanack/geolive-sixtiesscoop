@@ -48,11 +48,6 @@ class FeatureUpdater{
 		(new \spatial\FeatureLoader())->save($feature);
 		$this->setAttributes($json);
 		
-
-		
-
-
-
 		return $feature;
 
 	}

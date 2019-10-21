@@ -1,10 +1,10 @@
 <?php
 
 namespace Plugin;
-include_once __DIR__.'/vendor/autoload.php';
+include_once __DIR__ . '/vendor/autoload.php';
 
 class MapStory extends \Plugin implements
-\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\PluginDataTypeProvider{
+\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\PluginDataTypeProvider {
 
 	use \core\AjaxControllerProviderTrait;
 	use \core\EventListenerTrait;
@@ -13,25 +13,21 @@ class MapStory extends \Plugin implements
 	protected $name = 'Create Map Stories';
 	protected $description = 'Allows users to create stories by connecting map items';
 
-
-
 	// protected function onFacebookLogin($params){
 
-
 	// }
-	protected function onFacebookRegister($params){
-		
-		
-		$photoUrl='https://graph.facebook.com/'.$params->fbuser->id.'/picture?type=large';
+	protected function onFacebookRegister($params) {
+
+		$photoUrl = 'https://graph.facebook.com/' . $params->fbuser->id . '/picture?type=large';
 		error_log($photoUrl);
 
 		GetPlugin('Attributes');
 
-		$icon='<img src="'.$photoUrl.'" />';
+		$icon = '<img src="' . $photoUrl . '" />';
 
 		(new \attributes\Record('profileAttributes'))->setValues($params->user, "user", array(
-			"icon"=>$icon,
-			"name"=>$params->fbuser->name
+			"icon" => $icon,
+			"name" => $params->fbuser->name,
 		));
 
 	}
@@ -39,6 +35,7 @@ class MapStory extends \Plugin implements
 	public function includeScripts() {
 
 		IncludeJS($this->getPath() . '/js/Stories.js');
+		IncludeJS($this->getPath() . '/js/UIDispersionGraph.js');
 
 	}
 
@@ -46,30 +43,26 @@ class MapStory extends \Plugin implements
 		return 1;
 	}
 
-	
-
 	public function getUsersStoryMarker($itemId) {
 
 		GetPlugin('Maps');
 
-		$itemId=(int)$itemId;
-		if($itemId>0){
-			$feature=(new \spatial\FeatureLoader())->fromId($itemId);
+		$itemId = (int) $itemId;
+		if ($itemId > 0) {
+			$feature = (new \spatial\FeatureLoader())->fromId($itemId);
 			return $feature;
 		}
 
 		$feature = new \Marker();
 		$feature->setUserId(GetClient()->getUserId());
-		
+
 		return $feature;
 
 	}
 
-	public function formatFeatureMetadata($feature, $attributes=null){
+	public function formatFeatureMetadata($feature, $attributes = null) {
 		return (new \MapStory\CardFormatter())->format($feature, $attributes);
 	}
-
-	
 
 	public function getUsersMetadata($userId = -1) {
 
@@ -81,28 +74,24 @@ class MapStory extends \Plugin implements
 
 	}
 
-
-	public function getFeaturesMetadata($featureIds){
+	public function getFeaturesMetadata($featureIds) {
 
 		GetPlugin('Maps');
 		GetPlugin('Attributes');
-		$attr=(new \attributes\Record('storyAttributes'));
-		$list=array();
+		$attr = (new \attributes\Record('storyAttributes'));
+		$list = array();
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withFeatures($featureIds)
-			->iterate(function ($feature) use(&$list, &$attr){
+			->iterate(function ($feature) use (&$list, &$attr) {
 
-				$attributes=$attr->getValues($feature['id'], "MapStory.card");
+				$attributes = $attr->getValues($feature['id'], "MapStory.card");
 
-				$list[]=$this->formatFeatureMetadata($feature, $attributes);
-
+				$list[] = $this->formatFeatureMetadata($feature, $attributes);
 
 			});
 
-
 		return $list;
-
 
 	}
 
@@ -114,103 +103,66 @@ class MapStory extends \Plugin implements
 
 		GetPlugin('Maps');
 		GetPlugin('Attributes');
-		$attr=(new \attributes\Record('storyAttributes'));
-		$list=array();
-
-		
+		$attr = (new \attributes\Record('storyAttributes'));
+		$list = array();
 
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withOwner($userId)
-			->iterate(function ($feature) use(&$list, &$attr){
+			->iterate(function ($feature) use (&$list, &$attr) {
 
-				$attributes=$attr->getValues($feature['id'], "MapStory.card");
-				$list[]=$this->formatFeatureMetadata($feature, $attributes);
+				$attributes = $attr->getValues($feature['id'], "MapStory.card");
+				$list[] = $this->formatFeatureMetadata($feature, $attributes);
 
 			});
 
-		return (new \MapStory\StoryFormatter())->format($list);
-
+		return (new \MapStory\StoryFormatter())
+			->setCommitChanges(true)
+			->format($list);
 
 	}
-
 
 	public function searchStories($keyword) {
 
-		GetPlugin('Maps');
-		GetPlugin('Attributes');
-		$attr=(new \attributes\Record('storyAttributes'));
-		$list=array();
-
-		$users=array();
-
-		(new \spatial\Features())
-			->withFilter(array(array(
-				"join"=>'OR',
-				array(
-					'field'=>'name',
-					'comparator' => ' LIKE ',
-					'value' => '%'.$keyword.'%'
-				),
-				array(
-					'field'=>'description',
-					'comparator' => ' LIKE ',
-					'value' => '%'.$keyword.'%'
-				)
-
-			)))
-			->iterate(function ($feature) use(&$list, &$attr, &$users){
-
-				$attributes=$attr->getValues($feature['id'], "MapStory.card");
-
-				$result=$this->formatFeatureMetadata($feature, $attributes);
-
-				if(!key_exists($result['uid'], $users)){
-					$users[$result['uid']]=$this->getUsersMetadata($result['uid']);
-				}
-
-				$result['userData']=$users[$result['uid']];
-
-				$list[]=$result;
+		return (new \MapStory\CardSearch())->searchStories($keyword);
 
 
-			});
+	}
+	public function searchStoriesAdvanced($fields) {
 
-		return $list;
+		return (new \MapStory\CardSearch())->searchStoriesAdvanced($fields);
 
 	}
 
-	public function getFeatureListMetadata($featureIds){
+	public function getFeatureListMetadata($featureIds) {
 
 		GetPlugin('Maps');
 		GetPlugin('Attributes');
-		$attr=(new \attributes\Record('storyAttributes'));
-		$list=array();
+		$attr = (new \attributes\Record('storyAttributes'));
+		$list = array();
 
-		$users=array();
+		$users = array();
 
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withFeatures($featureIds)
-			->iterate(function ($feature) use(&$list, &$attr, &$users){
+			->iterate(function ($feature) use (&$list, &$attr, &$users) {
 
-				$attributes=$attr->getValues($feature['id'], "MapStory.card");
+				$attributes = $attr->getValues($feature['id'], "MapStory.card");
 
-				$result=$this->formatFeatureMetadata($feature, $attributes);
+				$result = $this->formatFeatureMetadata($feature, $attributes);
 
-				if(!key_exists($result['uid'], $users)){
-					$users[$result['uid']]=$this->getUsersMetadata($result['uid']);
+				if (!key_exists($result['uid'], $users)) {
+					$users[$result['uid']] = $this->getUsersMetadata($result['uid']);
 				}
 
-				$result['userData']=$users[$result['uid']];
+				$result['userData'] = $users[$result['uid']];
 
-				$list[]=$result;
+				$list[] = $result;
 
 			});
 
-
 		return $list;
-
 
 	}
 

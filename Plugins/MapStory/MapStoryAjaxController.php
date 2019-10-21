@@ -5,15 +5,20 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	protected function saveStoryItem($json){
 
-		if(!Auth('write', $json->id, $json->type)){
+
+
+		if($json->id>0&&!Auth('write', $json->id, $json->type)){
 			return $this->setError('No access');
 		}
 
 		$feature=(new \MapStory\FeatureUpdater())->fromObject($json);
 
-		return array('item'=>$this->getPlugin()->formatFeatureMetadata($feature->getMetadata()), 'story'=>$this->getPlugin()->getUsersStoryMetadata());
+		//put this here because it might change some boolean attributes;
+		$story=$this->getPlugin()->getUsersStoryMetadata();
 
-	}	
+		return array('item'=>$this->getPlugin()->formatFeatureMetadata($feature->getMetadata()), 'story'=>$story);
+
+	}
 
 
 	protected function deleteStoryItem($json){
@@ -58,6 +63,12 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	}
 
+	protected function advancedSearch($json){
+
+		return  array('results'=>$this->getPlugin()->searchStoriesAdvanced($json->search));
+
+	}
+
 
 	protected function getFeatureList($json){
 
@@ -68,6 +79,32 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	protected function getDispersionGraph($json){
 		
+		GetPlugin('Maps');
+
+		$list=array();
+		$prefix='attribute_';
+
+		(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter('{ 
+				"filters":[{
+					"field":"isBirthStory",
+					"value":true
+				}]
+			}')->iterate(function($result)use(&$list, $prefix){
+
+
+
+				$list[]= array(
+					'locationData'=>json_decode($result->{$prefix.'locationData'}),
+					'nextLocationData'=>json_decode($result->{$prefix.'nextLocationData'})
+				);
+			});
+
+		return array('results'=>$list);
+
+
 	}
 
 

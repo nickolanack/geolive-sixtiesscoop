@@ -1,0 +1,426 @@
+{
+  "result": [
+    [
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 6
+          },
+          {
+            "province.name": "AB",
+            "result": 1
+          },
+          {
+            "province.name": "SK",
+            "result": 8
+          },
+          {
+            "province.name": "MB",
+            "result": 8
+          },
+          {
+            "province.name": "YT",
+            "result": 4
+          },
+          {
+            "province.name": "NT",
+            "result": 5
+          },
+          {
+            "province.name": "NU",
+            "result": 6
+          },
+          {
+            "province.name": "NS",
+            "result": 9
+          },
+          {
+            "province.name": "PE",
+            "result": 6
+          },
+          {
+            "province.name": "NB",
+            "result": 4
+          },
+          {
+            "province.name": "NL",
+            "result": 8
+          },
+          {
+            "province.name": "QC",
+            "result": 5
+          },
+          {
+            "province.name": "ON",
+            "result": 2
+          }
+        ],
+        "timeframe": {
+          "start": "1960-01-01T00:00:00.000Z",
+          "end": "1961-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 7
+          },
+          {
+            "province.name": "AB",
+            "result": 2
+          },
+          {
+            "province.name": "SK",
+            "result": 1
+          },
+          {
+            "province.name": "MB",
+            "result": 4
+          },
+          {
+            "province.name": "YT",
+            "result": 7
+          },
+          {
+            "province.name": "NT",
+            "result": 6
+          },
+          {
+            "province.name": "NU",
+            "result": 1
+          },
+          {
+            "province.name": "NS",
+            "result": 8
+          },
+          {
+            "province.name": "PE",
+            "result": 8
+          },
+          {
+            "province.name": "NB",
+            "result": 6
+          },
+          {
+            "province.name": "NL",
+            "result": 0
+          },
+          {
+            "province.name": "QC",
+            "result": 0
+          },
+          {
+            "province.name": "ON",
+            "result": 0
+          }
+        ],
+        "timeframe": {
+          "start": "1961-01-01T00:00:00.000Z",
+          "end": "1962-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 4
+          },
+          {
+            "province.name": "AB",
+            "result": 1
+          },
+          {
+            "province.name": "SK",
+            "result": 4
+          },
+          {
+            "province.name": "MB",
+            "result": 4
+          },
+          {
+            "province.name": "YT",
+            "result": 7
+          },
+          {
+            "province.name": "NT",
+            "result": 5
+          },
+          {
+            "province.name": "NU",
+            "result": 8
+          },
+          {
+            "province.name": "NS",
+            "result": 1
+          },
+          {
+            "province.name": "PE",
+            "result": 0
+          },
+          {
+            "province.name": "NB",
+            "result": 8
+          },
+          {
+            "province.name": "NL",
+            "result": 3
+          },
+          {
+            "province.name": "QC",
+            "result": 7
+          },
+          {
+            "province.name": "ON",
+            "result": 7
+          }
+        ],
+        "timeframe": {
+          "start": "1962-01-01T00:00:00.000Z",
+          "end": "1963-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 5
+          },
+          {
+            "province.name": "AB",
+            "result": 5
+          },
+          {
+            "province.name": "SK",
+            "result": 3
+          },
+          {
+            "province.name": "MB",
+            "result": 1
+          },
+          {
+            "province.name": "YT",
+            "result": 7
+          },
+          {
+            "province.name": "NT",
+            "result": 3
+          },
+          {
+            "province.name": "NU",
+            "result": 1
+          },
+          {
+            "province.name": "NS",
+            "result": 2
+          },
+          {
+            "province.name": "PE",
+            "result": 2
+          },
+          {
+            "province.name": "NB",
+            "result": 6
+          },
+          {
+            "province.name": "NL",
+            "result": 8
+          },
+          {
+            "province.name": "QC",
+            "result": 7
+          },
+          {
+            "province.name": "ON",
+            "result": 3
+          }
+        ],
+        "timeframe": {
+          "start": "1963-01-01T00:00:00.000Z",
+          "end": "1964-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 0
+          },
+          {
+            "province.name": "AB",
+            "result": 5
+          },
+          {
+            "province.name": "SK",
+            "result": 3
+          },
+          {
+            "province.name": "MB",
+            "result": 8
+          },
+          {
+            "province.name": "YT",
+            "result": 2
+          },
+          {
+            "province.name": "NT",
+            "result": 6
+          },
+          {
+            "province.name": "NU",
+            "result": 5
+          },
+          {
+            "province.name": "NS",
+            "result": 4
+          },
+          {
+            "province.name": "PE",
+            "result": 2
+          },
+          {
+            "province.name": "NB",
+            "result": 3
+          },
+          {
+            "province.name": "NL",
+            "result": 3
+          },
+          {
+            "province.name": "QC",
+            "result": 5
+          },
+          {
+            "province.name": "ON",
+            "result": 9
+          }
+        ],
+        "timeframe": {
+          "start": "1964-01-01T00:00:00.000Z",
+          "end": "1965-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 6
+          },
+          {
+            "province.name": "AB",
+            "result": 3
+          },
+          {
+            "province.name": "SK",
+            "result": 3
+          },
+          {
+            "province.name": "MB",
+            "result": 1
+          },
+          {
+            "province.name": "YT",
+            "result": 9
+          },
+          {
+            "province.name": "NT",
+            "result": 6
+          },
+          {
+            "province.name": "NU",
+            "result": 9
+          },
+          {
+            "province.name": "NS",
+            "result": 9
+          },
+          {
+            "province.name": "PE",
+            "result": 7
+          },
+          {
+            "province.name": "NB",
+            "result": 0
+          },
+          {
+            "province.name": "NL",
+            "result": 3
+          },
+          {
+            "province.name": "QC",
+            "result": 1
+          },
+          {
+            "province.name": "ON",
+            "result": 1
+          }
+        ],
+        "timeframe": {
+          "start": "1965-01-01T00:00:00.000Z",
+          "end": "1966-01-01T00:00:00.000Z"
+        }
+      },
+      {
+        "value": [
+          {
+            "province.name": "BC",
+            "result": 2
+          },
+          {
+            "province.name": "AB",
+            "result": 2
+          },
+          {
+            "province.name": "SK",
+            "result": 5
+          },
+          {
+            "province.name": "MB",
+            "result": 0
+          },
+          {
+            "province.name": "YT",
+            "result": 0
+          },
+          {
+            "province.name": "NT",
+            "result": 8
+          },
+          {
+            "province.name": "NU",
+            "result": 0
+          },
+          {
+            "province.name": "NS",
+            "result": 7
+          },
+          {
+            "province.name": "PE",
+            "result": 8
+          },
+          {
+            "province.name": "NB",
+            "result": 3
+          },
+          {
+            "province.name": "NL",
+            "result": 7
+          },
+          {
+            "province.name": "QC",
+            "result": 4
+          },
+          {
+            "province.name": "ON",
+            "result": 7
+          }
+        ],
+        "timeframe": {
+          "start": "1966-01-01T00:00:00.000Z",
+          "end": "1967-01-01T00:00:00.000Z"
+        }
+      }
+    ]
+  ]
+}

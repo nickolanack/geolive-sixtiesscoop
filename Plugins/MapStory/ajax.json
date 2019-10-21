@@ -6,6 +6,9 @@
 	"get_story_with_item":{},
 	"get_story_with_user":{},
 	"search":{},
+	"advanced_search":{},
 	"get_feature_list":{},
-	"get_dispersion_graph":{}
+	"get_dispersion_graph":{
+		 "profile":true
+	}
 }

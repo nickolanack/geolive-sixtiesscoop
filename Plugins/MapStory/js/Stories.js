@@ -4,9 +4,9 @@ var StoryMapController = new Class({
 
 
         var me = this;
-        me.setSortFn(function(){
+        me.setSortFn(function() {
             //random
-            return Math.round((Math.random()*2.0)-1.0);
+            return Math.round((Math.random() * 2.0) - 1.0);
         });
 
         me.addEvent('clearCards', function(cards) {
@@ -28,16 +28,83 @@ var StoryMapController = new Class({
             me.focusCurrentStory();
         });
 
+        var needsDisclaimer=function(){
+            return localStorage.getItem("hasViewedDisclaimer") !== "Yes";
+        }
+
+
+        me.addEvent('loadMap', function() {
+            var showDisclaimer = function() {
+                (new AjaxControlQuery(CoreAjaxUrlRoot, "get_metadata", {
+                    "widget": "disclaimer"
+                })).addEvent("success", function(resp) {
+
+                    var d=new Element('div');
+                    var p=new Element('p', {
+                        style: "padding: 30px;",
+                        html: "<h1>Disclaimer</h1>" + resp.metadata.positions.content.modules[1].config.text
+                    });
+                    d.appendChild(p);
+                    //if(needsDisclaimer()){
+                    var button=d.appendChild(new Element('button',{"html":"Accept", "class":"disclaimer primary-btn "+(!needsDisclaimer()?"disabled":""), events:{click:function(){
+                        box.close();
+                    }}}));
+                    if(!needsDisclaimer()){
+                        new UIPopover(button,{
+                            description:"You've already accepted the terms",
+                            anchor:UIPopover.AnchorAuto()
+                        });
+                    }else{
+                        new UIPopover(button,{
+                            description:"You must accept the terms to use this site",
+                            anchor:UIPopover.AnchorAuto()
+                        });
+                    }
+
+
+                    var box=PushBox.Open(d, {
+                        handler: 'append',
+                        closable:!needsDisclaimer(),
+                        size: {
+                            x: 700,
+                            y: 500
+                        },
+                        push: true
+                    });
+
+
+                    localStorage.setItem("hasViewedDisclaimer", "Yes");
+
+                }).execute();
+            }
+
+            if (needsDisclaimer()) {
+                showDisclaimer();
+            }
+
+
+            var link = $("disclaimer-link");
+            if (link) {
+                link.onclick = function() {
+                    showDisclaimer();
+                    return false;
+                }
+            }
+        })
+
+
+
     },
 
+    clearCards: function() {
 
-    clearCards:function(){
-        var me=this;
-        me._cards=null;
+        var me = this;
+        me._cards = null;
         return me;
-    },
-    getCurrentCards: function(callback) {
 
+    },
+
+    getCurrentCards: function(callback) {
 
         var me = this;
 
@@ -127,85 +194,344 @@ var StoryMapController = new Class({
 
     },
 
-
-
     initializeStoryView: function(storyView) {
 
         var me = this;
         me._storyView = storyView;
 
-
-
     },
 
-    initializeSidePanelLeft:function(sidePanel, el){
+
+    setSidePanelView: function(view, item, className) {
+
         var me = this;
-        var sidePanelViewer = new ContentModuleViewer(el, {});
+        
+            me.getApp(function(app) {
+                
 
-        me.getApp(function(app) {
-            app.getDisplayController().display('sidePanelEmptyDetail', AppClient, sidePanelViewer);
-        });
-
-
-        me.addEvent('focusCard',function(card){
-             me.getApp(function(app) {
-                 app.getDisplayController().display('sidePanelInfoDetail', card, sidePanelViewer);
-                 sidePanel.show();
-             });
-        });
-
-
-        sidePanel.addEvent('show', function(){
-
-            $$('.left-center.UIMapControl .tileButtonContainer')[0].addClass('shifted');
-
-        }).addEvent('hide', function(){
-
-            $$('.left-center.UIMapControl .tileButtonContainer')[0].removeClass('shifted');
-
-        })
-    },
-
-    getEmptySelectionHtml:function(){
-
-        var div =new Element('div',{"class":"empty-section"});
-        div.appendChild(new Element('h3',{'html':'Empty selection'}));
-        div.appendChild(new Element('p',{'html':'click a marker on the map, or search a story to see details here.'}));
-        return div;
-    },
+                me._sidePanel.useDisplayController(app.getDisplayController());
+                me._sidePanel.renderNamedView(view, item);
+                
+                if (me._sidePanelClassName) {
+                    me._sidePanel.getElement().removeClass(me._sidePanelClassName);
+                    delete me._sidePanelClassName
+                }
+                if (className) {
+                    me._sidePanelClassName = className
+                    me._sidePanel.getElement().addClass(me._sidePanelClassName)
+                }
 
 
-    initializeAdoptionTile: function(map, tile, control) {
-
-        tile.addEvent('click',function(){
-    
-    
-            map.resetView();
-            map.getLayerManager().getLayers().forEach(function(layer) {
-                layer.hide();
             });
 
 
 
-            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
-                "plugin": "MapStory"
-            })).addEvent("success", function(resp) {
+
+    },
+
+    initializeSidePanelLeft: function(sidePanel, el) {
 
 
-              
+
+        var me = this;
+        me._sidePanel = sidePanel;
+
+        var clear = function() {
+            me.setSidePanelView('sidePanelEmptyDetail', AppClient, 'empty');
+        }
+
+        clear();
+
+        me.addEvent('unfocusCard', clear);
 
 
-            }).execute();
+        me.addEvent('focusCard', function(card) {
+            me.setSidePanelView('sidePanelDetailList', card, 'item-content');
+            sidePanel.show();
+        });
+
+        me.addEvent('showDispersion', function(graph) {
+            me.setSidePanelView('sidePanelGraphDetail', graph, 'graph-analytics');
+        });
+        me.addEvent('hideDispersion', clear);
 
 
-            
+        sidePanel.addEvent('show', function() {
+
+            $$('.left-center.ltr>*').forEach(function(el) {
+                el.addClass('shifted');
+            });
+
+        }).addEvent('hide', function() {
+
+            $$('.left-center.ltr>*').forEach(function(el) {
+                el.removeClass('shifted');
+            });
+
+        });
+
+        me._addSidePanelToggleTips(sidePanel, '.SideBarWidget.left .toggle-button');
+
+    },
+
+
+    CardGroupsBefore: function(item){
+        var me = this;
+        var items = [];
+
+        var realCards = item.getUser().getRealCardsSync();
+
+        if (!(item.isBirthStory && item.isBirthStory())) {
+            if (item.getUser().hasBirthStory()) {
+
+                items.push(new StoryGroup({
+                    type: "Birth Story",
+                    isBirthStory: true,
+                    description: "",
+                    cards: [realCards.shift()]
+                }));
+            }
+
+        }
+
+        var beforeCards = [];
+        while (realCards.length && realCards[0] !== item) {
+            beforeCards.push(realCards.shift());
+        }
+
+        if (beforeCards.length) {
+            items.push(new StoryGroup({
+                type: "Previous Stories",
+                description: beforeCards.length + " more " + (beforeCards.length == 1 ? "story" : "stories") + " before this",
+                cards: beforeCards
+            }));
+        }
+
+        return items;
+    },
+
+
+    CardGroupsAfter: function(item){
+        var me = this;
+        var items = [];
+
+        var realCards = item.getUser().getRealCardsSync();
+
+        while (realCards.length && realCards[0] !== item) {
+            realCards.shift();
+        }
+        realCards.shift();
+
+        var afterCards = realCards.slice(0);
+
+
+        var repatriation = [];
+        if (afterCards.length) {
+            if (afterCards[afterCards.length - 1].isRepatriationStory()) {
+                repatriation.push(afterCards.pop())
+            }
+        }
+
+        if (afterCards.length) {
+
+            items.push(new StoryGroup({
+                type: "Next Stories",
+                description: afterCards.length + " more " + (afterCards.length == 1 ? "story" : "stories") + " after this",
+                cards: afterCards
+            }));
+        }
+
+        if (repatriation.length) {
+
+            items.push(new StoryGroup({
+                type: "Repatriation Story",
+                description: "",
+                isRepatriationStory:true,
+                cards: repatriation
+            }));
+        }
+
+        return items;
+          
+    },
+
+
+    SidePanelStoryListItems: function(item) {
+
+
+        var me = this;
+        var items = [item.getUser()];
+
+        items=items.concat(me.CardGroupsBefore(item))
+        items.push(item);
+        items=items.concat(me.CardGroupsAfter(item))
+
+        return items;
+
+    },
+
+    _addSidePanelToggleTips: function(sidePanel, selector) {
+
+        var sidePanelTipTimeout;
+        var showToggleTip = function() {
+
+            if (sidePanelTipTimeout) {
+                clearInterval(sidePanelTipTimeout);
+            }
+
+            var toggle = $$(selector)[0];
+
+            toggle.addClass('just-closed');
+
+            sidePanelTipTimeout = setTimeout(hideToggleTip, 2000);
+
+        };
+        var hideToggleTip = function() {
+            if (sidePanelTipTimeout) {
+                clearInterval(sidePanelTipTimeout);
+            }
+            sidePanelTipTimeout = null;
+            var toggle = $$(selector)[0];
+            toggle.removeClass('just-closed');
+        }
+
+
+        sidePanel.addEvent('show', hideToggleTip).addEvent('hide', showToggleTip)
+    },
+
+
+
+    getEmptySelectionHtml: function() {
+
+        var me = this;
+
+        var div = new Element('div', {
+            "class": "empty-section"
+        });
+        div.appendChild(new Element('h3', {
+            'html': 'Empty selection'
+        }));
+        div.appendChild(new Element('p', {
+            'html': 'click a marker on the map, or search a story to see details here.'
+        }));
+
+
+        var div2 = new Element('div', {
+
+            "class": "help-section empty-section"
+
+        }).addEvent("click", function() {
+
+            me.getMap().getNamedValue('Tutorial', function(tut) {
+                tut.toggle();
+            });
+
+        })
+
+        div2.appendChild(new Element('h3', {
+            'html': 'How to get started'
+        }));
+        div2.appendChild(new Element('p', {
+            'html': 'do you want to create a story or find family?'
+        }));
+
+        div.appendChild(div2);
+
+
+
+        return div;
+
+    },
+
+    getNavigationHtml: function(item) {
+
+        var me = this;
+
+        var nav = new Element('div', {
+            "class": "story-navigation"
+        });
+
+
+
+        var back = nav.appendChild(new Element('button', {
+            "class": "back"
+        }));
+
+
+        var forward = nav.appendChild(new Element('button', {
+            "class": "forward"
+        }));
+
+
+        item.getUser().getCards(function(rawCards) {
+
+            var cards = rawCards.filter(function(card) {
+                return card.getId && card.getId() > 0;
+            });
+
+            var index = cards.indexOf(item);
+
+            if (index > 0) {
+                back.addClass('active');
+                back.addEvent('click', function() {
+                    me.selectCard(cards[index - 1].getId());
+                })
+            }
+            if (index + 1 < cards.length) {
+                forward.addClass('active');
+                forward.addEvent('click', function() {
+                    me.selectCard(cards[index + 1].getId());
+                })
+            }
+
+
         })
 
 
 
+        return nav;
+    },
+
+    initializeAdoptionTile: function(map, tile, control) {
+
+        var me = this;
+        var graph = (new UIDispersionGraph(map, tile, control))
+        graph.addEvent('activate', function() {
+
+            var activeCard = me._activeCard;
+            if (activeCard) {
+                me._unfocusCard();
+            }
+
+            me.fireEvent('showDispersion', [graph]);
+            me._sidePanel.show();
+            me._storyView.hide();
+
+
+
+            graph.addEvent('deactivate:once', function() {
+                me.fireEvent('hideDispersion', [graph]);
+                if (activeCard) {
+                    me.focusCard(activeCard);
+                }
+                me._storyView.show();
+            })
+
+            // me._storyView.redraw({"namedView": "sidePanelEmptyDetail"});
+
+
+        });
+        graph.addEvent('deactivate', function() {
+            //setTimeout(function(){
+
+            //}, 50);
+
+        });
+
     },
 
     initializeSidePanelRight: function(sidePanel, el) {
+
         var me = this;
         var sidePanelViewer = new ContentModuleViewer(el, {});
 
@@ -214,19 +540,25 @@ var StoryMapController = new Class({
             app.getDisplayController().display('sidePanelDetail', AppClient, sidePanelViewer);
         });
 
-        
 
-        sidePanel.addEvent('show', function(){
 
-            $$('.TileButtonsFunctionsSection')[0].addClass('shifted');
+        sidePanel.addEvent('show', function() {
 
-        }).addEvent('hide', function(){
 
-            $$('.TileButtonsFunctionsSection')[0].removeClass('shifted');
 
-        })
+            $$('.rtl>*').forEach(function(el) {
+                el.addClass('shifted');
+            });
 
-        
+        }).addEvent('hide', function() {
+
+            $$('.rtl>*').forEach(function(el) {
+                el.removeClass('shifted');
+            });
+
+        });
+
+        me._addSidePanelToggleTips(sidePanel, '.SideBarWidget.right .toggle-button');
 
     },
 
@@ -257,19 +589,23 @@ var StoryMapController = new Class({
 
         map.getLayerManager().getLayers().forEach(function(layer) {
 
-            layer.runOnceOnLoad(function(){
+            layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
-                    me.scaleIcon(marker, 10);
+                    if (marker instanceof GeoliveMarker) {
+                        me.scaleIcon(marker, 10);
+                    }
                 });
             });
 
             //layer.addEvent('')
 
         });
-        map.getLayerManager().addEvent('addLayer',function(layer){
-            layer.runOnceOnLoad(function(){
+        map.getLayerManager().addEvent('addLayer', function(layer) {
+            layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
-                    me.scaleIcon(marker, 10);
+                    if (marker instanceof GeoliveMarker) {
+                        me.scaleIcon(marker, 10);
+                    }
                 });
             });
         })
@@ -366,7 +702,7 @@ var StoryMapController = new Class({
 
             me._activeMarker = marker;
 
-            //me.getMap().panTo(marker.getLatLng());
+            me.getMap().panTo(marker.getLatLng());
             me.scaleIcon(marker, 40);
 
 
@@ -378,7 +714,7 @@ var StoryMapController = new Class({
         cardEl = me.getCardEl(card.getId());
         if (cardEl) {
             cardEl.addClass('active');
-            me.fireEvent('focusCard',[card]);
+            me.fireEvent('focusCard', [card]);
             return;
         }
 
@@ -390,6 +726,10 @@ var StoryMapController = new Class({
     },
     scaleIcon: function(marker, x) {
 
+        if (!marker) {
+            console.error('not a marker');
+            return;
+        }
         var icon = marker.getMapObject().getIcon();
 
         if (icon.url) {
@@ -420,6 +760,8 @@ var StoryMapController = new Class({
         if (cardEl) {
             cardEl.removeClass('active');
         }
+
+        me.fireEvent('unfocusCard', [card]);
 
 
 
@@ -501,7 +843,9 @@ var StoryMapController = new Class({
                 callback();
             }
         });
-        me._storyView.redraw();
+        me._storyView.redraw({
+            "namedView": "scoopStoryView"
+        });
 
 
     },
@@ -547,21 +891,21 @@ var StoryMapController = new Class({
 
 
     },
-    setSortFn: function(fn, name){
-        
-        var me=this;
-        me._sortFn=fn;
-        me._sortName=name;
+    setSortFn: function(fn, name) {
+
+        var me = this;
+        me._sortFn = fn;
+        me._sortName = name;
         return me;
 
     },
-    getSortName:function(){
-        var me=this;
+    getSortName: function() {
+        var me = this;
         return me._sortName;
     },
-    getSortFn:function(){
+    getSortFn: function() {
 
-        var me=this;
+        var me = this;
         return me._sortFn;
 
     },
@@ -614,7 +958,7 @@ var StoryMapController = new Class({
         }
 
 
-        (new UIModalFormButton(
+        var formButton=(new UIModalFormButton(
             button,
             application, item, {
                 formName: item.getFormView(),
@@ -623,14 +967,91 @@ var StoryMapController = new Class({
                 }
 
             }
-        )).addEvent('complete',function(){
+        )).addEvent('complete', function(story) {
+
             ScoopStories.clearCards();
             ScoopStories.redraw();
+
+            if (me.shouldChainStoryForm(story)) {
+                me.chainStoryForm(application);
+            }
+
+        }).addEvent('show', function(){
+            var wizard=formButton.getWizard();
+            me.displayWizardFlow(item, wizard)
         })
 
 
 
         return button;
+
+    },
+
+    displayWizardFlow:function(item, wizard){
+        var me=this;
+        wizard.getViewer().addEvent('open:once', function(){
+            var el=wizard.getElement();
+           
+            var before=me.CardGroupsBefore(item);
+            if(before.length){
+                 var beforeEl=el.appendChild(new Element('div',{"class":"flow-left"}));
+                 beforeEl.setAttribute("data-groups-count", before.length);
+                 before.forEach(function(group){
+                     beforeEl.appendChild(new Element('div',{"class":"ui-view story-card"}));
+                 });
+            }
+
+            var after=me.CardGroupsAfter(item);
+            if(after.length){
+                 var afterEl=el.appendChild(new Element('div',{"class":"flow-right"}));
+                 afterEl.setAttribute("data-groups-count", after.length);
+                 after.forEach(function(group){
+                     afterEl.appendChild(new Element('div',{"class":"ui-view story-card"}));
+                 });
+            }
+
+            
+        });
+
+        
+    },
+
+
+    shouldChainStoryForm: function(completedStory) {
+        return completedStory._id === -1 && completedStory._attributes && completedStory._attributes.storyAttributes && completedStory._attributes.storyAttributes.hasAnotherLocation;
+    },
+
+    chainStoryForm: function(application) {
+
+
+        var item = new AddCard({
+            label: "Add More Locations Along Your Story",
+            formView: "createStoryForm",
+            classNames: "add-card journey-card",
+            type: 'MapStory.story'
+        });
+
+        var formButton=(new UIModalDialog(
+            application, item, {
+                formName: item.getFormView(),
+                formOptions: {
+                    template: "form"
+                }
+
+            }
+        )).addEvent('complete', function(story) {
+
+            ScoopStories.clearCards();
+            ScoopStories.redraw();
+
+            if (me.shouldChainStoryForm(story)) {
+                me.chainStoryForm(application);
+            }
+
+        }).addEvent("show",function(){
+            var wizard=formButton.getWizard();
+            me.displayWizardFlow(item, wizard)
+        }).show();
 
     },
 
@@ -643,11 +1064,11 @@ var StoryMapController = new Class({
 
         var sortBtn = function(btnOptions) {
 
-            var btn=new Element('button', {
-                "html":btnOptions.label,
-                "class":(me.getSortName()==btnOptions.sortName?"current":""),
-                "events":{
-                    "click":function(){
+            var btn = new Element('button', {
+                "html": btnOptions.label,
+                "class": (me.getSortName() == btnOptions.sortName ? "current" : ""),
+                "events": {
+                    "click": function() {
                         me.setSortFn(btnOptions.sortFn, btnOptions.sortName);
                         me.clearCards()
                         me.redraw();
@@ -675,34 +1096,34 @@ var StoryMapController = new Class({
 
         div.appendChild(sortBtn({
             "label": "<h3>Alphabetically name</h3>",
-            "sortFn":function(a, b){
+            "sortFn": function(a, b) {
                 //random
-                return Math.round((Math.random()*2.0)-1.0);
+                return Math.round((Math.random() * 2.0) - 1.0);
             },
-            "sortName":'name'
+            "sortName": 'name'
         }));
 
         div.appendChild(sortBtn({
             "label": "<h3>Date of birth</h3>",
-            "sortFn": function(a, b){
+            "sortFn": function(a, b) {
                 //random
-                return Math.round((Math.random()*2.0)-1.0);
+                return Math.round((Math.random() * 2.0) - 1.0);
             },
             "sortName": 'birth-date'
         }));
         div.appendChild(sortBtn({
             "label": "<h3>Alpabetically name at birth</h3>",
-            "sortFn": function(a, b){
+            "sortFn": function(a, b) {
                 //random
-                return Math.round((Math.random()*2.0)-1.0);
+                return Math.round((Math.random() * 2.0) - 1.0);
             },
             "sortName": 'birth-name'
         }));
         div.appendChild(sortBtn({
             "label": "<h3>Year adompted</h3>",
-            "sortFn": function(a, b){
+            "sortFn": function(a, b) {
                 //random
-                return Math.round((Math.random()*2.0)-1.0);
+                return Math.round((Math.random() * 2.0) - 1.0);
             },
             "sortName": 'adopted-year'
         }));
@@ -711,50 +1132,64 @@ var StoryMapController = new Class({
 
     },
 
-    GetProfileSummaryCardModule: function(item, application) {
-
+    GetProfileSummaryUserModule: function(user, application) {
         var me = this;
         var div = new Element('div', {
-            "class": item.getClassNames()
+
         });
         div.appendChild(new Element('h3', {
-            "html": "Name: "+item.getUsersName()
+            "html": "Name: " + user.getUsersName()
         }));
 
-        var user=item.getUser();
-        var birthdate="unknown";
-        if(user.hasBirthStory()){
-            birthdate=user.getBirthStory().getYear();
+
+        var birthdate = "unknown";
+        if (user.hasBirthStory()) {
+            birthdate = user.getBirthStory().getYear();
         }
 
 
-        var birthplace="unknown";
-        if(user.hasBirthStory()){
-            birthplace=user.getBirthStory().getAddress();
+        var birthplace = "unknown";
+        if (user.hasBirthStory()) {
+            birthplace = user.getBirthStory().getAddress();
         }
 
         div.appendChild(new Element('h4', {
-            "html": "Date of birth: "+birthdate
+            "html": "Date of birth: " + birthdate
         }));
         div.appendChild(new Element('h4', {
-            "html": "Place of birth: "+birthplace
+            "html": "Place of birth: " + birthplace
         }));
         div.appendChild(new Element('h4', {
-            "html": "Name at birth: "+(user.knowsBirthName()?user.getBirthName():"unknown")
+            "html": "Name at birth: " + (user.knowsBirthName() ? user.getBirthName() : "unknown")
         }));
 
 
-        var journey=user.getFirstJourneyStory();
+        var journey = user.getFirstJourneyStory();
 
         div.appendChild(new Element('h4', {
-            "html": "Year adopted: "+(journey?journey.getYear():"unknown")
+            "html": "Year adopted: " + (journey ? journey.getYear() : "unknown")
         }));
         div.appendChild(new Element('h4', {
-            "html": "Reunited with family: "+(user.hasRepatriationStory()?"yes":"no")
+            "html": "Reunited with family: " + (user.hasRepatriationStory() ? "yes" : "no")
         }));
         div.appendChild(new Element('h4', {
-            "html": "Looking for family: "+(user.isLookingForFamily()?"yes":"no")
+            "html": "Looking for family: " + (user.isLookingForFamily() ? "yes" : "no")
         }));
+        //if(user.isLookingForFamily()){
+            var looking=div.appendChild(new Element("span",{"class":(user.isLookingForFamily()?"is-looking-for-icon":"not-looking-for-icon")}));
+            new UIPopover(looking,{
+                description:(user.isLookingForFamily()?"Searching family":"Not searching for family"),
+                anchor:UIPopover.AnchorAuto()
+            });
+        //}
+        return div;
+
+    },
+    GetProfileSummaryCardModule: function(item, application) {
+        var me = this;
+        var user = item.getUser();
+        var div = me.GetProfileSummaryUserModule(user, application);
+        div.addClass(item.getClassNames());
         return div;
 
     },
@@ -856,23 +1291,23 @@ var StoryMapController = new Class({
 
 
 
-        var getCardLocation=function(card){
-            var me=this;
+        var getCardLocation = function(card) {
+            var me = this;
 
-            var name=card.getAddress();
+            var name = card.getAddress();
             return name;
         };
 
-        var getCardUserName=function(card){
-            var me=this;
+        var getCardUserName = function(card) {
+            var me = this;
 
-            var name=card.getUsersName();
+            var name = card.getUsersName();
             return name;
         };
 
-        var getCardDescription=function(card){
-            var me=this;
-            var description= card.getYear();
+        var getCardDescription = function(card) {
+            var me = this;
+            var description = card.getYear();
             return description;
         };
 
@@ -886,12 +1321,12 @@ var StoryMapController = new Class({
             }), item),
             new Element('h3', {
                 "html": getCardUserName(item),
-                "class":"user-name"
+                "class": "user-name"
             }),
 
             new Element('h3', {
                 "html": getCardLocation(item),
-                "class":"location-name"
+                "class": "location-name"
             }),
             new Element('p', {
                 "html": getCardDescription(item)
@@ -911,6 +1346,11 @@ var StoryMapController = new Class({
                                 item.getFormView(),
                                 item, {
                                     template: "form"
+                                },
+                                function(wizard){
+                                    wizard.addEvent("openStep:once",function(){
+                                        me.displayWizardFlow(item, wizard)
+                                    });
                                 }
                             );
                         }
@@ -932,16 +1372,16 @@ var StoryMapController = new Class({
                             })).show(function(answer) {
 
 
-                                if(answer==true){
+                                if (answer == true) {
 
-                                        (new AjaxControlQuery(CoreAjaxUrlRoot, "delete_story_item", {
-                                            'plugin':'MapStory',
-                                            'id': item.getId(),
-                                            'type': item.getType()
-                                        })).addEvent("success", function(resp) {
-                                            ScoopStories.clearCards()
-                                            ScoopStories.redraw();
-                                        }).execute();
+                                    (new AjaxControlQuery(CoreAjaxUrlRoot, "delete_story_item", {
+                                        'plugin': 'MapStory',
+                                        'id': item.getId(),
+                                        'type': item.getType()
+                                    })).addEvent("success", function(resp) {
+                                        ScoopStories.clearCards()
+                                        ScoopStories.redraw();
+                                    }).execute();
 
                                 }
 
@@ -1077,6 +1517,50 @@ var StoryMapController = new Class({
 var ScoopStories = new StoryMapController();
 
 
+var StoryGroup = new Class({
+    Extends:MockDataTypeItem,
+    initialize: function(config) {
+        var me = this;
+        me._type = "CardGroup";
+        me._config = config;
+    },
+    getCards: function(callback) {
+        var me = this;
+        callback(me._config.cards || []);
+    },
+    getDescription: function() {
+        var me = this;
+        return (typeof me._config.description == "string") ? me._config.description : "Some group of cards";
+    },
+    getTypeOfCard: function() {
+        var me = this;
+        return (typeof me._config.type == "string") ? me._config.type : "Group of cards";
+    },
+    getAddress: function() {
+        return "";
+    },
+    getYear: function() {
+        return "";
+    },
+    getCardMedia: function() {
+        return "";
+    },
+
+    isBirthStory: function() {
+        var me = this;
+        return !!me._config.isBirthStory;
+    },
+    isRepatriationStory: function() {
+        var me = this;
+        return !!me._config.isRepatriationStory;
+    },
+    isAdoptionStory: function() {
+        var me = this;
+        return !!me._config.isAdoptionStory;
+    }
+
+});
+
 var StoryUser = new Class({
     Implements: [Events],
     initialize: function(config) {
@@ -1114,6 +1598,11 @@ var StoryUser = new Class({
                 return;
             }
 
+            if (story.attributes.isAdoptionStory === "true" || story.attributes.isAdoptionStory === true) {
+                me._setAdoptionStoryData(story);
+                return;
+            }
+
 
             if (story.attributes.isRepatriationStory === "true" || story.attributes.isRepatriationStory === true) {
                 me._setRepatriationStoryData(story);
@@ -1148,9 +1637,24 @@ var StoryUser = new Class({
         return me;
 
     },
-    getFirstJourneyStory:function(){
-        var me=this;
-        return me._journeyStories && me._journeyStories.length ? me._journeyStories[0]:false;
+    _setAdoptionStoryData: function(data) {
+
+        var me = this;
+        if (me._adoptionStory) {
+            throw 'Already have adoption story';
+        }
+
+
+        me._adoptionStory = new StoryCard(Object.append(data, {
+            classNames: "adoption-card journey-card",
+        })).setUser(me);
+
+        return me;
+
+    },
+    getFirstJourneyStory: function() {
+        var me = this;
+        return me._journeyStories && me._journeyStories.length ? me._journeyStories[0] : false;
     },
     getFirstStory: function() {
         var me = this;
@@ -1190,32 +1694,43 @@ var StoryUser = new Class({
         return me._birthStory;
     },
 
-    getBirthName:function(){
+    hasAdoptionStory: function() {
+        return !!this._adoptionStory;
+    },
+    getAdoptionStory: function() {
+        var me = this;
+        if (!me._adoptionStory) {
+            throw 'StoryUser does not have adoption story';
+        }
+        return me._adoptionStory;
+    },
 
-        var me=this;
-        if(me._userData&&typeof me._userData.birthName=="string"){
+    getBirthName: function() {
+
+        var me = this;
+        if (me._userData && typeof me._userData.birthName == "string") {
             return me._userData.birthName;
         }
-       
+
 
         return "";
     },
-    knowsBirthName:function(){
+    knowsBirthName: function() {
 
-        var me=this;
-        if(me._userData){
-            return (me._userData.knowsBirthName===true||me._userData.knowsBirthName==="true")&&typeof me._userData.birthName=="string"&&me._userData.birthName!="";
+        var me = this;
+        if (me._userData) {
+            return (me._userData.knowsBirthName === true || me._userData.knowsBirthName === "true") && typeof me._userData.birthName == "string" && me._userData.birthName != "";
         }
-       
+
 
         return false;
     },
 
-    isLookingForFamily:function(){
+    isLookingForFamily: function() {
 
-        var me=this;
-        if(me._userData&&typeof me._userData.searchingFor=="string"){
-            
+        var me = this;
+        if (me._userData && typeof me._userData.searchingFor == "string") {
+            return me._userData.searchingFor.indexOf("Yes")>=0;
         }
 
         return false;
@@ -1279,6 +1794,28 @@ var StoryUser = new Class({
 
 
     },
+    getRealCardsSync: function() {
+
+        var me = this;
+        var cards = [];
+        if (me.hasBirthStory()) {
+            cards.push(me.getBirthStory());
+        }
+
+        if (me.hasAdoptionStory()) {
+            cards.push(me.getAdoptionStory());
+        }
+        var journeyStories = me.getJourneyStories();
+        cards = cards.concat(journeyStories);
+
+        if (me.hasRepatriationStory()) {
+            cards.push(me.getRepatriationStory());
+        }
+
+        return cards;
+
+    },
+
     getCards: function(callback) {
 
         var me = this;
@@ -1286,7 +1823,9 @@ var StoryUser = new Class({
         me.runOnceOnLoad(function() {
 
             var cards = [];
-
+            /*
+             * TODO use profile for search results, or get rid of them 
+             *
             cards.push(
                 (new ProfileSummaryCard(Object.append({
 
@@ -1294,6 +1833,7 @@ var StoryUser = new Class({
                     classNames: "summary-card",
                 }))).setUser(me)
             );
+            */
 
             if (!me.hasBirthStory()) {
                 if (me.canEdit()) {
@@ -1308,6 +1848,9 @@ var StoryUser = new Class({
 
             if (me.hasBirthStory()) {
                 cards.push(me.getBirthStory());
+            }
+            if (me.hasAdoptionStory()) {
+                cards.push(me.getAdoptionStory());
             }
             var journeyStories = me.getJourneyStories();
             cards = cards.concat(journeyStories);
@@ -1489,14 +2032,14 @@ var StoryCard = new Class({
 
     },
 
-    _getAttr:function(field, defaultValue){
+    _getAttr: function(field, defaultValue) {
 
-        if(
-            me._config.attributes&&
-            me._config.attributes[field]&&
-            me._config.attributes[field]!=''&&
-            me._config.attributes[field]!='false'
-            ){
+        if (
+            me._config.attributes &&
+            me._config.attributes[field] &&
+            me._config.attributes[field] != '' &&
+            me._config.attributes[field] != 'false'
+        ) {
 
             return me._config.attributes[field];
         }
@@ -1505,19 +2048,19 @@ var StoryCard = new Class({
 
     },
 
-    getYear:function(){
-        var me=this;
-        if(
-            me._config.attributes&&
-            me._config.attributes.locationDate&&
-            me._config.attributes.locationDate!=''&&
-            me._config.attributes.locationDate!='false'){
+    getYear: function() {
+        var me = this;
+        if (
+            me._config.attributes &&
+            me._config.attributes.locationDate &&
+            me._config.attributes.locationDate != '' &&
+            me._config.attributes.locationDate != 'false') {
 
             return me._config.attributes.locationDate.split('-').shift();
         }
 
         return '{year}';
-            
+
 
     },
 
@@ -1552,11 +2095,34 @@ var StoryCard = new Class({
         return me;
     },
 
-    getUser:function(){
-        var me=this;
+    getUser: function() {
+        var me = this;
         return me._user;
     },
 
+    getTypeOfCard: function() {
+        var me = this;
+
+        if (me.isBirthStory()) {
+            return "Birth";
+        }
+
+        if (me.isRepatriationStory()) {
+            return "Repatriation";
+        }
+
+        if (me.isAdoptionStory()) {
+            return "Adoption";
+        }
+
+
+        return "Journey";
+
+    },
+    isAdoptionStory: function() {
+        var me = this;
+        return me._user && me._user.hasAdoptionStory() && me._user.getAdoptionStory() === me;
+    },
     isBirthStory: function() {
         var me = this;
         return me._user && me._user.hasBirthStory() && me._user.getBirthStory() === me;
@@ -1576,23 +2142,23 @@ var StoryCard = new Class({
     },
 
     getAddress: function() {
-        var me=this;
-        if(me._address){
+        var me = this;
+        if (me._address) {
             return this._address
         }
-       
 
-        if(
-            me._config.attributes&&
-            me._config.attributes.locationName&&
-            me._config.attributes.locationName!=''&&
-            me._config.attributes.locationName!='false'){
 
-            return  this._config.attributes.locationName;
+        if (
+            me._config.attributes &&
+            me._config.attributes.locationName &&
+            me._config.attributes.locationName != '' &&
+            me._config.attributes.locationName != 'false') {
+
+            return this._config.attributes.locationName;
         }
 
         return false;
-       
+
     },
     setAddress: function(address) {
         this._address = address;
@@ -1659,13 +2225,13 @@ var StoryCard = new Class({
         var me = this;
 
 
-        if(
-            me._config.attributes&&
+        if (
+            me._config.attributes &&
             me._config.attributes.locationImages
-            ){
+        ) {
 
-            var images=JSTextUtilities.ParseImages(me._config.attributes.locationImages);
-            if(images.length){
+            var images = JSTextUtilities.ParseImages(me._config.attributes.locationImages);
+            if (images.length) {
                 callback(images[0].url);
                 return;
             }
@@ -1679,6 +2245,17 @@ var StoryCard = new Class({
         }
         return this._user.getIcon(callback);
     },
+    getCardMedia: function() {
+
+        var me = this;
+
+        if (
+            me._config.attributes &&
+            me._config.attributes.locationImages) {
+            return me._config.attributes.locationImages;
+        }
+        return '';
+    },
 
     save: function(callback) {
         var me = this;
@@ -1691,7 +2268,7 @@ var StoryCard = new Class({
             'description': me.getDescription(),
             'attributes': me._attributes || {},
             'location': me._location || null,
-          
+
             'id': me.getId(),
             'type': me.getType()
 
@@ -1750,17 +2327,74 @@ var AdvancedStorySearch = new Class({
     Extends: MockDataTypeItem,
     initialize: function(options) {
         var me = this;
+        me._searchData = {};
         me.parent(options);
 
     },
     save: function(cb) {
 
         var me = this;
+
         ScoopStories.setCardGroup(me, function() {
 
         });
 
     },
+
+    /*form fields*/
+
+    setName: function(name) {
+
+        var me = this;
+        me._searchData.name = name;
+
+    },
+    setDob: function(day) {
+
+        var me = this;
+        me._searchData.dob = day;
+
+    },
+    setMob: function(month) {
+
+        var me = this;
+        me._searchData.mob = month;
+
+    },
+    setYob: function(year) {
+
+        var me = this;
+        me._searchData.yob = year;
+
+    },
+
+    setLob: function(loc) {
+
+        var me = this;
+        me._searchData.lob = loc;
+
+    },
+    setNob: function(name) {
+
+        var me = this;
+        me._searchData.nob = name;
+
+    },
+    setYa: function(year) {
+
+        var me = this;
+        me._searchData.ya = year;
+
+    },
+    setLocation: function(loc) {
+
+        var me = this;
+        me._searchData.location = loc;
+
+    },
+
+
+
     getCards: function(cb) {
 
 
@@ -1768,7 +2402,7 @@ var AdvancedStorySearch = new Class({
         var me = this;
 
 
-        if(me._cards){
+        if (me._cards) {
             cb(me._padCards(me._cards));
             return;
         }
@@ -1785,14 +2419,13 @@ var AdvancedStorySearch = new Class({
             });
 
 
-          
 
-            (new AjaxControlQuery(CoreAjaxUrlRoot, 'get_feature_list', {
+            (new AjaxControlQuery(CoreAjaxUrlRoot, 'advanced_search', {
                 'plugin': 'MapStory',
-                'items': randomIds
+                'search': me._searchData
             })).addEvent('success', function(resp) {
 
-                var randomSearchCards =resp.results.map(function(data){
+                var randomSearchCards = resp.results.map(function(data) {
 
                     var card = new StoryCard(Object.append(data, {
                         classNames: "search-card-detail"
@@ -1805,12 +2438,12 @@ var AdvancedStorySearch = new Class({
                     return card;
                 });
 
-                me._cards=randomSearchCards;
+                me._cards = randomSearchCards;
                 cb(me._padCards(randomSearchCards));
 
             }).execute();
 
-           
+            me._searchData = {};
 
 
         })
@@ -1818,7 +2451,7 @@ var AdvancedStorySearch = new Class({
 
 
     },
-    _padCards:function(searchCards){
+    _padCards: function(searchCards) {
 
 
         var cards = [
@@ -1870,7 +2503,7 @@ var StorySearch = new Class({
                 namedView: "scoopStoryDetail",
                 formatResult: function(data) {
 
-                    var keyword=me.getSearchString();
+                    var keyword = me.getSearchString();
 
                     var card = new StoryCard(Object.append(data, {
                         classNames: "search-card"

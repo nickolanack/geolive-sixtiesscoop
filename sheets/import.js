@@ -27,7 +27,12 @@ function importData(){
   		var row=getNewRowOrRowWith(compare);
 
   		Object.keys(record).forEach(function(key){
-  			var col=getColumn(key);
+        try{
+  			  var col=getColumn(key);
+        }catch(e){
+          console.log('missing column: '+key);
+          return;
+        }
   			var value=record[key];
   			var currentValue=valueAt(row, col);
   			if(currentValue!=value){
