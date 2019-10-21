@@ -995,6 +995,8 @@ var StoryMapController = new Class({
     },
 
     displayWizardFlow: function(item, wizard) {
+        return;
+        
         var me = this;
         wizard.getViewer().addEvent('open:once', function() {
             var el = wizard.getElement();
