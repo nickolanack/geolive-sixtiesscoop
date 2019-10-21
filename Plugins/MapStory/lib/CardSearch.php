@@ -242,7 +242,32 @@ class CardSearch{
 
 		}
 
-		return $list;
+		return $this->formatResults($list);
+
+	}
+
+	protected function formatResults($list){
+
+		$formattedList=array();
+
+
+		array_walk($list, function($item)use(&$formattedList){
+
+			if(!key_exists($item['uid']+'', $formattedList)){
+				$formattedList[$item['uid']+'']=$item;
+				return;
+			}
+
+			if(!key_exists('additionalResults', $formattedList[$item['uid']+''])){
+				$formattedList[$item['uid']+'']['additionalResults']=array();
+			}
+			$formattedList[$item['uid']+'']['additionalResults'][]=$item;
+
+
+		});
+
+
+		return $formattedList;
 
 	}
 
