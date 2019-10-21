@@ -48,7 +48,8 @@
         "name": "External Content",
         "instance": "ExternalContent",
         "parameters": {
-            "youtube-api-key": "XXXX-XXXX"
+            "youtube-api-key": "XXXX-XXXX",
+            "thumbnailUrls": true
         }
     },
     "plugin.7": {
@@ -688,6 +689,7 @@
         "parameters": {
             "widgetTitle": "Scoop Story",
             "target": "forTheMap",
+            "position": "BOTTOM_CENTER",
             "className": "overlay-bar",
             "viewType": "view",
             "namedView": "scoopStoryView",
@@ -706,8 +708,7 @@
             "insertAtTop": false,
             "targetName": "",
             "customScript": "",
-            "readAccess": "public",
-            "position": "BOTTOM_CENTER"
+            "readAccess": "public"
         }
     },
     "widget.11": {
@@ -849,6 +850,7 @@
             "target": "forTheMap",
             "position": "RIGHT_CENTER",
             "customScript": "Search Panel.customScript.js",
+            "namedView": "",
             "readAccess": "public"
         }
     },
@@ -1985,12 +1987,12 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 381,
+                    "y": 255
                 },
                 "_diagramState": {
-                    "x": 322,
-                    "y": 275
+                    "x": 381,
+                    "y": 255
                 },
                 "appliesTo": [
                     "marker"
@@ -2589,6 +2591,50 @@
                         "searchability": "public",
                         "allowMultiple": false,
                         "fieldType": "text",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "storyUser",
+                        "label": "storyUser",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "number",
                         "fieldTextOptions": {
                             "textType": "input",
                             "inputOptions": {
@@ -3790,6 +3836,7 @@
             "target": "forTheMap",
             "position": "LEFT_CENTER",
             "customScript": "Info Panel.customScript.js",
+            "namedView": "",
             "readAccess": "public"
         }
     },
