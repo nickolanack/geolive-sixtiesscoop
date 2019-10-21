@@ -58,8 +58,9 @@ class StoryFormatter {
 
 			if($this->userId>0){
 				if(intval($attributes['storyUser'])!=$this->userId){
-					$attributes['storyUser']=$this->userId;
 					
+					$attributes['storyUser']=$this->userId;
+
 					(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 						"storyUser" => $this->userId,
 					));
