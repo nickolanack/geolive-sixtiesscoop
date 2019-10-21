@@ -984,3 +984,19 @@ span.tag-el {
     padding: 5px 10px;
 }
 
+
+.pb-c:hover:after {
+    opacity:1;
+    transition:opacity 0.5s;
+}
+
+.pb-c:after {
+    opacity: 0;
+    transition-delay: 2s;
+    transition: opacity 1s;
+    
+}
+.pb-c {
+    padding-top: 0;
+}
+
