@@ -10,9 +10,14 @@ class StoryFormatter {
 	protected $indexOfBirthStory = -1;
 
 	protected $hasAdoptionStory = false;
+	protected $userId=-1;
 
 	public function setCommitChanges($bool) {
 		$this->makeChanges = true;
+		return $this;
+	}
+	public function forUser($id) {
+		$this->userId = $id;
 		return $this;
 	}
 	public function format($list) {
@@ -51,6 +56,18 @@ class StoryFormatter {
 
 			}
 
+			if($this->userId>0){
+				if(intval($attributes['storyUser'])!=$this->userId){
+					$attributes['storyUser']=$this->userId;
+					
+					(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
+						"storyUser" => $this->userId,
+					));
+				}
+				
+			}
+			
+
 
 			$feature['attributes'] = $attributes;
 		}
@@ -61,6 +78,7 @@ class StoryFormatter {
 
 				$list[$i]['attributes']['nextLocationData'] = $list[$i]['attributes']['locationData'];
 
+
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"nextLocationData" => json_encode($list[$i + 1]['attributes']['locationData']),
 				));
@@ -68,6 +86,10 @@ class StoryFormatter {
 			}
 
 		}
+
+
+
+
 
 		return $list;
 

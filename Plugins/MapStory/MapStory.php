@@ -122,7 +122,8 @@ class MapStory extends \Plugin implements
 			});
 
 		return (new \MapStory\StoryFormatter())
-			->setCommitChanges(true)
+			->setCommitChanges(true),
+			->forUser($userId);
 			->format($list);
 
 	}

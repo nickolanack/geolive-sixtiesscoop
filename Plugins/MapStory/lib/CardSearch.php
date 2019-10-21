@@ -63,8 +63,15 @@ class CardSearch{
 
 	}
 
-
+	/**
+	 * "search":{"name":false,"dob":false,"mob":false,"yob":false,"lob":false,"nob":false,"ya":false,"location":false}}
+	 * @param  [type] $fields [description]
+	 * @return [type]         [description]
+	 */
 	public function searchStoriesAdvanced($fields) {
+
+
+		
 
 		GetPlugin('Maps');
 		GetPlugin('Attributes');
@@ -133,12 +140,22 @@ class CardSearch{
 		}
 
 
-		if (key_exists('ya', $fields)&&(!empty($fields->lob))) {
+		if (key_exists('ya', $fields)&&(!empty($fields->ya))) {
+
+
+			/**
+			 * Year adopted is specific to isAdoption story card only
+			 */
+
 			$attributeFilters[] = array("filters"=>array(array(
 				'field' => 'locationName',
 				'comparator' => 'contains',
-				'value' => $fields->lob
+				'value' => $fields->ya
 			), $isBirthStory));
+
+
+
+
 
 		}
 
