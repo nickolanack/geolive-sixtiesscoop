@@ -108,6 +108,7 @@ class StoryFormatter {
 
 
 
+
 		return $list;
 
 	}

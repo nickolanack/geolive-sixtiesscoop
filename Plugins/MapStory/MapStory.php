@@ -13,6 +13,8 @@ class MapStory extends \Plugin implements
 	protected $name = 'Create Map Stories';
 	protected $description = 'Allows users to create stories by connecting map items';
 
+	protected $cacheUserMeta=array();
+
 	// protected function onFacebookLogin($params){
 
 	// }
@@ -69,13 +71,19 @@ class MapStory extends \Plugin implements
 		return (new \MapStory\CardFormatter())->format($feature, $attributes);
 	}
 
+	
+
 	public function getUsersMetadata($userId = -1) {
 
 		if ($userId == -1) {
 			$userId = GetClient()->getUserId();
 		}
 
-		return (new \attributes\Record('profileAttributes'))->getValues($userId, "user");
+		if(!key_exists($userId, $this->cacheUserMeta)){
+			$this->cacheUserMeta[$userId]=(new \attributes\Record('profileAttributes'))->getValues($userId, "user");
+		}
+
+		return $this->cacheUserMeta[$userId];
 
 	}
 

@@ -90,6 +90,23 @@ class CardSearch{
 			);
 		}
 
+
+		if (key_exists('nob', $fields)&&(!empty($fields->nob))) {
+
+
+			/**
+			 * Name of birth (Name at birth) is specific profile but is embedded in the marker name for each story location
+			 */
+
+			$filter[] = array(
+				'field' => 'name',
+				'comparator' => ' LIKE ',
+				'value' => '%(%' . $fields->nob . '%)%',
+			);
+
+		}
+
+
 		if (!empty($filter)) {
 
 			$filter["join"] = "OR";
@@ -147,17 +164,12 @@ class CardSearch{
 			 * Year adopted is specific to isAdoption story card only
 			 */
 
-			$attributeFilters[] = array("filters"=>array(array(
-				'field' => 'locationName',
-				'comparator' => 'contains',
-				'value' => $fields->ya
-			), $isBirthStory));
-
-
-
 
 
 		}
+
+
+		
 
 
 		$dateOfBirthFilter=array();
