@@ -979,5 +979,8 @@ div.empty-section {
         text-align: left;
 }
 
-ya
+span.tag-el {
+    margin: 5px;
+    padding: 5px 10px;
+}
 
