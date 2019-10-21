@@ -1000,3 +1000,39 @@ span.tag-el {
     padding-top: 0;
 }
 
+
+
+.fork-this-project>.tileButtonContainer {
+    transform: rotate(-45deg);
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 100px solid black;
+    position: relative;
+    left: 72px;
+    top: 33px;
+}
+
+.fork-this-project:after {
+    content: "Map Your Project";
+    position: absolute;
+    left: 130px;
+    top: 50px;
+    color: white;
+    font-size: 14px;
+    z-index: 999;
+    transform: rotate(-45deg);
+    text-align: center;
+    pointer-events: none;
+    
+}
+
+
+
+
+
+
+
+
+
