@@ -31,6 +31,7 @@ class StoryFormatter {
 		foreach ($list as $index => &$feature) {
 
 			$attributes = $feature['attributes'];
+			$attributesOriginal=$attributes;
 
 			if ($this->shouldBeBirthStory($attributes, $index)) {
 				$attributes = $this->setAsBirthStory($attributes, $index);
@@ -61,13 +62,24 @@ class StoryFormatter {
 					
 					$attributes['storyUser']=$this->userId;
 
-					(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
-						"storyUser" => $this->userId,
-					));
+					
 				}
 				
 			}
 			
+			if($this->makeChanges){
+				$updates=array();
+				foreach($attributes as $key=>$value){
+					if($value!==$attributesOriginal[$key]){
+						$updates[$key]=$value;
+					}
+				}
+				if(!empty($updates)){
+					error_log(print_r($updates, true));
+					error_log(print_r($attributesOriginal));
+					//(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", $updates);
+				}
+			}
 
 
 			$feature['attributes'] = $attributes;
