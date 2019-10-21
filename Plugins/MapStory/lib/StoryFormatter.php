@@ -61,7 +61,7 @@ class StoryFormatter {
 					
 					$attributes['storyUser']=$this->userId;
 
-					(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
+					(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", array(
 						"storyUser" => $this->userId,
 					));
 				}
