@@ -267,7 +267,7 @@ class CardSearch{
 		});
 
 
-		return $formattedList;
+		return array_values($formattedList);
 
 	}
 
