@@ -253,15 +253,15 @@ class CardSearch{
 
 		array_walk($list, function($item)use(&$formattedList){
 
-			if(!key_exists($item['uid']+'', $formattedList)){
-				$formattedList[$item['uid']+'']=$item;
+			if(!key_exists($item['uid'].'', $formattedList)){
+				$formattedList[$item['uid'].'']=$item;
 				return;
 			}
 
-			if(!key_exists('additionalResults', $formattedList[$item['uid']+''])){
-				$formattedList[$item['uid']+'']['additionalResults']=array();
+			if(!key_exists('additionalResults', $formattedList[$item['uid'].''])){
+				$formattedList[$item['uid'].'']['additionalResults']=array();
 			}
-			$formattedList[$item['uid']+'']['additionalResults'][]=$item;
+			$formattedList[$item['uid'].'']['additionalResults'][]=$item;
 
 
 		});
