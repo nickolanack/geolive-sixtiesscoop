@@ -177,7 +177,11 @@ var UIDispersionGraph = (function() {
 				});
 
 			if(layers.length){
-				me._map.fitBounds(SpatialCalculator.calculateBounds(layers));
+				var bounds=SpatialCalculator.calculateBounds(layers);
+				if(bounds.south==Infinity){
+					return;
+				}
+				me._map.fitBounds(bounds);
 			}
 			
 		},
