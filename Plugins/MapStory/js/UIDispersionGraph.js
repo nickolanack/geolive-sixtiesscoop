@@ -172,17 +172,26 @@ var UIDispersionGraph = (function() {
 		focusLayers: function() {
 
 			var me = this;
-			var layers=me.getLayers().filter(function(l){
+			if(me._focusTimeout){
+				clearTimeout(me._focusTimeout);
+				delete me._focusTimeout;
+			}
+			me._focusTimeout=setTimeout(function(){
+				delete me._focusTimeout;
+				var layers=me.getLayers().filter(function(l){
 					return l.isVisible();
 				});
 
-			if(layers.length){
-				var bounds=SpatialCalculator.calculateBounds(layers);
-				if(bounds.south==Infinity){
-					return;
+				if(layers.length){
+					var bounds=SpatialCalculator.calculateBounds(layers);
+					if(bounds.south==Infinity){
+						return;
+					}
+					me._map.fitBounds(bounds);
 				}
-				me._map.fitBounds(bounds);
-			}
+
+			}, 100);
+			
 			
 		},
 
