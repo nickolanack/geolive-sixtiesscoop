@@ -313,16 +313,24 @@ var UIDispersionGraph = (function() {
 
 						if(callback){
 
-							if(me["_interval"+code]){
-								clearInterval(me["_interval"+code]);
-								delete me["_interval"+code];
+							var updateCount=function(){
+
+								if(me["_interval"+code]){
+									clearInterval(me["_interval"+code]);
+									delete me["_interval"+code];
+								}
+
+								me["_interval"+code]=setTimeout(function(){
+									delete me["_interval"+code];
+									callback(me.getLayer(code).getItemsCount());
+								}, 100);
 							}
+							updateCount();
 
-							me["_interval"+code]=setTimeout(function(){
-								delete me["_interval"+code];
-								callback(me.getLayer(code).getItemsCount());
-							}, 100);
-
+							me.addEvent('addLine.'+code, updateCount);
+							me.addEvent('deactivate:once', function() {
+								me.removeEvent('addLine.'+code, updateCount);
+							});
 							
 							return;
 						}
