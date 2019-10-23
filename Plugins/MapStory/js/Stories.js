@@ -516,7 +516,11 @@ var StoryMapController = new Class({
 
 
             me._sidePanel.getElement().addClass('analytics');
+            me._searchPanel.hide();
+            me._searchPanel.getElement().addClass('disabled');
             graph.addEvent('deactivate:once', function() {
+                
+                me._searchPanel.getElement().removeClass('disabled');
                 me._sidePanel.getElement().removeClass('analytics');
                 me.fireEvent('hideDispersion', [graph]);
                 if (activeCard) {
@@ -541,6 +545,7 @@ var StoryMapController = new Class({
     initializeSidePanelRight: function(sidePanel, el) {
 
         var me = this;
+        me._searchPanel = sidePanel;
         var sidePanelViewer = new ContentModuleViewer(el, {});
 
 
