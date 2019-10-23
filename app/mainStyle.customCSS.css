@@ -227,6 +227,10 @@ span.delete-btn, span.edit-btn {
     overflow: hidden auto;
 }
 
+.sidebar-view.analytics {
+    max-height: 100%;
+}
+
 .SideBarWidget.left .toggle-button:after, .SideBarWidget.right .toggle-button:after {
     content: "Click here to reopen this tab";
     position:absolute;
