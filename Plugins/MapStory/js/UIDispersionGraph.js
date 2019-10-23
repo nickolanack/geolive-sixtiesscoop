@@ -360,8 +360,6 @@ var UIDispersionGraph = (function() {
 				"QC",
 				"ON"	
 				
-
-
 			];
 
 		},

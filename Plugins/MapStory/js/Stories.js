@@ -515,8 +515,9 @@ var StoryMapController = new Class({
             me._storyView.hide();
 
 
-
+            me._sidePanel.getElement().addClass('analytics');
             graph.addEvent('deactivate:once', function() {
+                me._sidePanel.getElement().removeClass('analytics');
                 me.fireEvent('hideDispersion', [graph]);
                 if (activeCard) {
                     me.focusCard(activeCard);
