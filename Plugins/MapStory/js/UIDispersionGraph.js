@@ -98,6 +98,8 @@ var UIDispersionGraph = (function() {
 						line.setLayer(me.getLayer(code));
 						me.addLegend(code);
 
+						me.fireEvent('addLine.'+code,[line, code]);
+
 
 					});
 
@@ -307,7 +309,24 @@ var UIDispersionGraph = (function() {
 					getTitle:function(){ 
 						return code;
 					},
-					getCount:function(){ 
+					getCount:function(callback){ 
+
+						if(callback){
+
+							if(me["_interval"+code]){
+								clearInterval(me["_interval"+code]);
+								delete me["_interval"+code];
+							}
+
+							me["_interval"+code]=setTimeout(function(){
+								delete me["_interval"+code];
+								callback(me.getLayer(code).getItemsCount());
+							}, 100);
+
+							
+							return;
+						}
+
 						return me.getLayer(code).getItemsCount();
 					}
 				}
