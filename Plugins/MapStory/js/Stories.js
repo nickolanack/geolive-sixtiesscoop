@@ -1229,13 +1229,25 @@ var StoryMapController = new Class({
         }
         //else{
             if (user.isContactable()) {
-                var contact = div.appendChild(new Element("button", {
+
+
+                new UIModalFormButton(div.appendChild(new Element("button", {
                     "class": "contact-btn",
                     "html": "Contact User"
-                }));
+                })), application, user, {
+
+
+                    formName: "contactUserForm",
+
+
+                });
+
+
+              
 
                  if (user.isSharingEmail()) {
                     div.appendChild(new Element('p', {
+                        style:"display: inline-block;",
                         html: "<a href=\"mailto:"+user.getSharedEmail()+"\">"+user.getSharedEmail()+"</a>",
                         "class": "info",
                     }));
