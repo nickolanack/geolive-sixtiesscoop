@@ -110,6 +110,42 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 	protected function sendMessage($json){
 		$user=$this->getPlugin()->getUsersMetadata($json->user);
+
+
+		if(!($user['allowContact']==="true"||$user['allowContact']===true)){
+
+		}
+			
+
+		$email=$user["email"];
+
+		$email='nickblackwell82@gmail.com';
+
+
+		if(GetClient()->isGuest()){
+
+			 $links=GetPlugin('Links');
+             $emailToken=$links->createDataCode('onVerifyEmailMessageLink', $json);
+             return array(
+             	'token'=>$emailToken
+             );
+             
+		}
+
+		GetPlugin('Email')->getMailerWithTemplate('contact.message', array(
+			'subject'=$json->subject,
+			'message'=$json->message,
+			'user'=>$user,
+			'sender'=>GetClient()->getUserMetadata()
+		))
+		->to($email)
+		->send();
+	
+		return array('user'=>$user);
+
+
+
+
 		return array('user'=>$user);
 	}
 
