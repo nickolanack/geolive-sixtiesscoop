@@ -4388,7 +4388,7 @@
             "templateName": "faq",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "Faq.onRenderApplictionScript.js",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
