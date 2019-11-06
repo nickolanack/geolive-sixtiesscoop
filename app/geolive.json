@@ -2701,16 +2701,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 375,
-                            "y": 231
+                            "x": 385,
+                            "y": 241
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 335,
-                                    "y": 432
+                                    "x": 345,
+                                    "y": 454
                                 }
                             }
                         ],
@@ -2808,7 +2808,7 @@
                                                 "formatter": "none",
                                                 "iconTint": "rgb(100, 149, 237)",
                                                 "autocomplete": true,
-                                                "inputOptions": "{}",
+                                                "inputOptions": "{\n    \n    \"listValues\":[\"Repatriation\", \"Cultural Healing resources\", \"Addiction\/Treatment\", \"Gatherings\", \"Obtaining Status\"]\n}",
                                                 "onRenderTextFieldScript": "",
                                                 "formatdefaultScript": ""
                                             }
