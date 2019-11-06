@@ -608,7 +608,12 @@ span.array-module.ui-list-view.story-list {
     white-space:nowrap;
 }
 
-
+.journey-card .inline-btn {
+    background: transparent;
+    border: none;
+    color: cornflowerblue;
+    font-style: italic;
+}
 
 
 /*Forms*/
