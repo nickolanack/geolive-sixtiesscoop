@@ -153,6 +153,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "disclaimer"
+                },
+                {
+                    "name": "faq",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "faq"
                 }
             ]
         }
