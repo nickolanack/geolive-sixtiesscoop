@@ -2,9 +2,9 @@
     "type": "FormTextField",
     "config": {
         "className": "",
-        "label": "Send user a message",
-        "placeholder": "add value",
-        "lines": 3,
+        "label": "Subject",
+        "placeholder": "add a subject",
+        "lines": 1,
         "maxChars": 0,
         "mandatory": false,
         "multiEntry": false,
@@ -13,9 +13,9 @@
         "formatter": "none",
         "onRenderTextFieldScript": "",
         "formatValueScript": "",
-        "getValueScript": " return \"Hello World\"; ",
+        "getValueScript": " return \"\"; ",
         "updateValueScript": " object.value=value ",
-        "submitValueScript": "",
+        "submitValueScript": "wizardDataSet.subject=object.value",
         "validateValueScript": " return defaultValidationFn() "
     }
 }
