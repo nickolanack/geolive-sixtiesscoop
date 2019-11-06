@@ -350,11 +350,19 @@ var StoryUser = new Class({
 	canEdit: function() {
 		var me = this;
 
-		if (me._userData && parseInt(me._userData.id) === AppClient.getId()) {
+		if (me.isClient()) {
 			return true;
 		}
 
 		return AppClient.getUserType() === "admin";
+	},
+	isClient:function(){
+		var me = this;
+
+		if (me._userData && parseInt(me._userData.id) === AppClient.getId()) {
+			return true;
+		}
+		return false;
 	},
 	getCardsLabel: function(callback) {
 

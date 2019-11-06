@@ -1216,6 +1216,27 @@ var StoryMapController = new Class({
                 "html": "user does not want to be contacted through the site"
             }));
         }
+
+        if(user.isClient()){
+
+            new UIModalFormButton(div, application, AppClient, {
+                 
+                    label: "Edit your profile",
+                    formName: "profileFormView",
+                    "class": "inline-btn profile"
+        
+            
+             });
+             new UIModalFormButton(div, application, AppClient, {
+                 
+                    label: "Sharing and searching options",
+                    formName: "publishingOptionsForm",
+                    "class": "inline-btn publishing-options"
+            
+            
+             });
+         }
+
        
         new UIPopover(looking, {
             description: (user.isLookingForFamily() ? "Searching family" : "Not searching for family"),
