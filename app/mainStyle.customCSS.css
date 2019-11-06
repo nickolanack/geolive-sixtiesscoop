@@ -610,14 +610,17 @@ span.array-module.ui-list-view.story-list {
     white-space:nowrap;
 }
 
-.journey-card .inline-btn, .edit.inline-btn {
+.journey-card .inline-btn, .edit.inline-btn, .delete.inline-btn {
     background: transparent;
     border: none;
     color: cornflowerblue;
     font-style: italic;
 }
-.edit.inline-btn {
+.edit.inline-btn, .delete.inline-btn {
     float:right;
+}
+.delete.inline-btn {
+     color: crimson;
 }
 
 
