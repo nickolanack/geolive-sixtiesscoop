@@ -3225,16 +3225,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 395,
-                            "y": 251
+                            "x": 405,
+                            "y": 261
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 355,
-                                    "y": 439
+                                    "x": 365,
+                                    "y": 462
                                 }
                             }
                         ],
@@ -3316,6 +3316,22 @@
                                                 ],
                                                 "className": "",
                                                 "label": "Allow people to contact you thought the site",
+                                                "showLabel": false,
+                                                "presentationStyle": "radio",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
+                                                ],
+                                                "className": "Share your email address",
+                                                "label": "",
                                                 "showLabel": false,
                                                 "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
