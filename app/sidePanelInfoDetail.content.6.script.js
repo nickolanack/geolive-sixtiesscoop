@@ -47,7 +47,7 @@ new UIModalFormButton(editBtn, ScoopStories.getMap(), item, {
 
             });
             
-            var span=new Element('span');
+            var span=new Element('span',{"style":"float:right;"});
             span.appendChild(deleteBtn);
             span.appendChild(editBtn);
             
