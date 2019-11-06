@@ -1237,7 +1237,8 @@ var StoryMapController = new Class({
                 })), application, new UserContact(user), {
 
 
-                    formName: "contactUserForm",
+
+                    formName: AppClient.getUserType() == "guest"?"loginForm":"contactUserForm",
 
 
                 });
