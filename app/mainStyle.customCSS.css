@@ -466,7 +466,8 @@ span.array-module.ui-list-view.story-list {
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
-.profile-section  .primary-btn, .sort-card button, .module-wizard .form-btn.register, .contact-btn{
+.profile-section  .primary-btn, .sort-card button, 
+.module-wizard .form-btn.register, .contact-btn, .upload-btns span.video:after, .upload-btns span.image:after{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -708,6 +709,10 @@ textarea[disabled] {
     left: 30px;
     line-height: 30px;
     color: cornflowerblue;
+}
+
+.your-profile-image span.video.noIcon {
+    display: none;
 }
 
 .hidden {
