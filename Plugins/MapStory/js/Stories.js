@@ -517,10 +517,10 @@ var StoryMapController = new Class({
 
             me._sidePanel.getElement().addClass('analytics');
             me._searchPanel.hide();
-            me._searchPanel.getElement().addClass('disabled');
+            me._searchPanel.disable();
             graph.addEvent('deactivate:once', function() {
                 
-                me._searchPanel.getElement().removeClass('disabled');
+                 me._searchPanel.enable();
                 me._sidePanel.getElement().removeClass('analytics');
                 me.fireEvent('hideDispersion', [graph]);
                 if (activeCard) {
@@ -1202,6 +1202,16 @@ var StoryMapController = new Class({
         var looking = div.appendChild(new Element("span", {
             "class": (user.isLookingForFamily() ? "is-looking-for-icon" : "not-looking-for-icon")
         }));
+
+
+        if(user.isContactable()){
+             var contact = div.appendChild(new Element("button", {
+                     "class":"contact-btn",
+                    "html":"Contact User"
+            }));
+
+        }
+       
         new UIPopover(looking, {
             description: (user.isLookingForFamily() ? "Searching family" : "Not searching for family"),
             anchor: UIPopover.AnchorAuto()

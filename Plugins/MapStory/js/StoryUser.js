@@ -176,6 +176,18 @@ var StoryUser = new Class({
 		return false;
 	},
 
+
+	isContactable: function() {
+
+		var me = this;
+		if (me._userData) {
+			return me._userData.allowContact==="true"||me._userData.allowContact===true;
+		}
+
+		return false;
+	},
+
+
 	_setRepatriationStoryData: function(data) {
 		var me = this;
 		if (me._repatriationStory) {
