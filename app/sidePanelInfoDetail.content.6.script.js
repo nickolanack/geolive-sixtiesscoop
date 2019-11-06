@@ -2,7 +2,7 @@
 if(item.canEdit&&item.canEdit()){
 var btn=new Element('button', {
                 html: "edit",
-                "class": "inline-btn profile"
+                "class": "inline-btn edit"
             })
 new UIModalFormButton(btn, ScoopStories.getMap(), item, {
 
