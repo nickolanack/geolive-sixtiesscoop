@@ -88,13 +88,13 @@
                     "label": "Searching For",
                     "description": "",
                     "fieldType": "text",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldTextOptions": {
                         "textType": "options",
                         "inputOptions": {
-                            "buildAutocomplete": true,
+                            "buildAutocomplete": false,
                             "requireModeration": false,
                             "limitMaxChars": 0,
                             "limitMaxWords": 0,
@@ -312,6 +312,28 @@
                             "iconize": false,
                             "colorize": false
                         }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "1",
+                    "tableName": "profileAttributes",
+                    "tableSuffix": "_2634",
+                    "title": "allowContact",
+                    "label": "Allow Contact",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false,
+                        "trueIcon": false,
+                        "falseIcon": false
                     },
                     "allowMultiple": false
                 }
