@@ -80,7 +80,14 @@ class MapStory extends \Plugin implements
 		}
 
 		if(!key_exists($userId, $this->cacheUserMeta)){
-			$this->cacheUserMeta[$userId]=(new \attributes\Record('profileAttributes'))->getValues($userId, "user");
+			$userData=(new \attributes\Record('profileAttributes'))->getValues($userId, "user");
+
+			if($userData['shareEmail']==="true"||$userData['shareEmail']===true){
+				$userData["email"]=GetClient()->userMetadataFor($userId)['email'];
+			}
+			$this->cacheUserMeta[$userId]=$userData;
+
+
 		}
 
 		return $this->cacheUserMeta[$userId];
