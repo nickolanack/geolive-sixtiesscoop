@@ -1226,12 +1226,20 @@ var StoryMapController = new Class({
 
 
             });
-        }else{
+        }
+        //else{
             if (user.isContactable()) {
                 var contact = div.appendChild(new Element("button", {
                     "class": "contact-btn",
                     "html": "Contact User"
                 }));
+
+                 if (user.isSharingEmail()) {
+                    div.appendChild(new Element('p', {
+                        html: "<a href=\"mailto:"+user.getSharedEmail()+"\">"+user.getSharedEmail()+"</a>",
+                        "class": "info",
+                    }));
+                }
 
             } else {
                 div.appendChild(new Element('p', {
@@ -1239,7 +1247,7 @@ var StoryMapController = new Class({
                     "html": "user does not want to be contacted through the site"
                 }));
             }
-        }
+        //}
 
 
         new UIPopover(looking, {

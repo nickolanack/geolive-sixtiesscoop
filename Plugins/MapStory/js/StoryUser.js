@@ -187,6 +187,25 @@ var StoryUser = new Class({
 		return false;
 	},
 
+	isSharingEmail: function() {
+
+		var me = this;
+		if (me._userData) {
+			return me._userData.shareEmail==="true"||me._userData.shareEmail===true;
+		}
+
+		return false;
+	},
+
+	getSharedEmail: function() {
+
+		var me = this;
+		if (me._userData&&typeof me._userData.email=="string") {
+			return me._userData.email;
+		}
+		return "";
+	},
+
 
 	_setRepatriationStoryData: function(data) {
 		var me = this;
