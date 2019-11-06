@@ -3181,16 +3181,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 385,
-                            "y": 241
+                            "x": 395,
+                            "y": 251
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 345,
-                                    "y": 429
+                                    "x": 355,
+                                    "y": 439
                                 }
                             }
                         ],
@@ -3258,6 +3258,22 @@
                                                 "label": "Are you searching? Would you like your information to be public and posted on this website?",
                                                 "showLabel": false,
                                                 "presentationStyle": "checkbox",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No",
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": []
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Allow people to contact you thought the site",
+                                                "showLabel": false,
+                                                "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
