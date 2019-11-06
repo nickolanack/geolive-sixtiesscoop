@@ -1209,7 +1209,7 @@ var StoryMapController = new Class({
         if (user.isClient()) {
 
             new UIModalFormButton(nameEl.appendChild(new Element('button', {
-                html: "",
+                html: "edit",
                 "class": "inline-btn profile"
             })), application, AppClient, {
 
@@ -1217,7 +1217,7 @@ var StoryMapController = new Class({
 
             });
             new UIModalFormButton(looking.appendChild(new Element('button', {
-                html: "",
+                html: "edit",
                 "class": "inline-btn publishing-options"
             })), application, AppClient, {
 
