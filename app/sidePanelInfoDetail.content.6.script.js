@@ -4,7 +4,7 @@ var btn=new Element('button', {
                 html: "edit",
                 "class": "inline-btn profile"
             })
-new UIModalFormButton(btn, application, item, {
+new UIModalFormButton(btn, ScoopStories.getMap(), item, {
 
                 formName: item.getFormView()
 
