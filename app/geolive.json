@@ -4386,7 +4386,7 @@
             "widgetTitle": "Faq",
             "target": "faq",
             "templateName": "faq",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "notifyViewer": false,
