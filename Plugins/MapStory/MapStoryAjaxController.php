@@ -129,12 +129,12 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
              return array(
              	'token'=>$emailToken
              );
-             
+
 		}
 
 		GetPlugin('Email')->getMailerWithTemplate('contact.message', array(
-			'subject'=$json->subject,
-			'message'=$json->message,
+			'subject'=>$json->subject,
+			'message'=>$json->message,
 			'user'=>$user,
 			'sender'=>GetClient()->getUserMetadata()
 		))
