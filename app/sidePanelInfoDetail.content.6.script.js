@@ -3,7 +3,7 @@ if(item.canEdit&&item.canEdit()){
     
     
   var deleteBtn=new Element('button', {
-                    html: "edit",
+                    html: "delete",
                     "class": "inline-btn delete",
                     events: {
                         click: function(e) {
