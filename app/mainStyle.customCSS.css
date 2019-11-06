@@ -96,7 +96,7 @@ button.forward{
     background: none;
 }
 
-button.disclaimer.primary-btn {
+button.disclaimer.primary-btn{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -466,7 +466,7 @@ span.array-module.ui-list-view.story-list {
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
-.profile-section  .primary-btn, .sort-card button, .module-wizard .form-btn.register {
+.profile-section  .primary-btn, .sort-card button, .module-wizard .form-btn.register, .contact-btn{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -480,6 +480,7 @@ span.array-module.ui-list-view.story-list {
     border-radius:3px;
 }
 
+.contact-btn{}
 
 .flow-left {
     position: absolute;
