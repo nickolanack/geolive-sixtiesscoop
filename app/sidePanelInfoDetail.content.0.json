@@ -1,7 +1,7 @@
 {
     "type": "FormattedText",
     "config": {
-        "textValueScript": "\nif(item instanceof StoryCard){\n    var h2 = new Element(\"h2\",{\n        html:item.getTypeOfCard()+\" Story\"\n        });\n        \n        return h2;\n}\nreturn \"<h2>\"+item.getTypeOfCard()+\"<\/h2>\";",
+        "textValueScript": "\nif(item instanceof StoryCard){\n    var h2 = new Element(\"h2\",{\n        html:item.getTypeOfCard()+\" Story\"\n        });\n        \n        new UIModalFormButton(h2.appendChild(new Element('button', {\n                html: \"edit\",\n                \"class\": \"inline-btn profile\"\n            })), application, item, {\n\n                formName: item.getFormView()\n\n            });\n        \n        return h2;\n}\nreturn \"<h2>\"+item.getTypeOfCard()+\"<\/h2>\";",
         "formatModuleScript": "",
         "className": "",
         "imageWidth": 300,
