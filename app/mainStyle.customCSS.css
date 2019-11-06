@@ -1034,8 +1034,10 @@ span.tag-el {
 
 
 
-
-
+p.info {
+    color: cornflowerblue;
+    font-style: italic;
+}
 
 
 
