@@ -466,7 +466,8 @@ span.array-module.ui-list-view.story-list {
 .primary-btn, .inline-btn {
     cursor: pointer;
 }
-.profile-section  .primary-btn, .sort-card button, .module-wizard .form-btn.register, .contact-btn{
+.profile-section  .primary-btn, .sort-card button, 
+.module-wizard .form-btn.register, .contact-btn, .upload-btns span.video:after, .upload-btns span.image:after{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -608,7 +609,12 @@ span.array-module.ui-list-view.story-list {
     white-space:nowrap;
 }
 
-
+.journey-card .inline-btn {
+    background: transparent;
+    border: none;
+    color: cornflowerblue;
+    font-style: italic;
+}
 
 
 /*Forms*/
@@ -680,29 +686,40 @@ textarea[disabled] {
 }
 
 
-.upload-btns span.image {
-    width: 30px;
-    height: 30px;
+.upload-btns span.image, .upload-btns span.video  {
     background-size: 100%;
     display: inline-block;
-    position: relative;
+    text-align: right;
+}
+
+
+.upload-btns span.image:after, .upload-btns span.video:after {
+   
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0;
+    margin-left: 10px;
 }
 
 .upload-btns span.image:after {
     content: "add image";
-    white-space: nowrap;
-    position: absolute;
-    left: 30px;
-    line-height: 30px;
-    color: cornflowerblue;
+
 }
 .upload-btns span.video:after {
     content: "add video";
-    white-space: nowrap;
-    position: absolute;
-    left: 30px;
-    line-height: 30px;
-    color: cornflowerblue;
+
+}
+
+.your-profile-image .upload-btns span.image {
+    float: right;
+}
+
+.your-profile-image .upload-btns span.image:after {
+    content: "select image";
+}
+
+.your-profile-image span.video.noIcon {
+    display: none;
 }
 
 .hidden {
