@@ -108,4 +108,9 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 	}
 
 
+	protected function sendMessage($json){
+		$user=$this->getPlugin()->getUsersMetadata($json->user);
+		return array('user'=>$user);
+	}
+
 }

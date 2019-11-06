@@ -10,5 +10,6 @@
 	"get_feature_list":{},
 	"get_dispersion_graph":{
 		 "profile":true
-	}
+	},
+	"send_message":{}
 }
