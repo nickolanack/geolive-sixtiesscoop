@@ -1160,7 +1160,7 @@ var StoryMapController = new Class({
         var div = new Element('div', {
 
         });
-        div.appendChild(new Element('h3', {
+        var nameEl=div.appendChild(new Element('h3', {
             "html": "Name: " + user.getUsersName()
         }));
 
@@ -1204,31 +1204,20 @@ var StoryMapController = new Class({
         }));
 
 
-        if (user.isContactable()) {
-            var contact = div.appendChild(new Element("button", {
-                "class": "contact-btn",
-                "html": "Contact User"
-            }));
-
-        } else {
-            div.appendChild(new Element('p', {
-                "class": "info",
-                "html": "user does not want to be contacted through the site"
-            }));
-        }
+        
 
         if (user.isClient()) {
 
-            new UIModalFormButton(div.appendChild(new Element('button', {
-                html: "Edit your profile",
+            new UIModalFormButton(nameEl.appendChild(new Element('button', {
+                html: "",
                 "class": "inline-btn profile"
             })), application, AppClient, {
 
                 formName: "profileFormView"
 
             });
-            new UIModalFormButton(div.appendChild(new Element('button', {
-                html: "Sharing and searching options",
+            new UIModalFormButton(looking.appendChild(new Element('button', {
+                html: "",
                 "class": "inline-btn publishing-options"
             })), application, AppClient, {
 
@@ -1237,6 +1226,19 @@ var StoryMapController = new Class({
 
 
             });
+        }else{
+            if (user.isContactable()) {
+                var contact = div.appendChild(new Element("button", {
+                    "class": "contact-btn",
+                    "html": "Contact User"
+                }));
+
+            } else {
+                div.appendChild(new Element('p', {
+                    "class": "info",
+                    "html": "user does not want to be contacted through the site"
+                }));
+            }
         }
 
 
