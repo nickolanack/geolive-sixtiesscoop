@@ -4678,9 +4678,11 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "Message Content",
+            "contentTemplate": "email-contact-message-content.contentTemplate.html",
             "widgetTitle": "email.contact.message.content",
-            "target": "email.contact.message.content"
+            "target": "email.contact.message.content",
+            "comments": "",
+            "readAccess": "public"
         }
     }
 }
