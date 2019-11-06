@@ -1195,7 +1195,7 @@ var StoryMapController = new Class({
         div.appendChild(new Element('h4', {
             "html": "Reunited with family: " + (user.hasRepatriationStory() ? "yes" : "no")
         }));
-        div.appendChild(new Element('h4', {
+        var lookingEl=div.appendChild(new Element('h4', {
             "html": "Looking for family: " + (user.isLookingForFamily() ? "yes" : "no")
         }));
         //if(user.isLookingForFamily()){
@@ -1216,7 +1216,7 @@ var StoryMapController = new Class({
                 formName: "profileFormView"
 
             });
-            new UIModalFormButton(looking.appendChild(new Element('button', {
+            new UIModalFormButton(lookingEl.appendChild(new Element('button', {
                 html: "edit",
                 "class": "inline-btn publishing-options"
             })), application, AppClient, {
