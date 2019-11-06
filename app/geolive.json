@@ -4404,7 +4404,25 @@
                     },
                     "content": {
                         "modules": [
-                            "Faq.metadata.positions.content.modules.0.json"
+                            "Faq.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
+                                    "text": "<div class=WordSection1>\n\n<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center'><b><span\nstyle='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\n\"Times New Roman\",serif'>Frequently Asked Questions <o:p><\/o:p><\/span><\/b><\/p>\n\n<p class=MsoNormal align=center style='margin-top:12.0pt;text-align:center'><b><span\nstyle='font-size:12.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\n\"Times New Roman\",serif'>Mapping the Indigenous Survivors of Child Welfare Diaspora<\/span><\/b><b\nstyle='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;mso-bidi-font-size:\n11.0pt;line-height:107%;font-family:\"Times New Roman\",serif'><o:p><\/o:p><\/span><\/b><\/p>\n\n<p class=MsoNormal style='margin-top:12.0pt'><span style='font-size:12.0pt;\nmso-bidi-font-size:11.0pt;line-height:107%;font-family:\"Times New Roman\",serif;\ncolor:#222222;'>...<o:p><\/o:p><\/span><\/p>\n\n<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'><o:p>&nbsp;<\/o:p><\/span><\/p>\n\n<p class=MsoNormal><o:p>&nbsp;<\/o:p><\/p>\n\n<p class=MsoNormal style='margin-top:12.0pt'><span style='font-size:8.0pt;\nline-height:107%;font-family:\"Times New Roman\",serif'><o:p>&nbsp;<\/o:p><\/span><\/p>\n\n<\/div>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
+                            },
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
+                                    "text": "<style>\n\n.WordSection1 {\n    margin: auto;\n    max-width: 700px;\n    width: 80%;\n    margin-top: 40px;\n}\n\n<\/style>",
+                                    "template": "",
+                                    "templateVariablesScript": ""
+                                }
+                            }
                         ]
                     },
                     "footer": {
