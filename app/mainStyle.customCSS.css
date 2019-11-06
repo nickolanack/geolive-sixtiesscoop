@@ -617,7 +617,7 @@ span.array-module.ui-list-view.story-list {
     font-style: italic;
 }
 .edit.inline-btn, .delete.inline-btn {
-    float:right;
+    
 }
 .delete.inline-btn {
      color: crimson;
