@@ -686,29 +686,28 @@ textarea[disabled] {
 }
 
 
-.upload-btns span.image {
-    width: 30px;
-    height: 30px;
+.upload-btns span.image, .upload-btns span.video  {
     background-size: 100%;
     display: inline-block;
-    position: relative;
+    float: right;
+    text-align: right;
+}
+
+
+.upload-btns span.image:after, .upload-btns span.video:after {
+   
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0;
 }
 
 .upload-btns span.image:after {
     content: "add image";
-    white-space: nowrap;
-    position: absolute;
-    left: 30px;
-    line-height: 30px;
-    color: cornflowerblue;
+
 }
 .upload-btns span.video:after {
     content: "add video";
-    white-space: nowrap;
-    position: absolute;
-    left: 30px;
-    line-height: 30px;
-    color: cornflowerblue;
+
 }
 
 .your-profile-image span.video.noIcon {
