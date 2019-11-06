@@ -1137,16 +1137,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 278,
-                            "y": 410
+                            "x": 288,
+                            "y": 420
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 238,
-                                    "y": 636
+                                    "x": 248,
+                                    "y": 658
                                 }
                             }
                         ],
@@ -1195,7 +1195,7 @@
                                                 "showImages": true,
                                                 "showDocuments": true,
                                                 "showVideos": true,
-                                                "className": "input-hidden",
+                                                "className": "input-hidden your-profile-image",
                                                 "maxChars": 0,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
