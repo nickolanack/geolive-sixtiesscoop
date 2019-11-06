@@ -1,6 +1,40 @@
 'use strict'
 
 
+var UserContact = new Class({
+	Extends:DataTypeObject,
+	initialize:function(user){
+		var me=this;
+		me._user=user.getUserId()
+	}
+	setSubject:function(e){
+        var me=this;
+        me._subject=e;
+    },
+	setMessage:function(e){
+        var me=this;
+        me._message=e;
+    },
+    save:function(cb){
+        
+        var me=this;
+        
+        (new AjaxControlQuery(CoreAjaxUrlRoot,'send_message', {
+		  'plugin': "MapStory",
+		  "user":me._user,
+		  "subject":me._subject,
+		  "message":me._message
+		})).addEvent('success',function(){
+		    cb(true);
+		}).execute(); 
+		
+		
+
+    }
+
+});
+
+
 var StoryUser = new Class({
 	Implements: [Events],
 	initialize: function(config) {

@@ -1234,7 +1234,7 @@ var StoryMapController = new Class({
                 new UIModalFormButton(div.appendChild(new Element("button", {
                     "class": "contact-btn",
                     "html": "Contact User"
-                })), application, user, {
+                })), application, new UserContact(user), {
 
 
                     formName: "contactUserForm",
