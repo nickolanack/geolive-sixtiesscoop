@@ -119,8 +119,9 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 		$email=$user["email"];
 
-		$email='nickblackwell82@gmail.com';
-
+		if($email=='some@email.address}'){
+			$email='nickblackwell82@gmail.com';
+		}
 
 		if(GetClient()->isGuest()){
 
