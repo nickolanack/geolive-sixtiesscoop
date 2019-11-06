@@ -4384,8 +4384,8 @@
         "instance": "DetailView",
         "parameters": {
             "widgetTitle": "Faq",
-            "target": "Faq",
-            "templateName": "Faq",
+            "target": "faq",
+            "templateName": "faq",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
