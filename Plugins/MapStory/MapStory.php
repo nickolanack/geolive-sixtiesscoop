@@ -80,6 +80,7 @@ class MapStory extends \Plugin implements
 		}
 
 		if(!key_exists($userId, $this->cacheUserMeta)){
+			GetPlugin('Attributes');
 			$userData=(new \attributes\Record('profileAttributes'))->getValues($userId, "user");
 
 			if(($userData['allowContact']==="true"||$userData['allowContact']===true)&&($userData['shareEmail']==="true"||$userData['shareEmail']===true)){
