@@ -6,7 +6,7 @@ var UserContact = new Class({
 	initialize:function(user){
 		var me=this;
 		me._user=user.getUserId()
-	}
+	},
 	setSubject:function(e){
         var me=this;
         me._subject=e;
