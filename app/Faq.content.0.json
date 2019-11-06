@@ -1,9 +1,9 @@
 {
     "type": "UIView",
     "config": {
-        "className": "",
+        "className": "section-top",
         "viewType": "view",
-        "namedView": "topDetail",
+        "namedView": "topSection",
         "shouldRender": true,
         "namedViewScript": "return namedView",
         "showInlineEdit": false,
