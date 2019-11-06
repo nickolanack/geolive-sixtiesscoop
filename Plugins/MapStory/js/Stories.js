@@ -1210,6 +1210,11 @@ var StoryMapController = new Class({
                     "html":"Contact User"
             }));
 
+        }else{
+            div.appendChild(new Element('p', {
+                "class":"info",
+                "html": "user does not want to be contacted through the site"
+            }));
         }
        
         new UIPopover(looking, {
