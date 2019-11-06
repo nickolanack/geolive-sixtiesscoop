@@ -519,8 +519,8 @@ var StoryMapController = new Class({
             me._searchPanel.hide();
             me._searchPanel.disable();
             graph.addEvent('deactivate:once', function() {
-                
-                 me._searchPanel.enable();
+
+                me._searchPanel.enable();
                 me._sidePanel.getElement().removeClass('analytics');
                 me.fireEvent('hideDispersion', [graph]);
                 if (activeCard) {
@@ -1002,7 +1002,7 @@ var StoryMapController = new Class({
 
     displayWizardFlow: function(item, wizard) {
         return;
-        
+
         var me = this;
         wizard.getViewer().addEvent('open:once', function() {
             var el = wizard.getElement();
@@ -1204,40 +1204,42 @@ var StoryMapController = new Class({
         }));
 
 
-        if(user.isContactable()){
-             var contact = div.appendChild(new Element("button", {
-                     "class":"contact-btn",
-                    "html":"Contact User"
+        if (user.isContactable()) {
+            var contact = div.appendChild(new Element("button", {
+                "class": "contact-btn",
+                "html": "Contact User"
             }));
 
-        }else{
+        } else {
             div.appendChild(new Element('p', {
-                "class":"info",
+                "class": "info",
                 "html": "user does not want to be contacted through the site"
             }));
         }
 
-        if(user.isClient()){
+        if (user.isClient()) {
 
-            new UIModalFormButton(div, application, AppClient, {
-                 
-                    label: "Edit your profile",
-                    formName: "profileFormView",
-                    "class": "inline-btn profile"
-        
-            
-             });
-             new UIModalFormButton(div, application, AppClient, {
-                 
-                    label: "Sharing and searching options",
-                    formName: "publishingOptionsForm",
-                    "class": "inline-btn publishing-options"
-            
-            
-             });
-         }
+            new UIModalFormButton(div.appendChild(new Element('button', {
+                html: "Edit your profile",
+                "class": "inline-btn profile"
+            })), application, AppClient, {
 
-       
+                formName: "profileFormView"
+
+            });
+            new UIModalFormButton(div.appendChild(new Element('button', {
+                html: "Sharing and searching options",
+                "class": "inline-btn publishing-options"
+            })), application, AppClient, {
+
+
+                formName: "publishingOptionsForm",
+
+
+            });
+        }
+
+
         new UIPopover(looking, {
             description: (user.isLookingForFamily() ? "Searching family" : "Not searching for family"),
             anchor: UIPopover.AnchorAuto()
