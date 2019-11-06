@@ -484,6 +484,7 @@ span.array-module.ui-list-view.story-list {
 .contact-btn{
         padding: 10px 15px;
     font-size: unset;
+    cursor:pointer;
 }
 
 .flow-left {
@@ -531,7 +532,7 @@ span.array-module.ui-list-view.story-list {
     border-bottom: 1px solid #5ea5e9;
 }
 
-.profile-section .primary-btn:hover, .sort-card button:hover, .module-wizard .form-btn.register:hover{
+.profile-section .primary-btn:hover, .contact-btn:hover,.sort-card button:hover, .module-wizard .form-btn.register:hover{
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     background-color: #4987cc;
 }
