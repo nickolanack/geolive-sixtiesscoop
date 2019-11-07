@@ -735,7 +735,7 @@
             "widgetTitle": "",
             "target": "forTheMap",
             "offset": "135",
-            "maxHeight": "1000",
+            "maxHeight": "3000",
             "minHeight": "400",
             "customScript": "",
             "readAccess": "public"
