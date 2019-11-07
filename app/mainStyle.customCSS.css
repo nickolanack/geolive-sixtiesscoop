@@ -1072,11 +1072,38 @@ p.info {
 @media only screen and (max-width: 1000px) {
   .site-logo h1 {
     font-size: 0;
+    }
+    
+    .menu-links {
+        display: none;
+    }
 }
 
-.menu-links {
-    display: none;
-}
+@media only screen and (max-width: 600px) {
+ .site-logo h1{
+     height:60px;
+ }
+
+ .profile-section span.user-icon{
+     height:50px;
+     width:50px
+ }
+ .profile-section .inline-btn{
+     display:none;
+ }
+
+  .profile-section .user-name{
+      display:none;
+  }
+
+  .profile-section .primary-btn{
+      margin-top:7px;
+  }
+
+  .ui-view.section-top{
+      height:60px
+  }
+
 }
 
 
