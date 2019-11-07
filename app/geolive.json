@@ -737,6 +737,7 @@
             "offset": "135",
             "maxHeight": "3000",
             "minHeight": "400",
+            "offsetScript": "widget.FlexibleHeight.12.offsetScript.js",
             "customScript": "",
             "readAccess": "public"
         }
