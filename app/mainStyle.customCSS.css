@@ -458,7 +458,7 @@ span.array-module.ui-list-view.story-list {
 .SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
     background-color: white;
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/search.png'); ?>");
-    background-size: 60%;
+    background-size: 50%;
 }
 .SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/user.png'); ?>");
