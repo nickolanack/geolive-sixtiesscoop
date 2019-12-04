@@ -1,7 +1,7 @@
 {
     "type": "WizardGeocodeAddress",
     "config": {
-        "label": "When you were taken, where were you placed?",
+        "label": "Where were you placed?",
         "message": "search location",
         "className": "",
         "maxChars": 0,
