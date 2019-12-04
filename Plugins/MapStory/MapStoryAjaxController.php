@@ -125,7 +125,7 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 		if(GetClient()->isGuest()){
 
-			return $this->setNonCriticalError('not allowed, or need email verification')
+			return $this->setNonCriticalError('not allowed, or need email verification');
 
 
 			/**
