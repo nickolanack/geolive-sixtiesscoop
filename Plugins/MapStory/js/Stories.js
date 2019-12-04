@@ -1158,7 +1158,7 @@ var StoryMapController = new Class({
             "sortName": 'birth-date'
         }));
         div.appendChild(sortBtn({
-            "label": "<h3>Alpabetically name at birth</h3>",
+            "label": "<h3>Alphabetically name at birth</h3>",
             "sortFn": function(a, b) {
                 //random
                 return Math.round((Math.random() * 2.0) - 1.0);
@@ -1166,7 +1166,7 @@ var StoryMapController = new Class({
             "sortName": 'birth-name'
         }));
         div.appendChild(sortBtn({
-            "label": "<h3>Year adompted</h3>",
+            "label": "<h3>Year adopted</h3>",
             "sortFn": function(a, b) {
                 //random
                 return Math.round((Math.random() * 2.0) - 1.0);
