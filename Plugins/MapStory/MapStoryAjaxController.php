@@ -125,11 +125,20 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 
 		if(GetClient()->isGuest()){
 
-			 $links=GetPlugin('Links');
-             $emailToken=$links->createDataCode('onVerifyEmailMessageLink', $json);
-             return array(
-             	'token'=>$emailToken
-             );
+			return $this->setNonCriticalError('not allowed, or need email verification')
+
+
+			/**
+			 * 	Should send verification email. then send on verification click
+			 *
+			 	$email=$json->email;
+
+				 $links=GetPlugin('Links');
+	             $emailToken=$links->createDataCode('onVerifyEmailMessageLink', $json);
+	             return array(
+	             	'token'=>$emailToken
+	             );
+             */
 
 		}
 

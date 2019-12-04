@@ -5,7 +5,21 @@ var StoryMapController = new Class({
     initialize: function() {
 
 
+
+
+
         var me = this;
+
+
+        me.options={
+            iconSizeSmall:10,
+            iconSizeSmallBirth:20,
+            iconSizeCurrentStory:20,
+            iconSizeSelected:40
+
+
+        };
+
         me.setSortFn(function() {
             //random
             return Math.round((Math.random() * 2.0) - 1.0);
@@ -16,13 +30,13 @@ var StoryMapController = new Class({
                 if (marker === me._activeMarker) {
                     me._activeMarker = null;
                 }
-                me.scaleIcon(marker, 10);
+                me.clearIconScale(marker);
             });
         });
 
         me.addEvent('setCards', function(cards, group) {
             me.markersForCards(cards, function(marker) {
-                me.scaleIcon(marker, 20);
+                me.scaleIcon(marker, me.options.iconSizeCurrentStory);
             });
             if (group instanceof StoryUser) {
                 me.linkCardsOnMap(cards);
@@ -103,6 +117,15 @@ var StoryMapController = new Class({
 
 
     },
+
+    clearIconScale:function(marker){
+        var me=this;
+        if(marker.getIcon().indexOf("7pW_da6")>0){
+             me.scaleIcon(marker, me.options.iconSizeSmallBirth);
+            return;
+        }
+        me.scaleIcon(marker, me.options.iconSizeSmall);
+    }
 
     clearCards: function() {
 
@@ -605,7 +628,7 @@ var StoryMapController = new Class({
             layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
                     if (marker instanceof GeoliveMarker) {
-                        me.scaleIcon(marker, 10);
+                        me.clearIconScale(marker);
                     }
                 });
             });
@@ -617,7 +640,7 @@ var StoryMapController = new Class({
             layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
                     if (marker instanceof GeoliveMarker) {
-                        me.scaleIcon(marker, 10);
+                        me.clearIconScale(marker);
                     }
                 });
             });
@@ -707,7 +730,7 @@ var StoryMapController = new Class({
         }
         me._activeCard = card;
         if (me._activeMarker) {
-            me.scaleIcon(me._activeMarker, 20);
+            me.scaleIcon(me._activeMarker, me.options.iconSizeCurrentStory);
         }
 
 
@@ -716,7 +739,7 @@ var StoryMapController = new Class({
             me._activeMarker = marker;
 
             me.getMap().panTo(marker.getLatLng());
-            me.scaleIcon(marker, 40);
+            me.scaleIcon(marker, me.options.iconSizeSelected);
 
 
 
