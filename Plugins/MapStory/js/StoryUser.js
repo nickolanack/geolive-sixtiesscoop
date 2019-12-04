@@ -343,7 +343,7 @@ var StoryUser = new Class({
 			if (!me.hasBirthStory()) {
 				if (me.canEdit()) {
 					cards.push(new AddCard({
-						label: "Create Birth Story",
+						label: "Create birth story",
 						formView: "createBirthStoryForm",
 						classNames: "add-card birth-card",
 						type: 'MapStory.birthStory'
@@ -363,7 +363,7 @@ var StoryUser = new Class({
 
 			if (me.canEdit()) {
 				cards.push(new AddCard({
-					label: journeyStories.length ? "Add More Locations Along Your Story" : "Add A Location Along Your Story",
+					label: journeyStories.length ? "Add more locations along your story" : "Add a location along your story",
 					formView: "createStoryForm",
 					classNames: "add-card journey-card",
 					type: 'MapStory.story'
@@ -377,7 +377,7 @@ var StoryUser = new Class({
 			if (!me.hasRepatriationStory()) {
 				if (me.canEdit()) {
 					cards.push(new AddCard({
-						label: "Add A Repatriation Story",
+						label: "Add a repatriation story",
 						formView: "createRepatriationStoryForm",
 						classNames: "add-card repatriation-card",
 						type: 'MapStory.repatriationStory'
