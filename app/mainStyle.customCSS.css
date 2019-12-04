@@ -462,7 +462,7 @@ span.array-module.ui-list-view.story-list {
 }
 .SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
     background-image: url("<?php echo UrlFrom('{assets}/Control Panel Icons/user.png'); ?>");
-    background-size: 45%;
+    background-size: 60%;
 }
 
 .SideBarWidget.right.active>div.toggle-button {
