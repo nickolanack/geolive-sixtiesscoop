@@ -2,7 +2,7 @@ return new ModalFormButtonModule(application, AppClient, {
              
                 label: "Register",
                 formName: "registerFormView",
-                "class": "inline-btn register"
+                "class": "secondary-btn register"
     
         
          }).addEvent("show",function(newWizard){
