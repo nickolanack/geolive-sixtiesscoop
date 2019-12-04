@@ -125,7 +125,7 @@ var StoryMapController = new Class({
             return;
         }
         me.scaleIcon(marker, me.options.iconSizeSmall);
-    }
+    },
 
     clearCards: function() {
 
