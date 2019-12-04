@@ -115,6 +115,29 @@ button.disclaimer.primary-btn{
 }
 
 
+button.form-btn.register.secondary-btn {
+    margin: 5px;
+    margin-top: 25px;
+    height:30px;
+    background-color: crimson;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    font-weight: 100;
+    font-size: 15px;
+}
+
+button.form-btn.register.secondary-btn:hover {
+    background-color: #c71134;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
 .left-center .tileButtonContainer.active {
     border: 2px solid limegreen;
 }
