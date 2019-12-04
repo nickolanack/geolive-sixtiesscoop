@@ -23,21 +23,26 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto 100%;
+    color: #bf302c;
 }
 
 .menu-links {
     position: absolute;
-    left: 675px;
-    top: 35px;
+    left: 700px;
+    top: 30px;
 }
 
 .menu-links a {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 5px;
 }
 
 .menu-links a h2 {
-    color: #549ae6;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(0,0,0,0.03);
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 .is-looking-for-icon, .not-looking-for-icon{
