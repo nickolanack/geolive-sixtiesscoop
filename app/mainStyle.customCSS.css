@@ -44,6 +44,9 @@
     padding: 5px 10px;
     border-radius: 20px;
 }
+.menu-links a h2:hover {
+    background-color: rgba(0,0,0,0.1);
+}
 
 .is-looking-for-icon, .not-looking-for-icon{
 
