@@ -2791,16 +2791,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 385,
-                            "y": 241
+                            "x": 395,
+                            "y": 251
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 345,
-                                    "y": 454
+                                    "x": 355,
+                                    "y": 464
                                 }
                             }
                         ],
@@ -2861,7 +2861,7 @@
                                                 "showImages": true,
                                                 "showDocuments": true,
                                                 "showVideos": true,
-                                                "className": "uploads-hidden",
+                                                "className": "--uploads-hidden",
                                                 "maxChars": 0,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
