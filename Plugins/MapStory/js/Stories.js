@@ -1156,8 +1156,9 @@ var StoryMapController = new Class({
             var div = new Element('div', {
 
             });
-            me._lastCards=null;
+           
             var group = (new AdvancedStorySearch({})).setCards(me._lastCards);
+            me._lastCards=null;
             var btn = new Element('button', {
                 "html": "Back to search results",
 
