@@ -2,8 +2,8 @@
     "type": "widget.46.TutorialStep",
     "config": {
         "showContent": true,
-        "contentAnchor": "RIGHT_CENTER",
-        "content": "Reset the map",
-        "contentMargin": "0"
+        "contentAnchor": ".SideBarWidget.right>div.toggle-button",
+        "content": "search",
+        "contentMargin": ""
     }
 }

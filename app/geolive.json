@@ -4221,6 +4221,24 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
+                                    "contentAnchor": ".ui-view.profile-section",
+                                    "content": "profile\/login",
+                                    "contentMargin": ""
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "RIGHT_CENTER",
+                                    "content": "Reset the map",
+                                    "contentMargin": "0"
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
                                     "contentAnchor": "BOTTOM_CENTER",
                                     "content": "The bottom area shows story cards",
                                     "contentMargin": ""
