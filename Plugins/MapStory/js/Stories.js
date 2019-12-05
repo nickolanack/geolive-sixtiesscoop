@@ -130,6 +130,21 @@ var StoryMapController = new Class({
     clearCards: function() {
 
         var me = this;
+        me._lastCards=null;
+        me._cards = null;
+        return me;
+
+    },
+
+
+    hasHistory:function(){
+        return !!this._lastCards;
+    },
+
+    pushCardHistory: function() {
+
+        var me = this;
+        me._lastCards=me._cards;
         me._cards = null;
         return me;
 
@@ -1510,6 +1525,13 @@ var StoryMapController = new Class({
         module.getElement().addEvent('click', function() {
 
 
+            if(item instanceof StoryCardSearchResult){
+                //push card history is the same as 
+                //clear cards (ip preperation for new set)
+                //but stores the last set
+                me.pushCardHistory();
+                //me.clearCards();
+            }
             //marker.activate();
             //item.setActive();
             me.selectCard(item.getId());
