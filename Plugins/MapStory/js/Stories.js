@@ -1136,7 +1136,7 @@ var StoryMapController = new Class({
 
             var btn = new Element('button', {
                 "html": "Clear search",
-
+                "class":"primary-btn",
                 "events": {
                     "click": function() {
                         me.clearGroup()
@@ -1171,7 +1171,7 @@ var StoryMapController = new Class({
             me._lastCards=null;
             var btn = new Element('button', {
                 "html": "Back to search results",
-
+                "class":"primary-btn",
                 "events": {
                     "click": function() {
                         
