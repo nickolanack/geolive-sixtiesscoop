@@ -4230,7 +4230,7 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
-                                    "contentAnchor": ".menu-links a.faq-link",
+                                    "contentAnchor": "#faq-link",
                                     "content": "FAQ",
                                     "contentMargin": ""
                                 }
@@ -4257,18 +4257,18 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
-                                    "contentAnchor": "RIGHT_CENTER",
-                                    "content": "Reset the map",
-                                    "contentMargin": "0"
+                                    "contentAnchor": "span.array-module.ui-list-view.story-list",
+                                    "content": "The bottom area shows story cards",
+                                    "contentMargin": ""
                                 }
                             },
                             {
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
-                                    "contentAnchor": "BOTTOM_CENTER",
-                                    "content": "The bottom area shows story cards",
-                                    "contentMargin": ""
+                                    "contentAnchor": ".right-center.rtl.UIMapControl .home.tileButtonContainer",
+                                    "content": "Reset the map",
+                                    "contentMargin": "0"
                                 }
                             }
                         ]
