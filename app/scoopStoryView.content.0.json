@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "\n\n\nreturn ScoopStories.GetHistoryNavigationModule(item, application);",
+        "script": "\n\n\n\/\/return ScoopStories.GetHistoryNavigationModule(item, application);",
         "description": "Info about my custom script"
     }
 }
