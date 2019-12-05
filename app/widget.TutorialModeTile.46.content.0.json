@@ -3,7 +3,7 @@
     "config": {
         "showContent": true,
         "contentAnchor": ".SideBarWidget.right>div.toggle-button",
-        "content": "1. Search for adoptees. Clicking on this icon will open a panel where you can search for adoptees by name, date of birth, location of birth, or places that an adoptee lived during their life. Type in the details that you know then click the blue search button. Your results will appear as a set of cards in the Storyline underneath the map.",
+        "content": "Search for adoptees. Clicking on this icon will open a panel where you can search for adoptees by name, date of birth, location of birth, or places that an adoptee lived during their life. Type in the details that you know then click the blue search button. Your results will appear as a set of cards in the Storyline underneath the map.",
         "contentMargin": ""
     }
 }
