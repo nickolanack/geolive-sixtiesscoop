@@ -1135,8 +1135,9 @@ var StoryMapController = new Class({
 
                 "events": {
                     "click": function() {
+                        var group=(new AdvancedStorySearch({})).setCards(me._lastCards);
                         me.pushCardHistory();
-                        me.setCardGroup((new AdvancedStorySearch({})).setCards(me._lastCards), function() {
+                        me.setCardGroup(group, function() {
 
                         });
                     }
