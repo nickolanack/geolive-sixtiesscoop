@@ -4248,7 +4248,7 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
-                                    "contentAnchor": "LEFT_CENTER",
+                                    "contentAnchor": ".CustomTile.left-center.ltr.UIMapControl .tileButtonContainer",
                                     "content": "Toggle adoption data visualization",
                                     "contentMargin": ""
                                 }
