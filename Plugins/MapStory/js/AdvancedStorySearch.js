@@ -75,7 +75,11 @@ var AdvancedStorySearch = new Class({
 
 	},
 
-
+	setCards:function(cards){
+		var me=this;
+		me._cards=cards;
+		return me;
+	},
 
 	getCards: function(cb) {
 

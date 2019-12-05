@@ -6,16 +6,14 @@ var StoryMapController = new Class({
 
 
 
-
-
         var me = this;
 
 
-        me.options={
-            iconSizeSmall:10,
-            iconSizeSmallBirth:20,
-            iconSizeCurrentStory:20,
-            iconSizeSelected:40
+        me.options = {
+            iconSizeSmall: 10,
+            iconSizeSmallBirth: 20,
+            iconSizeCurrentStory: 20,
+            iconSizeSelected: 40
 
 
         };
@@ -118,10 +116,10 @@ var StoryMapController = new Class({
 
     },
 
-    clearIconScale:function(marker){
-        var me=this;
-        if(marker.getIcon().indexOf("7pW_da6")>0){
-             me.scaleIcon(marker, me.options.iconSizeSmallBirth);
+    clearIconScale: function(marker) {
+        var me = this;
+        if (marker.getIcon().indexOf("7pW_da6") > 0) {
+            me.scaleIcon(marker, me.options.iconSizeSmallBirth);
             return;
         }
         me.scaleIcon(marker, me.options.iconSizeSmall);
@@ -130,21 +128,21 @@ var StoryMapController = new Class({
     clearCards: function() {
 
         var me = this;
-        me._lastCards=null;
+        me._lastCards = null;
         me._cards = null;
         return me;
 
     },
 
 
-    hasHistory:function(){
+    hasHistory: function() {
         return !!this._lastCards;
     },
 
     pushCardHistory: function() {
 
         var me = this;
-        me._lastCards=me._cards;
+        me._lastCards = me._cards;
         me._cards = null;
         return me;
 
@@ -1117,8 +1115,8 @@ var StoryMapController = new Class({
     },
     GetHistoryNavigationModule: function(item, application) {
 
-        var me=this;
-        if(!me.hasHistory()){
+        var me = this;
+        if (!me.hasHistory()) {
 
             return null;
         }
@@ -1127,17 +1125,17 @@ var StoryMapController = new Class({
 
         var me = this;
         var div = new Element('div', {
-            
+
         });
 
-      
+        if (me._lastCards[me._lastCards.length - 1] instanceof StoryCardSearchResult) {
 
             var btn = new Element('button', {
-                "html":"Clear Search",
-               
+                "html": "Back to search results",
+
                 "events": {
                     "click": function() {
-                       
+
                     }
                 }
             });
@@ -1145,7 +1143,14 @@ var StoryMapController = new Class({
 
             div.appendChild(btn)
 
-        return div;
+            return div;
+
+
+        }
+
+        return null;
+
+
     },
     GetSortCardModule: function(item, application) {
 
@@ -1229,7 +1234,7 @@ var StoryMapController = new Class({
         var div = new Element('div', {
 
         });
-        var nameEl=div.appendChild(new Element('h3', {
+        var nameEl = div.appendChild(new Element('h3', {
             "html": "Name: " + user.getUsersName()
         }));
 
@@ -1264,7 +1269,7 @@ var StoryMapController = new Class({
         div.appendChild(new Element('h4', {
             "html": "Reunited with family: " + (user.hasRepatriationStory() ? "yes" : "no")
         }));
-        var lookingEl=div.appendChild(new Element('h4', {
+        var lookingEl = div.appendChild(new Element('h4', {
             "html": "Looking for family: " + (user.isLookingForFamily() ? "yes" : "no")
         }));
         //if(user.isLookingForFamily()){
@@ -1273,7 +1278,6 @@ var StoryMapController = new Class({
         }));
 
 
-        
 
         if (user.isClient()) {
 
@@ -1297,38 +1301,37 @@ var StoryMapController = new Class({
             });
         }
         //else{
-            if (user.isContactable()) {
+        if (user.isContactable()) {
 
 
-                new UIModalFormButton(div.appendChild(new Element("button", {
-                    "class": "contact-btn",
-                    "html": "Contact User"
-                })), application, new UserContact(user), {
+            new UIModalFormButton(div.appendChild(new Element("button", {
+                "class": "contact-btn",
+                "html": "Contact User"
+            })), application, new UserContact(user), {
 
 
 
-                    formName: AppClient.getUserType() == "guest"?"loginFormView":"contactUserForm",
+                formName: AppClient.getUserType() == "guest" ? "loginFormView" : "contactUserForm",
 
 
-                });
+            });
 
 
-              
 
-                 if (user.isSharingEmail()) {
-                    div.appendChild(new Element('p', {
-                        style:"display: inline-block;",
-                        html: "<a href=\"mailto:"+user.getSharedEmail()+"\">"+user.getSharedEmail()+"</a>",
-                        "class": "info",
-                    }));
-                }
-
-            } else {
+            if (user.isSharingEmail()) {
                 div.appendChild(new Element('p', {
+                    style: "display: inline-block;",
+                    html: "<a href=\"mailto:" + user.getSharedEmail() + "\">" + user.getSharedEmail() + "</a>",
                     "class": "info",
-                    "html": "user does not want to be contacted through the site"
                 }));
             }
+
+        } else {
+            div.appendChild(new Element('p', {
+                "class": "info",
+                "html": "user does not want to be contacted through the site"
+            }));
+        }
         //}
 
 
@@ -1556,7 +1559,7 @@ var StoryMapController = new Class({
         module.getElement().addEvent('click', function() {
 
 
-            if(item instanceof StoryCardSearchResult){
+            if (item instanceof StoryCardSearchResult) {
                 //push card history is the same as 
                 //clear cards (ip preperation for new set)
                 //but stores the last set
@@ -1668,7 +1671,7 @@ var StoryMapController = new Class({
     },
     _markerCardsFilter: function(cards) {
         return cards.filter(function(card) {
-            return (card instanceof StoryCard && (!(card instanceof AddCard || card instanceof ProfileSummaryCard || card instanceof SortCard|| card instanceof HistoryNavigationCard)));
+            return (card instanceof StoryCard && (!(card instanceof AddCard || card instanceof ProfileSummaryCard || card instanceof SortCard || card instanceof HistoryNavigationCard)));
         });
     }
 
