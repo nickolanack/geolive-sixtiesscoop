@@ -4196,7 +4196,7 @@
         "instance": "TutorialModeTile",
         "parameters": {
             "target": "forTheMap",
-            "controlColor": "rgb(84, 154, 230)",
+            "controlColor": "rgb(0, 0, 0)",
             "showContentRight": true,
             "showContentBottom": true,
             "showContentLeft": true,
