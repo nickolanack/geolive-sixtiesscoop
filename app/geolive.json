@@ -4231,7 +4231,7 @@
                                 "config": {
                                     "showContent": true,
                                     "contentAnchor": "#faq-link",
-                                    "content": "FAQ",
+                                    "content": "Access Frequently Asked Questions about how to use the website and a description of the project from these menu items.",
                                     "contentMargin": ""
                                 }
                             },
