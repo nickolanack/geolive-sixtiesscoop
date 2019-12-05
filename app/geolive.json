@@ -4239,6 +4239,24 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
+                                    "contentAnchor": ".SideBarWidget.left>div.toggle-button",
+                                    "content": "detail",
+                                    "contentMargin": ""
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
+                                    "contentAnchor": "LEFT_CENTER",
+                                    "content": "Toggle adoption data visualization",
+                                    "contentMargin": ""
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
                                     "contentAnchor": "RIGHT_CENTER",
                                     "content": "Reset the map",
                                     "contentMargin": "0"
@@ -4250,15 +4268,6 @@
                                     "showContent": true,
                                     "contentAnchor": "BOTTOM_CENTER",
                                     "content": "The bottom area shows story cards",
-                                    "contentMargin": ""
-                                }
-                            },
-                            {
-                                "type": "widget.46.TutorialStep",
-                                "config": {
-                                    "showContent": true,
-                                    "contentAnchor": "LEFT_CENTER",
-                                    "content": "Toggle adoption data visualization",
                                     "contentMargin": ""
                                 }
                             }
