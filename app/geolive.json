@@ -4230,6 +4230,15 @@
                                 "type": "widget.46.TutorialStep",
                                 "config": {
                                     "showContent": true,
+                                    "contentAnchor": ".menu-links a.faq-link",
+                                    "content": "FAQ",
+                                    "contentMargin": ""
+                                }
+                            },
+                            {
+                                "type": "widget.46.TutorialStep",
+                                "config": {
+                                    "showContent": true,
                                     "contentAnchor": "RIGHT_CENTER",
                                     "content": "Reset the map",
                                     "contentMargin": "0"
