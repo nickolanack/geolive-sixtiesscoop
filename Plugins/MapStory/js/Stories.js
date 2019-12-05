@@ -1118,25 +1118,56 @@ var StoryMapController = new Class({
         var me = this;
         if (!me.hasHistory()) {
 
+            if (me._group && me._group instanceof AdvancedStorySearch) {
+
+                var div = new Element('div', {
+
+            });
+
+            var btn = new Element('button', {
+                "html": "Clear search",
+
+                "events": {
+                    "click": function() {
+                        var group = (new AdvancedStorySearch({})).setCards(me._lastCards);
+                        me.pushCardHistory();
+                        me.setCardGroup(group, function() {
+
+                        });
+                    }
+                }
+            });
+
+
+            div.appendChild(btn)
+
+            return div;
+
+            }
+
+
             return null;
         }
 
 
 
         var me = this;
-        var div = new Element('div', {
-
-        });
+        
 
         if (me._lastCards[me._lastCards.length - 1] instanceof StoryCardSearchResult) {
 
+            var div = new Element('div', {
+
+            });
+            me._lastCards=null;
+            var group = (new AdvancedStorySearch({})).setCards(me._lastCards);
             var btn = new Element('button', {
                 "html": "Back to search results",
 
                 "events": {
                     "click": function() {
-                        var group=(new AdvancedStorySearch({})).setCards(me._lastCards);
-                        me.pushCardHistory();
+                        
+                        
                         me.setCardGroup(group, function() {
 
                         });
