@@ -134,6 +134,16 @@ var StoryMapController = new Class({
 
     },
 
+    clearGroup: function() {
+
+        var me = this;
+        me._lastCards = null;
+        me._cards = null;
+        me._group = null;
+        return me;
+
+    },
+
 
     hasHistory: function() {
         return !!this._lastCards;
@@ -1129,7 +1139,7 @@ var StoryMapController = new Class({
 
                 "events": {
                     "click": function() {
-                        me.clearCards()
+                        me.clearGroup()
                         me.redraw();
                     }
                 }
