@@ -4222,7 +4222,7 @@
                                 "config": {
                                     "showContent": true,
                                     "contentAnchor": ".ui-view.profile-section",
-                                    "content": "profile\/login",
+                                    "content": "2. Register and login. To add your own information to the website and map you will first need to register. You can do this using your Facebook or Google credentials, or else by providing an email address and password. \u2028Once you have registered and are logged in you can add information about yourself using the \u2018Edit your profile\u2019 link that will appear in the top of the page. Once your profile is complete, you can decide how you want to make your information available to users of the site or members of the public by clicking on the \u2019Sharing and searching options\u2019.",
                                     "contentMargin": ""
                                 }
                             },
