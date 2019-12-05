@@ -4240,7 +4240,7 @@
                                 "config": {
                                     "showContent": true,
                                     "contentAnchor": ".SideBarWidget.left>div.toggle-button",
-                                    "content": "detail",
+                                    "content": "4. Adoptee profile tab. When you are looking at the profile of adoptees, their birth stories, contact details and story cards appear in this window.",
                                     "contentMargin": ""
                                 }
                             },
