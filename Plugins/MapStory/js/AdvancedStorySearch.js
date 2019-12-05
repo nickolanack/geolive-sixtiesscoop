@@ -137,6 +137,11 @@ var AdvancedStorySearch = new Class({
 
 
 		var cards = [
+			new HistoryNavigationCard(Object.append({
+				
+			}, {
+				classNames: "nav-card summary-card",
+			})),
 			new SortCard(Object.append({
 				results: function() {
 					return searchCards;

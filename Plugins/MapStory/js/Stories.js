@@ -1668,7 +1668,7 @@ var StoryMapController = new Class({
     },
     _markerCardsFilter: function(cards) {
         return cards.filter(function(card) {
-            return (card instanceof StoryCard && (!(card instanceof AddCard || card instanceof ProfileSummaryCard || card instanceof SortCard)));
+            return (card instanceof StoryCard && (!(card instanceof AddCard || card instanceof ProfileSummaryCard || card instanceof SortCard|| card instanceof HistoryNavigationCard)));
         });
     }
 

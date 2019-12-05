@@ -295,7 +295,14 @@ var SortCard = new Class({
     },
     hasResults: function() {
         var me = this;
-        return me._results().length;;
+        return me._results().length;
+    }
+});
+
+var HistoryNavigationCard = new Class({
+    Extends: StoryCard,
+    canEdit: function() {
+        return false;
     }
 });
 
