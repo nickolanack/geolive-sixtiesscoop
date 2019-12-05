@@ -1,6 +1,10 @@
 'use strict'
 
 
+var StoryCardSearchResult=new Class({
+	Extends:StoryCard
+})
+
 var AdvancedStorySearch = new Class({
 	Extends: MockDataTypeItem,
 	initialize: function(options) {
@@ -105,7 +109,7 @@ var AdvancedStorySearch = new Class({
 
 				var randomSearchCards = resp.results.map(function(data) {
 
-					var card = new StoryCard(Object.append(data, {
+					var card = new StoryCardSearchResult(Object.append(data, {
 						classNames: "search-card-detail"
 					}));
 					var user = new StoryUser({
