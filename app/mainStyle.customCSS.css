@@ -139,6 +139,25 @@ button.form-btn.register.secondary-btn {
     font-size: 15px;
 }
 
+.nav button.primary-btn {
+
+
+    height: 30px;
+    margin-top:40px;
+    margin-left: 5px;
+    background-color: #f0b71c;
+    color: black;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 2px;
+    padding: 0 15px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    font-size: 15px;
+   
+}
+
 button.form-btn.register.secondary-btn:hover {
     background-color: #c71134;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
