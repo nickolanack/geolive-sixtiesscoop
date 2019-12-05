@@ -26,6 +26,11 @@
     color: #bf302c;
 }
 
+.uitext-container.col-2 {
+    width: calc( 50% - 11px );
+    display: inline-block;
+}
+
 .menu-links {
     position: absolute;
     left: 700px;
