@@ -150,8 +150,9 @@ button.form-btn.register.secondary-btn:hover {
 }
 
 .left-center .tileButtonContainer {
-    border: 2px solid white;
+    border: 2px solid #f0b71c;
     box-sizing: border-box;
+    background-color: #f0b71c;
 }
 
 .left-center .tileButtonContainer>.tileButton {
