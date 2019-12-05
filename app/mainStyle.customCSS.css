@@ -289,7 +289,7 @@ span.delete-btn, span.edit-btn {
 .SideBarWidget.left .toggle-button:after, .SideBarWidget.right .toggle-button:after {
     content: "Click here to reopen this tab";
     position:absolute;
-    left: 40px;
+    left: 90px;
     z-index:1;
     color:white;
     background:black;
@@ -311,7 +311,7 @@ span.delete-btn, span.edit-btn {
 
 
 .SideBarWidget.right .toggle-button:after {
-    right: 40px;
+    right: 90px;
     left:unset;
   
 
