@@ -381,6 +381,10 @@ span.array-module.ui-list-view.story-list {
     height: 115px;
 }
 
+.ui-view.summary.nav.story-card {
+    border: none;
+}
+
 .summary-card h3, .summary-card h4 {
     margin: 2px;
     text-align: left;
