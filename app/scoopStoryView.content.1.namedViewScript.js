@@ -7,4 +7,7 @@ if(item instanceof ProfileSummaryCard){
 if(item instanceof SortCard){
     return "sortCardView";
 }
+if(item instanceof HistoryNavigationCard){
+    return "navCardView";
+}
 return namedView
