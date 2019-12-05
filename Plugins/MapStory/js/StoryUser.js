@@ -339,6 +339,13 @@ var StoryUser = new Class({
 			    }))).setUser(me)
 			);
 			*/
+		
+
+			cards.push(new HistoryNavigationCard(Object.append({
+				
+			}, {
+				classNames: "nav-card summary-card",
+			})))
 
 			if (!me.hasBirthStory()) {
 				if (me.canEdit()) {
