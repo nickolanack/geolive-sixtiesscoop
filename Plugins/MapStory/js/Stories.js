@@ -1116,7 +1116,36 @@ var StoryMapController = new Class({
 
     },
     GetHistoryNavigationModule: function(item, application) {
-        return null;
+
+        var me=this;
+        if(!me.hasHistory()){
+
+            return null;
+        }
+
+
+
+        var me = this;
+        var div = new Element('div', {
+            
+        });
+
+      
+
+            var btn = new Element('button', {
+                "html":"Clear Search",
+               
+                "events": {
+                    "click": function() {
+                       
+                    }
+                }
+            });
+
+
+            div.appendChild(btn)
+
+        return div;
     },
     GetSortCardModule: function(item, application) {
 
