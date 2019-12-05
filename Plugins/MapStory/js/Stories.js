@@ -1115,7 +1115,9 @@ var StoryMapController = new Class({
         }).show();
 
     },
-
+    GetHistoryNavigationModule: function(item, application) {
+        return null;
+    },
     GetSortCardModule: function(item, application) {
 
         var me = this;
