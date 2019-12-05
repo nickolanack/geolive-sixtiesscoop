@@ -77,7 +77,9 @@ var AdvancedStorySearch = new Class({
 
 	setCards:function(cards){
 		var me=this;
-		me._cards=cards;
+		me._cards=cards.filter(function(a){
+			return (a instanceof StoryCardSearchResult);
+		})
 		return me;
 	},
 
