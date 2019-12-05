@@ -4249,7 +4249,7 @@
                                 "config": {
                                     "showContent": true,
                                     "contentAnchor": ".CustomTile.left-center.ltr.UIMapControl .tileButtonContainer",
-                                    "content": "Toggle adoption data visualization",
+                                    "content": "Understanding the scale of adoptions. Clicking on this button shows the number of adoptees coming from each of Canada\u2019s provinces and where the adoptees were first moved. By clicking on the coloured buttons that appear when you hover over this button, you can filter the provinces that you want to appear on the map.\n",
                                     "contentMargin": ""
                                 }
                             },
