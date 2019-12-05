@@ -4258,7 +4258,7 @@
                                 "config": {
                                     "showContent": true,
                                     "contentAnchor": "span.array-module.ui-list-view.story-list",
-                                    "content": "The bottom area shows story cards",
+                                    "content": "The Storyline. This is used to add information about the different locations that you have lived in. Each location is a unique \u2018card\u2019. To add a card click on the \u2018Add more locations along your story\u2019 card at the bottom of the map. \u2028The Storyline is also used to view and access the cards of other adoptees that you are searching for. Matching search results appear in the storyline. When you click on individual cards, detailed information will appear in the profile tab and the location will be displayed on the map.",
                                     "contentMargin": ""
                                 }
                             },
