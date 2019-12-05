@@ -24,7 +24,18 @@
     background-position: left center;
     background-size: auto 100%;
     color: #bf302c;
+    line-height: 25px;
+    text-align: left;
+    padding-top: 23px;
+    box-sizing: border-box;
 }
+
+
+.site-logo h1 span {
+    display: block;
+    font-size: 18px;
+}
+
 
 .uitext-container.col-2 {
     width: calc( 50% - 11px );
