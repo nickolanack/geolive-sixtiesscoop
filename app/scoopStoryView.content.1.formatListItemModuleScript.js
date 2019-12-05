@@ -5,3 +5,7 @@ if(child instanceof ProfileSummaryCard){
 if(child instanceof SortCard){
     childView.getElement().addClass("summary sort")
 }
+
+if(child instanceof HistoryNavigationCard){
+    childView.getElement().addClass("summary nav")
+}
