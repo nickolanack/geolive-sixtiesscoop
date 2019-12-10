@@ -4518,7 +4518,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "",
-                                    "text": "<style>\n\n.WordSection1 {\n    margin: auto;\n    max-width: 700px;\n    width: 80%;\n    margin-top: 40px;\n\nfont-size: 14px;\n}\n\n\n<\/style>",
+                                    "text": "<style>\n.c11, .c1 {\n    font-weight: bold;\n    font-size: 17px;\n}\n.WordSection1 {\n    margin: auto;\n    max-width: 700px;\n    width: 80%;\n    margin-top: 40px;\n\nfont-size: 14px;\n}\n\n\n<\/style>",
                                     "template": "",
                                     "templateVariablesScript": ""
                                 }
