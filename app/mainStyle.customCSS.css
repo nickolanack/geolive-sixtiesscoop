@@ -30,6 +30,10 @@
     box-sizing: border-box;
 }
 
+.analytic-item .layer-hidden {
+    opacity: 0.3;
+}
+
 
 .site-logo h1 span {
     display: block;
