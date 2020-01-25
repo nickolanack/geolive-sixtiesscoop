@@ -4,6 +4,6 @@
         "title": "Some Title",
         "type": "metric",
         "height": "240",
-        "getDataScript": "\nitem.formatChart(chart);"
+        "getDataScript": "\nitem.formatChart(chart, callback);"
     }
 }
