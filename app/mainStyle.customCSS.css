@@ -96,6 +96,25 @@ span.not-looking-for-icon {
 }
 
 
+.tileButtonContainer.active:after {
+    content: "Click to go back to stories map";
+    position: absolute;
+    left: 56px;
+    z-index: 1;
+    color: white;
+    background: black;
+    border-radius: 4px;
+    padding: 10px;
+    top: 0px;
+    text-align: left;
+    width: 104px;
+    opacity: 0;
+    font-weight: 100;
+    font-size: 12px;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
 
 button.back{
     background-image: url("<?php 
