@@ -541,8 +541,11 @@ span.array-module.ui-list-view.story-list {
     /*background-color: #ffcc00;*/
 }
 
-.SideBarWidget.right>div.toggle-button:hover,.SideBarWidget.left>div.toggle-button:hover{
-     background-color: #549ae6;
+.SideBarWidget.right>div.toggle-button:hover{
+    background-color: #e06f00;
+}
+.SideBarWidget.left>div.toggle-button:hover{
+     background-color: #4987cc;
 }
 
 .SideBarWidget.left.collapsed>.toggle-button {
