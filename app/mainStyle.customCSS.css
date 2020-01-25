@@ -528,8 +528,17 @@ span.array-module.ui-list-view.story-list {
     background-size: 60%;
 }
 
+.SideBarWidget.right>div.toggle-button, .SideBarWidget.right.active>div.toggle-button{
+    background-color: #fd8209;
+}
+.SideBarWidget.left>div.toggle-button, .SideBarWidget.left.active>div.toggle-button{
+    background-color: #549ae6;
+}
+
+    
+
 .SideBarWidget.right.active>div.toggle-button {
-    background-color: #ffcc00;
+    /*background-color: #ffcc00;*/
 }
 
 .SideBarWidget.right>div.toggle-button:hover,.SideBarWidget.left>div.toggle-button:hover{
