@@ -13,7 +13,12 @@ if(window.location.href.indexOf('/tutorial')>0){
 
 if(window.location.href.indexOf('/register')>0){
     
-    
+     application.getNamedValue('registerBtn', function(btn){
+        btn.runOnceOnLoad(function(){
+            btn.show();
+        })
+       
+    })
     
     return;
 }
