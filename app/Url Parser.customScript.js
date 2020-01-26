@@ -15,7 +15,7 @@ if(window.location.href.indexOf('/register')>0){
     
      ScoopStories.getApp().getNamedValue('registerBtn', function(btn){
         btn.runOnceOnLoad(function(){
-            btn.show();
+            btn.button.show();
         })
        
     })
