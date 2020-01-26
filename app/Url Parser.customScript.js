@@ -1,6 +1,6 @@
 if(window.location.href.indexOf('/tutorial')>0){
     
-    application.getNamedObject('tutorial', function(tut){
+    application.getNamedValue('tutorial', function(tut){
         tut.start();
     })
     
