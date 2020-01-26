@@ -4766,7 +4766,7 @@
         "instance": "CustomBehaviorScript",
         "parameters": {
             "target": "forTheMap",
-            "customScript": "console.log(window.location);",
+            "customScript": "Url Parser.customScript.js",
             "widgetTitle": "Url Parser",
             "readAccess": "public"
         }
