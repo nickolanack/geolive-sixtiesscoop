@@ -4765,7 +4765,10 @@
         "name": "Javascript",
         "instance": "CustomBehaviorScript",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "customScript": "console.log(window.location);",
+            "widgetTitle": "Url Parser",
+            "readAccess": "public"
         }
     }
 }
