@@ -1,7 +1,10 @@
 if(window.location.href.indexOf('/tutorial')>0){
     
     application.getNamedValue('tutorial', function(tut){
-        tut.start();
+        setTimeout(function(){
+             tut.start();
+        }, 1000);
+       
     })
     
     return;
