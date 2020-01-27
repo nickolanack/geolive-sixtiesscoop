@@ -379,16 +379,16 @@
                             "Create Story.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 355,
-                            "y": 211
+                            "x": 365,
+                            "y": 221
                         },
                         "children": [
                             "Create Story.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 315,
-                                    "y": 412
+                                    "x": 325,
+                                    "y": 422
                                 }
                             }
                         ],
@@ -429,7 +429,7 @@
                                             "type": "WizardDescriptionField",
                                             "config": {
                                                 "label": "What memories do you have of this place?",
-                                                "message": "add memories or discription",
+                                                "message": "Add memories or description",
                                                 "lines": 3,
                                                 "mandatory": false,
                                                 "showAudios": true,
