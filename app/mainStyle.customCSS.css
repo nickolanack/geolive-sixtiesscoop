@@ -1226,6 +1226,12 @@ p.info {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .site-logo h1 {
+        font-size:0;
+    }
+}
+
 @media only screen and (max-width: 600px) {
  .site-logo h1{
      height:60px;
