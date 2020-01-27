@@ -2,7 +2,7 @@
     "type": "WizardGeocodeAddress",
     "config": {
         "label": "Where were you placed?",
-        "message": "search location",
+        "message": "Search location",
         "className": "",
         "maxChars": 0,
         "textFormatScript": "",
