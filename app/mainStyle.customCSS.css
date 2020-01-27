@@ -1189,10 +1189,12 @@ p.info {
 }
 
 @media only screen and (max-width: 1000px) {
-  .site-logo h1 {
+  .site-logo h1>span {
     font-size: 0;
     }
-    
+    .site-logo h1 {
+        line-height: 55px;
+    }
     .menu-links {
         display: none;
     }
