@@ -1187,14 +1187,19 @@ p.info {
     color: cornflowerblue;
     font-style: italic;
 }
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
   .site-logo h1>span {
     font-size: 0;
     }
     .site-logo h1 {
         line-height: 55px;
     }
+   
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-logo h1>span {
+    
     .menu-links {
         display: none;
     }
