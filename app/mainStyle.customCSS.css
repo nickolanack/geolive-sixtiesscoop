@@ -830,11 +830,11 @@ textarea[disabled] {
 }
 
 .upload-btns span.image:after {
-    content: "add image";
+    content: "Add image";
 
 }
 .upload-btns span.video:after {
-    content: "add video";
+    content: "Add video";
 
 }
 
@@ -843,7 +843,7 @@ textarea[disabled] {
 }
 
 .your-profile-image .upload-btns span.image:after {
-    content: "select image";
+    content: "Select image";
 }
 
 .your-profile-image span.video.noIcon {
