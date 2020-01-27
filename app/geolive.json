@@ -3501,16 +3501,16 @@
                             "advancedSearchForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 266,
-                            "y": 304
+                            "x": 276,
+                            "y": 314
                         },
                         "children": [
                             "advancedSearchForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 226,
-                                    "y": 555
+                                    "x": 236,
+                                    "y": 565
                                 }
                             }
                         ],
@@ -3529,7 +3529,7 @@
                                             "config": {
                                                 "className": "",
                                                 "label": "Name",
-                                                "placeholder": "search names",
+                                                "placeholder": "Search names",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -3613,7 +3613,7 @@
                                             "config": {
                                                 "className": "",
                                                 "label": "Place of birth",
-                                                "placeholder": "search locations",
+                                                "placeholder": "Search locations",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -3634,7 +3634,7 @@
                                             "config": {
                                                 "className": "",
                                                 "label": "Name at birth",
-                                                "placeholder": "search birth names",
+                                                "placeholder": "Search birth names",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
@@ -3676,7 +3676,7 @@
                                             "config": {
                                                 "className": "",
                                                 "label": "Location lived",
-                                                "placeholder": "search locations",
+                                                "placeholder": "Search locations",
                                                 "lines": 1,
                                                 "maxChars": 0,
                                                 "mandatory": false,
