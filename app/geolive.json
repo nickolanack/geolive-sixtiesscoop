@@ -1139,16 +1139,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 298,
-                            "y": 430
+                            "x": 308,
+                            "y": 440
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 258,
-                                    "y": 668
+                                    "x": 268,
+                                    "y": 678
                                 }
                             }
                         ],
@@ -1251,7 +1251,7 @@
                                                     "profileFormView.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Original Birth Name (if known)",
+                                                "label": "Original birth name (if known)",
                                                 "message": "",
                                                 "lines": 1,
                                                 "maxChars": 0,
@@ -1262,7 +1262,7 @@
                                                 "formatter": "none",
                                                 "iconTint": "rgb(100, 149, 237)",
                                                 "autocomplete": true,
-                                                "inputOptions": [],
+                                                "inputOptions": "{}",
                                                 "onRenderTextFieldScript": "",
                                                 "formatdefaultScript": ""
                                             }
