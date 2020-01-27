@@ -2791,16 +2791,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 395,
-                            "y": 251
+                            "x": 405,
+                            "y": 261
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 355,
-                                    "y": 464
+                                    "x": 365,
+                                    "y": 474
                                 }
                             }
                         ],
@@ -2841,7 +2841,7 @@
                                             "type": "WizardGeocodeAddress",
                                             "config": {
                                                 "label": "When were you repatriated to?",
-                                                "message": "search location",
+                                                "message": "Search location",
                                                 "className": "css class name",
                                                 "maxChars": 0,
                                                 "textFormatScript": "",
@@ -2854,7 +2854,7 @@
                                             "type": "WizardDescriptionField",
                                             "config": {
                                                 "label": "If you would like to tell us more about your repatriation, please do so below.",
-                                                "message": "add a description or additional info",
+                                                "message": "Add a description or additional info",
                                                 "lines": 3,
                                                 "mandatory": false,
                                                 "showAudios": true,
