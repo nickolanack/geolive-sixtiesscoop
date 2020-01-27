@@ -1227,6 +1227,19 @@ p.info {
 }
 
 @media only screen and (max-width: 790px) {
+    
+    .site-title h1 {
+        width: 250px;
+        line-height: 30px;
+        padding-left: 100px;
+        text-indent: 0;
+    }
+
+}
+
+@media only screen and (max-width: 690px) {
+
+    
     .site-logo h1 {
         font-size:0;
     }
