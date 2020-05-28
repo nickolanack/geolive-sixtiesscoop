@@ -77,7 +77,10 @@
     "plugin.8": {
         "name": "Language",
         "instance": "Language",
-        "parameters": {}
+        "parameters": {
+            "localizations": "plugin.Language.8.localizations.json",
+            "googleTranslateApiKey": ""
+        }
     },
     "plugin.9": {
         "name": "Links",
@@ -4308,6 +4311,14 @@
                                 "config": {
                                     "name": "My Custom Script",
                                     "script": "sidePanelDetailList.metadata.positions.content.modules.1.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
+                            },
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "sidePanelDetailList.metadata.positions.content.modules.2.config.script.js",
                                     "description": "Info about my custom script"
                                 }
                             }
