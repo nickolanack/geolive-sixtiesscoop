@@ -180,7 +180,7 @@
             "userProfileImageScript": "return $defaultImage;",
             "validateEmail": true,
             "magicLinkUrl": "",
-            "useRecaptcha": true,
+            "useRecaptcha": false,
             "recaptchaKey": "XXXX-XXXX",
             "recaptchaSecret": "XXXX-XXXX"
         }
