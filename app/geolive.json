@@ -4801,7 +4801,11 @@
                     },
                     "content": {
                         "modules": [
-                            "Support.metadata.positions.content.modules.0.json"
+                            "Support.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "InlineHtml",
+                                "config": []
+                            }
                         ]
                     },
                     "footer": {
