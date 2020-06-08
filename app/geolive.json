@@ -4792,7 +4792,7 @@
             "templateName": "support",
             "requireTarget": true,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "Support.onRenderApplictionScript.js",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
