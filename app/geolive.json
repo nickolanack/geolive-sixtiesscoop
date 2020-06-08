@@ -4797,7 +4797,7 @@
             "widgetTitle": "Support",
             "target": "support",
             "templateName": "support",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "Support.onRenderApplictionScript.js",
             "notifyViewer": false,
