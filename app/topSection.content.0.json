@@ -4,6 +4,7 @@
         "className": "site-title site-logo",
         "text": "<a href=\"\/\" ><h1>In Our own Words <span>Mapping the Stories of 60's Scoop Survivors Diaspora<\/span><\/h1><\/a>\n",
         "template": "",
-        "templateVariablesScript": ""
+        "templateVariablesScript": "",
+        "formatTextScript": ""
     }
 }
