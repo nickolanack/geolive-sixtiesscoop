@@ -163,6 +163,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "faq"
+                },
+                {
+                    "name": "support",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "support"
                 }
             ]
         }
