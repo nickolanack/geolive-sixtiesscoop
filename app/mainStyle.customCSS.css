@@ -588,7 +588,7 @@ span.array-module.ui-list-view.story-list {
     cursor: pointer;
 }
 .profile-section  .primary-btn, .sort-card button, 
-.module-wizard .form-btn.register, .contact-btn, .upload-btns span.video:after, .upload-btns span.image:after{
+.module-wizard .form-btn.register, .contact-btn, .upload-btns span.video:after, .upload-btns span.image:after, .clear.primary-btn{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
