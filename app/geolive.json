@@ -4813,7 +4813,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "",
-                                    "text": "<img src=\"logos\/a.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/d.png\">",
+                                    "text": "<div class=\"logos\"><img src=\"logos\/a.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/d.png\">\n<\/div>",
                                     "template": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": ""
