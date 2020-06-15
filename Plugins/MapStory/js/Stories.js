@@ -722,14 +722,18 @@ var StoryMapController = new Class({
 
         var aggregator=new AdvancedStorySearchAggregator(search, {});
 
+
+        search.addEvent('keyPress.enter',function(value){
+             ScoopStories.setCardGroup((new AdvancedStorySearch({})).setResponse(aggregator.getLastResponse()), function() {});
+             search.getInput().blur();
+        });
+
         return [
             aggregator
             //, new StorySearch(search, {}),
         ];
 
-        search.addEvent('keyPress.enter',function(value){
-             ScoopStories.setCardGroup((new AdvancedStorySearch({})).setResponse(aggregator.getLastResponse()), function() {});
-        });
+        
 
     },
     initializeApplication: function(app) {

@@ -84,6 +84,7 @@ var AdvancedStorySearch = new Class({
 	},
 	setResponse:function(resp){
 
+		var me=this;
 		var searchResultCards = resp.results.map(function(data) {
 
 			var card = new StoryCardSearchResult(Object.append(data, {
@@ -98,7 +99,7 @@ var AdvancedStorySearch = new Class({
 		});
 
 		me._cards = searchResultCards;
-		
+		return me;
 
 	},
 	getCards: function(cb) {
