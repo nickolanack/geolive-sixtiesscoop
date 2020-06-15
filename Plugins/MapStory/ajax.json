@@ -2,6 +2,7 @@
 
 	"save_story_item":{},
 	"delete_story_item":{},
+	"delete_story":{},
 	"get_story":{},
 	"get_story_with_item":{},
 	"get_story_with_user":{},

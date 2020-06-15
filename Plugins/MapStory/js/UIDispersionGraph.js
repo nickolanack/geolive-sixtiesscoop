@@ -66,8 +66,9 @@ var UIDispersionGraph = (function() {
 					layer.hide();
 				});
 
-				me._getProvinceCodes().forEach(function(code){ me.addLegend(code); });
-
+				
+				// me._getProvinceCodes().forEach(function(code){ me.addLegend(code); });
+				
 				(new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
 					"plugin": "MapStory"
 				})).addEvent("success", function(resp) {
@@ -96,7 +97,8 @@ var UIDispersionGraph = (function() {
 
 						
 						line.setLayer(me.getLayer(code));
-						me.addLegend(code);
+						
+						// me.addLegend(code);
 
 						me.fireEvent('addLine.'+code,[line, code]);
 
@@ -305,7 +307,29 @@ var UIDispersionGraph = (function() {
 		getProviceCodeItems:function(){
 			var me=this;
 			return me._getProvinceCodes().map(function(code){
-				return {
+				return new (new Class({
+					formatChart:function(chart, callback){
+
+						chart.view.colors[0]=me._lineData[code].lineColor;
+						chart.title(this.getTitle());
+						var el=$(chart.view.el);
+						el.addEvent('click', function(){
+
+							var layer=me.getLayer(code);
+							if(layer.isVisible()){
+								el.addClass('layer-hidden');
+								layer.hide();
+									return;
+							}
+							el.removeClass('layer-hidden');
+							layer.show();
+						});
+						
+						this.getCount(function(number){
+						    callback({result:number});
+						})
+
+					},
 					getTitle:function(){ 
 						return code;
 					},
@@ -337,7 +361,7 @@ var UIDispersionGraph = (function() {
 
 						return me.getLayer(code).getItemsCount();
 					}
-				}
+				}))
 			})
 		},
 		_getProvinceCodes: function() {
@@ -370,23 +394,40 @@ var UIDispersionGraph = (function() {
 
 			return [
 
-				"#006d2c",
-				"#31a354",
-				"#74c476",
 
-				"#bae4b3",
+				'#a50026',
+				'#f46d43',
+				'#4575b4',
+				'#313695',
+				'#762a83',
+				'#1b7837',
+				'#de77ae',
+				'#8c510a',
+				'#35978f',
+				'#fee391',
+				'#bdbdbd',
+				'#737373',
+			    '#9e9ac8'
+				// ,
 
-				"#fd8d3c",
-				"#fc4e2a",
-				"#e31a1c",
-				"#bd0026",
-				"#800026",
 
-				"#dd1c77",
-				"#df65b0",
-				"#c994c7",
+				// "#006d2c",
+				// "#31a354",
+				// "#74c476",
 
-				"#d4b9da"
+				// "#bae4b3",
+
+				// "#fd8d3c",
+				// "#fc4e2a",
+				// "#e31a1c",
+				// "#bd0026",
+				// "#800026",
+
+				// "#dd1c77",
+				// "#df65b0",
+				// "#c994c7",
+
+				// "#d4b9da"
 
 			];
 

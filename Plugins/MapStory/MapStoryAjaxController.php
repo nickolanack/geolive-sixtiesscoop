@@ -33,6 +33,18 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 	}
 
 
+	protected function deleteStory($json){
+
+		// if(!Auth('write', $json->id, $json->type)){
+		// 	return $this->setError('No access');
+		// }
+
+		// GetPlugin('Maps');
+		// return !!(new \spatial\FeatureLoader())->delete((new \spatial\FeatureLoader())->fromId($json->id));
+		
+	}
+
+
 	protected function getStoryWithItem($json){
 
 		$list=$this->getPlugin()->getFeaturesMetadata($json->item);
