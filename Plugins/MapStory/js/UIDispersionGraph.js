@@ -12,105 +12,113 @@ var UIDispersionGraph = (function() {
 			me._map = map;
 			me._control = control;
 
-			var active = false;
+			me._active = false;
 
 
 			me._initStyles()
 
 
-
-			var legends = {};
-
+			tile.addEvent('click', me.toggle.bind(me));
 
 
-			var getLineData = function(result, code) {
+		},
+		_getLineData: function(result, code) {
 
-				var data = {
-					coordinates: [result.locationData.coordinates, result.nextLocationData.coordinates],
-					geodesic: true,
-					lineColor: "#ff0000",
-					lineWidth: 3
-				};
+			var me=this;
 
-
-				code = code || me._getCode(result);
-				Object.append(data, me._lineData[code]);
-
-
-				return data;
+			var data = {
+				coordinates: [result.locationData.coordinates, result.nextLocationData.coordinates],
+				geodesic: true,
+				lineColor: "#ff0000",
+				lineWidth: 3
 			};
 
 
-
-			tile.addEvent('click', function() {
-
-				map.resetView();
-				me._emptyLayers();
-				me._removeTiles();
+			code = code || me._getCode(result);
+			Object.append(data, me._lineData[code]);
 
 
-				if (active) {
-					active = false;
-					me.forEachMapLayer(function(layer) {
-						layer.show();
-					});
-					tile.deactivate();
-					me.fireEvent('deactivate');
-					return;
-				}
-				active = true;
-				me.fireEvent('activate');
-				tile.activate();
+			return data;
+		},
+		isActive:function(){
+			return this._active;
+		},
 
+		toggle: function() {
+
+			var me=this;
+
+			me._map.resetView();
+			me._emptyLayers();
+			me._removeTiles();
+
+
+			if (me._active) {
+				me._active = false;
 				me.forEachMapLayer(function(layer) {
-					layer.hide();
+					layer.show();
 				});
+				me._tile.deactivate();
+				me.fireEvent('deactivate');
+				return;
+			}
+			me._active = true;
+			me.fireEvent('activate');
+			me._tile.activate();
 
-				
-				// me._getProvinceCodes().forEach(function(code){ me.addLegend(code); });
-				
-				(new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
-					"plugin": "MapStory"
-				})).addEvent("success", function(resp) {
-
-
-					resp.results.forEach(function(result) {
-
-						if (!(result.locationData && result.nextLocationData)) {
-							return;
-						}
-
-						var code = me._getCode(result);
-						var data = getLineData(result, code);
-
-						var line = new GeoliveLine(new google.maps.Polyline({
-							strokeColor: data.lineColor || MapFactory.COLOR,
-							strokeOpacity: data.lineOpacity || MapFactory.OPACITY,
-							strokeWeight: data.lineWidth || MapFactory.WIDTH,
-							clickable: !!(data.clickable || true),
-							geodesic: !!(data.geodesic || false),
-							path: data.coordinates.map(function(c) {
-								return new google.maps.LatLng(c[0], c[1]);
-							})
-						}), data);
-
-
-						
-						line.setLayer(me.getLayer(code));
-						
-						// me.addLegend(code);
-
-						me.fireEvent('addLine.'+code,[line, code]);
-
-
-					});
-
-
-				}).execute();
-
+			me.forEachMapLayer(function(layer) {
+				layer.hide();
 			});
 
 
+			// me._getProvinceCodes().forEach(function(code){ me.addLegend(code); });
+
+			(new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
+				"plugin": "MapStory"
+			})).addEvent("success", function(resp) {
+
+
+				resp.results.forEach(function(result) {
+
+					if (!(result.locationData && result.nextLocationData)) {
+						return;
+					}
+
+					var code = me._getCode(result);
+					var data = me._getLineData(result, code);
+
+					var lineSymbol = {
+					  path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+					};
+
+					var line = new GeoliveLine(new google.maps.Polyline({
+						strokeColor: data.lineColor || MapFactory.COLOR,
+						strokeOpacity: data.lineOpacity || MapFactory.OPACITY,
+						strokeWeight: data.lineWidth || MapFactory.WIDTH,
+						clickable: !!(data.clickable || true),
+						geodesic: !!(data.geodesic || false),
+						path: data.coordinates.map(function(c) {
+							return new google.maps.LatLng(c[0], c[1]);
+						}),
+						icons: [{
+				            icon: lineSymbol,
+				            offset: '100%'
+				          }]
+					}), data);
+
+
+
+					line.setLayer(me.getLayer(code));
+
+					// me.addLegend(code);
+
+					me.fireEvent('addLine.' + code, [line, code]);
+
+
+				});
+
+
+			}).execute();
 
 		},
 
@@ -165,8 +173,8 @@ var UIDispersionGraph = (function() {
 				me._legends = {};
 			}
 
-			Object.keys(me._legends).forEach(function(key){
-				if(me._tile.hasTile(me._legends[key])){
+			Object.keys(me._legends).forEach(function(key) {
+				if (me._tile.hasTile(me._legends[key])) {
 					me._tile.removeTile(me._legends[key]);
 				}
 			});
@@ -176,27 +184,27 @@ var UIDispersionGraph = (function() {
 		focusLayers: function() {
 
 			var me = this;
-			if(me._focusTimeout){
+			if (me._focusTimeout) {
 				clearTimeout(me._focusTimeout);
 				delete me._focusTimeout;
 			}
-			me._focusTimeout=setTimeout(function(){
+			me._focusTimeout = setTimeout(function() {
 				delete me._focusTimeout;
-				var layers=me.getLayers().filter(function(l){
+				var layers = me.getLayers().filter(function(l) {
 					return l.isVisible();
 				});
 
-				if(layers.length){
-					var bounds=SpatialCalculator.calculateBounds(layers);
-					if(bounds.south==Infinity){
+				if (layers.length) {
+					var bounds = SpatialCalculator.calculateBounds(layers);
+					if (bounds.south == Infinity) {
 						return;
 					}
 					me._map.fitBounds(bounds);
 				}
 
 			}, 100);
-			
-			
+
+
 		},
 
 		getLayers: function() {
@@ -244,11 +252,11 @@ var UIDispersionGraph = (function() {
 
 			if (me._legends[code]) {
 				me._tile.addTile(me._legends[code]);
-				(layer||me.getLayer(code)).show();
+				(layer || me.getLayer(code)).show();
 				return;
 			}
 
-			layer=layer||me.getLayer(code);
+			layer = layer || me.getLayer(code);
 
 			var subtile = new UIMapSubTileButton(me._tile, {
 				"class": "province from-" + (code.toLowerCase()),
@@ -259,16 +267,16 @@ var UIDispersionGraph = (function() {
 
 
 
-			
-			layer.addEvent('visibilityChanged',function(visible){
-				if(visible){
+
+			layer.addEvent('visibilityChanged', function(visible) {
+				if (visible) {
 					subtile.enable();
 					return;
 				}
 				subtile.disable();
-					
+
 			});
-			layer.addEvent('visibilityChanged',function(){
+			layer.addEvent('visibilityChanged', function() {
 				me.focusLayers();
 			});
 
@@ -276,7 +284,7 @@ var UIDispersionGraph = (function() {
 
 				me.fireEvent('selectCode', [code]);
 
-				if(layer.isVisible()){
+				if (layer.isVisible()) {
 					layer.hide();
 					return;
 				}
@@ -304,58 +312,58 @@ var UIDispersionGraph = (function() {
 			throw 'Not found';
 
 		},
-		getProviceCodeItems:function(){
-			var me=this;
-			return me._getProvinceCodes().map(function(code){
+		getProviceCodeItems: function() {
+			var me = this;
+			return me._getProvinceCodes().map(function(code) {
 				return new (new Class({
-					formatChart:function(chart, callback){
+					formatChart: function(chart, callback) {
 
-						chart.view.colors[0]=me._lineData[code].lineColor;
+						chart.view.colors[0] = me._lineData[code].lineColor;
 						chart.title(this.getTitle());
-						var el=$(chart.view.el);
-						el.addEvent('click', function(){
+						var el = $(chart.view.el);
+						el.addEvent('click', function() {
 
-							var layer=me.getLayer(code);
-							if(layer.isVisible()){
+							var layer = me.getLayer(code);
+							if (layer.isVisible()) {
 								el.addClass('layer-hidden');
 								layer.hide();
-									return;
+								return;
 							}
 							el.removeClass('layer-hidden');
 							layer.show();
 						});
-						
-						this.getCount(function(number){
-						    callback({result:number});
+
+						this.getCount(function(number) {
+							callback({ result: number });
 						})
 
 					},
-					getTitle:function(){ 
+					getTitle: function() {
 						return code;
 					},
-					getCount:function(callback){ 
+					getCount: function(callback) {
 
-						if(callback){
+						if (callback) {
 
-							var updateCount=function(){
+							var updateCount = function() {
 
-								if(me["_interval"+code]){
-									clearInterval(me["_interval"+code]);
-									delete me["_interval"+code];
+								if (me["_interval" + code]) {
+									clearInterval(me["_interval" + code]);
+									delete me["_interval" + code];
 								}
 
-								me["_interval"+code]=setTimeout(function(){
-									delete me["_interval"+code];
+								me["_interval" + code] = setTimeout(function() {
+									delete me["_interval" + code];
 									callback(me.getLayer(code).getItemsCount());
 								}, 100);
 							}
 							updateCount();
 
-							me.addEvent('addLine.'+code, updateCount);
+							me.addEvent('addLine.' + code, updateCount);
 							me.addEvent('deactivate:once', function() {
-								me.removeEvent('addLine.'+code, updateCount);
+								me.removeEvent('addLine.' + code, updateCount);
 							});
-							
+
 							return;
 						}
 
@@ -382,8 +390,8 @@ var UIDispersionGraph = (function() {
 				"NB",
 				"NL",
 				"QC",
-				"ON"	
-				
+				"ON"
+
 			];
 
 		},
@@ -407,7 +415,7 @@ var UIDispersionGraph = (function() {
 				'#fee391',
 				'#bdbdbd',
 				'#737373',
-			    '#9e9ac8'
+				'#9e9ac8'
 				// ,
 
 

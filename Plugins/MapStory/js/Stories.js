@@ -562,7 +562,11 @@ var StoryMapController = new Class({
             "html":"Reset Map",
             events: {
                         click: function(e) {
+                            if(me._graph.isActive()){
+                                me._graph.toggle();
+                            }
                             me.resetMap();
+                            me._storyView.hide();
                             me.getMap().resetView();
                         }
                     }
@@ -677,7 +681,7 @@ var StoryMapController = new Class({
         });
 
         me._graphTile=tile;
-
+        me._graph=graph;
     },
 
     initializeSidePanelRight: function(sidePanel, el) {
@@ -715,9 +719,17 @@ var StoryMapController = new Class({
 
     getSearchAggregators: function(search) {
 
+
+        var aggregator=new AdvancedStorySearchAggregator(search, {});
+
         return [
-            new StorySearch(search, {})
+            aggregator
+            //, new StorySearch(search, {}),
         ];
+
+        search.addEvent('keyPress.enter',function(value){
+             ScoopStories.setCardGroup((new AdvancedStorySearch({})).setResponse(aggregator.getLastResponse()), function() {});
+        });
 
     },
     initializeApplication: function(app) {
@@ -1821,6 +1833,10 @@ var StoryMapController = new Class({
                                 [currentMarker.getLatLng().lat, currentMarker.getLatLng().lng]
                             ]
                         };
+
+                        var lineSymbol = {
+                          path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+                        };
                         var line = new GeoliveLine(new google.maps.Polyline({
                             strokeColor: data.lineColor || MapFactory.COLOR,
                             strokeOpacity: data.lineOpacity || MapFactory.OPACITY,
@@ -1829,7 +1845,11 @@ var StoryMapController = new Class({
                             geodesic: !!(data.geodesic || false),
                             path: data.coordinates.map(function(c) {
                                 return new google.maps.LatLng(c[0], c[1]);
-                            })
+                            }),
+                            icons: [{
+                                icon: lineSymbol,
+                                offset: '100%'
+                              }]
                         }), data);
 
 

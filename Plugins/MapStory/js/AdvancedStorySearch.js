@@ -82,7 +82,25 @@ var AdvancedStorySearch = new Class({
 		})
 		return me;
 	},
+	setResponse:function(resp){
 
+		var searchResultCards = resp.results.map(function(data) {
+
+			var card = new StoryCardSearchResult(Object.append(data, {
+				classNames: "search-card-detail"
+			}));
+			var user = new StoryUser({
+				"story": [],
+				"user": Object.append({}, data.userData)
+			});
+			card.setUser(user);
+			return card;
+		});
+
+		me._cards = searchResultCards;
+		
+
+	},
 	getCards: function(cb) {
 
 
@@ -113,21 +131,9 @@ var AdvancedStorySearch = new Class({
 				'search': me._searchData
 			})).addEvent('success', function(resp) {
 
-				var randomSearchCards = resp.results.map(function(data) {
+				me.setResponse(resp);
+				cb(me._padCards(me._cards));
 
-					var card = new StoryCardSearchResult(Object.append(data, {
-						classNames: "search-card-detail"
-					}));
-					var user = new StoryUser({
-						"story": [],
-						"user": Object.append({}, data.userData)
-					});
-					card.setUser(user);
-					return card;
-				});
-
-				me._cards = randomSearchCards;
-				cb(me._padCards(randomSearchCards));
 
 			}).execute();
 
