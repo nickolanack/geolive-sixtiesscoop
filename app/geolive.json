@@ -576,7 +576,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "menu-links",
-                                    "text": "<a id=\"map-link\" href=\"\/\"><h2>Map<\/h2><\/a>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/faq\"><h2>FAQ<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/\" onclick=\"ScoopStories.createStory(); return false;\">\n<a id=\"support-link\" href=\"\/support\"><h2>Support<\/h2><\/a>",
+                                    "text": "<a id=\"map-link\" href=\"\/\"><h2>Map<\/h2><\/a>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/faq\"><h2>FAQ<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/\" onclick=\"ScoopStories.createStory(); return false;\">\n<a id=\"support-link\" href=\"\/support\"><h2>Support<\/h2><\/a>\n<a id=\"donate-link\" href=\"https:\/\/sixtiesscoopnetwork.org\/content\/donation\"><h2>Donate<\/h2><\/a>\n\n",
                                     "template": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": ""
@@ -4445,6 +4445,14 @@
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
                                 }
+                            },
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "sidePanelGraphDetail.metadata.positions.content.modules.2.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
                             }
                         ]
                     },
@@ -4813,7 +4821,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "",
-                                    "text": "<div class=\"logos\"><img src=\"logos\/a.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/c.jpg\">\n<img src=\"logos\/d.png\">\n<\/div>\n\n\n<style>\n.logos>img {\n    max-width: 300px;\n    margin-bottom: 30px;\n}\n\n.logos {\n    text-align: center;\n    width: 400px;\n    margin: auto;\n    margin-top: 30px;\n.logos>img {\n    max-width: 300px;\n    margin-bottom: 30px;\n}\n\n.logos {\n    text-align: center;\n    width: 400px;\n    margin: auto;\n    margin-top: 30px;\n}\n\n\n<\/style>",
+                                    "text": "<div class=\"logos\">\n<img src=\"https:\/\/firelight.ca\/wp-content\/uploads\/2017\/11\/firelight-logo-design-1.png\">\n<img src=\"logos\/a.png\">\n<img src=\"logos\/b.png\">\n<img src=\"logos\/c.jpg\">\n<img src=\"logos\/d.png\">\n<\/div>\n\n\n<style>\n\n\n.logos>img {\n    max-width: 250px;\n    margin-bottom: 30px;\n}\n\n.logos {\n    text-align: center;\n    width: 270px;\n    margin: auto;\n    margin-top: 30px;\n}\n\n\n\n<\/style>",
                                     "template": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": ""
