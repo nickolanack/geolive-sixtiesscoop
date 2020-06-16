@@ -275,6 +275,7 @@
             "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "main.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -563,6 +564,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -634,6 +636,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -673,6 +676,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -764,6 +768,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "scoopStoryView.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -833,6 +838,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -884,6 +890,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -1539,6 +1546,7 @@
             "requireTarget": true,
             "resolveItemScript": "addCardView.resolveItemScript.js",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -3147,6 +3155,7 @@
             "requireTarget": false,
             "resolveItemScript": "    \r\n   return $item;",
             "onRenderApplictionScript": "inline-birth-form.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -3186,6 +3195,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positionList": [
@@ -3431,6 +3441,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -3837,6 +3848,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -3876,6 +3888,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -3990,6 +4003,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4156,6 +4170,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4305,6 +4320,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4360,6 +4376,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4407,6 +4424,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4484,6 +4502,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4523,6 +4542,7 @@
             "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "Disclaimer.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4580,6 +4600,7 @@
             "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "Faq.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4759,6 +4780,7 @@
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -4808,6 +4830,7 @@
             "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "Support.onRenderApplictionScript.js",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
