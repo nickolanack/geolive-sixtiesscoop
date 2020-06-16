@@ -1273,3 +1273,23 @@ p.info {
 }
 
 
+
+
+
+.default-cluster-labels {
+    font-size: 0;
+}
+
+.default-cluster-labels:after {
+    content: attr(data-number);
+    font-size: 18px;
+    position: relative;
+    left: -5px;
+    top: -8px;
+    text-shadow: 0 0 3px white;
+}
+
+
+
+
+
