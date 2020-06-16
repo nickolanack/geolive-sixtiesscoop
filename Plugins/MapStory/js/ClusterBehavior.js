@@ -6,21 +6,29 @@ var ClusterBehavior = new Class({
 
 		var config = {}
 		var renderers = {};
-		var resolveMapitem = function(app, id) {
 
-			return app.getLayerManager().filterMapitemById(id);
+		var colors=[
+				'#fd8209',
+				'#ffcc02',
+				'#5daeeb',
+				];
+		var resolveMapitemType = function(app, id) {
 
+			var type = app.getLayerManager().filterMapitemById(id).getIcon();
+			return type;
 		}
 
 		application.setClusterRendererResolver(function(marker, clusterer) {
 
-			var type = resolveMapitem(application, marker._markerid).getName().split('- ').pop().toLowerCase().replace(' ', '-').replace('/', '');
+			var type = resolveMapitemType(application, marker._markerid);
 			if (!renderers[type]) {
 				renderers[type] = clusterer.addRenderer();
 			}
 			return renderers[type];
 
 		});
+
+		application.redrawClusters();
 
 
 		if (window.Cluster) {
@@ -34,10 +42,8 @@ var ClusterBehavior = new Class({
 				var color = "rgb(0, 160, 80)";
 				var cluster = this.cluster_;
 				if (cluster && cluster.markers_ && cluster.markers_.length) {
-					var type = 'cluster-' + resolveMapitem(application, cluster.markers_[0]._markerid).getName().split('- ').pop().toLowerCase().replace(' ', '-').replace('/', '');
-					if (config[type]) {
-						color = config[type]
-					}
+					var type = resolveMapitemType(application, cluster.markers_[0]._markerid);
+					color=colors[Object.keys(renderers).indexOf(type)];
 				}
 
 				return {
@@ -49,13 +55,7 @@ var ClusterBehavior = new Class({
 					labelOrigin: google.maps.Point(0, 0)
 				};
 
-
-
-
 			};
-
-
-
 
 		}
 

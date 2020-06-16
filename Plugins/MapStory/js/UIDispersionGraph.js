@@ -33,10 +33,12 @@ var UIDispersionGraph = (function() {
 				lineWidth: 3
 			};
 
-
-			code = code || me._getCode(result);
-			Object.append(data, me._lineData[code]);
-
+			try{
+				code = code || me._getCode(result);
+				Object.append(data, me._lineData[code]);
+			}catch(e){
+				//most likely out of canada 
+			}
 
 			return data;
 		},
@@ -84,8 +86,13 @@ var UIDispersionGraph = (function() {
 						return;
 					}
 
-					var code = me._getCode(result);
-					var data = me._getLineData(result, code);
+					try{
+						var code = me._getCode(result);
+					}catch(e){
+						console.error('skip item. out of canada?');
+						return;
+					}
+					var data = me._getLineData(result)//, code);
 
 					var lineSymbol = {
 					  path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
@@ -309,7 +316,7 @@ var UIDispersionGraph = (function() {
 					return componenets[i].short_name;
 				}
 			}
-			throw 'Not found';
+			throw 'Not found: '+code;
 
 		},
 		getProviceCodeItems: function() {

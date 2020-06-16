@@ -96,15 +96,26 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 		$list=array();
 		$prefix='attribute_';
 
-		(new \spatial\AttributeFeatures('storyAttributes'))
-			->withType('MapStory.card') //becuase attribute type is overriden
-			->withAllAttributes($prefix)
-			->withFilter('{ 
+
+		$filterBirthStories='{ 
 				"filters":[{
 					"field":"isBirthStory",
 					"value":true
 				}]
-			}')->iterate(function($result)use(&$list, $prefix){
+			}';
+
+		$filterOutOfProvince='{ 
+			"filters":[{
+				"field":"movesOutOfProvince",
+				"value":true
+			}]
+		}';
+
+
+		(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter($filterOutOfProvince)->iterate(function($result)use(&$list, $prefix){
 
 
 

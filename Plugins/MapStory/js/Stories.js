@@ -642,7 +642,7 @@ var StoryMapController = new Class({
         var graph = (new UIDispersionGraph(map, tile, control))
         graph.addEvent('activate', function() {
 
-            var activeCar;
+            var activeCard;
             me.resetMap(function(card){
                 activeCard=card;
             });
@@ -752,6 +752,8 @@ var StoryMapController = new Class({
             me.selectCard(item.getId());
 
         });
+
+        (new ClusterBehavior(map));
 
 
         map.getLayerManager().getLayers().forEach(function(layer) {

@@ -86,6 +86,12 @@ class StoryFormatter {
 			}
 
 
+			$countryA=$this->getCountry($attributes['locationData']);
+			$provinceA=$this->getProvince($attributes['locationData']);
+			$attributes['country']=$countryA;
+			$attributes['province']=$provinceA;
+
+
 			$feature['attributes'] = $attributes;
 		}
 
@@ -102,6 +108,22 @@ class StoryFormatter {
 
 			}
 
+
+
+			//if ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']) {
+
+				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
+					"movesOutOfCountry" => $list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']
+				));
+			//}
+
+			//if ($list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']) {
+
+				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
+					"movesOutOfProvince" => $list[$i]['attributes']['country']==="CA"&&$list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']
+				));
+			//}
+			
 		}
 
 
@@ -110,6 +132,44 @@ class StoryFormatter {
 
 
 		return $list;
+
+	}
+
+
+	protected function getCountry($locationData){
+
+		if(key_exists('geocode', $locationData)){
+			$locationData=$locationData->geocode;
+		}
+
+		if(key_exists('address_components', $locationData)){
+			foreach ($locationData->address_components as $addressPart) {
+				if(key_exists('types', $addressPart)&&in_array('country',  $addressPart->types)){
+					return $addressPart->short_name;
+				}
+			}
+		}
+
+		return '--';
+
+	}
+
+	protected function getProvince($locationData){
+
+
+		if(key_exists('geocode', $locationData)){
+			$locationData=$locationData->geocode;
+		}
+
+		if(key_exists('address_components', $locationData)){
+			foreach ($locationData->address_components as $addressPart) {
+				if(key_exists('types', $addressPart)&&in_array('administrative_area_level_1',  $addressPart->types)){
+					return $addressPart->short_name;
+				}
+			}
+		}
+
+		return '--';
 
 	}
 
