@@ -7,18 +7,19 @@ var ClusterBehavior = new Class({
 		var config = {}
 		var renderers = {};
 
-		var colors=[
-				'#fd8209',
-				'#ffcc02',
-				'#5daeeb',
-				];
+		var colors = {
+			"https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png?thumb=>48>48": '#fd8209',
+			"https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png?thumb=>48>48": '#ffcc02',
+			"https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png?thumb=>48>48": '#5daeeb',
+		};
 		var resolveMapitemType = function(app, id) {
 
 			var type = app.getLayerManager().filterMapitemById(id).getIcon();
 			return type;
 		}
 
-		application.setClusterRendererResolver(function(marker, clusterer) {
+
+		var rendererResolver = function(marker, clusterer) {
 
 			var type = resolveMapitemType(application, marker._markerid);
 			if (!renderers[type]) {
@@ -26,9 +27,18 @@ var ClusterBehavior = new Class({
 			}
 			return renderers[type];
 
-		});
+		};
+		application.setClusterRendererResolver(rendererResolver);
 
-		application.redrawClusters();
+		application.getLayerManager().getLayers().forEach(function(layer) {
+			layer.hide();
+			layer.getRenderer().setMarkerRendererResolverFn(
+				function(marker, renderer) {
+					return rendererResolver(marker, layer.getRenderer());
+				});
+			layer.show();
+			//layer.show();
+		});
 
 
 		if (window.Cluster) {
@@ -43,7 +53,12 @@ var ClusterBehavior = new Class({
 				var cluster = this.cluster_;
 				if (cluster && cluster.markers_ && cluster.markers_.length) {
 					var type = resolveMapitemType(application, cluster.markers_[0]._markerid);
-					color=colors[Object.keys(renderers).indexOf(type)];
+
+					if (Object.keys(colors).indexOf(type) >= 0) {
+						color = colors[type];
+					} else {
+						console.log(type);
+					}
 				}
 
 				return {
