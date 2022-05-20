@@ -4045,8 +4045,8 @@
         "instance": "ExportData",
         "parameters": {
             "widgetTitle": "Export Data",
-            "readAccess": "public",
-            "target": "none",
+            "readAccess": "special",
+            "target": "forTheMap",
             "position": "LEFT_CENTER",
             "downloadImage": [],
             "controlColor": "rgb(48,84,107)",
