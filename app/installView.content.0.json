@@ -1,7 +1,7 @@
 {
     "type": "InlineHtml",
     "config": {
-        "className": "",
+        "className": "intro-section",
         "text": "#Install Story map",
         "template": "html.install0",
         "templateVariablesScript": "{}",
