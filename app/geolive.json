@@ -5191,9 +5191,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Install Story map"
+            "contentTemplate": "#Install Story map",
+            "readAccess": "public"
         }
     },
     "widget.66": {
