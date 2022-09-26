@@ -5139,7 +5139,7 @@
                             {
                                 "type": "InlineHtml",
                                 "config": {
-                                    "className": "",
+                                    "className": "intro-section-2",
                                     "text": "#Install 1",
                                     "template": "html.install1",
                                     "templateVariablesScript": "{}",
@@ -5152,7 +5152,7 @@
                             {
                                 "type": "InlineHtml",
                                 "config": {
-                                    "className": "",
+                                    "className": "intro-section-3",
                                     "text": "#Install3",
                                     "template": "html.install2",
                                     "templateVariablesScript": "{}",
