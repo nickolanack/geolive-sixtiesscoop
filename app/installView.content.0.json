@@ -1,7 +1,7 @@
 {
     "type": "UIView",
     "config": {
-        "className": "",
+        "className": "install-form",
         "identifier": "",
         "viewType": "form",
         "namedView": "defaultView",
