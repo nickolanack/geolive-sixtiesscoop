@@ -786,7 +786,7 @@
         "parameters": {
             "widgetTitle": "",
             "target": "forTheMap",
-            "offset": "135",
+            "offset": "0",
             "maxHeight": "3000",
             "minHeight": "400",
             "offsetScript": "widget.FlexibleHeight.12.offsetScript.js",
