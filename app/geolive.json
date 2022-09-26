@@ -33,7 +33,9 @@
     "plugin.4": {
         "name": "Events",
         "instance": "Events",
-        "parameters": {}
+        "parameters": {
+            "logPath": "{log}"
+        }
     },
     "plugin.5": {
         "name": "Monolog Plugin",
@@ -71,7 +73,15 @@
             "key": "XXXX-XXXX",
             "secret": "XXXX-XXXX",
             "useCloudFront": false,
-            "cloudFrontDomain": "https:\/\/dyl2vw577xcfk.cloudfront.net\/"
+            "cloudFrontDomain": "https:\/\/dyl2vw577xcfk.cloudfront.net\/",
+            "renderSpatialThumbs": true,
+            "mime-image": [],
+            "mime-audio": [],
+            "mime-video": [],
+            "mime-document": [],
+            "mime-spatial": [],
+            "mime-document-pdf": [],
+            "mime-document-doc": []
         }
     },
     "plugin.8": {
@@ -171,7 +181,11 @@
                     "pluginView": "widget",
                     "widget": "support"
                 }
-            ]
+            ],
+            "useRemoteServerUI": false,
+            "remoteServerUrl": "",
+            "templateEditAuthScript": "XXXX-XXXX",
+            "configurationFieldEditAuthScript": "XXXX-XXXX"
         }
     },
     "plugin.14": {
@@ -217,6 +231,8 @@
             "googleMapsVersion": "quarterly",
             "tileCachePath": "{site}\/..\/map-tiles",
             "layerDisplayFilterScript": "",
+            "layerDisplayFormatScript": "",
+            "layerDisplayChildLayersScript": "",
             "formatMapitemScript": "",
             "featureUrlScript": ""
         }
@@ -277,6 +293,7 @@
             "onRenderApplictionScript": "main.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -355,9 +372,14 @@
         "parameters": {
             "cacheable": true,
             "link": false,
+            "sass": false,
             "widgetTitle": "mainStyle",
             "target": "mainStyle",
             "customCSS": "mainStyle.customCSS.css",
+            "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -365,16 +387,31 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "module--text.contentTemplate.html",
             "widgetTitle": "module..text",
-            "target": "module..text"
+            "target": "module..text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module--text.contentTemplate.html"
         }
     },
     "widget.4": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "Create Story",
             "target": "createStoryForm",
+            "templateName": "createStoryForm",
+            "requireTarget": false,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -518,15 +555,6 @@
                     }
                 ]
             },
-            "widgetTitle": "Create Story",
-            "templateName": "createStoryForm",
-            "requireTarget": false,
-            "resolveItemScript": "return item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -534,10 +562,14 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "site-error-html.contentTemplate.html",
             "widgetTitle": "site.error.html",
             "target": "site.error.html",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "site-error-html.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -566,6 +598,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -638,6 +671,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -678,6 +712,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -714,6 +749,7 @@
             "target": "forTheMap",
             "position": "BOTTOM_CENTER",
             "className": "overlay-bar",
+            "identifier": "",
             "viewType": "view",
             "namedView": "scoopStoryView",
             "shouldRender": true,
@@ -770,6 +806,7 @@
             "onRenderApplictionScript": "scoopStoryView.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -840,6 +877,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -892,6 +930,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -921,10 +960,20 @@
         }
     },
     "widget.17": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "registerFormView",
             "target": "registerFormView",
+            "templateName": "registerFormView",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -1008,8 +1057,16 @@
                     }
                 ]
             },
-            "widgetTitle": "registerFormView",
-            "templateName": "registerFormView",
+            "readAccess": "public"
+        }
+    },
+    "widget.18": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "loginFormView",
+            "target": "loginFormView",
+            "templateName": "loginFormView",
             "requireTarget": true,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
@@ -1017,14 +1074,7 @@
             "onUpdateScript": "",
             "onSaveScript": "",
             "onLoadScript": "",
-            "readAccess": "public"
-        }
-    },
-    "widget.18": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
-        "parameters": {
-            "target": "loginFormView",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -1125,8 +1175,16 @@
                     }
                 ]
             },
-            "widgetTitle": "loginFormView",
-            "templateName": "loginFormView",
+            "readAccess": "public"
+        }
+    },
+    "widget.19": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "profileFormView",
+            "target": "profileFormView",
+            "templateName": "profileFormView",
             "requireTarget": true,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
@@ -1134,14 +1192,7 @@
             "onUpdateScript": "",
             "onSaveScript": "",
             "onLoadScript": "",
-            "readAccess": "public"
-        }
-    },
-    "widget.19": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
-        "parameters": {
-            "target": "profileFormView",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -1352,15 +1403,6 @@
                     }
                 ]
             },
-            "widgetTitle": "profileFormView",
-            "templateName": "profileFormView",
-            "requireTarget": true,
-            "resolveItemScript": "return item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -1548,6 +1590,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -2879,10 +2922,20 @@
         }
     },
     "widget.26": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "createRepatriationStoryForm",
             "target": "createRepatriationStoryForm",
+            "templateName": "createRepatriationStoryForm",
+            "requireTarget": false,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -3034,23 +3087,24 @@
                     }
                 ]
             },
-            "widgetTitle": "createRepatriationStoryForm",
-            "templateName": "createRepatriationStoryForm",
-            "requireTarget": false,
-            "resolveItemScript": "return item;",
+            "readAccess": "public"
+        }
+    },
+    "widget.27": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "createBirthStoryForm",
+            "target": "createBirthStoryForm",
+            "templateName": "createBirthStoryForm",
+            "requireTarget": true,
+            "resolveItemScript": "\r\nreturn item;",
             "beforeSubmitScript": "",
             "onCreateScript": "",
             "onUpdateScript": "",
             "onSaveScript": "",
             "onLoadScript": "",
-            "readAccess": "public"
-        }
-    },
-    "widget.27": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
-        "parameters": {
-            "target": "createBirthStoryForm",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -3221,15 +3275,6 @@
                     }
                 ]
             },
-            "widgetTitle": "createBirthStoryForm",
-            "templateName": "createBirthStoryForm",
-            "requireTarget": true,
-            "resolveItemScript": "\r\nreturn item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -3245,6 +3290,7 @@
             "onRenderApplictionScript": "inline-birth-form.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -3285,6 +3331,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positionList": [
                     "title",
@@ -3317,10 +3364,20 @@
         }
     },
     "widget.30": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "publishingOptionsForm",
             "target": "publishingOptionsForm",
+            "templateName": "publishingOptionsForm",
+            "requireTarget": false,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -3475,15 +3532,6 @@
                     }
                 ]
             },
-            "widgetTitle": "publishingOptionsForm",
-            "templateName": "publishingOptionsForm",
-            "requireTarget": false,
-            "resolveItemScript": "return item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -3491,10 +3539,14 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-VerifyEmailLink-subject.contentTemplate.html",
             "widgetTitle": "email.VerifyEmailLink.subject",
             "target": "email.VerifyEmailLink.subject",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-VerifyEmailLink-subject.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -3502,10 +3554,14 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-VerifyEmailLink-content.contentTemplate.html",
             "widgetTitle": "email.VerifyEmailLink.content",
             "target": "email.VerifyEmailLink.content",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-VerifyEmailLink-content.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -3531,6 +3587,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -3592,10 +3649,20 @@
         }
     },
     "widget.36": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "advancedSearchForm",
             "target": "advancedSearchForm",
+            "templateName": "advancedSearchForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -3826,8 +3893,16 @@
                     }
                 ]
             },
-            "widgetTitle": "advancedSearchForm",
-            "templateName": "advancedSearchForm",
+            "readAccess": "public"
+        }
+    },
+    "widget.37": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "dialogForm",
+            "target": "dialogForm",
+            "templateName": "dialogForm",
             "requireTarget": true,
             "resolveItemScript": "return item;",
             "beforeSubmitScript": "",
@@ -3835,14 +3910,7 @@
             "onUpdateScript": "",
             "onSaveScript": "",
             "onLoadScript": "",
-            "readAccess": "public"
-        }
-    },
-    "widget.37": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
-        "parameters": {
-            "target": "dialogForm",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -3914,15 +3982,6 @@
                     }
                 ]
             },
-            "widgetTitle": "dialogForm",
-            "templateName": "dialogForm",
-            "requireTarget": true,
-            "resolveItemScript": "return item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -3938,6 +3997,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -3978,6 +4038,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4065,6 +4126,8 @@
             "formatFieldsScript": "return $fields;",
             "formatRowScript": "return $record;",
             "formatMapTile": "",
+            "exportDataScript": "defaultExportFn();",
+            "formatExporterScript": "",
             "uploadImage": [],
             "tileIcon": []
         }
@@ -4093,6 +4156,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4260,6 +4324,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4410,6 +4475,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4466,6 +4532,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4514,6 +4581,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4592,6 +4660,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4632,6 +4701,7 @@
             "onRenderApplictionScript": "Disclaimer.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4690,6 +4760,7 @@
             "onRenderApplictionScript": "Faq.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4737,10 +4808,20 @@
         }
     },
     "widget.56": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "contactUserForm",
             "target": "contactUserForm",
+            "templateName": "contactUserForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
@@ -4824,15 +4905,6 @@
                     }
                 ]
             },
-            "widgetTitle": "contactUserForm",
-            "templateName": "contactUserForm",
-            "requireTarget": true,
-            "resolveItemScript": "return item;",
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "onLoadScript": "",
             "readAccess": "public"
         }
     },
@@ -4840,10 +4912,14 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-contact-message-subject.contentTemplate.html",
             "widgetTitle": "email.contact.message.subject",
             "target": "email.contact.message.subject",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-contact-message-subject.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -4851,10 +4927,14 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-contact-message-content.contentTemplate.html",
             "widgetTitle": "email.contact.message.content",
             "target": "email.contact.message.content",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-contact-message-content.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -4870,6 +4950,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4920,6 +5001,7 @@
             "onRenderApplictionScript": "Support.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4969,10 +5051,20 @@
         }
     },
     "widget.62": {
-        "name": "Form View",
-        "instance": "UserWizardBuilder",
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
         "parameters": {
-            "target": "none"
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": ""
         }
     }
 }
