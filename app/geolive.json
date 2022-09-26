@@ -5193,7 +5193,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Install Story map",
+            "contentTemplate": "#Geoforms",
             "readAccess": "public"
         }
     },
