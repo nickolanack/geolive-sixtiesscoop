@@ -1,10 +1,13 @@
 {
-    "type": "WizardTitleField",
+    "type": "InlineHtml",
     "config": {
-        "label": "Title",
-        "message": "add a title",
-        "className": "",
-        "maxChars": 0,
-        "textFormatScript": ""
+        "className": "intro-section",
+        "text": "#Install Story map",
+        "template": "html.install0",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "identifier": "htmlLabel"
     }
 }
