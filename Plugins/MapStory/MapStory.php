@@ -4,11 +4,11 @@ namespace Plugin;
 include_once __DIR__ . '/vendor/autoload.php';
 
 class MapStory extends \core\extensions\Plugin implements
-\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\extensions\plugin\PluginDataTypeProvider {
+\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\DataTypeProvider {
 
 	use \core\AjaxControllerProviderTrait;
 	use \core\EventListenerTrait;
-	use \core\extensions\plugin\PluginDataTypeProviderTrait;
+	use \core\DataTypeProviderTrait;
 
 	protected $name = 'Create Map Stories';
 	protected $description = 'Allows users to create stories by connecting map items';
