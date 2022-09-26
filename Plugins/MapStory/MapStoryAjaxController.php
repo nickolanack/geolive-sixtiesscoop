@@ -1,7 +1,8 @@
 <?php
 
-class MapStoryAjaxController extends core\AjaxController implements core\PluginMember {
-	use core\PluginMemberTrait;
+class MapStoryAjaxController extends core\AjaxController implements \core\extensions\plugin\PluginMember {
+
+	use \core\extensions\plugin\PluginMemberTrait;
 
 	protected function saveStoryItem($json){
 
