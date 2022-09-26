@@ -14,8 +14,23 @@ var ClusterBehavior = new Class({
 		};
 		var resolveMapitemType = function(id) {
 
+			var marker=resolveMapitem(id);
 			var type = resolveMapitem(id).getIcon();
-			return type;
+
+			var colorTypes=Object.keys(colors);
+
+			if(typeof colorTypes[type] !='undefined'){
+				return type;
+			}
+
+			var info=marker.getNamedValue('info')
+			if(info&&typeof info['icon']!="undefined"&&typeof colorTypes[info['icon']] !='undefined'){
+				return info['icon'];
+			}
+
+			return '';
+
+
 		}
 
 		var resolveMapitem = function(id) {
