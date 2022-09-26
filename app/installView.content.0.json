@@ -1,13 +1,23 @@
 {
-    "type": "InlineHtml",
+    "type": "UIView",
     "config": {
-        "className": "intro-section",
-        "text": "#Install Story map",
-        "template": "html.install0",
-        "templateVariablesScript": "{}",
-        "formatTextScript": "",
-        "formatVariablesScript": "",
-        "ajaxRequestTemplate": true,
-        "identifier": "htmlLabel"
+        "className": "",
+        "identifier": "",
+        "viewType": "form",
+        "namedView": "defaultView",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "installForm",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "",
+        "resolveItemScript": "return item",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": ""
     }
 }

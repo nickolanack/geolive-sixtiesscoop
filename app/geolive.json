@@ -5135,33 +5135,7 @@
                     },
                     "content": {
                         "modules": [
-                            "installView.metadata.positions.content.modules.0.json",
-                            {
-                                "type": "InlineHtml",
-                                "config": {
-                                    "className": "intro-section-2",
-                                    "text": "#Install 1",
-                                    "template": "html.install1",
-                                    "templateVariablesScript": "{}",
-                                    "formatTextScript": "",
-                                    "formatVariablesScript": "",
-                                    "ajaxRequestTemplate": true,
-                                    "identifier": "htmlLabel"
-                                }
-                            },
-                            {
-                                "type": "InlineHtml",
-                                "config": {
-                                    "className": "intro-section-3",
-                                    "text": "#Install3",
-                                    "template": "html.install2",
-                                    "templateVariablesScript": "{}",
-                                    "formatTextScript": "",
-                                    "formatVariablesScript": "",
-                                    "ajaxRequestTemplate": true,
-                                    "identifier": "htmlLabel"
-                                }
-                            }
+                            "installView.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
