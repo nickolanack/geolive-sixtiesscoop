@@ -5206,9 +5206,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Install 1"
+            "contentTemplate": "#Install 1",
+            "readAccess": "public"
         }
     },
     "widget.67": {
