@@ -5167,7 +5167,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Geoforms. Story maps",
+            "contentTemplate": "#*Geoforms.* Story maps",
             "readAccess": "public"
         }
     },
