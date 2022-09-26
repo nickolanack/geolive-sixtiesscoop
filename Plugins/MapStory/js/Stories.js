@@ -1311,13 +1311,18 @@ var StoryMapController = new Class({
         if (me._lastCards[me._lastCards.length - 1] instanceof StoryCardSearchResult) {
 
             var div = new Element('div', {
-
             });
 
-            var group = (new AdvancedStorySearch({})).setCards(me._lastCards);
+            var label= me._lastCards[me._lastCards.length - 1].getBackNavigationLabel();
+            var shouldPad=me._lastCards[me._lastCards.length - 1].shouldPad();
+
+            var group = (new AdvancedStorySearch({
+                shouldPadCards:shouldPad,
+                backNavigationLabel:label
+            })).setCards(me._lastCards);
             me._lastCards = null;
             var btn = new Element('button', {
-                "html": "Back to search results",
+                "html":label,
                 "class": "primary-btn",
                 "events": {
                     "click": function() {
@@ -1755,7 +1760,7 @@ var StoryMapController = new Class({
 
             if (item instanceof StoryCardSearchResult) {
                 //push card history is the same as 
-                //clear cards (ip preperation for new set)
+                //clear cards (in preperation for new set)
                 //but stores the last set
                 me.pushCardHistory();
                 //me.clearCards();

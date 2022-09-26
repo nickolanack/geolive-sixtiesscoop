@@ -246,7 +246,7 @@ class CardSearch{
 
 	}
 
-	protected function formatResults($list){
+	public function formatResults($list){
 
 		$formattedList=array();
 

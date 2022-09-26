@@ -12,18 +12,48 @@ var ClusterBehavior = new Class({
 			"https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png?thumb=>48>48": '#ffcc02',
 			"https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png?thumb=>48>48": '#5daeeb',
 		};
-		var resolveMapitemType = function(app, id) {
+		var resolveMapitemType = function(id) {
 
-			var type = app.getLayerManager().filterMapitemById(id).getIcon();
+			var type = resolveMapitem(id).getIcon();
 			return type;
+		}
+
+		var resolveMapitem = function(id) {
+
+			return application.getLayerManager().filterMapitemById(id);
 		}
 
 
 		var rendererResolver = function(marker, clusterer) {
 
-			var type = resolveMapitemType(application, marker._markerid);
+			var type = resolveMapitemType(marker._markerid);
 			if (!renderers[type]) {
 				renderers[type] = clusterer.addRenderer();
+
+				google.maps.event.addListener(renderers[type], 'clusterclick', function(clusterer, markers) {
+
+					var markers=markers.map(function(marker){
+						return  marker._markerid;
+					});
+
+
+					(new AjaxControlQuery(CoreAjaxUrlRoot, 'get_stories_with_items', {
+						'plugin': 'MapStory',
+						'items': markers
+					})).addEvent('success', function(resp) {
+
+						//me.setResponse(resp);
+						ScoopStories.setCardGroup((new AdvancedStorySearch({
+							"shouldPadCards":false,
+							"backNavigationLabel":"Back to selected items"
+						})).setResponse(resp), function() {});
+
+					}).execute();
+
+
+					//ScoopStories.setCardGroup((new AdvancedStorySearch({})).setResponse(aggregator.getLastResponse()), function() {});
+
+				});
 			}
 			return renderers[type];
 
@@ -52,7 +82,7 @@ var ClusterBehavior = new Class({
 				var color = "rgb(0, 160, 80)";
 				var cluster = this.cluster_;
 				if (cluster && cluster.markers_ && cluster.markers_.length) {
-					var type = resolveMapitemType(application, cluster.markers_[0]._markerid);
+					var type = resolveMapitemType(cluster.markers_[0]._markerid);
 
 					if (Object.keys(colors).indexOf(type) >= 0) {
 						color = colors[type];

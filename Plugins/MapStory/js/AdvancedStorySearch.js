@@ -2,7 +2,13 @@
 
 
 var StoryCardSearchResult=new Class({
-	Extends:StoryCard
+	Extends:StoryCard, 
+	getBackNavigationLabel:function(){
+		return this._config.backNavigationLabel;
+	},
+	shouldPad:function(){
+		return this._config.shouldPad;
+	}
 })
 
 var AdvancedStorySearch = new Class({
@@ -12,6 +18,14 @@ var AdvancedStorySearch = new Class({
 		me._searchData = {};
 		me.parent(options);
 
+		me._shouldPadCards=true;
+		if(options&&options.shouldPadCards===false){
+			me._shouldPadCards=false;
+		}
+		me._backNavigationLabel="Back to search results";
+		if(options&&options.backNavigationLabel){
+			me._backNavigationLabel=options.backNavigationLabel;
+		}
 	},
 	save: function(cb) {
 
@@ -88,7 +102,9 @@ var AdvancedStorySearch = new Class({
 		var searchResultCards = resp.results.map(function(data) {
 
 			var card = new StoryCardSearchResult(Object.append(data, {
-				classNames: "search-card-detail"
+				classNames: "search-card-detail",
+				backNavigationLabel:me._backNavigationLabel,
+				shouldPad:me._shouldPadCards
 			}));
 			var user = new StoryUser({
 				"story": [],
@@ -141,12 +157,19 @@ var AdvancedStorySearch = new Class({
 			me._searchData = {};
 
 
-		})
+		});
 
 
 
 	},
 	_padCards: function(searchCards) {
+
+
+		var me=this;
+
+		if(!me._shouldPadCards){
+			return searchCards;
+		}
 
 
 		var cards = [

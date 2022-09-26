@@ -5,6 +5,7 @@
 	"delete_story":{},
 	"get_story":{},
 	"get_story_with_item":{},
+	"get_stories_with_items":{},
 	"get_story_with_user":{},
 	"search":{},
 	"advanced_search":{},

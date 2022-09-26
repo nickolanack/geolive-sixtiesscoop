@@ -45,6 +45,28 @@ class MapStoryAjaxController extends core\AjaxController implements core\PluginM
 	}
 
 
+	protected function getStoriesWithItems($json){
+
+		
+		$list=$this->getPlugin()->getFeaturesMetadata($json->items);
+
+		$users=array();
+		foreach ($list as $feature) {
+			if(!in_array($feature['uid'], $users)){
+
+				$users[]=$feature['uid'];
+			}
+		}
+		
+		
+		
+
+		return  array(
+			'results'=>(new \MapStory\CardSearch())->formatResults($list)
+		);
+
+	}
+
 	protected function getStoryWithItem($json){
 
 		$list=$this->getPlugin()->getFeaturesMetadata($json->item);
