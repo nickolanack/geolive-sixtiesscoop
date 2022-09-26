@@ -5222,8 +5222,9 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
-            "saveTemplateAsData": false,
-            "contentTemplate": "#Install3"
+            "saveTemplateAsData": true,
+            "contentTemplate": "#Install3",
+            "readAccess": "public"
         }
     }
 }
