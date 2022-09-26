@@ -1,0 +1,13 @@
+{
+    "type": "InlineHtml",
+    "config": {
+        "className": "intro-section-0",
+        "text": "#Install Story map",
+        "template": "html.install0",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "identifier": "htmlLabel"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "WizardButtons",
+    "config": {
+        "className": "WizardFooter",
+        "reduceOpacity": false,
+        "onCompleteScript": "defaultBehaviorFn();",
+        "showFinish": true,
+        "showCancel": false,
+        "showBack": false,
+        "labelForCancel": "cancel",
+        "labelForSubmit": "Create your own story map",
+        "labelForNext": "next",
+        "labelForPrevious": "previous",
+        "formatButton": "return button;"
+    }
+}
