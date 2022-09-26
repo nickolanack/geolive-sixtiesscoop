@@ -1,5 +1,7 @@
 
-
+.ui-view.install-form {
+    margin: auto;
+}
     .ui-view.dashboard-main:before {
         background-image: url("https://gather.geoforms.ca/assets/images/tim-johnson-bmljdpdeigw-unsplash.jpg");
         content:
