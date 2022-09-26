@@ -1,6 +1,6 @@
 <?php
 
-class CardDataType extends \core\PluginDataType {
+class CardDataType extends \core\extensions\plugin\PluginDataType {
     
     protected $authtasks = array(
         'read',
