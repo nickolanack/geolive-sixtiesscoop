@@ -5221,8 +5221,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
-            "saveTemplateAsData": true,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
             "contentTemplate": "#Install3",
             "readAccess": "public"
         }
