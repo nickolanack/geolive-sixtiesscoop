@@ -5,10 +5,10 @@
         "reduceOpacity": false,
         "onCompleteScript": "defaultBehaviorFn();",
         "showFinish": true,
-        "showCancel": true,
-        "showBack": true,
+        "showCancel": false,
+        "showBack": false,
         "labelForCancel": "cancel",
-        "labelForSubmit": "submit",
+        "labelForSubmit": "Create your own story map",
         "labelForNext": "next",
         "labelForPrevious": "previous",
         "formatButton": "return button;"
