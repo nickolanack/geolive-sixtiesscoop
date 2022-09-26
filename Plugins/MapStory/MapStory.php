@@ -8,7 +8,7 @@ class MapStory extends \core\extensions\Plugin implements
 
 	use \core\AjaxControllerProviderTrait;
 	use \core\EventListenerTrait;
-	use \core\PluginDataTypeProviderTrait;
+	use \core\extensions\plugin\PluginDataTypeProviderTrait;
 
 	protected $name = 'Create Map Stories';
 	protected $description = 'Allows users to create stories by connecting map items';
