@@ -4,7 +4,7 @@ namespace Plugin;
 include_once __DIR__ . '/vendor/autoload.php';
 
 class MapStory extends \core\extensions\Plugin implements
-\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\PluginDataTypeProvider {
+\core\ViewController, \core\AjaxControllerProvider, \core\EventListener, \core\extensions\plugin\PluginDataTypeProvider {
 
 	use \core\AjaxControllerProviderTrait;
 	use \core\EventListenerTrait;
