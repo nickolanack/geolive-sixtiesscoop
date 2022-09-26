@@ -578,7 +578,7 @@
                                 "type": "InlineHtml",
                                 "config": {
                                     "className": "menu-links",
-                                    "text": "<a id=\"map-link\" href=\"\/\"><h2>Map<\/h2><\/a>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/faq\"><h2>FAQ<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/\" onclick=\"ScoopStories.createStory(); return false;\">\n<a id=\"support-link\" href=\"\/support\"><h2>Support<\/h2><\/a>\n<a id=\"donate-link\" href=\"https:\/\/sixtiesscoopnetwork.org\/content\/donation\"><h2>Donate<\/h2><\/a>\n\n",
+                                    "text": "<a id=\"map-link\" href=\"\/\"><h2>Map<\/h2><\/a>\n<a id=\"disclaimer-link\" href=\"\/disclaimer\"><h2>Disclaimer<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/faq\"><h2>FAQ<\/h2><\/a>\n<a id=\"faq-link\" href=\"\/\" onclick=\"ScoopStories.createStory(); return false;\">\n<a id=\"support-link\" href=\"\/support\"><h2>Support<\/h2><\/a>\n<a id=\"donate-link\" target=\"_blank\" href=\"https:\/\/sixtiesscoopnetwork.org\/checkout\/donate?donatePageId=5ee7a141db3b8842f56dde36\"><h2>Donate<\/h2><\/a>\n\n",
                                     "template": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": ""
@@ -4045,8 +4045,8 @@
         "instance": "ExportData",
         "parameters": {
             "widgetTitle": "Export Data",
-            "readAccess": "public",
-            "target": "none",
+            "readAccess": "special",
+            "target": "forTheMap",
             "position": "LEFT_CENTER",
             "downloadImage": [],
             "controlColor": "rgb(48,84,107)",
@@ -4937,6 +4937,16 @@
                                     "templateVariablesScript": "",
                                     "formatTextScript": ""
                                 }
+                            },
+                            {
+                                "type": "InlineHtml",
+                                "config": {
+                                    "className": "",
+                                    "text": "<div class=\"WordSection1\">\n\t<p class=\"c0\"><span class=\"c1\">\n\tAcknowledgements<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nThis project evolved from a simple drawing on a piece of paper. The process of taking that drawing to an interactive GIS \nplatform online has been a labour of love. The idea behind the drawing was to show the displacement and trafficking of \nFirst Nation, Metis and Inuit children through Canada\u2019s child welfare system inter-provincially, across borders and \noverseas by using visual markers, colours, lines and a map. <\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nI introduced my idea to Dr. Raven Sinclair in 2014 showing her what I envisioned the map to look like on a global digital \nonline platform. As Indigenous folks, we are visual learners and we instinctively knew that if the data could be displayed \nvisually, it could have an impact on survivors and the general public. A visual depiction of the removal of a generation \nof Indigenous children from their families, communities, traditional homelands, would have an impact far beyond reading an \narticle or listening to a podcast could have.<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nRaven got the idea right away and has been a champion of this project since the beginning. Steve Deroy at the Firelight \nGroup was the next champion and supporter of this project. Raven\u2019s SSHRC Insight Grant provided support for me to \nparticipate in three annual Indigenous Mapping Workshops which helped me learn about GIS (geographical information system) \nand meet other Indigenous folks worldwide doing amazing work with GIS mapping platforms. It was through the Indigenous \nMapping Workshops that I eventually met Dr. Jon Corbett and Nick Black who took on the enormous task of creating an \ninteractive GIS mapping platform that would allow us to share our stories, show our displacements and find family members. \nThis is the first of its kind; there is no other online interactive platform for 60s scoop survivors to participate in, \nshare their stories through pictures and videos and to potentially locate family. It has taken years and piecemeal funding \nfrom multiple sources to get to this point where we can introduce this project In our own Words: Mapping the Stories of \n60s Scoop Survivor Diaspora<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nI would like to extend many thanks to the sponsors who donated money to this project and believed and knew the importance \nof getting our stories out there and bringing the 60s scoop to the forefront of human rights issues. Understanding the \ncontext of current Indigenous issues and how Indigenous child removals in Canada impacted generations of families left \nto grieve, mourn their losses but also the children of 60s scoop survivors who are intergenerationally impacted and are \nnow the millennial scoop and youth growing up without connection to culture and family.<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nTo move forward, we collectively need to heal, learn what happened and break the cycle.\n<\/span><\/p>\nThe Firelight Group Social Return Fund<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nWaakebiness-Bryce Institute for Indigenous Health, University of Toronto<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nPe-kiwewin Research project, Dr. Raven Sinclair, PI, Social Science and Humanities Research Council of Canada<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nCUPE Canadian Union of Public Employees<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nPSAC \u2013 Public Service Alliance of Canada<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nCriminology Dept at Carleton University<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nSpecial thanks to Dr. Jon Corbett and Nick Black at Geoforms for their hard work and dedication to this project, Dr. Raven Sinclair<\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\"> for her unwavering support and friendship, Denali Youngwolfe, Steve Deroy & folks at the Firelight Group, Micheall Desautel, Dana Wesley, Natasha Sterritt, Dr. Jeff Managhan, friends and family who have continually supported the project from day 1.\nThank you, <\/span><\/p>\n\t\t<p class=\"c0\"><span class=\"\">\nColleen Hele Cardinal\n<\/p><\/div>\n\n<style>\n.c11, .c1 {\n    font-weight: bold;\n    font-size: 17px;\n}\n.WordSection1 {\n    margin: auto;\n    max-width: 700px;\n    width: 80%;\n    margin-top: 40px;\n\nfont-size: 14px;\n}\n\n\n<\/style>",
+                                    "template": "",
+                                    "templateVariablesScript": "",
+                                    "formatTextScript": ""
+                                }
                             }
                         ]
                     },
@@ -4956,6 +4966,13 @@
                 "_diagramState": []
             },
             "readAccess": "public"
+        }
+    },
+    "widget.62": {
+        "name": "Form View",
+        "instance": "UserWizardBuilder",
+        "parameters": {
+            "target": "none"
         }
     }
 }
