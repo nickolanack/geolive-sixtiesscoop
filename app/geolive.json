@@ -5155,7 +5155,7 @@
                                     "className": "",
                                     "text": "#Install3",
                                     "template": "html.install2",
-                                    "templateVariablesScript": "",
+                                    "templateVariablesScript": "{}",
                                     "formatTextScript": "",
                                     "formatVariablesScript": "",
                                     "ajaxRequestTemplate": true,
