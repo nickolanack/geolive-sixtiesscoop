@@ -17,14 +17,14 @@ var ClusterBehavior = new Class({
 			var marker=resolveMapitem(id);
 			var type = resolveMapitem(id).getIcon();
 
-			var colorTypes=Object.keys(colors);
+			//var colorTypes=Object.keys(colors);
 
-			if(typeof colorTypes[type] !='undefined'){
+			if(typeof colors[type] !='undefined'){
 				return type;
 			}
 
 			var info=marker.getNamedValue('info')
-			if(info&&typeof info['icon']!="undefined"&&typeof colorTypes[info['icon']] !='undefined'){
+			if(info&&typeof info['icon']!="undefined"&&typeof colors[info['icon']] !='undefined'){
 				return info['icon'];
 			}
 
