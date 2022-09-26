@@ -5083,7 +5083,7 @@
             "templateName": "install",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "install.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
