@@ -5809,47 +5809,6 @@
             "readAccess": "public"
         }
     },
-    "widget.80": {
-        "name": "Detail View",
-        "instance": "DetailView",
-        "parameters": {
-            "widgetTitle": "introSectionItem",
-            "target": "introSectionItem",
-            "templateName": "introSectionItem",
-            "requireTarget": true,
-            "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
-            "formatModulesScript": "",
-            "notifyViewer": false,
-            "useRemote": "",
-            "metadata": {
-                "positions": {
-                    "title": {
-                        "modules": []
-                    },
-                    "content": {
-                        "modules": [
-                            "introSectionItem.metadata.positions.content.modules.0.json"
-                        ]
-                    },
-                    "footer": {
-                        "modules": []
-                    },
-                    "menu": {
-                        "modules": []
-                    }
-                },
-                "positionList": [
-                    "title",
-                    "content",
-                    "footer",
-                    "menu"
-                ],
-                "_diagramState": []
-            },
-            "readAccess": "public"
-        }
-    },
     "widget.81": {
         "name": "Detail View",
         "instance": "DetailView",
