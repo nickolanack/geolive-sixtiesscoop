@@ -1,0 +1,13 @@
+{
+    "type": "InlineHtml",
+    "config": {
+        "className": "",
+        "text": "Featured",
+        "template": "",
+        "templateVariablesScript": "",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": false,
+        "identifier": "htmlLabel"
+    }
+}

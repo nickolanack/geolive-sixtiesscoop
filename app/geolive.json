@@ -5662,7 +5662,9 @@
                         "modules": []
                     },
                     "content": {
-                        "modules": []
+                        "modules": [
+                            "featuredStory.metadata.positions.content.modules.0.json"
+                        ]
                     },
                     "footer": {
                         "modules": []
