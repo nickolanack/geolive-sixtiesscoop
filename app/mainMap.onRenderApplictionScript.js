@@ -3,5 +3,6 @@ IncludeJSBlock('
 ');
 
 GetWidget("homeStyle")->display($targetInstance);
+GetWidget("mainStyle")->display($targetInstance);
 
 GetPlugin('MapStory')->includeScripts();
