@@ -5585,32 +5585,60 @@
             "notifyViewer": false,
             "useRemote": "",
             "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "featuredStories.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "",
+                                    "className": "",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "featuredStory",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "featuredStories.metadata.positions.content.modules.1.config.resolveItemScript.js",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "return item;",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
                 "positionList": [
                     "title",
                     "content",
                     "footer",
                     "menu"
                 ],
-                "positions": {
-                    "title": {
-                        "modules": [
-                            "featuredStories.metadata.positions.title.modules.0.json"
-                        ]
-                    },
-                    "content": {
-                        "modules": [
-                            "featuredStories.metadata.positions.content.modules.0.json"
-                        ]
-                    },
-                    "footer": {
-                        "modules": [
-                            "featuredStories.metadata.positions.footer.modules.0.json"
-                        ]
-                    },
-                    "menu": {
-                        "modules": []
-                    }
-                }
+                "_diagramState": []
             },
             "readAccess": "public"
         }
