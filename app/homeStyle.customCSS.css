@@ -8,11 +8,14 @@
 }
 
 .ui-view.menu-item-link {
-    width: 200px;
     height: 30px;
-    background: white;
+    line-height: 30px;
     display: inline-block;
     margin: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
 }
 
 
