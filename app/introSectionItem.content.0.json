@@ -5,7 +5,7 @@
         "text": "Placeholder",
         "template": "",
         "templateVariablesScript": "",
-        "formatTextScript": "",
+        "formatTextScript": "return item.getName();",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": false,
         "identifier": "htmlLabel"
