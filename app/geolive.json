@@ -5622,7 +5622,7 @@
                                     "className": "featured-story",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "featuredStory",
+                                    "namedView": "placeholderLabelItem",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
