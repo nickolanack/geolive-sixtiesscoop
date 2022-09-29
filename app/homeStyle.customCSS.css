@@ -139,7 +139,11 @@
 
 
 
-
+.ui-view.page-footer.un-rendered {
+    height: 300px;
+    background: #3f3c3b;
+    margin-top: 200px;
+}
 
 
 
