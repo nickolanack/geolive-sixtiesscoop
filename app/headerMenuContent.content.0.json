@@ -20,7 +20,7 @@
         "itemButtonsScript": "return [];",
         "insertAtTop": false,
         "targetName": "",
-        "getItemListScript": "return [new MockDataTypeItem({name:\"Search\"}), new MockDataTypeItem({name:\"Search\"}), new MockDataTypeItem({name:\"Search\"})];",
+        "getItemListScript": "return [\n    new MockDataTypeItem({name:\"Home\"}), \n    new MockDataTypeItem({name:\"Map\"}), \n    new MockDataTypeItem({name:\"Help\"}), \n    new MockDataTypeItem({name:\"About\"}), \n    new MockDataTypeItem({name:\"Sign in\"})];",
         "formatItemListScript": "return list;",
         "formatListItemModuleScript": "return item;",
         "emptyNamedView": "emptyListView",
