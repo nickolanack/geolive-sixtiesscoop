@@ -187,6 +187,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "install"
+                },
+                {
+                    "name": "map",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "mainMap"
                 }
             ],
             "useRemoteServerUI": false,
