@@ -2,7 +2,7 @@
     "type": "UIListView",
     "config": {
         "listClassName": "header-menu",
-        "className": "",
+        "className": "menu-item-link",
         "identifier": "",
         "viewType": "view",
         "namedView": "placeholderLabelItem",
