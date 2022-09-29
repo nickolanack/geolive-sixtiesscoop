@@ -5750,7 +5750,7 @@
                                     "className": "featured-item",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "introSectionItem",
+                                    "namedView": "placeholderLabelItem",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
