@@ -1,0 +1,1 @@
+return [new MockDataTypeItem({name:"Search"}), new MockDataTypeItem({name:"View"}), new MockDataTypeItem({name:"Data"})];
