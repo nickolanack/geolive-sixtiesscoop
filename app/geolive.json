@@ -5746,8 +5746,8 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "featured-item",
-                                    "className": "",
+                                    "listClassName": "",
+                                    "className": "featured-item",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "introSectionItem",
