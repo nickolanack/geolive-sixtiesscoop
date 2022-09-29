@@ -5925,7 +5925,7 @@
             "widgetTitle": "mainMap",
             "target": "mainMap",
             "templateName": "mainMap",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
