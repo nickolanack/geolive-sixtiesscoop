@@ -5907,7 +5907,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Default Content",
+            "contentTemplate": "#{{name}}",
             "readAccess": "public"
         }
     }
