@@ -4,7 +4,7 @@
         "className": "",
         "text": "Default Content",
         "template": "placholderText",
-        "templateVariablesScript": "",
+        "templateVariablesScript": "{}",
         "formatTextScript": "\nif(item.getClick){\n    module.getElement().addClass('clickable');\n    module.getElement().addEvent('click', item.getClick());\n}\n\nreturn item.getName();",
         "formatVariablesScript": "return item.toObject();",
         "ajaxRequestTemplate": true,
