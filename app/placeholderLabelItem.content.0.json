@@ -2,7 +2,7 @@
     "type": "InlineHtml",
     "config": {
         "className": "",
-        "text": "",
+        "text": "Default Content",
         "template": "",
         "templateVariablesScript": "",
         "formatTextScript": "return item.getName();",
