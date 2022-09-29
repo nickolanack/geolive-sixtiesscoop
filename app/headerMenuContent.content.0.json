@@ -1,7 +1,7 @@
 {
     "type": "InlineHtml",
     "config": {
-        "className": "",
+        "className": "site-heading",
         "text": "#Site Header",
         "template": "siteHeaderText",
         "templateVariablesScript": "{}",
