@@ -5746,7 +5746,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "",
+                                    "listClassName": "featured-item",
                                     "className": "",
                                     "identifier": "",
                                     "viewType": "view",
