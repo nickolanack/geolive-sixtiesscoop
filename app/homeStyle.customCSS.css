@@ -150,6 +150,7 @@
         font-weight: 100;
         max-width: 1000px;
         margin: auto;
+        margin-top: 70px;
     
     
         .ui-view.featured-story, .ui-view.featured-item {
