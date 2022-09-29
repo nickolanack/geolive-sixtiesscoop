@@ -5915,9 +5915,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "templateName": "{target}",
+            "widgetTitle": "mainMap",
+            "target": "mainMap",
+            "templateName": "mainMap",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -5931,7 +5931,7 @@
                     },
                     "content": {
                         "modules": [
-                            "widget.DetailView.85.metadata.positions.content.modules.0.json",
+                            "mainMap.metadata.positions.content.modules.0.json",
                             {
                                 "type": "UIView",
                                 "config": {
