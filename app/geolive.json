@@ -5600,7 +5600,7 @@
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "featuredStory",
-                                    "shouldRender": true,
+                                    "shouldRender": false,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
                                     "namedFormView": "defaultView",
