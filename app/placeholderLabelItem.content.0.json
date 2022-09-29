@@ -5,7 +5,7 @@
         "text": "Default Content",
         "template": "",
         "templateVariablesScript": "",
-        "formatTextScript": "return item.getName();",
+        "formatTextScript": "\nif(item.getClick){\n    module.getElement().addEvent('click', item.getClick());\n}\n\nreturn item.getName();",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": false,
         "identifier": "htmlLabel"
