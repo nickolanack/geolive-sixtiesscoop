@@ -5683,5 +5683,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.77": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.featuredText.text",
+            "target": "module.featuredText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-featuredText-text.contentTemplate.html"
+        }
     }
 }
