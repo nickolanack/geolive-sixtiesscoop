@@ -1,1 +1,1 @@
-return [AppClient, AppClient, AppClient];
+callback(AppClient, AppClient, AppClient);
