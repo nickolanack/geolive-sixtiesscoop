@@ -95,16 +95,16 @@
     
 }
 
-.ui-view.page-content {
 
-    .ui-view.featured-stories {
+
+    .ui-view.featured-stories, .intro-section {
         font-size: 1.5em;
         font-weight: 100;
         max-width: 1000px;
         margin: auto;
     
     
-        .ui-view.featured-story {
+        .ui-view.featured-story, .ui-view.featured-item {
             display: inline-block;
             width: calc( 33% - 20px );
             box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -117,15 +117,10 @@
         }
     }
 
-}
 
 
-.intro-section{
-    font-size: 1.5em;
-    max-width: 1000px;
-    margin: auto;
-    font-weight: 100;
-}
+
+
 
 
 
