@@ -5895,5 +5895,20 @@
             "contentTemplate": "#Site Header",
             "readAccess": "public"
         }
+    },
+    "widget.84": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.placholderText.text",
+            "target": "module.placholderText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Default Content",
+            "readAccess": "public"
+        }
     }
 }
