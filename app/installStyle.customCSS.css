@@ -2,8 +2,37 @@
 .ui-view.install-form {
     margin: auto;
 }
+
+.intro-section-0 strong {
+    color: #8ab3f9;
+}
+
+.ui-view.dashboard-main {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 100;
+}
+
+
+button.WizardButton.btn.submit {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+button.WizardButton.btn.submit:hover {
+    background-color: #3fa06a !important;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
     .ui-view.dashboard-main:before {
-        background-image: url("https://gather.geoforms.ca/assets/images/tim-johnson-bmljdpdeigw-unsplash.jpg");
+        background-image: 
+    url("https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixtiesscoop.geoforms.ca/1/Uploads/%5BG%5D_eNF_vga_%5BImAgE%5D_wtc.jpeg");
         content:
         "";
         width: 100%;
@@ -14,6 +43,8 @@
         z-index: 0;
         top: 0;
         left: 0;
+        background-position: center -600px;
+        background-repeat: no-repeat;
     }
     
     
@@ -69,7 +100,7 @@
     .intro-section>span:after, .intro-section-2>span:after, .intro-section-3>span:after {
             
             content: "";
-            background-image: url(https://dyl2vw577xcfk.cloudfront.net/rmt.geoforms.ca/1/Uploads/%5BG%5D_JU8_%5BImAgE%5D_S7J_6pB.png);
+            background-image: url("https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixtiesscoop.geoforms.ca/1/Uploads/34n_%5BImAgE%5D_%5BG%5D_09H_4UA.png");
             width: 800px;
             height: 400px;
             background-size: cover;
@@ -84,12 +115,11 @@
         }
     
     .intro-section-2>span:after {
-        background-image: url(https://dyl2vw577xcfk.cloudfront.net/rmt.geoforms.ca/1/Uploads/62L_%5BImAgE%5D_74h_%5BG%5D_NXC.png);
-            
+        background-image: url("https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixtiesscoop.geoforms.ca/1/Uploads/%5BImAgE%5D_Yii_lAD_xbA_%5BG%5D.png");
     }
     
     .intro-section-3>span:after {
-         background-image: url(https://dyl2vw577xcfk.cloudfront.net/rmt.geoforms.ca/1/Uploads/%5BImAgE%5D_%5BG%5D_i6Q_UNN_doj.png);
+         background-image: url("https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixtiesscoop.geoforms.ca/1/Uploads/%5BG%5D_lM0_%5BImAgE%5D_0gM_1y4.png");
     }
 
     
