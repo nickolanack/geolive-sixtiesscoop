@@ -58,6 +58,10 @@
         width: 250px;
         display: inline-block;
         background-size: cover;
+        
+        background-position: top;
+        transition: background-position 300s;
+        background-position: center;
     }
 }
 
