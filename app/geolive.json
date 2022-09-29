@@ -5880,5 +5880,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.83": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.siteHeaderText.text",
+            "target": "module.siteHeaderText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "#Site Header"
+        }
     }
 }
