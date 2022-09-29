@@ -1,6 +1,11 @@
 
 
-.header-menu {position: absolute;top: 100px;left: 300px;}
+.header-menu {
+    position: absolute;
+    top: 100px;
+    right: 100px;    
+
+}
 
 .ui-view.menu-item-link {
     width: 200px;
