@@ -3,7 +3,7 @@ return [
         window.location.href="/"
     }}), 
     new MockDataTypeItem({name:"Map", click:function(){
-        window.location.href="/front"
+        window.location.href="/map"
     }}), 
     new MockDataTypeItem({name:"Help"}), 
     new MockDataTypeItem({name:"About"}), 
