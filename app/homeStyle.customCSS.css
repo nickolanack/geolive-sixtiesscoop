@@ -6,7 +6,8 @@
 
 
     &:after {
-        background-image: url(https://images.squarespace-cdn.com/content/v1/5ee56db…/1592244537146-K72WYV6R1FMFJ4267ZJO/60s+logo.png?format=1500w);
+        background-image: url(
+            "https://images.squarespace-cdn.com/content/v1/5ee56db…/1592244537146-K72WYV6R1FMFJ4267ZJO/60s+logo.png?format=1500w");
         position: absolute;
         content: "";
         height: 250px;
