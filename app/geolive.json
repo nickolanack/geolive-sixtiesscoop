@@ -5772,9 +5772,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "module-introText-text.contentTemplate.html"
+            "contentTemplate": "module-introText-text.contentTemplate.html",
+            "readAccess": "public"
         }
     }
 }
