@@ -5890,9 +5890,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Site Header"
+            "contentTemplate": "#Site Header",
+            "readAccess": "public"
         }
     }
 }
