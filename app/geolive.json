@@ -5762,5 +5762,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.79": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.introText.text",
+            "target": "module.introText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-introText-text.contentTemplate.html"
+        }
     }
 }
