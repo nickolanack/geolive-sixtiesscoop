@@ -5,18 +5,39 @@
     top: 100px;
     right: 100px;    
 
+
+    .ui-view.menu-item-link {
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 5px 20px;
+    }
+    
 }
 
-.ui-view.menu-item-link {
-    height: 30px;
-    line-height: 30px;
-    display: inline-block;
-    margin: 10px;
-    font-size: 20px;
+
+
+
+
+.site-heading {
+    position: absolute;
+    left: 300px;
+    top: 55px;
+    font-size: 30px;
     color: white;
-    text-align: center;
-    padding: 5px 20px;
+    font-weight: 600;
+    text-shadow: 0 0 50px black;
+    
+    h1 {
+        font-weight: 500;
+    }
 }
+
+
 
 
 
