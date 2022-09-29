@@ -5666,47 +5666,6 @@
             "readAccess": "public"
         }
     },
-    "widget.76": {
-        "name": "Detail View",
-        "instance": "DetailView",
-        "parameters": {
-            "widgetTitle": "featuredStory",
-            "target": "featuredStory",
-            "templateName": "featuredStory",
-            "requireTarget": true,
-            "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
-            "formatModulesScript": "",
-            "notifyViewer": false,
-            "useRemote": "",
-            "metadata": {
-                "positions": {
-                    "title": {
-                        "modules": []
-                    },
-                    "content": {
-                        "modules": [
-                            "featuredStory.metadata.positions.content.modules.0.json"
-                        ]
-                    },
-                    "footer": {
-                        "modules": []
-                    },
-                    "menu": {
-                        "modules": []
-                    }
-                },
-                "positionList": [
-                    "title",
-                    "content",
-                    "footer",
-                    "menu"
-                ],
-                "_diagramState": []
-            },
-            "readAccess": "public"
-        }
-    },
     "widget.77": {
         "name": "Template",
         "instance": "Template",
