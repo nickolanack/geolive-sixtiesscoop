@@ -31,7 +31,7 @@ return [
 				{
 					"formName": 'genericParametersForm',
 					"formOptions": {
-						template: "form" 
+						template: "default" 
 					}
 				}
 			)).show();
