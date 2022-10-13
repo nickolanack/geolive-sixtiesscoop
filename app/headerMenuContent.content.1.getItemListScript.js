@@ -21,10 +21,13 @@ return [
                 	      "options": {}
                 	    },   
                 	    {
-                	      "name": "content",
+                	      "name": "Field Label",
                 	      "description": "",
                 	      "fieldType": "text",
-                	      "defaultValue": ""
+                	      "defaultValue": "",
+                	      "options": {
+                	          "parameterName":"content"
+                	      }
                 	    }
 				    ]
 				}), 
