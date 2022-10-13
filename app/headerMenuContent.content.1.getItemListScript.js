@@ -7,4 +7,33 @@ return [
     }}), 
     new MockDataTypeItem({name:"Help"}), 
     new MockDataTypeItem({name:"About"}), 
-    new MockDataTypeItem({name:"Sign in"})];
+    new MockDataTypeItem({name:"Sign in", click:function(){
+        
+            (new UIModalDialog(
+				application, ///<--your application. this may differ
+				new MockDatatypeItem({
+				    parameters:[
+				        {
+                	      "name": "heading",
+                	      "description": "",
+                	      "fieldType": "heading",
+                	      "defaultValue": "Hello world",
+                	      "options": {}
+                	    },   
+                	    {
+                	      "name": "content",
+                	      "description": "",
+                	      "fieldType": "text",
+                	      "defaultValue": ""
+                	    }
+				    ]
+				}), 
+				{
+					"formName": 'genericParametersForm',
+					"formOptions": {
+						template: "form" <--whatever form options you set up 
+					}
+				}
+			)).show();
+        
+    }}), 
