@@ -3,3 +3,4 @@ IncludeJSBlock('
 ');
 
 GetWidget("homeStyle")->display($targetInstance);
+GetWidget("genericParametersForm")->display($targetInstance);
