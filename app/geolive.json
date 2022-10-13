@@ -6134,25 +6134,23 @@
                             "genericSingleParameterForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 158,
-                            "y": 290
+                            "x": 168,
+                            "y": 300
                         },
                         "children": [
                             "genericSingleParameterForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 118,
-                                    "y": 456
+                                    "x": 128,
+                                    "y": 466
                                 }
                             }
                         ],
                         "builderMetadata": {
                             "positions": {
                                 "title": {
-                                    "modules": [
-                                        "genericSingleParameterForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
-                                    ]
+                                    "modules": []
                                 },
                                 "content": {
                                     "modules": [
@@ -6160,9 +6158,7 @@
                                     ]
                                 },
                                 "footer": {
-                                    "modules": [
-                                        "genericSingleParameterForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
-                                    ]
+                                    "modules": []
                                 },
                                 "menu": {
                                     "modules": []
