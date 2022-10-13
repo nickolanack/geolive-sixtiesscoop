@@ -11,7 +11,7 @@ return [
         
             (new UIModalDialog(
 				application, 
-				new MockDatatypeItem({
+				new MockDataTypeItem({
 				    parameters:[
 				        {
                 	      "name": "heading",
