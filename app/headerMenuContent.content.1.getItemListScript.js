@@ -10,7 +10,7 @@ return [
     new MockDataTypeItem({name:"Sign in", click:function(){
         
             (new UIModalDialog(
-				application, ///<--your application. this may differ
+				application, 
 				new MockDatatypeItem({
 				    parameters:[
 				        {
@@ -31,7 +31,7 @@ return [
 				{
 					"formName": 'genericParametersForm',
 					"formOptions": {
-						template: "form" <--whatever form options you set up 
+						template: "form" 
 					}
 				}
 			)).show();
