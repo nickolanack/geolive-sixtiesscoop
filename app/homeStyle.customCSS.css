@@ -216,7 +216,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
 }
 
 .pb-c:after {
-    background-color:none;
+    background-color:transparent;
 }
 
 
