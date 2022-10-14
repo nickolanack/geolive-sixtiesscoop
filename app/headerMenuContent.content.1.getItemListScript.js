@@ -13,6 +13,9 @@ return [
 				application, 
 				new MockDataTypeItem({
 				    mutable:true,
+				    combineFieldValues:true,
+				    updateField:"data",
+				    data:{},
 				    parameters:[
 				        {
                 	      "name": "heading",
