@@ -13,7 +13,7 @@ return [
 				application, 
 				new MockDataTypeItem({
 				    mutable:true,
-				    combineFieldValues:true,
+				    mergeFieldValues:true,
 				    updateField:"data",
 				    data:{},
 				    parameters:[
