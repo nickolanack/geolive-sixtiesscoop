@@ -31,7 +31,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
 .site-heading {
     position: absolute;
     left: 300px;
-    top: 55px;
+    top: 20px;
     font-size: 30px;
     color: white;
     font-weight: 600;
@@ -39,6 +39,12 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     
     h1 {
         font-weight: 500;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        margin-top: 0;
+        color: white;
     }
 }
 
