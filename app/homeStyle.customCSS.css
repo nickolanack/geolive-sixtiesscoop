@@ -1,4 +1,5 @@
-
+$buttonColor:#a1d3c2;
+$buttonColorHover:darken(#a1d3c2, 10%);
 
 .header-menu {
     position: absolute;
@@ -126,10 +127,15 @@
             content: "Button One";
             display: inline-block;
             padding: 10px 20px;
-            background-color: #a1d3c2;
+            background-color: $buttonColor;
             font-size: 40px;
             margin: 10px;
             margin-bottom: 40px;
+            
+            &:hover{
+                background-color: $buttonColorHover;
+            }
+            
         }
         &.un-rendered:after {
             content: "Button Two";
@@ -201,12 +207,16 @@
         button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #a1d3c2;
+            background-color: $buttonColor;
             font-size: 25px;
             margin: 5px;
             float: right;
             border: none;
             border-radius: 3px;
+            
+            &:hover{
+                background-color: $buttonColorHover;
+            }
         }
     }
 }
