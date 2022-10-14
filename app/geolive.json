@@ -115,7 +115,7 @@
             "CachingEnabled": false,
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
-            "showFrontEndEditButtons": false,
+            "showFrontEndEditButtons": true,
             "JSCacheObfuscationEnabled": false,
             "phase": "production",
             "ForceHTTPS": false,
@@ -136,7 +136,8 @@
                 "*.z.geolive.ca",
                 "*.s22.ok.ubc.ca",
                 ""
-            ]
+            ],
+            "AjaxProfilingEnabled": false
         }
     },
     "plugin.12": {
