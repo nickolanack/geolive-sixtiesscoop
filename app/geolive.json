@@ -5900,7 +5900,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Site Header",
+            "contentTemplate": "#In our own words\n##Mapping\n",
             "readAccess": "public"
         }
     },
