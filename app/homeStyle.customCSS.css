@@ -217,6 +217,16 @@ $buttonColorHover:darken(#a1d3c2, 10%);
             }
         }
     }
+    
+    
+    &>div>.template-content:after {
+        content: "";
+        height: 100px;
+        display: block;
+        clear: both;
+    }
+    
+    
 }
 
 .pb-c:after {
