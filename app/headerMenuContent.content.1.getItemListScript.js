@@ -12,6 +12,7 @@ return [
             (new UIModalDialog(
 				application, 
 				new MockDataTypeItem({
+				    mutable:true,
 				    parameters:[
 				        {
                 	      "name": "heading",
@@ -37,7 +38,11 @@ return [
 						template: "form" 
 					}
 				}
-			)).show();
+			)).show().on('complete', function(item){
+			    
+			    console.log(item.toObject());
+			    
+			});
         
     }})
 ];
