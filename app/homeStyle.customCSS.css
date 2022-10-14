@@ -206,7 +206,8 @@ $buttonColorHover:darken(#a1d3c2, 10%);
             float: right;
             border: none;
             border-radius: 3px;
-            curser:pointer;
+            cursor: pointer;
+            transition:background-color 0.2s;
             
             &:hover{
                 background-color: $buttonColorHover;
