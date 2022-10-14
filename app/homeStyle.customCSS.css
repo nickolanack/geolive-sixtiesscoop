@@ -149,6 +149,15 @@ $buttonColorHover:darken(#a1d3c2, 10%);
             margin: 10px;
             margin-bottom: 40px;
         
+            cursor: pointer;
+            transition:background-color 1s, box-shadow 1s;
+            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            &:hover{
+                background-color: $buttonColorHover;
+                box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+                transition:background-color 0.3s, box-shadow 0.3s;
+            }
         }
         
         &.un-rendered:after {
