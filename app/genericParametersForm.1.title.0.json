@@ -13,6 +13,6 @@
         "fitContent": true,
         "minWidth": 400,
         "minHeight": 200,
-        "formatStepOptionsScript": ""
+        "formatStepOptionsScript": "if(item.getStepOptions){\n    return ObjectAppend_(options, item.getStepOptions());\n}"
     }
 }
