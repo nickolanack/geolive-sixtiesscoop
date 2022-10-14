@@ -266,9 +266,12 @@ button.inline-edit {
 }
 
 
-.intro-section button.inline-edit {
-    background-color:$buttonColor;
-    color:white;
+.intro-section, .page-content{
+    
+    button.inline-edit{
+        background-color:$buttonColor;
+        color:white;
+    }
 }
 
 
