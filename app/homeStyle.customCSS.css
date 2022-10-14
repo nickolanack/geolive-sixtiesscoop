@@ -129,7 +129,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     
     
     
-    .ui-view.banner-btns {
+    .ui-view.banner-btns, .ui-list-view.banner-btns  {
         max-width: 1000px;
         margin: auto;
         text-align:center;
