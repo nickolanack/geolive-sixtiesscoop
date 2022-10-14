@@ -219,7 +219,9 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     background-color:transparent;
 }
 
-
+.pb-o {
+    backdrop-filter: grayscale(1) blur(20px);
+}
 
 
 
