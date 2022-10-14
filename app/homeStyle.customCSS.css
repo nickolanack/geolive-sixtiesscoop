@@ -111,6 +111,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
             font-weight: 400;
             text-shadow: 0 0 7px white;
         }
+        
     }
     
     
@@ -285,7 +286,12 @@ button.inline-edit {
 
 
 
-
+.content.markdown:after {
+            content: "";
+            clear: both;
+            display: inline-block;
+            width: 100%;
+        }
 
 
 
