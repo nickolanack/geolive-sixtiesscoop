@@ -81,6 +81,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     background-color: #f3f3f3;
     position: relative;
     overflow: hidden;
+    z-index: 1;
     
 
     &:after {
@@ -100,6 +101,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
         background-position: top;
         transition: background-position 300s;
         background-position: center;
+        z-index: -1;
         
     }
 
