@@ -252,6 +252,7 @@ button.inline-edit {
     padding: 0;
     border: none;
     background: white;
+    color:$buttonColorHover;
     position: relative;
     z-index: 1;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -260,12 +261,15 @@ button.inline-edit {
     &:after {
         content: "\0f040";
         font-family: 'FontAwesome';
-        color:$buttonColorHover;
+        
     }
 }
 
 
-
+.intro-section button.inline-edit {
+    background-color:$buttonColor;
+    color:white;
+}
 
 
 
