@@ -14,8 +14,9 @@ return [
 				new MockDataTypeItem({
 				    mutable:true,
 				    mergeFieldValues:true,
-				    updateField:"data",
-				    data:{},
+				    //appendFieldObject:false, //is false by default if mergeFieldValues
+				    updateField:"data", 
+				    data:{}, //is set by form (updateField)
 				    parameters:[
 				        {
                 	      "name": "heading",
