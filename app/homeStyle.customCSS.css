@@ -259,6 +259,7 @@ button.inline-edit {
     &:after {
         content: "\0f040";
         font-family: 'FontAwesome';
+        color:$buttonColor;
     }
 }
 
