@@ -103,11 +103,14 @@ $buttonColorHover:darken(#a1d3c2, 10%);
         
     }
 
-    
+    .markdown {
+        width: 1400px;
+        max-width: calc( 100% - 100px );    
+    }
     
     .markdown {
         margin: auto;
-        max-width: 1000px;
+        
         
         
         
@@ -154,12 +157,16 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     
 }
 
+     .ui-view.featured-stories, .intro-section {
+        width: 1000px;
+        max-width: calc( 100% - 100px )
+     }
 
 
     .ui-view.featured-stories, .intro-section {
         font-size: 1.5em;
         font-weight: 100;
-        max-width: 1000px;
+
         margin: auto;
         margin-top: 70px;
     
