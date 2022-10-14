@@ -9,44 +9,5 @@ return [
     new MockDataTypeItem({name:"About"}), 
     new MockDataTypeItem({name:"Sign in", click:function(){
         
-            (new UIModalDialog(
-				application, 
-				new MockDataTypeItem({
-				    mutable:true,
-				    mergeFieldValues:true,
-				    //appendFieldObject:false, //is false by default if mergeFieldValues. must have toObject method
-				    updateField:"data", 
-				    data:{}, //is set by form (updateField)
-				    parameters:[
-				        {
-                	      "name": "heading",
-                	      "description": "",
-                	      "fieldType": "heading",
-                	      "defaultValue": "Hello world",
-                	      "options": {}
-                	    },   
-                	    {
-                	      "name": "Field Label",
-                	      "description": "",
-                	      "fieldType": "text",
-                	      "defaultValue": "",
-                	      "options": {
-                	          "parameterName":"content"
-                	      }
-                	    }
-				    ]
-				}), 
-				{
-					"formName": 'genericParametersForm',
-					"formOptions": {
-						template: "form" 
-					}
-				}
-			)).show().on('complete', function(item){
-			    
-			    console.log(item.toObject());
-			    
-			});
-        
     }})
 ];

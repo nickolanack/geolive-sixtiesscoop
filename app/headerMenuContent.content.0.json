@@ -1,5 +1,5 @@
 {
-    "type": "InlineHtml",
+    "type": "Template",
     "config": {
         "className": "site-heading",
         "text": "#Site Header",
@@ -8,6 +8,7 @@
         "formatTextScript": "",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": true,
+        "namedFormView": "",
         "identifier": "htmlLabel"
     }
 }
