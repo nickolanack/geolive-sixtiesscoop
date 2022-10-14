@@ -131,7 +131,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
     
     
     
-    .ui-view.banner-btns, .ui-list-view.banner-btns  {
+    .ui-list-view.banner-btns  {
         max-width: 1000px;
         margin: auto;
         text-align:center;
@@ -140,8 +140,7 @@ $buttonColorHover:darken(#a1d3c2, 10%);
          * TODO get rid of this
          */
         
-        &.un-rendered:before, &.un-rendered:after, .ui-view {
-            content: "Button One";
+         .ui-view {
             display: inline-block;
             padding: 10px 20px;
             background-color: $buttonColor;
