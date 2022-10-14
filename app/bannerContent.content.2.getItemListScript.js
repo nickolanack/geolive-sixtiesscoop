@@ -1,13 +1,8 @@
 return [
-    new MockDataTypeItem({name:"Home", click:function(){
-        window.location.href="/"
+    new MockDataTypeItem({name:"Learn More", click:function(){
+        window.location.href="https://sixtiesscoopnetwork.org/"
     }}), 
-    new MockDataTypeItem({name:"Map", click:function(){
-        window.location.href="/map"
-    }}), 
-    new MockDataTypeItem({name:"Help"}), 
-    new MockDataTypeItem({name:"About"}), 
-    new MockDataTypeItem({name:"Sign in", click:function(){
-        
+    new MockDataTypeItem({name:"Donate", click:function(){
+        window.location.href="https://sixtiesscoopnetwork.org/checkout/donate?donatePageId=5ee7a141db3b8842f56dde36"
     }})
 ];
