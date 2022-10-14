@@ -5529,7 +5529,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "header-menu",
+                                    "listClassName": "banner-btns",
                                     "className": "menu-item-link",
                                     "identifier": "",
                                     "viewType": "view",
