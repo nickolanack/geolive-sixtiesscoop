@@ -11,7 +11,7 @@
 
     <ul>
     {% for trace in stack %}
-            <li>{{ stack.file | split('/') | last }}</li>
+            <li>{{ trace.file | split('/') | last }}</li>
     {% endfor %}
     </ul>
 </section>
