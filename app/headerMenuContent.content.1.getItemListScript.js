@@ -14,7 +14,7 @@ return [
 				new MockDataTypeItem({
 				    mutable:true,
 				    mergeFieldValues:true,
-				    //appendFieldObject:false, //is false by default if mergeFieldValues
+				    //appendFieldObject:false, //is false by default if mergeFieldValues. must have toObject method
 				    updateField:"data", 
 				    data:{}, //is set by form (updateField)
 				    parameters:[
