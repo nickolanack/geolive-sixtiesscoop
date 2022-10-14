@@ -33,7 +33,7 @@
     
         <ul>
         {% for trace in stack %}
-                <li>{{ trace.file | split('/') | last }} {{trace.line}} {{trace.function}}</li>
+                <li>{{ trace.file | split('/') | last }} {{trace.line}} <span>{{trace.function}}</span></li>
         {% endfor %}
         </ul>
     </section>
