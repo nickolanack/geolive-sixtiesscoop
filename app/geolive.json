@@ -1105,16 +1105,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 258,
-                            "y": 390
+                            "x": 268,
+                            "y": 400
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 218,
-                                    "y": 591
+                                    "x": 228,
+                                    "y": 601
                                 }
                             }
                         ],
@@ -1136,10 +1136,10 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardLogin",
+                                            "type": "plugin.Users.Login",
                                             "config": {
                                                 "className": "",
-                                                "showCancel": true,
+                                                "showCancel": false,
                                                 "labelForUsername": "XXXX-XXXX",
                                                 "labelForPassword": "XXXX-XXXX",
                                                 "labelForCancel": "cancel",
@@ -1152,12 +1152,17 @@
                                             }
                                         },
                                         {
-                                            "type": "InlineHtml",
+                                            "type": "Template",
                                             "config": {
                                                 "className": "uitext-container",
                                                 "text": "<span class=\"label\" style=\"margin-top:30px;\">Don't have an account yet?<\/span>",
                                                 "template": "",
-                                                "templateVariablesScript": ""
+                                                "templateVariablesScript": "",
+                                                "formatTextScript": "",
+                                                "formatVariablesScript": "",
+                                                "ajaxRequestTemplate": false,
+                                                "namedFormView": "",
+                                                "identifier": "htmlLabel"
                                             }
                                         },
                                         {
