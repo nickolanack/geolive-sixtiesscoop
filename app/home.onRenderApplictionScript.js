@@ -6,4 +6,7 @@ IncludeJSBlock('
 IncludeJS('{widgets}/WizardBuilder/js/FormBuilder.js');
 
 GetWidget("homeStyle")->display($targetInstance);
+GetWidget("loginFormView")->display($targetInstance);
+
+
 
