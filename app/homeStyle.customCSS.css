@@ -255,13 +255,14 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
                 box-shadow: 0 0 8px rgb(0 0 0 / 30%);
                 transition:background-color 0.3s, box-shadow 0.3s;
             }
-        }
+        
     }
     
     button.form-btn.secondary-btn {
         padding: 4px 15px;
         font-size: 17px;
         background-color: $secondaryButtonColor;
+        
         &:hover{
             background-color: $secondaryButtonColorHover;
         }
