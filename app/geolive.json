@@ -6202,7 +6202,22 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none"
+            "target": "featuredStories",
+            "contentTemplate": "",
+            "comments": "",
+            "formatParametersScript": "return $parameters;",
+            "formatOutputScript": "return $parameters;",
+            "enableUserAjaxWrite": false,
+            "authUserAjaxScript": "XXXX-XXXX",
+            "saveParametersAsData": false,
+            "enableRevisions": false,
+            "broadcastChanges": false,
+            "parameters": [
+                "Featured Stories.parameters.0.json"
+            ],
+            "hello": "World",
+            "widgetTitle": "Featured Stories",
+            "readAccess": "public"
         }
     }
 }
