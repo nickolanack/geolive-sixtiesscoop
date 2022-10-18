@@ -6217,7 +6217,8 @@
             ],
             "hello": "World",
             "widgetTitle": "Featured Stories",
-            "readAccess": "public"
+            "readAccess": "public",
+            "featured": []
         }
     }
 }
