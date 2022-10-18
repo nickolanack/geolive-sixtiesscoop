@@ -338,6 +338,30 @@ button.inline-edit {
         }
 
 
+.intro-section .ui-view.featured-item {
+    text-align: center;
+    margin-top: 300px;
+    height: unset;
+    min-height: unset;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
 
+.intro-section .ui-view.featured-item:before {
+    content: "\0f002";
+    font-family: 'FontAwesome';
+    font-size: 100px;
+    position: absolute;
+    top: -175px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 100%;
+    left: calc( 50% - 90px );
+}
 
 
