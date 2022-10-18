@@ -1,1 +1,1 @@
-return [new MockDataTypeItem({name:"##Search"}), new MockDataTypeItem({name:"##View"}), new MockDataTypeItem({name:"##Data"})];
+return [new MockDataTypeItem({name:"##Search"}), new MockDataTypeItem({name:"##Visualize"}), new MockDataTypeItem({name:"##Browse"})];
