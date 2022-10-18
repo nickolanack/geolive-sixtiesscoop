@@ -14,6 +14,11 @@
 	})).addEvent('success',function(response){
 	    
 	       var list=response.value.map(function(data, i){
+	           
+	           if(data.name){
+	               data.name='##'+data.name;
+	           }
+	           
 	           return new MockDataTypeItem(ObjectAppend_({name:"##Item "+i}, data));
 	       });
 	    
