@@ -115,7 +115,7 @@
             "CachingEnabled": false,
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
-            "showFrontEndEditButtons": false,
+            "showFrontEndEditButtons": true,
             "JSCacheObfuscationEnabled": false,
             "phase": "production",
             "ForceHTTPS": false,
@@ -136,7 +136,8 @@
                 "*.z.geolive.ca",
                 "*.s22.ok.ubc.ca",
                 ""
-            ]
+            ],
+            "AjaxProfilingEnabled": false
         }
     },
     "plugin.12": {
@@ -187,6 +188,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "install"
+                },
+                {
+                    "name": "map",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "mainMap"
                 }
             ],
             "useRemoteServerUI": false,
@@ -238,7 +246,7 @@
             "googleMapsVersion": "quarterly",
             "tileCachePath": "{site}\/..\/map-tiles",
             "layerDisplayFilterScript": "",
-            "layerDisplayFormatScript": "",
+            "layerDisplayFormatScript": "plugin.Maps.17.layerDisplayFormatScript.js",
             "layerDisplayChildLayersScript": "",
             "formatMapitemScript": "",
             "featureUrlScript": ""
@@ -1097,16 +1105,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 258,
-                            "y": 390
+                            "x": 268,
+                            "y": 400
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 218,
-                                    "y": 591
+                                    "x": 228,
+                                    "y": 601
                                 }
                             }
                         ],
@@ -1128,10 +1136,10 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardLogin",
+                                            "type": "plugin.Users.Login",
                                             "config": {
                                                 "className": "",
-                                                "showCancel": true,
+                                                "showCancel": false,
                                                 "labelForUsername": "XXXX-XXXX",
                                                 "labelForPassword": "XXXX-XXXX",
                                                 "labelForCancel": "cancel",
@@ -1144,12 +1152,17 @@
                                             }
                                         },
                                         {
-                                            "type": "InlineHtml",
+                                            "type": "Template",
                                             "config": {
                                                 "className": "uitext-container",
                                                 "text": "<span class=\"label\" style=\"margin-top:30px;\">Don't have an account yet?<\/span>",
                                                 "template": "",
-                                                "templateVariablesScript": ""
+                                                "templateVariablesScript": "",
+                                                "formatTextScript": "",
+                                                "formatVariablesScript": "",
+                                                "ajaxRequestTemplate": false,
+                                                "namedFormView": "",
+                                                "identifier": "htmlLabel"
                                             }
                                         },
                                         {
@@ -5182,7 +5195,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Install 1",
+            "contentTemplate": "module-html-install1-text.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -5197,7 +5210,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Install3",
+            "contentTemplate": "module-html-install2-text.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -5248,16 +5261,16 @@
                             "installForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 158,
-                            "y": 290
+                            "x": 178,
+                            "y": 310
                         },
                         "children": [
                             "installForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 118,
-                                    "y": 466
+                                    "x": 138,
+                                    "y": 486
                                 }
                             }
                         ],
@@ -5274,7 +5287,7 @@
                                         {
                                             "type": "InlineHtml",
                                             "config": {
-                                                "className": "intro-section-2",
+                                                "className": "intro-section",
                                                 "text": "#Install 1",
                                                 "template": "html.install1",
                                                 "templateVariablesScript": "{}",
@@ -5287,7 +5300,7 @@
                                         {
                                             "type": "InlineHtml",
                                             "config": {
-                                                "className": "intro-section-3",
+                                                "className": "intro-section-2",
                                                 "text": "#Install3",
                                                 "template": "html.install2",
                                                 "templateVariablesScript": "{}",
@@ -5322,6 +5335,890 @@
                 ]
             },
             "readAccess": "public"
+        }
+    },
+    "widget.70": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "home",
+            "target": "home",
+            "templateName": "home",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "home.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "home.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-banner",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bannerContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "intro-section",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "introSection",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "homePageContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "defaultView",
+                                    "shouldRender": false,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.71": {
+        "name": "Stylesheet",
+        "instance": "CSS",
+        "parameters": {
+            "cacheable": false,
+            "link": true,
+            "sass": true,
+            "widgetTitle": "homeStyle",
+            "target": "homeStyle",
+            "customCSS": "homeStyle.customCSS.css",
+            "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
+            "saveAsData": false,
+            "readAccess": "public"
+        }
+    },
+    "widget.72": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "bannerContent",
+            "target": "bannerContent",
+            "templateName": "bannerContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "bannerContent.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "banner-btns",
+                                    "className": "menu-item-link",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "placeholderLabelItem",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "bannerContent.metadata.positions.content.modules.1.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.73": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.bannerText.text",
+            "target": "module.bannerText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "module-bannerText-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.74": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "homePageContent",
+            "target": "homePageContent",
+            "templateName": "homePageContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "homePageContent.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.75": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "featuredStories",
+            "target": "featuredStories",
+            "templateName": "featuredStories",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "featuredStories.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "",
+                                    "className": "featured-story",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "placeholderLabelItem",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item;",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "featuredStories.metadata.positions.content.modules.1.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.77": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.featuredText.text",
+            "target": "module.featuredText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-featuredText-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.78": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "introSection",
+            "target": "introSection",
+            "templateName": "introSection",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "introSection.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "",
+                                    "className": "featured-item",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "placeholderLabelItem",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "introSection.metadata.positions.content.modules.1.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.79": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.introText.text",
+            "target": "module.introText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-introText-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.81": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "headerMenuContent",
+            "target": "headerMenuContent",
+            "templateName": "headerMenuContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "headerMenuContent.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "header-menu",
+                                    "className": "menu-item-link",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "placeholderLabelItem",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "headerMenuContent.metadata.positions.content.modules.1.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "return item;",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.82": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "placeholderLabelItem",
+            "target": "placeholderLabelItem",
+            "templateName": "placeholderLabelItem",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "placeholderLabelItem.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.83": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.siteHeaderText.text",
+            "target": "module.siteHeaderText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-siteHeaderText-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.84": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.placholderText.text",
+            "target": "module.placholderText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "{{name}}",
+            "readAccess": "public"
+        }
+    },
+    "widget.85": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "mainMap",
+            "target": "mainMap",
+            "templateName": "mainMap",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "mainMap.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "mainMap.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-banner",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bannerContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "googleMap",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "defaultView",
+                                    "shouldRender": false,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.86": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "genericParametersForm",
+            "target": "genericParametersForm",
+            "templateName": "genericParametersForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": 10,
+                    "y": 195
+                },
+                "children": [
+                    "genericParametersForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "genericParametersForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 167,
+                            "y": 192
+                        },
+                        "children": [
+                            "genericParametersForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 127,
+                                    "y": 358
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "genericParametersForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "genericParametersForm.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        "genericParametersForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.87": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "genericSingleParameterForm",
+            "target": "genericSingleParameterForm",
+            "templateName": "genericSingleParameterForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": -18,
+                    "y": 171
+                },
+                "children": [
+                    "genericSingleParameterForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "genericSingleParameterForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 168,
+                            "y": 300
+                        },
+                        "children": [
+                            "genericSingleParameterForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 128,
+                                    "y": 466
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": []
+                                },
+                                "content": {
+                                    "modules": [
+                                        "genericSingleParameterForm.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": []
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.88": {
+        "name": "Configuration",
+        "instance": "Configuration",
+        "parameters": {
+            "target": "featuredStories",
+            "contentTemplate": "",
+            "comments": "",
+            "formatParametersScript": "return $parameters;",
+            "formatOutputScript": "return $parameters;",
+            "enableUserAjaxWrite": false,
+            "authUserAjaxScript": "XXXX-XXXX",
+            "saveParametersAsData": true,
+            "enableRevisions": false,
+            "broadcastChanges": false,
+            "parameters": [
+                "Featured Stories.parameters.0.json"
+            ],
+            "hello": "World",
+            "widgetTitle": "Featured Stories",
+            "readAccess": "public",
+            "featured": []
         }
     }
 }

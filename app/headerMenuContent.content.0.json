@@ -1,0 +1,14 @@
+{
+    "type": "Template",
+    "config": {
+        "className": "site-heading",
+        "text": "#Site Header",
+        "template": "siteHeaderText",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "genericParametersForm",
+        "identifier": "htmlLabel"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "type": "UIListView",
+    "config": {
+        "listClassName": "",
+        "className": "",
+        "identifier": "",
+        "viewType": "form",
+        "namedView": "defaultView",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "genericSingleParameterForm",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "FormBuilder.formFieldItemListUpdater(module, item);",
+        "resolveItemScript": "return item",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": "",
+        "getItemListScript": "FormBuilder.formFieldItemList(item, callback);",
+        "formatItemListScript": "return list;",
+        "formatListItemModuleScript": "return item;",
+        "emptyNamedView": "emptyListView",
+        "filterItemsScript": "return true;",
+        "sortItemsScript": "",
+        "maxItems": "-1"
+    }
+}

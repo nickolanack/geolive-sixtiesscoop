@@ -1,0 +1,6 @@
+{
+    "type": "json",
+    "name": "featured",
+    "default": [],
+    "label": "Featured Stories"
+}

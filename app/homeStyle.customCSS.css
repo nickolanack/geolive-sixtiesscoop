@@ -1,0 +1,404 @@
+@charset "utf-8";
+@import url("/webresources/font-awesome-4.7.0/css/font-awesome.min.css");
+
+
+$buttonColor:#a1d3c2;
+$buttonColorHover:darken(#a1d3c2, 10%);
+
+
+$secondaryButtonColor: #ccc5a2;
+$secondaryButtonColorHover: darken(#ccc5a2, 10%);
+
+.header-menu {
+    position: absolute;
+    top: 100px;
+    right: 100px;    
+
+
+    .ui-view.menu-item-link {
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 5px 20px;
+    }
+    
+}
+
+
+
+
+
+.site-heading {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 0 50px black;
+    
+    h1 {
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    
+    h2 {
+        margin-top: 0;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+.ui-view.page-header {
+   
+   
+    height: 250px;
+    background: #3f3c3b;
+
+
+    &:after {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/5ee56dbe30c9593f5105f19c/1592244537146-K72WYV6R1FMFJ4267ZJO/60s+logo.png?format=1500w");
+        position: absolute;
+        content: "";
+        height: 250px;
+        width: 250px;
+        display: inline-block;
+        background-size: cover;
+        left: 0;
+    }
+}
+
+
+.ui-view.page-banner {
+    
+    
+    min-height: 300px;
+    background-color: #f3f3f3;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+
+    &:after {
+        content: "";
+        background-image: url("https://images.squarespace-cdn.com/content/v1/5ee56dbe30c9593f5105f19c/1638248230687-QKJ43SMSGXE32DQ670K0/1.png?format=2500w");
+        display: inline-block;
+        background-size: cover;
+        width: calc( 100% + 20px );
+        height: calc( 100% + 20px );
+        filter: blur(5px);
+        left: -10px;
+        top: -10px;
+        position: absolute;
+        opacity: 0.3;
+        pointer-events: none;
+        
+        background-position: top;
+        transition: background-position 300s;
+        background-position: center;
+        z-index: -1;
+        
+    }
+
+    .markdown {
+        width: 1400px;
+        max-width: calc( 100% - 100px );    
+    }
+    
+    .markdown {
+        margin: auto;
+        
+        
+        
+        
+        h1 {
+            color: #4d8673;
+            font-size: 50px;
+            font-weight: 400;
+            text-shadow: 0 0 7px white;
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    .ui-list-view.banner-btns  {
+        max-width: 1000px;
+        margin: auto;
+        text-align:center;
+        
+        /*
+         * TODO get rid of this
+         */
+        
+         .ui-view {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: $buttonColor;
+            font-size: 40px;
+            margin: 10px;
+            margin-bottom: 40px;
+        
+            cursor: pointer;
+            transition:background-color 1s, box-shadow 1s;
+            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            &:hover{
+                background-color: $buttonColorHover;
+                box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+                transition:background-color 0.3s, box-shadow 0.3s;
+            }
+        }
+        
+        &.un-rendered:after {
+            content: "Button Two";
+        }
+        
+        .ui-view p{
+            margin:0;
+        }
+        
+        
+    }
+    
+}
+
+     .ui-view.featured-stories, .intro-section {
+        width: 1000px;
+        max-width: calc( 100% - 100px )
+     }
+
+
+    .ui-view.featured-stories, .intro-section {
+        font-size: 1.5em;
+        font-weight: 100;
+
+        margin: auto;
+        margin-top: 70px;
+    
+    
+        .ui-view.featured-story, .ui-view.featured-item {
+            display: inline-block;
+            width: calc( 33% - 20px );
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            min-height: 300px;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 7px;
+            background-color: rgba(0,0,0,0.05);
+        }
+    }
+
+
+
+
+.ui-view.page-footer.un-rendered {
+    height: 300px;
+    background: #3f3c3b;
+    margin-top: 200px;
+}
+
+
+
+[data-template-name="form"]{
+
+    h2 {
+        color: #4d8673;
+        font-size: 50px;
+        font-weight: 400;
+        text-shadow: 0 0 7px white;
+    }
+
+
+    .form-navigation-btns {
+        
+        white-space: nowrap;
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: whitesmoke;
+    }
+    
+    .form-navigation-btns button, button.form-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: $buttonColor;
+            font-size: 25px;
+            margin: 5px;
+            float: right;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition:background-color 1s, box-shadow 1s;
+            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            &:hover{
+                background-color: $buttonColorHover;
+                box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+                transition:background-color 0.3s, box-shadow 0.3s;
+            }
+        
+    }
+    
+    button.form-btn.secondary-btn {
+        padding: 4px 15px;
+        font-size: 17px;
+        background-color: $secondaryButtonColor;
+        
+        &:hover{
+            background-color: $secondaryButtonColorHover;
+        }
+    }
+    
+    
+    &>div>.template-content:after {
+        content: "";
+        height: 100px;
+        display: block;
+        clear: both;
+    }
+    
+    
+}
+
+.pb-c:after {
+    background-color:transparent;
+}
+
+.pb-o {
+    backdrop-filter: grayscale(1) blur(20px);
+}
+
+
+
+button.inline-edit {
+   
+    border: none;
+    background: transparent;
+
+    
+    float: right;
+    
+    &:after {
+        content: "\0f040";
+        font-family: 'FontAwesome';
+        
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            display: inline-block;
+            padding: 0;
+            border: none;
+            background: white;
+            color: #7ec3ab;
+            position: relative;
+            top: -30px;
+            z-index: 1;
+            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            line-height: 30px;
+            text-align: center;
+        
+    }
+}
+
+
+.intro-section, .page-content{
+    
+    button.inline-edit:after{
+        background-color:$buttonColor;
+        color:white;
+    }
+}
+
+
+
+.content.markdown:after {
+            content: "";
+            clear: both;
+            display: inline-block;
+            width: 100%;
+        }
+
+
+
+.intro-section .ui-view.featured-item{
+    
+    text-align: center;
+    margin-top: 200px;
+    height: unset;
+    min-height: unset;
+    border: none;
+    box-shadow: none;
+    background: none;
+    
+    
+    
+    .content.search:before, .content.view:before, .content.browse:before {
+        content: "";
+        font-size: 100px;
+        position: absolute;
+        top: -175px;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: rgba(0,0,0,0.1);
+        padding: 40px;
+        border-radius: 100%;
+        left: calc( 50% - 90px );
+        
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+    
+
+    .content.search:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[ImAgE]_[G]_Ilu_G2q_SAZ-%3Ethumb:%3E200x%3E150.png');
+        background-color: coral;
+    } 
+    .content.view:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BImAgE%5D_wOV_dPe_gy6_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png');
+        background-color: deepskyblue;
+    } 
+    .content.browse:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/7PR_b0I_%5BG%5D_sbB_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png');
+        background-color: mediumaquamarine;
+    }
+
+
+
+
+
+    
+    
+    
+}
+
+
+
+
+
+
+
