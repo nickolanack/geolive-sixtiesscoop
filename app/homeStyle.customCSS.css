@@ -348,20 +348,53 @@ button.inline-edit {
     background: none;
 }
 
-.intro-section .ui-view.featured-item:before {
-    content: "\0f002";
-    font-family: 'FontAwesome';
-    font-size: 100px;
-    position: absolute;
-    top: -175px;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    background-color: rgba(0,0,0,0.1);
-    padding: 40px;
-    border-radius: 100%;
-    left: calc( 50% - 90px );
+
+.intro-section .ui-view.featured-item{
+    .content.search:before, .content.view:before, .content.browse:before {
+        content: "\0f002";
+        font-family: 'FontAwesome';
+        font-size: 100px;
+        position: absolute;
+        top: -175px;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: rgba(0,0,0,0.1);
+        padding: 40px;
+        border-radius: 100%;
+        left: calc( 50% - 90px );
+    }
+    
+    
+    
+    
+
+    .content.search:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[ImAgE]_[G]_Ilu_G2q_SAZ-%3Ethumb:%3E200x%3E150.png');
+        
+    } 
+    .content.view:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BImAgE%5D_wOV_dPe_gy6_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png');
+        
+    } 
+    .content.browse:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/7PR_b0I_%5BG%5D_sbB_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png');
+        
+    }
+
+
+
+
+
+    
+    
+    
 }
+
+
+
+
+
 
 
