@@ -351,8 +351,7 @@ button.inline-edit {
 
 .intro-section .ui-view.featured-item{
     .content.search:before, .content.view:before, .content.browse:before {
-        content: "\0f002";
-        font-family: 'FontAwesome';
+        content: "";
         font-size: 100px;
         position: absolute;
         top: -175px;
@@ -364,6 +363,10 @@ button.inline-edit {
         padding: 40px;
         border-radius: 100%;
         left: calc( 50% - 90px );
+        
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     
     
