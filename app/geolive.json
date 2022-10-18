@@ -6197,5 +6197,12 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.88": {
+        "name": "Configuration",
+        "instance": "Configuration",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
