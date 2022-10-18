@@ -12,7 +12,13 @@
 		'widget': "featuredStoriesItems",
 		'field': "featured"
 	})).addEvent('success',function(response){
-        callback(defaultList);
+	    
+	       var list=response.value.map(function(data, i){
+	           return new MockDataTypeItem(ObjectAppend_({name:"##Item "+i}, data));
+	       });
+	    
+        callback(list.concat(defaultList).slice(0,3));
+        
 	}).execute();
 
 
