@@ -338,18 +338,19 @@ button.inline-edit {
         }
 
 
-.intro-section .ui-view.featured-item {
+
+.intro-section .ui-view.featured-item{
+    
     text-align: center;
-    margin-top: 300px;
+    margin-top: 200px;
     height: unset;
     min-height: unset;
     border: none;
     box-shadow: none;
     background: none;
-}
-
-
-.intro-section .ui-view.featured-item{
+    
+    
+    
     .content.search:before, .content.view:before, .content.browse:before {
         content: "";
         font-size: 100px;
