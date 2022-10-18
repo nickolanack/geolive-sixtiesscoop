@@ -375,15 +375,15 @@ button.inline-edit {
 
     .content.search:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[ImAgE]_[G]_Ilu_G2q_SAZ-%3Ethumb:%3E200x%3E150.png');
-        
+        background-color: coral;
     } 
     .content.view:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BImAgE%5D_wOV_dPe_gy6_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png');
-        
+        background-color: deepskyblue;
     } 
     .content.browse:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/7PR_b0I_%5BG%5D_sbB_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png');
-        
+        background-color: mediumaquamarine;
     }
 
 
