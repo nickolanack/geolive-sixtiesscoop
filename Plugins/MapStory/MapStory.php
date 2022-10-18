@@ -36,6 +36,8 @@ class MapStory extends \core\extensions\Plugin implements
 
 	public function includeScripts() {
 
+		Behavior('aggregator');
+
 		IncludeJS($this->getPath() . '/js/Stories.js');
 		IncludeJS($this->getPath() . '/js/ClusterBehavior.js');
 		IncludeJS($this->getPath() . '/js/StoryGroup.js');
