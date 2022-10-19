@@ -195,6 +195,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "mainMap"
+                },
+                {
+                    "name": "story",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "story"
                 }
             ],
             "useRemoteServerUI": false,
