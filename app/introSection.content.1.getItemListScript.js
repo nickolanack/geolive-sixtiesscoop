@@ -1,4 +1,4 @@
 return [
     new MockDataTypeItem({name:"##Search", "className":"search"}), 
-    new MockDataTypeItem({name:"##View", "className":"view"}), 
-    new MockDataTypeItem({name:"##Browse", "className":"browse"})];
+    new MockDataTypeItem({name:"##Share", "className":"view"}), 
+    new MockDataTypeItem({name:"##Explore", "className":"browse"})];
