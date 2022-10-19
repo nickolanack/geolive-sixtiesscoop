@@ -23,7 +23,7 @@
 	       };
 	       
 	    
-	       (response.value).forEach(function(featured, i){
+	       callback(response.value.map(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
@@ -31,25 +31,9 @@
 	           
 	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null, cards:null}, featured));
 	           
-	            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": featured.id
-                })).addEvent("success", function(resp) {
-                  
-                    var story=new StoryUser(resp);
-                    item.setStory(story);
-                    
-                    story.getCards(function(cards){
-                        item.setCards(cards);
-                        list[i]=item; //cards[featured.card];
-                        check();
-                        
-                    });
-                    
-                    
-                }).execute();
+	           return item;
                 
-	       });
+	       }));
 	       
            
 	       
