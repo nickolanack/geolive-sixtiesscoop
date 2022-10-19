@@ -478,7 +478,7 @@ button.inline-edit {
     
 }
 
-[data-view="sidePanelInfoDetail"] 
+[data-view="sidePanelInfoDetail"]{
     &.repatriation-card .icon {
         background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
     }
