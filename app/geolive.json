@@ -6294,12 +6294,12 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "storyView",
-            "target": "storyView",
-            "templateName": "storyView",
+            "widgetTitle": "story",
+            "target": "story",
+            "templateName": "story",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "storyView.onRenderApplictionScript.js",
+            "onRenderApplictionScript": "story.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
@@ -6310,7 +6310,7 @@
                     },
                     "content": {
                         "modules": [
-                            "storyView.metadata.positions.content.modules.0.json",
+                            "story.metadata.positions.content.modules.0.json",
                             {
                                 "type": "UIView",
                                 "config": {
