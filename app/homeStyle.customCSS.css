@@ -571,3 +571,41 @@ button.inline-edit {
 
 
 
+
+
+
+
+
+[data-view="advancedSearchForm"] {
+    max-width: 1000px;
+    margin: auto;
+    width: calc( 100% - 100px );
+
+    
+    .section-label {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    
+    .text-input.with-1-line {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 10px;
+        font-size: 18px;
+    }
+    
+    span.lbl-txt {
+        font-size: 18px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
