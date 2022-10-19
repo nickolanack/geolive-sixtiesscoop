@@ -9,6 +9,8 @@ $buttonColorHover:darken(#a1d3c2, 10%);
 $secondaryButtonColor: #ccc5a2;
 $secondaryButtonColorHover: darken(#ccc5a2, 10%);
 
+$introTextColor:#4d8673;
+
 .header-menu {
     position: absolute;
     top: 10px;
@@ -121,7 +123,7 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
         
         
         h1 {
-            color: #4d8673;
+            color: $introTextColor;
             font-size: 35px;
             font-weight: 400;
             text-shadow: 0 0 7px white;
