@@ -122,7 +122,7 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
         
         h1 {
             color: #4d8673;
-            font-size: 50px;
+            font-size: 35px;
             font-weight: 400;
             text-shadow: 0 0 7px white;
         }
