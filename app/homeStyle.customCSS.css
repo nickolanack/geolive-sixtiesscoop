@@ -478,7 +478,7 @@ button.inline-edit {
     
 }
 
-.page-content .featured-story{
+.page-content .ui-view.featured-stories .featured-story{
     
     cursor:pointer;
     &:hover{
