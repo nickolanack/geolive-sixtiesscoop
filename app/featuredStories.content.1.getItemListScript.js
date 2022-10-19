@@ -15,7 +15,9 @@
 	    
 	       var list=[];
 	       var check=function(){
-	           if(list.length==3){
+	           if(list.filter(function(item){
+	               return !!item;
+	           }).length==3){
 	               callback(list);
 	           }
 	       };
@@ -42,7 +44,7 @@
                     
                     story.getCards(function(cards){
                         
-                        list.push(cards[featured.card]);
+                        list[i]=(cards[featured.card]);
                         check();
                         
                     });
