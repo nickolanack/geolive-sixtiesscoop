@@ -638,6 +638,15 @@ button.inline-edit {
 
 }
 
+.FormattedTextModule.content.item-address, .FormattedTextModule.content.item-year {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.FormattedTextModule.content.description-field {
+    margin-bottom: 10px;
+}
+
 .FormattedTextModule.content.description-field{
     &:before, &:after {
         content: '“';
