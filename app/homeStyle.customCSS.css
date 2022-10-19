@@ -364,8 +364,15 @@ button.inline-edit {
             clear: both;
             display: inline-block;
             width: 100%;
-        }
+}
 
+
+.page-content, .intro-section {
+    text-align:center;
+    &>*{
+        text=align:left;
+    }
+}
 .page-content .ui-view.featured-stories, .intro-section .ui-view.featured-item {
     min-width: 250px;
 }
