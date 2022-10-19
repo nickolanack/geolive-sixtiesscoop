@@ -29,10 +29,7 @@
 	           //    data.name='##'+data.name;
 	           //}
 	           
-	           var data = {};
-	
-	           
-	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null, cards:null}, data));
+	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null, cards:null}, featured));
 	           
 	            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
                     "plugin": "MapStory",
