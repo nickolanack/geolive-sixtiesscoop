@@ -1,12 +1,14 @@
 var card=child.getCard(); //index;
 var storyItem=child.getResp().story[card];
+var attrs=storyItem.attributes;
 
-if(storyItem.attributes.isBirthStory===true){
+
+if(attrs.isBirthStory===true){
     childView.getElement().addClass('birth-card');
     return;
 }
 
-if(item.isRepatriationStory===true){
+if(attrs.isRepatriationStory===true){
     childView.getElement().addClass('repatriation-card');
     return;
 }
@@ -15,7 +17,7 @@ if(item.isRepatriationStory===true){
 childView.getElement().addClass('journey-card');
 
 
-if(item.isAdoptionStory===true){
+if(attrs.isAdoptionStory===true){
     childView.getElement().addClass('adoption-card');
 
 }
