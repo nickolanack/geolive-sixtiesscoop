@@ -21,7 +21,7 @@
 	       };
 	       
 	    
-	       list=[335, 312, 307].value.map(function(id, i){
+	       ([335, 312, 307]).forEach(function(id, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
@@ -43,8 +43,6 @@
                     
                 }).execute();
                 
-	           
-	           return item;
 	       });
 	       
            
