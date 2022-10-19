@@ -4231,7 +4231,7 @@
                                 "config": {
                                     "textValueScript": "return item.getAddress();",
                                     "formatModuleScript": "",
-                                    "className": "",
+                                    "className": "item-address",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
                                     "multiImageWidth": 100,
@@ -4258,7 +4258,7 @@
                                 "config": {
                                     "textValueScript": "return item.getYear();",
                                     "formatModuleScript": "",
-                                    "className": "",
+                                    "className": "item-year",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
                                     "multiImageWidth": 100,
