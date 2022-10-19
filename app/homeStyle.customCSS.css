@@ -478,7 +478,7 @@ button.inline-edit {
     
 }
 
-.featured-story
+.featured-story{
     &.adoption-card, &.journey-card {
         border: 3px solid #ffcc02;
         .icon {
