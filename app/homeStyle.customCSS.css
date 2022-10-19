@@ -389,6 +389,28 @@ button.inline-edit {
 
 
 
+    
+    &:hover {
+        filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+        
+        h2 {
+            font-weight: 400;
+        }
+        
+        .content.search:before,  .content.view:before, .content.browse:before {
+            box-shadow: 0 0 3px rgba(0,0,0,0.6);
+        }
+        .content.search:before {
+            background-color: darken(coral, 10%);
+        }
+        .content.search:before {
+            background-color:  darken(deepskyblue, 10%);
+        }
+        .content.search:before {
+            background-color:  darken(mediumaquamarine, 10%);
+        }
+        
+    }
 
 
     
