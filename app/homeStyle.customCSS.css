@@ -478,22 +478,32 @@ button.inline-edit {
     
 }
 
+.featured-story
+    &.adoption-card, &.journey-card {
+        border: 3px solid #ffcc02;
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
+        }
+    }
+    
+    &.birth-card.featured-story {
+        border: 3px solid #5daeeb;
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
+        }
+    }
+    
+    &.repatriation-card.featured-story {
+        border: 3px solid #fd8209;
+        
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
+        }
+    }
 
-.repatriation-card [data-view="sidePanelInfoDetail"]{
-    .icon {
-        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
-    }
 }
-.journey-card [data-view="sidePanelInfoDetail"]{
-    .icon {
-        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
-    }
-}
-.birth-card [data-view="sidePanelInfoDetail"]{
-    .icon {
-        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
-    }
-}
+
+
 
 
 [data-view="sidePanelInfoDetail"]{
