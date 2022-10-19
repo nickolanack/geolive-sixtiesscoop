@@ -6458,8 +6458,8 @@
                                 "config": {
                                     "className": "page-content",
                                     "identifier": "",
-                                    "viewType": "view",
-                                    "namedView": "storyPageContent",
+                                    "viewType": "form",
+                                    "namedView": "advancedSearchForm",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
