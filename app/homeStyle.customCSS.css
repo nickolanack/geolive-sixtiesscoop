@@ -366,7 +366,9 @@ button.inline-edit {
             width: 100%;
         }
 
-
+.page-content .ui-view.featured-stories, .intro-section .ui-view.featured-item {
+    min-width: 250px;
+}
 
 .intro-section .ui-view.featured-item{
     
@@ -378,6 +380,7 @@ button.inline-edit {
     box-shadow: none;
     background: none;
     
+
     cursor:pointer;
     transition:filter 0.8s;
     
