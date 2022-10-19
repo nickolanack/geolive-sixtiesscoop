@@ -23,7 +23,7 @@
 	       };
 	       
 	    
-	       ([{id:335, card:3}, {id:312, card:1}, {id:62, card:1}]).forEach(function(featured, i){
+	       ([{id:369, card:2}, {id:312, card:1}, {id:62, card:1}]).forEach(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
