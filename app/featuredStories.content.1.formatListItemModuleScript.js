@@ -4,7 +4,7 @@ var attrs=storyItem.attributes;
 
 
 childView.getElement().addEvent('click', function(){
-    window.location=window.location.origin='/story/'+child.getId()
+    document.location=document.location.origin='/story/'+child.getId()
 });
 
 
