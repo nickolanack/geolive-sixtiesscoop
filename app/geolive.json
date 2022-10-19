@@ -5643,7 +5643,7 @@
                                     "className": "featured-story",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "placeholderLabelItem",
+                                    "namedView": "sidePanelUserInfoDetail",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
