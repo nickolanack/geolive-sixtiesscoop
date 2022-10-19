@@ -6463,7 +6463,7 @@
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
-                                    "namedFormView": "defaultView",
+                                    "namedFormView": "advancedSearchForm",
                                     "formOptions": "\"{}\"",
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
