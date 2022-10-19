@@ -14,7 +14,7 @@
         "deleteItemScript": "defaultBehaviorFn()",
         "initModuleScript": "",
         "formatModuleScript": "",
-        "resolveItemScript": "return item",
+        "resolveItemScript": "console.log('check this')\nreturn item",
         "filterModulesScript": "return list",
         "itemButtonsScript": "return [];",
         "insertAtTop": false,
