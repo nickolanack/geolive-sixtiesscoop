@@ -478,7 +478,13 @@ button.inline-edit {
     
 }
 
-.featured-story{
+.page-content .featured-story{
+    
+    cursor:pointer;
+    &:hover{
+        box-shadow: 0 0 14px rgb(0 0 0 / 30%);
+    }
+    
     &.adoption-card, &.journey-card {
         border: 3px solid #ffcc02;
         .icon {
