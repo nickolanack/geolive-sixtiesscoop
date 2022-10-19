@@ -638,6 +638,25 @@ button.inline-edit {
 
 }
 
+.FormattedTextModule.content.description-field{
+    &:before, &:after {
+        content: '“';
+        font-size: 46px;
+        line-height:0;
+        vertical-align: bottom;
+        color: coral;
+    }
+    &after {
+        content: '”';
+    }
+}
+
+.birth-card .FormattedTextModule.content.description-field{
+    &:before, &:after {
+     color: deepskyblue;
+    }
+}
+
 
 
 
