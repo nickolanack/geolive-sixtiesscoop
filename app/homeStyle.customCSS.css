@@ -481,8 +481,11 @@ button.inline-edit {
 .page-content .ui-view.featured-stories .featured-story{
     
     cursor:pointer;
+    transition: background-color .8s, box-shadow .8s;
     &:hover{
         box-shadow: 0 0 14px rgb(0 0 0 / 30%);
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: background-color .2s, box-shadow .2s;
     }
     
     &.adoption-card, &.journey-card {
