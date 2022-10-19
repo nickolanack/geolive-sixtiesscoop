@@ -59,7 +59,7 @@ if(AppClient.getUserType()!=="guest"){
 								                	      "name": "heading",
 								                	      "description": "",
 								                	      "fieldType": "heading",
-								                	      "defaultValue": "Are you sure?,
+								                	      "defaultValue": "Are you sure?",
 								                	      "options": {}
 								                	    }
 												    ]
