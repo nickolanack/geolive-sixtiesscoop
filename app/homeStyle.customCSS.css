@@ -522,7 +522,7 @@ button.inline-edit {
         
         button{
             
-            font-size:0
+            font-size:0;
             
             
             &:after {
