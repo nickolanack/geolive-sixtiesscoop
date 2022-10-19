@@ -26,7 +26,24 @@ $introTextColor:#4d8673;
         color: white;
         text-align: center;
         padding: 5px 20px;
+        
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 5px;
+        cursor: pointer;
+        
+         p {
+            display: inherit;
+        }
+        
+        &:hover {
+            background-color: rgba(0,0,0,0.2);
+        }
     }
+    
+    
+    
+    
+    
     
 }
 
