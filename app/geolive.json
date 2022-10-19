@@ -5433,7 +5433,7 @@
                                     "className": "page-footer",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "defaultView",
+                                    "namedView": "bottomSection",
                                     "shouldRender": false,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
