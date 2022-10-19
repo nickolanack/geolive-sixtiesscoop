@@ -1,11 +1,7 @@
 
 
- (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": item.getId()
-                })).addEvent("success", function(resp) {
                   
-                    var story=new StoryUser(resp);
+                    var story=new StoryUser(item.getResp());
                 
                     
                     story.getCards(function(cards){
@@ -13,7 +9,6 @@
                     });
                     
                  
-                    
-                }).execute();
+               
 
 
