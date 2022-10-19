@@ -43,7 +43,7 @@
                          {resp:resp}
                     ));
 	           
-    	             list.push(item);
+    	             list[i]=item;
     	             check();
                 
                  
