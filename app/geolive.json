@@ -6284,5 +6284,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.90": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.placeholderLabelItem.text",
+            "target": "module.placeholderLabelItem.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-placeholderLabelItem-text.contentTemplate.html"
+        }
     }
 }
