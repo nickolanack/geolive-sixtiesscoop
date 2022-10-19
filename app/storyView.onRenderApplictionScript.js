@@ -1,1 +1,1 @@
-GetWidget('homeView')->renderDependencies($targetInstance);
+GetWidget('home')->renderDependencies($targetInstance);
