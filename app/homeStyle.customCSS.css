@@ -242,6 +242,16 @@ $introTextColor:#4d8673;
     height: 300px;
     background: #3f3c3b;
     margin-top: 200px;
+    
+    .bottom-by {
+        position: absolute;
+        right: 40px;
+        bottom: 50px;
+        color: white;
+        font-size: 25px;
+        font-weight: 100;
+    }
+    
 }
 
 
