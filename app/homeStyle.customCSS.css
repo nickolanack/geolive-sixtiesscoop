@@ -478,8 +478,34 @@ button.inline-edit {
     
 }
 
+[data-view="sidePanelInfoDetail"] 
+    &.repatriation-card .icon {
+        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
+    }
+    
+    &.journey-card .icon {
+        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
+    }
+    &.birth-card .icon {
+        background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
+    }
+    
+    
+    .icon {
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    h2 {
+        text-indent: 40px;
+    }
 
-
+}
 
 
 
