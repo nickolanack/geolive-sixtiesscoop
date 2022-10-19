@@ -349,6 +349,8 @@ button.inline-edit {
     box-shadow: none;
     background: none;
     
+    cursor:pointer;
+    
     
     
     .content.search:before, .content.view:before, .content.browse:before {
@@ -368,6 +370,8 @@ button.inline-edit {
         background-size: 50%;
         background-position: center;
         background-repeat: no-repeat;
+        
+        transition:background-color 0.8s;
     }
     
     
@@ -399,6 +403,7 @@ button.inline-edit {
         
         .content.search:before,  .content.view:before, .content.browse:before {
             box-shadow: 0 0 3px rgba(0,0,0,0.6);
+            transition:background-color 0.2s;
         }
         .content.search:before {
             background-color: darken(coral, 10%);
