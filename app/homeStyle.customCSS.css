@@ -597,6 +597,12 @@ button.inline-edit {
     span.lbl-txt {
         font-size: 18px;
     }
+    
+    .uitext-container.w-dy, .uitext-container.w-mn, .uitext-container.w-yr {
+
+        width:calc( 33% - 7px );
+        display:inline-block
+    }
 
 
 }
