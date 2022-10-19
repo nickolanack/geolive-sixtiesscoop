@@ -176,6 +176,35 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
     
 }
 
+
+
+.view-mainMap .ui-view.page-banner {
+    min-height: 55px;
+    border-bottom: 2px solid #3f3c3b;
+
+
+    
+    .markdown {
+        display: none;
+    }
+    
+    
+    
+    .ui-list-view.banner-btns .ui-view {
+        padding: 5px 15px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .ui-list-view.banner-btns {
+        text-align:right;
+    }
+
+
+}
+
+
+
      .ui-view.featured-stories, .intro-section {
         width: 1000px;
         max-width: calc( 100% - 100px )
