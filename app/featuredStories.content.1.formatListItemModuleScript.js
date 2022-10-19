@@ -1,5 +1,5 @@
 var card=child.getCard(); //index;
-var storyItem=child.getResp().story[card];
+var storyItem=child.getResp().story[card-1];
 var attrs=storyItem.attributes;
 
 
