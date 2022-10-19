@@ -513,7 +513,7 @@ button.inline-edit {
 }
 
 .page-content .ui-view.featured-stories{
-    span.pagination-item.next {
+    span.pagination-item.next, span.pagination-item.previous {
         position: absolute;
         right: -30px;
         top: 120px;
@@ -532,6 +532,13 @@ button.inline-edit {
                 font-size: 80px;
                 color:$buttonColor;
             }
+        }
+    }
+    
+    span.pagination-item.previous {
+        right:unset;
+        button:after {
+            content: "\0f104";
         }
     }
 }
