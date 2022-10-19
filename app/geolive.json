@@ -6299,7 +6299,7 @@
             "templateName": "storyView",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "storyView.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
