@@ -67,7 +67,12 @@ if(AppClient.getUserType()!=="guest"){
 												{
 													"formName": 'genericParametersForm',
 													"formOptions": {
-														template: "form"
+														template: "form",
+														"className": "alert-view",
+                        								"showCancel":true,
+                        								"labelForSubmit":"Yes, log me out",
+                        								"labelForCancel":"Cancel",
+                        								"closable":true
 													}
 												}
 											)).show(function(yes){
