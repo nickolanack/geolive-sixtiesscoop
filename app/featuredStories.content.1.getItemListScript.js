@@ -23,17 +23,34 @@
 	       };
 	       
 	    
-	       callback(response.value.map(function(featured, i){
+	      response.value.forEach(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
 	           //}
 	           
-	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null, cards:null}, featured));
 	           
-	           return item;
+	           
+                (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+                    "plugin": "MapStory",
+                    "item": item.getId()
+                })).addEvent("success", function(resp) {
+                  
+                    var item = new MockDataTypeItem(ObjectAppend_(
+                         {mutable:true, name:"##Item "+i, story:null, cards:null}, 
+                         featured,
+                         {resp:resp}
+                    ));
+	           
+    	             list.push(item);
+    	             check();
                 
-	       }));
+                 
+                    
+                }).execute();
+	           
+	          
+	       });
 	       
            
 	       
