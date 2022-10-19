@@ -4267,12 +4267,17 @@
                                 }
                             },
                             {
-                                "type": "InlineHtml",
+                                "type": "Template",
                                 "config": {
                                     "className": "icon",
                                     "text": "icon",
                                     "template": "",
-                                    "templateVariablesScript": ""
+                                    "templateVariablesScript": "",
+                                    "formatTextScript": "",
+                                    "formatVariablesScript": "",
+                                    "ajaxRequestTemplate": false,
+                                    "namedFormView": "",
+                                    "identifier": "htmlLabel"
                                 }
                             },
                             {
@@ -4280,7 +4285,7 @@
                                 "config": {
                                     "textValueScript": "return item.getCardMedia();",
                                     "formatModuleScript": "",
-                                    "className": "",
+                                    "className": "item-media",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
                                     "multiImageWidth": 100,
