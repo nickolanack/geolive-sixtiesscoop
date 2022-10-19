@@ -512,6 +512,14 @@ button.inline-edit {
     
 }
 
+.page-content .ui-view.featured-stories
+    span.pagination-item.next {
+        position: absolute;
+        right: -30px;
+        top: 150px;
+    }
+}
+
 .page-content .ui-view.featured-stories .featured-story{
     
     cursor:pointer;
