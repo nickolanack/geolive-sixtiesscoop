@@ -537,6 +537,8 @@ button.inline-edit {
     
     span.pagination-item.previous {
         right:unset;
+        left: -30px;
+
         button:after {
             content: "\0f104";
         }
