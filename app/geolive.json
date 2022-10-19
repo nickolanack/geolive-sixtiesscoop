@@ -6456,10 +6456,10 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "page-header",
+                                    "className": "page-content",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "headerMenuContent",
+                                    "namedView": "storyPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
@@ -6479,10 +6479,10 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "page-content",
+                                    "className": "page-footer",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "storyPageContent",
+                                    "namedView": "bottomSection",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,

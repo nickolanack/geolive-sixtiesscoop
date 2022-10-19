@@ -1,4 +1,23 @@
 {
     "type": "UIView",
-    "config": {}
+    "config": {
+        "className": "page-header",
+        "identifier": "",
+        "viewType": "view",
+        "namedView": "headerMenuContent",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "defaultView",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "",
+        "resolveItemScript": "return item",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": ""
+    }
 }
