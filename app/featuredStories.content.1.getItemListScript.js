@@ -37,9 +37,16 @@
                     "item": id
                 })).addEvent("success", function(resp) {
                   
-                    item.setStory(new StoryUser(resp));
-                    list.push(item);
-                    check();
+                    var story=new StoryUser(resp);
+                    item.setStory(story);
+                    
+                    story.getCards(function(cards){
+                        
+                        list.push(cards[1]);
+                        check();
+                        
+                    });
+                    
                     
                 }).execute();
                 
