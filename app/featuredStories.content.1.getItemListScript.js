@@ -14,10 +14,11 @@
 	})).addEvent('success',function(response){
 	    
 	       var list=[];
+	       var count=0;
 	       var check=function(){
 	           if(list.filter(function(item){
 	               return !!item;
-	           }).length==3){
+	           }).length==count){
 	               callback(list);
 	           }
 	       };
@@ -29,7 +30,7 @@
 	           //    data.name='##'+data.name;
 	           //}
 	           
-	           
+	           count++;
 	           
                 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
                     "plugin": "MapStory",
