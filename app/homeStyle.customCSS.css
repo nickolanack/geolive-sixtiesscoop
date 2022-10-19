@@ -350,7 +350,12 @@ button.inline-edit {
     background: none;
     
     cursor:pointer;
+    transition:filter 0.8s;
     
+    h2 {
+         
+        transition:font-weight 0.2s;
+    }
     
     
     .content.search:before, .content.view:before, .content.browse:before {
@@ -396,9 +401,12 @@ button.inline-edit {
     
     &:hover {
         filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+        transition:filter 0.2s;
+        
         
         h2 {
             font-weight: 400;
+            transition:font-weight 0.2s;
         }
         
         .content.search:before,  .content.view:before, .content.browse:before {
