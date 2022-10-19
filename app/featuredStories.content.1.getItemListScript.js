@@ -33,7 +33,7 @@
 	           
                 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
                     "plugin": "MapStory",
-                    "item": item.getId()
+                    "item": featured.id
                 })).addEvent("success", function(resp) {
                   
                     var item = new MockDataTypeItem(ObjectAppend_(
