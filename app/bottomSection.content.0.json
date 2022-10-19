@@ -1,9 +1,14 @@
 {
-    "type": "InlineHtml",
+    "type": "Template",
     "config": {
         "className": "bottom-by",
         "text": "Created by the Geoforms Lab",
         "template": "",
-        "templateVariablesScript": ""
+        "templateVariablesScript": "",
+        "formatTextScript": "module.getElement().addEvent('click', function(){\n    window.open(document.location.origin+\"\/install\", \"_blank\");\n})",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": false,
+        "namedFormView": "",
+        "identifier": "htmlLabel"
     }
 }
