@@ -403,10 +403,10 @@ button.inline-edit {
         .content.search:before {
             background-color: darken(coral, 10%);
         }
-        .content.search:before {
+        .content.view:before {
             background-color:  darken(deepskyblue, 10%);
         }
-        .content.search:before {
+        .content.browse:before {
             background-color:  darken(mediumaquamarine, 10%);
         }
         
