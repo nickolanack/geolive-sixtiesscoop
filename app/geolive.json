@@ -5643,7 +5643,7 @@
                                     "className": "featured-story",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "sidePanelInfoDetail",
+                                    "namedView": "featuredStory",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
