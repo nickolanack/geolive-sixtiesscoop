@@ -202,6 +202,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "story"
+                },
+                {
+                    "name": "search",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "search"
                 }
             ],
             "useRemoteServerUI": false,
