@@ -270,6 +270,21 @@ $introTextColor:#4d8673;
         font-size: 25px;
         font-weight: 100;
         cursor:pointer;
+        
+        &:after {
+            content: "";
+            background-image: url(https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/VcB_trP_spq_%5BImAgE%5D_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png);
+            width: 323px;
+            height: 100px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+        }
     }
     
 }
