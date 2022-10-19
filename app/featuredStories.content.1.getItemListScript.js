@@ -21,7 +21,7 @@
 	       };
 	       
 	    
-	       ([335, 312, 307]).forEach(function(id, i){
+	       ([{id:335, card:1}, {id:312, card:1}, {id:307, card:1}]).forEach(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
@@ -34,7 +34,7 @@
 	           
 	            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
                     "plugin": "MapStory",
-                    "item": id
+                    "item": featured.id
                 })).addEvent("success", function(resp) {
                   
                     var story=new StoryUser(resp);
@@ -42,7 +42,7 @@
                     
                     story.getCards(function(cards){
                         
-                        list.push(cards[2]);
+                        list.push(cards[featured.card]);
                         check();
                         
                     });
