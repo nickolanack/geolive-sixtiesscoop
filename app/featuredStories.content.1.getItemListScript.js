@@ -42,7 +42,7 @@
                     
                     story.getCards(function(cards){
                         
-                        list.push(cards[1]);
+                        list.push(cards[2]);
                         check();
                         
                     });
