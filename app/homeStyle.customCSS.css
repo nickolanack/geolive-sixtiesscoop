@@ -30,6 +30,7 @@ $introTextColor:#4d8673;
         background-color: rgba(0,0,0,0.1);
         border-radius: 5px;
         cursor: pointer;
+        transition: background-color .8s;
         
          p {
             display: inherit;
@@ -37,6 +38,7 @@ $introTextColor:#4d8673;
         
         &:hover {
             background-color: rgba(0,0,0,0.2);
+            transition: background-color .2s;
         }
     }
     
