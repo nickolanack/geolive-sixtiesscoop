@@ -517,6 +517,20 @@ button.inline-edit {
         position: absolute;
         right: -30px;
         top: 150px;
+    
+        
+        
+        button{
+            
+            font-size:0
+            
+            
+            &:after {
+                content: "\0f105";
+                font-family: 'FontAwesome';
+                font-size: 80px;
+            }
+        }
     }
 }
 
