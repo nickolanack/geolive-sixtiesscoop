@@ -368,9 +368,11 @@ button.inline-edit {
 
 
 .page-content, .intro-section {
-    text-align:center;
-    &>*{
-        text-align:left;
+    .ui-list-view{
+        text-align:center;
+        &>*{
+            text-align:left;
+        }
     }
 }
 .page-content .ui-view.featured-stories, .intro-section .ui-view.featured-item {
