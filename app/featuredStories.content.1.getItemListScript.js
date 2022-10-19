@@ -32,7 +32,7 @@
 	           var data = {};
 	
 	           
-	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null}, data));
+	           var item = new MockDataTypeItem(ObjectAppend_({mutable:true, name:"##Item "+i, story:null, cards:null}, data));
 	           
 	            (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
                     "plugin": "MapStory",
@@ -43,8 +43,8 @@
                     item.setStory(story);
                     
                     story.getCards(function(cards){
-                        
-                        list[i]=(cards[featured.card]);
+                        item.setCards(cards);
+                        list[i]=item; //cards[featured.card];
                         check();
                         
                     });
