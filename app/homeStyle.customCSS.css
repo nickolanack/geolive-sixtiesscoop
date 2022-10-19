@@ -478,18 +478,26 @@ button.inline-edit {
     
 }
 
-[data-view="sidePanelInfoDetail"]{
-    &.repatriation-card .icon {
+
+.repatriation-card [data-view="sidePanelInfoDetail"]{
+    .icon {
         background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
     }
-    
-    &.journey-card .icon {
+}
+.journey-card [data-view="sidePanelInfoDetail"]{
+    .icon {
         background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
     }
-    &.birth-card .icon {
+}
+.birth-card [data-view="sidePanelInfoDetail"]{
+    .icon {
         background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
     }
-    
+}
+
+
+[data-view="sidePanelInfoDetail"]{
+   
     
     .icon {
         font-size: 0;
