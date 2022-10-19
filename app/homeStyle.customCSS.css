@@ -229,6 +229,7 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
             box-sizing: border-box;
             border-radius: 7px;
             background-color: rgba(0,0,0,0.05);
+            vertical-align: top;
         }
     }
 
