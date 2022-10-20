@@ -72,7 +72,7 @@
 	           var item = new MockDataTypeItem(ObjectAppend_(
                          {mutable:true, name:"##Item "+i, story:null, cards:null}, 
                          featured,
-                         {resp:resp}
+                         {resp:null}
                     ));
 	           
     	       list[i]=item;
