@@ -101,15 +101,13 @@ class MapStory extends \core\extensions\Plugin implements
 	public function getFeaturesMetadata($featureIds) {
 
 		GetPlugin('Maps');
-		GetPlugin('Attributes');
-		$attr = (new \attributes\Record('storyAttributes'));
 		$list = array();
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withFeatures($featureIds)
-			->iterate(function ($feature) use (&$list, &$attr) {
+			->iterate(function ($feature) use (&$list) {
 
-				$attributes = $attr->getValues($feature['id'], "MapStory.card");
+				$attributes = $this->getCachedStoryAttribute($feature['id']);
 
 				$list[] = $this->formatFeatureMetadata($feature, $attributes);
 
@@ -184,8 +182,6 @@ class MapStory extends \core\extensions\Plugin implements
 	public function getFeatureListMetadata($featureIds) {
 
 		GetPlugin('Maps');
-		GetPlugin('Attributes');
-		$attr = (new \attributes\Record('storyAttributes'));
 		$list = array();
 
 		$users = array();
@@ -193,9 +189,9 @@ class MapStory extends \core\extensions\Plugin implements
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withFeatures($featureIds)
-			->iterate(function ($feature) use (&$list, &$attr, &$users) {
+			->iterate(function ($feature) use (&$list, &$users) {
 
-				$attributes = $attr->getValues($feature['id'], "MapStory.card");
+				$attributes = $this->getCachedStoryAttribute($feature['id']);
 
 				$result = $this->formatFeatureMetadata($feature, $attributes);
 
