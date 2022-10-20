@@ -593,7 +593,7 @@ var StoryMapController = new Class({
         }));
 
 
-        item.getUser().getCards(function(rawCards) {
+        (item.getCards||getUser().getCards).call(item, function(rawCards) {
 
             var cards = rawCards.filter(function(card) {
                 return card.getId && card.getId() > 0;
