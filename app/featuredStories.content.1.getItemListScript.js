@@ -6,7 +6,7 @@
     //     new MockDataTypeItem({name:"##Example 2"})
     // ];
 
-
+    console.log('cache');
 
 	(new AjaxControlQuery(CoreAjaxUrlRoot, "get_configuration_field", {
 		'widget': "featuredStoriesItems",
