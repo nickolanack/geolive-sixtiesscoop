@@ -55,6 +55,8 @@ class CardFormatter {
 			}
 		}
 
+		\core\DataStorage::LogQuery("Update Location Name");
+
 		if ($locationName && $locationName != "false") {
 			(new \attributes\Record('storyAttributes'))->setValues($itemId, "MapStory.card", array(
 				"locationName" => $locationName,
@@ -80,6 +82,9 @@ class CardFormatter {
 			);
 
 			$jsonLocationData = json_encode($locationData);
+
+			\core\DataStorage::LogQuery("Update Location Geocode Data");
+
 			(new \attributes\Record('storyAttributes'))->setValues($featureMeta['id'], "MapStory.card", array(
 				"locationData" => $jsonLocationData,
 			));
