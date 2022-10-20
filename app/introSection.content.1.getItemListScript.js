@@ -7,7 +7,7 @@
 
 
 
-var configEdit = (new ConfigEdit('primaryLinkItems')).withTemplate([
+var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate([
     
     
   ], 'genericParametersForm', {});
