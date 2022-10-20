@@ -168,8 +168,8 @@ $introTextColor:#4d8673;
          .ui-view {
             display: inline-block;
             padding: 10px 20px;
-            background-color: $buttonColor;
-            font-size: 40px;
+            background-color: #ffc107;
+            font-size: 28px;
             margin: 10px;
             margin-bottom: 40px;
         
@@ -178,9 +178,16 @@ $introTextColor:#4d8673;
             box-shadow: 0 0 3px rgb(0 0 0 / 20%);
             
             &:hover{
-                background-color: $buttonColorHover;
+                background-color: darken(#ffc107, 10%);
                 box-shadow: 0 0 8px rgb(0 0 0 / 30%);
                 transition:background-color 0.3s, box-shadow 0.3s;
+            }
+            
+            &.highlight-btn{
+                background-color: #d00705;
+                &:hover{
+                    background-color: darken(#d00705, 10%); 
+                }
             }
         }
         
