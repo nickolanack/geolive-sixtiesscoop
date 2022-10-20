@@ -438,7 +438,8 @@ button.inline-edit {
         }
     }
 }
-.page-content .ui-view.featured-story, .intro-section .ui-view.featured-item {
+.page-content .ui-view.featured-stories .ui-view.featured-story, .intro-section .ui-view.featured-item {
+    
     min-width: 250px;
     
     @media only screen and (max-width: 950px){
