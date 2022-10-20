@@ -471,7 +471,7 @@ button.inline-edit {
         background-position: center;
         background-repeat: no-repeat;
         
-        transition:background-color 0.8s;
+        transition:background-color 0.8s, border 0.8s;
     }
     
     
@@ -494,15 +494,18 @@ button.inline-edit {
     
     .content.register:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/JNi_[G]_NiC_[ImAgE]_GRx-%3Ethumb:%3E200x%3E150.png');
-        background-color: #ffc105;
+        border: 3px solid #ffc105;
+        background-color:white;
     } 
     .content.add:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[G]_0tH_ziO_roq_[ImAgE]-%3Ethumb:%3E200x%3E150.png');
-        background-color: #5daeeb;
+        border: 3px solid #5daeeb;
+        background-color:white;
     } 
     .content.edit:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BG%5D_IdT_%5BImAgE%5D_iZ9_cEI-%3Ethumb%3A%3E200x%3E150.png');
-        background-color: #fd8209;
+        border: 3px solid #fd8209;
+        background-color:white;
     }
 
 
@@ -510,7 +513,7 @@ button.inline-edit {
     
     &:hover {
         filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
-        transition:filter 0.2s;
+        transition:filter 0.2s, border 0.2s;
         
         
         .content.search:before,  .content.view:before, .content.browse:before {
@@ -531,13 +534,13 @@ button.inline-edit {
         
         
         .content.register:before{
-            background-color: darken(#ffc105, 10%);
+            border-color: darken(#ffc105, 10%);
         } 
         .content.add:before{
-            background-color: darken(#5daeeb, 10%);
+            border-color: darken(#5daeeb, 10%);
         } 
         .content.edit:before{
-            background-color: darken(#fd8209, 10%);
+            border-color: darken(#fd8209, 10%);
         }
         
     }
