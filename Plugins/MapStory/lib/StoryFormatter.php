@@ -116,7 +116,7 @@ class StoryFormatter {
 
 			//if ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']) {
 			$movesOutOfCountryValue = ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']);
-			if ($list[$i]['attributes']['movesOutOfCountry']!== $movesOutOfCountryValue) {
+			if ($list[$i]['attributes']['movesOutOfCountry']!= $movesOutOfCountryValue) {
 
 				\core\DataStorage::LogQuery("Update movesOutOfCountry ".$list[$i]['attributes']['movesOutOfCountry']."!=".$movesOutOfCountryValue);
 
@@ -127,7 +127,7 @@ class StoryFormatter {
 
 
 			$movesOutOfProvinceValue = ($list[$i]['attributes']['country']==="CA"&&$list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']);
-			if ($list[$i]['attributes']['movesOutOfProvince']!==$movesOutOfProvinceValue) {
+			if ($list[$i]['attributes']['movesOutOfProvince']!=$movesOutOfProvinceValue) {
 
 				\core\DataStorage::LogQuery("Update movesOutOfProvince ".$list[$i]['attributes']['movesOutOfProvince']."!=".$movesOutOfProvinceValue);
 
