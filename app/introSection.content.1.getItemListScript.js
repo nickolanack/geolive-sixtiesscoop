@@ -68,7 +68,7 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
             edit:function(){
                 configEdit.editIndex('links', 2);
             },
-            name:response.value[1].content,
+            name:response.value[2].content,
             "className":"browse"
             
         })
