@@ -6523,7 +6523,22 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none"
+            "target": "primaryLinkItems",
+            "contentTemplate": "",
+            "comments": "",
+            "formatParametersScript": "return $parameters;",
+            "formatOutputScript": "return $parameters;",
+            "enableUserAjaxWrite": false,
+            "authUserAjaxScript": "XXXX-XXXX",
+            "saveParametersAsData": false,
+            "enableRevisions": false,
+            "broadcastChanges": false,
+            "parameters": [
+                "primaryLinkItems.parameters.0.json"
+            ],
+            "links": [],
+            "widgetTitle": "primaryLinkItems",
+            "readAccess": "public"
         }
     }
 }
