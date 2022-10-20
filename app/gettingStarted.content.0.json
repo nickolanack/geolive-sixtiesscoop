@@ -2,14 +2,14 @@
     "type": "Template",
     "config": {
         "className": "",
-        "text": "#About\/ How to use\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "template": "introText",
+        "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "template": "gettingStartedText",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
-        "formOptions": {},
+        "formOptions": "{}",
         "identifier": "htmlLabel"
     }
 }
