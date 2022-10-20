@@ -104,7 +104,7 @@ class StoryFormatter {
 
 
 
-				\core\DataStorage::LogQuery("Update nextLocationData");
+				\core\DataStorage::LogQuery("Update nextLocationData "+md5(json_encode($list[$i]['attributes']['nextLocationData']))+"---"+md5(json_encode($list[$i + 1]['attributes']['locationData'])));
 
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"nextLocationData" => json_encode($list[$i + 1]['attributes']['locationData']),
