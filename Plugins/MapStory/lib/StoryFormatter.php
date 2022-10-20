@@ -81,6 +81,7 @@ class StoryFormatter {
 				if(!empty($updates)){
 					//error_log(json_encode($updates));
 					//error_log(json_encode($attributesOriginal));
+					\core\DataStorage::LogQuery("Update Story: ".json_encode($updates));
 					(new \attributes\Record('storyAttributes'))->setValues($feature['id'], "MapStory.card", $updates);
 				}
 			}
@@ -102,6 +103,9 @@ class StoryFormatter {
 				$list[$i]['attributes']['nextLocationData'] = $list[$i]['attributes']['locationData'];
 
 
+
+				\core\DataStorage::LogQuery("Update nextLocationData");
+
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"nextLocationData" => json_encode($list[$i + 1]['attributes']['locationData']),
 				));
@@ -112,12 +116,17 @@ class StoryFormatter {
 
 			//if ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']) {
 
+
+				\core\DataStorage::LogQuery("Update movesOutOfCountry");
+
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"movesOutOfCountry" => $list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']
 				));
 			//}
 
 			//if ($list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']) {
+
+				\core\DataStorage::LogQuery("Update movesOutOfProvince");
 
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"movesOutOfProvince" => $list[$i]['attributes']['country']==="CA"&&$list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']
