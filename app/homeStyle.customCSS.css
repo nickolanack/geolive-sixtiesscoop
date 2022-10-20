@@ -641,7 +641,9 @@ button.inline-edit {
 
 
 
-
+.uitext-container.no-media.markdown-field textarea {
+    height: 250px;
+}
 
 
 
