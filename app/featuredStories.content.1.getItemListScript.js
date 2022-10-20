@@ -29,7 +29,7 @@
 	       };
 	       
 	    
-	      response.value.forEach(function(featured, i){
+	      response.value.slice(0,3).forEach(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
@@ -53,6 +53,36 @@
                 
                  
                     
+                }).execute();
+	           
+	          
+	       });
+	       
+	       
+	       response.value.slice(3).forEach(function(featured, i){
+	           
+	           i=i+3;
+	           
+	           //if(data.name){
+	           //    data.name='##'+data.name;
+	           //}
+	           
+	           count++;
+	           
+	           var item = new MockDataTypeItem(ObjectAppend_(
+                         {mutable:true, name:"##Item "+i, story:null, cards:null}, 
+                         featured,
+                         {resp:resp}
+                    ));
+	           
+    	       list[i]=item;
+    	       check();
+	           
+                (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+                    "plugin": "MapStory",
+                    "item": featured.id
+                })).addEvent("success", function(resp) {
+                    item.setResp(resp);
                 }).execute();
 	           
 	          
