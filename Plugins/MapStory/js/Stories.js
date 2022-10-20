@@ -345,7 +345,7 @@ var StoryMapController = new Class({
         var me = this;
         var items = [];
 
-        var realCards = item.getUser().getRealCardsSync();
+        var realCards = item.getRealCardsSync?item.getRealCardsSync():item.getUser().getRealCardsSync();
 
         if (!(item.isBirthStory && item.isBirthStory())) {
             if (item.getUser().hasBirthStory()) {
