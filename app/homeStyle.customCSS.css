@@ -452,7 +452,8 @@ button.inline-edit {
    
     
     
-    .content.search:before, .content.view:before, .content.browse:before {
+    .content.search:before, .content.view:before, .content.browse:before, 
+    .content.register:before, .content.add:before, .content.edit:before  {
         content: "";
         font-size: 100px;
         position: absolute;
@@ -487,6 +488,20 @@ button.inline-edit {
     } 
     .content.browse:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/7PR_b0I_%5BG%5D_sbB_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png');
+        background-color: mediumaquamarine;
+    }
+    
+    
+    .content.register:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/JNi_[G]_NiC_[ImAgE]_GRx-%3Ethumb:%3E200x%3E150.png');
+        background-color: coral;
+    } 
+    .content.add:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[G]_0tH_ziO_roq_[ImAgE]-%3Ethumb:%3E200x%3E150.png');
+        background-color: deepskyblue;
+    } 
+    .content.edit:before{
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BG%5D_IdT_%5BImAgE%5D_iZ9_cEI-%3Ethumb%3A%3E200x%3E150.png');
         background-color: mediumaquamarine;
     }
 
