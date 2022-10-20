@@ -126,16 +126,14 @@ class MapStory extends \core\extensions\Plugin implements
 		}
 
 		GetPlugin('Maps');
-		GetPlugin('Attributes');
-		$attr = (new \attributes\Record('storyAttributes'));
 		$list = array();
 
 		(new \spatial\Features())
 			->listLayerFeatures($this->getStoryLayerId())
 			->withOwner($userId)
-			->iterate(function ($feature) use (&$list, &$attr) {
+			->iterate(function ($feature) use (&$list) {
 
-				$attributes = $attr->getValues($feature['id'], "MapStory.card");
+				$attributes = $this->getCachedStoryAttribute($feature['id']);
 				$list[] = $this->formatFeatureMetadata($feature, $attributes);
 
 			});
@@ -146,6 +144,30 @@ class MapStory extends \core\extensions\Plugin implements
 			->format($list);
 
 	}
+
+
+	protected $_cachedStoryAttributes=array();
+	protected $_cachedStoryAttr=null;
+	protected  function getCachedStoryAttribute($id){
+
+		if(!array_key_exists($id, $this->_cachedStoryAttributes)){
+			
+			if(!$this->_cachedStoryAttr){
+				GetPlugin('Attributes');
+				$this->_cachedStoryAttr = (new \attributes\Record('storyAttributes'));
+			}
+
+			$attr = $this->_cachedStoryAttr;
+			$attributes = $attr->getValues($feature['id'], "MapStory.card");
+			$this->_cachedStoryAttributes[$id]=$attributes;
+
+		}
+
+		return $this->_cachedStoryAttributes[$id];
+
+
+	}
+
 
 	public function searchStories($keyword) {
 
