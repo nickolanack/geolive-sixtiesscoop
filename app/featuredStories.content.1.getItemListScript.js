@@ -87,7 +87,7 @@
                         item.setResp(resp);
                     }).execute();
                     
-	           }, Math.round(1000+Math.random()*3000));
+	           }, Math.round(500+Math.random()*1000));
 	           
 	          
 	       });
