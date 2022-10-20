@@ -98,13 +98,18 @@ class StoryFormatter {
 
 		for ($i = 0; $i < count($list) - 1; $i++) {
 
-			if (json_encode($list[$i]['attributes']['nextLocationData']) !== json_encode($list[$i + 1]['attributes']['locationData'])) {
-
-				$list[$i]['attributes']['nextLocationData'] = $list[$i]['attributes']['locationData'];
-
+			$currentNextJson=json_encode($list[$i]['attributes']['nextLocationData']);
+			$nextValueJson=json_encode($list[$i + 1]['attributes']['locationData'])
 
 
-				\core\DataStorage::LogQuery("Update nextLocationData");
+			if($currentNextJson !== $nextValueJson) {
+
+				
+				//apply locally
+				$list[$i]['attributes']['nextLocationData'] = $list[$i+1]['attributes']['locationData'];
+
+
+				\core\DataStorage::LogQuery("Update nextLocationData ".md5($currentNextJson).' <- '.md5($nextValueJson));
 
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"nextLocationData" => json_encode($list[$i + 1]['attributes']['locationData']),
