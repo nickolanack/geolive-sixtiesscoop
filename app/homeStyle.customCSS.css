@@ -494,15 +494,15 @@ button.inline-edit {
     
     .content.register:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/JNi_[G]_NiC_[ImAgE]_GRx-%3Ethumb:%3E200x%3E150.png');
-        background-color: coral;
+        background-color: #ffc105;
     } 
     .content.add:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[G]_0tH_ziO_roq_[ImAgE]-%3Ethumb:%3E200x%3E150.png');
-        background-color: deepskyblue;
+        background-color: #5daeeb;
     } 
     .content.edit:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BG%5D_IdT_%5BImAgE%5D_iZ9_cEI-%3Ethumb%3A%3E200x%3E150.png');
-        background-color: mediumaquamarine;
+        background-color: #fd820;
     }
 
 
@@ -525,6 +525,19 @@ button.inline-edit {
         }
         .content.browse:before {
             background-color:  darken(mediumaquamarine, 10%);
+        }
+        
+        
+        
+        
+        .content.register:before{
+            background-color: darken(#ffc105, 10%);
+        } 
+        .content.add:before{
+            background-color: darken(#5daeeb, 10%);
+        } 
+        .content.edit:before{
+            background-color: darken(#fd820, 10%);
         }
         
     }
