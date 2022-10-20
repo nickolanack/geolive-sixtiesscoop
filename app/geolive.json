@@ -6636,5 +6636,12 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.96": {
+        "name": "Configuration",
+        "instance": "Configuration",
+        "parameters": {
+            "target": "none"
+        }
     }
 }
