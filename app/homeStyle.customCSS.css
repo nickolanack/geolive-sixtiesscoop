@@ -226,9 +226,10 @@ $introTextColor:#4d8673;
 
 
 
-     .ui-view.featured-stories, .intro-section {
+     .ui-view.featured-stories, .intro-section, [data-view="advancedSearchForm"], [data-view="storyPageContent"]{
         width: 1000px;
-        max-width: calc( 100% - 100px )
+        max-width: calc( 100% - 100px );
+        margin: auto;
      }
 
 
@@ -236,7 +237,7 @@ $introTextColor:#4d8673;
         font-size: 1.5em;
         font-weight: 100;
 
-        margin: auto;
+        
         margin-top: 70px;
     
     
