@@ -6668,9 +6668,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
-            "saveTemplateAsData": true,
-            "contentTemplate": "module-gettingStartedText-text.contentTemplate.html"
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-gettingStartedText-text.contentTemplate.html",
+            "readAccess": "public"
         }
     }
 }
