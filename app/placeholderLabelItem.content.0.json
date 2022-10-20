@@ -5,7 +5,7 @@
         "text": "Default Content",
         "template": "placholderText",
         "templateVariablesScript": "{}",
-        "formatTextScript": "\nif(item.getClick){\n    module.getElement().addClass('clickable');\n    module.getElement().addEvent('click', item.getClick());\n}\n\nif(item.getClassName){\n    module.getElement().addClass(item.getClassName());\n}\n\n\nif(item.getEdit&&(!module._edit)){\n   module._edit=module.getElement().appendChild(new Element('button',{\"class\":\"inline-edit\", events:{click:function(){\n      item.getEdit()();\n   }));\n}\n\nreturn text; \/\/item.getName();",
+        "formatTextScript": "\nif(item.getClick){\n    module.getElement().addClass('clickable');\n    module.getElement().addEvent('click', item.getClick());\n}\n\nif(item.getClassName){\n    module.getElement().addClass(item.getClassName());\n}\n\n\nif(item.getEdit&&(!module._edit)){\n   module._edit=module.getElement().appendChild(new Element('button',{\"class\":\"inline-edit\", events:{click:function(){\n      item.getEdit()();\n   }}}));\n}\n\nreturn text; \/\/item.getName();",
         "formatVariablesScript": "return item.toObject();",
         "ajaxRequestTemplate": true,
         "namedFormView": "",
