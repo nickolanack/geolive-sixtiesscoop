@@ -1,17 +1,19 @@
 @charset "utf-8";
 @import url("/webresources/font-awesome-4.7.0/css/font-awesome.min.css");
 
+//#a1d3c2
+$buttonColor:mediumaquamarine;
+$buttonColorHover:darken(mediumaquamarine, 10%);
 
-$buttonColor:#a1d3c2;
-$buttonColorHover:darken(#a1d3c2, 10%);
-
-
+//#ccc5a2
 $secondaryButtonColor: #ccc5a2;
 $secondaryButtonColorHover: darken(#ccc5a2, 10%);
 
+$introTextColor:#4d8673;
+
 .header-menu {
     position: absolute;
-    top: 100px;
+    top: 10px;
     right: 100px;    
 
 
@@ -24,7 +26,26 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
         color: white;
         text-align: center;
         padding: 5px 20px;
+        
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color .8s;
+        
+         p {
+            display: inherit;
+        }
+        
+        &:hover {
+            background-color: rgba(0,0,0,0.2);
+            transition: background-color .2s;
+        }
     }
+    
+    
+    
+    
+    
     
 }
 
@@ -121,8 +142,8 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
         
         
         h1 {
-            color: #4d8673;
-            font-size: 50px;
+            color: $introTextColor;
+            font-size: 35px;
             font-weight: 400;
             text-shadow: 0 0 7px white;
         }
@@ -176,6 +197,35 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
     
 }
 
+
+
+.view-mainMap .ui-view.page-banner {
+    min-height: 55px;
+    border-bottom: 2px solid #3f3c3b;
+
+
+    
+    .markdown {
+        display: none;
+    }
+    
+    
+    
+    .ui-list-view.banner-btns .ui-view {
+        padding: 5px 15px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .ui-list-view.banner-btns {
+        text-align:right;
+    }
+
+
+}
+
+
+
      .ui-view.featured-stories, .intro-section {
         width: 1000px;
         max-width: calc( 100% - 100px )
@@ -200,16 +250,43 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
             box-sizing: border-box;
             border-radius: 7px;
             background-color: rgba(0,0,0,0.05);
+            vertical-align: top;
         }
     }
 
 
 
 
-.ui-view.page-footer.un-rendered {
+.ui-view.page-footer{
     height: 300px;
     background: #3f3c3b;
     margin-top: 200px;
+    
+    .bottom-by {
+        position: absolute;
+        right: 40px;
+        bottom: 50px;
+        color: white;
+        font-size: 25px;
+        font-weight: 100;
+        cursor:pointer;
+        
+        &:after {
+            content: "";
+            background-image: url(https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/VcB_trP_spq_%5BImAgE%5D_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png);
+            width: 323px;
+            height: 100px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+        }
+    }
+    
 }
 
 
@@ -335,9 +412,20 @@ button.inline-edit {
             clear: both;
             display: inline-block;
             width: 100%;
+}
+
+
+.page-content, .intro-section {
+    .ui-list-view{
+        text-align:center;
+        &>*{
+            text-align:left;
         }
-
-
+    }
+}
+.page-content .ui-view.featured-story, .intro-section .ui-view.featured-item {
+    min-width: 250px;
+}
 
 .intro-section .ui-view.featured-item{
     
@@ -349,6 +437,11 @@ button.inline-edit {
     box-shadow: none;
     background: none;
     
+
+    cursor:pointer;
+    transition:filter 0.8s;
+    
+   
     
     
     .content.search:before, .content.view:before, .content.browse:before {
@@ -368,6 +461,8 @@ button.inline-edit {
         background-size: 50%;
         background-position: center;
         background-repeat: no-repeat;
+        
+        transition:background-color 0.8s;
     }
     
     
@@ -379,7 +474,7 @@ button.inline-edit {
         background-color: coral;
     } 
     .content.view:before{
-        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BImAgE%5D_wOV_dPe_gy6_%5BG%5D-%3Ethumb%3A%3E200x%3E150.png');
+        background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/HgK_%5BG%5D_4pf_CU9_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png');
         background-color: deepskyblue;
     } 
     .content.browse:before{
@@ -389,12 +484,191 @@ button.inline-edit {
 
 
 
+    
+    &:hover {
+        filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+        transition:filter 0.2s;
+        
+        
+        .content.search:before,  .content.view:before, .content.browse:before {
+            box-shadow: 0 0 3px rgba(0,0,0,0.6);
+            transition:background-color 0.2s;
+        }
+        .content.search:before {
+            background-color: darken(coral, 10%);
+        }
+        .content.view:before {
+            background-color:  darken(deepskyblue, 10%);
+        }
+        .content.browse:before {
+            background-color:  darken(mediumaquamarine, 10%);
+        }
+        
+    }
 
 
     
     
     
 }
+
+.page-content .ui-view.featured-stories{
+    span.pagination-item.next, span.pagination-item.previous {
+        position: absolute;
+        right: -30px;
+        top: 120px;
+    
+        
+        
+        button{
+            
+            font-size:0;
+            border: none;
+            background: none;
+            
+            &:after {
+                content: "\0f105";
+                font-family: 'FontAwesome';
+                font-size: 80px;
+                color:$buttonColor;
+            }
+        }
+    }
+    
+    span.pagination-item.previous {
+        right:unset;
+        left: -30px;
+
+        button:after {
+            content: "\0f104";
+        }
+    }
+}
+
+.page-content .ui-view.featured-stories .featured-story{
+    
+    cursor:pointer;
+    transition: background-color .8s, box-shadow .8s;
+    &:hover{
+        box-shadow: 0 0 14px rgb(0 0 0 / 30%);
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: background-color .2s, box-shadow .2s;
+    }
+    
+    &.adoption-card, &.journey-card {
+        border: 3px solid #ffcc02;
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
+        }
+    }
+    
+    &.birth-card.featured-story {
+        border: 3px solid #5daeeb;
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
+        }
+    }
+    
+    &.repatriation-card.featured-story {
+        border: 3px solid #fd8209;
+        
+        .icon {
+            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
+        }
+    }
+
+}
+
+
+
+
+[data-view="sidePanelInfoDetail"]{
+   
+    
+    .icon {
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    h2 {
+        text-indent: 40px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+[data-view="advancedSearchForm"] {
+    max-width: 1000px;
+    margin: auto;
+    width: calc( 100% - 100px );
+
+    
+    .section-label {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    
+    .text-input.with-1-line {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 10px;
+        font-size: 18px;
+    }
+    
+    span.lbl-txt {
+        font-size: 18px;
+    }
+    
+    .uitext-container.w-dy, .uitext-container.w-mn, .uitext-container.w-yr {
+
+        width:calc( 33% - 7px );
+        display:inline-block
+    }
+
+
+}
+
+.FormattedTextModule.content.item-address, .FormattedTextModule.content.item-year {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.FormattedTextModule.content.description-field {
+    margin-bottom: 10px;
+}
+
+.FormattedTextModule.content.description-field{
+    &:before, &:after {
+        content: '“';
+        font-size: 46px;
+        line-height:0;
+        vertical-align: bottom;
+        color: coral;
+    }
+    &:after {
+        content: '”';
+    }
+}
+
+.birth-card .FormattedTextModule.content.description-field{
+    &:before, &:after {
+     color: deepskyblue;
+    }
+}
+
+
 
 
 

@@ -1,4 +1,10 @@
 return [
-    new MockDataTypeItem({name:"##Search", "className":"search"}), 
-    new MockDataTypeItem({name:"##View", "className":"view"}), 
-    new MockDataTypeItem({name:"##Browse", "className":"browse"})];
+    new MockDataTypeItem({
+        
+        click:function(){
+            document.location=document.location.origin+'/search'
+        },
+        
+        name:"##Search\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "className":"search"}), 
+    new MockDataTypeItem({name:"##Share\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "className":"view"}), 
+    new MockDataTypeItem({name:"##Explore\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "className":"browse"})];

@@ -1,0 +1,23 @@
+{
+    "type": "UIView",
+    "config": {
+        "className": "",
+        "identifier": "",
+        "viewType": "view",
+        "namedView": "sidePanelDetailList",
+        "shouldRender": true,
+        "namedViewScript": "return namedView",
+        "showInlineEdit": false,
+        "namedFormView": "defaultView",
+        "formOptions": "\"{}\"",
+        "showDeleteButton": false,
+        "deleteItemScript": "defaultBehaviorFn()",
+        "initModuleScript": "",
+        "formatModuleScript": "",
+        "resolveItemScript": " (new AjaxControlQuery(CoreAjaxUrlRoot, \"get_story_with_item\", {\n                    \"plugin\": \"MapStory\",\n                    \"item\": parseInt(document.location.pathname.split('story\/').pop().split('\/').shift())\n                })).addEvent(\"success\", function(resp) {\n                  \n                   callback(new StoryUser(resp));\n                \n                }).execute();",
+        "filterModulesScript": "return list",
+        "itemButtonsScript": "return [];",
+        "insertAtTop": false,
+        "targetName": ""
+    }
+}
