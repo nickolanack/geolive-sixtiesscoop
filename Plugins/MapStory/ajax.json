@@ -1,17 +1,19 @@
 {
 
-	"save_story_item":{},
-	"delete_story_item":{},
-	"delete_story":{},
-	"get_story":{},
-	"get_story_with_item":{},
-	"get_stories_with_items":{},
-	"get_story_with_user":{},
-	"search":{},
-	"advanced_search":{},
-	"get_feature_list":{},
-	"get_dispersion_graph":{
-		 "profile":true
+	"save_story_item": {},
+	"delete_story_item": {},
+	"delete_story": {},
+	"get_story": {},
+	"get_story_with_item": {
+		"profile": true
 	},
-	"send_message":{}
+	"get_stories_with_items": {},
+	"get_story_with_user": {},
+	"search": {},
+	"advanced_search": {},
+	"get_feature_list": {},
+	"get_dispersion_graph": {
+		"profile": true
+	},
+	"send_message": {}
 }

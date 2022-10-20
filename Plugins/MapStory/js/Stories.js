@@ -389,7 +389,6 @@ var StoryMapController = new Class({
             realCards.shift();
         }
         realCards.shift();
-
         var afterCards = realCards.slice(0);
 
 
