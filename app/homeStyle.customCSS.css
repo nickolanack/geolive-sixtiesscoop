@@ -502,7 +502,7 @@ button.inline-edit {
     } 
     .content.edit:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/%5BG%5D_IdT_%5BImAgE%5D_iZ9_cEI-%3Ethumb%3A%3E200x%3E150.png');
-        background-color: #fd820;
+        background-color: #fd8200;
     }
 
 
@@ -537,7 +537,7 @@ button.inline-edit {
             background-color: darken(#5daeeb, 10%);
         } 
         .content.edit:before{
-            background-color: darken(#fd820, 10%);
+            background-color: darken(#fd8200, 10%);
         }
         
     }
