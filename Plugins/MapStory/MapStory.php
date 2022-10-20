@@ -158,7 +158,7 @@ class MapStory extends \core\extensions\Plugin implements
 			}
 
 			$attr = $this->_cachedStoryAttr;
-			$attributes = $attr->getValues($feature['id'], "MapStory.card");
+			$attributes = $attr->getValues($id, "MapStory.card");
 			$this->_cachedStoryAttributes[$id]=$attributes;
 
 		}
