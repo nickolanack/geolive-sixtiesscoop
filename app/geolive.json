@@ -6669,7 +6669,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
-            "saveTemplateAsData": false,
+            "saveTemplateAsData": true,
             "contentTemplate": "module-gettingStartedText-text.contentTemplate.html"
         }
     }
