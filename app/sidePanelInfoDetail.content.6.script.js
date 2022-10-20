@@ -1,6 +1,13 @@
 
 if(item.canEdit&&item.canEdit()){
     
+    try{
+        var map=ScoopStories.getMap();
+    }catch(e){
+        console.error(e);
+        return null;
+    }
+    
     
   var deleteBtn=new Element('button', {
                     html: "delete",
