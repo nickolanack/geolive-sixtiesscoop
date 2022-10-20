@@ -1,5 +1,10 @@
 
 
+    if(lastItems&&lastItems.length>=6){
+         callback(lastItems);
+         return;
+    }
+
     // var defaultList=[
     //     new MockDataTypeItem({name:"##Example 1"}), 
     //     new MockDataTypeItem({name:"##Example 2"}), 
