@@ -116,9 +116,10 @@ class StoryFormatter {
 
 			//if ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']) {
 			$movesOutOfCountryValue = ($list[$i]['attributes']['country'] !== $list[$i + 1]['attributes']['country']);
-			if ($list[$i]['attributes']['movesOutOfCountry']!= $movesOutOfCountryValue) {
+			$movesOutOfCountryCurrent = $list[$i]['attributes']['movesOutOfCountry'];
+			if ($movesOutOfCountryCurrent!=$movesOutOfCountryValue&&$movesOutOfCountryCurrent!=($movesOutOfCountryValue?'true':'false')) {
 
-				\core\DataStorage::LogQuery("Update movesOutOfCountry ".$list[$i]['attributes']['movesOutOfCountry']."!=".$movesOutOfCountryValue);
+				\core\DataStorage::LogQuery("Update movesOutOfCountry ".$movesOutOfCountryCurrent."!=".$movesOutOfCountryValue);
 
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"movesOutOfCountry" => $movesOutOfCountryValue
@@ -127,9 +128,10 @@ class StoryFormatter {
 
 
 			$movesOutOfProvinceValue = ($list[$i]['attributes']['country']==="CA"&&$list[$i]['attributes']['province'] !== $list[$i + 1]['attributes']['province']);
-			if ($list[$i]['attributes']['movesOutOfProvince']!=$movesOutOfProvinceValue) {
+			$movesOutOfProvinceCurrent = $list[$i]['attributes']['movesOutOfProvince'];
+			if ($movesOutOfProvinceCurrent!=$movesOutOfProvinceValue&&$movesOutOfProvinceCurrent!=($movesOutOfProvinceValue?'true':'false')) {
 
-				\core\DataStorage::LogQuery("Update movesOutOfProvince ".$list[$i]['attributes']['movesOutOfProvince']."!=".$movesOutOfProvinceValue);
+				\core\DataStorage::LogQuery("Update movesOutOfProvince ".$movesOutOfProvinceCurrent."!=".$movesOutOfProvinceValue);
 
 				(new \attributes\Record('storyAttributes'))->setValues($list[$i]['id'], "MapStory.card", array(
 					"movesOutOfProvince" => $movesOutOfProvinceValue
