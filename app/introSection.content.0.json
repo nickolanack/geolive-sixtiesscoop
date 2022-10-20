@@ -9,6 +9,7 @@
         "formatVariablesScript": "",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
+        "formOptions": {},
         "identifier": "htmlLabel"
     }
 }

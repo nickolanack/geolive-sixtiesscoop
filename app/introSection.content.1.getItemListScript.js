@@ -27,7 +27,12 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
 								                	    }
 	    ]; 
     
-}, 'genericParametersForm', {});
+}, 'genericParametersForm', {
+    
+    "labelForSubmit":"Save",
+    "showCancel":false
+    
+});
 
 
 
