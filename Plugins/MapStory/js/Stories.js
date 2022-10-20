@@ -426,7 +426,7 @@ var StoryMapController = new Class({
 
 
         var me = this;
-        var items = [item.getUser()];
+        var items = [item.getUser?item.getUser():item];
 
         items = items.concat(me.CardGroupsBefore(item))
         items.push(item);
