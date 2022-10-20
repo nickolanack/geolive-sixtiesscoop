@@ -40,7 +40,7 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
             edit:function(){
                 configEdit.editIndex('links', 0);
             },
-            name:"##Search\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name:response.value[0].content,
             "className":"search"
             
         }), 
@@ -51,7 +51,7 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
             edit:function(){
                 configEdit.editIndex('links', 1);
             },
-            name:"##Share\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name:response.value[1].content,
             "className":"view"
             
         }), 
@@ -62,7 +62,7 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
             edit:function(){
                 configEdit.editIndex('links', 2);
             },
-            name:"##Explore\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name:response.value[1].content,
             "className":"browse"
             
         })
