@@ -22,7 +22,8 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
 								                	      "fieldType": "text",
 								                	      "defaultValue": response.value[index].content,
 								                	      "options": {
-								                	          "parameterName":"content"
+								                	          "parameterName":"content",
+								                	            "className":"markdown-field"
 								                	      }
 								                	    }
 	    ]; 
