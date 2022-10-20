@@ -77,13 +77,17 @@
 	           
     	       list[i]=item;
     	       check();
+	           setTimeout(function(){
+	               
 	           
-                (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": featured.id
-                })).addEvent("success", function(resp) {
-                    item.setResp(resp);
-                }).execute();
+                    (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+                        "plugin": "MapStory",
+                        "item": featured.id
+                    })).addEvent("success", function(resp) {
+                        item.setResp(resp);
+                    }).execute();
+                    
+	           }, Math.round(1000+Math.random()*3000));
 	           
 	          
 	       });
