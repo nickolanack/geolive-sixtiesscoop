@@ -99,7 +99,7 @@ class StoryFormatter {
 		for ($i = 0; $i < count($list) - 1; $i++) {
 
 			$currentNextJson=json_encode($list[$i]['attributes']['nextLocationData']);
-			$nextValueJson=json_encode($list[$i + 1]['attributes']['locationData'])
+			$nextValueJson=json_encode($list[$i + 1]['attributes']['locationData']);
 
 
 			if($currentNextJson !== $nextValueJson) {
