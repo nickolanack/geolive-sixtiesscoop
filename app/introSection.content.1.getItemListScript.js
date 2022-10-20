@@ -7,10 +7,29 @@
 
 
 
-var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate([
+var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(function(field, index){
+       return [
+												        {
+								                	      "name": "heading",
+								                	      "description": "",
+								                	      "fieldType": "heading",
+								                	      "defaultValue": "Edit Primary Link",
+								                	      "options": {}
+								                	    },   
+								                	    {
+								                	      "name": "Markdown Content",
+								                	      "description": "",
+								                	      "fieldType": "text",
+								                	      "defaultValue": response.value[index].content,
+								                	      "options": {
+								                	          "parameterName":"content"
+								                	      }
+								                	    }
+	    ]; 
     
-    
-  ], 'genericParametersForm', {});
+}, 'genericParametersForm', {});
+
+
 
     callback( [
         new MockDataTypeItem({
