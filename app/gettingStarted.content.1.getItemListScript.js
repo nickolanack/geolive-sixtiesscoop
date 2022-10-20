@@ -1,13 +1,13 @@
 
 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_configuration_field", {
-		'widget': "primaryLinkItems",
+		'widget': "gettingStaredItems",
 		'field': "links"
 	})).addEvent('success',function(response){
 
 
 
 
-var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(function(field, index){
+var configEdit = (new ConfigEdit(application, 'gettingStaredItems')).withTemplate(function(field, index){
        return [
 												        {
 								                	      "name": "heading",
