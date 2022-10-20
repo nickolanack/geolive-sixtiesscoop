@@ -226,9 +226,10 @@ $introTextColor:#4d8673;
 
 
 
-     .ui-view.featured-stories, .intro-section {
+     .ui-view.featured-stories, .intro-section, [data-view="advancedSearchForm"], [data-view="storyPageContent"]{
         width: 1000px;
-        max-width: calc( 100% - 100px )
+        max-width: calc( 100% - 100px );
+        margin: auto;
      }
 
 
@@ -236,7 +237,7 @@ $introTextColor:#4d8673;
         font-size: 1.5em;
         font-weight: 100;
 
-        margin: auto;
+        
         margin-top: 70px;
     
     
@@ -545,35 +546,71 @@ button.inline-edit {
     }
 }
 
-.page-content .ui-view.featured-stories .featured-story{
+
+
+
+.page-content .ui-view.featured-stories{
     
-    cursor:pointer;
-    transition: background-color .8s, box-shadow .8s;
-    &:hover{
-        box-shadow: 0 0 14px rgb(0 0 0 / 30%);
-        background-color: rgba(0, 0, 0, 0.1);
-        transition: background-color .2s, box-shadow .2s;
-    }
     
-    &.adoption-card, &.journey-card {
-        border: 3px solid #ffcc02;
-        .icon {
-            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
+    .featured-story{
+    
+        cursor:pointer;
+        transition: background-color .8s, box-shadow .8s;
+        &:hover{
+            box-shadow: 0 0 14px rgb(0 0 0 / 30%);
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color .2s, box-shadow .2s;
         }
-    }
-    
-    &.birth-card.featured-story {
-        border: 3px solid #5daeeb;
-        .icon {
-            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
-        }
-    }
-    
-    &.repatriation-card.featured-story {
-        border: 3px solid #fd8209;
         
-        .icon {
-            background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
+        &.adoption-card, &.journey-card {
+            border: 3px solid #ffcc02;
+            .icon {
+                background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png);
+            }
+        }
+        
+        &.birth-card.featured-story {
+            border: 3px solid #5daeeb;
+            .icon {
+                background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png);
+            }
+        }
+        
+        &.repatriation-card.featured-story {
+            border: 3px solid #fd8209;
+            
+            .icon {
+                background-image: url(https://sixtiesscoop.geoforms.ca/uploads-sixtiesscoop.geoforms.ca/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png);
+            }
+        }
+    
+    }
+
+    .FormattedTextModule.content.item-address, .FormattedTextModule.content.item-year {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .FormattedTextModule.content.description-field {
+        margin-bottom: 10px;
+    }
+    
+    .FormattedTextModule.content.description-field{
+        &:before, &:after {
+            content: '“';
+            font-size: 46px;
+            line-height:0;
+            vertical-align: bottom;
+            color: coral;
+        }
+        &:after {
+            content: '”';
+        }
+    }
+    
+    .birth-card .FormattedTextModule.content.description-field{
+        &:before, &:after {
+         color: deepskyblue;
         }
     }
 
@@ -639,35 +676,6 @@ button.inline-edit {
 
 
 }
-
-.FormattedTextModule.content.item-address, .FormattedTextModule.content.item-year {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.FormattedTextModule.content.description-field {
-    margin-bottom: 10px;
-}
-
-.FormattedTextModule.content.description-field{
-    &:before, &:after {
-        content: '“';
-        font-size: 46px;
-        line-height:0;
-        vertical-align: bottom;
-        color: coral;
-    }
-    &:after {
-        content: '”';
-    }
-}
-
-.birth-card .FormattedTextModule.content.description-field{
-    &:before, &:after {
-     color: deepskyblue;
-    }
-}
-
 
 
 
