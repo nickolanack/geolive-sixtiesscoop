@@ -41,7 +41,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         new MockDataTypeItem({
             
             click:function(){
-                document.location=document.location.origin+'/search'
+                document.location=document.location.origin+'/register'
             },
             edit:function(){
                 configEdit.editIndex('links', 0);
@@ -52,7 +52,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/share'
+                document.location=document.location.origin+'/create'
             },
             edit:function(){
                 configEdit.editIndex('links', 1);
@@ -63,7 +63,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/explore'
+                document.location=document.location.origin+'/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);
