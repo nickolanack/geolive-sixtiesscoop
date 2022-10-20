@@ -440,6 +440,24 @@ button.inline-edit {
 }
 .page-content .ui-view.featured-story, .intro-section .ui-view.featured-item {
     min-width: 250px;
+    
+    @media only screen and (max-width: 950px){
+
+
+        min-width:300px;
+        margin-left:100px;
+        margin-right: 100px;
+    
+    }
+    
+    @media only screen and (max-width: 650px){
+
+
+        min-width:250px;
+        margin-left:10px;
+        margin-right: 10px;
+    
+    }
 }
 
 .intro-section .ui-view.featured-item{
