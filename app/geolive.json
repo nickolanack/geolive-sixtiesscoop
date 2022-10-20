@@ -6658,5 +6658,19 @@
             "widgetTitle": "gettingStartedItems",
             "readAccess": "public"
         }
+    },
+    "widget.97": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.gettingStartedText.text",
+            "target": "module.gettingStartedText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-gettingStartedText-text.contentTemplate.html"
+        }
     }
 }
