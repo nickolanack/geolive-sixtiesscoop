@@ -47,7 +47,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
                 configEdit.editIndex('links', 0);
             },
             name:response.value[0].content,
-            "className":"search"
+            "className":"register"
             
         }), 
         new MockDataTypeItem({
@@ -58,7 +58,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
                 configEdit.editIndex('links', 1);
             },
             name:response.value[1].content,
-            "className":"view"
+            "className":"add"
             
         }), 
         new MockDataTypeItem({
@@ -69,7 +69,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
                 configEdit.editIndex('links', 2);
             },
             name:response.value[2].content,
-            "className":"browse"
+            "className":"edit"
             
         })
     
