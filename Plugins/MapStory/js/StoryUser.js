@@ -156,7 +156,7 @@ var StoryUser = new Class({
 		});
 
 
-		 (new HTMLArrayMetadataRequest(htmls)).cache({expire:5}).addEvent('success', function(res) {
+		 (new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
 
 		 	console.log(res);
 
