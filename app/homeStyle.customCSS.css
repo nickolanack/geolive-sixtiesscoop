@@ -839,16 +839,21 @@ button.inline-edit {
         
         
         .map-view-link {
-            line-height: 100px;
+            width: calc( 100% - 44px);
+            line-height: 83px;
             height: 100px;
             display: inline-block;
-            width: 100%;
             margin: 5px;
             font-size: 25px;
             font-weight: 100;
             color: #333333;
             position: relative;
             top: -15px;
+            padding: 10px 30px;
+            background-color: rgba(93, 174, 235, 0.1);
+            margin-left: 44px;
+            border-radius: 5px;
+            box-sizing: border-box;
             
             
             &:before {
@@ -865,7 +870,7 @@ button.inline-edit {
             }
             
             &>span {
-                line-height: 100px;
+                line-height: 85px;
                 display: inline-block;
                 vertical-align: top;
             }
