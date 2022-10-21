@@ -724,7 +724,7 @@ button.inline-edit {
 
 
 
-[data-view="advancedSearchForm"] {
+[data-view="searchPageContent"] {
     max-width: 1000px;
     margin: auto;
     width: calc( 100% - 100px );
