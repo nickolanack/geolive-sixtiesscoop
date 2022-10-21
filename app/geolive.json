@@ -6493,7 +6493,7 @@
                                 "type": "WizardScriptElement",
                                 "config": {
                                     "name": "My Custom Script",
-                                    "script": "console.log('custon media');",
+                                    "script": "storyPageContent.metadata.positions.content.modules.2.config.script.js",
                                     "description": "Info about my custom script"
                                 }
                             },
