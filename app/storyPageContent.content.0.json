@@ -6,7 +6,7 @@
         "template": "userStoryText",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
-        "formatVariablesScript": "return {\n    story:item._storyData\n}",
+        "formatVariablesScript": "return {\n    story:item._storyData,\n    user:item._userData\n}",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
         "formOptions": "{}",

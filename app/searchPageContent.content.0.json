@@ -1,0 +1,9 @@
+{
+    "type": "Search",
+    "config": {
+        "getAggregatorsScript": "return ScoopStories.getSearchAggregators(search);",
+        "searchOptions": "{}",
+        "formatSearchModuleScript": "",
+        "placeholder": "Search names, places and years"
+    }
+}

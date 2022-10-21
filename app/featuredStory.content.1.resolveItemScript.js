@@ -1,5 +1,6 @@
 
-
+callback(StoryGroup.BestCard(new StoryUser(item.getResp())));
+return;
                   
                     var story=new StoryUser(item.getResp());
                 
