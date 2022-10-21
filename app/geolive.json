@@ -6719,5 +6719,19 @@
             "contentTemplate": "module-gettingStartedText-text.contentTemplate.html",
             "readAccess": "public"
         }
+    },
+    "widget.98": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.userStoryText.text",
+            "target": "module.userStoryText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "##{{story[0].name}}"
+        }
     }
 }
