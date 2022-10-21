@@ -778,10 +778,13 @@ button.inline-edit {
 
 
 .view-index-link {
-        text-align: right;
-        margin: 5px 50px;
-        font-weight: 400;
-        color: mediumaquamarine;
+    text-align: right;
+    margin: 5px 50px;
+    font-weight: 400;
+    color: #3f8a9d;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
 }
 
 
