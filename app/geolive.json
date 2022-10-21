@@ -6316,7 +6316,7 @@
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
-                                    "formatModuleScript": "featuredStory.metadata.positions.content.modules.1.config.formatModuleScript.js",
+                                    "formatModuleScript": "\n",
                                     "resolveItemScript": "featuredStory.metadata.positions.content.modules.1.config.resolveItemScript.js",
                                     "filterModulesScript": "featuredStory.metadata.positions.content.modules.1.config.filterModulesScript.js",
                                     "itemButtonsScript": "return [];",
