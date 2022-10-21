@@ -240,7 +240,7 @@ $introTextColor:#4d8673;
 
 
 
-     .ui-view.featured-stories, .intro-section, [data-view="advancedSearchForm"], [data-view="storyPageContent"]{
+     .ui-view.featured-stories, .intro-section, [data-view="searchPageContent"], [data-view="storyPageContent"]{
         width: 1000px;
         max-width: calc( 100% - 100px );
         margin: auto;
