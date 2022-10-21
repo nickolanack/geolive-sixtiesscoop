@@ -5812,21 +5812,6 @@
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
                                 }
-                            },
-                            {
-                                "type": "Template",
-                                "config": {
-                                    "className": "view-index-link",
-                                    "text": "View Index",
-                                    "template": "",
-                                    "templateVariablesScript": "",
-                                    "formatTextScript": "",
-                                    "formatVariablesScript": "",
-                                    "ajaxRequestTemplate": false,
-                                    "namedFormView": "",
-                                    "formOptions": "{}",
-                                    "identifier": "htmlLabel"
-                                }
                             }
                         ]
                     },
