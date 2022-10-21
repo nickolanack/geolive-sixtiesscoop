@@ -6,7 +6,9 @@ class CardFormatter {
 
 	public function format($feature, $attributes = null) {
 
-		
+		if(is_object($feature)){
+			$feature=get_object_vars($feature);
+		}
 		
 
 		if (!$attributes) {
