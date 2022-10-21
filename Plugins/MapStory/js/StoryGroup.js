@@ -44,3 +44,27 @@ var StoryGroup = new Class({
 	}
 
 });
+
+
+
+StoryGroup.BestCard=function(story){
+
+    
+    var cards = story.getRealCardsSync();
+
+
+        
+        var index=-1;
+        var length=-1;
+        
+        cards.forEach(function(c,i){
+            var l=c.getDescription().length;
+            if(l>length){
+               length=l;
+               index=i;
+            }
+        })
+        
+        return cards[index];
+
+}
