@@ -127,10 +127,14 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				}]
 			}';
 
-		$list=(new \spatial\AttributeFeatures('storyAttributes'))
+		(new \spatial\AttributeFeatures('storyAttributes'))
 			->withType('MapStory.card') //becuase attribute type is overriden
 			->withAllAttributes($prefix)
-			->withFilter($filterBirthStories)->list();
+			->withFilter($filterBirthStories)->iterate(function($result)use(&$list, $prefix){
+
+				$list[]=array('features'=>array( $this->formatFeatureMetadata($result), 'story'=>$this->getPlugin()->getUsersStoryMetadata($result->uid);
+
+			});
 
 		return array('results'=>$list);
 
