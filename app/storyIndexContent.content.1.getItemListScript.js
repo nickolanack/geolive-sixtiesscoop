@@ -8,7 +8,7 @@ callback([]);
                         
                        callback(resp.results.map(function(item){
                            return new StoryGroup({
-                               type:"Story",
+                               type:item.features[0].name,
                                description:"",
                                cards:[]
                                
