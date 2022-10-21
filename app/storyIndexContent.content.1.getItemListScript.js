@@ -10,7 +10,8 @@ callback([]);
                            return new StoryGroup({
                                type:item.features[0].name,
                                description:"",
-                               cards:[]
+                               cards:[],
+                               id:item.id
                                
                            });
                        }))
