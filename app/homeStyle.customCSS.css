@@ -764,7 +764,7 @@ button.inline-edit {
         content: "";
         height: 150%;
         border-left: 2px solid #c2c2c2;
-        top: 50%;
+        top: 42px;
         left: -50px;
     }
     
