@@ -862,6 +862,9 @@ button.inline-edit {
                 box-shadow: 0 0 6px rgb(0 0 0 / 40%);
                 background-color: rgba(93, 174, 235, 0.2);
                 transition: background-color 0.2s, box-shadow 0.2s;
+                &:before {
+                    filter: grayscale(0);
+                }
             }
             
             
@@ -876,6 +879,7 @@ button.inline-edit {
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                filter: grayscale(0.6);
             }
             
             &>span {
