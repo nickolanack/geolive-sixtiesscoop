@@ -6380,7 +6380,7 @@
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
                                     "formatModuleScript": "",
-                                    "resolveItemScript": "return item",
+                                    "resolveItemScript": "story.metadata.positions.content.modules.1.config.resolveItemScript.js",
                                     "filterModulesScript": "return list",
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
