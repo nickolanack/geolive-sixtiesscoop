@@ -28,6 +28,6 @@ childView.getElement().addEvent('click', function(){
 
 // }
 
-var attrs=StoryGroup.BestCard(new StoryUser(item.getResp()))._config.attributes;
+var attrs=StoryGroup.BestCard(new StoryUser(child.getResp()))._config.attributes;
 
 StoryCard.AddAttributeClass(attrs , childView.getElement());
