@@ -3,7 +3,7 @@
                     "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
                 })).addEvent("success", function(resp) {
                   
-                   callback(new StoryUser(resp));
+                  //callback(new StoryUser(resp));
                    
                    
                    
