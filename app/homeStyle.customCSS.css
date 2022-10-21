@@ -776,10 +776,18 @@ button.inline-edit {
             font-size: 55px;
             color: #2196f3;
         }
+        
+        
+        .markdown h2 {
+            display: list-item;
+            margin-left: 50px;
+            font-size: 25px;
+            font-weight: 100;
+        }
     }
 
 
-    
+   
     
     
     [data-view="sidePanelInfoDetail"]:before {
