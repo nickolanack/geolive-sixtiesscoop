@@ -5733,7 +5733,7 @@
                                     "text": "Index",
                                     "template": "",
                                     "templateVariablesScript": "",
-                                    "formatTextScript": "",
+                                    "formatTextScript": "featuredStories.metadata.positions.content.modules.2.config.formatTextScript.js",
                                     "formatVariablesScript": "",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
