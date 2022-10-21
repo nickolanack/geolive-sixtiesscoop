@@ -806,7 +806,7 @@ button.inline-edit {
 .target-story, .target-storyIndex{
     
     
-    [data-view="storyPageContent"]{
+    [data-view="storyPageContent"], [data-view="storyIndexContent"]{
         
         h1 {
             
@@ -977,6 +977,7 @@ button.inline-edit {
         margin-left: 50px;
         
     }
+    
     
     [data-view="sidePanelInfoDetail"] h2 {
         text-indent: 0;
