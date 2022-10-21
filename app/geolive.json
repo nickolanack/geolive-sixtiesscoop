@@ -6837,7 +6837,7 @@
             "widgetTitle": "storyIndex",
             "target": "storyIndex",
             "templateName": "storyIndex",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
