@@ -930,7 +930,7 @@ button.inline-edit {
         border-color: white;
     }
     
-    [data-view="sidePanelInfoDetail"], [data-view="defaultView"]{
+    [data-view="sidePanelInfoDetail"]{
         
         &:after {
             position: absolute;
@@ -970,7 +970,7 @@ button.inline-edit {
         }
     }
     
-    [data-view="sidePanelInfoDetail"] {
+    [data-view="sidePanelInfoDetail"], [data-view="defaultView"] {
         padding: 20px;
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
