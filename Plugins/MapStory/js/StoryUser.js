@@ -126,6 +126,24 @@ var StoryUser = new Class({
 		return me;
 
 	},
+
+
+	getVideos:function(){
+
+		var content=this.getRealCardsSync().map(function(card){
+			return card.getCardMedia();
+		}).join("\n");
+
+
+		var parser=(new HTMLTagParser());
+		var videos=parser.parseVideos(content);
+		var links=parser.parseUrls(content);
+
+		return [];
+
+		
+	},
+
 	getFirstJourneyStory: function() {
 		var me = this;
 		return me._journeyStories && me._journeyStories.length ? me._journeyStories[0] : false;
