@@ -771,7 +771,7 @@ button.inline-edit {
         
         &>strong {
           
-            
+            margin-right: 30px;
             font-size: 55px;
             color: #2196f3;
         }
