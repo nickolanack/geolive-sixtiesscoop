@@ -6529,8 +6529,8 @@
                                 "config": {
                                     "className": "page-content",
                                     "identifier": "",
-                                    "viewType": "form",
-                                    "namedView": "advancedSearchForm",
+                                    "viewType": "view",
+                                    "namedView": "searchPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
