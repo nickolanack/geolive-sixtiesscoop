@@ -6473,7 +6473,7 @@
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
                                     "targetName": "",
-                                    "getItemListScript": "return item;",
+                                    "getItemListScript": "storyPageContent.metadata.positions.content.modules.1.config.getItemListScript.js",
                                     "formatItemListScript": "return list;",
                                     "formatListItemModuleScript": "return item;",
                                     "emptyNamedView": "emptyListView",
