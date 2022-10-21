@@ -5383,7 +5383,7 @@
             "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "home.onRenderApplictionScript.js",
-            "formatModulesScript": "home.formatModulesScript.js",
+            "formatModulesScript": "console.log('me');\r\n",
             "notifyViewer": false,
             "useRemote": "",
             "metadata": {
