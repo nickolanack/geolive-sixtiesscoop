@@ -20,7 +20,7 @@
         "itemButtonsScript": "return [];",
         "insertAtTop": false,
         "targetName": "",
-        "getItemListScript": "callback([]);\n\n\n\n                 (new AjaxControlQuery(CoreAjaxUrlRoot, \"list_stories\", {\n                        \"plugin\": \"MapStory\",\n                    })).on(\"success\", function(userResp) {\n                        \n                       \n                    \n                    }).on('error',function(){\n                       \n\n                       \n                    }).execute();",
+        "getItemListScript": "callback([]);\n\n\n\n                 (new AjaxControlQuery(CoreAjaxUrlRoot, \"list_stories\", {\n                        \"plugin\": \"MapStory\",\n                    })).on(\"success\", function(resp) {\n                        \n                       callback(resp.results.map(function(item){\n                           return new MockDataTypeItem(item);\n                       }))\n                    \n                    }).on('error',function(){\n                       \n\n                       \n                    }).execute();",
         "formatItemListScript": "return list;",
         "formatListItemModuleScript": "return item;",
         "emptyNamedView": "emptyListView",
