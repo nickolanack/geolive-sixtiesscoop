@@ -830,6 +830,53 @@ button.inline-edit {
             font-size: 25px;
             font-weight: 100;
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        .map-view-link {
+            line-height: 100px;
+            height: 100px;
+            display: inline-block;
+            width: 100%;
+            margin: 5px;
+            font-size: 25px;
+            font-weight: 100;
+            color: #333333;
+            position: relative;
+            top: -15px;
+            
+            
+            &:before {
+                content: "";
+                background-image: url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/fcp_[G]_[ImAgE]_JIy_r75-%3Ethumb:%3E200x%3E150.png');
+                width: 100px;
+                height: 100%;
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            &>span {
+                line-height: 100px;
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
     }
 
 
