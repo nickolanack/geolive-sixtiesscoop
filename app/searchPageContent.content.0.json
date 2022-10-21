@@ -4,6 +4,6 @@
         "getAggregatorsScript": "return ScoopStories.getSearchAggregators(search);",
         "searchOptions": "{}",
         "formatSearchModuleScript": "",
-        "placeholder": "search items"
+        "placeholder": "Search people, places, years"
     }
 }
