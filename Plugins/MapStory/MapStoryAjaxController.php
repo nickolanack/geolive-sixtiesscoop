@@ -136,9 +136,9 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->withFilter($filterBirthStories)->iterate(function($result)use(&$list, $prefix, &$index, $limit){
 
 				if((!$limit)||$index>=$limit[0]&&$index<$limit[1]){
-					$list[]=array('id'=<$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result)), 'story'=>$this->getPlugin()->getUsersStoryMetadata($result->uid));
+					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result)), 'story'=>$this->getPlugin()->getUsersStoryMetadata($result->uid));
 				}else{
-					$list[]=array('id'=<$result->id);
+					$list[]=array('id'=>$result->id);
 				}
 
 
