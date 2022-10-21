@@ -3,11 +3,11 @@
     "config": {
         "className": "",
         "text": "##{{story[0].name}}",
-        "template": "",
-        "templateVariablesScript": "",
+        "template": "userStoryText",
+        "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "return {\n    story:item._storyData\n}",
-        "ajaxRequestTemplate": false,
+        "ajaxRequestTemplate": true,
         "namedFormView": "",
         "formOptions": "{}",
         "identifier": "htmlLabel"
