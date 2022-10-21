@@ -871,7 +871,7 @@ button.inline-edit {
             &:before {
                 content: "";
                 background-image: url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/fcp_[G]_[ImAgE]_JIy_r75-%3Ethumb:%3E200x%3E150.png');
-                width: 100px;
+                width: 75px;
                 height: 100%;
                 display: inline-block;
                 float: left;
