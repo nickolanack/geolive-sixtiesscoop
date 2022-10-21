@@ -6503,7 +6503,7 @@
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
                                     "namedFormView": "advancedSearchForm",
-                                    "formOptions": "\"{}\"",
+                                    "formOptions": "{\n    template: \"form\"\n}",
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
