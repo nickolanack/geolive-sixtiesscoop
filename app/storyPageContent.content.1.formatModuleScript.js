@@ -2,7 +2,7 @@
     setTimeout(function(){
         
         var list=module.getDetailViews().reverse();
-        var rate=300;
+        var rate=100;
         var item=null;
         var animate=function(list){
             if(item){
