@@ -976,14 +976,14 @@ button.inline-edit {
         margin: 10px 0;
         margin-left: 50px;
         
+        h2 {
+            text-indent: 0;
+            font-size: 25px;
+            margin-bottom: 0;
+        }
+        
     }
     
-    
-    [data-view="sidePanelInfoDetail"] h2 {
-        text-indent: 0;
-        font-size: 25px;
-        margin-bottom: 0;
-    }
     
     .FormattedTextModule.content.description-field {
         font-size: 17px;
