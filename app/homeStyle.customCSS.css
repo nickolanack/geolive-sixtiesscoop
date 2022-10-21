@@ -760,21 +760,24 @@ button.inline-edit {
 .target-story{
     
     
-    [data-view="storyPageContent"] h1 {
+    [data-view="storyPageContent"]{
         
-        position: relative;
-        
-        font-weight: 100;
-        font-size: 30px;
-        color:#3f3c3b;
-        
-        margin-top: 60px;
-        
-        &>strong {
-          
-            margin-right: 30px;
-            font-size: 55px;
-            color: #2196f3;
+        h1 {
+            
+            position: relative;
+            
+            font-weight: 100;
+            font-size: 30px;
+            color:#3f3c3b;
+            
+            margin-top: 60px;
+            
+            &>strong {
+              
+                margin-right: 30px;
+                font-size: 55px;
+                color: #2196f3;
+            }
         }
         
         
