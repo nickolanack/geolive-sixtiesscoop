@@ -92,7 +92,7 @@ if(AppClient.getUserType()!=="guest"){
  
  
  if(AppClient.getUserType()=="admin"){
-    links.push(new MockDataTypeItem({name:"[]", click:function(){
+    links.push(new MockDataTypeItem({name:"[]", className:"admin-toggle", click:function(){
         if(document.body.hasClass('hide-admin')){
             document.body.removeClass('hide-admin');
             return
