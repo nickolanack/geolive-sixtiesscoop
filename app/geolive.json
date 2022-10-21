@@ -6730,7 +6730,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
-            "saveTemplateAsData": false,
+            "saveTemplateAsData": true,
             "contentTemplate": "##{{story[0].name}}",
             "readAccess": "public"
         }
