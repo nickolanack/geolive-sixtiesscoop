@@ -806,7 +806,7 @@ button.inline-edit {
 .target-story, .target-storyIndex{
     
     
-    [data-view="storyPageContent"]{
+    [data-view="storyPageContent"], [data-view="storyIndexContent"]{
         
         h1 {
             
@@ -970,19 +970,20 @@ button.inline-edit {
         }
     }
     
-    [data-view="sidePanelInfoDetail"], [data-view="defaultView"] {
+    [data-view="sidePanelInfoDetail"], [data-view="scoopStoryDetail"] {
         padding: 20px;
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
         margin-left: 50px;
         
+        h2 {
+            text-indent: 0;
+            font-size: 25px;
+            margin-bottom: 0;
+        }
+        
     }
     
-    [data-view="sidePanelInfoDetail"] h2 {
-        text-indent: 0;
-        font-size: 25px;
-        margin-bottom: 0;
-    }
     
     .FormattedTextModule.content.description-field {
         font-size: 17px;

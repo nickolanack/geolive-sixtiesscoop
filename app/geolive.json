@@ -6490,6 +6490,14 @@
                                 }
                             },
                             {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "storyPageContent.metadata.positions.content.modules.2.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
+                            },
+                            {
                                 "type": "UIListView",
                                 "config": {
                                     "listClassName": "",
@@ -6505,15 +6513,15 @@
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
-                                    "formatModuleScript": "storyPageContent.metadata.positions.content.modules.2.config.formatModuleScript.js",
+                                    "formatModuleScript": "storyPageContent.metadata.positions.content.modules.3.config.formatModuleScript.js",
                                     "resolveItemScript": "return item",
                                     "filterModulesScript": "return list",
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
                                     "targetName": "",
-                                    "getItemListScript": "storyPageContent.metadata.positions.content.modules.2.config.getItemListScript.js",
+                                    "getItemListScript": "storyPageContent.metadata.positions.content.modules.3.config.getItemListScript.js",
                                     "formatItemListScript": "return list;",
-                                    "formatListItemModuleScript": "storyPageContent.metadata.positions.content.modules.2.config.formatListItemModuleScript.js",
+                                    "formatListItemModuleScript": "storyPageContent.metadata.positions.content.modules.3.config.formatListItemModuleScript.js",
                                     "emptyNamedView": "emptyListView",
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
@@ -6952,7 +6960,7 @@
                                     "className": "",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "defaultView",
+                                    "namedView": "sidePanelInfoDetail",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
@@ -6969,11 +6977,11 @@
                                     "targetName": "",
                                     "getItemListScript": "storyIndexContent.metadata.positions.content.modules.1.config.getItemListScript.js",
                                     "formatItemListScript": "return list;",
-                                    "formatListItemModuleScript": "return item;",
+                                    "formatListItemModuleScript": "storyIndexContent.metadata.positions.content.modules.1.config.formatListItemModuleScript.js",
                                     "emptyNamedView": "emptyListView",
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
-                                    "maxItems": "-1"
+                                    "maxItems": "25"
                                 }
                             }
                         ]
