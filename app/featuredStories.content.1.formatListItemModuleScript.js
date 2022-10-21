@@ -1,6 +1,6 @@
 var card=child.getCard(); //index;
-var storyItem=child.getResp().story[card-1];
-var attrs=storyItem.attributes;
+//var storyItem=child.getResp().story[card-1];
+//var attrs=storyItem.attributes;
 
 
 childView.getElement().addEvent('click', function(){
@@ -28,6 +28,6 @@ childView.getElement().addEvent('click', function(){
 
 // }
 
-
+var attrs=StoryGroup.BestCard(new StoryUser(item.getResp()))._config.attributes;
 
 StoryCard.AddAttributeClass(attrs , childView.getElement());
