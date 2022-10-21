@@ -6864,7 +6864,7 @@
                                     "className": "page-content",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "storyPageContent",
+                                    "namedView": "storyIndexContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
