@@ -19,8 +19,11 @@
                        
                     
                     }).on('error',function(){
+                       
                        callback(new StoryUser(resp));
-                    })
+                       
+                       
+                    }).execute();
                    
                 
                 }).execute();
