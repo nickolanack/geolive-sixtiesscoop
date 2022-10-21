@@ -821,7 +821,7 @@ button.inline-edit {
         }
         
         
-        &:hover:after {
+        &:hover:after, &.anim:after {
             filter: drop-shadow(0 0 6px rgba(0,0,0,0.2));
             width: 25px;
             height: 25px;
@@ -830,7 +830,7 @@ button.inline-edit {
             
         }
         
-        &:hover {
+        &:hover, &.anim {
              background-color: rgba(0, 0, 0, 0.04);
         }
     }
