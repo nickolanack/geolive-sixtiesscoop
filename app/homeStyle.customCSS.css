@@ -1001,10 +1001,11 @@ button.inline-edit {
     content: "\0f044";
     font-size: 16px;
     font-family: 'FontAwesome';
+    color: deepskyblue;
 }
 
 .hide-admin .content.admin-toggle p:after{
-    
+    color:unset;
 }
 
 
