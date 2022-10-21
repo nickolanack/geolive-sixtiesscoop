@@ -305,9 +305,12 @@ $introTextColor:#4d8673;
     
     .bottom-by-c {
         right:450px;
+        
         &:after{
             background-image: url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/iYL_j5W_%5BImAgE%5D_mXx_%5BG%5D.png');
-            
+            width: 235px;
+            height: 80px;
+            top: -90px;
         }
     }
     
