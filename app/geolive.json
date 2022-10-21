@@ -210,6 +210,13 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "search"
+                },
+                {
+                    "name": "story-index",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "storyIndex"
                 }
             ],
             "useRemoteServerUI": false,
