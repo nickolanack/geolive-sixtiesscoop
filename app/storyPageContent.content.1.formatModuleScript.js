@@ -6,7 +6,7 @@
         var item=null;
         var animate=function(list){
             if(item){
-                item.removeClass('anim');
+                item.getElement().removeClass('anim');
             }
             if(list.length){
                 item=list.shift();   
