@@ -1,3 +1,3 @@
 childView.getElement().addEvent('click',function(){
-    window.location.href="/story/"+item.getId()
+    window.location.href="/story/"+item._config.id
 })
