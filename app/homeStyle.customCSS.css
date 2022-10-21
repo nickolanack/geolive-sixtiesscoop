@@ -995,5 +995,17 @@ button.inline-edit {
 }
 
 
+.content.admin-toggle p {font-size: 0;}
+
+.content.admin-toggle p:after {
+    content: "\0f044";
+    font-size: 16px;
+    font-family: 'FontAwesome';
+}
+
+.hide-admin .content.admin-toggle p:after{
+    
+}
+
 
 
