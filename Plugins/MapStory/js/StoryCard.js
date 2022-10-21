@@ -287,6 +287,30 @@ var StoryCard = new Class({
 });
 
 
+StoryCard.AddAttributeClass=function(attrs , el){
+
+    var isTrue=function(a){
+        return a===true||a==='true';
+    }
+
+    if(isTrue(attrs.isBirthStory)){
+        el.addClass('birth-card');
+        return;
+    }
+
+    if(isTrue(attrs.isRepatriationStory)){
+        el.addClass('repatriation-card');
+        return;
+    }
+
+    el.addClass('journey-card');
+
+    if(isTrue(attrs.isAdoptionStory)){
+        el.addClass('adoption-card');
+    }
+
+};
+
 
 var SortCard = new Class({
     Extends: StoryCard,
