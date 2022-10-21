@@ -6459,7 +6459,7 @@
                                     "text": "View this story on the map",
                                     "template": "",
                                     "templateVariablesScript": "",
-                                    "formatTextScript": "",
+                                    "formatTextScript": "storyPageContent.metadata.positions.content.modules.1.config.formatTextScript.js",
                                     "formatVariablesScript": "",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
