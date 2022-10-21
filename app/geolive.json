@@ -750,7 +750,22 @@
                     },
                     "content": {
                         "modules": [
-                            "bottomSection.metadata.positions.content.modules.0.json"
+                            "bottomSection.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "Template",
+                                "config": {
+                                    "className": "bottom-by",
+                                    "text": "Created by the Geoforms Lab",
+                                    "template": "",
+                                    "templateVariablesScript": "",
+                                    "formatTextScript": "bottomSection.metadata.positions.content.modules.1.config.formatTextScript.js",
+                                    "formatVariablesScript": "",
+                                    "ajaxRequestTemplate": false,
+                                    "namedFormView": "",
+                                    "formOptions": "{}",
+                                    "identifier": "htmlLabel"
+                                }
+                            }
                         ]
                     },
                     "footer": {

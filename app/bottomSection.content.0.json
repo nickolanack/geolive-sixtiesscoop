@@ -1,14 +1,15 @@
 {
     "type": "Template",
     "config": {
-        "className": "bottom-by",
-        "text": "Created by the Geoforms Lab",
+        "className": "bottom-by-c",
+        "text": "Colleen-Hele Cardinal",
         "template": "",
         "templateVariablesScript": "",
-        "formatTextScript": "module.getElement().addEvent('click', function(){\n    window.open(document.location.origin+\"\/install\", \"_blank\");\n})",
+        "formatTextScript": "",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": false,
         "namedFormView": "",
+        "formOptions": "{}",
         "identifier": "htmlLabel"
     }
 }
