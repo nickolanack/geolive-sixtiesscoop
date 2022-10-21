@@ -132,7 +132,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->withAllAttributes($prefix)
 			->withFilter($filterBirthStories)->iterate(function($result)use(&$list, $prefix){
 
-				$list[]=array('features'=>array( $this->formatFeatureMetadata($result)), 'story'=>$this->getPlugin()->getUsersStoryMetadata($result->uid));
+				$list[]=array('features'=>array( $this->getPlugin()->formatFeatureMetadata($result)), 'story'=>$this->getPlugin()->getUsersStoryMetadata($result->uid));
 
 			});
 
