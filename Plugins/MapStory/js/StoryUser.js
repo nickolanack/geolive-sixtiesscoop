@@ -139,11 +139,26 @@ var StoryUser = new Class({
 		parser.parse(content);
 		
 
-		var videos=parser.get('videos');
-		var links=parser.get('links');
-		var iframes=parser.get('iframes');
-		var iframes=parser.get('objects');
-		var iframes=parser.get('embeds');
+		var items=parser.get('videos').concat(parser.get('links'),parser.get('iframes'), arser.get('objects'),parser.get('embeds')).map(function(item){
+			return item.url||false;
+		}).filter(function(item){ return !!item; });
+
+
+		var unique=items.filter(function(url, i){
+			return items.indexOf(url)===i;
+		});
+
+
+		 (new HTMLArrayMetadataRequest(htmls)).cache({expire:5}).addEvent('success', function(res) {
+
+		 	console.log(res);
+
+		 });
+
+
+
+
+
 
 		return [];
 
