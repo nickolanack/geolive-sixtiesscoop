@@ -6455,7 +6455,7 @@
                             {
                                 "type": "Template",
                                 "config": {
-                                    "className": "",
+                                    "className": "map-view-link",
                                     "text": "View this story on the map",
                                     "template": "",
                                     "templateVariablesScript": "",
