@@ -970,7 +970,7 @@ button.inline-edit {
         }
     }
     
-    [data-view="sidePanelInfoDetail"], [data-view="defaultView"] {
+    [data-view="sidePanelInfoDetail"], [data-view="scoopStoryDetail"] {
         padding: 20px;
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
