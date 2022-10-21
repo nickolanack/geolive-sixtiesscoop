@@ -8,7 +8,7 @@
         "formatTextScript": "",
         "formatVariablesScript": "return {\n    story:item._storyData\n}",
         "ajaxRequestTemplate": true,
-        "namedFormView": "",
+        "namedFormView": "genericParametersForm",
         "formOptions": "{}",
         "identifier": "htmlLabel"
     }
