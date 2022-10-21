@@ -7025,5 +7025,19 @@
             "notifyViewer": false,
             "useRemote": ""
         }
+    },
+    "widget.104": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.storyIndexText.text",
+            "target": "module.storyIndexText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "#Story Index"
+        }
     }
 }
