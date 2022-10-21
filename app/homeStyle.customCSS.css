@@ -777,15 +777,18 @@ button.inline-edit {
 }
 
 
-
-.target-story [data-view="storyPageContent"] h1:first-child {
-    margin-top: 60px;
+.view-index-link {
+        text-align: right;
+        margin: 5px 50px;
+        font-weight: 400;
+        color: mediumaquamarine;
 }
 
-.target-story [data-view="storyPageContent"] h1:first-child > strong {
-    color: #3f3c3b;
-    font-weight: 400;
-}
+
+
+
+
+
 
 
 .target-story{
@@ -898,12 +901,7 @@ button.inline-edit {
     }
 
 
-    .view-index-link {
-        text-align: right;
-        margin: 5px 50px;
-        font-weight: 400;
-        color: mediumaquamarine;
-    }
+    
    
     
     
