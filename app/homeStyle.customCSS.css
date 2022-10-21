@@ -785,6 +785,14 @@ button.inline-edit {
     display: inline-block;
     float: right;
     cursor: pointer;
+
+    
+    &:before {
+        content: "\0f00b";
+        font-family: 'FontAwesome';
+        font-size: 13px;
+        margin-right: 5px;
+    }
 }
 
 
