@@ -854,6 +854,15 @@ button.inline-edit {
             margin-left: 44px;
             border-radius: 5px;
             box-sizing: border-box;
+            cursor:pointer;
+            box-shadow: 0 0 6px rgb(0 0 0 / 0%);
+            transition: background-color 0.8s, box-shadow 0.8s;
+            
+            &:hover {
+                box-shadow: 0 0 6px rgb(0 0 0 / 40%);
+                background-color: rgba(93, 174, 235, 0.2);
+                transition: background-color 0.2s, box-shadow 0.2s;
+            }
             
             
             &:before {
