@@ -4,12 +4,44 @@ namespace MapStory;
 
 class CardFormatter {
 
+
+	protected function extractAttributes($feature, $prefix){
+		$attributes=array();
+		foreach(array_keys($feature) as $key){
+			if(strpos($key, $prefix)===0){
+				$attributes[substr($key, strlen($prefix))]=$feature[$key];
+			}
+		}
+
+		return $attributes;
+
+	}
+
+	protected function removeAttributes($feature, $prefix){
+
+		foreach(array_keys($feature) as $key){
+			if(strpos($key, $prefix)===0){
+				unset($feature[$key]);
+			}
+		}
+		return $feature;
+	}
+
+	
+
 	public function format($feature, $attributes = null) {
 
 		if(is_object($feature)){
 			$feature=get_object_vars($feature);
 		}
 		
+
+		if(gettype($attributes)=='string'){
+			$prefix=$attributes;
+			$attributes=$this->extractAttributes($feature, $prefix);
+			$feature=$this->removeAttributes($feature, $prefix);
+		}
+
 
 		if (!$attributes) {
 			GetPlugin('Attributes');
