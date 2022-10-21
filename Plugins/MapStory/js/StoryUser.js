@@ -137,7 +137,7 @@ var StoryUser = new Class({
 
 		var parser=(new HTMLTagParser());
 		var videos=parser.parseVideos(content);
-		var links=parser.parseUrls(content);
+		var links=parser.parseLinks(content);
 
 		return [];
 
