@@ -6729,9 +6729,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "##{{story[0].name}}"
+            "contentTemplate": "##{{story[0].name}}",
+            "readAccess": "public"
         }
     }
 }
