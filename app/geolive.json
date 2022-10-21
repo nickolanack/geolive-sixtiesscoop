@@ -6952,7 +6952,7 @@
                                     "className": "",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "scoopStoryDetail",
+                                    "namedView": "sidePanelInfoDetail",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
