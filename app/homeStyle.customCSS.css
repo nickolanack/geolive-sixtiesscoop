@@ -277,7 +277,7 @@ $introTextColor:#4d8673;
     background: #3f3c3b;
     margin-top: 200px;
     
-    .bottom-by {
+    .bottom-by, .bottom-by-c {
         position: absolute;
         right: 40px;
         bottom: 50px;
@@ -299,6 +299,15 @@ $introTextColor:#4d8673;
             top: -100px;
             left: 0;
             filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+        }
+    }
+    
+    
+    .bottom-by-c {
+        right:450px;
+        &:after{
+            background-image: url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/iYL_j5W_%5BImAgE%5D_mXx_%5BG%5D.png');
+            
         }
     }
     
