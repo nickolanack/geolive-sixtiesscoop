@@ -12,6 +12,11 @@
                         "itemId":storyResp.features[0].uid,
                         "itemType":"user"
                     })).on("success", function(userResp) {
+                        
+                        if(!userResp.success){
+                             callback(new StoryUser(storyResp));
+                             return;
+                        }
                       
                        callback(new StoryUser(ObjectAppend_(storyResp, {
                             user:userResp.values[0].entries[0]
