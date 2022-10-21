@@ -139,9 +139,16 @@ var StoryUser = new Class({
 		parser.parse(content);
 		
 
-		var items=parser.get('videos').concat(parser.get('links'),parser.get('iframes'), arser.get('objects'),parser.get('embeds')).map(function(item){
+		var items=parser.get('videos').concat(
+				parser.get('links'), 
+				parser.get('iframes'), 
+				parser.get('objects'),
+				parser.get('embeds')
+			).map(function(item){
+
 			return item.url||false;
-		}).filter(function(item){ return !!item; });
+			
+			}).filter(function(item){ return !!item; });
 
 
 		var unique=items.filter(function(url, i){
