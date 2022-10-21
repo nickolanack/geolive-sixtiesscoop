@@ -528,6 +528,9 @@ button.inline-edit {
     .content.browse:before{
         background-image:url('https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/[ImAgE]_KO1_[G]_3qM_dtw-%3Ethumb:%3E200x%3E150.png');
         background-color: mediumaquamarine;
+        
+            background-size: 57%;
+            background-position: center 73px;
     }
     
     
