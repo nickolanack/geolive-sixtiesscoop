@@ -147,7 +147,7 @@ var StoryUser = new Class({
 			).map(function(item){
 
 			return item.url||false;
-			
+
 			}).filter(function(item){ return !!item; });
 
 
@@ -160,7 +160,7 @@ var StoryUser = new Class({
 
 		 	console.log(res);
 
-		 });
+		 }).execute();
 
 
 
