@@ -769,6 +769,8 @@ button.inline-edit {
         font-size: 30px;
         color:#3f3c3b;
         
+        margin-top: 60px;
+        
         &>strong {
           
             margin-right: 30px;
@@ -836,6 +838,11 @@ button.inline-edit {
         font-weight: 100;
         padding: 10px 0;
         margin-bottom: 50px;
+        
+        &.empty{
+            display:none;
+        }
+        
     }
     
     .FormattedTextModule.content.item-address, .FormattedTextModule.content.item-year {
