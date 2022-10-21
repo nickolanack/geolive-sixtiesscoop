@@ -772,16 +772,29 @@ button.inline-edit {
         border-color: white;
     }
     
-    [data-view="sidePanelInfoDetail"]:after {
-        position: absolute;
-        content: "";
-        top: 42px;
-        left: -61px;
-        width: 20px;
-        height: 20px;
-        background: #e3e3e3;
-        border-radius: 100%;
-        border: 2px solid #444444;
+    [data-view="sidePanelInfoDetail"]{
+        
+        &:after {
+            position: absolute;
+            content: "";
+            top: 42px;
+            left: -61px;
+            width: 20px;
+            height: 20px;
+            background: #e3e3e3;
+            border-radius: 100%;
+            border: 2px solid #444444;
+        }
+        
+        &.birth-card:after{
+             background: #5daeeb;
+        }
+        &.journey-card:after{
+            background: #ffcc02;
+        }
+        &.repatriation-card:after{
+            background: #fd8209;
+        }
     }
     
     [data-view="sidePanelInfoDetail"] {
