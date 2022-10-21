@@ -89,6 +89,18 @@ if(AppClient.getUserType()!=="guest"){
         
         
     }}))
+ 
+ 
+ if(AppClient.getUserType()=="admin"){
+    new MockDataTypeItem({name:"[]", click:function(){
+        if(document.body.hasClass('hide-admin')){
+            document.body.removeClass('hide-admin');
+            return
+        }
+        document.body.addClass('hide-admin');
+    }}), 
+ }
+ 
     
 }
 
