@@ -14,7 +14,7 @@
                     })).on("success", function(userResp) {
                       
                        callback(new StoryUser(ObjectAppend_(storyResp, {
-                            user:userResp.values.entries[0]
+                            user:userResp.values[0].entries[0]
                         })));
                        
                     
