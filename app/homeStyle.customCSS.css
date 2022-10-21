@@ -761,6 +761,10 @@ button.inline-edit {
     
     
     [data-view="storyPageContent"] h1 {
+        
+        position: relative;
+        left: -50px;
+        
         font-weight: 100;
         font-size: 30px;
         color:#3f3c3b;
@@ -769,8 +773,6 @@ button.inline-edit {
           
             
             font-size: 55px;
-            position: relative;
-            left: -50px;
             color: #2196f3;
         }
     }
