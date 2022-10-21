@@ -803,7 +803,7 @@ button.inline-edit {
 
 
 
-.target-story{
+.target-story, .target-storyIndex{
     
     
     [data-view="storyPageContent"]{
@@ -930,7 +930,7 @@ button.inline-edit {
         border-color: white;
     }
     
-    [data-view="sidePanelInfoDetail"]{
+    [data-view="sidePanelInfoDetail"], [data-view="defaultView"]{
         
         &:after {
             position: absolute;
