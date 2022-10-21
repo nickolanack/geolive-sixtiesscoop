@@ -763,7 +763,6 @@ button.inline-edit {
     [data-view="storyPageContent"] h1 {
         
         position: relative;
-        left: -50px;
         
         font-weight: 100;
         font-size: 30px;
@@ -825,6 +824,7 @@ button.inline-edit {
         padding: 20px;
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
+        margin-left: 50px;
     }
     
     [data-view="sidePanelInfoDetail"] h2 {
