@@ -241,7 +241,8 @@ $introTextColor:#4d8673;
 
 
 
-     .ui-view.featured-stories, .intro-section, [data-view="searchPageContent"], [data-view="storyPageContent"]{
+     .ui-view.featured-stories, .intro-section, 
+     [data-view="searchPageContent"], [data-view="storyPageContent"], [data-view="storyIndexContent"]{
         width: 1000px;
         max-width: calc( 100% - 100px );
         margin: auto;
@@ -802,7 +803,7 @@ button.inline-edit {
 
 
 
-.target-story{
+.target-story, .target-storyIndex{
     
     
     [data-view="storyPageContent"]{
@@ -969,7 +970,7 @@ button.inline-edit {
         }
     }
     
-    [data-view="sidePanelInfoDetail"] {
+    [data-view="sidePanelInfoDetail"], [data-view="defaultView"] {
         padding: 20px;
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
