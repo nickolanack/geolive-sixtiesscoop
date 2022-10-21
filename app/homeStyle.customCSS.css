@@ -769,7 +769,7 @@ button.inline-edit {
     }
     
     [data-view="sidePanelInfoDetail"]:last-child:before {
-        display: none;
+        border-color: white;
     }
     
     [data-view="sidePanelInfoDetail"]:after {
