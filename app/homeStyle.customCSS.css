@@ -818,6 +818,20 @@ button.inline-edit {
         &.repatriation-card:after{
             background: #fd8209;
         }
+        
+        
+        &:hover:after {
+            filter: drop-shadow(0 0 6px rgba(0,0,0,0.2));
+            width: 25px;
+            height: 25px;
+            top: 40px;
+            left: -64px;
+            
+        }
+        
+        &:hover {
+             background-color: rgba(0, 0, 0, 0.04);
+        }
     }
     
     [data-view="sidePanelInfoDetail"] {
@@ -825,6 +839,7 @@ button.inline-edit {
         background-color: rgba(0,0,0,0.02);
         margin: 10px 0;
         margin-left: 50px;
+        transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s;
     }
     
     [data-view="sidePanelInfoDetail"] h2 {
