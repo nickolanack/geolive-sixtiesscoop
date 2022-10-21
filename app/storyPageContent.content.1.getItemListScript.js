@@ -1,8 +1,10 @@
-(new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
-                })).addEvent("success", function(resp) {
+// (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+//                     "plugin": "MapStory",
+//                     "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
+//                 })).addEvent("success", function(resp) {
                   
-                   callback((new StoryUser(resp)).getRealCardsSync());
+//                   callback((new StoryUser(resp)).getRealCardsSync());
                 
-                }).execute();
+//                 }).execute();
+
+return item.getRealCardsSync();
