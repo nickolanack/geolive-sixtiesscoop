@@ -11,11 +11,16 @@
                         "plugin": "Attributes",
                         "itemId":resp.features[0].uid,
                         "itemType":"user"
-                    })).addEvent("success", function(resp) {
+                    })).on("success", function(resp) {
                       
+                       callback(new StoryUser(ObjectAppend_(resp, {
+                            user:resp.values.entries[0]
+                        })));
                        
                     
-                    }).execute();
+                    }).on('error',function(){
+                       callback(new StoryUser(resp));
+                    })
                    
                 
                 }).execute();
