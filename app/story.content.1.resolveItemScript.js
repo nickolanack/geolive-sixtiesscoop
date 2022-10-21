@@ -10,7 +10,7 @@
                     (new AjaxControlQuery(CoreAjaxUrlRoot, "get_attribute_value_list", {
                         "plugin": "Attributes",
                         "itemId":resp.features[0].uid,
-                        "itemType":"User"
+                        "itemType":"user"
                     })).addEvent("success", function(resp) {
                       
                        
