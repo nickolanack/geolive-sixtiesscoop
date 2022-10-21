@@ -15,5 +15,6 @@
 	"get_dispersion_graph": {
 		"profile": true
 	},
-	"send_message": {}
+	"send_message": {},
+	"list_stories": {}
 }

@@ -112,6 +112,32 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 	}
 
+	protected function listStories($json){
+
+		GetPlugin('Maps');
+
+		$list=array();
+		$prefix='attribute_';
+
+
+		$filterBirthStories='{ 
+				"filters":[{
+					"field":"isBirthStory",
+					"value":true
+				}]
+			}';
+
+		$list=(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter($filterBirthStories)->get();
+
+		return array('results'=>$list);
+
+
+
+	}
+
 	protected function getDispersionGraph($json){
 		
 		GetPlugin('Maps');
