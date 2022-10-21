@@ -153,6 +153,7 @@ $introTextColor:#4d8673;
             font-size: 35px;
             font-weight: 400;
             text-shadow: 0 0 7px white;
+            text-align: center;
         }
         
     }
