@@ -4307,6 +4307,7 @@
                                     "formatVariablesScript": "",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
+                                    "formOptions": [],
                                     "identifier": "htmlLabel"
                                 }
                             },
