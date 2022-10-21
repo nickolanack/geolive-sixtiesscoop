@@ -1,4 +1,4 @@
-module.once('display', function(){
+//module.once('display', function(){
     setTimeout(function(){
         
         var list=module.getDetailViews().reverse();
@@ -18,4 +18,4 @@ module.once('display', function(){
         }
         
     }, 1000);  
-})
+//})
