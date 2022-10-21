@@ -990,6 +990,10 @@ button.inline-edit {
 
 
 
+.hide-admin .admin-btn, .hide-admin .inline-edit {
+    display:none
+}
+
 
 
 
