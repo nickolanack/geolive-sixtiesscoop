@@ -153,6 +153,11 @@ var StoryUser = new Class({
 		});
 
 
+		if(unique.length==0){
+			callback([]);
+			return;
+		}
+
 		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).on('success', function(res) {
 
 		 	if(res.success){
@@ -208,6 +213,11 @@ var StoryUser = new Class({
 		var unique=items.filter(function(url, i){
 			return items.indexOf(url)===i;
 		});
+
+		if(unique.length==0){
+			callback([]);
+			return;
+		}
 
 		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
 
