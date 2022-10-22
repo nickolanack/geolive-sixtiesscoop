@@ -153,10 +153,22 @@ var StoryUser = new Class({
 		});
 
 
-		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
+		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).on('success', function(res) {
 
-		 	console.log(res);
+		 	if(res.success){
+		 		callback(res.results.filter(function(data){
+		 			return data.type==='image'||(data.type==='external'&&data.externalType==='image');
+		 		});
+		 		return;
+		 	}
 
+		 	callback([]);
+
+		 }).on('failure',function(){
+		 
+		 	console.warn('Image metadata error');
+		 	callback([]);
+		 
 		 }).execute();
 
 
