@@ -6957,7 +6957,7 @@
                                 "type": "UIListView",
                                 "config": {
                                     "listClassName": "",
-                                    "className": "",
+                                    "className": "story-card",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "sidePanelInfoDetail",
