@@ -1,6 +1,24 @@
 console.log('custon media');
 
-item.getVideos();
-item.getImages();
+var el=new Element('span',{
+    "class":"media-container empty"
+});
 
-return null;
+item.getVideos();
+item.getImages(function(images){
+    
+    if(images.length){
+        el.appendChild(new Element('span',{
+            styles:{
+                'background-image':'url('+images[0].url+')'
+            }
+        }));
+        
+        el.removeClass('empty');
+        el.addClass('has-img');
+    }
+    
+    
+});
+
+return el;

@@ -246,12 +246,13 @@ $introTextColor:#4d8673;
         width: 1000px;
         max-width: calc( 100% - 100px );
         margin: auto;
+        font-size: 1.5em;
+        font-weight: 100;
      }
 
 
     .ui-view.featured-stories, .intro-section {
-        font-size: 1.5em;
-        font-weight: 100;
+        
 
         
         margin-top: 70px;
@@ -806,6 +807,36 @@ button.inline-edit {
 .target-story, .target-storyIndex{
     
     
+    .media-container.has-img {
+        float: left;
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        border: 3px solid white;
+        overflow: hidden;
+        
+        >span {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background-size: cover;
+        }
+    }
+    
+    .markdown:first-child {
+        min-height: 180px;
+        margin-right: 180px;
+    }
+    
+    
+    
+    
     [data-view="storyPageContent"], [data-view="storyIndexContent"]{
         
         h1 {
@@ -956,6 +987,17 @@ button.inline-edit {
         }
         
         
+        
+        &.story-card {
+            margin-left: 0;
+            
+            &:before, &:after {
+                display: none;
+            }
+            
+        }
+        
+        
         &:hover:after, &.anim:after {
             filter: drop-shadow(0 0 6px rgba(0,0,0,0.2));
             width: 25px;
@@ -980,6 +1022,10 @@ button.inline-edit {
             text-indent: 0;
             font-size: 25px;
             margin-bottom: 0;
+        }
+        
+        &.story-card h2{
+             margin-top: 0;
         }
         
     }
