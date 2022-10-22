@@ -158,7 +158,7 @@ var StoryUser = new Class({
 		 	if(res.success){
 		 		callback(res.results.filter(function(data){
 		 			return data.type==='image'||(data.type==='external'&&data.externalType==='image');
-		 		});
+		 		}));
 		 		return;
 		 	}
 
