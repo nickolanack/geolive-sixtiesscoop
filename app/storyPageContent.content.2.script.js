@@ -10,7 +10,7 @@ item.getImages(function(images){
     if(images.length){
         el.appendChild(new Element('span',{
             styles:{
-                'bacground-image':'url('+images[0].url+')'
+                'background-image':'url('+images[0].url+')'
             }
         }));
         
