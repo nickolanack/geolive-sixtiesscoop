@@ -986,6 +986,17 @@ button.inline-edit {
         }
         
         
+        
+        &.story-card {
+            margin-left: 0;
+            
+            &:before, &:after {
+                display: none;
+            }
+            
+        }
+        
+        
         &:hover:after, &.anim:after {
             filter: drop-shadow(0 0 6px rgba(0,0,0,0.2));
             width: 25px;
