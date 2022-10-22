@@ -828,6 +828,11 @@ button.inline-edit {
         }
     }
     
+    .markdown:first-child {
+        min-height: 180px;
+        margin-right: 180px;
+    }
+    
     
     
     
