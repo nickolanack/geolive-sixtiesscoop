@@ -4280,7 +4280,7 @@
                                 "type": "FormattedText",
                                 "config": {
                                     "textValueScript": "return item.getYear();",
-                                    "formatModuleScript": "",
+                                    "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.3.config.formatModuleScript.js",
                                     "className": "item-year",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
@@ -4314,7 +4314,7 @@
                                     "formatVariablesScript": "",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
-                                    "formOptions": [],
+                                    "formOptions": "{}",
                                     "identifier": "htmlLabel"
                                 }
                             },
