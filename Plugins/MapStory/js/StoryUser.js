@@ -128,7 +128,49 @@ var StoryUser = new Class({
 	},
 
 
-	getVideos:function(){
+	getImages:function(callback){
+
+		var content=this.getRealCardsSync().map(function(card){
+			return card.getCardMedia();
+		}).join("\n");
+
+
+		var parser=(new HTMLTagParser());
+		parser.parse(content);
+		
+
+		var items=parser.get('images').concat(
+				parser.get('links'), 
+			).map(function(item){
+
+			return item.url||false;
+
+			}).filter(function(item){ return !!item; });
+
+
+		var unique=items.filter(function(url, i){
+			return items.indexOf(url)===i;
+		});
+
+
+		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
+
+		 	console.log(res);
+
+		 }).execute();
+
+
+
+
+
+
+		return [];
+
+		
+	},
+
+
+	getVideos:function(callback){
 
 		var content=this.getRealCardsSync().map(function(card){
 			return card.getCardMedia();
@@ -155,8 +197,7 @@ var StoryUser = new Class({
 			return items.indexOf(url)===i;
 		});
 
-
-		 (new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
+		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
 
 		 	console.log(res);
 
