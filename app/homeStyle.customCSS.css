@@ -1023,6 +1023,10 @@ button.inline-edit {
             margin-bottom: 0;
         }
         
+        &.story-card h2{
+             margin-top: 0;
+        }
+        
     }
     
     
