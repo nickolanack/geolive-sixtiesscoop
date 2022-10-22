@@ -246,12 +246,13 @@ $introTextColor:#4d8673;
         width: 1000px;
         max-width: calc( 100% - 100px );
         margin: auto;
+        font-size: 1.5em;
+        font-weight: 100;
      }
 
 
     .ui-view.featured-stories, .intro-section {
-        font-size: 1.5em;
-        font-weight: 100;
+        
 
         
         margin-top: 70px;
