@@ -1,3 +1,6 @@
 console.log('custon media');
 
-return item.getVideos();
+item.getVideos();
+item.getImages();
+
+return null;
