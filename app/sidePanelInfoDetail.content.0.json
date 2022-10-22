@@ -3,7 +3,7 @@
     "config": {
         "textValueScript": "\nif(item instanceof StoryCard){\n    return \"<h2>\"+item.getTypeOfCard()+\" Story<\/h2>\";\n        \n}\nreturn \"<h2>\"+item.getTypeOfCard()+\"<\/h2>\";",
         "formatModuleScript": "",
-        "className": "",
+        "className": "story-type",
         "imageWidth": 300,
         "imageHeight": 240,
         "multiImageWidth": 100,
