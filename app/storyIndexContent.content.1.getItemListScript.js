@@ -4,6 +4,7 @@ callback([]);
 
                  (new AjaxControlQuery(CoreAjaxUrlRoot, "list_stories", {
                         "plugin": "MapStory",
+                        "limit":limit
                     })).on("success", function(resp) {
                         
                        callback(resp.results.map(function(item){
