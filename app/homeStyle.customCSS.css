@@ -839,6 +839,15 @@ button.inline-edit {
         position: relative;
         
         
+        h2 {
+            color: white;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            text-shadow: 0 0 3px #00000078, 0 0 5px #0000007a;
+        }
+        
+        
         svg {
             width: 70px;
             position: absolute;
