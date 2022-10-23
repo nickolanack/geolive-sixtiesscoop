@@ -851,6 +851,8 @@ button.inline-edit {
         cursor:pointer;
         
         &:hover{
+            
+            filter: grayscale(0);
             svg {
                 filter: hue-rotate(190deg);
                 transition: filter 1s;
