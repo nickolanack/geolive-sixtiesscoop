@@ -807,7 +807,7 @@ button.inline-edit {
 .target-story, .target-storyIndex{
     
     
-    .media-container.has-img>span{
+    .media-container.has-img>.image{
         float: left;
         width: 150px;
         height: 150px;
@@ -827,7 +827,7 @@ button.inline-edit {
     }
     
     
-    .media-container.has-video>.video, .media-container.has-video>.video{
+    .media-container.has-video>.video{
         height: 400px;
         display: block;
         background-size: cover;
