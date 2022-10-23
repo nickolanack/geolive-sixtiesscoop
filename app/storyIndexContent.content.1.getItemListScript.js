@@ -7,8 +7,13 @@ callback([]);
                         "limit":limit
                     })).on("success", function(resp) {
                         
-                       callback(resp.results.map(function(item){
-                           return new StoryGroup({
+                       callback(resp.results.map(function(item, i){
+                           
+                            if(!item.features){
+                                return new MockDataTypeItem(item);
+                            }
+                           
+                            return new StoryGroup({
                                type:item.features[0].name,
                                description:"",
                                cards:[],
