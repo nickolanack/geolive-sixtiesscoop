@@ -807,7 +807,7 @@ button.inline-edit {
 .target-story, .target-storyIndex{
     
     
-    .media-container.has-img {
+    .media-container.has-img>span{
         float: left;
         width: 150px;
         height: 150px;
@@ -821,13 +821,34 @@ button.inline-edit {
         border: 3px solid white;
         overflow: hidden;
         
-        >span {
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            background-size: cover;
+         background-size: cover;
+        
+       
+    }
+    
+    
+    .media-container.has-video>.video, .media-container.has-video>.video{
+        height: 400px;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        margin-left: 45px;
+        box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+        filter: grayscale(0.4);
+        position: relative;
+        
+        
+        svg {
+            width: 70px;
+            position: absolute;
+            left: calc( 50% - 35px );
+            top: calc( 50% - 10px );
+            height: 50px;
         }
     }
+
+
     
     .markdown:first-child {
         min-height: 180px;
