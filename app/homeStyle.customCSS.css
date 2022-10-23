@@ -845,6 +845,16 @@ button.inline-edit {
             left: calc( 50% - 35px );
             top: calc( 50% - 10px );
             height: 50px;
+            transition: filter 0.8s;
+        }
+        
+        cursor:pointer;
+        
+        &:hover{
+            svg:hover {
+                filter: hue-rotate(190deg);
+                transition: filter 0.2s;
+            }
         }
     }
 
