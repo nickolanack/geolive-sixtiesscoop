@@ -221,8 +221,20 @@ var StoryUser = new Class({
 
 		(new HTMLArrayMetadataRequest(unique)).cache({expire:5}).addEvent('success', function(res) {
 
-		 	console.log(res);
+		 	if(res.success){
+		 		callback(res.results.filter(function(data){
+		 			return data.type==='video'||(data.type==='external'&&data.externalType==='video');
+		 		}));
+		 		return;
+		 	}
 
+		 	callback([]);
+
+		 }).on('failure',function(){
+		 
+		 	console.warn('Video metadata error');
+		 	callback([]);
+		 
 		 }).execute();
 
 
