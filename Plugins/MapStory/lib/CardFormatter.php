@@ -53,10 +53,10 @@ class CardFormatter {
 		}
 
 
-		if(gettype($featureMeta['coordinates'])=='string'){
-			$featureMeta['coordinates']=json_decode($featureMeta['coordinates']);
-			if(isset($featureMeta['coordinates']->coordinates)){
-				$featureMeta['coordinates']=$featureMeta['coordinates']->coordinates;
+		if(gettype($feature['coordinates'])=='string'){
+			$feature['coordinates']=json_decode($feature['coordinates']);
+			if(isset($feature['coordinates']->coordinates)){
+				$feature['coordinates']=$feature['coordinates']->coordinates;
 			}
 		}
 
