@@ -1,0 +1,1 @@
+return new Element('button', {'class':"inline-edit options-btn", html:"Advanced"});
