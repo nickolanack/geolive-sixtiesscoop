@@ -827,12 +827,27 @@ button.inline-edit {
 
 
 
+.search-result-list {
+    box-shadow: none;
+    
+    li>span {
+        height: unset;
+        
+        
+        .icon{
+            display: none;
+        }
+    }
+}
 
 
 
 
 
-.target-story, .target-storyIndex{
+
+
+
+.target-story, .target-storyIndex, .target-search{
     
     
     .media-container.has-img>.image{
