@@ -1104,8 +1104,12 @@ button.inline-edit {
     
 }
 
-
-
+.target-storyIndex [data-view="sidePanelInfoDetail"]{
+    cursor:pointer;
+    &:nth-child(odd){
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+}
 
 
 .hide-admin .admin-btn, .hide-admin .inline-edit {
