@@ -1076,7 +1076,7 @@ button.inline-edit {
         
         
         
-        &.story-card {
+        &.story-card, &.result-clickable  {
             margin-left: 0;
             
             &:before, &:after {
