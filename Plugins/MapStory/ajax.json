@@ -10,7 +10,9 @@
 	"get_stories_with_items": {},
 	"get_story_with_user": {},
 	"search": {},
-	"advanced_search": {},
+	"advanced_search": {
+		"profile":true
+	},
 	"get_feature_list": {},
 	"get_dispersion_graph": {
 		"profile": true
