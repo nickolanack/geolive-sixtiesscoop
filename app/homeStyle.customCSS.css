@@ -347,7 +347,7 @@ $introTextColor:#4d8673;
         background-color: whitesmoke;
     }
     
-    .form-navigation-btns button, button.form-btn, .pagination-item butto{
+    .form-navigation-btns button, button.form-btn, .pagination-item button{
             display: inline-block;
             padding: 10px 20px;
             background-color: $buttonColor;
@@ -397,9 +397,9 @@ $introTextColor:#4d8673;
         font-size: 16px;
         padding: 4px 10px;
         
-        .uilist-pagination .pagination-item button.disabled {
-                background-color: rgba(0,0,0,0.1);
-            }
+        &.disabled {
+            background-color: rgba(0,0,0,0.1);
+        }
         
     }
 }
