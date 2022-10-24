@@ -6,3 +6,8 @@ if(isNaN(pageNumber)){
 }
 
 module.showPage(pageNumber);
+
+module.setPaginationOptions({
+    position:"auto",
+    showPages:true
+});
