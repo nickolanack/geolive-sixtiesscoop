@@ -14,6 +14,14 @@ var SearchAggregator = new Class({
                 namedView: "scoopStoryDetail",
                 formatResult: function(data) {
 
+                    return new StoryGroup({
+                               type:item.features[0].name,
+                               description:"",
+                               cards:[],
+                               id:item.id
+                               
+                           });
+                   
                    
                 },
                 events: {
@@ -45,3 +53,8 @@ var SearchAggregator = new Class({
         });
     }
 });
+
+
+return [
+        new SearchAggregator(search);
+    ]
