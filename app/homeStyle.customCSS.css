@@ -1146,6 +1146,16 @@ button.inline-edit {
         position: relative;
         top: -40px;
     }
+    
+    .ui-view.search-content {
+        display: none;
+    }
+    
+    .ui-view.search-content.enabled {
+        display: inline-block;
+    }
+        
+    
 }
 
 
