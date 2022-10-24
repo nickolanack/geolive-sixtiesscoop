@@ -105,12 +105,15 @@ class CardFormatter {
 	protected function parseLocationData($featureMeta) {
 		GetPlugin('GoogleMaps');
 		\core\DataStorage::LogQuery("Query Location Data: ".$featureMeta['id']);
+
+		$lat=$featureMeta['coordinates'][0];
+		$lng=$featureMeta['coordinates'][1];
+
 		$geocode = (new \GoogleMaps\Geocoder())->fromCoordinates(
-			$featureMeta['coordinates'][0],
-			$featureMeta['coordinates'][1],
+			$lat, $lng,
 			GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
 		);
-		error_log(json_encode($geocode));
+		error_log(json_encode(array($geocode, $lat, $lng)));
 		if (key_exists('results', $geocode) && count($geocode->results)) {
 
 			$locationData = array(
@@ -127,6 +130,8 @@ class CardFormatter {
 			));
 
 			return $jsonLocationData;
+
+		}else{
 
 		}
 
