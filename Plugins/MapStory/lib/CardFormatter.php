@@ -89,9 +89,11 @@ class CardFormatter {
 			}
 		}
 
-		\core\DataStorage::LogQuery("Update Location Name");
 
 		if ($locationName && $locationName != "false") {
+
+			\core\DataStorage::LogQuery("Update Location Name");
+
 			(new \attributes\Record('storyAttributes'))->setValues($itemId, "MapStory.card", array(
 				"locationName" => $locationName,
 			));
