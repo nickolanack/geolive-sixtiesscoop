@@ -85,9 +85,10 @@ class CardSearch{
 		if (key_exists('name', $fields)&&(!empty($fields->name))) {
 			$filter[] = array(
 				 array(
-				 	'field' =>'name',
-					'comparator' => ' LIKE ',
-					'value' => '%' . $fields->name . '%'
+				 	'name' =>array(
+						'comparator' => ' LIKE ',
+						'value' => '%' . $fields->name . '%'
+					)
 				)
 			);
 		}
@@ -102,9 +103,10 @@ class CardSearch{
 
 			$filter[] = array(
 				array(
-					'field' =>'name',
-					'comparator' => ' LIKE ',
-					'value' => '%(%' . $fields->nob . '%)%'
+					'name' =>array(
+						'comparator' => ' LIKE ',
+						'value' => '%(%' . $fields->nob . '%)%'
+					)
 				)
 			);
 
