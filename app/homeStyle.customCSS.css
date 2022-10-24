@@ -1152,7 +1152,7 @@ button.inline-edit {
     }
     
     .ui-view.search-content.enabled {
-        display: inline-block;
+        display: block;
     }
         
     
