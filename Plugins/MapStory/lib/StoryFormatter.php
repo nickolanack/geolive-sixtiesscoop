@@ -46,23 +46,14 @@ class StoryFormatter {
 			}
 
 
-			$countryA=$this->getCountry($attributes['locationData']);
-			$provinceA=$this->getProvince($attributes['locationData']);
-			$attributes['country']=$countryA;
-			$attributes['province']=$provinceA;
-
-
-			$feature['attributes'] = $attributes;
-
-
 			if ($this->isRepatriationStory($attributes)) {
 
 				if (!$hasRepatriationStory) {
 					$hasRepatriationStory = true;
-					continue;
-
+				
+				}else{
+					$attributes['isRepatriationStory'] = false;
 				}
-				$attributes['isRepatriationStory'] = false;
 
 			}
 
@@ -95,6 +86,11 @@ class StoryFormatter {
 				}
 			}
 
+
+			$countryA=$this->getCountry($attributes['locationData']);
+			$provinceA=$this->getProvince($attributes['locationData']);
+			$attributes['country']=$countryA;
+			$attributes['province']=$provinceA;
 
 
 			$feature['attributes'] = $attributes;
