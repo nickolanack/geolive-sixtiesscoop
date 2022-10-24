@@ -801,6 +801,8 @@
             "target": "forTheMap",
             "position": "BOTTOM_CENTER",
             "className": "overlay-bar",
+            "elementType": "div",
+            "elementOptions": [],
             "identifier": "",
             "viewType": "view",
             "namedView": "scoopStoryView",
@@ -5707,6 +5709,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "featured-story",
+                                    "elementType": "a",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "featuredStory",

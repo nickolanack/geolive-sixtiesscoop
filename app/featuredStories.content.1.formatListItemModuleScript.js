@@ -8,6 +8,8 @@ childView.getElement().addEvent('click', function(){
 });
 
 
+childView.getElement().href=document.location.origin+'/story/'+child.getId();
+
 
 // if(attrs.isBirthStory===true){
 //     childView.getElement().addClass('birth-card');
