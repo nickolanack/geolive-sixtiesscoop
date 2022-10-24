@@ -1190,7 +1190,7 @@ button.inline-edit {
     }
 }
 
-.target-search .search-result-list li:nth-child(odd){ [data-view="sidePanelInfoDetail"]{
+.target-search .search-result-list li:nth-child(odd) [data-view="sidePanelInfoDetail"]{
     
     background-color: rgba(0, 0, 0, 0.06);
     
