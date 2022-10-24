@@ -1,9 +1,17 @@
 {
-    "type": "Search",
+    "type": "Template",
     "config": {
-        "getAggregatorsScript": "return ScoopStories.getSearchAggregators(search);",
-        "searchOptions": "{}",
-        "formatSearchModuleScript": "",
-        "placeholder": "Search names, places and years"
+        "className": "",
+        "elementType": "span",
+        "elementOptions": "{}",
+        "text": "",
+        "template": "searchText",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
     }
 }

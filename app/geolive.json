@@ -6811,9 +6811,20 @@
                         "modules": [
                             "searchPageContent.metadata.positions.content.modules.0.json",
                             {
+                                "type": "Search",
+                                "config": {
+                                    "getAggregatorsScript": "searchPageContent.metadata.positions.content.modules.1.config.getAggregatorsScript.js",
+                                    "searchOptions": "{}",
+                                    "formatSearchModuleScript": "",
+                                    "placeholder": "Search names, places and years"
+                                }
+                            },
+                            {
                                 "type": "UIView",
                                 "config": {
                                     "className": "search-content",
+                                    "elementType": "div",
+                                    "elementOptions": [],
                                     "identifier": "",
                                     "viewType": "form",
                                     "namedView": "defaultView",
