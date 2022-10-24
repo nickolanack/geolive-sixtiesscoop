@@ -832,6 +832,7 @@ button.inline-edit {
     
     li>span {
         height: unset;
+        border: none;
         
         
         .icon{
