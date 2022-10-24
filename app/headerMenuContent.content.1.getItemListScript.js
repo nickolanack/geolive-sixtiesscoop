@@ -1,15 +1,15 @@
 var links= [
-    new MockDataTypeItem({name:"Home", click:function(){
+    new MockDataTypeItem({name:"Home", link:"/", click:function(){
         window.location.href="/"
     }}), 
-    new MockDataTypeItem({name:"Map", click:function(){
+    new MockDataTypeItem({name:"Map", link:"/map", click:function(){
         window.location.href="/map"
     }}), 
-    new MockDataTypeItem({name:"Search", click:function(){
+    new MockDataTypeItem({name:"Search",  link:"/search", click:function(){
         window.location.href="/search"
     }}), 
-    new MockDataTypeItem({name:"Help"}), 
-    new MockDataTypeItem({name:"About"}), 
+    new MockDataTypeItem({name:"Help", link:"/help" }), 
+    new MockDataTypeItem({name:"About", link:"/about" }), 
     new MockDataTypeItem({name:"Sign in", click:function(){
         
         
