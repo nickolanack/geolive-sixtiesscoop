@@ -321,7 +321,10 @@ $introTextColor:#4d8673;
 
 
 
-[data-template-name="form"]{
+
+
+
+[data-template-name="form"], .uilist-pagination{
 
     h2 {
         color: #4d8673;
@@ -344,7 +347,7 @@ $introTextColor:#4d8673;
         background-color: whitesmoke;
     }
     
-    .form-navigation-btns button, button.form-btn {
+    .form-navigation-btns button, button.form-btn, .pagination-item butto{
             display: inline-block;
             padding: 10px 20px;
             background-color: $buttonColor;
@@ -385,6 +388,25 @@ $introTextColor:#4d8673;
     
     
 }
+
+.uilist-pagination {
+    display: inline-block;
+    width: 100%;
+    
+    .pagination-item button{
+        font-size: 16px;
+        padding: 4px 10px;
+        
+        .uilist-pagination .pagination-item button.disabled {
+                background-color: rgba(0,0,0,0.1);
+            }
+        
+    }
+}
+
+
+
+
 
 .pb-c:after {
     background-color:transparent;
