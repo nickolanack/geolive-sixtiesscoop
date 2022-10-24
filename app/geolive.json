@@ -6824,7 +6824,7 @@
                                 "config": {
                                     "className": "search-content",
                                     "elementType": "div",
-                                    "elementOptions": [],
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "form",
                                     "namedView": "defaultView",
@@ -6837,7 +6837,7 @@
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
                                     "formatModuleScript": "",
-                                    "resolveItemScript": "return item",
+                                    "resolveItemScript": "searchPageContent.metadata.positions.content.modules.2.config.resolveItemScript.js",
                                     "filterModulesScript": "return list",
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
