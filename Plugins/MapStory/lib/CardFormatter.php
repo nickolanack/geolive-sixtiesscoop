@@ -106,7 +106,12 @@ class CardFormatter {
 		GetPlugin('GoogleMaps');
 		\core\DataStorage::LogQuery("Query Location Data: ".$featureMeta['id']);
 
-
+		if(gettype($featureMeta['coordinates'])=='string'){
+			$featureMeta['coordinates']=json_decode($featureMeta['coordinates']);
+			if(isset($featureMeta['coordinates']->coordinates)){
+				$featureMeta['coordinates']=$featureMeta['coordinates']->coordinates;
+			}
+		}
 
 		$lat=$featureMeta['coordinates'][0];
 		$lng=$featureMeta['coordinates'][1];

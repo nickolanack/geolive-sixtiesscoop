@@ -138,6 +138,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->withAllAttributes($prefix)
 			->withFilter($filterBirthStories)->iterate(function($result)use(&$list, $prefix, &$index, $limit){
 
+				//result is not a metadata object
+
 				if((!$limit)||$index>=$limit[0]&&$index<$limit[1]){
 					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result, 'attribute_')));
 				}else{
