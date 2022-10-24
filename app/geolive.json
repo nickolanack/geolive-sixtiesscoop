@@ -7069,5 +7069,19 @@
             "contentTemplate": "#Story Index",
             "readAccess": "public"
         }
+    },
+    "widget.105": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.searchText.text",
+            "target": "module.searchText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "#Search\n"
+        }
     }
 }
