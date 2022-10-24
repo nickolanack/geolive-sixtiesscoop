@@ -11,7 +11,7 @@ var SearchAggregator = new Class({
             PreviousTemplate: UIListAggregator.PreviousTemplate,
             MoreTemplate: UIListAggregator.MoreTemplate,
             ResultTemplate: UIListAggregator.NamedViewTemplate(application, {
-                namedView: "scoopStoryDetail",
+                namedView: "sidePanelInfoDetail",
                 formatResult: function(data) {
 
                     return new StoryGroup({
