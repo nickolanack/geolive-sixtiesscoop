@@ -324,7 +324,7 @@ $introTextColor:#4d8673;
 
 
 
-[data-template-name="form"], .uilist-pagination{
+[data-template-name="form"], .target-storyIndex .uilist-pagination{
 
     h2 {
         color: #4d8673;
@@ -392,7 +392,7 @@ $introTextColor:#4d8673;
 
 
 
-.page-content .ui-list-view >.uilist-pagination {
+.target-storyIndex .page-content .ui-list-view >.uilist-pagination {
     display: inline-block;
     width: 100%;
     text-align: right;
