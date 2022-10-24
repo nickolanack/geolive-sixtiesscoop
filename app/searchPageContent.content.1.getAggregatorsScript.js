@@ -15,7 +15,7 @@ var SearchAggregator = new Class({
                 formatResult: function(data) {
 
                     return new StoryGroup({
-                               type:item.features[0].name,
+                               type:data.name,
                                description:"",
                                cards:[],
                                id:item.id
