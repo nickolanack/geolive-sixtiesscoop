@@ -389,13 +389,19 @@ $introTextColor:#4d8673;
     
 }
 
-.uilist-pagination {
+
+
+
+.page-content .ui-list-view >.uilist-pagination {
     display: inline-block;
     width: 100%;
+    text-align: right;
     
     .pagination-item button{
         font-size: 16px;
         padding: 4px 10px;
+        
+        float:unset;
         
         &.disabled {
             background-color: rgba(0,0,0,0.1);
