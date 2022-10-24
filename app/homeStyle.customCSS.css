@@ -1132,6 +1132,25 @@ button.inline-edit {
     
 }
 
+.target-search{
+
+    button.inline-edit.options-btn:after {
+        top: 0;
+        content: "\0f1de";
+        color: black;
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    button.inline-edit.options-btn {
+        position: relative;
+        top: -40px;
+    }
+}
+
+
+
+
 .target-storyIndex [data-view="sidePanelInfoDetail"]{
     cursor:pointer;
     &:nth-child(odd){
