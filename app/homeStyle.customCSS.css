@@ -1159,4 +1159,8 @@ button.inline-edit {
 }
 
 
+a.ui-view,.template-content a{
+    color: inherit;
+}
+
 
