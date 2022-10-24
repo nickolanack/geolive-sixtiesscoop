@@ -25,8 +25,9 @@ var SearchAggregator = new Class({
                    
                 },
                 events: {
-                    click: function() {
-
+                    click: function(result, e) {
+            
+                        window.location.href="/story/"+result.id
 
                     }
                 }
