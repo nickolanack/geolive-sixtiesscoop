@@ -106,6 +106,8 @@ class CardFormatter {
 		GetPlugin('GoogleMaps');
 		\core\DataStorage::LogQuery("Query Location Data: ".$featureMeta['id']);
 
+
+
 		$lat=$featureMeta['coordinates'][0];
 		$lng=$featureMeta['coordinates'][1];
 
@@ -113,7 +115,7 @@ class CardFormatter {
 			$lat, $lng,
 			GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
 		);
-		error_log(json_encode(array($geocode, $lat, $lng)));
+		error_log(json_encode(array($geocode, $lat, $lng, $featureMeta['coordinates'])));
 		if (key_exists('results', $geocode) && count($geocode->results)) {
 
 			$locationData = array(
