@@ -49,9 +49,7 @@ $introTextColor:#4d8673;
     
 }
 
-.markdown a {
-    color: #3f8a9d;
-}
+
 
 
 
@@ -1227,6 +1225,10 @@ button.inline-edit {
 
 a.ui-view,.template-content a{
     color: inherit;
+}
+
+.markdown.template-content a {
+    color: #3f8a9d;
 }
 
 
