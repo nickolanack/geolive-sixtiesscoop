@@ -6823,7 +6823,7 @@
                                 "config": {
                                     "getAggregatorsScript": "searchPageContent.metadata.positions.content.modules.1.config.getAggregatorsScript.js",
                                     "searchOptions": "{\n    \"focusResultsDisplay\":false\n}",
-                                    "formatSearchModuleScript": "",
+                                    "formatSearchModuleScript": "searchPageContent.metadata.positions.content.modules.1.config.formatSearchModuleScript.js",
                                     "placeholder": "Search names, places and years"
                                 }
                             },

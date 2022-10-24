@@ -1,0 +1,6 @@
+searchModule.getSearch(function(search){
+    
+    
+    
+    
+});
