@@ -6962,6 +6962,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "story-card",
+                                    "elementType": "a",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "sidePanelInfoDetail",
