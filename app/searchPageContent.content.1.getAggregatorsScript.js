@@ -56,5 +56,5 @@ var SearchAggregator = new Class({
 
 
 return [
-        new SearchAggregator(search);
+        new SearchAggregator(search)
     ]
