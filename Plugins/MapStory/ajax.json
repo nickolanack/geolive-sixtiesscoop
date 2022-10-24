@@ -16,5 +16,7 @@
 		"profile": true
 	},
 	"send_message": {},
-	"list_stories": {}
+	"list_stories": {
+		"profile": true
+	}
 }
