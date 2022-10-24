@@ -104,7 +104,7 @@ class CardFormatter {
 
 	protected function parseLocationData($featureMeta) {
 		GetPlugin('GoogleMaps');
-		\core\DataStorage::LogQuery("Query Location Data");
+		\core\DataStorage::LogQuery("Query Location Data: ".$featureMeta['id']);
 		$geocode = (new \GoogleMaps\Geocoder())->fromCoordinates(
 			$featureMeta['coordinates'][0],
 			$featureMeta['coordinates'][1],
