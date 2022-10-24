@@ -138,7 +138,7 @@
                 "*.s22.ok.ubc.ca",
                 ""
             ],
-            "AjaxProfilingEnabled": false
+            "AjaxProfilingEnabled": true
         }
     },
     "plugin.12": {
