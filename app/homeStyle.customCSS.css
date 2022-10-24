@@ -1189,12 +1189,16 @@ button.inline-edit {
     &:nth-child(odd){
         background-color: rgba(0, 0, 0, 0.06);
     }
+    &:hover:nth-child(odd){
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .target-search .search-result-list li:nth-child(odd) [data-view="sidePanelInfoDetail"]{
-    
     background-color: rgba(0, 0, 0, 0.06);
-    
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 
