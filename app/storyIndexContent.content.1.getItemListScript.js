@@ -17,7 +17,7 @@ callback([]);
                                type:item.features[0].name,
                                description:"",
                                cards:[],
-                               id:item.id
+                               id:data.id
                                
                            });
                        }))
