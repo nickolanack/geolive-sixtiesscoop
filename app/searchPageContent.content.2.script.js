@@ -5,13 +5,14 @@ return new Element('button', {'class':"inline-edit options-btn", html:"Advanced"
                 
             this.removeClass('enabled');
             $$('.ui-view.search-content')[0].removeClass('enabled');
-            
+            this.innerHTML='Hide advanced';
             return;
         }
         
         
         this.addClass('enabled');
         $$('.ui-view.search-content')[0].addClass('enabled');
+        this.innerHTML='Advanced';
         
     }
 }});
