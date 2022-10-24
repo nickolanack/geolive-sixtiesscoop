@@ -6822,7 +6822,7 @@
                                 "type": "Search",
                                 "config": {
                                     "getAggregatorsScript": "searchPageContent.metadata.positions.content.modules.1.config.getAggregatorsScript.js",
-                                    "searchOptions": "{}",
+                                    "searchOptions": "{\n    \"focusResultsDisplay\":false\n}",
                                     "formatSearchModuleScript": "",
                                     "placeholder": "Search names, places and years"
                                 }
