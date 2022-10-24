@@ -1,9 +1,17 @@
 {
-    "type": "InlineHtml",
+    "type": "Template",
     "config": {
         "className": "section-label",
+        "elementType": "span",
+        "elementOptions": "{}",
         "text": "Refine your search",
-        "template": "",
-        "templateVariablesScript": ""
+        "template": "advancedSearchHeading",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
     }
 }
