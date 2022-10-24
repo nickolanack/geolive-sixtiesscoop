@@ -66,7 +66,7 @@ class CardFormatter {
 			$location=json_decode($attributes['locationData']);
 			if(json_encode($location->coordinates)!==json_encode($feature['coordinates'])){
 
-				error_log('clear location data')
+				error_log('clear location data');
 
 				$attributes['locationData']=null;
 			}
