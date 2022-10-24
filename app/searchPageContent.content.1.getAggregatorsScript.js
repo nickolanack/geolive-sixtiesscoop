@@ -18,7 +18,7 @@ var SearchAggregator = new Class({
                                type:data.name,
                                description:"",
                                cards:[],
-                               id:item.id
+                               id:data.id
                                
                            });
                    
