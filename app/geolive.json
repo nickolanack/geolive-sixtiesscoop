@@ -7092,5 +7092,19 @@
             "contentTemplate": "#Search\n",
             "readAccess": "public"
         }
+    },
+    "widget.106": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.advancedSearchHeading.text",
+            "target": "module.advancedSearchHeading.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Refine your search"
+        }
     }
 }
