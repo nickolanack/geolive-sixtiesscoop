@@ -43,12 +43,7 @@ class CardFormatter {
 		}
 
 
-		if(gettype($featureMeta['coordinates'])=='string'){
-			$featureMeta['coordinates']=json_decode($featureMeta['coordinates']);
-			if(isset($featureMeta['coordinates']->coordinates)){
-				$featureMeta['coordinates']=$featureMeta['coordinates']->coordinates;
-			}
-		}
+
 
 
 		if (!$attributes) {
@@ -56,6 +51,15 @@ class CardFormatter {
 			$attr = (new \attributes\Record('storyAttributes'));
 			$attributes = $attr->getValues($feature['id'], "MapStory.card");
 		}
+
+
+		if(gettype($featureMeta['coordinates'])=='string'){
+			$featureMeta['coordinates']=json_decode($featureMeta['coordinates']);
+			if(isset($featureMeta['coordinates']->coordinates)){
+				$featureMeta['coordinates']=$featureMeta['coordinates']->coordinates;
+			}
+		}
+
 
 		if(!empty($attributes['locationData'])){
 
