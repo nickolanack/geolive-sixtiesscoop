@@ -5751,7 +5751,7 @@
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
                                     "formOptions": "{}",
-                                    "identifier": "htmlLabel"
+                                    "identifier": "stories-index-link"
                                 }
                             }
                         ]
