@@ -5741,6 +5741,8 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "view-index-link",
+                                    "elementType": "a",
+                                    "elementOptions": "{\n    \"href\":\"\/story-index\"\n}",
                                     "text": "Index",
                                     "template": "",
                                     "templateVariablesScript": "",
