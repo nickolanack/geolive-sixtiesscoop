@@ -20,11 +20,21 @@ item.getVideos(function(videos){
         el.removeClass('empty');
         el.addClass('has-video');
         
-        el.addEvent('click', function(){
+        yt.addEvent('click', function(){
            
            console.log(videos[0]) 
             
         });
+        
+        yt.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(){
+            var p=el.parentNode;
+            if(p.hasClass('small-video')){
+                p.removeClass('small-video');
+                return;
+            }
+            p.addClass('small-video')
+        }}}))
+        
     }
     
     
