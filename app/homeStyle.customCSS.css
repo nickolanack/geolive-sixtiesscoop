@@ -930,6 +930,7 @@ button.inline-edit {
             width: 150px;
             height: 75px;
             margin: 0;
+            left: -18px;
             
             
             h2 {
@@ -1301,7 +1302,7 @@ a.ui-view,.template-content a{
     content: "\0f065";
     top: unset;
     bottom: 35px;
-    right: -30px;
+    right: -12px;
 }
 
 
