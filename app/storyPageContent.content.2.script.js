@@ -23,6 +23,16 @@ item.getVideos(function(videos){
         yt.addEvent('click', function(){
            
            console.log(videos[0]) 
+           
+                    PushBoxWindow.open(videos[0].iframe, {
+	                    handler: 'iframe',
+	                    size: {
+	                        x: videos[0].w,
+	                        y: videos[0].h
+	                    },
+	                    push: true
+	                });
+           
             
         });
         
