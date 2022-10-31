@@ -850,8 +850,14 @@ button.inline-edit {
 
 
 
+
+
+
+
 .target-story, .target-storyIndex, .target-search{
     
+    
+        
     
     .media-container.has-img>.image{
         float: left;
@@ -917,6 +923,44 @@ button.inline-edit {
         }
     }
 
+
+    .small-video{
+        
+        .media-container.has-video > .video {
+            width: 150px;
+            height: 75px important;
+            margin: 0 important;
+            
+            
+            h2 {
+                white-space: nowrap;
+                font-size: 16.5px;
+                color: black;
+                display: block;
+                position: absolute;
+                top: 0px;
+                line-height: 51px;
+                left: 160px;
+                text-shadow: none;
+            }
+            
+            
+            
+            svg{
+                width: 40px;
+                height: 30px;
+                top: calc(50% - 13px);
+                left: calc(50% - 20px);
+                opacity: 0.7;
+            }
+                
+            
+        }
+        
+        
+        
+    }
+    
 
     
     .markdown:first-child {
