@@ -928,8 +928,8 @@ button.inline-edit {
         
         .media-container.has-video > .video {
             width: 150px;
-            height: 75px important;
-            margin: 0 important;
+            height: 75px;
+            margin: 0;
             
             
             h2 {
@@ -1071,7 +1071,9 @@ button.inline-edit {
         }
         
         
-        
+        .small-video {
+            position: unset;  
+        }
         
         
         
