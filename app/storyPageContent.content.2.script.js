@@ -26,10 +26,7 @@ item.getVideos(function(videos){
            
                     PushBoxWindow.open(videos[0].iframe, {
 	                    handler: 'iframe',
-	                    size: {
-	                        x: videos[0].w,
-	                        y: videos[0].h
-	                    },
+	                    size: PushBox.FitWindow(),
 	                    push: true
 	                });
            
