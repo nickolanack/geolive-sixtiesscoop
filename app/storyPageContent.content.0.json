@@ -2,6 +2,8 @@
     "type": "Template",
     "config": {
         "className": "",
+        "elementType": "span",
+        "elementOptions": {},
         "text": "##{{story[0].name}}",
         "template": "userStoryText",
         "templateVariablesScript": "{}",

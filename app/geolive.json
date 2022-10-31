@@ -6494,6 +6494,8 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "map-view-link",
+                                    "elementType": "span",
+                                    "elementOptions": [],
                                     "text": "View this story on the map",
                                     "template": "",
                                     "templateVariablesScript": "",
@@ -6518,6 +6520,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "",
+                                    "elementType": "div",
+                                    "elementOptions": [],
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "sidePanelInfoDetail",
