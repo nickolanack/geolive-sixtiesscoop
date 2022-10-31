@@ -26,7 +26,7 @@ item.getVideos(function(videos){
             
         });
         
-        yt.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(){
+        el.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(){
             var p=el.parentNode;
             if(p.hasClass('small-video')){
                 p.removeClass('small-video');
