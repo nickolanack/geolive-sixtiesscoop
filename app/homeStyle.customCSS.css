@@ -936,7 +936,7 @@ button.inline-edit {
             h2 {
                 white-space: nowrap;
                 font-size: 16.5px;
-                color: black;
+                
                 display: block;
                 position: absolute;
                 top: 0px;
@@ -1074,6 +1074,12 @@ button.inline-edit {
         
         .small-video {
             position: unset;  
+            background-color: #3f3c3b;
+            
+            &:hover {
+                background-color: #303030;
+            }
+            
             &:before{
                 display:none;
             }
