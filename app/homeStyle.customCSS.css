@@ -1018,7 +1018,7 @@ button.inline-edit {
         
         
         
-        .map-view-link {
+        .map-view-link, .small-video {
             width: calc( 100% - 44px);
             line-height: 83px;
             height: 100px;
