@@ -1280,4 +1280,30 @@ a.ui-view,.template-content a{
     color: #3f8a9d;
 }
 
+.toggle-display-mode {
+    position: relative;
+
+
+    &:after {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -28px;
+        bottom: 10px;
+   
+        content: "\0f066";
+        font-family: 'FontAwesome';
+        font-size: 20px;
+    }
+}
+
+.small-video .toggle-display-mode:after {
+    content: "\0f065";
+    top: unset;
+    bottom: 35px;
+    right: -30px;
+}
+
+
+
 
