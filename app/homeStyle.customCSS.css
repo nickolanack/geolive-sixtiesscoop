@@ -1073,6 +1073,9 @@ button.inline-edit {
         
         .small-video {
             position: unset;  
+            &:before{
+                display:none;
+            }
         }
         
         
