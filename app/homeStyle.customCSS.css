@@ -1589,6 +1589,22 @@ a.ui-view,.template-content a{
         label.true-label {
             margin-left: 20px;
         }
+        
+        
+        
+        &.checkbox-style{
+        
+            input {
+                margin-right: 20px;
+            }
+            
+            
+          
+            margin-top: 35px;
+            ursor: pointer;
+        
+        }
+        
     }
     
     
