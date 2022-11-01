@@ -1195,6 +1195,18 @@ button.inline-edit {
                 vertical-align: top;
             }
             
+            
+            
+            .empty-story {
+                background-color: white;
+                font-weight: 400;
+                font-size: 30px;
+                margin-bottom: 80px;
+                 &:hover {
+                    box-shadow: none;
+                }
+            }
+            
         }
         
         
