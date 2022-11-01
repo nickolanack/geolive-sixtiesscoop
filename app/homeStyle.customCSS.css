@@ -159,6 +159,15 @@ $introTextColor:#4d8673;
         margin-right: 10px;
     }
     
+     .clickable.edit p:before {
+        content: "\0f040";
+        font-family: 'FontAwesome';
+        margin-right: 10px;
+    }
+    
+    
+    
+    
     
 }
 
