@@ -108,6 +108,41 @@ $introTextColor:#4d8673;
 }
 
 
+.ui-view.page-banner .ui-list-view.banner-btns, .target-story [data-view="storyPageContent"] .story-btns {
+    
+    
+
+    
+    
+    .ui-view {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            font-size: 28px;
+            margin: 10px;
+            margin-bottom: 40px;
+        
+            cursor: pointer;
+            transition:background-color 1s, box-shadow 1s;
+            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            &:hover{
+                background-color: darken(#ffc107, 10%);
+                box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+                transition:background-color 0.3s, box-shadow 0.3s;
+            }
+            
+            &.highlight-btn{
+                background-color: #d00705;
+                &:hover{
+                    background-color: darken(#d00705, 10%); 
+                }
+            }
+        }
+    
+    
+}
+
 .ui-view.page-banner {
     
     
@@ -175,31 +210,7 @@ $introTextColor:#4d8673;
          * TODO get rid of this
          */
         
-         .ui-view {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffc107;
-            font-size: 28px;
-            margin: 10px;
-            margin-bottom: 40px;
-        
-            cursor: pointer;
-            transition:background-color 1s, box-shadow 1s;
-            box-shadow: 0 0 3px rgb(0 0 0 / 20%);
-            
-            &:hover{
-                background-color: darken(#ffc107, 10%);
-                box-shadow: 0 0 8px rgb(0 0 0 / 30%);
-                transition:background-color 0.3s, box-shadow 0.3s;
-            }
-            
-            &.highlight-btn{
-                background-color: #d00705;
-                &:hover{
-                    background-color: darken(#d00705, 10%); 
-                }
-            }
-        }
+         
         
         &.un-rendered:after {
             content: "Button Two";
