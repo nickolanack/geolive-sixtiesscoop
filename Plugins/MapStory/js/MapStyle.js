@@ -6,7 +6,18 @@ var MapStyle = (function() {
 
 		initialize: function(map) {
 
+			this._setGray(map);
 
+			google.maps.event.addListenerOnce(map.getBaseMap(), 'zoom_changed', function(){
+
+				var z = map.getZoom();
+				
+
+			});
+
+		},
+
+		_setGray: function(map) {
 
 			map.getBaseMap().setOptions({
 				styles: [{
