@@ -175,7 +175,7 @@ $introTextColor:#4d8673;
             }
         }
         
-        .menu-item-link.active{
+        .menu-item-link:has(.active){
             background-color: transparent;
             box-shadow: none;
             
