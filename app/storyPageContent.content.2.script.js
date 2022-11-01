@@ -20,7 +20,7 @@ item.getVideos(function(videos){
         el.removeClass('empty');
         el.addClass('has-video');
         
-        yt.addEvent('click', function(){
+        el.addEvent('click', function(){
            
            console.log(videos[0]) 
            
