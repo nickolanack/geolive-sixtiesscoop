@@ -1,6 +1,6 @@
 var query;
 
-if(ocument.location.pathname.split('/').pop()==='me'){
+if(document.location.pathname.split('/').pop()==='me'){
    query=new AjaxControlQuery(CoreAjaxUrlRoot, "get_story", {
         "plugin": "MapStory"
     }); 
