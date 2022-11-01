@@ -6562,7 +6562,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "header-menu",
+                                    "listClassName": "",
                                     "className": "menu-item-link",
                                     "elementType": "a",
                                     "elementOptions": "{}",
