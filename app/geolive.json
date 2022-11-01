@@ -7411,9 +7411,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
-            "saveTemplateAsData": true,
-            "contentTemplate": "Profile"
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Profile",
+            "readAccess": "public"
         }
     },
     "widget.109": {
