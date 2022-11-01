@@ -20,7 +20,7 @@ item.getVideos(function(videos){
         el.removeClass('empty');
         el.addClass('has-video');
         
-        el.addEvent('click', function(){
+        el.parentNode.addEvent('click', function(){
            
            console.log(videos[0]) 
            
