@@ -1639,7 +1639,16 @@ a.ui-view,.template-content a{
         padding: 10px 20px;
         background-color: mediumaquamarine;
         display: inline-block;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 1s, box-shadow 1s;
+        box-shadow: 0 0 3px rgb(0 0 0 / 20%);
     
+        &:hover{
+            background-color: darken(mediumaquamarine, 10%);
+            box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
         
         .ui-template-default {
             display: none;
