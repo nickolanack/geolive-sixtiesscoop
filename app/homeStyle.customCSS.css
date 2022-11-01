@@ -114,7 +114,7 @@ $introTextColor:#4d8673;
 
     
     
-    .ui-view {
+    .ui-view, .menu-item-link .clickable a {
             display: inline-block;
             padding: 10px 20px;
             background-color: #ffc107;
