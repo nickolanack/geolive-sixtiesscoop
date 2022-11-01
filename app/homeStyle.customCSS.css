@@ -1633,6 +1633,28 @@ a.ui-view,.template-content a{
     }
     
     
+    
+    .ui-view.new-empty-item {
+        
+        padding: 10px 20px;
+        background-color: mediumaquamarine;
+        display: inline-block;
+    
+        
+        .ui-template-default {
+            display: none;
+        }
+        
+        &:after {
+            content: "Add Another Journey";
+            font-size: 20px;
+        }
+    
+    }
+    
+    
+    
+    
 }
 
 
