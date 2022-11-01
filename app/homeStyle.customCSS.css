@@ -1559,15 +1559,40 @@ a.ui-view,.template-content a{
 
 
 
-    .boolean-field, .tag-cloud-container {
-        margin: 5px;
-        margin-bottom: 15px;
-        display: block;
-    }
+   
     
     .uitext-container {
         margin-bottom: 15px;
     }
+    
+     .boolean-field, .tag-cloud-container {
+        margin: 5px;
+        margin-bottom: 35px;
+        display: block;
+    }
+    
+    .boolean-field{
+        label.true-label, label.false-label {
+            padding: 8px 20px 8px 10px;
+            background-color: white;
+            margin: 5px;
+            vertical-align: inherit;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        label.true-label input, label.false-label input {
+            display: inline-block;
+            vertical-align: inherit;
+        }
+        
+        label.true-label {
+            margin-left: 20px;
+        }
+    }
+    
+    
+    
     
     .file-browse-btn.combined-browser{
         
