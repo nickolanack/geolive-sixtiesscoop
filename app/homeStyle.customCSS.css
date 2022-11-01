@@ -214,6 +214,28 @@ $introTextColor:#4d8673;
         
         
     }
+    
+    
+    
+    button.featured-link:after {
+        content: "\0f097";
+        font-family: 'FontAwesome';
+        color: #333333;
+        font-size: 30px;
+    }
+    
+    button.featured-link {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 15px;
+        right: 160px;
+    }
+    
+    button.featured-link.active:after {
+        content: "\0f02e";
+        color: crimson;
+    }
 }
 
 
