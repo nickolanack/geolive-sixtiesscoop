@@ -161,7 +161,7 @@ $introTextColor:#4d8673;
                 background-color: darken(#2096f3, 10%);
             }
             
-            &.edit {
+            &.edit, &:has(.edit) {
                 background-color: mediumaquamarine;
                 &:hover{
                     background-color: darken(mediumaquamarine, 10%);
