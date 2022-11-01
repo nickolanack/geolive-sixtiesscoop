@@ -7494,9 +7494,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Contact Form"
+            "contentTemplate": "Contact Form",
+            "readAccess": "public"
         }
     }
 }
