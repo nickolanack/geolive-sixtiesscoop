@@ -9,7 +9,7 @@
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
-        "ajaxRequestTemplate": false,
+        "ajaxRequestTemplate": true,
         "namedFormView": "",
         "formOptions": "{}",
         "identifier": "htmlLabel"

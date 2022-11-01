@@ -7181,8 +7181,8 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": -18,
-                    "y": 171
+                    "x": 3,
+                    "y": 174
                 },
                 "children": [
                     "combinedForm.metadata.children.0.json",
@@ -7193,16 +7193,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 308,
-                            "y": 440
+                            "x": 318,
+                            "y": 450
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 268,
-                                    "y": 684
+                                    "x": 278,
+                                    "y": 694
                                 }
                             }
                         ],
@@ -7252,7 +7252,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
-                                                "ajaxRequestTemplate": false,
+                                                "ajaxRequestTemplate": true,
                                                 "namedFormView": "",
                                                 "formOptions": "{}",
                                                 "identifier": "htmlLabel"
@@ -7294,7 +7294,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
-                                                "ajaxRequestTemplate": false,
+                                                "ajaxRequestTemplate": true,
                                                 "namedFormView": "",
                                                 "formOptions": "{}",
                                                 "identifier": "htmlLabel"
@@ -7344,7 +7344,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
-                                                "ajaxRequestTemplate": false,
+                                                "ajaxRequestTemplate": true,
                                                 "namedFormView": "",
                                                 "formOptions": "{}",
                                                 "identifier": "htmlLabel"
