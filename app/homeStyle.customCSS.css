@@ -147,6 +147,19 @@ $introTextColor:#4d8673;
     }
     
     
+    .clickable.share p:before {
+        content: "\0f1e0";
+        font-family: 'FontAwesome';
+        margin-right: 10px;
+    }
+    
+    .clickable.contact p:before {
+        content: "\0f1d8";
+        font-family: 'FontAwesome';
+        margin-right: 10px;
+    }
+    
+    
 }
 
 .target-story [data-view="storyPageContent"]{
