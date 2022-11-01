@@ -1,21 +1,17 @@
 {
-    "type": "FormTextField",
+    "type": "Template",
     "config": {
         "className": "",
-        "label": "Subject",
-        "placeholder": "add a subject",
-        "lines": 1,
-        "maxChars": 0,
-        "mandatory": false,
-        "multiEntry": false,
-        "muliTemplate": "lines",
-        "multiMessage": "add another value",
-        "formatter": "none",
-        "onRenderTextFieldScript": "",
-        "formatValueScript": "",
-        "getValueScript": " return \"\"; ",
-        "updateValueScript": " object.value=value ",
-        "submitValueScript": "wizardDataSet.subject=object.value",
-        "validateValueScript": " return defaultValidationFn() "
+        "elementType": "span",
+        "elementOptions": "{}",
+        "text": "Contact Form",
+        "template": "contactFormText",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "variables.user={\n    name:\"User\"\n};\nreturn variables;",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "genericParametersForm",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
     }
 }

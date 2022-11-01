@@ -138,7 +138,7 @@
                 "*.s22.ok.ubc.ca",
                 ""
             ],
-            "AjaxProfilingEnabled": true
+            "AjaxProfilingEnabled": false
         }
     },
     "plugin.12": {
@@ -199,6 +199,13 @@
                 },
                 {
                     "name": "story",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "story"
+                },
+                {
+                    "name": "me",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
@@ -4910,16 +4917,16 @@
                             "contactUserForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 158,
-                            "y": 290
+                            "x": 218,
+                            "y": 350
                         },
                         "children": [
                             "contactUserForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 118,
-                                    "y": 456
+                                    "x": 178,
+                                    "y": 526
                                 }
                             }
                         ],
@@ -4937,6 +4944,28 @@
                                             "type": "FormTextField",
                                             "config": {
                                                 "className": "",
+                                                "label": "Subject",
+                                                "placeholder": "add a subject",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "beforeRenderModuleScript": "",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "contactUserForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
+                                                "validateValueScript": " return defaultValidationFn() "
+                                            }
+                                        },
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
                                                 "label": "Message",
                                                 "placeholder": "add your message",
                                                 "lines": 3,
@@ -4946,11 +4975,12 @@
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "add another value",
                                                 "formatter": "none",
+                                                "beforeRenderModuleScript": "",
                                                 "onRenderTextFieldScript": "",
                                                 "formatValueScript": "",
                                                 "getValueScript": " return \"\"; ",
                                                 "updateValueScript": " object.value=value ",
-                                                "submitValueScript": "contactUserForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
+                                                "submitValueScript": "contactUserForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js",
                                                 "validateValueScript": " return defaultValidationFn() "
                                             }
                                         }
@@ -6407,6 +6437,8 @@
                                 "type": "UIView",
                                 "config": {
                                     "className": "page-content",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "storyPageContent",
@@ -6430,6 +6462,8 @@
                                 "type": "UIView",
                                 "config": {
                                     "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "bottomSection",
@@ -6494,6 +6528,8 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "map-view-link",
+                                    "elementType": "a",
+                                    "elementOptions": "{}",
                                     "text": "View this story on the map",
                                     "template": "",
                                     "templateVariablesScript": "",
@@ -6518,6 +6554,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "sidePanelInfoDetail",
@@ -6542,6 +6580,47 @@
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
+                                }
+                            },
+                            {
+                                "type": "UIListView",
+                                "config": {
+                                    "listClassName": "story-btns",
+                                    "className": "menu-item-link",
+                                    "elementType": "a",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "placeholderLabelItem",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": "",
+                                    "getItemListScript": "storyPageContent.metadata.positions.content.modules.4.config.getItemListScript.js",
+                                    "formatItemListScript": "return list;",
+                                    "formatListItemModuleScript": "storyPageContent.metadata.positions.content.modules.4.config.formatListItemModuleScript.js",
+                                    "emptyNamedView": "emptyListView",
+                                    "filterItemsScript": "return true;",
+                                    "sortItemsScript": "",
+                                    "maxItems": "-1"
+                                }
+                            },
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "storyPageContent.metadata.positions.content.modules.5.config.script.js",
+                                    "description": "Info about my custom script"
                                 }
                             }
                         ]
@@ -6822,8 +6901,8 @@
                                 "type": "Search",
                                 "config": {
                                     "getAggregatorsScript": "searchPageContent.metadata.positions.content.modules.1.config.getAggregatorsScript.js",
-                                    "searchOptions": "{}",
-                                    "formatSearchModuleScript": "",
+                                    "searchOptions": "{\n    \"focusResultsDisplay\":false\n}",
+                                    "formatSearchModuleScript": "searchPageContent.metadata.positions.content.modules.1.config.formatSearchModuleScript.js",
                                     "placeholder": "Search names, places and years"
                                 }
                             },
@@ -7113,6 +7192,320 @@
             "parseMarkdown": true,
             "saveTemplateAsData": true,
             "contentTemplate": "Refine your search"
+        }
+    },
+    "widget.107": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "combinedForm",
+            "target": "combinedForm",
+            "templateName": "combinedForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": 3,
+                    "y": 174
+                },
+                "children": [
+                    "combinedForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "combinedForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 328,
+                            "y": 460
+                        },
+                        "children": [
+                            "combinedForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 288,
+                                    "y": 704
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "combinedForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "UIView",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "div",
+                                                "elementOptions": "{}",
+                                                "identifier": "",
+                                                "viewType": "form",
+                                                "namedView": "defaultView",
+                                                "shouldRender": true,
+                                                "namedViewScript": "return namedView",
+                                                "showInlineEdit": false,
+                                                "namedFormView": "profileFormView",
+                                                "formOptions": "\"{}\"",
+                                                "showDeleteButton": false,
+                                                "deleteItemScript": "defaultBehaviorFn()",
+                                                "initModuleScript": "",
+                                                "formatModuleScript": "",
+                                                "resolveItemScript": "return item",
+                                                "filterModulesScript": "return list",
+                                                "itemButtonsScript": "return [];",
+                                                "insertAtTop": false,
+                                                "targetName": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "Template",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "span",
+                                                "elementOptions": "{}",
+                                                "text": "Intro Story",
+                                                "template": "introStoryFormText",
+                                                "templateVariablesScript": "{}",
+                                                "formatTextScript": "",
+                                                "formatVariablesScript": "",
+                                                "ajaxRequestTemplate": true,
+                                                "namedFormView": "genericParametersForm",
+                                                "formOptions": "{}",
+                                                "identifier": "htmlLabel"
+                                            }
+                                        },
+                                        {
+                                            "type": "UIView",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "div",
+                                                "elementOptions": "{}",
+                                                "identifier": "",
+                                                "viewType": "form",
+                                                "namedView": "defaultView",
+                                                "shouldRender": true,
+                                                "namedViewScript": "return namedView",
+                                                "showInlineEdit": false,
+                                                "namedFormView": "createStoryForm",
+                                                "formOptions": "\"{}\"",
+                                                "showDeleteButton": false,
+                                                "deleteItemScript": "defaultBehaviorFn()",
+                                                "initModuleScript": "",
+                                                "formatModuleScript": "",
+                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.resolveItemScript.js",
+                                                "filterModulesScript": "return list",
+                                                "itemButtonsScript": "return [];",
+                                                "insertAtTop": false,
+                                                "targetName": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "Template",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "span",
+                                                "elementOptions": "{}",
+                                                "text": "Journey Stories",
+                                                "template": "journeyStoryFormText",
+                                                "templateVariablesScript": "{}",
+                                                "formatTextScript": "",
+                                                "formatVariablesScript": "",
+                                                "ajaxRequestTemplate": true,
+                                                "namedFormView": "genericParametersForm",
+                                                "formOptions": "{}",
+                                                "identifier": "htmlLabel"
+                                            }
+                                        },
+                                        {
+                                            "type": "UIListView",
+                                            "config": {
+                                                "listClassName": "",
+                                                "className": "",
+                                                "elementType": "div",
+                                                "elementOptions": "{}",
+                                                "identifier": "",
+                                                "viewType": "form",
+                                                "namedView": "defaultView",
+                                                "shouldRender": true,
+                                                "namedViewScript": "return namedView",
+                                                "showInlineEdit": false,
+                                                "namedFormView": "createStoryForm",
+                                                "formOptions": "\"{}\"",
+                                                "showDeleteButton": false,
+                                                "deleteItemScript": "defaultBehaviorFn()",
+                                                "initModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.formatModuleScript.js",
+                                                "resolveItemScript": "return item",
+                                                "filterModulesScript": "return list",
+                                                "itemButtonsScript": "return [];",
+                                                "insertAtTop": false,
+                                                "targetName": "",
+                                                "getItemListScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.getItemListScript.js",
+                                                "formatItemListScript": "return list;",
+                                                "formatListItemModuleScript": "return item;",
+                                                "emptyNamedView": "emptyListView",
+                                                "filterItemsScript": "return true;",
+                                                "sortItemsScript": "",
+                                                "maxItems": "-1"
+                                            }
+                                        },
+                                        {
+                                            "type": "Template",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "span",
+                                                "elementOptions": "{}",
+                                                "text": "Final Story",
+                                                "template": "finalStoryFormText",
+                                                "templateVariablesScript": "{}",
+                                                "formatTextScript": "",
+                                                "formatVariablesScript": "",
+                                                "ajaxRequestTemplate": true,
+                                                "namedFormView": "genericParametersForm",
+                                                "formOptions": "{}",
+                                                "identifier": "htmlLabel"
+                                            }
+                                        },
+                                        {
+                                            "type": "UIView",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "div",
+                                                "elementOptions": "{}",
+                                                "identifier": "",
+                                                "viewType": "form",
+                                                "namedView": "defaultView",
+                                                "shouldRender": true,
+                                                "namedViewScript": "return namedView",
+                                                "showInlineEdit": false,
+                                                "namedFormView": "createStoryForm",
+                                                "formOptions": "\"{}\"",
+                                                "showDeleteButton": false,
+                                                "deleteItemScript": "defaultBehaviorFn()",
+                                                "initModuleScript": "",
+                                                "formatModuleScript": "",
+                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.7.config.resolveItemScript.js",
+                                                "filterModulesScript": "return list",
+                                                "itemButtonsScript": "return [];",
+                                                "insertAtTop": false,
+                                                "targetName": ""
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        "combinedForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.108": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.profileFormText.text",
+            "target": "module.profileFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Profile",
+            "readAccess": "public"
+        }
+    },
+    "widget.109": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.introStoryFormText.text",
+            "target": "module.introStoryFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Intro Story",
+            "readAccess": "public"
+        }
+    },
+    "widget.110": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.journeyStoryFormText.text",
+            "target": "module.journeyStoryFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Journey Stories",
+            "readAccess": "public"
+        }
+    },
+    "widget.111": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.finalStoryFormText.text",
+            "target": "module.finalStoryFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Final Story",
+            "readAccess": "public"
+        }
+    },
+    "widget.112": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.contactFormText.text",
+            "target": "module.contactFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Contact Form",
+            "readAccess": "public"
         }
     }
 }

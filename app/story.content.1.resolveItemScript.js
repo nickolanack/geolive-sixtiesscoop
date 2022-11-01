@@ -1,7 +1,29 @@
-(new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
-                })).addEvent("success", function(storyResp) {
+var query;
+
+var isClientsStory=document.location.pathname.split('/').pop()==='me';
+
+if(isClientsStory){
+    
+    query=new AjaxControlQuery(CoreAjaxUrlRoot, "get_story", {
+        "plugin": "MapStory"
+    }); 
+    
+    
+}else{
+   
+    query=new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+        "plugin": "MapStory",
+        "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
+    }); 
+    
+}
+
+
+
+
+
+
+query.addEvent("success", function(storyResp) {
                   
                   //callback(new StoryUser(storyResp));
                    
@@ -9,7 +31,7 @@
                    
                     (new AjaxControlQuery(CoreAjaxUrlRoot, "get_attribute_value_list", {
                         "plugin": "Attributes",
-                        "itemId":storyResp.features[0].uid,
+                        "itemId":isClientsStory?AppClient.getId():storyResp.features[0].uid,
                         "itemType":"user"
                     })).on("success", function(userResp) {
                         

@@ -6,6 +6,8 @@ IncludeJSBlock('
 IncludeJS('{widgets}/WizardBuilder/js/FormBuilder.js');
 IncludeJS('{widgets}/Configuration/js/ConfigEdit.js');
 
+IncludeJS('{modules}/ShareLinks/js/SocialLinks.js');
+
 GetPlugin('MapStory')->includeScripts();
 
 GetWidget("homeStyle")->display($targetInstance);
@@ -13,5 +15,6 @@ GetWidget("loginFormView")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 
 
-
+GetWidget("combinedForm")->display($targetInstance);
+GetWidget("contactUserForm")->display($targetInstance);
 

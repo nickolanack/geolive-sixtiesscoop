@@ -19,6 +19,46 @@ item.getVideos(function(videos){
         
         el.removeClass('empty');
         el.addClass('has-video');
+        
+        el.parentNode.addEvent('click', function(){
+           
+           console.log(videos[0]) 
+           
+                    PushBoxWindow.open(videos[0].iframe, {
+	                    handler: 'iframe',
+	                    size: PushBox.FitWindow({
+	                        aspect:{
+	                            x:videos[0].w, y:videos[0].h
+	                        }
+	                    }),
+	                    closable:true,
+	                    push: true
+	                });
+           
+            
+        });
+        
+        el.parentNode.addClass('small-video icon-only');
+        el.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(e){
+            
+            e.stop();
+            var p=el.parentNode;
+            if(p.hasClass('small-video')){
+                
+                if(p.hasClass('icon-only')){
+                    
+                    p.removeClass('small-video');
+                    p.removeClass('icon-only');
+                    return;
+                    
+                }
+                
+                p.addClass('icon-only');
+                return;
+            }
+            p.addClass('small-video')
+        }}}))
+        
     }
     
     

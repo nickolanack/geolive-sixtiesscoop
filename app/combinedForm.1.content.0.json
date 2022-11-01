@@ -3,9 +3,9 @@
     "config": {
         "className": "",
         "elementType": "span",
-        "elementOptions": {},
-        "text": "#Story Index",
-        "template": "storyIndexText",
+        "elementOptions": "{}",
+        "text": "Profile",
+        "template": "profileFormText",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
