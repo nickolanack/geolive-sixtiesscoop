@@ -10,6 +10,6 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
 	    console.log(response);
 	    console.log(item);
 	    
-	})
+	}).execute();
 
 return el;
