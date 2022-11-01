@@ -26,7 +26,11 @@ item.getVideos(function(videos){
            
                     PushBoxWindow.open(videos[0].iframe, {
 	                    handler: 'iframe',
-	                    size: PushBox.FitWindow(),
+	                    size: PushBox.FitWindow({
+	                        aspect:{
+	                            x:videos[0].x, y:videos[0].y
+	                        }
+	                    }),
 	                    push: true
 	                });
            
