@@ -7484,5 +7484,19 @@
             "contentTemplate": "Final Story",
             "readAccess": "public"
         }
+    },
+    "widget.112": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.contactFormText.text",
+            "target": "module.contactFormText.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Contact Form"
+        }
     }
 }
