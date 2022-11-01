@@ -38,6 +38,7 @@ item.getVideos(function(videos){
             
         });
         
+        el.parentNode.addClass('small-video icon-only');
         el.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(e){
             
             e.stop();
