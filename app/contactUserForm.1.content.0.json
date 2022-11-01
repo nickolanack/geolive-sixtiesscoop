@@ -8,7 +8,7 @@
         "template": "contactFormText",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
-        "formatVariablesScript": "",
+        "formatVariablesScript": "variables.user={\n    name:\"User\"\n};\nreturn variables;",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
         "formOptions": "{}",
