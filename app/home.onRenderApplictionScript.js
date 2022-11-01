@@ -13,5 +13,7 @@ GetWidget("loginFormView")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 
 
+GetWidget("combinedForm")->display($targetInstance);
+
 
 
