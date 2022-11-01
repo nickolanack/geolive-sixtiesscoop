@@ -4,13 +4,13 @@
         "className": "",
         "elementType": "span",
         "elementOptions": "{}",
-        "text": "",
+        "text": "Contact Form",
         "template": "contactFormText",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
         "ajaxRequestTemplate": true,
-        "namedFormView": "",
+        "namedFormView": "genericParametersForm",
         "formOptions": "{}",
         "identifier": "htmlLabel"
     }
