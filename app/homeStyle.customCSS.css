@@ -1029,6 +1029,7 @@ button.inline-edit {
                 line-height: 51px;
                 left: 160px;
                 text-shadow: none;
+                color:#333333;
             }
             
             
@@ -1153,7 +1154,6 @@ button.inline-edit {
                 line-height: 85px;
                 display: inline-block;
                 vertical-align: top;
-                color:#333333;
             }
             
         }
