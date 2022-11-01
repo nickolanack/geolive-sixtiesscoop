@@ -43,7 +43,16 @@ item.getVideos(function(videos){
             e.stop();
             var p=el.parentNode;
             if(p.hasClass('small-video')){
-                p.removeClass('small-video');
+                
+                if(p.hasClass('icon-only')){
+                    
+                    p.removeClass('small-video');
+                    p.removeClass('icon-only');
+                    return;
+                    
+                }
+                
+                p.addClass('icon-only');
                 return;
             }
             p.addClass('small-video')
