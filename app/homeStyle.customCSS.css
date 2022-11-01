@@ -244,12 +244,12 @@ $introTextColor:#4d8673;
     button.featured-link.clickable {
         cursor: pointer;
         
-        &:hover{
-            background-color:crimson;
+        &:hover:after{
+            color:crimson;
         }
         
-        &.active:hover{
-            background-color:#333333;
+        &.active:hover:after{
+            color:#333333;
         }
         
     }
