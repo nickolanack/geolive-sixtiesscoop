@@ -23,11 +23,11 @@ if(AppClient.getUserType()!=="guest"){
 												AppClient, 
 												{
 													"formName": 'combinedForm',
-													"formOptions": ObjectAppend_({
+													"formOptions": {
 														template: "form",
 														labelForCancel:"Cancel",
 														labelForSave:"Save"
-													}, formOptions)
+													}
 												}
 											)).show(function(){
 
