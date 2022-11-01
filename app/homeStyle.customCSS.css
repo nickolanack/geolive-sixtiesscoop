@@ -1436,7 +1436,7 @@ a.ui-view,.template-content a{
     }
     
     
-    .full-overlay .file-browse-btn.combined-browser, .full-overlay .tag-cloud span.tag-el {
+    .file-browse-btn.combined-browser, .tag-cloud span.tag-el {
         border: none;
         padding: 10px 20px;
         font-size: 16.5px;
@@ -1450,7 +1450,7 @@ a.ui-view,.template-content a{
         }
     }
     
-    .full-overlay .tag-cloud span.tag-el {
+    .tag-cloud span.tag-el {
         background-color: #d9d9d9;
         box-shadow: none;
         &:hover{
@@ -1458,7 +1458,7 @@ a.ui-view,.template-content a{
         }
     }
     
-    .full-overlay .tag-cloud span.tag-el.selected {
+    .tag-cloud span.tag-el.selected {
         background-color: #03A9F4;
         box-shadow: 0 0 8px rgb(0 0 0 / 30%);
          &:hover{
