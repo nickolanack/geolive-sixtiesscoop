@@ -143,6 +143,19 @@ $introTextColor:#4d8673;
     
 }
 
+.target-story [data-view="storyPageContent"]{
+    .story-btns {
+        
+        text-align: right;
+       
+        p {
+            margin: 0;
+        }
+}
+}
+
+
+
 .ui-view.page-banner {
     
     
