@@ -31,6 +31,7 @@ item.getVideos(function(videos){
 	                            x:videos[0].w, y:videos[0].h
 	                        }
 	                    }),
+	                    closable:true,
 	                    push: true
 	                });
            

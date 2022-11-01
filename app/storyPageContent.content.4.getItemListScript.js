@@ -54,6 +54,32 @@ var links= [
     }), 
     new MockDataTypeItem({name:"Contact", "className":"contact", click:function(){
         
+        (new UIModalDialog(
+			application, 
+			AppClient, 
+			{
+				"formName": 'contactUserForm',
+				"formOptions": {
+					template: "form",
+					closable:true,
+					labelForCancel:"Cancel",
+					labelForSave:"Send",
+					viewerOptions:{
+				    	"className":"test"
+					}
+				}
+			}
+		)).show(function(){
+
+
+		}).on('complete', function(item){
+		    
+		   
+		    
+		});
+        
+        
+        
     }}), 
    
 ];
@@ -68,28 +94,28 @@ if(AppClient.getUserType()!=="guest"){
        
        
        
-       (new UIModalDialog(
-												application, 
-												AppClient, 
-												{
-													"formName": 'combinedForm',
-													"formOptions": {
-														template: "form",
-														labelForCancel:"Cancel",
-														labelForSave:"Save",
-														viewerOptions:{
-													    	"className":"test"
-														}
-													}
-												}
-											)).show(function(){
+        (new UIModalDialog(
+			application, 
+			AppClient, 
+			{
+				"formName": 'combinedForm',
+				"formOptions": {
+					template: "form",
+					labelForCancel:"Cancel",
+					labelForSave:"Save",
+					viewerOptions:{
+				    	"className":"test"
+					}
+				}
+			}
+		)).show(function(){
 
 
-											}).on('complete', function(item){
-											    
-											   
-											    
-											});
+		}).on('complete', function(item){
+		    
+		   
+		    
+		});
        
        
        
