@@ -27,7 +27,7 @@ if(AppClient.getUserType()!=="guest"){
 														template: "form",
 														labelForCancel:"Cancel",
 														labelForSave:"Save",
-														modalOptions:{
+														viewerOptions:{
 													    	"className":"test"
 														}
 													}
