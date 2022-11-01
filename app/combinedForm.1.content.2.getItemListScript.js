@@ -1,6 +1,6 @@
-return [new MockDataTypeItem({
+callback([new MockDataTypeItem({
        name:"",
        description:"",
        address:"",
        mutable:true
-    })];
+    })])
