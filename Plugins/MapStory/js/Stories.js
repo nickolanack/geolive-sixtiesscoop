@@ -41,7 +41,23 @@ var StoryMapController = new Class({
         });
 
         me.addEvent('setCards', function(cards, group) {
+
+
+
+             map.getLayerManager().getLayers().forEach(function(layer) {
+
+                layer.runOnceOnLoad(function() {
+                    layer.getItems().forEach(function(marker) {
+                        if (marker instanceof GeoliveMarker) {
+                            marker.hide();
+                        }
+                    });
+                });
+            });
+
+
             me.markersForCards(cards, function(marker) {
+                marker.show();
                 me.scaleIcon(marker, me.options.iconSizeCurrentStory);
             });
             if (group instanceof StoryUser) {
