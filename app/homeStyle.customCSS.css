@@ -1357,5 +1357,21 @@ a.ui-view,.template-content a{
 }
 
 
+.full-overlay .pb-c.pb-c-append {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;
+    
+    &>div {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+
+
+
 
 
