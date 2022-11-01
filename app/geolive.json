@@ -7426,9 +7426,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Intro Story"
+            "contentTemplate": "Intro Story",
+            "readAccess": "public"
         }
     },
     "widget.110": {
