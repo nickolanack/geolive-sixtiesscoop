@@ -6558,6 +6558,10 @@
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
                                 }
+                            },
+                            {
+                                "type": "UIListView",
+                                "config": []
                             }
                         ]
                     },
