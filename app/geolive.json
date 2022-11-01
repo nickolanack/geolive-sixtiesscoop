@@ -6614,6 +6614,14 @@
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
                                 }
+                            },
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "storyPageContent.metadata.positions.content.modules.5.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
                             }
                         ]
                     },
