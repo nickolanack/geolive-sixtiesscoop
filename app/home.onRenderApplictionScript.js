@@ -6,7 +6,7 @@ IncludeJSBlock('
 IncludeJS('{widgets}/WizardBuilder/js/FormBuilder.js');
 IncludeJS('{widgets}/Configuration/js/ConfigEdit.js');
 
-IncludeJS('{modles}/ShareLinks/js/SocialLinks.js');
+IncludeJS('{modules}/ShareLinks/js/SocialLinks.js');
 
 GetPlugin('MapStory')->includeScripts();
 
