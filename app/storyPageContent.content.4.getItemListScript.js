@@ -15,7 +15,7 @@ var links= [
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
                     new Element('a',{"class":"fb-share", html:"Share on facebook", data:{
-                        
+                        'share':"facebook"
                         
                     }})),
                 {});
@@ -23,6 +23,7 @@ var links= [
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
                     new Element('a',{"class":"fb-share", html:"Share on twitter", data:{
+                        'share':"twitter"
                     }})),
                 {});
             
