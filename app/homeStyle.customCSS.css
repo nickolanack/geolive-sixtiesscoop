@@ -236,6 +236,23 @@ $introTextColor:#4d8673;
         content: "\0f02e";
         color: crimson;
     }
+    
+    button.featured-link.hidden {
+        display: none;
+    }
+    
+    button.featured-link.clickable {
+        cursor: pointer;
+        
+        &:hover{
+            background-color:crimson;
+        }
+        
+        &.active:hover{
+            background-color:#333333;
+        }
+        
+    }
 }
 
 
