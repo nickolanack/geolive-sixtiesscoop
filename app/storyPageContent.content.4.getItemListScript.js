@@ -14,7 +14,7 @@ var links= [
             
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
-                    new Element('a',{"class":"fb-share", html:"Share on facebook", data:{
+                    new Element('a',{"class":"fb-share", html:"Share on facebook", dataset:{
                         'share':"facebook"
                         
                     }})),
@@ -22,7 +22,7 @@ var links= [
             
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
-                    new Element('a',{"class":"fb-share", html:"Share on twitter", data:{
+                    new Element('a',{"class":"fb-share", html:"Share on twitter", dataset:{
                         'share':"twitter"
                     }})),
                 {});
