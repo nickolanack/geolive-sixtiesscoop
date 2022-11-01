@@ -6,6 +6,8 @@ IncludeJSBlock('
 IncludeJS('{widgets}/WizardBuilder/js/FormBuilder.js');
 IncludeJS('{widgets}/Configuration/js/ConfigEdit.js');
 
+IncludeJS('{modles}/ShareLinks/js/SocialShare.js');
+
 GetPlugin('MapStory')->includeScripts();
 
 GetWidget("homeStyle")->display($targetInstance);
