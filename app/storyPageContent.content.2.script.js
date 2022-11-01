@@ -40,7 +40,7 @@ item.getVideos(function(videos){
         
         el.appendChild(new Element('div',{"class":"toggle-display-mode", events:{click:function(e){
             
-            e.preventDefault();
+            e.stop();
             var p=el.parentNode;
             if(p.hasClass('small-video')){
                 p.removeClass('small-video');
