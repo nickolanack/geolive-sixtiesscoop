@@ -1,4 +1,17 @@
 {
     "type": "Template",
-    "config": {}
+    "config": {
+        "className": "",
+        "elementType": "span",
+        "elementOptions": "{}",
+        "text": "Profile",
+        "template": "",
+        "templateVariablesScript": "",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": false,
+        "namedFormView": "",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
+    }
 }
