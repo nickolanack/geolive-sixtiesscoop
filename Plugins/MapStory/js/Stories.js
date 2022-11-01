@@ -771,9 +771,24 @@ var StoryMapController = new Class({
         });
 
         
-        //(new ClusterBehavior(map));
+        (new ClusterBehavior(map));
 
 
+        var id=parseInt(window.location.href.split('story/').pop());
+        if(isNaN(id)){
+            id=false;
+        }
+
+        var focusCurrentStory=function(marker){
+            if(id){
+                if(parseInt(marker.getId())==id){
+                    
+                    return;
+                }
+
+                marker.hide();
+            }
+        }
 
 
         map.getLayerManager().getLayers().forEach(function(layer) {
@@ -782,6 +797,7 @@ var StoryMapController = new Class({
                 layer.getItems().forEach(function(marker) {
                     if (marker instanceof GeoliveMarker) {
                         me.clearIconScale(marker);
+                        focusCurrentStory(marker);
                     }
                 });
             });
@@ -790,10 +806,14 @@ var StoryMapController = new Class({
 
         });
         map.getLayerManager().addEvent('addLayer', function(layer) {
+
+
+
             layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
                     if (marker instanceof GeoliveMarker) {
                         me.clearIconScale(marker);
+                        focusCurrentStory(marker);
                     }
                 });
             });
