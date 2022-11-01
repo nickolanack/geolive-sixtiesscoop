@@ -1375,6 +1375,42 @@ a.ui-view,.template-content a{
     .form-navigation-btns {
         position: fixed;
     }
+    
+    
+    
+    
+    .media-bar.tabs-bottom {
+        position: relative;
+        height: 40px;
+    }
+    
+    .input-hidden.uitext-container {
+        display: none;
+    }
+    
+    .uitext-container .text-input{
+        padding: 5px 10px;
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 3px;
+        min-height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: cornflowerblue;
+    }
+    
+    
+    [data-view="createStoryForm"], [data-view="profileFormView"] {
+        padding: 40px;
+        background: rgba(0,0,0,0.03);
+        margin: 10px;
+        border-radius: 5px;
+    }
+    
+    [data-view="createStoryForm"].new-empty-item {
+        background: rgb(159 176 203 / 87%);
+    }
+    
+    
 }
 
 
