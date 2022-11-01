@@ -11,9 +11,20 @@ var links= [
            
         },
         formatModule:function(module){
-            module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on facebook"}));
-            module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on twitter"}));
             
+            (new SocialLinks()).linkElement(
+                module.getElement().appendChild(
+                    new Element('a',{"class":"fb-share", html:"Share on facebook", data:{
+                        
+                        
+                    }})),
+                {});
+            
+            (new SocialLinks()).linkElement(
+                module.getElement().appendChild(
+                    new Element('a',{"class":"fb-share", html:"Share on twitter", data:{
+                    }})),
+                {});
             
             var _deactivate=null;
             var deactivate=function(){
