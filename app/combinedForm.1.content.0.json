@@ -10,7 +10,7 @@
         "shouldRender": true,
         "namedViewScript": "return namedView",
         "showInlineEdit": false,
-        "namedFormView": "profileForm",
+        "namedFormView": "profileFormView",
         "formOptions": "\"{}\"",
         "showDeleteButton": false,
         "deleteItemScript": "defaultBehaviorFn()",
