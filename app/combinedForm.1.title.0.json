@@ -1,7 +1,7 @@
 {
     "type": "WizardSteps",
     "config": {
-        "className": "some-class",
+        "className": "",
         "showSteps": false,
         "manualValue": "1",
         "iconValue": [],
