@@ -151,6 +151,26 @@ $introTextColor:#4d8673;
         p {
             margin: 0;
         }
+        
+        
+        .menu-item-link {
+            background-color: #2096f3;
+            color:white;
+            text-shadow: 0 0 2px #00000052;
+            &:hover{
+                background-color: darken(#2096f3, 10%);
+            }
+            
+            &.edit {
+                background-color: mediumaquamarine;
+                &:hover{
+                    background-color: darken(mediumaquamarine, 10%);
+                }
+            }
+        }
+        
+        
+        
     }
 }
 
