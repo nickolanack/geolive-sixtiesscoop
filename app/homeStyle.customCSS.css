@@ -1197,7 +1197,7 @@ button.inline-edit {
             
             
             
-            .empty-story {
+            &.empty-story {
                 background-color: white;
                 font-weight: 400;
                 font-size: 30px;
