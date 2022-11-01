@@ -173,7 +173,7 @@ $introTextColor:#4d8673;
             }
         }
         
-        .menu-item-link.expand.active{
+        .menu-item-link.active{
             background-color: transparent;
             box-shadow: none;
             
