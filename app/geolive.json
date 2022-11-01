@@ -6562,7 +6562,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "",
+                                    "listClassName": "story-btns",
                                     "className": "menu-item-link",
                                     "elementType": "a",
                                     "elementOptions": "{}",
