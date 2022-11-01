@@ -44,7 +44,7 @@ var StoryMapController = new Class({
 
 
 
-             map.getLayerManager().getLayers().forEach(function(layer) {
+             me.getMap().getLayerManager().getLayers().forEach(function(layer) {
 
                 layer.runOnceOnLoad(function() {
                     layer.getItems().forEach(function(marker) {
