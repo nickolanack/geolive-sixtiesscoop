@@ -7412,7 +7412,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
-            "saveTemplateAsData": false,
+            "saveTemplateAsData": true,
             "contentTemplate": "Profile",
             "readAccess": "public"
         }
