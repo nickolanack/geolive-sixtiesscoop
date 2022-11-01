@@ -1,6 +1,9 @@
 
 var el=new Element('button',{"class":"featured-link", "click":function(){
     
+    
+    
+    
 }});
 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_configuration_field", {
 		'widget': "featuredStoriesItems",
@@ -9,6 +12,19 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
 	    
 	    console.log(response);
 	    console.log(item);
+	    
+	    var ids=response.value.map(function(item){
+	        return parseInt(item.id);
+	    });
+	    
+	    if(item._storyData.filter(function(s){
+	        return ids.indexOf(parseInt(s.id))>=0;
+	    }).length){
+	        
+	        el.addClass('active');
+	        return;
+	    }
+	    
 	    
 	}).execute();
 
