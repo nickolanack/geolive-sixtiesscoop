@@ -1313,6 +1313,40 @@ button.inline-edit {
     
     
     
+     .icon-only .media-container.has-video>span.video {
+        background-size: 0 !important;
+        border: none;
+        box-shadow: none;
+        width: 88px;
+        margin-left: 10px;
+        height: 80px;
+   
+    
+        &:after {
+            background-image: url("https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/miO_w4g_%5BG%5D_QyO_%5BImAgE%5D-%3Ethumb%3A%3E200x%3E150.png");
+            content:"";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        
+        
+        svg {
+            display: none;
+        }
+        
+        h2 {
+            font-size: 25px;
+            left: 95px;
+            line-height: 38px;
+        }
+    
+     }
+    
+    
 }
 
 .target-search{
