@@ -5,6 +5,13 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
     
     
 }});
+
+
+var p =new UIPopover(el, {
+        description:'Add to featured stories'),
+        anchor:UIPopover.AnchorAuto()
+    });
+
 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_configuration_field", {
 		'widget': "featuredStoriesItems",
 		'field': "featured"
@@ -22,8 +29,11 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
 	    }).length){
 	        
 	        el.addClass('active');
+	        p.setDescription('Remove from featured stories')
 	        return;
 	    }
+	    
+	    p.setDescription('Add to featured stories')
 	    
 	    
 	}).execute();
