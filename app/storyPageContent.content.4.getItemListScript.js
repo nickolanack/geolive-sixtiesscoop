@@ -27,13 +27,13 @@ var links= [
             }
             
             
-            module.getElement().addEvent('focus',function(){
+            module.getElement().addEvent('mouseover',function(){
                 if(_deactivate){
                     clearTimeout(_deactivate);
                 }
             });
             
-            module.getElement().addEvent('blur',function(){
+            module.getElement().addEvent('mouseout',function(){
                 deactivate();
             });
             
