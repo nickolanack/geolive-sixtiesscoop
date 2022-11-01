@@ -770,7 +770,10 @@ var StoryMapController = new Class({
 
         });
 
-        (new ClusterBehavior(map));
+        
+        //(new ClusterBehavior(map));
+
+
 
 
         map.getLayerManager().getLayers().forEach(function(layer) {
