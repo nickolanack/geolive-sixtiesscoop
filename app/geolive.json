@@ -7456,9 +7456,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Final Story"
+            "contentTemplate": "Final Story",
+            "readAccess": "public"
         }
     }
 }
