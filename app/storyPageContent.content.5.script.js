@@ -1,5 +1,5 @@
 
-var el=new Element('button',{"class":"featured-link", "click":function(){
+var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':''), "click":function(){
     
     
     
@@ -8,7 +8,7 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
 
 
 var p = new UIPopover(el, {
-        description:'Add to featured stories',
+        description:'This is a featured story',
         anchor:UIPopover.AnchorAuto()
     });
 
@@ -29,11 +29,18 @@ var p = new UIPopover(el, {
 	    }).length){
 	        
 	        el.addClass('active');
-	        p.setDescription('Remove from featured stories');
+	        el.removeClass('hidden');
+	            
+	        if(AppClient.getUserType()==='admin'){
+	            p.setDescription('Remove from featured stories');
+	        }
+	        
 	        return;
 	    }
 	    
-	    p.setDescription('Add to featured stories');
+	    if(AppClient.getUserType()==='admin'){
+	        p.setDescription('Add to featured stories');
+	    }
 	    
 	    
 	}).execute();
