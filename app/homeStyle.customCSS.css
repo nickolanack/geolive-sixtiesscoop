@@ -1153,6 +1153,7 @@ button.inline-edit {
                 line-height: 85px;
                 display: inline-block;
                 vertical-align: top;
+                color:#333333;
             }
             
         }
@@ -1160,10 +1161,10 @@ button.inline-edit {
         
         .small-video {
             position: unset;  
-            background-color: #3f3c3b;
+            //background-color: #3f3c3b;
             
             &:hover {
-                background-color: #303030;
+                //background-color: #303030;
             }
             
             &:before{
