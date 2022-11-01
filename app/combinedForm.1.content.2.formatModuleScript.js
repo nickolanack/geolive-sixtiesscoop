@@ -3,8 +3,7 @@
     return new MockDataTypeItem({
        name:"",
        description:"",
-       content:"",
-       parameters:[],
+       address:"",
        mutable:true
     });
 }).addDataFormatter(function(data, item){
