@@ -1,7 +1,14 @@
 var links= [
-    new MockDataTypeItem({name:"Share", "className":"share", click:function(){
+    new MockDataTypeItem({name:"Share", "className":"share", 
+        click:function(){
         
-    }}), 
+        },
+        formatModule:function(module){
+            module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on facebook"}));
+            module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on twitter"}));
+        }
+        
+    }), 
     new MockDataTypeItem({name:"Contact", "className":"contact", click:function(){
         
     }}), 
