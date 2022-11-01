@@ -15,6 +15,27 @@ var links= [
             module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on twitter"}));
             
             
+            var _deactivate=null;
+            var deactivate=function(){
+                
+                _deactivate=setTimeout(function(){
+                    _deactivate=null;
+                    module.getElement().removeClass('active');
+                    
+                }, 2000);
+                
+            }
+            
+            
+            module.getElement().addEvent('focus',function(){
+                if(_deactivate){
+                    clearTimeout(_deactivate);
+                }
+            });
+            
+            module.getElement().addEvent('blur',function(){
+                deactivate();
+            });
             
         }
         
