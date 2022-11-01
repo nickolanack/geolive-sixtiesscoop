@@ -111,7 +111,9 @@ $introTextColor:#4d8673;
 .ui-view.page-banner .ui-list-view.banner-btns, .target-story [data-view="storyPageContent"] .story-btns {
     
     
-
+    .menu-item-link .clickable a{
+        display:none;
+    }
     
     
     .ui-view, .menu-item-link .clickable a {
@@ -172,6 +174,15 @@ $introTextColor:#4d8673;
         .menu-item-link.expand{
             background-color: transparent;
             box-shadow: none;
+            
+             &active .clickable p{
+                display:none;
+             }
+            
+            &active .clickable a{
+                display:inline-block;
+            }
+            
         }
         
         
