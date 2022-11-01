@@ -26,7 +26,8 @@ if(AppClient.getUserType()!=="guest"){
 													"formOptions": {
 														template: "form",
 														labelForCancel:"Cancel",
-														labelForSave:"Save"
+														labelForSave:"Save",
+														"className":"test"
 													}
 												}
 											)).show(function(){
