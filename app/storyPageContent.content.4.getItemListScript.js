@@ -2,10 +2,20 @@ var links= [
     new MockDataTypeItem({name:"Share", "className":"share", 
         click:function(){
         
+            if(this.hasClass('active')){
+                 this.removeClass('active');
+                 return;
+            }
+            
+            this.addClass('active');
+           
         },
         formatModule:function(module){
             module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on facebook"}));
             module.getElement().appendChild(new Element('a',{"class":"fb-share", html:"Share on twitter"}));
+            
+            
+            
         }
         
     }), 
