@@ -1202,7 +1202,13 @@ button.inline-edit {
                 font-weight: 400;
                 font-size: 30px;
                 margin-bottom: 80px;
-                 &:hover {
+                
+                &:before, &:hover:before {
+                    filter: opacity(0.5) grayscale(1);
+                }
+                
+                
+                &:hover {
                     box-shadow: none;
                 }
             }
