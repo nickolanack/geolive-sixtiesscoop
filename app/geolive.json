@@ -7162,5 +7162,22 @@
             "saveTemplateAsData": true,
             "contentTemplate": "Refine your search"
         }
+    },
+    "widget.107": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": ""
+        }
     }
 }
