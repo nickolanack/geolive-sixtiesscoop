@@ -205,6 +205,13 @@
                     "widget": "story"
                 },
                 {
+                    "name": "me",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "story"
+                },
+                {
                     "name": "search",
                     "view": "plugin",
                     "plugin": "UserInterface",
