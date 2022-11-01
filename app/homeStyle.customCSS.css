@@ -1515,6 +1515,13 @@ a.ui-view,.template-content a{
     }
     
     
+    .uitext-container .text-input.more-than-1 {
+        line-height: 30px;
+        &.empty{
+            line-height: 40px;
+        }
+    }
+    
     [data-view="createStoryForm"], [data-view="profileFormView"] {
         padding: 40px;
         background: rgba(0,0,0,0.03);
