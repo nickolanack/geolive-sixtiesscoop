@@ -1467,6 +1467,40 @@ a.ui-view,.template-content a{
     }
     
     
+    
+    
+    .pb-modules-viewer:after {
+        position: absolute;
+        width: 100%;
+        content: "";
+        height: 200px;
+        background-color: #3f3c3b;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    h1 {
+        font-size: 60px;
+        font-weight: 600;
+        color: #03a9f4;
+        margin: 0;
+        margin-bottom: 140px;
+    }
+    
+    
+    
+    h2 {
+        margin-bottom: 0;
+        color: black;
+        margin-top: 100px;
+    }
+    
+    .markdown p {
+        font-size: 1.5em;
+    }
+    
+    
 }
 
 
