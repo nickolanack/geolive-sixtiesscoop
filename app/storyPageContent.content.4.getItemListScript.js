@@ -27,7 +27,9 @@ if(AppClient.getUserType()!=="guest"){
 														template: "form",
 														labelForCancel:"Cancel",
 														labelForSave:"Save",
-														"className":"test"
+														popoverOptions:{
+													    	"className":"test"
+														}
 													}
 												}
 											)).show(function(){
