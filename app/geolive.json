@@ -7441,9 +7441,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Journey Stories"
+            "contentTemplate": "Journey Stories",
+            "readAccess": "public"
         }
     },
     "widget.111": {
