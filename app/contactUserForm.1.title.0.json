@@ -13,6 +13,6 @@
         "fitContent": true,
         "minWidth": 400,
         "minHeight": 200,
-        "formatStepOptionsScript": "options.windowClass=\"full-overlay\";"
+        "formatStepOptionsScript": "options.classWindow=\"full-overlay\";"
     }
 }
