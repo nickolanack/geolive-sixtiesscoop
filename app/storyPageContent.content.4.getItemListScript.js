@@ -1,8 +1,8 @@
 var links= [
-    new MockDataTypeItem({name:"Share", click:function(){
+    new MockDataTypeItem({name:"Share", "className":"share" click:function(){
         
     }}), 
-    new MockDataTypeItem({name:"Contact", click:function(){
+    new MockDataTypeItem({name:"Contact", "className":"contact", click:function(){
         
     }}), 
    
