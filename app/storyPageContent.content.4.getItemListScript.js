@@ -25,7 +25,7 @@ if(AppClient.getUserType()!=="guest"){
 													"formName": 'combinedForm',
 													"formOptions": ObjectAppend_({
 														template: "form",
-														labelForCancel:Cancel,
+														labelForCancel:"Cancel",
 														labelForSave:"Save"
 													}, formOptions)
 												}
