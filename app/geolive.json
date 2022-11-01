@@ -6414,6 +6414,8 @@
                                 "type": "UIView",
                                 "config": {
                                     "className": "page-content",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "storyPageContent",
@@ -6437,6 +6439,8 @@
                                 "type": "UIView",
                                 "config": {
                                     "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "bottomSection",

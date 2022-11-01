@@ -1,7 +1,28 @@
-(new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
-                    "plugin": "MapStory",
-                    "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
-                })).addEvent("success", function(storyResp) {
+var query;
+
+if(ocument.location.pathname.split('/').pop()==='me'){
+   query=new AjaxControlQuery(CoreAjaxUrlRoot, "get_story", {
+        "plugin": "MapStory"
+    }); 
+    
+    
+}else{
+   
+   query=new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
+        "plugin": "MapStory",
+        "item": parseInt(document.location.pathname.split('story/').pop().split('/').shift())
+    }); 
+    
+    
+    
+}
+
+
+
+
+
+
+query.addEvent("success", function(storyResp) {
                   
                   //callback(new StoryUser(storyResp));
                    
