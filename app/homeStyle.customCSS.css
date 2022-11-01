@@ -1407,7 +1407,7 @@ a.ui-view,.template-content a{
     }
     
     [data-view="createStoryForm"].new-empty-item {
-        background: rgb(159 176 203 / 87%);
+        background: rgba(93, 174, 235, 0.2);
     }
     
     
