@@ -1356,17 +1356,24 @@ a.ui-view,.template-content a{
     right: -12px;
 }
 
-
-.full-overlay .pb-c.pb-c-append {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: white;
+.full-overlay{
+    .pb-c.pb-c-append {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: white;
+        
+        &>div {
+            max-width: 1000px;
+            margin: auto;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+    }
     
-    &>div {
-        max-width: 1000px;
-        margin: auto;
+    .form-navigation-btns {
+        position: fixed;
     }
 }
 
