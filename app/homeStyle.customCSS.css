@@ -1634,7 +1634,7 @@ a.ui-view,.template-content a{
     
     
     
-    .ui-view.new-empty-item {
+    .ui-view.new-empty-item.never-focused {
         
         padding: 10px 20px;
         background-color: mediumaquamarine;
