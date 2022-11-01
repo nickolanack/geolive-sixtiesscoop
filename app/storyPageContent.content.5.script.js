@@ -1,5 +1,5 @@
 
-var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':''), "click":function(){
+var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':' clickable'), "click":function(){
     
     
     
