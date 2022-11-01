@@ -782,7 +782,7 @@ var StoryMapController = new Class({
         var focusCurrentStory=function(marker){
             if(id){
                 if(parseInt(marker.getId())==id){
-                    
+                    me.selectCard(id);
                     return;
                 }
 
@@ -816,7 +816,12 @@ var StoryMapController = new Class({
                         focusCurrentStory(marker);
                     }
                 });
+
+
+
             });
+
+
         })
 
         me.fireEvent('loadMap', [map]);
