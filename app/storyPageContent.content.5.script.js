@@ -7,8 +7,8 @@ var el=new Element('button',{"class":"featured-link", "click":function(){
 }});
 
 
-var p =new UIPopover(el, {
-        description:'Add to featured stories'),
+var p = new UIPopover(el, {
+        description:'Add to featured stories',
         anchor:UIPopover.AnchorAuto()
     });
 
@@ -29,11 +29,11 @@ var p =new UIPopover(el, {
 	    }).length){
 	        
 	        el.addClass('active');
-	        p.setDescription('Remove from featured stories')
+	        p.setDescription('Remove from featured stories');
 	        return;
 	    }
 	    
-	    p.setDescription('Add to featured stories')
+	    p.setDescription('Add to featured stories');
 	    
 	    
 	}).execute();
