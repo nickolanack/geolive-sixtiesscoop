@@ -46,6 +46,7 @@ class MapStory extends \core\extensions\Plugin implements
 		IncludeJS($this->getPath() . '/js/StorySearch.js');
 		IncludeJS($this->getPath() . '/js/AdvancedStorySearch.js');
 		IncludeJS($this->getPath() . '/js/UIDispersionGraph.js');
+		IncludeJS($this->getPath() . '/js/MapStyle.js');
 
 	}
 

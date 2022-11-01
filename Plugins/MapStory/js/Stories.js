@@ -772,6 +772,7 @@ var StoryMapController = new Class({
 
         
         (new ClusterBehavior(map));
+        (new MapStyle(map));
 
 
         var id=parseInt(window.location.href.split('story/').pop());
