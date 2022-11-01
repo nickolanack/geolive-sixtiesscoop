@@ -102,7 +102,7 @@ if(AppClient.getUserType()!=="guest"){
  }
  
   if(AppClient.getUserType()!="guest"){
-      links.splice(1,0,[new MockDataTypeItem({name:"Search",  link:"/search", click:function(){
+      links.splice(1,0,[new MockDataTypeItem({name:"My story",  link:"/me", click:function(){
         window.location.href="/me"
     }})])
   }
