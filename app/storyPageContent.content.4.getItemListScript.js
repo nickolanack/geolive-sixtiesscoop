@@ -14,7 +14,7 @@ if(AppClient.getUserType()!=="guest"){
 
  
  if(AppClient.getUserType()=="admin"){
-    links.push(new MockDataTypeItem({name:"Edit story", click:function(){
+    links.push(new MockDataTypeItem({name:"Edit story", "className":"edit", click:function(){
        
     }}));
  }
