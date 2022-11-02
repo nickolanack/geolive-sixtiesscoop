@@ -7224,16 +7224,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 328,
-                            "y": 460
+                            "x": 348,
+                            "y": 480
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 288,
-                                    "y": 704
+                                    "x": 308,
+                                    "y": 724
                                 }
                             }
                         ],
@@ -7260,6 +7260,31 @@
                                                 "namedViewScript": "return namedView",
                                                 "showInlineEdit": false,
                                                 "namedFormView": "profileFormView",
+                                                "formOptions": "\"{}\"",
+                                                "showDeleteButton": false,
+                                                "deleteItemScript": "defaultBehaviorFn()",
+                                                "initModuleScript": "",
+                                                "formatModuleScript": "",
+                                                "resolveItemScript": "return item",
+                                                "filterModulesScript": "return list",
+                                                "itemButtonsScript": "return [];",
+                                                "insertAtTop": false,
+                                                "targetName": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "UIView",
+                                            "config": {
+                                                "className": "",
+                                                "elementType": "div",
+                                                "elementOptions": "{}",
+                                                "identifier": "",
+                                                "viewType": "form",
+                                                "namedView": "defaultView",
+                                                "shouldRender": true,
+                                                "namedViewScript": "return namedView",
+                                                "showInlineEdit": false,
+                                                "namedFormView": "publishingOptionsForm",
                                                 "formOptions": "\"{}\"",
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
@@ -7301,13 +7326,13 @@
                                                 "shouldRender": true,
                                                 "namedViewScript": "return namedView",
                                                 "showInlineEdit": false,
-                                                "namedFormView": "createStoryForm",
+                                                "namedFormView": "createBirthStoryForm",
                                                 "formOptions": "\"{}\"",
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
                                                 "formatModuleScript": "",
-                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.resolveItemScript.js",
+                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
                                                 "insertAtTop": false,
@@ -7349,13 +7374,13 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.formatModuleScript.js",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.6.config.formatModuleScript.js",
                                                 "resolveItemScript": "return item",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
                                                 "insertAtTop": false,
                                                 "targetName": "",
-                                                "getItemListScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.getItemListScript.js",
+                                                "getItemListScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.6.config.getItemListScript.js",
                                                 "formatItemListScript": "return list;",
                                                 "formatListItemModuleScript": "return item;",
                                                 "emptyNamedView": "emptyListView",
@@ -7393,13 +7418,13 @@
                                                 "shouldRender": true,
                                                 "namedViewScript": "return namedView",
                                                 "showInlineEdit": false,
-                                                "namedFormView": "createStoryForm",
+                                                "namedFormView": "createRepatriationStoryForm",
                                                 "formOptions": "\"{}\"",
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
                                                 "formatModuleScript": "",
-                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.7.config.resolveItemScript.js",
+                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.8.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
                                                 "insertAtTop": false,

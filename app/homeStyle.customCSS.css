@@ -1540,7 +1540,8 @@ a.ui-view,.template-content a{
         }
     }
     
-    [data-view="createStoryForm"], [data-view="profileFormView"] {
+    [data-view="createStoryForm"], [data-view="profileFormView"],
+    [data-view="publishingOptionsForm"], [data-view="createBirthStoryForm"], [data-view="createRepatriationStoryForm"]{
         padding: 40px;
         background: rgba(0,0,0,0.03);
         margin: 10px;
@@ -1558,15 +1559,56 @@ a.ui-view,.template-content a{
 
 
 
-    .boolean-field, .tag-cloud-container {
-        margin: 5px;
-        margin-bottom: 15px;
-        display: block;
-    }
+   
     
     .uitext-container {
         margin-bottom: 15px;
     }
+    
+     .boolean-field, .tag-cloud-container {
+        margin: 5px;
+        margin-bottom: 35px;
+        display: block;
+    }
+    
+    .boolean-field{
+        label.true-label, label.false-label {
+            padding: 8px 20px 8px 10px;
+            background-color: white;
+            margin: 5px;
+            vertical-align: inherit;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        label.true-label input, label.false-label input {
+            display: inline-block;
+            vertical-align: inherit;
+        }
+        
+        label.true-label {
+            margin-left: 20px;
+        }
+        
+        
+        
+        &.checkbox-style{
+        
+            input {
+                margin-right: 20px;
+            }
+            
+            
+          
+            margin-top: 35px;
+            ursor: pointer;
+        
+        }
+        
+    }
+    
+    
+    
     
     .file-browse-btn.combined-browser{
         
