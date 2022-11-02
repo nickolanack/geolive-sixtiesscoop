@@ -652,6 +652,25 @@ var StoryMapController = new Class({
                 callback(activeCard);
             }
         }
+
+
+        me.getMap(function(map){
+
+             map.getLayerManager().getLayers().forEach(function(layer) {
+
+                layer.runOnceOnLoad(function() {
+                    layer.getItems().forEach(function(marker) {
+                        if (marker instanceof GeoliveMarker) {
+                            me.clearIconScale(marker);
+                            marker.show();
+                        }
+                    });
+                });
+
+            });
+
+        });
+
     },
 
     initializeAdoptionTile: function(map, tile, control) {
