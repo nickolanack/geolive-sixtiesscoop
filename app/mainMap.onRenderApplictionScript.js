@@ -21,4 +21,5 @@ GetWidget("sidePanelDetailList")->display($targetInstance);
 GetWidget("sidePanelGraphDetail")->display($targetInstance);
 GetWidget("sidePanelEmptyDetail")->display($targetInstance);
 GetWidget("sidePanelDetail")->display($targetInstance);
+GetWidget("sidePanelUserInfoDetail")->display($targetInstance);
 
