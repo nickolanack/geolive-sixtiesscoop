@@ -612,7 +612,7 @@ var StoryMapController = new Class({
         }));
 
 
-        (item.getCards||getUser().getCards).call(item, function(rawCards) {
+        (item.getCards?item:item.getUser()).getCards(function(rawCards) {
 
             var cards = rawCards.filter(function(card) {
                 return card.getId && card.getId() > 0;
@@ -634,7 +634,7 @@ var StoryMapController = new Class({
             }
 
 
-        })
+        });
 
 
 
