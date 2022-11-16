@@ -14,7 +14,7 @@ var links= [
             
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
-                    new Element('a',{"class":"fb-share", html:"Share on facebook", dataset:{
+                    new Element('a',{"class":"social-share fb-share", html:"Share on facebook", dataset:{
                         'share':"facebook"
                         
                     }})),
@@ -22,7 +22,7 @@ var links= [
             
             (new SocialLinks()).linkElement(
                 module.getElement().appendChild(
-                    new Element('a',{"class":"fb-share", html:"Share on twitter", dataset:{
+                    new Element('a',{"class":"social-share twitter-share", html:"Share on twitter", dataset:{
                         'share':"twitter"
                     }})),
                 {});
@@ -30,7 +30,7 @@ var links= [
                 
            
                 module.getElement().appendChild(
-                    new Element('a',{"class":"email-share", html:"Share via email", 
+                    new Element('a',{"class":"social-share email-share", html:"Share via email", 
                         'target':"_blank",
                         'href':"mailto:?subject="+
                             encodeURIComponent('Check out '+listModule.getListItem().getUsersName()+'\'s story on the sixties-scoop network')+"&body="+
