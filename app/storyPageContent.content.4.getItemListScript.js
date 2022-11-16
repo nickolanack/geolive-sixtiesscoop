@@ -31,6 +31,7 @@ var links= [
            
                 module.getElement().appendChild(
                     new Element('a',{"class":"email-share", html:"Share via email", 
+                        'target':"_blank",
                         'href':"mailto:?subject="+
                             encodeURIComponent('Check out {}\'s story on the sixties-scoop network')+"&body="+
                             encodeURIComponent(document.location.origin+'/story/69'),
