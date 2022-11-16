@@ -33,8 +33,8 @@ var links= [
                     new Element('a',{"class":"email-share", html:"Share via email", 
                         'target':"_blank",
                         'href':"mailto:?subject="+
-                            encodeURIComponent('Check out {}\'s story on the sixties-scoop network')+"&body="+
-                            encodeURIComponent(document.location.origin+'/story/69'),
+                            encodeURIComponent('Check out '+listModule.getListItem().getUsersName()+'\'s story on the sixties-scoop network')+"&body="+
+                            encodeURIComponent('\n\n'+document.location.origin+'/story/69\n\n'),
                         dataset:{
                             'share':"email",
                         }
