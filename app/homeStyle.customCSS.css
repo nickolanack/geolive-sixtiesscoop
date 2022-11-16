@@ -155,11 +155,11 @@ $introTextColor:#4d8673;
             font-size: 28px;
         }
         
-        a.twitter-share:before {
+        &.twitter-share:before {
             content: "\0f099";
         }
         
-        a.email-share:before {
+        &.email-share:before {
             content: "\0f0e0";
         }
         
