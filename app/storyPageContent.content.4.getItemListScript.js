@@ -30,12 +30,14 @@ var links= [
                 
            
                 module.getElement().appendChild(
-                    new Element('a',{"class":"email-share", html:"Share via email", dataset:{
-                        'share':"email",
+                    new Element('a',{"class":"email-share", html:"Share via email", 
                         'href':"mailto:?subject="+
                             encodeURIComponent('Check out {}\'s story on the sixties-scoop network')+"&body="+
-                            encodeURIComponent(document.location.origin+'/story/69')
-                    }}));
+                            encodeURIComponent(document.location.origin+'/story/69'),
+                        dataset:{
+                            'share':"email",
+                        }
+                        }));
                
             
             var _deactivate=null;
