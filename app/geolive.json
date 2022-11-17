@@ -7543,7 +7543,7 @@
             "templateName": "help",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "help.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
