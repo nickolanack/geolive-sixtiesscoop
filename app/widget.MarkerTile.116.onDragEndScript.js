@@ -1,3 +1,12 @@
+
+
+TemplateModule.SetTemplate('form',`<div>
+    <div data-template="title" class="template-title"></div>
+    <div data-template="content" class="template-content"></div>
+    <div data-template="footer" class="template-footer"></div>
+    </div>');
+
+
 (new UIModalDialog(
 			map, 
 			new MockDataTypeItem({
