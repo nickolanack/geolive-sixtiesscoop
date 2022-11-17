@@ -1,12 +1,17 @@
 {
-    "type": "WizardTitleField",
+    "type": "Template",
     "config": {
-        "label": "Title",
-        "message": "add a title",
         "className": "",
-        "maxChars": 0,
-        "textFormatScript": "",
-        "beforeRenderModuleScript": "",
-        "onRenderTextFieldScript": ""
+        "elementType": "span",
+        "elementOptions": "{}",
+        "text": "Add Support Group",
+        "template": "supportGroupForm.html",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "genericParametersForm",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
     }
 }

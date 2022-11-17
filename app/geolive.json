@@ -7741,16 +7741,16 @@
                             "supportGroupForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 138,
-                            "y": 270
+                            "x": 148,
+                            "y": 280
                         },
                         "children": [
                             "supportGroupForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 98,
-                                    "y": 436
+                                    "x": 108,
+                                    "y": 446
                                 }
                             }
                         ],
@@ -7764,6 +7764,18 @@
                                 "content": {
                                     "modules": [
                                         "supportGroupForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "WizardTitleField",
+                                            "config": {
+                                                "label": "Title",
+                                                "message": "add a title",
+                                                "className": "",
+                                                "maxChars": 0,
+                                                "textFormatScript": "",
+                                                "beforeRenderModuleScript": "",
+                                                "onRenderTextFieldScript": ""
+                                            }
+                                        },
                                         {
                                             "type": "FormTextDescriptionField",
                                             "config": {
