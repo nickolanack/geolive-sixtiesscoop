@@ -732,6 +732,19 @@ var StoryMapController = new Class({
 
         me._graphTile=tile;
         me._graph=graph;
+
+        me.fireEvent('addDispersion',[me._graph]);
+    },
+
+    onceDispersion:function(cb){
+
+        if(this._graph){
+            cb(this._graph);
+            return;
+        }
+
+        this.once('addDispersion' , cb)
+
     },
 
     initializeSidePanelRight: function(sidePanel, el) {
@@ -827,7 +840,10 @@ var StoryMapController = new Class({
 
 
         if(stub==='dispersion'){
-            me._graph.toggle();
+            me.onceDispersion(function(graph){
+                graph.toggle();
+            });
+          
         }
 
 
