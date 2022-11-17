@@ -7710,5 +7710,22 @@
             "readAccess": "registered",
             "position": "RIGHT_CENTER"
         }
+    },
+    "widget.117": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": ""
+        }
     }
 }
