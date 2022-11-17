@@ -50,7 +50,7 @@ var StoryMapController = new Class({
                         layer.getItems().forEach(function(marker) {
                             if (marker instanceof GeoliveMarker) {
                                if(me.markerIsBirth(marker)===false){
-                                    item.hide();
+                                    marker.hide();
                                 }
                             }
                         });
