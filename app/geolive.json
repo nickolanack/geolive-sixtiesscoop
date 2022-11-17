@@ -7701,7 +7701,7 @@
             "markerSize": 32,
             "hoverTip": "",
             "className": "",
-            "wizardName": "MapItemTemplate",
+            "wizardName": "supportGroupForm",
             "guestLoginDrag": false,
             "onDragEndScript": "defaultBehaviorFn();",
             "profileIcon": null,
