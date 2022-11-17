@@ -220,6 +220,13 @@
                     "widget": "search"
                 },
                 {
+                    "name": "help",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "help"
+                },
+                {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
