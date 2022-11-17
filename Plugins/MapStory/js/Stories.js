@@ -1946,13 +1946,20 @@ var StoryMapController = new Class({
     },
 
     initLayer:function(layer){
-        layer.addFeatureStyler(function(feature, type){
-            console.log(feature);
+        // layer.addFeatureStyler(function(feature, type){
+        //     console.log(feature);
 
-            feature.hidden=true;
+        //     feature.hidden=true;
 
-            return feature;
+        //     return feature;
+        // });
+    
+        layer.on('addItem', function(item){
+
+            item.hide();
+
         });
+
     },
 
     markersForCards: function(cards, callback) {
