@@ -664,7 +664,14 @@ var StoryMapController = new Class({
                     layer.getItems().forEach(function(marker) {
                         if (marker instanceof GeoliveMarker) {
                             me.clearIconScale(marker);
-                            marker.show();
+
+                            if(me.markerIsBirth()!==false){
+                                 marker.show();
+                            }else{
+                                marker.hide();
+                            }
+
+                           
                         }
                     });
                 });
