@@ -1944,6 +1944,11 @@ var StoryMapController = new Class({
 
         });
     },
+
+    initLayer:function(layer){
+        console.log(layer);
+    },
+
     markersForCards: function(cards, callback) {
         var me = this;
         me.getMap(function(map) {
