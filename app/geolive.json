@@ -7565,7 +7565,7 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "page-content",
+                                    "className": "page-content intro-section",
                                     "elementType": "div",
                                     "elementOptions": "{}",
                                     "identifier": "",
