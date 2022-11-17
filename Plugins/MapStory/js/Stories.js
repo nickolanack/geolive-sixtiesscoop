@@ -839,7 +839,7 @@ var StoryMapController = new Class({
 
 
 
-        if(stub==='dispersion'){
+        if(stub.split('/').pop()==='dispersion'){
             me.onceDispersion(function(graph){
                 graph.toggle();
             });
