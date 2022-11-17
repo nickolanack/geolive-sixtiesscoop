@@ -49,7 +49,7 @@ var StoryMapController = new Class({
                     layer.runOnceOnLoad(function() {
                         layer.getItems().forEach(function(marker) {
                             if (marker instanceof GeoliveMarker) {
-                               if(this.markerIsBirth(marker)===false){
+                               if(me.markerIsBirth(marker)===false){
                                     item.hide();
                                 }
                             }
@@ -1955,10 +1955,10 @@ var StoryMapController = new Class({
 
         //     return feature;
         // });
-    
+        var me=this;
         layer.on('addItem', function(item){
 
-            if(this.markerIsBirth(item)===false){
+            if(me.markerIsBirth(item)===false){
                 item.hide();
             }
 
