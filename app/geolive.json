@@ -7692,7 +7692,23 @@
         "name": "Draggable Marker Tile",
         "instance": "MarkerTile",
         "parameters": {
-            "target": "none"
+            "target": "forTheMap",
+            "customScript": "",
+            "controlColor": "rgb(48,84,107)",
+            "markerIconset": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop.geoforms.ca\/1\/Uploads\/z4r_juk_%5BImAgE%5D_%5BG%5D_9dy.png"
+            ],
+            "markerSize": 32,
+            "hoverTip": "",
+            "className": "",
+            "wizardName": "MapItemTemplate",
+            "guestLoginDrag": true,
+            "onDragEndScript": "defaultBehaviorFn();",
+            "profileIcon": null,
+            "formatTipScript": "",
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
         }
     }
 }
