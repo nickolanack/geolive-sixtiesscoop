@@ -43,7 +43,7 @@
         "instance": "Monolog",
         "parameters": {
             "enabled": true,
-            "logPath": "{front}\/..\/logs",
+            "logPath": "{log}",
             "logToSentry": false
         }
     },
