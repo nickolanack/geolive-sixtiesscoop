@@ -7,6 +7,9 @@ GetWidget("mainStyle")->display($targetInstance);
 
 GetPlugin('MapStory')->includeScripts();
 
+IncludeJS('{widgets}/WizardBuilder/js/FormBuilder.js');
+IncludeJS('{widgets}/Configuration/js/ConfigEdit.js');
+
 
 IncludeJSBlock('
 
