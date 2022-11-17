@@ -582,17 +582,17 @@ var StoryMapController = new Class({
             "class": "clear primary-btn",
             "html":"Reset Map",
             events: {
-                        click: function(e) {
-                            if(me._graph.isActive()){
-                                me._graph.toggle();
-                            }
-                           
-                            me._storyView.hide();
-                            me.getMap().resetView(function(){
-                                me.resetMap();
-                            });
+                    click: function(e) {
+                        if(me._graph.isActive()){
+                            me._graph.toggle();
                         }
+                       
+                        me._storyView.hide();
+                        me.getMap().resetView(function(){
+                            me.resetMap();
+                        });
                     }
+                }
         });
 
     },
@@ -667,7 +667,7 @@ var StoryMapController = new Class({
                         if (marker instanceof GeoliveMarker) {
                             me.clearIconScale(marker);
 
-                            if(me.markerIsBirth()!==false){
+                            if(me.markerIsBirth(marker)!==false){
                                  marker.show();
                             }else{
                                 marker.hide();
