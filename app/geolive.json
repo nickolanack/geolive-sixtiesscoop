@@ -7682,9 +7682,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "#Help"
+            "contentTemplate": "#Help",
+            "readAccess": "public"
         }
     }
 }
