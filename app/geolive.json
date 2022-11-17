@@ -7832,9 +7832,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Add Support Group"
+            "contentTemplate": "Add Support Group",
+            "readAccess": "public"
         }
     }
 }
