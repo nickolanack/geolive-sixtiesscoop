@@ -1,6 +1,11 @@
 (new UIModalDialog(
 			map, 
-			AppClient, 
+			new MockDataTypeItem({
+			    mutable:true,
+			    name:"",
+			    description:"",
+			    location:""
+			}), 
 			{
 				"formName": 'supportGroupForm',
 				"formOptions": {
