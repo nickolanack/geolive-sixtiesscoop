@@ -1946,7 +1946,9 @@ var StoryMapController = new Class({
     },
 
     initLayer:function(layer){
-        console.log(layer);
+        layer.addFeatureStyler(function(feature){
+            console.log(feature);
+        });
     },
 
     markersForCards: function(cards, callback) {
