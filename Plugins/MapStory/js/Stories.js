@@ -667,6 +667,11 @@ var StoryMapController = new Class({
                         if (marker instanceof GeoliveMarker) {
                             me.clearIconScale(marker);
 
+                            if(me._graph&&me._graph.isActive()){
+                                 marker.hide();
+                                 return;
+                            }
+
                             if(me.markerIsBirth(marker)!==false){
                                  marker.show();
                             }else{
