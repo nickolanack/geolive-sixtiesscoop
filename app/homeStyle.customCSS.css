@@ -144,6 +144,27 @@ $introTextColor:#4d8673;
         display:none;
         margin-bottom: 0;
         margin-top: 0;
+        
+        
+        
+        
+        &.social-share:before {
+            content: "\0f09a";
+            font-family: 'FontAwesome';
+            margin-right: 15px;
+            font-size: 28px;
+        }
+        
+        &.twitter-share:before {
+            content: "\0f099";
+        }
+        
+        &.email-share:before {
+            content: "\0f0e0";
+        }
+        
+        
+        
     }
     
     

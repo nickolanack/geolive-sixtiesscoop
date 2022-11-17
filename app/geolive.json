@@ -42,8 +42,8 @@
         "name": "Monolog Plugin",
         "instance": "Monolog",
         "parameters": {
-            "enabled": false,
-            "logPath": "{core}\/..\/logs",
+            "enabled": true,
+            "logPath": "{log}",
             "logToSentry": false
         }
     },
@@ -138,7 +138,8 @@
                 "*.s22.ok.ubc.ca",
                 ""
             ],
-            "AjaxProfilingEnabled": false
+            "AjaxProfilingEnabled": false,
+            "CSRFEnabled": false
         }
     },
     "plugin.12": {
