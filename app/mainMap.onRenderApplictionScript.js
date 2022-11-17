@@ -23,3 +23,6 @@ GetWidget("sidePanelEmptyDetail")->display($targetInstance);
 GetWidget("sidePanelDetail")->display($targetInstance);
 GetWidget("sidePanelUserInfoDetail")->display($targetInstance);
 
+
+GetWidget("genericParametersForm")->display($targetInstance);
+
