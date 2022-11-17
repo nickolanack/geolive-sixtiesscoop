@@ -1987,10 +1987,9 @@ var StoryMapController = new Class({
 
         //     return feature;
         // });
-        var me=this;
         layer.on('addItem', function(item){
 
-            if(me.markerIsBirth(item)===false){
+            if(ScoopStories.markerIsBirth(item)===false){
                 item.hide();
             }
 
