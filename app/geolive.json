@@ -7707,7 +7707,7 @@
             "profileIcon": null,
             "formatTipScript": "",
             "widgetTitle": "",
-            "readAccess": "public",
+            "readAccess": "registered",
             "position": "RIGHT_CENTER"
         }
     }
