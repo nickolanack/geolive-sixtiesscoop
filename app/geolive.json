@@ -7702,7 +7702,7 @@
             "hoverTip": "",
             "className": "",
             "wizardName": "MapItemTemplate",
-            "guestLoginDrag": true,
+            "guestLoginDrag": false,
             "onDragEndScript": "defaultBehaviorFn();",
             "profileIcon": null,
             "formatTipScript": "",
