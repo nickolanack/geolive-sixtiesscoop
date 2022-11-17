@@ -723,9 +723,10 @@ var StoryMapController = new Class({
 
         });
         graph.addEvent('deactivate', function() {
-            //setTimeout(function(){
-
-            //}, 50);
+            
+            me.getMap().resetView(function(){
+                me.resetMap();
+            });
 
         });
 
