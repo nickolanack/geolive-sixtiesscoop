@@ -586,9 +586,10 @@ var StoryMapController = new Class({
                             if(me._graph.isActive()){
                                 me._graph.toggle();
                             }
-                            me.resetMap();
+                           
                             me._storyView.hide();
                             me.getMap().resetView();
+                            me.resetMap();
                         }
                     }
         });
