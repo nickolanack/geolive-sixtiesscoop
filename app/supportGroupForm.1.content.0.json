@@ -1,0 +1,17 @@
+{
+    "type": "Template",
+    "config": {
+        "className": "",
+        "elementType": "span",
+        "elementOptions": "{}",
+        "text": "Add Support Group",
+        "template": "supportGroupForm.html",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "genericParametersForm",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
+    }
+}
