@@ -1,0 +1,17 @@
+{
+    "type": "Template",
+    "config": {
+        "className": "",
+        "elementType": "section",
+        "elementOptions": "{}",
+        "text": "#Help",
+        "template": "helpPage.html",
+        "templateVariablesScript": "{}",
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "ajaxRequestTemplate": true,
+        "namedFormView": "genericParametersForm",
+        "formOptions": "{}",
+        "identifier": "htmlLabel"
+    }
+}

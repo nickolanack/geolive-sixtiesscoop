@@ -220,6 +220,13 @@
                     "widget": "search"
                 },
                 {
+                    "name": "help",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "help"
+                },
+                {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
@@ -7532,6 +7539,176 @@
             "saveTemplateAsData": true,
             "contentTemplate": "Contact Form",
             "readAccess": "public"
+        }
+    },
+    "widget.113": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "help",
+            "target": "help",
+            "templateName": "help",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "help.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "help.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content intro-section",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "helpPageContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "advancedSearchForm",
+                                    "formOptions": "{\n    template: \"form\",\n    showCancel:false,\n    labelForSubmit:\"Search\"\n}",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bottomSection",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.114": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "helpPageContent",
+            "target": "helpPageContent",
+            "templateName": "helpPageContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "helpPageContent.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.115": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.helpPage-html.text",
+            "target": "module.helpPage-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "#Help",
+            "readAccess": "public"
+        }
+    },
+    "widget.116": {
+        "name": "Draggable Marker Tile",
+        "instance": "MarkerTile",
+        "parameters": {
+            "target": "forTheMap",
+            "customScript": "",
+            "controlColor": "rgb(48,84,107)",
+            "markerIconset": [
+                "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop.geoforms.ca\/1\/Uploads\/z4r_juk_%5BImAgE%5D_%5BG%5D_9dy.png"
+            ],
+            "markerSize": 32,
+            "hoverTip": "",
+            "className": "",
+            "wizardName": "MapItemTemplate",
+            "guestLoginDrag": false,
+            "onDragEndScript": "defaultBehaviorFn();",
+            "profileIcon": null,
+            "formatTipScript": "",
+            "widgetTitle": "",
+            "readAccess": "registered",
+            "position": "RIGHT_CENTER"
         }
     }
 }

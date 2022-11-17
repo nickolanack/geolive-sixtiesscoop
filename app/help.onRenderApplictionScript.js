@@ -1,0 +1,1 @@
+GetWidget('home')->renderDependencies($targetInstance);
