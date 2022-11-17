@@ -588,8 +588,9 @@ var StoryMapController = new Class({
                             }
                            
                             me._storyView.hide();
-                            me.getMap().resetView();
-                            me.resetMap();
+                            me.getMap().resetView(function(){
+                                me.resetMap();
+                            });
                         }
                     }
         });
