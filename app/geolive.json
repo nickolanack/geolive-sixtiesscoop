@@ -7703,7 +7703,7 @@
             "className": "",
             "wizardName": "supportGroupForm",
             "guestLoginDrag": false,
-            "onDragEndScript": "defaultBehaviorFn();",
+            "onDragEndScript": "widget.MarkerTile.116.onDragEndScript.js",
             "profileIcon": null,
             "formatTipScript": "",
             "widgetTitle": "",
