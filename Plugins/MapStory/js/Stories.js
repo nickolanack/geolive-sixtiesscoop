@@ -49,7 +49,9 @@ var StoryMapController = new Class({
                     layer.runOnceOnLoad(function() {
                         layer.getItems().forEach(function(marker) {
                             if (marker instanceof GeoliveMarker) {
-                               // marker.hide();
+                               if(this.markerIsBirth(marker)===false){
+                                    item.hide();
+                                }
                             }
                         });
                     });
@@ -1956,20 +1958,29 @@ var StoryMapController = new Class({
     
         layer.on('addItem', function(item){
 
-            try{
-                var isBirth=item.getNamedValue('data').storyAttributes.isBirthStory;
-                if(isBirth===true||isBirth==='true'){
-                    return;
-                }
-
+            if(this.markerIsBirth(item)===false){
                 item.hide();
-            }catch(e){
-                console.error(e);
             }
 
         });
 
     },
+
+    markerIsBirth:function(item){
+        try{
+            var isBirth=item.getNamedValue('data').storyAttributes.isBirthStory;
+            if(isBirth===true||isBirth==='true'){
+                return true;
+            }
+
+           return false;
+
+        }catch(e){
+            console.error(e);
+        }
+
+        return null;
+    }
 
     markersForCards: function(cards, callback) {
         var me = this;
