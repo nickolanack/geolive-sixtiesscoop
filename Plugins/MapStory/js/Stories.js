@@ -1956,7 +1956,16 @@ var StoryMapController = new Class({
     
         layer.on('addItem', function(item){
 
-            item.hide();
+            try{
+                var isBirth=item.getNamedValue('data').storyAttributes.isBirthStory;
+                if(isBirth===true||isBirth==='true'){
+                    return;
+                }
+
+                item.hide();
+            }catch(e){
+                console.error(e);
+            }
 
         });
 
