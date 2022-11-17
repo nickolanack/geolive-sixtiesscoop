@@ -7560,10 +7560,10 @@
                                 "config": {
                                     "className": "page-content",
                                     "elementType": "div",
-                                    "elementOptions": [],
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "searchPageContent",
+                                    "namedView": "helpPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
