@@ -665,6 +665,7 @@ var StoryMapController = new Class({
                 layer.runOnceOnLoad(function() {
                     layer.getItems().forEach(function(marker) {
                         if (marker instanceof GeoliveMarker) {
+                            
                             me.clearIconScale(marker);
 
                             if(me._graph&&me._graph.isActive()){
@@ -1994,6 +1995,8 @@ var StoryMapController = new Class({
         // });
         layer.on('addItem', function(item){
 
+
+            ScoopStories.clearIconScale(item);
             if(ScoopStories.markerIsBirth(item)===false){
                 item.hide();
             }
