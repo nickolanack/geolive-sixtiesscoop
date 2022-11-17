@@ -4,7 +4,7 @@
 			    mutable:true,
 			    name:"",
 			    description:"",
-			    location:""
+			    latLng:null
 			}), 
 			{
 				"formName": 'supportGroupForm',
