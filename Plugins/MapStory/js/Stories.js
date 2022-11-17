@@ -1980,7 +1980,7 @@ var StoryMapController = new Class({
         }
 
         return null;
-    }
+    },
 
     markersForCards: function(cards, callback) {
         var me = this;
