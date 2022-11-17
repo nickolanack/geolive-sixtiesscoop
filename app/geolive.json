@@ -7672,5 +7672,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.115": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.helpPage-html.text",
+            "target": "module.helpPage-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "#Help"
+        }
     }
 }
