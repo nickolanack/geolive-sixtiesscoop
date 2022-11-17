@@ -49,7 +49,7 @@ var StoryMapController = new Class({
                     layer.runOnceOnLoad(function() {
                         layer.getItems().forEach(function(marker) {
                             if (marker instanceof GeoliveMarker) {
-                                marker.hide();
+                               // marker.hide();
                             }
                         });
                     });
