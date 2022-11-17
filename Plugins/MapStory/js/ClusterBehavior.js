@@ -76,6 +76,11 @@ var ClusterBehavior = new Class({
 		application.setClusterRendererResolver(rendererResolver);
 
 		application.getLayerManager().getLayers().forEach(function(layer) {
+
+			if(!(layer.getRenderer() instanceof ClusterRenderer)){
+				return;
+			}
+
 			layer.hide();
 			layer.getRenderer().setMarkerRendererResolverFn(
 				function(marker, renderer) {
