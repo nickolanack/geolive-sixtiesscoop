@@ -46,6 +46,11 @@ var links= [
         name:"CTV News Edmonton: 'Strong sense of connection': Sixties Scoop survivors share stories, build map in Edmonton", 
         link:"https://edmonton.ctvnews.ca/strong-sense-of-connection-sixties-scoop-survivors-share-stories-build-map-in-edmonton-1.5960789"
     }),
+    
+    new MockDataTypeItem({
+        name:"Indigenous Studies: The Sixties Scoop", 
+        link:"https://libguides.okanagan.bc.ca/IndigenousStudies/SixtiesScoop"
+    }),
    
    
    
