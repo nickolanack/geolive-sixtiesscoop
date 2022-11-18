@@ -13,7 +13,7 @@ var links= [
     }),
     new MockDataTypeItem({
         name:"Facebook: Adopted Native American's", 
-        link:"https://ms-my.facebook.com/permalink.php?story_fbid=1459170797762121&id=665027630509779/"
+        link:"https://ms-my.facebook.com/permalink.php?story_fbid=1459170797762121&id=665027630509779"
     }),
     
     
