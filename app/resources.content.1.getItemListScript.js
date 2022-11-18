@@ -32,10 +32,21 @@ var links= [
         link:"https://www.aptnnews.ca/national-news/project-maps-locations-of-where-60s-scoop-survivors-were-sent/"
     }),
     
-     new MockDataTypeItem({
+    new MockDataTypeItem({
         name:"Project Overview - Colleen Hele-Cardinal: Sixties Scoop Network", 
         link:"https://scoinc.mb.ca/wp-content/uploads/2021/07/Background-for-60s-Scoop-map-wcag.pdf"
     }),
+   
+    new MockDataTypeItem({
+        name:"CTV News Winnipeg: The new map showing the displacement of Sixties Scoop survivors", 
+        link:"https://winnipeg.ctvnews.ca/the-new-map-showing-the-displacement-of-sixties-scoop-survivors-1.5014159"
+    }),
+    
+    new MockDataTypeItem({
+        name:"CTV News Edmonton: 'Strong sense of connection': Sixties Scoop survivors share stories, build map in Edmonton", 
+        link:"https://edmonton.ctvnews.ca/strong-sense-of-connection-sixties-scoop-survivors-share-stories-build-map-in-edmonton-1.5960789"
+    }),
+   
    
    
    
