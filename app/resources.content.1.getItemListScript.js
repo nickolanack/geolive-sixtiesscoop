@@ -15,6 +15,10 @@ var links= [
         name:"Facebook: Adopted Native American's", 
         link:"https://ms-my.facebook.com/permalink.php?story_fbid=1459170797762121&id=665027630509779"
     }),
+    new MockDataTypeItem({
+        name:"Canadian Geographic: In their own words: an interactive map shares the stories of Sixties Scoop survivors", 
+        link:"https://canadiangeographic.ca/articles/in-their-own-words-an-interactive-map-shares-the-stories-of-sixties-scoop-survivors/9"
+    }),
     
     
     
