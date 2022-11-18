@@ -7884,7 +7884,7 @@
                                 "config": {
                                     "listClassName": "intro-section",
                                     "className": "",
-                                    "elementType": "div",
+                                    "elementType": "a",
                                     "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
