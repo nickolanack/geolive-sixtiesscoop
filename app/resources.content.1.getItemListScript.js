@@ -72,6 +72,11 @@ var links= [
         name:"Petition calls for apology to Sixties Scoop survivors", 
         link:"https://www.baytoday.ca/local-news/petition-calls-for-apology-to-sixties-scoop-survivors-2797667"
     }),
+    
+    new MockDataTypeItem({
+        name:"UBC: Aboriginal Maps and Mapping", 
+        link:"https://guides.library.ubc.ca/aboriginalmaps/residentialschools"
+    }),
   
   
    
