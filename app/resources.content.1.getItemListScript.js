@@ -61,8 +61,19 @@ var links= [
         name:"Nation News: GIS mapping project will visualize 60s Scoop displacements", 
         link:"http://nationnews.ca/politics/gis-mapping-project-will-visualize-60s-scoop-displacements/"
     }),
+    
+    new MockDataTypeItem({
+        name:"Toronto Star: Petition calls for apology to Sixties Scoop survivors", 
+        link:"https://www.thestar.com/news/canada/2020/10/16/petition-calls-for-apology-to-sixties-scoop-survivors.html"
+    }),
+    
    
-   
+   new MockDataTypeItem({
+        name:"Petition calls for apology to Sixties Scoop survivors", 
+        link:"https://www.baytoday.ca/local-news/petition-calls-for-apology-to-sixties-scoop-survivors-2797667"
+    }),
+  
+  
    
    
  
