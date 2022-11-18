@@ -19,11 +19,20 @@ var links= [
         name:"Canadian Geographic: In their own words: an interactive map shares the stories of Sixties Scoop survivors", 
         link:"https://canadiangeographic.ca/articles/in-their-own-words-an-interactive-map-shares-the-stories-of-sixties-scoop-survivors/9"
     }),
+    new MockDataTypeItem({
+        name:"CBC: New interactive project aims to map the displacement of '60s Scoop survivors", 
+        link:"https://www.cbc.ca/news/indigenous/sixties-scoop-displacement-map-project-1.5623989"
+    }),
+    new MockDataTypeItem({
+        name:"Interactive map helps Sixties Scoop survivors share stories, find family", 
+        link:"https://www.newmarkettoday.ca/local-news/interactive-map-helps-sixties-scoop-survivors-share-stories-find-family-2554850"
+    }),
+    new MockDataTypeItem({
+        name:"APTN: Project maps locations of where ‘60s Scoop survivors were sent", 
+        link:"https://www.aptnnews.ca/national-news/project-maps-locations-of-where-60s-scoop-survivors-were-sent/"
+    }),
     
-    
-    
-    
-    
+   
    
    
  
