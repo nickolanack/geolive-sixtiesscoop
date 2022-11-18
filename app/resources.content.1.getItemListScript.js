@@ -48,14 +48,22 @@ var links= [
     }),
     
     new MockDataTypeItem({
-        name:"OC Indigenous Studies: The Sixties Scoop", 
+        name:"OC - Indigenous Studies: The Sixties Scoop", 
         link:"https://libguides.okanagan.bc.ca/IndigenousStudies/SixtiesScoop"
     }),
    
    new MockDataTypeItem({
-        name:"Camosun Indigenous Studies: The Sixties Scoop", 
+        name:"Camosun - Indigenous Studies: The Sixties Scoop", 
         link:"https://camosun.libguides.com/IndigenousStudies/60sScoop"
     }),
+    
+    new MockDataTypeItem({
+        name:"Brandon U - Indigenous Studies: The Sixties Scoop", 
+        link:"https://libguides.brandonu.ca/indigenous/sixties"
+    }),
+    
+    
+    
     
     new MockDataTypeItem({
         name:"Nation News: GIS mapping project will visualize 60s Scoop displacements", 
