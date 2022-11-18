@@ -5,8 +5,11 @@ var links= [
     new MockDataTypeItem({name:"Map", link:"/map", click:function(){
         window.location.href="/map"
     }}), 
-     new MockDataTypeItem({name:"Visualize", link:"/map/dispersion", click:function(){
+    new MockDataTypeItem({name:"Visualize", link:"/map/dispersion", click:function(){
         window.location.href="/map/dispersion"
+    }}), 
+    new MockDataTypeItem({name:"Resources", link:"/map/resources", click:function(){
+        window.location.href="/resources"
     }}), 
     new MockDataTypeItem({name:"Search",  link:"/search", click:function(){
         window.location.href="/search"
