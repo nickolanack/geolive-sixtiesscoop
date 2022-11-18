@@ -7850,5 +7850,20 @@
             "contentTemplate": "Add Support Group",
             "readAccess": "public"
         }
+    },
+    "widget.119": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": ""
+        }
     }
 }
