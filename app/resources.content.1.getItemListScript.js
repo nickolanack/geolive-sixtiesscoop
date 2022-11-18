@@ -78,7 +78,15 @@ var links= [
         link:"https://guides.library.ubc.ca/aboriginalmaps/residentialschools"
     }),
   
-  
+   new MockDataTypeItem({
+        name:"Amnesty International: In Our Own Words: Mapping 60’s Scoop Survivors Diaspora", 
+        link:"https://amnesty.ca/blog/in-our-own-words-mapping-60s-scoop-survivors-diaspora/"
+    }),
+   
+   new MockDataTypeItem({
+        name:"New tribe: Uncovering the sixties scoop epidemic", 
+        link:"https://usay.ca/NewTribe/New-Tribe-6.pdf"
+    }),
    
    
  
