@@ -7905,7 +7905,7 @@
                                     "targetName": "",
                                     "getItemListScript": "resources.metadata.positions.content.modules.1.config.getItemListScript.js",
                                     "formatItemListScript": "return list;",
-                                    "formatListItemModuleScript": "return item;",
+                                    "formatListItemModuleScript": "resources.metadata.positions.content.modules.1.config.formatListItemModuleScript.js",
                                     "emptyNamedView": "emptyListView",
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
