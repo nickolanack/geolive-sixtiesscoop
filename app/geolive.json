@@ -7873,6 +7873,10 @@
                         "modules": [
                             "resources.metadata.positions.content.modules.0.json",
                             {
+                                "type": "UIListView",
+                                "config": []
+                            },
+                            {
                                 "type": "UIView",
                                 "config": {
                                     "className": "page-footer",
