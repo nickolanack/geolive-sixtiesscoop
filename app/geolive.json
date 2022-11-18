@@ -7858,7 +7858,7 @@
             "widgetTitle": "resources",
             "target": "resources",
             "templateName": "resources",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
