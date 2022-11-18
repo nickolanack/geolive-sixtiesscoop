@@ -8,7 +8,7 @@ var links= [
     new MockDataTypeItem({name:"Visualize", link:"/map/dispersion", click:function(){
         window.location.href="/map/dispersion"
     }}), 
-    new MockDataTypeItem({name:"Resources", link:"/map/resources", click:function(){
+    new MockDataTypeItem({name:"Resources", link:"/resources", click:function(){
         window.location.href="/resources"
     }}), 
     new MockDataTypeItem({name:"Search",  link:"/search", click:function(){
