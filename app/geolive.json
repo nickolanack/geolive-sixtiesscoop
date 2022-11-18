@@ -199,6 +199,13 @@
                     "widget": "mainMap"
                 },
                 {
+                    "name": "resources",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "resources"
+                },
+                {
                     "name": "story",
                     "view": "plugin",
                     "plugin": "UserInterface",
