@@ -7875,31 +7875,6 @@
                             {
                                 "type": "UIView",
                                 "config": {
-                                    "className": "page-content",
-                                    "elementType": "div",
-                                    "elementOptions": "{}",
-                                    "identifier": "",
-                                    "viewType": "view",
-                                    "namedView": "storyPageContent",
-                                    "shouldRender": true,
-                                    "namedViewScript": "return namedView",
-                                    "showInlineEdit": false,
-                                    "namedFormView": "defaultView",
-                                    "formOptions": "\"{}\"",
-                                    "showDeleteButton": false,
-                                    "deleteItemScript": "defaultBehaviorFn()",
-                                    "initModuleScript": "",
-                                    "formatModuleScript": "",
-                                    "resolveItemScript": "resources.metadata.positions.content.modules.1.config.resolveItemScript.js",
-                                    "filterModulesScript": "return list",
-                                    "itemButtonsScript": "return [];",
-                                    "insertAtTop": false,
-                                    "targetName": ""
-                                }
-                            },
-                            {
-                                "type": "UIView",
-                                "config": {
                                     "className": "page-footer",
                                     "elementType": "div",
                                     "elementOptions": [],
