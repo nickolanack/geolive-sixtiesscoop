@@ -7875,7 +7875,7 @@
                             {
                                 "type": "UIListView",
                                 "config": {
-                                    "listClassName": "",
+                                    "listClassName": "intro-section",
                                     "className": "",
                                     "elementType": "div",
                                     "elementOptions": "{}",
