@@ -87,6 +87,11 @@ var links= [
         name:"New tribe: Uncovering the sixties scoop epidemic", 
         link:"https://usay.ca/NewTribe/New-Tribe-6.pdf"
     }),
+    
+     new MockDataTypeItem({
+        name:"NCTR: 60s Scoop Inquiry", 
+        link:"https://nctr.ca/60s-scoop-inquiry/"
+    }),
    
    
  
