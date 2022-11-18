@@ -7860,7 +7860,7 @@
             "templateName": "resources",
             "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "resources.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
