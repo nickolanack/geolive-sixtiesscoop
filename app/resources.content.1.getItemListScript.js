@@ -32,6 +32,10 @@ var links= [
         link:"https://www.aptnnews.ca/national-news/project-maps-locations-of-where-60s-scoop-survivors-were-sent/"
     }),
     
+     new MockDataTypeItem({
+        name:"Project Overview - Colleen Hele-Cardinal: Sixties Scoop Network", 
+        link:"https://scoinc.mb.ca/wp-content/uploads/2021/07/Background-for-60s-Scoop-map-wcag.pdf"
+    }),
    
    
    
