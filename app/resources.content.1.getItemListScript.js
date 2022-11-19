@@ -123,6 +123,19 @@ var links= [
     
     }),
     
+    new MockDataTypeItem({
+        name:"Youtube - How to use the map", 
+        link:"https://www.youtube.com/watch?v=6hKWNet2pOA"        
+    
+    }),
+    
+    
+    new MockDataTypeItem({
+        name:"Youtube - Giiwe: This is Home", 
+        link:"https://www.youtube.com/watch?v=PJK1n62VJJ8"        
+    
+    }),
+    
     
     
     
