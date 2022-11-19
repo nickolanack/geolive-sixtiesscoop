@@ -143,6 +143,18 @@ var links= [
     
     }),
     
+    new MockDataTypeItem({
+        name:"Twitter - Sixties Scoop Networka", 
+        link:"https://twitter.com/SixtiesScoopNet"        
+    
+    }),
+    
+    new MockDataTypeItem({
+        name:"Facebook - Sixties Scoop Networka", 
+        link:"https://www.facebook.com/groups/60sscoopmap/"        
+    
+    }),
+    
     
     
     
