@@ -112,7 +112,7 @@ var links= [
     }),
     
     new MockDataTypeItem({
-        name:"GoGeomatics Canada", 
+        name:"GoGeomatics Canada - Interactive Map the Stories of Sixties Scoop survivors", 
         link:"https://gogeomatics.ca/your-canadian-geospatial-briefing-for-july-14th-data-visualization-to-forecast-avalanches-interactive-map-the-stories-of-sixties-scoop-survivors-drone-based-thermal-infrared-data-with-arcgis-drone/"        
         
         
