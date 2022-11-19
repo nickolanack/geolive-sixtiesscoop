@@ -122,6 +122,13 @@ var links= [
         link:"https://www.bbc.com/news/av/world-us-canada-55269251"        
     }),
     
+    new MockDataTypeItem({
+        name:"BCN: Canada 'Sixties Scoop': Indigenous survivors map out their stories", 
+        link:"https://bettercarenetwork.org/news-updates/news/canada-sixties-scoop-indigenous-survivors-map-out-their-stories"        
+    }),
+    
+    
+    
      new MockDataTypeItem({
         name:"Youtube - Canada 'Sixties Scoop': Indigenous survivors map out their stories - BBC News", 
         link:"https://www.youtube.com/watch?v=UCxBRad2_3U"        
