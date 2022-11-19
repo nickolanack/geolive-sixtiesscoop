@@ -9,6 +9,7 @@
         "templateVariablesScript": "{}",
         "formatTextScript": "\nif(item.getClick){\n    module.getElement().addClass('clickable');\n    module.getElement().addEvent('click', item.getClick());\n}\n\nif(item.getClassName){\n    module.getElement().addClass(item.getClassName());\n}\n\n\nif(item.getFormatModule){\n    item.getFormatModule()(module);\n}\n\n\nif(AppClient.getUserType()==='admin'){\n    if(item.getEdit&&(!module._edit)){\n       module._edit=module.getElement().appendChild(new Element('button',{\"class\":\"inline-edit\", events:{click:function(ev){\n          ev.stopPropagation();\n          item.getEdit()();\n       }}}));\n    }\n}\n\nreturn text; \/\/item.getName();",
         "formatVariablesScript": "return item.toObject();",
+        "requestTemplateScript": "\nvar n=item.getName?item.getName():'';\nif(n.split(\"\\n\").length==1){\n    \n    if(n.indexOf('#')==-1){\n        cb({\n            markdown:true,\n            template:'<p>'+n+'<\/p>'\n        });\n        return;\n    }\n    \n    if(n.indexOf('##')===0){\n        cb({\n            markdown:true,\n            template:'<h2>'+n+'<\/h2>'\n        });\n        return;\n    }\n    \n    if(n.indexOf('#')===0){\n        cb({\n            markdown:true,\n            template:'<h1>'+n+'<\/h1>'\n        });\n        return;\n    }\n    \n}\n\ndefaultBehaviour();",
         "ajaxRequestTemplate": true,
         "namedFormView": "",
         "formOptions": "{}",
