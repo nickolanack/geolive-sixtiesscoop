@@ -101,6 +101,12 @@ var links= [
         link:"https://nctr.ca/60s-scoop-inquiry/"
     }),
    
+    new MockDataTypeItem({
+        name:"Discourse Magazine: Coming home:Raven Sinclair and the Sixties Scoop", 
+        link:" https://www.discoursemagazine.ca/wp-content/uploads/2019/04/Raven-Sinclair-with-cover.pdf"
+    }),
+   
+   
    
  
 ];
