@@ -105,6 +105,14 @@ var links= [
         name:"Discourse Magazine: Coming home:Raven Sinclair and the Sixties Scoop", 
         link:" https://www.discoursemagazine.ca/wp-content/uploads/2019/04/Raven-Sinclair-with-cover.pdf"
     }),
+    
+    new MockDataTypeItem({
+        name:"Selling the Sixties Scoop: Saskatchewan’s Adopt Indian and Métis Project", 
+        link:"http://activehistory.ca/2017/10/selling-the-sixties-scoop-saskatchewans-adopt-indian-and-metis-project/"
+    }),
+    
+    
+    
    
    
    
