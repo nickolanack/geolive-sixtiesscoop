@@ -111,6 +111,13 @@ var links= [
         link:"http://activehistory.ca/2017/10/selling-the-sixties-scoop-saskatchewans-adopt-indian-and-metis-project/"
     }),
     
+    new MockDataTypeItem({
+        name:"GoGeomatics Canada", 
+        link:"https://gogeomatics.ca/your-canadian-geospatial-briefing-for-july-14th-data-visualization-to-forecast-avalanches-interactive-map-the-stories-of-sixties-scoop-survivors-drone-based-thermal-infrared-data-with-arcgis-drone/"        
+        
+        
+    }),
+    
     
     
    
