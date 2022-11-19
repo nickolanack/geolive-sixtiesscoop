@@ -117,6 +117,11 @@ var links= [
     
     }),
     
+    new MockDataTypeItem({
+        name:"BBC - Canada 'Sixties Scoop': Indigenous survivors map out their stories", 
+        link:"https://www.bbc.com/news/av/world-us-canada-55269251"        
+    }),
+    
      new MockDataTypeItem({
         name:"Youtube - Canada 'Sixties Scoop': Indigenous survivors map out their stories - BBC News", 
         link:"https://www.youtube.com/watch?v=UCxBRad2_3U"        
@@ -128,8 +133,7 @@ var links= [
         link:"https://www.youtube.com/watch?v=6hKWNet2pOA"        
     
     }),
-    
-    
+
     new MockDataTypeItem({
         name:"Youtube - Giiwe: This is Home", 
         link:"https://www.youtube.com/watch?v=PJK1n62VJJ8"        
