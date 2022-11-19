@@ -177,6 +177,13 @@ var links= [
     }),
     
     new MockDataTypeItem({
+        name:"Bi-Giwen: Honouring Our Journeys - Truth-Telling From the Sixties Scoop", 
+        link:"https://legacyofhope.ca/bigiwen/"        
+    }),
+    
+    
+    
+    new MockDataTypeItem({
         name:"Youtube - Giiwe: This is Home", 
         link:"https://www.youtube.com/watch?v=PJK1n62VJJ8"        
     }),
