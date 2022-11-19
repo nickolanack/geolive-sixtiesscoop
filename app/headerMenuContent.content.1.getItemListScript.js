@@ -15,7 +15,7 @@ var links= [
         window.location.href="/search"
     }}), 
     new MockDataTypeItem({name:"Help", link:"/help" }), 
-    new MockDataTypeItem({name:"About", link:"/about" }), 
+    new MockDataTypeItem({name:"About", link:"https://sixtiesscoopnetwork.org/" }), 
     new MockDataTypeItem({name:"Sign in", click:function(){
         
         
