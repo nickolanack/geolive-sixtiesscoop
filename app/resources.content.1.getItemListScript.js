@@ -155,19 +155,25 @@ var links= [
     }),
     
     new MockDataTypeItem({
-        name:"Twitter - Sixties Scoop Networka", 
+        name:"Twitter - Sixties Scoop Network", 
         link:"https://twitter.com/SixtiesScoopNet"        
     
     }),
     
     new MockDataTypeItem({
-        name:"Facebook - Sixties Scoop Networka", 
+        name:"Facebook - Sixties Scoop Network", 
         link:"https://www.facebook.com/groups/60sscoopmap/"        
     
     }),
     
     
+    new MockDataTypeItem({
+        name:"The Indigenous Foundation - The Sixties Scoop", 
+        link:" https://www.theindigenousfoundation.org/articles/the-sixties-scoop"        
     
+    }),
+    
+   
     
    
    
