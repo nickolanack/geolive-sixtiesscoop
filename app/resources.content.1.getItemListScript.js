@@ -123,16 +123,13 @@ var links= [
     }),
     
     new MockDataTypeItem({
-        name:"BCN: Canada 'Sixties Scoop': Indigenous survivors map out their stories", 
-        link:"https://bettercarenetwork.org/news-updates/news/canada-sixties-scoop-indigenous-survivors-map-out-their-stories"        
-    }),
-    
-    
-    
-     new MockDataTypeItem({
         name:"Youtube - Canada 'Sixties Scoop': Indigenous survivors map out their stories - BBC News", 
         link:"https://www.youtube.com/watch?v=UCxBRad2_3U"        
+    }),
     
+    new MockDataTypeItem({
+        name:"BCN: Canada 'Sixties Scoop': Indigenous survivors map out their stories", 
+        link:"https://bettercarenetwork.org/news-updates/news/canada-sixties-scoop-indigenous-survivors-map-out-their-stories"        
     }),
     
     new MockDataTypeItem({
@@ -141,12 +138,7 @@ var links= [
     
     }),
 
-    new MockDataTypeItem({
-        name:"Youtube - Giiwe: This is Home", 
-        link:"https://www.youtube.com/watch?v=PJK1n62VJJ8"        
-    
-    }),
-    
+
     
     new MockDataTypeItem({
         name:"Youtube - In Our Own Words - Mapping 60 Scoop Scoop Diaspora", 
@@ -169,11 +161,26 @@ var links= [
     
     new MockDataTypeItem({
         name:"The Indigenous Foundation - The Sixties Scoop", 
-        link:" https://www.theindigenousfoundation.org/articles/the-sixties-scoop"        
+        link:"https://www.theindigenousfoundation.org/articles/the-sixties-scoop"        
     
     }),
     
-   
+   new MockDataTypeItem({
+        name:"Collaboration secures funding for Sixties Scoop Network", 
+        link:"https://www.kairoscanada.org/collaboration-secures-funding-for-sixty-scoop-network"        
+    
+    }),
+    new MockDataTypeItem({
+        name:"Bi-Giwen: Coming Home, Truth Telling From the Sixties Scoop", 
+        link:"https://legacyofhope.ca/portfolio-items/bigiwen/"        
+    
+    }),
+    
+    new MockDataTypeItem({
+        name:"Youtube - Giiwe: This is Home", 
+        link:"https://www.youtube.com/watch?v=PJK1n62VJJ8"        
+    }),
+    
     
    
    
