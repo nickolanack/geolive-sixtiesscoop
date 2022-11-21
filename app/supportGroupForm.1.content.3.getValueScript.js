@@ -1,2 +1,3 @@
 console.log('check drop location')
-return item.getLatLng();
+var latlng =  item.getLatLng();
+return wizard.getData().latlng||latlng;
