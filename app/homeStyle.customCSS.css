@@ -493,6 +493,8 @@ $introTextColor:#4d8673;
         padding: 20px;
         box-sizing: border-box;
         background-color: whitesmoke;
+        margin: 0;
+        height: auto;
     }
     
     .form-navigation-btns button, button.form-btn, .pagination-item button{
@@ -507,6 +509,10 @@ $introTextColor:#4d8673;
             cursor: pointer;
             transition:background-color 1s, box-shadow 1s;
             box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            height: auto;
+            color: black;
+            text-shadow: none;
             
             &:hover{
                 background-color: $buttonColorHover;
