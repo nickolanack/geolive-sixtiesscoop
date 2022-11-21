@@ -33,4 +33,6 @@ TemplateModule.SetTemplate('form',`<div>
 		    
 		   
 		    
-		});
+		}).getWizard()
+		    .setDataValue('latLng', latlng)
+		    .setDataValue('iconUrl', iconUrl)
