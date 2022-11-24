@@ -110,10 +110,15 @@ if(AppClient.getUserType()!=="guest"){
     links.push(new MockDataTypeItem({name:"Edit story", "className":"edit", click:function(){
        
         console.log(item)
+        
+        var user=new MockDataTypeItem({
+            id:item.getUserId(),
+            type:'user'
+        })
        
         (new UIModalDialog(
 			application, 
-			AppClient, 
+			user,//AppClient, 
 			{
 				"formName": 'combinedForm',
 				"formOptions": {
