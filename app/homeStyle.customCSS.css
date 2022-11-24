@@ -67,12 +67,16 @@ $introTextColor:#4d8673;
         &:before {
             content: "Menu"; 
             color: white;
+            text-indent: 25px;
         }
         &:after {
             content: "\0f0c9"; 
             font-family: 'FontAwesome';
             color: white;
-            position:absolute;
+            position: absolute;
+            top: 20px;
+            font-size: 20px;
+            right: 90px;
         }
     
         .ui-view.menu-item-link{
@@ -82,7 +86,7 @@ $introTextColor:#4d8673;
         &:hover, &.active{
             
             &:before {
-                left: 35px;
+                left: 20px;
                 position: relative;
                 color:black;
             }
