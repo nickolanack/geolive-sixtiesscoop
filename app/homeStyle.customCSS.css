@@ -94,6 +94,7 @@ $introTextColor:#4d8673;
                 font-size:30px;
                 background-color:transparent;
                 cursor:default;
+                transition: none;
                 
             }
             &:after {
