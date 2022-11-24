@@ -36,6 +36,7 @@ var UserContact = new Class({
 
 
 var StoryUser = new Class({
+	Extends:DataTypeObject,
 	Implements: [Events],
 	initialize: function(config) {
 
