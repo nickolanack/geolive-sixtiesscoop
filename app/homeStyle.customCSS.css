@@ -73,14 +73,23 @@ $introTextColor:#4d8673;
             display:none;
         }
         
-        &:hover .ui-view.menu-item-link, &.active .ui-view.menu-item-link{
-            display:inline-block;
-            min-width: 120px;
-            margin-bottom: 0px;
-            margin-top: 5px;
-            &.hidden{
-                display:none;
+        &:hover, &.active{
+            
+            &:before {
+                left: 35px;
+                position: relative;
             }
+            
+            
+            .ui-view.menu-item-link{
+                display:inline-block;
+                min-width: 120px;
+                margin-bottom: 0px;
+                margin-top: 5px;
+                &.hidden{
+                    display:none;
+            }
+            
         }
 
     }
