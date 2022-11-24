@@ -126,6 +126,7 @@ $introTextColor:#4d8673;
         border-radius: 10px;
         backdrop-filter: blur(3px);
         padding-bottom:10px;
+        box-shadow: 0 0 5px #00000052;
         
          .ui-view.menu-item-link{
             color:black;
