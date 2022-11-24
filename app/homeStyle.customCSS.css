@@ -18,6 +18,7 @@ $introTextColor:#4d8673;
 
 
     .ui-view.menu-item-link, &:before {
+        
         height: 30px;
         line-height: 30px;
         display: inline-block;
@@ -32,7 +33,7 @@ $introTextColor:#4d8673;
         cursor: pointer;
         transition: background-color .8s;
         
-         p {
+        p {
             display: inherit;
         }
         
@@ -49,15 +50,21 @@ $introTextColor:#4d8673;
     
     
     
-    @media only screen and (max-width: 1250px) {
+   
 
-  
+
     
+    
+}
+
+ @media only screen and (max-width: 1250px) {
+
+    .header-menu {
         
-            display: inline-block;
-            width: 200px;
-            text-align: right;
-            right: 10px;
+        display: inline-block;
+        width: 200px;
+        text-align: right;
+        right: 10px;
         
         
         &:before {
@@ -72,11 +79,8 @@ $introTextColor:#4d8673;
         &:hover .ui-view.menu-item-link, &.active .ui-view.menu-item-link{
             display:inline-block;
         }
+
     }
-
-
-    
-    
 }
 
 
