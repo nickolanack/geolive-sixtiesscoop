@@ -87,12 +87,14 @@ $introTextColor:#4d8673;
             
             &:before {
                 
-                left: 20px;
-                position: relative;
+          
                 color:black;
                 content: "Menu";
                 text-indent:0;
-                left: 35px
+                font-size:30px;
+                background-color:transparent;
+                cursor:default;
+                
             }
             &:after {
                 content: ""; 
