@@ -86,13 +86,16 @@ $introTextColor:#4d8673;
         &:hover, &.active{
             
             &:before {
-                content: ""; 
+                
                 left: 20px;
                 position: relative;
                 color:black;
                 content: "Menu";
+                text-indent:0;
+                left: 35px
             }
             &:after {
+                content: ""; 
                 color:black;
                 right: 90px;
             }
