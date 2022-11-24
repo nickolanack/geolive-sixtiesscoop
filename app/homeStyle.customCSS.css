@@ -49,10 +49,35 @@ $introTextColor:#4d8673;
     
     
     
+    @media only screen and (max-width: 1250px) {
+
+  
     
+        
+            display: inline-block;
+            width: 200px;
+            text-align: right;
+            right: 10px;
+        
+        
+        &:before {
+            content: "Menu"; 
+            color: white;
+        }
+    
+        .ui-view.menu-item-link{
+            display:none;
+        }
+        &:hover .ui-view.menu-item-link, &.active .ui-view.menu-item-link{
+            display:inline-block;
+        }
+    }
+
+
     
     
 }
+
 
 
 
@@ -84,6 +109,21 @@ $introTextColor:#4d8673;
         margin-top: 0;
         color: white;
     }
+    
+    @media only screen and (max-width: 1250px) {
+
+        h1{
+            margin-top:50px;
+            font-size:45px;
+        }
+        
+        h2{
+            font-size:25px;
+        }
+    
+    }
+
+
 }
 
 
@@ -195,6 +235,15 @@ $introTextColor:#4d8673;
     
     
     
+}
+
+
+@media only screen and (max-width: 1250px) {
+
+    .ui-view.page-banner .markdown h1{
+        font-size:25px;
+        
+    }
 }
 
 .target-story [data-view="storyPageContent"]{
