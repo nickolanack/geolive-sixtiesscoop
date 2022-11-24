@@ -9,6 +9,7 @@
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
+        "requestTemplateScript": "defaultBehaviour();",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
         "formOptions": "{}",

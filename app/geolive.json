@@ -7239,16 +7239,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 348,
-                            "y": 480
+                            "x": 164,
+                            "y": 132
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 308,
-                                    "y": 724
+                                    "x": 124,
+                                    "y": 390
                                 }
                             }
                         ],
@@ -7280,7 +7280,7 @@
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
                                                 "formatModuleScript": "",
-                                                "resolveItemScript": "return item",
+                                                "resolveItemScript": "console.log(item);\nreturn item",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
                                                 "insertAtTop": false,
@@ -7323,6 +7323,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
+                                                "requestTemplateScript": "defaultBehaviour();",
                                                 "ajaxRequestTemplate": true,
                                                 "namedFormView": "genericParametersForm",
                                                 "formOptions": "{}",
@@ -7365,6 +7366,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
+                                                "requestTemplateScript": "defaultBehaviour();",
                                                 "ajaxRequestTemplate": true,
                                                 "namedFormView": "genericParametersForm",
                                                 "formOptions": "{}",
@@ -7415,6 +7417,7 @@
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
+                                                "requestTemplateScript": "defaultBehaviour();",
                                                 "ajaxRequestTemplate": true,
                                                 "namedFormView": "genericParametersForm",
                                                 "formOptions": "{}",
