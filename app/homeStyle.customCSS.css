@@ -78,6 +78,21 @@ $introTextColor:#4d8673;
         }
 
     }
+    
+    
+    .header-menu.active, .header-menu:hover {
+        background: #ffffffb0;
+        z-index: 2;
+        border-radius: 10px;
+        backdrop-filter: blur(3px);
+        
+         .ui-view.menu-item-link{
+            color:black;
+        }
+    }
+    
+    
+    
 }
 
 
