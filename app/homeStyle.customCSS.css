@@ -59,8 +59,8 @@ $introTextColor:#4d8673;
     .header-menu {
         
         display: inline-block;
-        width: 200px;
-        text-align: right;
+        width: min-content;
+        text-align: center;
         right: 10px;
         
         
