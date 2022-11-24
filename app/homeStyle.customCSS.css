@@ -88,8 +88,9 @@ $introTextColor:#4d8673;
                 margin-top: 5px;
                 &.hidden{
                     display:none;
+                }
+                
             }
-            
         }
 
     }
