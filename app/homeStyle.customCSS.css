@@ -17,7 +17,7 @@ $introTextColor:#4d8673;
     right: 100px;    
 
 
-    .ui-view.menu-item-link, .header-menu:before {
+    .ui-view.menu-item-link, &:before {
         height: 30px;
         line-height: 30px;
         display: inline-block;
