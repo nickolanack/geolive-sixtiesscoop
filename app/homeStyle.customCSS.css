@@ -90,6 +90,9 @@ $introTextColor:#4d8673;
                 position: relative;
                 color:black;
             }
+            &:after {
+                color:black;
+            }
             
             
             .ui-view.menu-item-link{
