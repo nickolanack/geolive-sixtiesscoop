@@ -32,7 +32,9 @@ $introTextColor:#4d8673;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color .8s;
-        
+    }
+    
+    .ui-view.menu-item-link {
         p {
             display: inherit;
         }
