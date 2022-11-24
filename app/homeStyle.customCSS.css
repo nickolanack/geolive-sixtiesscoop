@@ -78,6 +78,7 @@ $introTextColor:#4d8673;
             &:before {
                 left: 35px;
                 position: relative;
+                color:black;
             }
             
             
