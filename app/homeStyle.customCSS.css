@@ -86,6 +86,7 @@ $introTextColor:#4d8673;
         &:hover, &.active{
             
             &:before {
+                content: ""; 
                 left: 20px;
                 position: relative;
                 color:black;
