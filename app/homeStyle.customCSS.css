@@ -65,7 +65,7 @@ $introTextColor:#4d8673;
         
         
         &:before {
-            content: "Menu"; 
+            content: ""; 
             color: white;
             text-indent: 25px;
         }
@@ -76,7 +76,7 @@ $introTextColor:#4d8673;
             position: absolute;
             top: 20px;
             font-size: 20px;
-            right: 90px;
+            right: 20px;
         }
     
         .ui-view.menu-item-link{
@@ -89,9 +89,11 @@ $introTextColor:#4d8673;
                 left: 20px;
                 position: relative;
                 color:black;
+                content: "Menu";
             }
             &:after {
                 color:black;
+                right: 90px;
             }
             
             
