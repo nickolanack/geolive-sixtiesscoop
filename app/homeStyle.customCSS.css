@@ -154,6 +154,24 @@ $introTextColor:#4d8673;
     }
 }
 
+@media only screen and (max-width: 1250px){
+
+    .ui-view.page-header:after{
+        width: 120px;
+        height: 120px;
+    }
+
+    .site-heading {
+        left:200px;
+        top:-10px;
+    }
+
+    .ui-view.page-header{
+        height:170px;
+    }
+
+}
+
 
 .ui-view.page-banner .ui-list-view.banner-btns, .target-story [data-view="storyPageContent"] .story-btns {
     
