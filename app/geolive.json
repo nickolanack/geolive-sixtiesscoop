@@ -7244,16 +7244,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 164,
-                            "y": 132
+                            "x": 174,
+                            "y": 142
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 124,
-                                    "y": 390
+                                    "x": 134,
+                                    "y": 400
                                 }
                             }
                         ],
@@ -7285,7 +7285,7 @@
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
                                                 "formatModuleScript": "",
-                                                "resolveItemScript": "console.log(item);\nreturn item",
+                                                "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
                                                 "insertAtTop": false,
