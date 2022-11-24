@@ -87,14 +87,17 @@ $introTextColor:#4d8673;
     
     
     .header-menu.active, .header-menu:hover {
+        
         background: #ffffffb0;
         z-index: 2;
         border-radius: 10px;
         backdrop-filter: blur(3px);
+        padding-bottom:10px;
         
          .ui-view.menu-item-link{
             color:black;
         }
+        
     }
     
     
@@ -107,11 +110,13 @@ $introTextColor:#4d8673;
 
 
 [data-view="homePageContent"] {
+    
     background-color: rgba(0,0,0,0.02);
     padding-top: 20px;
     padding-bottom: 100px;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    
 }
 
 .site-heading {
@@ -201,6 +206,7 @@ $introTextColor:#4d8673;
     
     
     .ui-view, .menu-item-link .clickable a {
+            
             display: inline-block;
             padding: 10px 20px;
             background-color: #ffc107;
