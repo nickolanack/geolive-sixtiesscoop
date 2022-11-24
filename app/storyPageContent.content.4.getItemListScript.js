@@ -111,14 +111,11 @@ if(AppClient.getUserType()!=="guest"){
        
         console.log(item);
         
-        var user=new MockDataTypeItem({
-            id:item.getUserId(),
-            type:'user'
-        });
+       
        
         (new UIModalDialog(
 			application, 
-			user,//AppClient, 
+			item,//user,//AppClient, 
 			{
 				"formName": 'combinedForm',
 				"formOptions": {
