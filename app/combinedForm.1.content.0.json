@@ -6,6 +6,7 @@
         "elementOptions": "{}",
         "text": "Profile",
         "template": "profileFormText",
+        "templateNamespace": "",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
