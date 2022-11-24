@@ -68,6 +68,7 @@ $introTextColor:#4d8673;
         .ui-view.menu-item-link{
             display:none;
         }
+        
         &:hover .ui-view.menu-item-link, &.active .ui-view.menu-item-link{
             display:inline-block;
         }
@@ -242,7 +243,6 @@ $introTextColor:#4d8673;
 
     .ui-view.page-banner .markdown h1{
         font-size:25px;
-        
     }
 }
 
