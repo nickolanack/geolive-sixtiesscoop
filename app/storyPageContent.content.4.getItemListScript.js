@@ -68,6 +68,9 @@ var links= [
     }), 
     new MockDataTypeItem({name:"Contact", "className":"contact", click:function(){
         
+        
+     
+        
         (new UIModalDialog(
 			application, 
 			AppClient, 
@@ -106,11 +109,13 @@ if(AppClient.getUserType()!=="guest"){
  if(AppClient.getUserType()=="admin"){
     links.push(new MockDataTypeItem({name:"Edit story", "className":"edit", click:function(){
        
+        console.log(item);
+        
        
        
         (new UIModalDialog(
 			application, 
-			AppClient, 
+			item,//user,//AppClient, 
 			{
 				"formName": 'combinedForm',
 				"formOptions": {

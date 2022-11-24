@@ -17,7 +17,8 @@ $introTextColor:#4d8673;
     right: 100px;    
 
 
-    .ui-view.menu-item-link {
+    .ui-view.menu-item-link, &:before {
+        
         height: 30px;
         line-height: 30px;
         display: inline-block;
@@ -31,8 +32,10 @@ $introTextColor:#4d8673;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color .8s;
-        
-         p {
+    }
+    
+    .ui-view.menu-item-link {
+        p {
             display: inherit;
         }
         
@@ -40,10 +43,96 @@ $introTextColor:#4d8673;
             background-color: rgba(0,0,0,0.2);
             transition: background-color .2s;
         }
+        
+        
+        &.hidden{
+            display: none;
+        }
+    }
+    
+}
+
+
+
+ @media only screen and (max-width: 1250px) {
+
+    .header-menu {
+        
+        display: inline-block;
+        width: min-content;
+        text-align: center;
+        right: 10px;
+        
+        
+        &:before {
+            content: ""; 
+            color: white;
+            text-indent: 25px;
+        }
+        &:after {
+            content: "\0f0c9"; 
+            font-family: 'FontAwesome';
+            color: white;
+            position: absolute;
+            top: 20px;
+            font-size: 20px;
+            right: 21px;
+        }
+    
+        .ui-view.menu-item-link{
+            display:none;
+        }
+        
+        &:hover, &.active{
+            
+            &:before {
+                
+          
+                color:black;
+                content: "Menu";
+                text-indent:0;
+                font-size:30px;
+                background-color:transparent;
+                cursor:default;
+                transition: none;
+                
+            }
+            &:after {
+                content: ""; 
+                color:black;
+                right: 90px;
+            }
+            
+            
+            .ui-view.menu-item-link{
+                display:inline-block;
+                min-width: 120px;
+                margin-bottom: 0px;
+                margin-top: 5px;
+                &.hidden{
+                    display:none;
+                }
+                
+            }
+        }
+
     }
     
     
-    
+    .header-menu.active, .header-menu:hover {
+        
+        background: #ffffffb0;
+        z-index: 2;
+        border-radius: 10px;
+        backdrop-filter: blur(3px);
+        padding-bottom:10px;
+        box-shadow: 0 0 5px #00000052;
+        
+         .ui-view.menu-item-link{
+            color:black;
+        }
+        
+    }
     
     
     
@@ -53,12 +142,15 @@ $introTextColor:#4d8673;
 
 
 
+
 [data-view="homePageContent"] {
+    
     background-color: rgba(0,0,0,0.02);
     padding-top: 20px;
     padding-bottom: 100px;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    
 }
 
 .site-heading {
@@ -79,6 +171,21 @@ $introTextColor:#4d8673;
         margin-top: 0;
         color: white;
     }
+    
+    @media only screen and (max-width: 1250px) {
+
+        h1{
+            margin-top:50px;
+            font-size:45px;
+        }
+        
+        h2{
+            font-size:25px;
+        }
+    
+    }
+
+
 }
 
 
@@ -107,6 +214,24 @@ $introTextColor:#4d8673;
     }
 }
 
+@media only screen and (max-width: 1250px){
+
+    .ui-view.page-header:after{
+        width: 120px;
+        height: 120px;
+    }
+
+    .site-heading {
+        left:200px;
+        top:-10px;
+    }
+
+    .ui-view.page-header{
+        height:170px;
+    }
+
+}
+
 
 .ui-view.page-banner .ui-list-view.banner-btns, .target-story [data-view="storyPageContent"] .story-btns {
     
@@ -115,6 +240,7 @@ $introTextColor:#4d8673;
     
     
     .ui-view, .menu-item-link .clickable a {
+            
             display: inline-block;
             padding: 10px 20px;
             background-color: #ffc107;
@@ -191,6 +317,9 @@ $introTextColor:#4d8673;
     
     
 }
+
+
+
 
 .target-story [data-view="storyPageContent"]{
     .story-btns {
@@ -326,6 +455,11 @@ $introTextColor:#4d8673;
             font-weight: 400;
             text-shadow: 0 0 7px white;
             text-align: center;
+            
+            
+            @media only screen and (max-width: 1250px) {
+                font-size:25px;
+            }
         }
         
     }
@@ -493,6 +627,8 @@ $introTextColor:#4d8673;
         padding: 20px;
         box-sizing: border-box;
         background-color: whitesmoke;
+        margin: 0;
+        height: auto;
     }
     
     .form-navigation-btns button, button.form-btn, .pagination-item button{
@@ -507,6 +643,10 @@ $introTextColor:#4d8673;
             cursor: pointer;
             transition:background-color 1s, box-shadow 1s;
             box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+            
+            height: auto;
+            color: black;
+            text-shadow: none;
             
             &:hover{
                 background-color: $buttonColorHover;

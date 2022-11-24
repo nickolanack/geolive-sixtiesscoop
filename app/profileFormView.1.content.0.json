@@ -11,9 +11,10 @@
         "muliTemplate": "lines",
         "multiMessage": "add another value",
         "formatter": "none",
+        "beforeRenderModuleScript": "",
         "onRenderTextFieldScript": "inputElement.disabled=true; ",
         "formatValueScript": "",
-        "getValueScript": " return item.options.metadata.email",
+        "getValueScript": " try{\n    return item.options.metadata.email\n  }catch(e){\n     console.error(e);\n     return 'unknown';\n }",
         "updateValueScript": " object.value=value ",
         "submitValueScript": "",
         "validateValueScript": " return defaultValidationFn() "
