@@ -68,6 +68,12 @@ $introTextColor:#4d8673;
             content: "Menu"; 
             color: white;
         }
+        &:after {
+            content: "\0f0c9"; 
+            font-family: 'FontAwesome';
+            color: white;
+            position:absolute;
+        }
     
         .ui-view.menu-item-link{
             display:none;
