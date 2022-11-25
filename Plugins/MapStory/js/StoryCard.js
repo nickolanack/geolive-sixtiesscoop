@@ -281,11 +281,13 @@ var StoryCard = new Class({
     save: function(callback) {
         var me = this;
 
-        (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story_item", ObjectAppend_(
-            me.toObject(),
-            {
-               "plugin": "MapStory",
-            }
+        (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story_item", 
+            ObjectAppend_(
+                me.toObject(),
+                {
+                   "plugin": "MapStory",
+                }
+            )
         )).addEvent("success", function(resp) {
             callback(true);
         }).execute();
