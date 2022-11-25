@@ -262,23 +262,31 @@ var StoryCard = new Class({
         return '';
     },
 
+
+    toObject:function(){
+
+        return {
+            'address': this.getAddress(),
+            'date': this.getDate(),
+            'description': this.getDescription(),
+            'attributes': this._attributes || {},
+            'location': this._location || null,
+            'id': this.getId(),
+            'type': this.getType()
+        };
+
+
+    },
+
     save: function(callback) {
         var me = this;
 
-        (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story_item", {
-
-            "plugin": "MapStory",
-            'address': me.getAddress(),
-            'date': me.getDate(),
-            'description': me.getDescription(),
-            'attributes': me._attributes || {},
-            'location': me._location || null,
-
-            'id': me.getId(),
-            'type': me.getType()
-
-
-        })).addEvent("success", function(resp) {
+        (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story_item", ObjectAppend_(
+            me.toObject(),
+            {
+               "plugin": "MapStory",
+            }
+        )).addEvent("success", function(resp) {
             callback(true);
         }).execute();
     }
