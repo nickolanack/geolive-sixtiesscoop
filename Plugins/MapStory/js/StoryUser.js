@@ -62,6 +62,12 @@ var StoryUser = new Class({
 		});
 
 	},
+	save:function(cb){
+
+
+		cb(true);
+
+	},
 	_setStoryData: function(stories) {
 		var me = this;
 
