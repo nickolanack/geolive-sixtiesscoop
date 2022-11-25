@@ -6,6 +6,7 @@
         "elementOptions": {},
         "text": "##{{story[0].name}}",
         "template": "userStoryText",
+        "templateNamespace": "",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "return {\n    story:item._storyData,\n    user:item._userData\n}",
