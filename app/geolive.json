@@ -7232,8 +7232,8 @@
             "metadata": {
                 "class": "DecisionNode",
                 "_diagramState": {
-                    "x": 3,
-                    "y": 174
+                    "x": -21,
+                    "y": 155
                 },
                 "children": [
                     "combinedForm.metadata.children.0.json",
@@ -7244,16 +7244,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 184,
-                            "y": 152
+                            "x": 91,
+                            "y": 112
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 144,
-                                    "y": 410
+                                    "x": 51,
+                                    "y": 370
                                 }
                             }
                         ],
@@ -7325,6 +7325,7 @@
                                                 "elementOptions": "{}",
                                                 "text": "Intro Story",
                                                 "template": "introStoryFormText",
+                                                "templateNamespace": "",
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
@@ -7368,6 +7369,7 @@
                                                 "elementOptions": "{}",
                                                 "text": "Journey Stories",
                                                 "template": "journeyStoryFormText",
+                                                "templateNamespace": "",
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
@@ -7419,6 +7421,7 @@
                                                 "elementOptions": "{}",
                                                 "text": "Final Story",
                                                 "template": "finalStoryFormText",
+                                                "templateNamespace": "",
                                                 "templateVariablesScript": "{}",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
