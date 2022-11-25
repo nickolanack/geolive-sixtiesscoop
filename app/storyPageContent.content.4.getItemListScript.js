@@ -132,7 +132,10 @@ if(AppClient.getUserType()!=="guest"){
 
 		}).on('complete', function(item){
 		    
-		   
+		   var dialog=this;
+		   var wizard=dialog.getWizard();
+		   var data=wizard.getData();
+		   console.log(data);
 		    
 		});
        

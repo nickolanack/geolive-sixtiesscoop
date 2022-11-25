@@ -6551,6 +6551,7 @@
                                     "elementOptions": "{}",
                                     "text": "View this story on the map",
                                     "template": "",
+                                    "templateNamespace": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": "storyPageContent.metadata.positions.content.modules.1.config.formatTextScript.js",
                                     "formatVariablesScript": "",
