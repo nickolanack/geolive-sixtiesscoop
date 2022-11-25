@@ -1,6 +1,6 @@
  try{
  return item.options.metadata.username;
  }catch(e){
-     console.error(e);
+     console.warn(e);
      return 'unknown';
  }
