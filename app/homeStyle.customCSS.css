@@ -1679,7 +1679,7 @@ a.ui-view,.template-content a{
         height: 40px;
     }
     
-    .input-hidden.uitext-container {
+    .input-hidden .text-input{
         display: none;
     }
     
