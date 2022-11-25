@@ -1891,6 +1891,18 @@ a.ui-view,.template-content a{
     
     
     
+    .media-item .image {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        overflow: hidden;
+        box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+        border-radius: 4px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    
     
 }
 
