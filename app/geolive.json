@@ -7245,16 +7245,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 101,
-                            "y": 122
+                            "x": 111,
+                            "y": 132
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 61,
-                                    "y": 380
+                                    "x": 71,
+                                    "y": 390
                                 }
                             }
                         ],
@@ -7285,7 +7285,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7310,7 +7310,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7354,7 +7354,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7450,7 +7450,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.8.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.8.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
