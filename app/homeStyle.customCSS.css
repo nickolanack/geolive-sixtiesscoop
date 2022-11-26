@@ -1938,7 +1938,7 @@ a.ui-view,.template-content a{
             
         }
         
-        .media-item:hover .remove-btn:after{
+        &:hover .remove-btn:after{
             opacity: 0.5;
             transition: opacity .2s;
         }
