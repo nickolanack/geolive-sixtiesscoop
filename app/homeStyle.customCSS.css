@@ -1978,7 +1978,7 @@ a.ui-view,.template-content a{
         }
         
         
-        .external.youtube
+        .external.youtube{
             &:after {
                 content: "\0f16a";
                 font-family: 'FontAwesome';
