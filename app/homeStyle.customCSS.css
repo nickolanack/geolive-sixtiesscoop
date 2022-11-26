@@ -1935,7 +1935,7 @@ a.ui-view,.template-content a{
                     
             }
             
-            &:hovewr:after{
+            &:hover:after{
                 opacity: 0.5;
                 transition: opacity .2s;
             }
