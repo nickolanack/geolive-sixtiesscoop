@@ -1895,7 +1895,10 @@ a.ui-view,.template-content a{
     
     .media-item{
         
-         .image {
+        position:relative;
+        display:inline-block;
+        
+        .image {
             display: inline-block;
             width: 200px;
             height: 200px;
