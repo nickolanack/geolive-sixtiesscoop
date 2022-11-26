@@ -1910,17 +1910,33 @@ a.ui-view,.template-content a{
             margin-right: 20px;
             margin-top: 20px;
             border: 3px solid white;
+            filter: drop-shadow(6px 6px 6px #00000030);
             transform: rotate(4deg);
+            transition: filter .8s, transform .8s;
+            
+            &:hover{
+                filter: drop-shadow(10px 10px 6px #00000040);
+                transition: filter .2s, transform .2s;
+            }
         }
         
         &:nth-of-type(2){  .image, .external {
             transform: rotate(-2deg) translate(0, 13px) scale(0.95);
+            &:hover{
+                transform: rotate(-2deg) translate(0, 13px) scale(0.96);
+            }
         }}
         &:nth-of-type(3){  .image, .external {
             transform: rotate(2deg) translate(0, -5px) scale(1);
+            &:hover{
+                transform: rotate(2deg) translate(0, -5px) scale(1.01);
+            }
         }}
         &:nth-of-type(4){  .image, .external {
             transform: rotate(-2deg) translate(0, -5px) scale(0.9);
+            &:hover{
+                transform: rotate(-2deg) translate(0, -5px) scale(0.91);
+            }
         }}
         
         .remove-btn{
