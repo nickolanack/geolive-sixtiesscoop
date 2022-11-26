@@ -1978,16 +1978,19 @@ a.ui-view,.template-content a{
         }
         
         
-        .external.youtube:after {
-            content: "\0f16a";
-            font-family: 'FontAwesome';
-            color: red;
-            position: absolute;
-            left: 20px;
-            top: 20px;
-            font-size: 41px;
-            filter: grayscale(0.5);
-            &:hover{
+        .external.youtube
+            &:after {
+                content: "\0f16a";
+                font-family: 'FontAwesome';
+                color: red;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                font-size: 41px;
+                filter: grayscale(0.5);
+            }
+            
+            &:hover:after{
                  filter: grayscale(0);
             }
         }
