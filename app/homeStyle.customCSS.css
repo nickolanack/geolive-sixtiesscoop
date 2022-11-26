@@ -1923,19 +1923,19 @@ a.ui-view,.template-content a{
         &:nth-of-type(2){  .image, .external {
             transform: rotate(-2deg) translate(0, 13px) scale(0.95);
             &:hover{
-                transform: rotate(-2deg) translate(0, 13px) scale(0.96);
+                transform: rotate(-1deg) translate(0, 13px) scale(1);
             }
         }}
         &:nth-of-type(3){  .image, .external {
             transform: rotate(2deg) translate(0, -5px) scale(1);
             &:hover{
-                transform: rotate(2deg) translate(0, -5px) scale(1.01);
+                transform: rotate(1deg) translate(0, -5px) scale(1.05);
             }
         }}
         &:nth-of-type(4){  .image, .external {
             transform: rotate(-2deg) translate(0, -5px) scale(0.9);
             &:hover{
-                transform: rotate(-2deg) translate(0, -5px) scale(0.91);
+                transform: rotate(-1deg) translate(0, -5px) scale(0.95);
             }
         }}
         
