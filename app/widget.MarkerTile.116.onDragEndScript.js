@@ -5,6 +5,12 @@ TemplateModule.SetTemplate('form',`<div>
     <div data-template="content" class="template-content"></div>
     <div data-template="footer" class="template-footer"></div>
     </div>`);
+    
+    
+if(AppClient.getUserType()==="guest"){
+    map.login();
+    return;
+}
 
 
 (new UIModalDialog(
