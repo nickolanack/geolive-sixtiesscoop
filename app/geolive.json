@@ -3478,16 +3478,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 415,
-                            "y": 271
+                            "x": 425,
+                            "y": 281
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 375,
-                                    "y": 484
+                                    "x": 385,
+                                    "y": 494
                                 }
                             }
                         ],
@@ -3507,20 +3507,22 @@
                                                 "attributeFields": [
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
                                                 ],
+                                                "className": "uploads-hidden",
                                                 "label": "Do you have any information about your birth family that you would share publicly?",
                                                 "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
                                                 "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "uploads-hidden",
                                                 "maxChars": 0,
+                                                "mandatory": false,
+                                                "showToolbars": true,
+                                                "showAudios": true,
+                                                "showVideos": true,
+                                                "showDocuments": true,
+                                                "showImages": true,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": ""
+                                                "onRenderModuleFn": "",
+                                                "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
                                         {
@@ -3529,20 +3531,22 @@
                                                 "attributeFields": [
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
+                                                "className": "input-hidden",
                                                 "label": "Add Images",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "input-hidden",
                                                 "maxChars": 0,
+                                                "mandatory": false,
+                                                "showToolbars": true,
+                                                "showAudios": true,
+                                                "showVideos": true,
+                                                "showDocuments": true,
+                                                "showImages": true,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": ""
+                                                "onRenderModuleFn": "module.getTextField().getMediaBrowser(function(browser){\n    \n    browser.addToolbarBtn({\n\t\t\t\t\"html\":\"Add Video\"\n\t\t\t\t\"class\": \"add-youtube combined-browser\",\n\t\t\t\tevents: {\n\t\t\t\t\tclick: function() {\n\n\t\t\t\t\t\n\n\t\t\t\t\t},\n\t\t\t\t}\n\t\t\t});\n    \n})",
+                                                "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
                                         {
@@ -3552,13 +3556,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
                                                 "showLabel": false,
+                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
                                                 "presentationStyle": "checkbox",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         },
                                         {
@@ -3568,13 +3573,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Allow people to contact you thought the site",
                                                 "showLabel": false,
+                                                "label": "Allow people to contact you thought the site",
                                                 "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         },
                                         {
@@ -3584,13 +3590,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Share your email address",
                                                 "showLabel": false,
+                                                "label": "Share your email address",
                                                 "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
