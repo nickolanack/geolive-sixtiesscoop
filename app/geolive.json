@@ -3478,16 +3478,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 425,
-                            "y": 281
+                            "x": 435,
+                            "y": 291
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 385,
-                                    "y": 494
+                                    "x": 395,
+                                    "y": 504
                                 }
                             }
                         ],
@@ -3545,7 +3545,7 @@
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": "module.getTextField().getMediaBrowser(function(browser){\n    \n    browser.addToolbarBtn({\n\t\t\t\t\"html\":\"Add Video\"\n\t\t\t\t\"class\": \"add-youtube combined-browser\",\n\t\t\t\tevents: {\n\t\t\t\t\tclick: function() {\n\n\t\t\t\t\t\n\n\t\t\t\t\t},\n\t\t\t\t}\n\t\t\t});\n    \n})",
+                                                "onRenderModuleFn": "module.getTextField().getMediaBrowser(function(browser){\n    \n    browser.addToolbarBtn({\n\t\t\t\t\"html\":\"Add Video\",\n\t\t\t\t\"class\": \"add-youtube combined-browser\",\n\t\t\t\tevents: {\n\t\t\t\t\tclick: function() {\n\n\t\t\t\t\t\n\n\t\t\t\t\t},\n\t\t\t\t}\n\t\t\t});\n    \n})",
                                                 "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
