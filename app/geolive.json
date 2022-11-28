@@ -3478,16 +3478,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 445,
-                            "y": 301
+                            "x": 455,
+                            "y": 311
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 405,
-                                    "y": 514
+                                    "x": 415,
+                                    "y": 524
                                 }
                             }
                         ],
@@ -3545,7 +3545,7 @@
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        browser.addToolbarBtn({\n    \t\t\t\t\"html\":\"Add Video\",\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \n    \t\t\t\t\t\n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t});\n        \n    });\n    \n});",
+                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \n    \t\t\t\t\t\n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t});\n        \n    });\n    \n});",
                                                 "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
