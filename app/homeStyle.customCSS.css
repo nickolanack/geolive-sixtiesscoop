@@ -1772,11 +1772,15 @@ a.ui-view,.template-content a{
     
     
     .file-browse-btn.combined-browser{
-        
+        position:relative;
     }
     
     .file-browse-btn.combined-browser:after {
         content: "Add Photos";
+    }
+    
+    .file-browse-btn.combined-browser.add-youtube:after {
+        content: "Add Youtube";
     }
     
     
