@@ -8,7 +8,14 @@ TemplateModule.SetTemplate('form',`<div>
     
     
 if(AppClient.getUserType()==="guest"){
-    map.login();
+    new UIModalDialog(ScoopStories.getApp(), AppClient, {
+             
+        label: "Login",
+        formName: "loginFormView",
+        "class": "primary-btn login"
+    
+        
+    }).show();
     return;
 }
 
