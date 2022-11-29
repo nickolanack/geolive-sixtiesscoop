@@ -234,6 +234,13 @@
                     "widget": "help"
                 },
                 {
+                    "name": "visualize",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "visualizations"
+                },
+                {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
