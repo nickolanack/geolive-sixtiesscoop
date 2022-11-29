@@ -360,6 +360,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -665,6 +666,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -738,6 +740,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -779,6 +782,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -890,6 +894,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -961,6 +966,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -1014,6 +1020,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -1683,6 +1690,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -3383,6 +3391,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -3424,6 +3433,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positionList": [
                     "title",
@@ -3687,6 +3697,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4105,6 +4116,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4146,6 +4158,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4264,6 +4277,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4438,6 +4452,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4589,6 +4604,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4646,6 +4662,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4695,6 +4712,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4774,6 +4792,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4815,6 +4834,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4874,6 +4894,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5087,6 +5108,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5138,6 +5160,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5216,6 +5239,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5257,6 +5281,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5466,6 +5491,7 @@
             "formatModulesScript": "console.log('me');\r\n",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5639,6 +5665,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5726,6 +5753,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5767,6 +5795,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5873,6 +5902,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5960,6 +5990,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6034,6 +6065,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6105,6 +6137,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6394,6 +6427,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6458,6 +6492,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6549,6 +6584,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6691,6 +6727,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6800,6 +6837,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6924,6 +6962,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7007,6 +7046,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7094,6 +7134,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7167,7 +7208,8 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
-            "useRemote": ""
+            "useRemote": "",
+            "saveViewAsData": false
         }
     },
     "widget.103": {
@@ -7182,7 +7224,8 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
-            "useRemote": ""
+            "useRemote": "",
+            "saveViewAsData": false
         }
     },
     "widget.104": {
@@ -7587,6 +7630,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7678,6 +7722,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7897,6 +7942,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7996,6 +8042,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -8087,6 +8134,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": true,
             "metadata": {
                 "positionList": [
                     "title",
