@@ -7990,7 +7990,7 @@
             "widgetTitle": "visualizations",
             "target": "visualizations",
             "templateName": "visualizations",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
