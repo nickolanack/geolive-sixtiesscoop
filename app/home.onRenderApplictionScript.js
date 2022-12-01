@@ -14,6 +14,8 @@ GetWidget("homeStyle")->display($targetInstance);
 GetWidget("loginFormView")->display($targetInstance);
 GetWidget("registerFormView")->display($targetInstance);
 
+GetWidget("forgotPasswordForm")->display($targetInstance);
+
 
 GetWidget("combinedForm")->display($targetInstance);
 GetWidget("contactUserForm")->display($targetInstance);
