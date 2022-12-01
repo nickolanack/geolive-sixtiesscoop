@@ -8278,5 +8278,33 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.123": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.MagicLoginLink.subject",
+            "target": "email.MagicLoginLink.subject",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Subject"
+        }
+    },
+    "widget.124": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.MagicLoginLink.content",
+            "target": "email.MagicLoginLink.content",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Message Content"
+        }
     }
 }
