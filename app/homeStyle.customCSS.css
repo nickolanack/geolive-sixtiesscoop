@@ -690,6 +690,11 @@ $introTextColor:#4d8673;
                 color: cornflowerblue;
                 margin-top: 40px;
             }
+            
+    label.label-block {
+        font-size: 18px;
+        line-height: 59px;
+    }
     
     
     &>div>.template-content:after {
