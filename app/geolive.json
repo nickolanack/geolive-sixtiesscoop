@@ -3495,16 +3495,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 525,
-                            "y": 381
+                            "x": 535,
+                            "y": 391
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 485,
-                                    "y": 594
+                                    "x": 495,
+                                    "y": 604
                                 }
                             }
                         ],
@@ -3549,7 +3549,7 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
                                                 "className": "input-hidden",
-                                                "label": "Add Images",
+                                                "label": "Add Images and Videos",
                                                 "message": "add a description",
                                                 "lines": 3,
                                                 "maxChars": 0,
