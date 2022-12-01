@@ -8412,9 +8412,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "privacyContent",
-            "target": "privacyContent",
-            "templateName": "privacyContent",
+            "widgetTitle": "privacyPageContent",
+            "target": "privacyPageContent",
+            "templateName": "privacyPageContent",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -8429,7 +8429,7 @@
                     },
                     "content": {
                         "modules": [
-                            "privacyContent.metadata.positions.content.modules.0.json"
+                            "privacyPageContent.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
