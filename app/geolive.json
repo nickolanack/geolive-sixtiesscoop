@@ -8459,9 +8459,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html"
+            "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html",
+            "readAccess": "public"
         }
     }
 }
