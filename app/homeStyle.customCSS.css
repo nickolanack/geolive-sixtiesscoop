@@ -2010,6 +2010,21 @@ a.ui-view,.template-content a{
             &:hover:after{
                  filter: grayscale(0);
             }
+            
+            .external.youtube .title {
+                white-space: nowrap;
+                overflow: hidden;
+                color: white;
+                position: relative;
+                top: 7px;
+                left: 7px;
+                text-shadow: 0 0 3px black;
+                font-weight: 800;
+                text-overflow: ellipsis;
+                max-width: 90%;
+                display: inline-block;
+                pointer-events: none;
+            }
         }
         
     }
