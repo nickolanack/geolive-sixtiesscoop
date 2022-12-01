@@ -17,7 +17,7 @@ return [
     new ModalFormButtonModule(application, AppClient, {
              
                 label: "Forgot Password",
-                formName: "forgotPassowrdForm",
+                formName: "forgotPasswordForm",
                 "class": "secondary-btn forgot-pwd",
                 "style":"margin-left: calc( 50% - 40px );",
                 formOptions: {template:"form"}
