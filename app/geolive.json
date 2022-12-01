@@ -8469,6 +8469,51 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
+            "widgetTitle": "dnakit",
+            "target": "dnakit",
+            "templateName": "dnakit",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "dnakit.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "dnakit.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "dnakit.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                }
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.129": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
             "widgetTitle": "",
             "target": "none",
             "templateName": "{target}",
