@@ -8495,7 +8495,7 @@
                                     "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "privacyPageContent",
+                                    "namedView": "dnakitPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
