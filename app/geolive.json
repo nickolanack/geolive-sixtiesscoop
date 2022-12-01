@@ -1202,16 +1202,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 338,
-                            "y": 470
+                            "x": 348,
+                            "y": 480
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 298,
-                                    "y": 671
+                                    "x": 308,
+                                    "y": 681
                                 }
                             }
                         ],
@@ -1225,6 +1225,13 @@
                                 "content": {
                                     "modules": [
                                         "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "plugin.SingleSignOn.FacebookLogin",
+                                            "config": {
+                                                "reloadOnSuccess": true,
+                                                "reloadUrl": ""
+                                            }
+                                        },
                                         {
                                             "type": "plugin.SingleSignOn.GoogleLogin",
                                             "config": {
@@ -1271,7 +1278,7 @@
                                             "type": "WizardScriptElement",
                                             "config": {
                                                 "name": "My Custom Script",
-                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.4.config.script.js",
+                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.5.config.script.js",
                                                 "description": "Info about my custom script"
                                             }
                                         }
