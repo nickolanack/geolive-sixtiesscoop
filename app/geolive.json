@@ -3495,16 +3495,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 455,
-                            "y": 311
+                            "x": 465,
+                            "y": 321
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 415,
-                                    "y": 524
+                                    "x": 425,
+                                    "y": 534
                                 }
                             }
                         ],
@@ -3562,7 +3562,7 @@
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \n    \t\t\t\t\t\n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t});\n        \n    });\n    \n});",
+                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        var textarea=null;\n    \n    \n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \t\t\t\t\t    \n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea=module.getTextField().getElement().insertBefore(\n    \t\t\t\t\t         (new Element('textarea', {\"class\":\"text-input show-anyway\"})),\n    \t\t\t\t\t         module.getTextField().getInputElement()\n    \t\t\t\t\t    );\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea.focus();\n    \t\t\t\t\t    \n    \t\t\t\t\t   \n    \n    \t\t\t\t\t    \n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t});\n        \n    });\n    \n});",
                                                 "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
