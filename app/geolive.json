@@ -8313,12 +8313,12 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "templateName": "{target}",
-            "requireTarget": true,
+            "widgetTitle": "privacy",
+            "target": "privacy",
+            "templateName": "privacy",
+            "requireTarget": false,
             "resolveItemScript": "return item",
-            "onRenderApplictionScript": "",
+            "onRenderApplictionScript": "privacy.onRenderApplictionScript.js",
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
@@ -8330,7 +8330,7 @@
                     },
                     "content": {
                         "modules": [
-                            "widget.DetailView.125.metadata.positions.content.modules.0.json",
+                            "privacy.metadata.positions.content.modules.0.json",
                             {
                                 "type": "UIView",
                                 "config": {
