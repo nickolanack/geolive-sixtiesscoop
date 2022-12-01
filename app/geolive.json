@@ -8339,7 +8339,7 @@
                                     "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "helpPageContent",
+                                    "namedView": "privacyPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
