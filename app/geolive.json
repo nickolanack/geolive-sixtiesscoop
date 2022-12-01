@@ -8303,7 +8303,7 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
             "contentTemplate": "email-MagicLoginLink-content.contentTemplate.html",
             "readAccess": "public"
