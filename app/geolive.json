@@ -3495,16 +3495,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 485,
-                            "y": 341
+                            "x": 495,
+                            "y": 351
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 445,
-                                    "y": 554
+                                    "x": 455,
+                                    "y": 564
                                 }
                             }
                         ],
