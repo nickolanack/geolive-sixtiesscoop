@@ -8290,7 +8290,8 @@
             "convertStylesToInline": false,
             "parseMarkdown": false,
             "saveTemplateAsData": false,
-            "contentTemplate": "Subject"
+            "contentTemplate": "email-MagicLoginLink-subject.contentTemplate.html",
+            "readAccess": "public"
         }
     },
     "widget.124": {
