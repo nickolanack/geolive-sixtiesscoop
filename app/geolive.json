@@ -3495,16 +3495,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 575,
-                            "y": 431
+                            "x": 585,
+                            "y": 441
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 535,
-                                    "y": 644
+                                    "x": 545,
+                                    "y": 654
                                 }
                             }
                         ],
@@ -3562,7 +3562,7 @@
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        var textarea=null;\n    \n    \n        var btn=null;\n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \t\t\t\t\t    \n    \t\t\t\t\t    \n    \t\t\t\t\t    if(textarea){\n    \t\t\t\t\t        \n    \t\t\t\t\t        var content=textarea.value;\n    \t\t\t\t\t        if(content.trim()!=\"\"){\n    \t\t\t\t\t            console.log(content);\n    \t\t\t\t\t            \n        \t\t\t\t\t        HTMLMediaContentRenderer.ParseTextInputExternalVideos(content, function(list){\n        \t\t\t\t\t            \n        \t\t\t\t\t           console.log(list);\n        \t\t\t\t\t           \/\/module.getTextField().setValue(module.getTextField().getValue()+\"\\n\"+content);\n        \t\t\t\t\t            \n        \t\t\t\t\t        })\n    \t\t\t\t\t            \n    \t\t\t\t\t        }\n    \t\t\t\t\t        \n    \t\t\t\t\t        btn.removeClass('active');\n    \t\t\t\t\t        textarea.parentNode.removeChild(textarea);\n    \t\t\t\t\t        textarea=null;\n    \t\t\t\t\t        return;\n    \t\t\t\t\t    }\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea=module.getTextField().getElement().insertBefore(\n    \t\t\t\t\t         (new Element('textarea', {\n    \t\t\t\t\t             \"class\":\"text-input show-anyway with-2-lines\",\n    \t\t\t\t\t             \"placeholder\":\"paste youtube embed code or url\"\n    \t\t\t\t\t         })),\n    \t\t\t\t\t         module.getTextField().getInputElement()\n    \t\t\t\t\t    );\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea.focus();\n    \t\t\t\t\t    \n    \t\t\t\t\t    btn.addClass('active');\n    \n    \t\t\t\t\t    \n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t},function(button, popover){\n    \t\t\t    btn=button; \/\/store reference\n    \t\t\t});\n        \n    });\n    \n});",
+                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        var textarea=null;\n    \n    \n        var btn=null;\n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \t\t\t\t\t    \n    \t\t\t\t\t    \n    \t\t\t\t\t    if(textarea){\n    \t\t\t\t\t        \n    \t\t\t\t\t        var content=textarea.value;\n    \t\t\t\t\t        if(content.trim()!=\"\"){\n    \t\t\t\t\t            console.log(content);\n    \t\t\t\t\t            \n        \t\t\t\t\t        HTMLMediaContentRenderer.ParseTextInputExternalVideos(content, function(list){\n        \t\t\t\t\t            \n        \t\t\t\t\t           console.log(list);\n        \t\t\t\t\t           if(list.length>0){\n        \t\t\t\t\t               module.getTextField().setValue((module.getTextField().getValue()+\"\\n\"+list[0].html).trim());\n        \t\t\t\t\t           }\n        \t\t\t\t\t           \n        \t\t\t\t\t           \/\/\n        \t\t\t\t\t            \n        \t\t\t\t\t        })\n    \t\t\t\t\t            \n    \t\t\t\t\t        }\n    \t\t\t\t\t        \n    \t\t\t\t\t        btn.removeClass('active');\n    \t\t\t\t\t        textarea.parentNode.removeChild(textarea);\n    \t\t\t\t\t        textarea=null;\n    \t\t\t\t\t        return;\n    \t\t\t\t\t    }\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea=module.getTextField().getElement().insertBefore(\n    \t\t\t\t\t         (new Element('textarea', {\n    \t\t\t\t\t             \"class\":\"text-input show-anyway with-2-lines\",\n    \t\t\t\t\t             \"placeholder\":\"paste youtube embed code or url\"\n    \t\t\t\t\t         })),\n    \t\t\t\t\t         module.getTextField().getInputElement()\n    \t\t\t\t\t    );\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea.focus();\n    \t\t\t\t\t    \n    \t\t\t\t\t    btn.addClass('active');\n    \n    \t\t\t\t\t    \n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t},function(button, popover){\n    \t\t\t    btn=button; \/\/store reference\n    \t\t\t});\n        \n    });\n    \n});",
                                                 "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
