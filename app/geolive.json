@@ -8616,7 +8616,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
-            "saveTemplateAsData": false,
+            "saveTemplateAsData": true,
             "contentTemplate": "DNA Kit",
             "readAccess": "public"
         }
