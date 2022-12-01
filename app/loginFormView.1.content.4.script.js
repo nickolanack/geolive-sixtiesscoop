@@ -1,4 +1,7 @@
-return new ModalFormButtonModule(application, AppClient, {
+return [
+    
+    
+    new ModalFormButtonModule(application, AppClient, {
              
                 label: "Register",
                 formName: "registerFormView",
@@ -8,4 +11,22 @@ return new ModalFormButtonModule(application, AppClient, {
         
          }).addEvent("show",function(newWizard){
              wizard.close();
+         }),
+         
+         
+    new ModalFormButtonModule(application, AppClient, {
+             
+                label: "Forgot Password",
+                formName: "forgotPassowrdFormView",
+                "class": "secondary-btn forgot=pwd",
+                "style":"margin-right: calc( 50% - 40px );",
+                formOptions: {template:"form"}
+        
+         }).addEvent("show",function(newWizard){
+             wizard.close();
          })
+         
+         
+         
+         
+    ];
