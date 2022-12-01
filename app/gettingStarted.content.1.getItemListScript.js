@@ -37,32 +37,37 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
 
 
 
+
+    var showLogin=function(){
+             (new UIModalDialog(
+    			application, 
+    			AppClient, 
+    			{
+    				"formName": 'loginFormView',
+    				"formOptions": {
+    					template: "form"
+    				}
+    			}
+    		)).show(function(){
+    
+    		
+    
+    		}).on('complete', function(item){
+    		    
+    		    
+    		    
+    		});
+        };
+
+
+
     callback( [
         new MockDataTypeItem({
             
             click:function(){
                 
                 if(AppClient.getUserType()==='guest'){
-                    
-                                            (new UIModalDialog(
-												application, 
-												AppClient, 
-												{
-													"formName": 'loginFormView',
-													"formOptions": {
-														template: "form"
-													}
-												}
-											)).show(function(){
-
-					            			
-
-											}).on('complete', function(item){
-											    
-											    
-											    
-											});
-                    
+                    showLogin();                     
                     return;
                 }
                 
@@ -77,6 +82,12 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
+                
+                if(AppClient.getUserType()==='guest'){
+                    showLogin();                     
+                    return;
+                }
+                 
                 document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
@@ -88,7 +99,13 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/me'
+                
+                if(AppClient.getUserType()==='guest'){
+                    showLogin();                     
+                    return;
+                } 
+                
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);
