@@ -28,4 +28,4 @@ setPwd.getElement().appendChild(new Element('button',{
         }}
     }))
         
-return ModuleArray([link/*,setPwd*/],{"className":"form-navigation-btns"})
+return new ModuleArray([link/*,setPwd*/], {"className":"form-navigation-btns"})
