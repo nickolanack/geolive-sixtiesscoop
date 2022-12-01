@@ -6870,6 +6870,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "featured-item",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "placeholderLabelItem",

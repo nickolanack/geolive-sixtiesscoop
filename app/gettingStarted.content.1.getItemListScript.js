@@ -41,7 +41,32 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         new MockDataTypeItem({
             
             click:function(){
-                document.location=document.location.origin+'/register'
+                
+                if(AppClient.getUserType()==='guest'){
+                    
+                                            (new UIModalDialog(
+												application, 
+												AppClient, 
+												{
+													"formName": 'loginFormView',
+													"formOptions": {
+														template: "form"
+													}
+												}
+											)).show(function(){
+
+					            			
+
+											}).on('complete', function(item){
+											    
+											    
+											    
+											});
+                    
+                    return;
+                }
+                
+                document.location=document.location.origin+'/me'
             },
             edit:function(){
                 configEdit.editIndex('links', 0);
@@ -52,7 +77,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/create'
+                document.location=document.location.origin+'/me'
             },
             edit:function(){
                 configEdit.editIndex('links', 1);
@@ -63,7 +88,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/edit'
+                document.location=document.location.origin+'/me'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);
