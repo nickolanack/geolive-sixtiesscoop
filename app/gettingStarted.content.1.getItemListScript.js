@@ -66,7 +66,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
                     return;
                 }
                 
-                document.location=document.location.origin+'/me'
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 0);
@@ -77,7 +77,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/me'
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 1);
