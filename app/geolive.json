@@ -1180,16 +1180,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 308,
-                            "y": 440
+                            "x": 318,
+                            "y": 450
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 268,
-                                    "y": 641
+                                    "x": 278,
+                                    "y": 651
                                 }
                             }
                         ],
