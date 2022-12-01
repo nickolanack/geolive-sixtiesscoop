@@ -234,6 +234,13 @@
                     "widget": "help"
                 },
                 {
+                    "name": "privacy",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "privacy"
+                },
+                {
                     "name": "visualize",
                     "view": "plugin",
                     "plugin": "UserInterface",
