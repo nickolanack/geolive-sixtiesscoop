@@ -1093,16 +1093,16 @@
                             "registerFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 0,
-                            "y": 0
+                            "x": 10,
+                            "y": 10
                         },
                         "children": [
                             "registerFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 0,
-                                    "y": 0
+                                    "x": -30,
+                                    "y": 186
                                 }
                             }
                         ],
@@ -1117,6 +1117,13 @@
                                     "modules": [
                                         "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "plugin.SingleSignOn.FacebookLogin",
+                                            "config": {
+                                                "reloadOnSuccess": true,
+                                                "reloadUrl": ""
+                                            }
+                                        },
+                                        {
                                             "type": "plugin.SingleSignOn.GoogleLogin",
                                             "config": {
                                                 "reloadOnSuccess": true,
@@ -1124,10 +1131,11 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardRegistration",
+                                            "type": "plugin.Users.Registration",
                                             "config": {
                                                 "className": "",
                                                 "showCancel": true,
+                                                "showBack": true,
                                                 "showNext": true,
                                                 "showName": false,
                                                 "showUsername": false,
