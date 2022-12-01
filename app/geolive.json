@@ -8637,5 +8637,34 @@
             "contentTemplate": "DNA Kit",
             "readAccess": "public"
         }
+    },
+    "widget.131": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.loginContent-html.text",
+            "target": "module.loginContent-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Login",
+            "readAccess": "public"
+        }
+    },
+    "widget.132": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.registerContent-html.text",
+            "target": "module.registerContent-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Register"
+        }
     }
 }
