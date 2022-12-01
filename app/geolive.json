@@ -241,6 +241,13 @@
                     "widget": "privacy"
                 },
                 {
+                    "name": "dnakit",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "dnakit"
+                },
+                {
                     "name": "visualize",
                     "view": "plugin",
                     "plugin": "UserInterface",
