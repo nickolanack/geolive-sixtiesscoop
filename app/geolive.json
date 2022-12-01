@@ -8461,7 +8461,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": false,
             "saveTemplateAsData": false,
-            "contentTemplate": "Privacy Policy"
+            "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html"
         }
     }
 }
