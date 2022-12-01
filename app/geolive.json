@@ -8662,9 +8662,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "Register"
+            "contentTemplate": "Register",
+            "readAccess": "public"
         }
     }
 }
