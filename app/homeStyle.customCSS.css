@@ -11,6 +11,15 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
 
 $introTextColor:#4d8673;
 
+
+.sso-btn.google, .sso-btn.facebook {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+
 .header-menu {
     position: absolute;
     top: 10px;
