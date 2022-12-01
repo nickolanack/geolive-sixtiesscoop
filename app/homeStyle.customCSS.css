@@ -1681,6 +1681,10 @@ a.ui-view,.template-content a{
     
     .input-hidden .text-input{
         display: none;
+        
+        &.show-anyway {
+            display: inline-block;
+        }
     }
     
     .uitext-container .text-input{
