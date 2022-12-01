@@ -107,12 +107,10 @@ if(AppClient.getUserType()!=="guest"){
 
  
  if(AppClient.getUserType()=="admin"){
-    links.push(new MockDataTypeItem({name:"Edit story", "className":"edit", click:function(){
-       
-        console.log(item);
+    
+    
+    var displayEditForm=function(){
         
-       
-       
         (new UIModalDialog(
 			application, 
 			item,//user,//AppClient, 
@@ -138,9 +136,18 @@ if(AppClient.getUserType()!=="guest"){
 		   console.log(data);
 		    
 		});
+        
+    } 
+     
+    if(document.location.pathname.split('/').pop()==='edit'){
+            displayEditForm()
+    }
+     
+     
+    links.push(new MockDataTypeItem({name:"Edit story", "className":"edit", click:function(){
        
-       
-       
+        console.log(item);
+        displayEditForm();
        
     }}));
  }
