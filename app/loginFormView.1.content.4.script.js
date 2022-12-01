@@ -6,7 +6,7 @@ return [
                 label: "Register",
                 formName: "registerFormView",
                 "class": "secondary-btn register",
-                "style":"margin-right: calc( 50% - 40px );",
+                "style":"margin-left: calc( 50% - 40px );",
                 formOptions: {template:"form"}
         
          }).addEvent("show",function(newWizard){
@@ -18,8 +18,8 @@ return [
              
                 label: "Forgot Password",
                 formName: "forgotPassowrdFormView",
-                "class": "secondary-btn forgot=pwd",
-                "style":"margin-right: calc( 50% - 40px );",
+                "class": "secondary-btn forgot-pwd",
+                "style":"margin-left: calc( 50% - 40px );",
                 formOptions: {template:"form"}
         
          }).addEvent("show",function(newWizard){
