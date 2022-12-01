@@ -312,7 +312,7 @@
         "name": "Single SignOn Plugin",
         "instance": "SingleSignOn",
         "parameters": {
-            "facebookAppId": "331904550992320",
+            "facebookAppId": "819950539309061",
             "facebookAppSecret": "XXXX-XXXX",
             "googleAuthClientId": "XXXX-XXXX"
         }
