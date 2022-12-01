@@ -58,6 +58,28 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
     		    
     		});
         };
+        
+        
+    var showRegister=function(){
+             (new UIModalDialog(
+    			application, 
+    			AppClient, 
+    			{
+    				"formName": 'registerFormView',
+    				"formOptions": {
+    					template: "form"
+    				}
+    			}
+    		)).show(function(){
+    
+    		
+    
+    		}).on('complete', function(item){
+    		    
+    		    
+    		    
+    		});
+        };
 
 
 
@@ -67,7 +89,7 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
             click:function(){
                 
                 if(AppClient.getUserType()==='guest'){
-                    showLogin();                     
+                    showRegister();                     
                     return;
                 }
                 
