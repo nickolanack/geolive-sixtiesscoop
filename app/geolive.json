@@ -8449,5 +8449,19 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.127": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.privacyPolicy-html.text",
+            "target": "module.privacyPolicy-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "Privacy Policy"
+        }
     }
 }
