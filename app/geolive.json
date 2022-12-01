@@ -8460,7 +8460,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
-            "saveTemplateAsData": false,
+            "saveTemplateAsData": true,
             "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html",
             "readAccess": "public"
         }
