@@ -2041,7 +2041,7 @@ a.ui-view,.template-content a{
                  filter: grayscale(0);
             }
             
-            .external.youtube .title {
+            .title {
                 white-space: nowrap;
                 overflow: hidden;
                 color: white;
