@@ -18,6 +18,13 @@ $introTextColor:#4d8673;
     margin-bottom: 20px;
 }
 
+button.form-btn.secondary-btn.forgot-pwd {
+    background: none;
+    box-shadow: none;
+    color: cornflowerblue;
+    margin-top: 40px;
+}
+
 
 
 .header-menu {
