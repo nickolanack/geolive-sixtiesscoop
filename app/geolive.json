@@ -8688,5 +8688,19 @@
             "contentTemplate": "Register",
             "readAccess": "public"
         }
+    },
+    "widget.133": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.gettingStartedTextBottom.text",
+            "target": "module.gettingStartedTextBottom.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "module-gettingStartedTextBottom-text.contentTemplate.html"
+        }
     }
 }
