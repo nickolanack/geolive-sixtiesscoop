@@ -8765,9 +8765,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "About the visualizations"
+            "contentTemplate": "About the visualizations",
+            "readAccess": "public"
         }
     }
 }
