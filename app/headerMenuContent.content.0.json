@@ -6,6 +6,7 @@
         "elementOptions": {},
         "text": "#Site Header",
         "template": "siteHeaderText",
+        "templateNamespace": "",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",

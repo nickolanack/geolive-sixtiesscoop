@@ -8740,5 +8740,35 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.135": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.visualizeIntro.text",
+            "target": "module.visualizeIntro.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "About the visualizations",
+            "readAccess": "public"
+        }
+    },
+    "widget.136": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.visualizeMetrics.text",
+            "target": "module.visualizeMetrics.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "About the visualizations",
+            "readAccess": "public"
+        }
     }
 }
