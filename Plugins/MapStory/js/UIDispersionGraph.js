@@ -177,14 +177,7 @@ var UIDispersionData = (function(){
 						var el = $(chart.view.el);
 						el.addEvent('click', function() {
 
-							var layer = me.getLayer(code);
-							if (layer.isVisible()) {
-								el.addClass('layer-hidden');
-								layer.hide();
-								return;
-							}
-							el.removeClass('layer-hidden');
-							layer.show();
+							
 						});
 
 						this.getCount(function(number) {
@@ -198,30 +191,10 @@ var UIDispersionData = (function(){
 					getCount: function(callback) {
 
 						if (callback) {
-
-							var updateCount = function() {
-
-								if (me["_interval" + code]) {
-									clearInterval(me["_interval" + code]);
-									delete me["_interval" + code];
-								}
-
-								me["_interval" + code] = setTimeout(function() {
-									delete me["_interval" + code];
-									callback(me.getLayer(code).getItemsCount());
-								}, 100);
-							}
-							updateCount();
-
-							me.addEvent('addLine.' + code, updateCount);
-							me.addEvent('deactivate:once', function() {
-								me.removeEvent('addLine.' + code, updateCount);
-							});
-
-							return;
+							callback(0)
 						}
 
-						return me.getLayer(code).getItemsCount();
+						return 0
 					}
 				}))
 			})
