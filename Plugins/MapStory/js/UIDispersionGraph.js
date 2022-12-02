@@ -334,7 +334,18 @@ var UIDispersionData = (function(){
                     	};
         			    
         			    sources=sources.sort().reverse();
-        			    dests=dests.sort();
+        			    dests=dests.sort(function(a,b){
+
+
+        			    	if(provinces[a]&&!provinces[b]){
+        			    		return -1;
+        			    	}
+        			    	if(provinces[b]&&!provinces[a]){
+        			    		return 1;
+        			    	}
+
+        			    	return a.localeCompare(b);
+        			    });
         			    
         			    
                     				
