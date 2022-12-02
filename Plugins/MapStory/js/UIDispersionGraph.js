@@ -206,7 +206,7 @@ var UIDispersionData = (function(){
 									return dispersion._getCode(result)===code;
 								}).length;
 
-								callback(this._lastCount)
+								callback(me._lastCount);
 							});
 
 						
