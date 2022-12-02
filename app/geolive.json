@@ -8708,9 +8708,9 @@
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
-            "templateName": "{target}",
+            "widgetTitle": "metricsByProvinces",
+            "target": "metricsByProvinces",
+            "templateName": "metricsByProvinces",
             "requireTarget": true,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
@@ -8725,7 +8725,7 @@
                     },
                     "content": {
                         "modules": [
-                            "widget.DetailView.134.metadata.positions.content.modules.0.json"
+                            "metricsByProvinces.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {
