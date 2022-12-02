@@ -271,8 +271,6 @@ var UIDispersionGraph = (function() {
 
 			me._active = false;
 
-			me._initStyles()
-
 			if(tile){
 				tile.addEvent('click', me.toggle.bind(me));
 			}
