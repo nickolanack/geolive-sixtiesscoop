@@ -2,6 +2,11 @@ var UIDispersionGraph = (function() {
 
 
 
+	/**
+	 * TODO: decouple map, tile, control
+	 */
+
+
 	return new Class({
 		Implements: [Events],
 		initialize: function(map, tile, control) {
@@ -14,12 +19,11 @@ var UIDispersionGraph = (function() {
 
 			me._active = false;
 
-
 			me._initStyles()
 
-
-			tile.addEvent('click', me.toggle.bind(me));
-
+			if(tile){
+				tile.addEvent('click', me.toggle.bind(me));
+			}
 
 		},
 		_getLineData: function(result, code) {
