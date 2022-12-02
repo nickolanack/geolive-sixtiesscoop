@@ -1,10 +1,19 @@
 {
-    "type": "InlineHtml",
+    "type": "Template",
     "config": {
         "className": "",
+        "elementType": "span",
+        "elementOptions": {},
         "text": "<h2>Adoptions data<\/h2>\n<div style=\"\ncolor: #4D4D4D;\n    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 14px;\n    font-weight: 200;\n    line-height: 32px;\n\">Adoptions by province<\/div>",
         "template": "",
+        "templateNamespace": "",
         "templateVariablesScript": "",
-        "formatTextScript": ""
+        "formatTextScript": "",
+        "formatVariablesScript": "",
+        "requestTemplateScript": "defaultBehaviour();",
+        "ajaxRequestTemplate": false,
+        "namedFormView": "",
+        "formOptions": {},
+        "identifier": "htmlLabel"
     }
 }

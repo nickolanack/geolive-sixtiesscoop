@@ -4,15 +4,15 @@
         "className": "",
         "elementType": "span",
         "elementOptions": "{}",
-        "text": "Register",
-        "template": "registerContent.html",
+        "text": "Privacy Policy",
+        "template": "privacyPolicy.html",
         "templateNamespace": "",
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
         "requestTemplateScript": "defaultBehaviour();",
         "ajaxRequestTemplate": true,
-        "namedFormView": "",
+        "namedFormView": "genericParametersForm",
         "formOptions": "{}",
         "identifier": "htmlLabel"
     }

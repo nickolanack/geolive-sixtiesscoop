@@ -37,11 +37,63 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
 
 
 
+
+    var showLogin=function(){
+             (new UIModalDialog(
+    			application, 
+    			AppClient, 
+    			{
+    				"formName": 'loginFormView',
+    				"formOptions": {
+    					template: "form"
+    				}
+    			}
+    		)).show(function(){
+    
+    		
+    
+    		}).on('complete', function(item){
+    		    
+    		    
+    		    
+    		});
+        };
+        
+        
+    var showRegister=function(){
+             (new UIModalDialog(
+    			application, 
+    			AppClient, 
+    			{
+    				"formName": 'registerFormView',
+    				"formOptions": {
+    					template: "form"
+    				}
+    			}
+    		)).show(function(){
+    
+    		
+    
+    		}).on('complete', function(item){
+    		    
+    		    
+    		    
+    		});
+        };
+
+
+
     callback( [
         new MockDataTypeItem({
             
             click:function(){
-                document.location=document.location.origin+'/register'
+                
+                if(AppClient.getUserType()==='guest'){
+                    showRegister();                     
+                    return;
+                }
+                
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 0);
@@ -52,7 +104,13 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/create'
+                
+                if(AppClient.getUserType()==='guest'){
+                    showLogin();                     
+                    return;
+                }
+                 
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 1);
@@ -63,7 +121,13 @@ var configEdit = (new ConfigEdit(application, 'gettingStartedItems')).withTempla
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/edit'
+                
+                if(AppClient.getUserType()==='guest'){
+                    showLogin();                     
+                    return;
+                } 
+                
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);

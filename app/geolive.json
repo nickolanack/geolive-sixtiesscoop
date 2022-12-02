@@ -234,6 +234,27 @@
                     "widget": "help"
                 },
                 {
+                    "name": "privacy",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "privacy"
+                },
+                {
+                    "name": "dnakit",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "dnakit"
+                },
+                {
+                    "name": "visualize",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "visualizations"
+                },
+                {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
@@ -305,7 +326,7 @@
         "name": "Single SignOn Plugin",
         "instance": "SingleSignOn",
         "parameters": {
-            "facebookAppId": "331904550992320",
+            "facebookAppId": "819950539309061",
             "facebookAppSecret": "XXXX-XXXX",
             "googleAuthClientId": "XXXX-XXXX"
         }
@@ -353,6 +374,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -658,6 +680,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -731,6 +754,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -772,6 +796,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -883,6 +908,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -954,6 +980,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -1007,6 +1034,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -1065,16 +1093,16 @@
                             "registerFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 0,
-                            "y": 0
+                            "x": 10,
+                            "y": 10
                         },
                         "children": [
                             "registerFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 0,
-                                    "y": 0
+                                    "x": -30,
+                                    "y": 186
                                 }
                             }
                         ],
@@ -1089,6 +1117,13 @@
                                     "modules": [
                                         "registerFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "plugin.SingleSignOn.FacebookLogin",
+                                            "config": {
+                                                "reloadOnSuccess": true,
+                                                "reloadUrl": ""
+                                            }
+                                        },
+                                        {
                                             "type": "plugin.SingleSignOn.GoogleLogin",
                                             "config": {
                                                 "reloadOnSuccess": true,
@@ -1096,10 +1131,11 @@
                                             }
                                         },
                                         {
-                                            "type": "WizardRegistration",
+                                            "type": "plugin.Users.Registration",
                                             "config": {
                                                 "className": "",
                                                 "showCancel": true,
+                                                "showBack": true,
                                                 "showNext": true,
                                                 "showName": false,
                                                 "showUsername": false,
@@ -1166,16 +1202,16 @@
                             "loginFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 268,
-                            "y": 400
+                            "x": 348,
+                            "y": 480
                         },
                         "children": [
                             "loginFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 228,
-                                    "y": 601
+                                    "x": 308,
+                                    "y": 681
                                 }
                             }
                         ],
@@ -1189,6 +1225,13 @@
                                 "content": {
                                     "modules": [
                                         "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "plugin.SingleSignOn.FacebookLogin",
+                                            "config": {
+                                                "reloadOnSuccess": true,
+                                                "reloadUrl": ""
+                                            }
+                                        },
                                         {
                                             "type": "plugin.SingleSignOn.GoogleLogin",
                                             "config": {
@@ -1216,13 +1259,18 @@
                                             "type": "Template",
                                             "config": {
                                                 "className": "uitext-container",
+                                                "elementType": "span",
+                                                "elementOptions": [],
                                                 "text": "<span class=\"label\" style=\"margin-top:30px;\">Don't have an account yet?<\/span>",
                                                 "template": "",
+                                                "templateNamespace": "",
                                                 "templateVariablesScript": "",
                                                 "formatTextScript": "",
                                                 "formatVariablesScript": "",
+                                                "requestTemplateScript": "defaultBehaviour();",
                                                 "ajaxRequestTemplate": false,
                                                 "namedFormView": "",
+                                                "formOptions": [],
                                                 "identifier": "htmlLabel"
                                             }
                                         },
@@ -1230,7 +1278,7 @@
                                             "type": "WizardScriptElement",
                                             "config": {
                                                 "name": "My Custom Script",
-                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.4.config.script.js",
+                                                "script": "loginFormView.metadata.children.1.builderMetadata.positions.content.modules.5.config.script.js",
                                                 "description": "Info about my custom script"
                                             }
                                         }
@@ -1289,16 +1337,16 @@
                             "profileFormView.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 328,
-                            "y": 460
+                            "x": 338,
+                            "y": 470
                         },
                         "children": [
                             "profileFormView.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 288,
-                                    "y": 698
+                                    "x": 298,
+                                    "y": 708
                                 }
                             }
                         ],
@@ -1676,6 +1724,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -3376,6 +3425,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -3417,6 +3467,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positionList": [
                     "title",
@@ -3478,16 +3529,16 @@
                             "publishingOptionsForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 415,
-                            "y": 271
+                            "x": 585,
+                            "y": 441
                         },
                         "children": [
                             "publishingOptionsForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 375,
-                                    "y": 484
+                                    "x": 545,
+                                    "y": 654
                                 }
                             }
                         ],
@@ -3507,20 +3558,22 @@
                                                 "attributeFields": [
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
                                                 ],
+                                                "className": "uploads-hidden",
                                                 "label": "Do you have any information about your birth family that you would share publicly?",
                                                 "message": "If you are seeking family members (parents, siblings, extended family), please list all details that you have below including name, birth date, place of residence, etc.",
                                                 "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "uploads-hidden",
                                                 "maxChars": 0,
+                                                "mandatory": false,
+                                                "showToolbars": true,
+                                                "showAudios": true,
+                                                "showVideos": true,
+                                                "showDocuments": true,
+                                                "showImages": true,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": ""
+                                                "onRenderModuleFn": "",
+                                                "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
                                         {
@@ -3529,20 +3582,22 @@
                                                 "attributeFields": [
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
-                                                "label": "Add Images",
+                                                "className": "input-hidden",
+                                                "label": "Add Images and Videos",
                                                 "message": "add a description",
                                                 "lines": 3,
-                                                "mandatory": false,
-                                                "showAudios": true,
-                                                "showImages": true,
-                                                "showDocuments": true,
-                                                "showVideos": true,
-                                                "className": "input-hidden",
                                                 "maxChars": 0,
+                                                "mandatory": false,
+                                                "showToolbars": true,
+                                                "showAudios": true,
+                                                "showVideos": true,
+                                                "showDocuments": true,
+                                                "showImages": true,
                                                 "showExpandInput": true,
                                                 "toolbarPosition": "bottom",
                                                 "textFormatScript": "",
-                                                "onRenderModuleFn": ""
+                                                "onRenderModuleFn": "module.runOnceOnLoad(function(){\n    \n    module.getTextField().getMediaBrowser(function(browser){\n    \n        var textarea=null;\n    \n    \n        var btn=null;\n        browser.addToolbarBtn({\n    \t\t\t\t\"class\": \"add-youtube combined-browser\",\n    \t\t\t\tevents: {\n    \t\t\t\t\tclick: function() {\n    \t\t\t\t\t    \n    \t\t\t\t\t    \n    \t\t\t\t\t    if(textarea){\n    \t\t\t\t\t        \n    \t\t\t\t\t        var content=textarea.value;\n    \t\t\t\t\t        if(content.trim()!=\"\"){\n    \t\t\t\t\t            console.log(content);\n    \t\t\t\t\t            \n        \t\t\t\t\t        HTMLMediaContentRenderer.ParseTextInputExternalVideos(content, function(list){\n        \t\t\t\t\t            \n        \t\t\t\t\t           console.log(list);\n        \t\t\t\t\t           if(list.length>0){\n        \t\t\t\t\t               module.getTextField().setValue((module.getTextField().getValue()+\"\\n\"+list[0].html).trim());\n        \t\t\t\t\t           }\n        \t\t\t\t\t           \n        \t\t\t\t\t           \/\/\n        \t\t\t\t\t            \n        \t\t\t\t\t        })\n    \t\t\t\t\t            \n    \t\t\t\t\t        }\n    \t\t\t\t\t        \n    \t\t\t\t\t        btn.removeClass('active');\n    \t\t\t\t\t        textarea.parentNode.removeChild(textarea);\n    \t\t\t\t\t        textarea=null;\n    \t\t\t\t\t        return;\n    \t\t\t\t\t    }\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea=module.getTextField().getElement().insertBefore(\n    \t\t\t\t\t         (new Element('textarea', {\n    \t\t\t\t\t             \"class\":\"text-input show-anyway with-2-lines\",\n    \t\t\t\t\t             \"placeholder\":\"paste youtube embed code or url\"\n    \t\t\t\t\t         })),\n    \t\t\t\t\t         module.getTextField().getInputElement()\n    \t\t\t\t\t    );\n    \t\t\t\t\t    \n    \t\t\t\t\t    textarea.focus();\n    \t\t\t\t\t    \n    \t\t\t\t\t    btn.addClass('active');\n    \n    \t\t\t\t\t    \n    \n    \t\t\t\t\t},\n    \t\t\t\t}\n    \t\t\t},function(button, popover){\n    \t\t\t    btn=button; \/\/store reference\n    \t\t\t});\n        \n    });\n    \n});",
+                                                "mediaIconTint": "rgb(100, 149, 237)"
                                             }
                                         },
                                         {
@@ -3552,13 +3607,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.3.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
                                                 "showLabel": false,
+                                                "label": "Are you searching? Would you like your information to be public and posted on this website?",
                                                 "presentationStyle": "checkbox",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         },
                                         {
@@ -3568,13 +3624,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Allow people to contact you thought the site",
                                                 "showLabel": false,
+                                                "label": "Allow people to contact you thought the site",
                                                 "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         },
                                         {
@@ -3584,13 +3641,14 @@
                                                     "publishingOptionsForm.metadata.children.1.builderMetadata.positions.content.modules.5.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
-                                                "label": "Share your email address",
                                                 "showLabel": false,
+                                                "label": "Share your email address",
                                                 "presentationStyle": "radio",
                                                 "presentationRadioTrueLabel": "Yes",
                                                 "presentationRadioFalseLabel": "No",
                                                 "presentationImagesTrueImage": [],
-                                                "presentationImagesFalseImage": []
+                                                "presentationImagesFalseImage": [],
+                                                "onRenderModuleFn": ""
                                             }
                                         }
                                     ]
@@ -3673,6 +3731,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4091,6 +4150,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4132,6 +4192,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4250,6 +4311,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4424,6 +4486,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4575,6 +4638,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4632,6 +4696,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4681,6 +4746,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4690,33 +4756,28 @@
                         "modules": [
                             "sidePanelGraphDetail.metadata.positions.content.modules.0.json",
                             {
-                                "type": "UIListView",
+                                "type": "UIView",
                                 "config": {
-                                    "listClassName": "",
                                     "className": "",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "graphDetailAnalytic",
+                                    "namedView": "metricsByProvinces",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
                                     "namedFormView": "defaultView",
-                                    "formOptions": "{}",
+                                    "formOptions": "\"{}\"",
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
                                     "formatModuleScript": "",
-                                    "resolveItemScript": "return item;",
+                                    "resolveItemScript": "return item",
                                     "filterModulesScript": "return list",
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
-                                    "targetName": "",
-                                    "getItemListScript": "sidePanelGraphDetail.metadata.positions.content.modules.1.config.getItemListScript.js",
-                                    "formatItemListScript": "return list;",
-                                    "formatListItemModuleScript": "return item;",
-                                    "emptyNamedView": "emptyListView",
-                                    "filterItemsScript": "return true;",
-                                    "sortItemsScript": "",
-                                    "maxItems": "-1"
+                                    "targetName": ""
                                 }
                             },
                             {
@@ -4760,6 +4821,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4801,6 +4863,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -4860,6 +4923,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5073,6 +5137,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5124,6 +5189,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5202,6 +5268,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5243,6 +5310,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5452,6 +5520,7 @@
             "formatModulesScript": "console.log('me');\r\n",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5625,6 +5694,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5712,6 +5782,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5753,6 +5824,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5859,6 +5931,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -5872,6 +5945,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "featured-item",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "placeholderLabelItem",
@@ -5946,6 +6021,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6020,6 +6096,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6091,6 +6168,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6380,6 +6458,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6444,6 +6523,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6535,6 +6615,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6677,6 +6758,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6786,6 +6868,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6799,6 +6882,8 @@
                                 "config": {
                                     "listClassName": "",
                                     "className": "featured-item",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "placeholderLabelItem",
@@ -6823,6 +6908,25 @@
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
+                                }
+                            },
+                            {
+                                "type": "Template",
+                                "config": {
+                                    "className": "",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
+                                    "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                    "template": "gettingStartedTextBottom",
+                                    "templateNamespace": "",
+                                    "templateVariablesScript": "{}",
+                                    "formatTextScript": "",
+                                    "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
+                                    "ajaxRequestTemplate": true,
+                                    "namedFormView": "genericParametersForm",
+                                    "formOptions": "{}",
+                                    "identifier": "htmlLabel"
                                 }
                             }
                         ]
@@ -6910,6 +7014,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -6993,6 +7098,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7080,6 +7186,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7153,7 +7260,8 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
-            "useRemote": ""
+            "useRemote": "",
+            "saveViewAsData": false
         }
     },
     "widget.103": {
@@ -7168,7 +7276,8 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
-            "useRemote": ""
+            "useRemote": "",
+            "saveViewAsData": false
         }
     },
     "widget.104": {
@@ -7245,16 +7354,16 @@
                             "combinedForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 91,
-                            "y": 112
+                            "x": 171,
+                            "y": 192
                         },
                         "children": [
                             "combinedForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 51,
-                                    "y": 370
+                                    "x": 131,
+                                    "y": 450
                                 }
                             }
                         ],
@@ -7285,7 +7394,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7310,7 +7419,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7354,7 +7463,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.4.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7450,7 +7559,7 @@
                                                 "showDeleteButton": false,
                                                 "deleteItemScript": "defaultBehaviorFn()",
                                                 "initModuleScript": "",
-                                                "formatModuleScript": "",
+                                                "formatModuleScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.8.config.formatModuleScript.js",
                                                 "resolveItemScript": "combinedForm.metadata.children.1.builderMetadata.positions.content.modules.8.config.resolveItemScript.js",
                                                 "filterModulesScript": "return list",
                                                 "itemButtonsScript": "return [];",
@@ -7573,6 +7682,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7664,6 +7774,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7883,6 +7994,7 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
+            "saveViewAsData": false,
             "metadata": {
                 "positions": {
                     "title": {
@@ -7949,6 +8061,666 @@
                                     "targetName": ""
                                 }
                             }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.120": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "visualizations",
+            "target": "visualizations",
+            "templateName": "visualizations",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "visualizations.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "visualizations.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content intro-section",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "visualizationsContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bottomSection",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.121": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "visualizationsContent",
+            "target": "visualizationsContent",
+            "templateName": "visualizationsContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": true,
+            "metadata": {
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "visualizationsContent.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "visualizationsContent.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "visualizationsContent.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                }
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.122": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "forgotPasswordForm",
+            "target": "forgotPasswordForm",
+            "templateName": "forgotPasswordForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": -18,
+                    "y": 171
+                },
+                "children": [
+                    "forgotPasswordForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "forgotPasswordForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 168,
+                            "y": 300
+                        },
+                        "children": [
+                            "forgotPasswordForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 128,
+                                    "y": 476
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "forgotPasswordForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "forgotPasswordForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "FormTextField",
+                                            "config": {
+                                                "className": "",
+                                                "label": "Email Address",
+                                                "placeholder": "add your email address",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add another value",
+                                                "formatter": "none",
+                                                "beforeRenderModuleScript": "",
+                                                "onRenderTextFieldScript": "forgotPasswordForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.onRenderTextFieldScript.js",
+                                                "formatValueScript": "",
+                                                "getValueScript": " return \"\"; ",
+                                                "updateValueScript": " object.value=value ",
+                                                "submitValueScript": "forgotPasswordForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js",
+                                                "validateValueScript": "forgotPasswordForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.validateValueScript.js"
+                                            }
+                                        },
+                                        {
+                                            "type": "WizardScriptElement",
+                                            "config": {
+                                                "name": "My Custom Script",
+                                                "script": "forgotPasswordForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.script.js",
+                                                "description": "Info about my custom script"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": []
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.123": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.MagicLoginLink.subject",
+            "target": "email.MagicLoginLink.subject",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-MagicLoginLink-subject.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.124": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.MagicLoginLink.content",
+            "target": "email.MagicLoginLink.content",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "contentTemplate": "email-MagicLoginLink-content.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.125": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "privacy",
+            "target": "privacy",
+            "templateName": "privacy",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "privacy.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "privacy.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content intro-section",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "privacyPageContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "advancedSearchForm",
+                                    "formOptions": "{\n    template: \"form\",\n    showCancel:false,\n    labelForSubmit:\"Search\"\n}",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bottomSection",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.126": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "privacyPageContent",
+            "target": "privacyPageContent",
+            "templateName": "privacyPageContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "privacyPageContent.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.127": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.privacyPolicy-html.text",
+            "target": "module.privacyPolicy-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.128": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "dnakit",
+            "target": "dnakit",
+            "templateName": "dnakit",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "dnakit.onRenderApplictionScript.js",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "dnakit.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-content intro-section",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "dnakitPageContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "advancedSearchForm",
+                                    "formOptions": "{\n    template: \"form\",\n    showCancel:false,\n    labelForSubmit:\"Search\"\n}",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-footer",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "bottomSection",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.129": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "dnakitPageContent",
+            "target": "dnakitPageContent",
+            "templateName": "dnakitPageContent",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "dnakitPageContent.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.130": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.DNAKitPage-html.text",
+            "target": "module.DNAKitPage-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "DNA Kit",
+            "readAccess": "public"
+        }
+    },
+    "widget.131": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.loginContent-html.text",
+            "target": "module.loginContent-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Login",
+            "readAccess": "public"
+        }
+    },
+    "widget.132": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.registerContent-html.text",
+            "target": "module.registerContent-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "Register",
+            "readAccess": "public"
+        }
+    },
+    "widget.133": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.gettingStartedTextBottom.text",
+            "target": "module.gettingStartedTextBottom.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "module-gettingStartedTextBottom-text.contentTemplate.html",
+            "readAccess": "public"
+        }
+    },
+    "widget.134": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "metricsByProvinces",
+            "target": "metricsByProvinces",
+            "templateName": "metricsByProvinces",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "metricsByProvinces.metadata.positions.content.modules.0.json"
                         ]
                     },
                     "footer": {

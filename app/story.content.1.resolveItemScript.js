@@ -1,6 +1,6 @@
 var query;
 
-var isClientsStory=document.location.pathname.split('/').pop()==='me';
+var isClientsStory=document.location.pathname.split('/').pop()==='me'||document.location.pathname.split('/').pop()==='edit'&&document.location.pathname.indexOf('me/edit')>0;
 
 if(isClientsStory){
     

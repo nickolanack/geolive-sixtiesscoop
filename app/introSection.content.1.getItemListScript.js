@@ -36,6 +36,28 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
 });
 
 
+var showLogin=function(){
+             (new UIModalDialog(
+    			application, 
+    			AppClient, 
+    			{
+    				"formName": 'loginFormView',
+    				"formOptions": {
+    					template: "form"
+    				}
+    			}
+    		)).show(function(){
+    
+    		
+    
+    		}).on('complete', function(item){
+    		    
+    		    
+    		    
+    		});
+        };
+
+
 
     callback( [
         new MockDataTypeItem({
@@ -52,7 +74,16 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/share'
+                 
+                if(AppClient.getUserType()==='guest'){
+                    
+                    showLogin();
+                    return;
+                    
+                }
+                 
+                 
+                document.location=document.location.origin+'/me/edit'
             },
             edit:function(){
                 configEdit.editIndex('links', 1);
@@ -63,7 +94,7 @@ var configEdit = (new ConfigEdit(application, 'primaryLinkItems')).withTemplate(
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/explore'
+                document.location=document.location.origin+'/map'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);

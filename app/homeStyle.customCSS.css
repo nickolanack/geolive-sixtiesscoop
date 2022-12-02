@@ -11,6 +11,16 @@ $secondaryButtonColorHover: darken(#ccc5a2, 10%);
 
 $introTextColor:#4d8673;
 
+
+.sso-btn.google, .sso-btn.facebook {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
 .header-menu {
     position: absolute;
     top: 10px;
@@ -629,6 +639,10 @@ $introTextColor:#4d8673;
         background-color: whitesmoke;
         margin: 0;
         height: auto;
+        
+        
+        
+        
     }
     
     .form-navigation-btns button, button.form-btn, .pagination-item button{
@@ -653,6 +667,10 @@ $introTextColor:#4d8673;
                 box-shadow: 0 0 8px rgb(0 0 0 / 30%);
                 transition:background-color 0.3s, box-shadow 0.3s;
             }
+            
+            
+            
+            
         
     }
     
@@ -664,6 +682,18 @@ $introTextColor:#4d8673;
         &:hover{
             background-color: $secondaryButtonColorHover;
         }
+    }
+    
+    button.form-btn.secondary-btn.forgot-pwd {
+                background: none;
+                box-shadow: none;
+                color: cornflowerblue;
+                margin-top: 40px;
+            }
+            
+    label.label-block {
+        font-size: 18px;
+        line-height: 59px;
     }
     
     
@@ -1679,8 +1709,12 @@ a.ui-view,.template-content a{
         height: 40px;
     }
     
-    .input-hidden.uitext-container {
+    .input-hidden .text-input{
         display: none;
+        
+        &.show-anyway {
+            display: inline-block;
+        }
     }
     
     .uitext-container .text-input{
@@ -1772,11 +1806,25 @@ a.ui-view,.template-content a{
     
     
     .file-browse-btn.combined-browser{
-        
+        position:relative;
     }
     
     .file-browse-btn.combined-browser:after {
         content: "Add Photos";
+    }
+    
+    .file-browse-btn.combined-browser.add-youtube:after {
+        content: "Add Youtube Video";
+    }
+    
+    
+    .add-youtube.combined-browser.file-browse-btn {
+        background-color: #f45a77;
+        color: white;
+        text-shadow: 0 0 3px #00000094;
+        &:hover{
+            background-color: darken(#f45a77, 10%);
+        }
     }
     
     
@@ -1889,10 +1937,156 @@ a.ui-view,.template-content a{
     
     }
     
+    .uploads-hidden .media-bar.tabs-bottom {
+        display: none;
+    }
     
+    .media-item{
+        
+        position:relative;
+        display:inline-block;
+        
+        .image, .external {
+            display: inline-block;
+            width: 195px;
+            height: 195px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+            border-radius: 4px;
+            margin-right: 20px;
+            margin-top: 20px;
+            border: 3px solid white;
+            filter: drop-shadow(6px 6px 6px #00000030);
+            transform: rotate(4deg);
+            transition: filter .8s, transform .8s;
+            
+            &:hover{
+                filter: drop-shadow(10px 10px 6px #00000040);
+                transition: filter .2s, transform .2s;
+            }
+        }
+        
+         &:nth-of-type(1){  .image, .external {
+            &:hover{
+                transform: rotate(3deg) scale(1.05);
+            }
+        }}
+        
+        &:nth-of-type(4n+2){  .image, .external {
+            transform: rotate(-2deg) translate(0, 13px) scale(0.95);
+            &:hover{
+                transform: rotate(-1deg) translate(0, 13px) scale(1);
+            }
+        }}
+        &:nth-of-type(4n+3){  .image, .external {
+            transform: rotate(2deg) translate(0, -5px) scale(1);
+            &:hover{
+                transform: rotate(1deg) translate(0, -5px) scale(1.05);
+            }
+        }}
+        &:nth-of-type(4n+4){  .image, .external {
+            transform: rotate(-2deg) translate(0, -5px) scale(0.9);
+            &:hover{
+                transform: rotate(-1deg) translate(0, -5px) scale(0.95);
+            }
+        }}
+        
+        .remove-btn{
+        
+            &:after {
+                content: "\0f00d";
+                font-family: 'FontAwesome';
+                cursor: pointer;
+                position: absolute;
+                bottom: 18px;
+                right: 25px;
+                color: white;
+                background: black;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                border-radius: 100%;
+                font-size: 14px;
+                line-height: 20px;
+                box-shadow: 0 0 3px #00000080;
+                opacity: 0.5;
+                transition: opacity .8s;
+                    
+            }
+            
+            
+        }
+        
+        &:hover .remove-btn:after{
+            opacity: 1;
+            transition: opacity .2s;
+        }
+        
+        
+        .external.youtube{
+            &:after {
+                content: "\0f16a";
+                font-family: 'FontAwesome';
+                color: red;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                font-size: 41px;
+                filter: grayscale(0.5);
+            }
+            
+            &:hover:after{
+                 filter: grayscale(0);
+            }
+            
+            .title {
+                white-space: nowrap;
+                overflow: hidden;
+                color: white;
+                position: relative;
+                top: 7px;
+                left: 7px;
+                text-shadow: 0 0 3px black;
+                font-weight: 800;
+                text-overflow: ellipsis;
+                max-width: 90%;
+                display: inline-block;
+                pointer-events: none;
+            }
+        }
+        
+    }
     
     
 }
+
+.sankey-diagram{
+    path.chord {
+        filter: blur(0.4px) drop-shadow(0 0 2px #00000055);
+        opacity: 1;
+    }
+    
+    g.group>path {
+        filter: blur(0.4px) drop-shadow(0 0 2px #00000055);
+    }
+    
+    g.group>text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    g.group:hover>text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    &>svg {
+        margin-left: -100px;
+    }
+}
+
 
 
 

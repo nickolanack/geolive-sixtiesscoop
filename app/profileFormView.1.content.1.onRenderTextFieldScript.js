@@ -5,6 +5,6 @@ try{
         module.getElement().addClass('hidden');
     }
 }catch(e){
-    console.error(e);
+    console.warn(e);
      module.getElement().addClass('hidden');
 }

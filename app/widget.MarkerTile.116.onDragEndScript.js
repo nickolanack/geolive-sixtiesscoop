@@ -5,6 +5,19 @@ TemplateModule.SetTemplate('form',`<div>
     <div data-template="content" class="template-content"></div>
     <div data-template="footer" class="template-footer"></div>
     </div>`);
+    
+    
+if(AppClient.getUserType()==="guest"){
+    new UIModalDialog(ScoopStories.getApp(), AppClient, {
+             
+        label: "Login",
+        formName: "loginFormView",
+        "class": "primary-btn login"
+    
+        
+    }).show();
+    return;
+}
 
 
 (new UIModalDialog(
