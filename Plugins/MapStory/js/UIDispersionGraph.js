@@ -78,6 +78,9 @@ var UIDispersionData = (function(){
 			return this._data
 		},
 
+		getCode: function(result) {
+			return this._getCode(result);
+		},
 
 		_getCode: function(result) {
 			var me = this;
@@ -95,6 +98,31 @@ var UIDispersionData = (function(){
 
 		getProvinceCodes: function() {
 			return this._getProvinceCodes();
+		},
+
+
+		_getProvinces: function() {
+
+			return [
+
+				"BC",
+				"AB",
+				"SK",
+				"MB",
+				"YT",
+				"NT",
+				"NU",
+
+				"NS",
+
+				"PE",
+				"NB",
+				"NL",
+				"QC",
+				"ON"
+
+			];
+
 		},
 		
 
@@ -310,7 +338,7 @@ var UIDispersionGraph = (function() {
 			};
 
 			try{
-				code = code || me._getCode(result);
+				code = code || UIDispersionData.Get().getCode(result);
 				Object.append(data, me._lineData[code]);
 			}catch(e){
 				//most likely out of canada 
@@ -364,7 +392,7 @@ var UIDispersionGraph = (function() {
 					}
 
 					try{
-						var code = me._getCode(result);
+						var code = dispersion.getCode(result);
 					}catch(e){
 						console.error('skip item. out of canada?');
 						return;
