@@ -8754,5 +8754,19 @@
             "saveTemplateAsData": false,
             "contentTemplate": "About the visualizations"
         }
+    },
+    "widget.136": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.visualizeMetrics.text",
+            "target": "module.visualizeMetrics.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "About the visualizations"
+        }
     }
 }
