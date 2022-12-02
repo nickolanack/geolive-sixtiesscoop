@@ -76,7 +76,7 @@ var UIDispersionData = (function(){
 			}
 
 			return this._data
-		}
+		},
 
 
 		_getCode: function(result) {
@@ -182,7 +182,7 @@ var UIDispersionData = (function(){
 
 						this.getCount(function(number) {
 							callback({ result: number });
-						})
+						});
 
 					},
 					getTitle: function() {
