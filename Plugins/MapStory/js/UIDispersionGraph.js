@@ -325,7 +325,7 @@ var UIDispersionData = (function(){
         			    
         			   
 
-                    	var colorMap:function(name, d, i){
+                    	var colorMap=function(name, d, i){
 
                     		if(provinces[name]){
                     			return dispersion.getColor(provinces[name]);
