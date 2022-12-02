@@ -1,4 +1,103 @@
+var UIDispersionData = (function(){
+
+	var UIDispersionData = new Class_({
+
+		initialize:function(){
+
+			var me=this;
+
+			(new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
+				"plugin": "MapStory"
+			})).addEvent("success", function(resp) {
+
+				me._data=resp.results;
+				me._loaded=true;
+				me.fireEvent('load');
+
+			}).execute();
+
+
+		},
+		runOnceOnLoad:function(cb){
+
+			if(this._loaded){
+				cb(this);
+				return;
+			}
+
+			var me=this;
+			this.once('load', function(){
+				cb(me);
+			});
+
+		},
+		getData:function(cb){
+
+			if(cb){
+
+				this.runOnceOnLoad(function(me){
+					cb(me._data);
+				})
+			}
+
+			if(!this._data){
+				throw 'UIDispersionData not ready, pass callback to this method for async'
+			}
+
+			return this._data
+		}
+
+	});
+
+
+	var shared=null;
+
+	UIDispersionData.Get=function(cb){
+
+
+		if(!shared){
+			shared=new UIDispersionData();
+		}
+
+		
+		 if(cb){
+		 	shared.runOnceOnLoad(function(){
+		 		cb(shared);
+		 	});
+		 }
+		 return shared;
+
+	};
+
+	UIDispersionData.GetData=function(cb){
+
+		if(cb){
+			UIDispersionData.Get(function(udata){
+				udata.getData(cb);
+			});
+			return;
+		}
+
+
+		if(!shared){
+			throw 'UIDispersionData not ready, ass callback to this method for async'
+		}
+
+		return shared.getDat();
+
+	}
+
+
+	return UIDispersionData;
+
+
+})();
+
+
 var UIDispersionGraph = (function() {
+
+
+
 
 
 
@@ -78,13 +177,14 @@ var UIDispersionGraph = (function() {
 
 
 			// me._getProvinceCodes().forEach(function(code){ me.addLegend(code); });
-
-			(new AjaxControlQuery(CoreAjaxUrlRoot, "get_dispersion_graph", {
-				"plugin": "MapStory"
-			})).addEvent("success", function(resp) {
+			// 
+			
 
 
-				resp.results.forEach(function(result) {
+			UIDispersionData.GetData(function(results){
+
+
+				results.forEach(function(result) {
 
 					if (!(result.locationData && result.nextLocationData)) {
 						return;
@@ -129,7 +229,7 @@ var UIDispersionGraph = (function() {
 				});
 
 
-			}).execute();
+			});
 
 		},
 
