@@ -2087,6 +2087,13 @@ a.ui-view,.template-content a{
     }
 }
 
+.ui-view.grid-items {
+    [data-view="graphDetailAnalytic"] {
+        width: calc( 33% - 20px );
+        display: inline-block;
+        margin: 10px;
+    }
+}
 
 
 
