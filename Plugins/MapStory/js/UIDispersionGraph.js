@@ -342,7 +342,7 @@ var UIDispersionGraph = (function() {
 
 			try{
 				code = code || UIDispersionData.Get().getCode(result);
-				Object.append(data, UIDispersionData.Get().getLineData(code);
+				Object.append(data, UIDispersionData.Get().getLineData(code));
 			}catch(e){
 				//most likely out of canada 
 			}
