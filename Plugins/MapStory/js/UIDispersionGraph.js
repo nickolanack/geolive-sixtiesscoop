@@ -397,7 +397,7 @@ var UIDispersionData = (function(){
                         	Names:Names,
                         	total:respondents,
 
-                        	archColor:_colorMap,
+                        	arcColor:_colorMap,
                         	cordColor:_colorMap,
 
                         	defaultCordColor:"#C4C4C4",
