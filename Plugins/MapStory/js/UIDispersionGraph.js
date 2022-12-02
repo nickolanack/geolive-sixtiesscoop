@@ -62,6 +62,9 @@ var UIDispersionData = (function(){
 			});
 
 		},
+		getLineData:function(code){
+			return this._lineData[code];
+		},
 		getData:function(cb){
 
 			if(cb){
@@ -339,7 +342,7 @@ var UIDispersionGraph = (function() {
 
 			try{
 				code = code || UIDispersionData.Get().getCode(result);
-				Object.append(data, me._lineData[code]);
+				Object.append(data, UIDispersionData.Get().getLineData(code);
 			}catch(e){
 				//most likely out of canada 
 			}
