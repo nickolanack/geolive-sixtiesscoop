@@ -172,7 +172,7 @@ var UIDispersionData = (function(){
 				return new (new Class_({
 					formatChart: function(chart, callback) {
 
-						chart.view.colors[0] = dispersion.getCoor(code);
+						chart.view.colors[0] = dispersion.getColor(code);
 						chart.title(this.getTitle());
 						var el = $(chart.view.el);
 						el.addEvent('click', function() {
