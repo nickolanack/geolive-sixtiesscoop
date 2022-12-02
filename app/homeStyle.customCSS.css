@@ -2081,6 +2081,10 @@ a.ui-view,.template-content a{
         font-size: 16px;
         font-weight: 600;
     }
+    
+    &>svg {
+        margin-left: -100px;
+    }
 }
 
 
