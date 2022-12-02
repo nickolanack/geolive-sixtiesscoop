@@ -252,6 +252,8 @@ var UIDispersionData = (function(){
 
 		getCordDiagramMatrix:function(){
 
+			var dispersion=this;
+
 			return new (new Class_({
 
 				getData:function(cb){
@@ -261,6 +263,10 @@ var UIDispersionData = (function(){
                         
         			    var sources=[];
         			    var dests=[];
+
+
+        			    var provinces={};
+        			    var countries={};
         			        
         			    var _country=function(geo){
         			       return geo.address_components.filter(function(comp){
@@ -268,10 +274,20 @@ var UIDispersionData = (function(){
         			        }).shift().long_name;
         			    }
         			    
-        			    var _province=function(geo){
+        			    var _provinceCode=function(geo){
         			       return geo.address_components.filter(function(comp){
         			            return comp.types.indexOf('administrative_area_level_1')>=0
         			        }).shift().long_name;
+        			    }
+
+        			    var _province=function(geo){
+        			       var p= geo.address_components.filter(function(comp){
+        			            return comp.types.indexOf('administrative_area_level_1')>=0
+        			        }).shift();
+        			       
+        			       provinces[p.long_name]=p.short_name;
+        			       
+        			       return p.long_name;
         			    }
         			    
         			    var _name=function(data){
@@ -307,29 +323,15 @@ var UIDispersionData = (function(){
         			    });
         			    
         			    
-        			    var _colors=[
-                        	        '#a50026',
-                    				'#f46d43',
-                    				'#4575b4',
-                    				'#313695',
-                    				'#762a83',
-                    				'#1b7837',
-                    				'#de77ae',
-                    				'#8c510a',
-                    				'#35978f',
-                    				'#fee391',
-                    				'#bdbdbd',
-                    				'#737373',
-                    				'#9e9ac8'];
-                    				
-         
-                    				
-                    	var _colorMap={};
-                    	sources.forEach(function(n){
-                    	    if((!_colorMap[n])&&_colors.length){
-                    	        _colorMap[n]=_colors.shift();
-                    	    }
-                    	})
+        			   
+
+                    	var colorMap:function(name, d, i){
+
+                    		if(provinces[name]){
+                    			return dispersion.getColor(provinces[name]);
+                    		}
+                    		return null;
+                    	};
         			    
         			    sources=sources.sort().reverse();
         			    dests=dests.sort();
@@ -384,8 +386,8 @@ var UIDispersionData = (function(){
                         	Names:Names,
                         	total:respondents,
 
-                        	arcColor:_colorMap,
-                        	cordColor:_colorMap,
+                        	arcColor:colorMap,
+                        	cordColor:colorMap,
 
                         	defaultCordColor:"#C4C4C4",
                         	defaultArcColor:"#555555"
