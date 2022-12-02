@@ -201,7 +201,7 @@ var UIDispersionData = (function(){
 		},
 
 		getColor:function(code){
-			return  me._lineData[code].lineColor;
+			return  this._lineData[code].lineColor;
 		}
 
 	});
