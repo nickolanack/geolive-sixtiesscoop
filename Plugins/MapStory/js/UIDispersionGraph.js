@@ -380,9 +380,9 @@ var UIDispersionData = (function(){
                         
                     
                     
-                        var Names = _Names
+                        var Names = _Names;
                         
-                        var respondents = _respondents,//95, //Total number of respondents (i.e. the number that makes up the total group)
+                        var respondents = _respondents;//95, //Total number of respondents (i.e. the number that makes up the total group)
                        
                         	
                         var matrix = _matrix;
