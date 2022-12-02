@@ -383,11 +383,7 @@ var UIDispersionData = (function(){
                         var Names = _Names
                         
                         var respondents = _respondents,//95, //Total number of respondents (i.e. the number that makes up the total group)
-                        emptyPerc = 0.4, //What % of the circle should become empty
-                        emptyStroke = Math.round(respondents*emptyPerc); 
-                        	
-                        _matrix[dests.length][_Names.length-1]=emptyStroke;
-                        _matrix[_Names.length-1][dests.length]=emptyStroke;
+                       
                         	
                         var matrix = _matrix;
 
@@ -399,7 +395,7 @@ var UIDispersionData = (function(){
 
                         	matrix:matrix,
                         	Names:Names,
-                        	total:total,
+                        	total:respondents,
 
                         	colorMap:_colorMap
 
