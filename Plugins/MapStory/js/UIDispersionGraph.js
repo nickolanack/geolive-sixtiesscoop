@@ -93,7 +93,7 @@ var UIDispersionData = (function(){
 
 		},
 
-		_getProvinceCodes: function() {
+		getProvinceCodes: function() {
 			return this._getProvinceCodes();
 		},
 		
