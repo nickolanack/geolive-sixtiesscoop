@@ -322,20 +322,7 @@ var UIDispersionData = (function(){
                     				'#737373',
                     				'#9e9ac8'];
                     				
-                    	var _colors=[
-                        	        '#a50026',
-                    				'#f46d43',
-                    				'#4575b4',
-                    				'#313695',
-                    				'#762a83',
-                    				'#1b7837',
-                    				'#de77ae',
-                    				'#8c510a',
-                    				'#35978f',
-                    				'#fee391',
-                    				'#bdbdbd',
-                    				'#737373',
-                    				'#9e9ac8'];
+         
                     				
                     	var _colorMap={};
                     	sources.forEach(function(n){
