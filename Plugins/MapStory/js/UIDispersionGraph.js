@@ -167,12 +167,12 @@ var UIDispersionData = (function(){
 
 		},
 		getProviceCodeItems: function() {
-			var me = this;
-			return me._getProvinceCodes().map(function(code) {
+			var dispersion = this;
+			return dispersion._getProvinceCodes().map(function(code) {
 				return new (new Class_({
 					formatChart: function(chart, callback) {
 
-						chart.view.colors[0] = me._lineData[code].lineColor;
+						chart.view.colors[0] = dispersion.getCoor(code);
 						chart.title(this.getTitle());
 						var el = $(chart.view.el);
 						el.addEvent('click', function() {
@@ -190,11 +190,29 @@ var UIDispersionData = (function(){
 					},
 					getCount: function(callback) {
 
-						if (callback) {
-							callback(0)
+						if(typeof this._lastCount!='number'){
+							 this._lastCount=0;
 						}
 
-						return 0
+						
+
+
+						if (callback) {
+
+							var me=this;
+							if(dispersion).getData(function(results){
+								
+								me._lastCount=results.filter(function(result){
+									return dispersion._getCode(result)===code;
+								}).length;
+
+								callback(this._lastCount)
+							});
+
+						
+						}
+
+						return this._lastCount
 					}
 				}))
 			})
