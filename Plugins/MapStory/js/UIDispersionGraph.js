@@ -249,6 +249,176 @@ var UIDispersionData = (function(){
 			})
 		},
 
+
+		getCordDiagramMatrix:function(){
+
+			return new (new Class_({
+
+				getData:function(cb){
+
+
+					 UIDispersionData.GetData(function(results){
+                        
+        			    var sources=[];
+        			    var dests=[];
+        			        
+        			    var _country=function(geo){
+        			       return geo.address_components.filter(function(comp){
+        			            return comp.types.indexOf('country')>=0
+        			        }).shift().long_name;
+        			    }
+        			    
+        			    var _province=function(geo){
+        			       return geo.address_components.filter(function(comp){
+        			            return comp.types.indexOf('administrative_area_level_1')>=0
+        			        }).shift().long_name;
+        			    }
+        			    
+        			    var _name=function(data){
+        			        var name=_country(data.geocode);
+        			       if(name==='Canada'){
+        			           name=_province(data.geocode);
+        			       }
+        			       return name;
+        			    }
+        			     
+        			    var _matrix=[];
+        			    
+        			    //var results=resp.results;//.slice(0,2);
+        			    
+        			    results.forEach(function(res){
+        			       
+        			       var sourceName=_name(res.locationData);
+        			       
+        			       if(sources.indexOf(sourceName)==-1){
+        			           sources.push(sourceName);
+        			       }
+        			       
+        			       
+        			       var destName=_name(res.nextLocationData);
+        			      
+        			       
+        			       if(dests.indexOf(destName)==-1){
+        			           dests.push(destName);
+        			       }
+        			       
+        			     
+        			        
+        			    });
+        			    
+        			    
+        			    var _colors=[
+                        	        '#a50026',
+                    				'#f46d43',
+                    				'#4575b4',
+                    				'#313695',
+                    				'#762a83',
+                    				'#1b7837',
+                    				'#de77ae',
+                    				'#8c510a',
+                    				'#35978f',
+                    				'#fee391',
+                    				'#bdbdbd',
+                    				'#737373',
+                    				'#9e9ac8'];
+                    				
+                    	var _colors=[
+                        	        '#a50026',
+                    				'#f46d43',
+                    				'#4575b4',
+                    				'#313695',
+                    				'#762a83',
+                    				'#1b7837',
+                    				'#de77ae',
+                    				'#8c510a',
+                    				'#35978f',
+                    				'#fee391',
+                    				'#bdbdbd',
+                    				'#737373',
+                    				'#9e9ac8'];
+                    				
+                    	var _colorMap={};
+                    	sources.forEach(function(n){
+                    	    if((!_colorMap[n])&&_colors.length){
+                    	        _colorMap[n]=_colors.shift();
+                    	    }
+                    	})
+        			    
+        			    sources=sources.sort().reverse();
+        			    dests=dests.sort();
+        			    
+        			    
+                    				
+        			    
+        			    
+        			    var _Names=dests.concat([""], sources, [""]);
+        			    
+        			    _Names.forEach(function(name, si){
+        			        
+        			           _matrix[si]=[];
+        			           for(var i=0;i<_Names.length;i++){
+        			               _matrix[si].push(0);
+        			           }
+        			        
+        			    });
+        			    
+        			    var _respondents = 0
+        			    results.forEach(function(res){
+        			        var sourceName=_name(res.locationData);
+        			        var destName=_name(res.nextLocationData);
+        			        
+        			       var si=sources.indexOf(sourceName)+dests.length+1;
+        			       var di=dests.indexOf(destName)//+sources.length+1;
+        			       _matrix[si][di]++;
+        			       _matrix[di][si]++
+        			       _respondents++;
+        			        
+        			    });
+        			    
+        			    
+        		         
+                        
+                    
+                    
+                        var Names = _Names
+                        
+                        var respondents = _respondents,//95, //Total number of respondents (i.e. the number that makes up the total group)
+                        emptyPerc = 0.4, //What % of the circle should become empty
+                        emptyStroke = Math.round(respondents*emptyPerc); 
+                        	
+                        _matrix[dests.length][_Names.length-1]=emptyStroke;
+                        _matrix[_Names.length-1][dests.length]=emptyStroke;
+                        	
+                        var matrix = _matrix;
+
+
+                        cb({
+
+                        	sources:sources,
+                        	dests:dests,
+
+                        	matrix:matrix
+                        	Names:Names
+                        	total:total,
+
+                        	colorMap:_colorMap
+
+
+                        });
+
+
+                    })
+	
+	
+
+
+				}
+			}));
+
+
+
+		},
+
 		getColor:function(code){
 			return  this._lineData[code].lineColor;
 		}
