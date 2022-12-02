@@ -2062,6 +2062,28 @@ a.ui-view,.template-content a{
     
 }
 
+.sankey-diagram{
+    path.chord {
+        filter: blur(0.4px) drop-shadow(0 0 2px #00000055);
+        opacity: 1;
+    }
+    
+    g.group>path {
+        filter: blur(0.4px) drop-shadow(0 0 2px #00000055);
+    }
+    
+    g.group>text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    g.group:hover>text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+
 
 
 
