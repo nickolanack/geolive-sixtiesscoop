@@ -398,7 +398,7 @@ var UIDispersionData = (function(){
                         	dests:dests,
 
                         	matrix:matrix
-                        	Names:Names
+                        	Names:Names,
                         	total:total,
 
                         	colorMap:_colorMap
