@@ -401,7 +401,7 @@ var UIDispersionData = (function(){
                         	cordColor:_colorMap,
 
                         	defaultCordColor:"#C4C4C4",
-                        	defaultArchColor:"#555555"
+                        	defaultArcColor:"#555555"
 
                         });
 
