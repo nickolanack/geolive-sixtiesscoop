@@ -200,6 +200,10 @@ var UIDispersionData = (function(){
 			})
 		},
 
+		getColor:function(code){
+			return  me._lineData[code].lineColor;
+		}
+
 	});
 
 
@@ -386,11 +390,14 @@ var UIDispersionGraph = (function() {
 
 		getProviceCodeItems: function() {
 			var me = this;
-			return UIDispersionData.Get().getProvinceCodes().map(function(code) {
+
+			dispersion = UIDispersionData.Get();
+
+			return dispersion.getProvinceCodes().map(function(code) {
 				return new (new Class_({
 					formatChart: function(chart, callback) {
 
-						chart.view.colors[0] = me._lineData[code].lineColor;
+						chart.view.colors[0] = dispersion.getColor(code);
 						chart.title(this.getTitle());
 						var el = $(chart.view.el);
 						el.addEvent('click', function() {
@@ -407,7 +414,7 @@ var UIDispersionGraph = (function() {
 
 						this.getCount(function(number) {
 							callback({ result: number });
-						})
+						});
 
 					},
 					getTitle: function() {
