@@ -1,7 +1,11 @@
 var UIDispersionData = (function(){
 
-	var UIDispersionData = new Class_({
+	/**
+	 * this class should be used as a singleton. use static UIDispersionData.Get or UIDispersionData.GetData 
+	 */
 
+	var UIDispersionData = new Class_({
+		Implements:[Events],
 		initialize:function(){
 
 			var me=this;
@@ -16,6 +20,33 @@ var UIDispersionData = (function(){
 
 			}).execute();
 
+
+			this._initStyles();
+
+
+		},
+		_initStyles: function() {
+			var me = this;
+
+			me._lineData = {};
+
+			me._getProvinceCodes().forEach(function(code, i) {
+
+				me._lineData[code] = {
+					"lineColor": me._getColor(i)
+				};
+
+			})
+
+
+
+			me._styles = {};
+
+			me._getProvinceCodes().forEach(function(code) {
+				me._styles[code] = {
+					"background-color": me._lineData[code].lineColor
+				}
+			});
 
 		},
 		runOnceOnLoad:function(cb){
@@ -36,7 +67,7 @@ var UIDispersionData = (function(){
 			if(cb){
 
 				this.runOnceOnLoad(function(me){
-					cb(me._data);
+					cb(me._data, me);
 				})
 			}
 
@@ -46,6 +77,155 @@ var UIDispersionData = (function(){
 
 			return this._data
 		}
+
+
+		_getCode: function(result) {
+			var me = this;
+			var provinceCodes = me._getProvinceCodes();
+			var componenets = result.locationData.geocode.address_components;
+			for (var i = 0; i < componenets.length; i++) {
+
+				if (provinceCodes.indexOf(componenets[i].short_name) >= 0) {
+					return componenets[i].short_name;
+				}
+			}
+			throw 'Not found: '+code;
+
+		},
+
+		_getProvinceCodes: function() {
+			return this._getProvinceCodes();
+		},
+		
+
+		_getProvinceCodes: function() {
+
+			return [
+
+				"BC",
+				"AB",
+				"SK",
+				"MB",
+				"YT",
+				"NT",
+				"NU",
+
+				"NS",
+
+				"PE",
+				"NB",
+				"NL",
+				"QC",
+				"ON"
+
+			];
+
+		},
+		_getColor: function(i) {
+			return this._getColors()[i];
+		},
+		_getColors: function() {
+
+			return [
+
+
+				'#a50026',
+				'#f46d43',
+				'#4575b4',
+				'#313695',
+				'#762a83',
+				'#1b7837',
+				'#de77ae',
+				'#8c510a',
+				'#35978f',
+				'#fee391',
+				'#bdbdbd',
+				'#737373',
+				'#9e9ac8'
+				// ,
+
+
+				// "#006d2c",
+				// "#31a354",
+				// "#74c476",
+
+				// "#bae4b3",
+
+				// "#fd8d3c",
+				// "#fc4e2a",
+				// "#e31a1c",
+				// "#bd0026",
+				// "#800026",
+
+				// "#dd1c77",
+				// "#df65b0",
+				// "#c994c7",
+
+				// "#d4b9da"
+
+			];
+
+		},
+		getProviceCodeItems: function() {
+			var me = this;
+			return me._getProvinceCodes().map(function(code) {
+				return new (new Class_({
+					formatChart: function(chart, callback) {
+
+						chart.view.colors[0] = me._lineData[code].lineColor;
+						chart.title(this.getTitle());
+						var el = $(chart.view.el);
+						el.addEvent('click', function() {
+
+							var layer = me.getLayer(code);
+							if (layer.isVisible()) {
+								el.addClass('layer-hidden');
+								layer.hide();
+								return;
+							}
+							el.removeClass('layer-hidden');
+							layer.show();
+						});
+
+						this.getCount(function(number) {
+							callback({ result: number });
+						})
+
+					},
+					getTitle: function() {
+						return code;
+					},
+					getCount: function(callback) {
+
+						if (callback) {
+
+							var updateCount = function() {
+
+								if (me["_interval" + code]) {
+									clearInterval(me["_interval" + code]);
+									delete me["_interval" + code];
+								}
+
+								me["_interval" + code] = setTimeout(function() {
+									delete me["_interval" + code];
+									callback(me.getLayer(code).getItemsCount());
+								}, 100);
+							}
+							updateCount();
+
+							me.addEvent('addLine.' + code, updateCount);
+							me.addEvent('deactivate:once', function() {
+								me.removeEvent('addLine.' + code, updateCount);
+							});
+
+							return;
+						}
+
+						return me.getLayer(code).getItemsCount();
+					}
+				}))
+			})
+		},
 
 	});
 
@@ -181,7 +361,7 @@ var UIDispersionGraph = (function() {
 			
 
 
-			UIDispersionData.GetData(function(results){
+			UIDispersionData.GetData(function(results, dispersion){
 
 
 				results.forEach(function(result) {
@@ -233,6 +413,67 @@ var UIDispersionGraph = (function() {
 
 		},
 
+		getProviceCodeItems: function() {
+			var me = this;
+			return UIDispersionData.Get().getProvinceCodes().map(function(code) {
+				return new (new Class_({
+					formatChart: function(chart, callback) {
+
+						chart.view.colors[0] = me._lineData[code].lineColor;
+						chart.title(this.getTitle());
+						var el = $(chart.view.el);
+						el.addEvent('click', function() {
+
+							var layer = me.getLayer(code);
+							if (layer.isVisible()) {
+								el.addClass('layer-hidden');
+								layer.hide();
+								return;
+							}
+							el.removeClass('layer-hidden');
+							layer.show();
+						});
+
+						this.getCount(function(number) {
+							callback({ result: number });
+						})
+
+					},
+					getTitle: function() {
+						return code;
+					},
+					getCount: function(callback) {
+
+						if (callback) {
+
+							var updateCount = function() {
+
+								if (me["_interval" + code]) {
+									clearInterval(me["_interval" + code]);
+									delete me["_interval" + code];
+								}
+
+								me["_interval" + code] = setTimeout(function() {
+									delete me["_interval" + code];
+									callback(me.getLayer(code).getItemsCount());
+								}, 100);
+							}
+							updateCount();
+
+							me.addEvent('addLine.' + code, updateCount);
+							me.addEvent('deactivate:once', function() {
+								me.removeEvent('addLine.' + code, updateCount);
+							});
+
+							return;
+						}
+
+						return me.getLayer(code).getItemsCount();
+					}
+				}))
+			})
+		},
+
 		forEachMapLayer: function(cb) {
 			var me = this;
 			me._map.getLayerManager().getLayers().forEach(function(layer) {
@@ -244,30 +485,7 @@ var UIDispersionGraph = (function() {
 			});
 		},
 
-		_initStyles: function() {
-			var me = this;
-
-			me._lineData = {};
-
-			me._getProvinceCodes().forEach(function(code, i) {
-
-				me._lineData[code] = {
-					"lineColor": me._getColor(i)
-				};
-
-			})
-
-
-
-			me._styles = {};
-
-			me._getProvinceCodes().forEach(function(code) {
-				me._styles[code] = {
-					"background-color": me._lineData[code].lineColor
-				}
-			});
-
-		},
+		
 		_emptyLayers: function() {
 			var me = this;
 
@@ -410,147 +628,9 @@ var UIDispersionGraph = (function() {
 			me._legends[code] = subtile;
 		},
 
-		_getCode: function(result) {
-			var me = this;
-			var provinceCodes = me._getProvinceCodes();
-			var componenets = result.locationData.geocode.address_components;
-			for (var i = 0; i < componenets.length; i++) {
-
-				if (provinceCodes.indexOf(componenets[i].short_name) >= 0) {
-					return componenets[i].short_name;
-				}
-			}
-			throw 'Not found: '+code;
-
-		},
-		getProviceCodeItems: function() {
-			var me = this;
-			return me._getProvinceCodes().map(function(code) {
-				return new (new Class({
-					formatChart: function(chart, callback) {
-
-						chart.view.colors[0] = me._lineData[code].lineColor;
-						chart.title(this.getTitle());
-						var el = $(chart.view.el);
-						el.addEvent('click', function() {
-
-							var layer = me.getLayer(code);
-							if (layer.isVisible()) {
-								el.addClass('layer-hidden');
-								layer.hide();
-								return;
-							}
-							el.removeClass('layer-hidden');
-							layer.show();
-						});
-
-						this.getCount(function(number) {
-							callback({ result: number });
-						})
-
-					},
-					getTitle: function() {
-						return code;
-					},
-					getCount: function(callback) {
-
-						if (callback) {
-
-							var updateCount = function() {
-
-								if (me["_interval" + code]) {
-									clearInterval(me["_interval" + code]);
-									delete me["_interval" + code];
-								}
-
-								me["_interval" + code] = setTimeout(function() {
-									delete me["_interval" + code];
-									callback(me.getLayer(code).getItemsCount());
-								}, 100);
-							}
-							updateCount();
-
-							me.addEvent('addLine.' + code, updateCount);
-							me.addEvent('deactivate:once', function() {
-								me.removeEvent('addLine.' + code, updateCount);
-							});
-
-							return;
-						}
-
-						return me.getLayer(code).getItemsCount();
-					}
-				}))
-			})
-		},
-		_getProvinceCodes: function() {
-
-			return [
-
-				"BC",
-				"AB",
-				"SK",
-				"MB",
-				"YT",
-				"NT",
-				"NU",
-
-				"NS",
-
-				"PE",
-				"NB",
-				"NL",
-				"QC",
-				"ON"
-
-			];
-
-		},
-		_getColor: function(i) {
-			return this._getColors()[i];
-		},
-		_getColors: function() {
-
-			return [
-
-
-				'#a50026',
-				'#f46d43',
-				'#4575b4',
-				'#313695',
-				'#762a83',
-				'#1b7837',
-				'#de77ae',
-				'#8c510a',
-				'#35978f',
-				'#fee391',
-				'#bdbdbd',
-				'#737373',
-				'#9e9ac8'
-				// ,
-
-
-				// "#006d2c",
-				// "#31a354",
-				// "#74c476",
-
-				// "#bae4b3",
-
-				// "#fd8d3c",
-				// "#fc4e2a",
-				// "#e31a1c",
-				// "#bd0026",
-				// "#800026",
-
-				// "#dd1c77",
-				// "#df65b0",
-				// "#c994c7",
-
-				// "#d4b9da"
-
-			];
-
-		}
+		
+		
+		
 
 
 	});
