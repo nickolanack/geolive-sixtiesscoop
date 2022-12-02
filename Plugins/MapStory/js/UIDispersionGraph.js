@@ -200,7 +200,7 @@ var UIDispersionData = (function(){
 						if (callback) {
 
 							var me=this;
-							if(dispersion).getData(function(results){
+							dispersion.getData(function(results){
 								
 								me._lastCount=results.filter(function(result){
 									return dispersion._getCode(result)===code;
