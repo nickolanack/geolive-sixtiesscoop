@@ -443,7 +443,7 @@ var SankeyChart = (function() {
 							return _cordColorMap(me.getNameAt(d.target.index), d, i);
 						});
 
-						me.addArcs().style('fill', function(d, i) {
+						me.allArcs().style('fill', function(d, i) {
 							return _arcColorMap(me.getNameAt(i), d, i);
 						});
 
@@ -462,7 +462,7 @@ var SankeyChart = (function() {
 
 					});
 
-					me.addArcs()
+					me.allArcs()
 						.style('fill', function(d, i) {
 
 							if (me.indexIsIn(i, indexes)) {
