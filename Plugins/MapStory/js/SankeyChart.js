@@ -674,8 +674,8 @@ var SankeyChart = (function() {
 
 		clearSelection:function(){
 
-			if(me._clearSelection){
-				me._clearSelection();
+			if(this._clearSelection){
+				this._clearSelection();
 				return;
 			}
 
