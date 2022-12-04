@@ -2068,6 +2068,10 @@ a.ui-view,.template-content a{
         opacity: 1;
     }
     
+    g.group.clickable {
+        cursor:pointer;
+    }
+    
     g.group>path {
         filter: blur(0.4px) drop-shadow(0 0 2px #00000055);
     }
