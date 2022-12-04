@@ -356,6 +356,7 @@ var SankeyChart = (function() {
 
 				var matrix = config.matrix;
 				var Names = config.Names;
+				me._names=Names;
 				var respondents = config.total;
 
 				var makeColorMap = function(map, defaultColor) {
@@ -392,13 +393,41 @@ var SankeyChart = (function() {
 				);
 
 
+				
+
+
 				var clickFn = config.click ? function(d, i) {
 
+					var type='source';
+					if(i<dests.length){
+						type='dest'
+					}
 
-					config.click.apply(null, ([Names[i]]).concat(arguments));
+					config.click.apply(null, ([Names[i], type]).concat(arguments));
+
+					me.fireEvent('select', i);
 
 
 				} : false;
+
+
+				
+				
+				(function(){
+					/**
+					 * Selection Behavior
+					 */
+					
+					var selection=[];
+
+					me.on('select',function(i){
+
+					
+
+					});
+
+				})();
+
 
 				var emptyPerc = 0.4; //What % of the circle should become empty
 				var emptyStroke = Math.round(respondents * emptyPerc);
@@ -574,14 +603,39 @@ var SankeyChart = (function() {
 			});
 
 		},
-	
+
+
+		getNameAt:function(i){
+			return this._names[i];
+		},
+
+
+		getCordsAt:function(i){
+			return this.getCordsIn([i]);	
+		},
+
+		getCordsIn:function(indexes){
+			var me=this;
+			return this.svg.selectAll("path.chord")
+				.filter(function(d) {
+					return (indexes.indexOf(d.source.index)>=0 || indexes.indexOf(d.target.index)>=0) && me.getNameAt(d.source.index) !== "";
+				});
+		},
+
+		getCordsNotIn:function(indexes){
+			var me=this;
+			return this.svg.selectAll("path.chord")
+				.filter(function(d) {
+					return (indexes.indexOf(d.source.index)==-1 && indexes.indexOf(d.target.index)==-1) && me.getNameAt(d.source.index) !== "";
+				});
+		},
+
 		_createFadeFn: function(opacity) {
 			var me = this;
 			return function(d, i) {
 				me.svg.selectAll("path.chord")
 					.filter(function(d) {
-						return d.source.index !== i && d.target.index !== i && Names[d.source.index] !== "";
-
+						return d.source.index !== i && d.target.index !== i && me.getNameAt(d.source.index) !== "";
 					})
 					.transition("fadeOnArc")
 					.style("opacity", opacity);
