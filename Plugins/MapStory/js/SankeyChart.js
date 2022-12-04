@@ -721,7 +721,7 @@ var SankeyChart = (function() {
 		},
 
 		isDest:function(index){
-			return this._sources.length>index;
+			return this._dests.length>index;
 		},
 
 
