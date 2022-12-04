@@ -424,7 +424,7 @@ var SankeyChart = (function() {
 
 						if(selection.length){
 							selection=[];
-							me.fireEvent('selectionChanged', []);
+							me.fireEvent('selectionChanged', [selection.slice(0));
 						}
 
 					};
