@@ -7,7 +7,9 @@ callback([]);
                         "limit":limit
                     })).on("success", function(resp) {
                         
-                       callback(resp.results.map(function(item, i){
+                       (new StoryFilter()).fromUrl().filterList(resp.results, function(list){
+                           
+                           callback(list.map(function(item, i){
                            
                             if(!item.features){
                                 return new MockDataTypeItem(item);
@@ -21,6 +23,11 @@ callback([]);
                                
                            });
                        }))
+                           
+                       });
+                        
+                        
+                       
                     
                     }).on('error',function(){
                        
