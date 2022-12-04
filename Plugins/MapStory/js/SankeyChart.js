@@ -11,6 +11,8 @@ var SankeyChart = (function() {
 
 
 			var me = this;
+			me._containerEl=containerEl;
+			me._dataProvider=dataProvider;
 
 			document.head.appendChild(new Element("script", {
 				"src": 'https://d3js.org/d3.v3.js',
@@ -327,7 +329,7 @@ var SankeyChart = (function() {
 				width = Math.min(screenWidth, 1200) - margin.left - margin.right,
 				height = (mobileScreen ? 300 : Math.min(screenWidth, 800) * 5 / 6) - margin.top - margin.bottom;
 
-			var svg = d3.select(containerEl).append("svg")
+			var svg = d3.select(me._ontainerEl).append("svg")
 				.attr("width", (width + margin.left + margin.right))
 				.attr("height", (height + margin.top + margin.bottom));
 
@@ -347,7 +349,7 @@ var SankeyChart = (function() {
 			////////////////////////// Data ////////////////////////////
 			////////////////////////////////////////////////////////////
 
-			dataProvider.getData(function(config) {
+			me._dataProvider.getData(function(config) {
 
 				var sources = config.sources;
 				var dests = config.dests;
