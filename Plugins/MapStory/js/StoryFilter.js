@@ -22,6 +22,8 @@ var StoryFilter=(function(){
 	});
 
 
+	return StoryFilter;
+
 
 
 })();
