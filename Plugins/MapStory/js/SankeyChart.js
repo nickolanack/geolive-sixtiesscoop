@@ -681,7 +681,7 @@ var SankeyChart = (function() {
 
 			console.warn('selection behavior not active');
 
-		}
+		},
 
 
 		getNameAt: function(i) {
