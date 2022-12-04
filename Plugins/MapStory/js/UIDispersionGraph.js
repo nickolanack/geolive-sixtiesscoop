@@ -250,6 +250,16 @@ var UIDispersionData = (function(){
 		},
 
 
+		getProvinceCodeForName:function(fullName){
+
+			if(this._provinces&&this._provinces[fullName]){
+				return this._provinces[fullName];
+			}
+			return fullName;
+
+		},
+
+
 		getCordDiagramMatrix:function(){
 
 			var dispersion=this;
@@ -259,6 +269,9 @@ var UIDispersionData = (function(){
 				getData:function(cb){
 
 
+					var me=this;
+
+
 					 UIDispersionData.GetData(function(results){
                         
         			    var sources=[];
@@ -266,6 +279,8 @@ var UIDispersionData = (function(){
 
 
         			    var provinces={};
+        			    dispersion._provinces=provinces;
+
         			    var countries={};
         			        
         			    var _country=function(geo){
