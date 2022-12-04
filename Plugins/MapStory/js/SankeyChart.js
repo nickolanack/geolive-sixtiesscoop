@@ -405,7 +405,7 @@ var SankeyChart = (function() {
 
 					config.click.apply(null, ([Names[i], type]).concat(arguments));
 
-					me.fireEvent('select', i);
+					me.fireEvent('select', [i]);
 
 
 				} : false;
@@ -422,11 +422,45 @@ var SankeyChart = (function() {
 
 					me.on('select',function(i){
 
-					
+						var index=selection.indexOf(i);
+						if(index==-1){
+							selection.push(i);
+							me.fireEvent('selectionChanged', [selection.slice(0)]);
+							return;
+						}
+
+						selection.splice(index, 1);
+						me.fireEvent('selectionChanged', [selection.slice(0)]);
 
 					});
 
 				})();
+
+
+				me.on("selectionChanged", function(indexes){
+
+
+					if(indexes.length===0){
+						me.getCordsNotIn(indexes)
+						.style("fill", function(d, i) {
+							return _arcColorMap(Names[i], d, i);
+						});
+						return;
+					}
+
+
+					me.getCordsIn(indexes)
+						.style("fill", function(d, i) {
+						return _arcColorMap(Names[i], d, i);
+					});
+
+					me.getCordsNotIn(indexes)
+						.style("fill", function(d, i) {
+						return '#CCCCCC';
+					});
+
+
+				});
 
 
 				var emptyPerc = 0.4; //What % of the circle should become empty
