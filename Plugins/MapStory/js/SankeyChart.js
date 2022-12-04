@@ -445,13 +445,10 @@ var SankeyChart = (function() {
 
 
 						me.allArcs()
-							.style('fill', function(d, i) {
-								return _arcColorMap(me.getNameAt(i), d, i);
+							.style('opacity', function(d, i) {
+								return 1;
 							})
-							.style('stroke', function(d, i) {
-								return _arcColorMap(me.getNameAt(i), d, i);
-							});
-
+							
 
 						return;
 					}
@@ -469,24 +466,16 @@ var SankeyChart = (function() {
 					});
 
 					me.allArcs()
-						.style('fill', function(d, i) {
+						.style('opacity', function(d, i) {
 
 							if (me.indexIsIn(i, indexes)) {
-								return _arcColorMap(me.getNameAt(i), d, i);
+								return 1;
 							}
 							if (me.indexIsNotIn(i, indexes)) {
-								return "#C4C4C4";
+								return 0.4;
 							}
 						})
-						.style('stroke', function(d, i) {
-
-							if (me.indexIsIn(i, indexes)) {
-								return _arcColorMap(me.getNameAt(i), d, i);
-							}
-							if (me.indexIsNotIn(i, indexes)) {
-								return "#C4C4C4";
-							}
-						});
+						
 
 
 
