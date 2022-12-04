@@ -580,6 +580,6 @@ var SankeyChart = (function() {
 
 	});
 
-
+	return SankeyChart;
 
 })();
