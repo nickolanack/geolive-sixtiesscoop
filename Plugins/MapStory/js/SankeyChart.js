@@ -445,6 +445,11 @@ var SankeyChart = (function() {
 						.style("fill", function(d, i) {
 							return _arcColorMap(Names[i], d, i);
 						});
+
+						me.getArcsNotIn(indexes)
+						.style("fill", function(d, i) {
+							return _arcColorMap(Names[i], d, i);
+						});
 						return;
 					}
 
@@ -455,6 +460,17 @@ var SankeyChart = (function() {
 					});
 
 					me.getCordsNotIn(indexes)
+						.style("fill", function(d, i) {
+						return '#CCCCCC';
+					});
+
+
+					me.getArcsIn(indexes)
+						.style("fill", function(d, i) {
+						return _arcColorMap(Names[i], d, i);
+					});
+
+					me.getArcsNotIn(indexes)
 						.style("fill", function(d, i) {
 						return '#CCCCCC';
 					});
@@ -644,6 +660,8 @@ var SankeyChart = (function() {
 		},
 
 
+
+
 		getCordsAt:function(i){
 			return this.getCordsIn([i]);	
 		},
@@ -663,6 +681,30 @@ var SankeyChart = (function() {
 					return (indexes.indexOf(d.source.index)==-1 && indexes.indexOf(d.target.index)==-1) && me.getNameAt(d.source.index) !== "";
 				});
 		},
+
+
+		getArcAt:function(i){
+			return this.getArcsIn([i]);	
+		},
+
+		getArcsIn:function(indexes){
+			var me=this;
+			return this.svg.selectAll("g.group path")
+				.filter(function(d, i) {
+					return indexes.indexOf(i)>=0 && me.getNameAt(i) !== "";
+				});
+		},
+
+		getArcsNotIn:function(indexes){
+			var me=this;
+			return this.svg.selectAll("g.group path")
+				.filter(function(d, i) {
+					return indexes.indexOf(i)==-1 && me.getNameAt(i) !== "";
+				});
+		},
+
+
+
 
 		_createFadeFn: function(opacity) {
 			var me = this;
