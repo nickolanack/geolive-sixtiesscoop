@@ -677,19 +677,19 @@ var SankeyChart = (function() {
 
 
 		cordIsIn: function(d, indexes) {
-			return (indexes.indexOf(d.source.index) >= 0 || indexes.indexOf(d.target.index) >= 0) && me.getNameAt(d.source.index) !== "";
+			return (indexes.indexOf(d.source.index) >= 0 || indexes.indexOf(d.target.index) >= 0) && this.getNameAt(d.source.index) !== "";
 		},
 
 		cordIsNotIn: function(d, indexes) {
-			return (indexes.indexOf(d.source.index) == -1 && indexes.indexOf(d.target.index) == -1) && me.getNameAt(d.source.index) !== "";
+			return (indexes.indexOf(d.source.index) == -1 && indexes.indexOf(d.target.index) == -1) && this.getNameAt(d.source.index) !== "";
 		},
 
 
 		indexIsIn(i, indexes) {
-			return indexes.indexOf(i) >= 0 && me.getNameAt(i) !== "";
+			return indexes.indexOf(i) >= 0 && this.getNameAt(i) !== "";
 		},
 		indexIsNotIn(i, indexes) {
-			return indexes.indexOf(i) == -1 && me.getNameAt(i) !== "";
+			return indexes.indexOf(i) == -1 && this.getNameAt(i) !== "";
 		},
 
 
