@@ -472,7 +472,7 @@ var SankeyChart = (function() {
 								return 1;
 							}
 							if (me.indexIsNotIn(i, indexes)) {
-								return 0.4;
+								return 0.2;
 							}
 						})
 						
