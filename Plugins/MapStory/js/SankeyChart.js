@@ -354,6 +354,9 @@ var SankeyChart = (function() {
 				var sources = config.sources;
 				var dests = config.dests;
 
+				me._sources=sources;
+				me._dests=dests;
+
 				var matrix = config.matrix;
 				var Names = config.Names;
 				me._names = Names;
@@ -417,6 +420,15 @@ var SankeyChart = (function() {
 
 					var selection = [];
 
+					me._clearSelection=function(){
+
+						if(selection.length){
+							selection=[];
+							me.fireEvent('selectionChanged', []);
+						}
+
+					};
+
 					me.on('select', function(i) {
 
 						var index = selection.indexOf(i);
@@ -434,14 +446,18 @@ var SankeyChart = (function() {
 				})();
 
 
+
+
+
 				me.on("selectionChanged", function(indexes) {
 
 
 					if (indexes.length === 0) {
 
-						me.allCords().style('fill', function(d, i) {
-							return _cordColorMap(me.getNameAt(d.target.index), d, i);
-						});
+						me.allCords()
+							.style('fill', function(d, i) {
+								return _cordColorMap(me.getNameAt(d.target.index), d, i);
+							});
 
 
 						me.allArcs()
@@ -656,6 +672,18 @@ var SankeyChart = (function() {
 		},
 
 
+		clearSelection:function(){
+
+			if(me._clearSelection){
+				me._clearSelection();
+				return;
+			}
+
+			console.warn('selection behavior not active');
+
+		}
+
+
 		getNameAt: function(i) {
 			return this._names[i];
 		},
@@ -687,6 +715,14 @@ var SankeyChart = (function() {
 			return indexes.indexOf(i) == -1 && this.getNameAt(i) !== "";
 		},
 
+
+		isSource:function(index){
+			return !this.isDest(index);
+		},
+
+		isDest:function(index){
+			return this._sources.length>index;
+		},
 
 
 		_createFadeFn: function(opacity) {
