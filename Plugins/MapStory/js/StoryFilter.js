@@ -29,11 +29,11 @@ var StoryFilter=(function(){
 			stubs.forEach(function(filter){
 
 				if(filter.indexOf('source-')===0){
-					sources=sources.concat(filter.split('source-').slice(1).split('-'));
+					sources=sources.concat(filter.split('source-').pop().split('-'));
 				}
 
 				if(filter.indexOf('dest-')===0){
-					dests=dests.concat(filter.split('dest-').slice(1).split('-'));
+					dests=dests.concat(filter.split('dest-').pop().split('-'));
 				}
 
 
