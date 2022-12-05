@@ -103,7 +103,21 @@ var StoryFilter=(function(){
 				this._initFilter=function(cb){
 
 
+					(new AjaxControlQuery(CoreAjaxUrlRoot, "get_filter_results", {
+						"plugin": "MapStory",
+						filter:{
+							sources:soruces,
+							dests:dests
+						}
+					})).addEvent("success", function(resp) {
 
+						cb();
+
+					}).addEvent("failure", function(resp) {
+
+						cb();
+
+					}).execute();
 
 
 				};
