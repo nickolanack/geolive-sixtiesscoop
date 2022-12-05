@@ -117,6 +117,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 		GetPlugin('Maps');
 
+
+		$prefix='attribute_';
 		$list=array();
 
 
