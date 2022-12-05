@@ -147,12 +147,12 @@ var StoryFilter=(function(){
 		},
 		filterList:function(list, cb){
 
-
+			var me=this;
 			if(this._filter){
 
 
 				this._initFilter(function(){
-					cb(list.filter(this._filter));
+					cb(list.filter(me._filter));
 				})
 
 				return;
