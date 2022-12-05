@@ -41,7 +41,7 @@ var StoryFilter=(function(){
 
 
 			if(sources.length>0||dests.length>0){
-				this._filter=function(){
+				this._filter=function(result){
 					return true;
 				}
 			}
@@ -49,6 +49,11 @@ var StoryFilter=(function(){
 		},
 		filterList:function(list, cb){
 
+
+			if(this._filter){
+				cb(list.filter(this._filter));
+				return;
+			}
 
 			cb(list);
 		}
