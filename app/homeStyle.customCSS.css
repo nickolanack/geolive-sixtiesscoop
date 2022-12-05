@@ -674,6 +674,19 @@ $introTextColor:#4d8673;
         
     }
     
+    
+    .sankey-diagram button{
+        
+        font-size: 16px;
+        padding: 6px 12px;
+        float: left;
+        
+        &.hidden {
+            visibility: hidden;
+        }
+        
+    }
+    
     button.form-btn.secondary-btn {
         padding: 4px 15px;
         font-size: 17px;
