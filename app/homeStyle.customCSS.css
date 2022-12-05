@@ -616,7 +616,7 @@ $introTextColor:#4d8673;
 
 
 
-[data-template-name="form"], .target-storyIndex .uilist-pagination{
+[data-template-name="form"], .target-storyIndex .uilist-pagination, [data-view="visualizationsContent"]{
 
     h2 {
         color: #4d8673;
@@ -645,7 +645,7 @@ $introTextColor:#4d8673;
         
     }
     
-    .form-navigation-btns button, button.form-btn, .pagination-item button{
+    .form-navigation-btns button, button.form-btn, .pagination-item button, .sankey-diagram button{
             display: inline-block;
             padding: 10px 20px;
             background-color: $buttonColor;
