@@ -112,6 +112,35 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 	}
 
+
+	protected function getFilterResults($json){
+
+		GetPlugin('Maps');
+
+		$list=array();
+
+
+		(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter(function($result){
+
+				return true;
+
+			})->iterate(function($result)use(&$list){
+
+				//result is not a metadata object
+				$list[]=$result;
+				
+
+			});
+
+		return array('results'=>$list);
+
+
+
+	}
+
 	protected function listStories($json){
 
 		GetPlugin('Maps');
@@ -141,7 +170,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				//result is not a metadata object
 
 				if((!$limit)||$index>=$limit[0]&&$index<$limit[1]){
-					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result, 'attribute_')));
+					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result, $prefix)));
 				}else{
 					$list[]=array('id'=>$result->id,);
 				}

@@ -20,5 +20,8 @@
 	"send_message": {},
 	"list_stories": {
 		"profile": true
+	},
+	"get_filter_results": {
+		"profile": true
 	}
 }
