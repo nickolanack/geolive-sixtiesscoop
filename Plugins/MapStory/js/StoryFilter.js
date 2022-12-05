@@ -106,7 +106,7 @@ var StoryFilter=(function(){
 					(new AjaxControlQuery(CoreAjaxUrlRoot, "get_filter_results", {
 						"plugin": "MapStory",
 						filter:{
-							sources:soruces,
+							sources:sources,
 							dests:dests
 						}
 					})).addEvent("success", function(resp) {
