@@ -831,7 +831,7 @@ button.inline-edit {
             color: #333333;
         }
         
-        &hover:{
+        &:hover{
             
             &:before {
                 filter: grayscale(0);
