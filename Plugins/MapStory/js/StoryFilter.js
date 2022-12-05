@@ -94,7 +94,13 @@ var StoryFilter=(function(){
 			if(sources.length>0||dests.length>0){
 				this._filter=function(result){
 
+					if(!(result.features&&result.features.length>0)){
+						return false;
+					}
+
 					return result.features.filter(function(feature){
+
+
 
 						if(!isBoolAttributeTrue(feature.attributes.movesOutOfProvince)){
 							return false;
