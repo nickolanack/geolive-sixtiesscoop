@@ -5790,7 +5790,32 @@
                     },
                     "content": {
                         "modules": [
-                            "homePageContent.metadata.positions.content.modules.0.json"
+                            "homePageContent.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "featured-stories",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "featuredStories",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
                         ]
                     },
                     "footer": {

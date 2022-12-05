@@ -94,7 +94,7 @@ var showLogin=function(){
         }), 
         new MockDataTypeItem({
              click:function(){
-                document.location=document.location.origin+'/map'
+                document.location=document.location.origin+'/search'
             },
             edit:function(){
                 configEdit.editIndex('links', 2);
