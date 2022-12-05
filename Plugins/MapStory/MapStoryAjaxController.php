@@ -122,21 +122,63 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		$list=array();
 
 
+		$filterOutOfProvince='{ 
+			"filters":[{
+				"field":"movesOutOfProvince",
+				"value":true
+			}]
+		}';
+
+
 		(new \spatial\AttributeFeatures('storyAttributes'))
 			->withType('MapStory.card') //becuase attribute type is overriden
 			->withAllAttributes($prefix)
-			->iterate(function($result)use(&$list){
+			->withFilter($filterOutOfProvince)
+			->iterate(function($result)use(&$list, $prefix, $json){
 
+				$locationData=json_decode($result->{$prefix.'locationData'});
+				$nextLocationData=json_decode($result->{$prefix.'nextLocationData'});
+
+				$storyUser=intval($result->{$prefix.'storyUser'});
+
+
+				if((!in_array($storyUser, $list))&&$this->checkLocationFilters($json->filter, $locationData, $nextLocationData)){
+					$list[]=$storyUser;
+				}
 				
-
-
-				$list[]=$result;
-				
-
 			});
 
 		return array('results'=>$list);
 
+
+
+	}
+
+
+	private function checkLocationFilters($filter, $locationData, $nextLocationData){
+		return $this->checkLocationFilter($filter->sources, $locationData)||$this->checkLocationFilter($filter->dests, $nextLocationData);
+	}
+	private function checkLocationFilter($filter, $locationData){
+
+		foreach($filter as $code){
+
+			$code=strtolower(str_replace(' ', '_',  $code));
+
+			foreach ($locationData->geocode->address_components as $address) {
+				$short=strtolower(str_replace(' ', '_',  $address->short_name));
+				if($short===$code){
+					return true;
+				}
+
+				$long=strtolower(str_replace(' ', '_',  $address->long_name));
+				if($long===$long){
+					return true;
+				}
+			}
+
+		}
+
+		return false;
 
 
 	}
