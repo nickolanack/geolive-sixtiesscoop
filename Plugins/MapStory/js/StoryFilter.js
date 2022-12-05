@@ -98,7 +98,7 @@ var StoryFilter=(function(){
 			if(sources.length>0||dests.length>0){
 				this._hasFilter=true;
 
-
+				var storyUsers=[];
 
 				this._initFilter=function(cb){
 
@@ -111,6 +111,7 @@ var StoryFilter=(function(){
 						}
 					})).addEvent("success", function(resp) {
 
+						storyUsers=resp.results;
 						cb();
 
 					}).addEvent("failure", function(resp) {
@@ -132,33 +133,7 @@ var StoryFilter=(function(){
 
 					return result.features.filter(function(feature){
 
-
-
-						 if(!isBoolAttributeTrue(feature.attributes.movesOutOfProvince)){
-						 	return false;
-						 }
-
-
-						if(sources.length>0){
-							if(sources.filter(function(source){
-
-								return locationDataAttributeContainsCode(feature.attributes.locationData, source);
-
-							}).length>0){
-								return true;
-							}
-						}
-
-						if(dests.length>0){
-							if(dests.filter(function(dest){
-
-								return feature.attributes.nextLocationData&&locationDataAttributeContainsCode(feature.attributes.nextLocationData, dest);
-
-							}).length>0){
-								return true;
-							}
-						}
-
+						return storyUsers.indexOf(parseInt(feature.uid))>=0;
 
 					}).length>0; //if any feature in story passes filter, return story
 
