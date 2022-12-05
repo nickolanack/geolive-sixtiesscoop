@@ -1,13 +1,13 @@
 callback([]);
 
-
+                 var filter=(new StoryFilter()).fromUrl();
 
                  (new AjaxControlQuery(CoreAjaxUrlRoot, "list_stories", {
                         "plugin": "MapStory",
-                        "limit":limit
+                        "limit":filter.hasFilter?null:limit
                     })).on("success", function(resp) {
                         
-                       (new StoryFilter()).fromUrl().filterList(resp.results, function(list){
+                       filter.filterList(resp.results, function(list){
                            
                            callback(list.map(function(item, i){
                            
