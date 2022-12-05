@@ -794,6 +794,28 @@ button.inline-edit {
         box-shadow: 0 0 10px rgb(0 0 0 / 5%);
         border: 1px solid rgba(0, 0, 0, 0.1);
         display: block;
+    
+    
+        &:before {
+            content: "";
+            background-image: url(https://nickolanackbucket.s3.us-west-2.amazonaws.com/sixties-scoop.geoforms.ca/1/Uploads/fcp_[G]_[ImAgE]_JIy_r75-%3Ethumb:%3E200x%3E150.png);
+            width: 75px;
+            height: 100px;
+            display: inline-block;
+            margin-right: 10px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: grayscale(0.6);
+            vertical-align: middle;
+        }
+        
+        &>h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 100;
+            color: #333333;
+        }
     }
 }
 
