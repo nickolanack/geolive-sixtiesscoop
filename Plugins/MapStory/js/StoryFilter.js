@@ -41,7 +41,7 @@ var StoryFilter=(function(){
 
 
 			if(sources.length>0||dests.length>0){
-				this._filter=function(result){
+				this._filter=function(){
 					return true;
 				}
 			}
@@ -57,8 +57,7 @@ var StoryFilter=(function(){
 	});
 
 
-	return StoryFilter;Editor.RenderStaticPreview(assetPath : string, subAssets : Object[], width : int, height : int)
-
+	return StoryFilter
 
 
 })();
