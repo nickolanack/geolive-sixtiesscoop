@@ -123,13 +123,11 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		(new \spatial\AttributeFeatures('storyAttributes'))
 			->withType('MapStory.card') //becuase attribute type is overriden
 			->withAllAttributes($prefix)
-			->withFilter(function($result){
+			->iterate(function($result)use(&$list){
 
-				return true;
+				
 
-			})->iterate(function($result)use(&$list){
 
-				//result is not a metadata object
 				$list[]=$result;
 				
 
