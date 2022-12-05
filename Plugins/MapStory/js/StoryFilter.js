@@ -58,7 +58,10 @@ var StoryFilter=(function(){
 
 			this._filter=function(){
 				return true;
-			}
+			};
+			this._initFilter=function(cb){
+				cb();
+			};
 			this._hasFilter=false;
 
 		},
@@ -94,6 +97,19 @@ var StoryFilter=(function(){
 
 			if(sources.length>0||dests.length>0){
 				this._hasFilter=true;
+
+
+
+				this._initFilter=function(cb){
+
+
+
+
+
+				};
+
+
+
 				this._filter=function(result){
 
 					if(!(result.features&&result.features.length>0)){
@@ -144,7 +160,12 @@ var StoryFilter=(function(){
 
 
 			if(this._filter){
-				cb(list.filter(this._filter));
+
+
+				this._initFilter(function(){
+					cb(list.filter(this._filter));
+				})
+
 				return;
 			}
 
