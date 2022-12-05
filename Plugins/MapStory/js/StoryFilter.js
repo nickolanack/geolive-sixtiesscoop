@@ -122,7 +122,7 @@ var StoryFilter=(function(){
 						if(dests.length>0){
 							if(dests.filter(function(dest){
 
-								return locationDataAttributeContainsCode(feature.attributes.locationDataNext, dest);
+								return locationDataAttributeContainsCode(feature.attributes.nextLocationData, dest);
 
 							}).length>0){
 								return true;
