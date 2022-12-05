@@ -2,7 +2,7 @@
     "type": "WizardScriptElement",
     "config": {
         "name": "My Custom Script",
-        "script": "return '<div class=\"ui-view intro-section\"><a class=\"map-link\" href=\"\/map\"> View the map<\/a><\/div>'",
+        "script": "return '<div class=\"ui-view intro-section\"><a class=\"map-link\" href=\"\/map\"><h1>View the map<\/h1><\/a><\/div>'",
         "description": "Info about my custom script"
     }
 }
