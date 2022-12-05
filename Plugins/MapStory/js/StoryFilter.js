@@ -104,9 +104,9 @@ var StoryFilter=(function(){
 
 
 
-						// if(!isBoolAttributeTrue(feature.attributes.movesOutOfProvince)){
-						// 	return false;
-						// }
+						 if(!isBoolAttributeTrue(feature.attributes.movesOutOfProvince)){
+						 	return false;
+						 }
 
 
 						if(sources.length>0){
