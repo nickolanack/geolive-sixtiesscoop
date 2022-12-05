@@ -8796,5 +8796,19 @@
             "contentTemplate": "About the visualizations",
             "readAccess": "public"
         }
+    },
+    "widget.137": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.visualizeYears.text",
+            "target": "module.visualizeYears.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": "About the visualizations"
+        }
     }
 }
