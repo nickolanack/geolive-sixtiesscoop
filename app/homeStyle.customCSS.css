@@ -830,6 +830,15 @@ button.inline-edit {
             font-weight: 100;
             color: #333333;
         }
+        
+        &hover:{
+            
+            &:before {
+                filter: grayscale(0);
+            }
+            
+        }    
+    
     }
 }
 
