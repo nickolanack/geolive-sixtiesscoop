@@ -166,14 +166,14 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 			foreach ($locationData->geocode->address_components as $address) {
 				$short=strtolower(str_replace(' ', '_',  $address->short_name));
-				if($short====$code){
+				if($short===$code){
 
 					error_log($short.' === '.$code);
 					return true;
 				}
 
 				$long=strtolower(str_replace(' ', '_',  $address->long_name));
-				if($long====$code){
+				if($long===$code){
 					error_log($long.' === '.$code);
 					return true;
 				}
