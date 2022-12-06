@@ -902,6 +902,9 @@ button.inline-edit {
         }
     }
 }
+
+
+
 .page-content .ui-view.featured-stories .ui-view.featured-story, .intro-section .ui-view.featured-item {
     
     min-width: 250px;
@@ -2194,12 +2197,31 @@ a.ui-view,.template-content a{
     }
 }
 
-.ui-view.grid-items {
+.page-content .ui-view.grid-items {
     [data-view="graphDetailAnalytic"] {
-        width: calc( 33% - 20px );
+        width: calc(( 100% / 7 ) - 20px);
         display: inline-block;
         margin: 10px;
+        min-width: 120px;
     }
+    
+    .keen-dataviz .keen-dataviz-metric-value {
+        font-size: 55px;
+        top: 5px;
+        position: relative;
+    }
+    
+    .keen-dataviz .keen-dataviz-metric-title {
+        position: relative;
+        top: -5px;
+        font-size: 20px;
+    }
+    
+    .ui-list-view{
+        text-align:left;
+    }
+
+
 }
 
 
