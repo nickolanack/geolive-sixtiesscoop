@@ -461,7 +461,7 @@ var UIDispersionData = (function(){
 
 	var shared=null;
 
-	UIDispersionData.Get=function(cb){
+	UIDispersionData.Get=function(cb, options){
 
 
 		if(!shared){
@@ -471,9 +471,15 @@ var UIDispersionData = (function(){
 		
 		 if(cb){
 		 	shared.runOnceOnLoad(function(){
+		 		if(options){
+					shared.setOptions(options);
+				}
 		 		cb(shared);
 		 	});
 		 }
+		 if(options){
+			shared.setOptions(options);
+		}
 		 return shared;
 
 	};
@@ -495,7 +501,11 @@ var UIDispersionData = (function(){
 			throw 'UIDispersionData not ready, ass callback to this method for async'
 		}
 
-		return shared.getDat();
+		if(options){
+			shared.setOptions(options);
+		}
+
+		return shared.getData();
 
 	}
 
