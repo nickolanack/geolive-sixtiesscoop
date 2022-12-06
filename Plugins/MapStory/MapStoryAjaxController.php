@@ -191,6 +191,24 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 	protected function getYearResults($json){
 
+		/*
+
+			$filterAdoptionStories='{ 
+				"filters":[{
+					"field":"isAdoptionStory",
+					"value":true
+				}]
+			}';
+
+		*/
+
+		return $this->filterYearlyResults($json, $json->filter);
+
+	}
+
+
+	protected function filterYearlyResults($json, $filter=null){
+
 		GetPlugin('Maps');
 
 
@@ -198,22 +216,18 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		$list=array();
 
 
-		$filterAdoptionStories='{ 
-				"filters":[{
-					"field":"isAdoptionStory",
-					"value":true
-				}]
-			}';
-
-
 		$minYr=INF;
 		$maxYr=-INF;
 
-		(new \spatial\AttributeFeatures('storyAttributes'))
+		$query=(new \spatial\AttributeFeatures('storyAttributes'))
 			->withType('MapStory.card') //becuase attribute type is overriden
-			->withAllAttributes($prefix)
-			->withFilter($filterAdoptionStories)
-			->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
+			->withAllAttributes($prefix);
+
+		if($filter){
+			$query->withFilter($filter);
+		}
+
+		$query->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
 
 
 
