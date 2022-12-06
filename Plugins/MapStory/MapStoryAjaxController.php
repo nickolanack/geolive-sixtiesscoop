@@ -206,6 +206,9 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			}';
 
 
+		$minYr=INF;
+		$maxYr=-INF;
+
 		(new \spatial\AttributeFeatures('storyAttributes'))
 			->withType('MapStory.card') //becuase attribute type is overriden
 			->withAllAttributes($prefix)
@@ -213,6 +216,9 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
 
 				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'})));
+
+				$minYr=min($minYr, $year);
+				$maxYr=max($maxYr, $year);
 
 				if(!isset($list[$year])){
 					$list[$year]=0;
@@ -222,7 +228,12 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				
 			});
 
-		return array('results'=>$list);
+		var $out=[];
+		for($i=$minYr;$i<=$maxYr;i++{
+			$out[''.$i]=isset($list[''.$i])?$list[''.$i]:0;
+		}
+
+		return array('results'=>$out);
 
 
 
