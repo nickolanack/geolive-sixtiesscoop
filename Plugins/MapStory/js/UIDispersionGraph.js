@@ -20,10 +20,18 @@ var UIDispersionData = (function(){
 
 			}).execute();
 
+			this._options={};
+
 
 			this._initStyles();
 
 
+		},
+		setOptions:function(options){
+			this._options=ObjectAppend_(this._options, options);
+		},
+		getOptions:function(){
+			return this._options;
 		},
 		_initStyles: function() {
 			var me = this;
@@ -210,6 +218,12 @@ var UIDispersionData = (function(){
 
 							
 						});
+
+						var opts=dispersion.getOptions().chartOptions||{};
+
+						if(opts.height){
+							chart.height(opts.height);
+						}
 
 						this.getCount(function(number) {
 							callback({ result: number });
@@ -464,10 +478,13 @@ var UIDispersionData = (function(){
 
 	};
 
-	UIDispersionData.GetData=function(cb){
+	UIDispersionData.GetData=function(cb, options){
 
 		if(cb){
 			UIDispersionData.Get(function(udata){
+				if(options){
+					udata.setOptions(options);
+				}
 				udata.getData(cb);
 			});
 			return;
