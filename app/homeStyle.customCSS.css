@@ -902,6 +902,14 @@ button.inline-edit {
         }
     }
 }
+
+
+.page-content .grid-items {
+    .ui-list-view{
+        text-align:left;
+    }
+}
+
 .page-content .ui-view.featured-stories .ui-view.featured-story, .intro-section .ui-view.featured-item {
     
     min-width: 250px;
@@ -2196,7 +2204,7 @@ a.ui-view,.template-content a{
 
 .ui-view.grid-items {
     [data-view="graphDetailAnalytic"] {
-        width: calc( 33% - 20px );
+        width: calc( 25% - 20px );
         display: inline-block;
         margin: 10px;
     }
