@@ -215,7 +215,13 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->withFilter($filterAdoptionStories)
 			->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
 
+
+
 				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'})));
+
+				if(intval($year)>1980){
+					return;
+				}
 
 				$minYr=min($minYr, $year);
 				$maxYr=max($maxYr, $year);
