@@ -277,6 +277,7 @@
             ],
             "customUserScript": "",
             "customGroupMemberOfGroupScript": "",
+            "customUserAuthorizeScript": "",
             "defaultImage": [],
             "userProfileImageScript": "return $defaultImage;",
             "validateEmail": true,
@@ -8787,6 +8788,21 @@
         "parameters": {
             "widgetTitle": "module.visualizeMetrics.text",
             "target": "module.visualizeMetrics.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": true,
+            "contentTemplate": "About the visualizations",
+            "readAccess": "public"
+        }
+    },
+    "widget.137": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.visualizeYears.text",
+            "target": "module.visualizeYears.text",
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
