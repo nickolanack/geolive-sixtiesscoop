@@ -212,7 +212,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			->withFilter($filterAdoptionStories)
 			->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
 
-				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'}));
+				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'})));
 
 				if(!isset($list[$year])){
 					$list[$year]=0;
