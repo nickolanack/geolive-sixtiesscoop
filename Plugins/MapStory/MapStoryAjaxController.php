@@ -228,7 +228,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				
 			});
 
-		var $out=[];
+		$out=[];
 		for($i=$minYr;$i<=$maxYr;i++{
 			$out[''.$i]=isset($list[''.$i])?$list[''.$i]:0;
 		}
