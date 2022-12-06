@@ -233,9 +233,9 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'})));
 
-				// if(intval($year)>1980){
-				// 	return;
-				// }
+				if(intval($year)>intval(date('Y'))-1){
+					return;
+				}
 
 				$minYr=min($minYr, $year);
 				$maxYr=max($maxYr, $year);
