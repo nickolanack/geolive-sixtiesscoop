@@ -155,6 +155,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 	}
 
 
+
+
 	private function checkLocationFilters($filter, $locationData, $nextLocationData){
 		return $this->checkLocationFilter($filter->sources, $locationData)||$this->checkLocationFilter($filter->dests, $nextLocationData);
 	}
@@ -182,6 +184,46 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		}
 
 		return false;
+
+
+	}
+
+
+	protected function getYearResults($json){
+
+		GetPlugin('Maps');
+
+
+		$prefix='attribute_';
+		$list=array();
+
+
+		$filterAdoptionStories='{ 
+				"filters":[{
+					"field":"isAdoptionStory",
+					"value":true
+				}]
+			}';
+
+
+		(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter($filterAdoptionStories)
+			->iterate(function($result)use(&$list, &$minYr, &$maxYr, $prefix, $json){
+
+				$year=date('Y', strtotime(intval($result->{$prefix.'locationDate'}));
+
+				if(!isset($list[$year])){
+					$list[$year]=0;
+				}
+				$list[$year]++;
+
+				
+			});
+
+		return array('results'=>$list);
+
 
 
 	}

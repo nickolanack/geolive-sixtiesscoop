@@ -23,5 +23,9 @@
 	},
 	"get_filter_results": {
 		"profile": true
+	},
+
+	"get_year_results": {
+		"profile": true
 	}
 }
