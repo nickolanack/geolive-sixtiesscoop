@@ -221,15 +221,15 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 			foreach($stacks as $index=>$stack){
 
-					$padded=[];
-				
-					for ($i=$min-1; $i <= $max; $i++) { 
-						$padded[''.$i]=isset($stack[''.$i])?$stack[''.$i]:0;
-					}
-
-					$stacks[$index]=$padded;
-
+				$padded=[];
+			
+				for ($i=$min-1; $i <= $max; $i++) { 
+					$padded[''.$i]=isset($stack[''.$i])?$stack[''.$i]:0;
 				}
+
+				$stacks[$index]=$padded;
+
+				
 			}
 
 
