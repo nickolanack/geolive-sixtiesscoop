@@ -201,6 +201,42 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			}';
 
 		*/
+	
+
+		if(isset($json->{'filter-stack'})){
+			$stacks=[];
+			foreach($json->{'filter-stack'} as $filter){
+				$stacks[]=$this->filterYearlyResults($json, $filter)['results'];
+			}
+
+
+			$min=min(array_map(function($stack){
+				return intval(array_keys($stack)[0]);
+			}, $stacks));
+
+			$max=max(array_map(function($stack){
+				return intval(array_keys($stack)[count($stack)-1]);
+			}, $stacks));
+
+
+			foreach($stacks as $index=>$stack){
+
+					$padded=[];
+				
+					for ($i=$min-1; $i <= $max; $i++) { 
+						$padded[''.$i]=isset($stack[''.$i])?$stack[''.$i]:0;
+					}
+
+					$stacks[$index]=$padded;
+
+				}
+			}
+
+
+			return array('results'=>$stacks);
+
+		}
+
 
 		return $this->filterYearlyResults($json, $json->filter);
 
@@ -208,6 +244,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 
 	protected function filterYearlyResults($json, $filter=null){
+
+
 
 		GetPlugin('Maps');
 
