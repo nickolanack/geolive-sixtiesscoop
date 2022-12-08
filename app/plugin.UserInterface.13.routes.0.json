@@ -1,7 +1,6 @@
 {
-    "name": "front",
+    "name": "home",
     "view": "plugin",
     "plugin": "UserInterface",
-    "pluginView": "widget",
-    "widget": "main"
+    "pluginView": "front"
 }
