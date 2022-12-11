@@ -117,7 +117,7 @@
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
             "showFrontEndEditButtons": true,
-            "JSCacheObfuscationEnabled": false,
+            "JSCacheObfuscationEnabled": true,
             "phase": "production",
             "ForceHTTPS": false,
             "allowProxiesFrom": [
