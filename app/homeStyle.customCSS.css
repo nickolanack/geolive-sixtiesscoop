@@ -21,7 +21,7 @@ $introTextColor:#4d8673;
 
 
 
-.ui-list-view.header-menu {
+.header-menu {
     position: absolute;
     top: 10px;
     right: 100px;    
