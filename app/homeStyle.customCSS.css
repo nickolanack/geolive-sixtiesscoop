@@ -47,6 +47,7 @@ $introTextColor:#4d8673;
     .ui-view.menu-item-link {
         p {
             display: inherit;
+            margin:0;
         }
         
         &:hover {
