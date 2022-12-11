@@ -26,8 +26,8 @@ $introTextColor:#4d8673;
     top: 10px;
     right: 100px;    
 
-     p {
-            margin: 0;
+    p{
+        margin: 0;
     }
 
     .ui-view.menu-item-link, &:before {
@@ -46,7 +46,7 @@ $introTextColor:#4d8673;
         cursor: pointer;
         transition: background-color .8s;
     }
-    .
+    
     .ui-view.menu-item-link {
         p {
             display: inherit;
