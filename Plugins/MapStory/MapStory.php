@@ -194,7 +194,7 @@ class MapStory extends \core\extensions\Plugin implements
 				//result is not a metadata object
 
 				if((!$limit)||$index>=$limit[0]&&$index<$limit[1]){
-					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result, $prefix)));
+					$list[]=array('id'=>$result->id, 'features'=>array( $this->formatFeatureMetadata($result, $prefix)));
 				}else{
 					$list[]=array('id'=>$result->id,);
 				}
