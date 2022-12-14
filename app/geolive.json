@@ -278,6 +278,14 @@
                     "pluginView": "widget",
                     "widget": "storyIndex",
                     "robots.txt": true
+                },
+                {
+                    "name": "story_sitemap.xml",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "storySitemap",
+                    "format": "raw"
                 }
             ],
             "useRemoteServerUI": false,
