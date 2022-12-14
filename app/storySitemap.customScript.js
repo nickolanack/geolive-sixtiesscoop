@@ -15,10 +15,9 @@
 				<loc><?php echo $path?></loc>
 				<lastmod><?php echo $date;?></lastmod>
 			</url>
-	     
 	     <?php
 	     
-	     echo json_encode($story, JSON_PRETTY_PRINT)."\n\n";
+	     //echo json_encode($story, JSON_PRETTY_PRINT)."\n\n";
 	 }
 
 
