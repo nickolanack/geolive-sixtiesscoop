@@ -286,7 +286,8 @@
                     "pluginView": "widget",
                     "widget": "storySitemap",
                     "cachable": false,
-                    "format": "raw"
+                    "format": "raw",
+                    "sitemap": true
                 }
             ],
             "useRemoteServerUI": false,
