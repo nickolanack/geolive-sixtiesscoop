@@ -175,21 +175,24 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "faq"
+                    "widget": "faq",
+                    "robots.txt": true
                 },
                 {
                     "name": "support",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "support"
+                    "widget": "support",
+                    "robots.txt": true
                 },
                 {
                     "name": "install",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "install"
+                    "widget": "install",
+                    "robots.txt": true
                 },
                 {
                     "name": "map",
@@ -200,14 +203,16 @@
                     "metadata": {
                         "title": "Sixties Scoop | Interactive Survivor Stories Map",
                         "description": ""
-                    }
+                    },
+                    "robots.txt": true
                 },
                 {
                     "name": "resources",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "resources"
+                    "widget": "resources",
+                    "robots.txt": true
                 },
                 {
                     "name": "story",
@@ -228,14 +233,16 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "search"
+                    "widget": "search",
+                    "robots.txt": true
                 },
                 {
                     "name": "help",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "help"
+                    "widget": "help",
+                    "robots.txt": true
                 },
                 {
                     "name": "privacy",
@@ -249,21 +256,24 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "dnakit"
+                    "widget": "dnakit",
+                    "robots.txt": true
                 },
                 {
                     "name": "visualize",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "visualizations"
+                    "widget": "visualizations",
+                    "robots.txt": true
                 },
                 {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "storyIndex"
+                    "widget": "storyIndex",
+                    "robots.txt": true
                 }
             ],
             "useRemoteServerUI": false,
