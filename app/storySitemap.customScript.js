@@ -11,6 +11,7 @@
 	        $date=explode(' ',$story['features'][0][modificationDate])[0];
 	 
 	     ?>
+	        
 	        <url>
 				<loc><?php echo $path?></loc>
 				<lastmod><?php echo $date;?></lastmod>
@@ -21,6 +22,7 @@
 	        $date=explode(' ',$story['features'][0][modificationDate])[0];
 	 
 	     ?>
+	        
 	        <url>
 				<loc><?php echo $path?></loc>
 				<lastmod><?php echo $date;?></lastmod>
