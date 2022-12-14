@@ -3,11 +3,21 @@
 	
 	<?php 
 	
-	$root=HtmlDocument()->website().'/story/';
+	$root=HtmlDocument()->website();
 
 	 foreach(GetPlugin('MapStory')->listStories() as $story){
 	    
-	        $path=$root.$story['id'];
+	        $path=$root.'/story/'.$story['id'];
+	        $date=explode(' ',$story['features'][0][modificationDate])[0];
+	 
+	     ?>
+	        <url>
+				<loc><?php echo $path?></loc>
+				<lastmod><?php echo $date;?></lastmod>
+			</url>
+	     <?php
+	     
+	     $path=$root.'/map/story/'.$story['id'];
 	        $date=explode(' ',$story['features'][0][modificationDate])[0];
 	 
 	     ?>
