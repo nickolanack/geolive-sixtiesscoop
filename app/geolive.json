@@ -265,7 +265,7 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "visualizations",
-                    "cachable": false,
+                    "cachable": true,
                     "metadata": {
                         "title": "Sixties Scoop | Survivor Story Visualization",
                         "description": ""
