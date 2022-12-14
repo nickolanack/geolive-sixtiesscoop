@@ -1,0 +1,1 @@
+This interactive mapping platform has been created to show and share 60s’ Scoop survivors stories from around the world. You are in control of how much information you share.

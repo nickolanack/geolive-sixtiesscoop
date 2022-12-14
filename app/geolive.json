@@ -117,7 +117,7 @@
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
             "showFrontEndEditButtons": true,
-            "JSCacheObfuscationEnabled": false,
+            "JSCacheObfuscationEnabled": true,
             "phase": "production",
             "ForceHTTPS": false,
             "allowProxiesFrom": [
@@ -175,35 +175,44 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "faq"
+                    "widget": "faq",
+                    "robots.txt": true
                 },
                 {
                     "name": "support",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "support"
+                    "widget": "support",
+                    "robots.txt": true
                 },
                 {
                     "name": "install",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "install"
+                    "widget": "install",
+                    "robots.txt": true
                 },
                 {
                     "name": "map",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "mainMap"
+                    "widget": "mainMap",
+                    "metadata": {
+                        "title": "Sixties Scoop | Interactive Survivor Stories Map",
+                        "description": "plugin.UserInterface.13.routes.5.metadata.description.js"
+                    },
+                    "robots.txt": true
                 },
                 {
                     "name": "resources",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "resources"
+                    "widget": "resources",
+                    "robots.txt": true
                 },
                 {
                     "name": "story",
@@ -224,14 +233,16 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "search"
+                    "widget": "search",
+                    "robots.txt": true
                 },
                 {
                     "name": "help",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "help"
+                    "widget": "help",
+                    "robots.txt": true
                 },
                 {
                     "name": "privacy",
@@ -245,21 +256,38 @@
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "dnakit"
+                    "widget": "dnakit",
+                    "robots.txt": true
                 },
                 {
                     "name": "visualize",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "visualizations"
+                    "widget": "visualizations",
+                    "metadata": {
+                        "title": "Sixties Scoop | Survivor Story Visualization",
+                        "description": ""
+                    },
+                    "robots.txt": true
                 },
                 {
                     "name": "story-index",
                     "view": "plugin",
                     "plugin": "UserInterface",
                     "pluginView": "widget",
-                    "widget": "storyIndex"
+                    "widget": "storyIndex",
+                    "robots.txt": true
+                },
+                {
+                    "name": "story_sitemap.xml",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "storySitemap",
+                    "cachable": false,
+                    "format": "raw",
+                    "sitemap": true
                 }
             ],
             "useRemoteServerUI": false,
@@ -8809,6 +8837,19 @@
             "parseMarkdown": true,
             "saveTemplateAsData": true,
             "contentTemplate": "About the visualizations",
+            "readAccess": "public"
+        }
+    },
+    "widget.138": {
+        "name": "Function",
+        "instance": "UserFunction",
+        "parameters": {
+            "widgetTitle": "storySitemap",
+            "target": "storySitemap",
+            "customScript": "storySitemap.customScript.js",
+            "language": "html\/text",
+            "returnsValue": false,
+            "cacheable": false,
             "readAccess": "public"
         }
     }
