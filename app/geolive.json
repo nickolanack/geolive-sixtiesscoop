@@ -8846,7 +8846,7 @@
         "parameters": {
             "widgetTitle": "storySitemap",
             "target": "storySitemap",
-            "customScript": "",
+            "customScript": "storySitemap.customScript.js",
             "language": "html\/text",
             "returnsValue": false,
             "cacheable": false,
