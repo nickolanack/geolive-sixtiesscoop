@@ -168,6 +168,47 @@ class MapStory extends \core\extensions\Plugin implements
 	}
 
 
+	public function listStories($limit=false){
+
+		GetPlugin('Maps');
+
+		$list=array();
+		$prefix='attribute_';
+
+
+		$filterBirthStories='{ 
+				"filters":[{
+					"field":"isBirthStory",
+					"value":true
+				}]
+			}';
+
+		$index=0;
+		
+
+		(new \spatial\AttributeFeatures('storyAttributes'))
+			->withType('MapStory.card') //becuase attribute type is overriden
+			->withAllAttributes($prefix)
+			->withFilter($filterBirthStories)->iterate(function($result)use(&$list, $prefix, &$index, $limit){
+
+				//result is not a metadata object
+
+				if((!$limit)||$index>=$limit[0]&&$index<$limit[1]){
+					$list[]=array('id'=>$result->id, 'features'=>array( $this->getPlugin()->formatFeatureMetadata($result, $prefix)));
+				}else{
+					$list[]=array('id'=>$result->id,);
+				}
+
+
+				$index++;
+
+			});
+
+		return $list;
+
+	}
+
+
 	public function searchStories($keyword) {
 
 		return (new \MapStory\CardSearch())->searchStories($keyword);
