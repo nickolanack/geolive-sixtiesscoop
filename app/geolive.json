@@ -8839,7 +8839,8 @@
             "customScript": "",
             "language": "html\/text",
             "returnsValue": false,
-            "cacheable": false
+            "cacheable": false,
+            "readAccess": "public"
         }
     }
 }
