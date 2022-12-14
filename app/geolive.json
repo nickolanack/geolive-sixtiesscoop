@@ -202,7 +202,7 @@
                     "widget": "mainMap",
                     "metadata": {
                         "title": "Sixties Scoop | Interactive Survivor Stories Map",
-                        "description": ""
+                        "description": "plugin.UserInterface.13.routes.5.metadata.description.js"
                     },
                     "robots.txt": true
                 },
@@ -265,6 +265,10 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "visualizations",
+                    "metadata": {
+                        "title": "Sixties Scoop | Survivor Story Visualization",
+                        "description": ""
+                    },
                     "robots.txt": true
                 },
                 {
