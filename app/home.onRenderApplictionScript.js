@@ -1,5 +1,5 @@
 
-(new \core\extensions\widget\WidgetRenderer())->addInlineViews(array(
+(new \core\extensions\widget\WidgetRenderer($this))->addInlineViews(array(
     'home', 
     'headerMenuContent', 
     'bannerContent', 
