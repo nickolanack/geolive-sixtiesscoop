@@ -6,7 +6,7 @@
 	 foreach(GetPlugin('MapStory')->listStories() as $story){
 	     
 	     
-	     echo json_ecode($story, JSON_PRETTY_PRINT)."\n\n";
+	     echo json_encode($story, JSON_PRETTY_PRINT)."\n\n";
 	 }
 
 
