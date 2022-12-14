@@ -8834,8 +8834,8 @@
         "name": "Function",
         "instance": "UserFunction",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
+            "widgetTitle": "storySitemap",
+            "target": "storySitemap",
             "customScript": "",
             "language": "html\/text",
             "returnsValue": false,
