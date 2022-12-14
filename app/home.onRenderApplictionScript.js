@@ -1,3 +1,18 @@
+
+(new \core\extensions\widget\WidgetRenderer())->addInlineViews(array(
+    'home', 
+    'headerMenuContent', 
+    'bannerContent', 
+    'introSection', 
+    'homePageContent', 
+    'bottomSection', 
+    'gettingStarted', 
+    'placeholderLabelItem', 
+    'featuredStories', 
+    'featuredStory', 
+    'sidePanelInfoDetail'
+));
+
 IncludeJSBlock('
     TemplateModule.SetTemplate(\'form\',\'<div><div data-template="title" class="template-title"></div><div data-template="content" class="template-content"></div><div data-template="footer" class="template-footer"></div></div>\');
     TemplateModule.SetTemplate(\'default\',\'<div data-template="content" class="template-content"></div>\');
