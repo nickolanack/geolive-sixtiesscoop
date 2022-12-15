@@ -2237,6 +2237,7 @@ a.ui-view,.template-content a{
     font-size:1.4em;
     margin-bottom: 0;
     padding-bottom: 0;
+    vertical-align: top;
     
      h2 {
         color: white;

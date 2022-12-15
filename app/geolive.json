@@ -113,7 +113,7 @@
             "CSSInlineObfuscationEnabled": false,
             "PHPDebugEnabled": true,
             "JSDebugEnabled": true,
-            "CachingEnabled": true,
+            "CachingEnabled": false,
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
             "showFrontEndEditButtons": true,
@@ -8865,6 +8865,21 @@
             "returnsValue": false,
             "cacheable": false,
             "readAccess": "public"
+        }
+    },
+    "widget.139": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.gettingStartedTextBottom2.text",
+            "target": "module.gettingStartedTextBottom2.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": true,
+            "saveTemplateAsData": false,
+            "readAccess": "public",
+            "contentTemplate": "\n\n"
         }
     }
 }
