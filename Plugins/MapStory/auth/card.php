@@ -18,14 +18,14 @@ class CardDataType extends \core\extensions\plugin\PluginDataType {
     /**
      * @SuppressWarnings("unused")
      */
-    public function authorize($task, $item) {
-        if (GetClient()->isAdmin()){
+    public function authorize($task, $item, $id=-1) {
+        if ($id==-1&&GetClient()->isAdmin()){
             return true;
         }
 
 
        
-       return  Auth($task, $item, "marker");
+       return  Auth($task, $item, "marker", $id);
         
     }
 }
