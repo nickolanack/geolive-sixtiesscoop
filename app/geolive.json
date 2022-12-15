@@ -8879,7 +8879,7 @@
             "parseMarkdown": true,
             "saveTemplateAsData": false,
             "readAccess": "public",
-            "contentTemplate": "\n\nasdf"
+            "contentTemplate": "as"
         }
     }
 }
