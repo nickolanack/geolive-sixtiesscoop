@@ -113,11 +113,11 @@
             "CSSInlineObfuscationEnabled": false,
             "PHPDebugEnabled": true,
             "JSDebugEnabled": true,
-            "CachingEnabled": false,
+            "CachingEnabled": true,
             "ExternalizeWidgetScripts": true,
             "PrettyPrintJson": true,
             "showFrontEndEditButtons": true,
-            "JSCacheObfuscationEnabled": true,
+            "JSCacheObfuscationEnabled": false,
             "phase": "production",
             "ForceHTTPS": false,
             "allowProxiesFrom": [
@@ -265,6 +265,7 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "visualizations",
+                    "--cachable": false,
                     "metadata": {
                         "title": "Sixties Scoop | Survivor Story Visualization",
                         "description": ""
@@ -278,16 +279,6 @@
                     "pluginView": "widget",
                     "widget": "storyIndex",
                     "robots.txt": true
-                },
-                {
-                    "name": "story_sitemap.xml",
-                    "view": "plugin",
-                    "plugin": "UserInterface",
-                    "pluginView": "widget",
-                    "widget": "storySitemap",
-                    "cachable": false,
-                    "format": "raw",
-                    "sitemap": true
                 }
             ],
             "useRemoteServerUI": false,
@@ -838,13 +829,55 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "bottom-by",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
                                     "text": "Created by the Geoforms Lab",
                                     "template": "",
+                                    "templateNamespace": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": "bottomSection.metadata.positions.content.modules.1.config.formatTextScript.js",
                                     "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
+                                    "formOptions": "{}",
+                                    "identifier": "htmlLabel"
+                                }
+                            },
+                            {
+                                "type": "Template",
+                                "config": {
+                                    "className": "bottom-section",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
+                                    "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                    "template": "gettingStartedTextBottom",
+                                    "templateNamespace": "",
+                                    "templateVariablesScript": "{}",
+                                    "formatTextScript": "",
+                                    "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
+                                    "ajaxRequestTemplate": true,
+                                    "namedFormView": "genericParametersForm",
+                                    "formOptions": "{}",
+                                    "identifier": "htmlLabel"
+                                }
+                            },
+                            {
+                                "type": "Template",
+                                "config": {
+                                    "className": "bottom-section",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
+                                    "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                    "template": "gettingStartedTextBottom2",
+                                    "templateNamespace": "",
+                                    "templateVariablesScript": "{}",
+                                    "formatTextScript": "",
+                                    "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
+                                    "ajaxRequestTemplate": true,
+                                    "namedFormView": "genericParametersForm",
                                     "formOptions": "{}",
                                     "identifier": "htmlLabel"
                                 }
@@ -6962,25 +6995,6 @@
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
-                                }
-                            },
-                            {
-                                "type": "Template",
-                                "config": {
-                                    "className": "",
-                                    "elementType": "span",
-                                    "elementOptions": "{}",
-                                    "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                                    "template": "gettingStartedTextBottom",
-                                    "templateNamespace": "",
-                                    "templateVariablesScript": "{}",
-                                    "formatTextScript": "",
-                                    "formatVariablesScript": "",
-                                    "requestTemplateScript": "defaultBehaviour();",
-                                    "ajaxRequestTemplate": true,
-                                    "namedFormView": "genericParametersForm",
-                                    "formOptions": "{}",
-                                    "identifier": "htmlLabel"
                                 }
                             }
                         ]

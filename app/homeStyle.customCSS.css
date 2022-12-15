@@ -2228,6 +2228,26 @@ a.ui-view,.template-content a{
 }
 
 
+.bottom-section.markdown {
+    display: inline-block;
+    width: calc( 100% / 4 - 50px);
+    min-width: 200px;
+    margin: 25px 25px;
+    padding: 20px;
+    font-size:1.4em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+     h2 {
+        color: white;
+    }
+    
+     a {
+        color:#86cbff;
+        font-weight:100;
+    }
+}
+
 
 
 
