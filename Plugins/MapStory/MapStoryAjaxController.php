@@ -22,6 +22,21 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 	}
 
 
+
+	/**
+	 * Save an entire story group, and profile
+	 */
+	protected function saveStory($json){
+
+
+
+		return array(
+			'echo'=>$json
+		);
+	}
+
+
+
 	protected function deleteStoryItem($json){
 
 		if(!Auth('write', $json->id, $json->type)){

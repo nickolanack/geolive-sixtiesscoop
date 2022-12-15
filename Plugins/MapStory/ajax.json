@@ -27,5 +27,9 @@
 
 	"get_year_results": {
 		"profile": true
+	},
+
+	"save_story": {
+		"profile": true
 	}
 }
