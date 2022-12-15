@@ -8878,7 +8878,8 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "readAccess": "public"
+            "readAccess": "public",
+            "contentTemplate": "\n\n"
         }
     }
 }
