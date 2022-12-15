@@ -8876,9 +8876,10 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "parseMarkdown": false,
+            "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": null
+            "contentTemplate": "",
+            "readAccess": "public"
         }
     }
 }
