@@ -829,13 +829,36 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "bottom-by",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
                                     "text": "Created by the Geoforms Lab",
                                     "template": "",
+                                    "templateNamespace": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": "bottomSection.metadata.positions.content.modules.1.config.formatTextScript.js",
                                     "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
+                                    "formOptions": "{}",
+                                    "identifier": "htmlLabel"
+                                }
+                            },
+                            {
+                                "type": "Template",
+                                "config": {
+                                    "className": "",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
+                                    "text": "#Getting Started\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                    "template": "gettingStartedTextBottom",
+                                    "templateNamespace": "",
+                                    "templateVariablesScript": "{}",
+                                    "formatTextScript": "",
+                                    "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
+                                    "ajaxRequestTemplate": true,
+                                    "namedFormView": "genericParametersForm",
                                     "formOptions": "{}",
                                     "identifier": "htmlLabel"
                                 }
