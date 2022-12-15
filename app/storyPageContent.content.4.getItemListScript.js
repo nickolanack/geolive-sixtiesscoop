@@ -137,6 +137,7 @@ if(AppClient.getUserType()!=="guest"){
 		   
 		    (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story", {
 		       'plugin':"MapStory",
+		       'user':item.getUserId(),
                'storyData':data
             })).addEvent("success", function(resp) {
                
