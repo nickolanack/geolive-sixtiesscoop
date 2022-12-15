@@ -8866,5 +8866,19 @@
             "cacheable": false,
             "readAccess": "public"
         }
+    },
+    "widget.139": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.gettingStartedTextBottom2.text",
+            "target": "module.gettingStartedTextBottom2.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": null
+        }
     }
 }
