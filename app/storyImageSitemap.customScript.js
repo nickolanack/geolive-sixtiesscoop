@@ -24,6 +24,10 @@
 
 	 foreach(GetPlugin('MapStory')->listStories() as $story){
 	    
+	        if($story['id']!==327){
+	            continue;
+	        }
+	    
 	        $path=$root.'/story/'.$story['id'];
 	        
 	 
