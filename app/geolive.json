@@ -8886,12 +8886,13 @@
         "name": "Function",
         "instance": "UserFunction",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
+            "widgetTitle": "storyImageSitemap",
+            "target": "storyImageSitemap",
             "customScript": "",
             "language": "html\/text",
             "returnsValue": false,
-            "cacheable": false
+            "cacheable": false,
+            "readAccess": "public"
         }
     }
 }
