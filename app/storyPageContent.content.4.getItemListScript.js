@@ -134,6 +134,17 @@ if(AppClient.getUserType()!=="guest"){
 		   var wizard=dialog.getWizard();
 		   var data=wizard.getData();
 		   console.log(data);
+		   
+		    (new AjaxControlQuery(CoreAjaxUrlRoot, "save_story", {
+		       'plugin':"MapStory",
+		       'user':item.getUserId(),
+               'storyData':data
+            })).addEvent("success", function(resp) {
+               
+                console.log('redraw');
+               
+            }).execute();
+		   
 		    
 		});
         

@@ -279,6 +279,15 @@
                     "pluginView": "widget",
                     "widget": "storyIndex",
                     "robots.txt": true
+                },
+                {
+                    "name": "story_sitemap.xml",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "storySitemap",
+                    "sitemap": true,
+                    "format": "raw"
                 }
             ],
             "useRemoteServerUI": false,
@@ -8880,6 +8889,19 @@
             "saveTemplateAsData": false,
             "readAccess": "public",
             "contentTemplate": "\n\n"
+        }
+    },
+    "widget.140": {
+        "name": "Function",
+        "instance": "UserFunction",
+        "parameters": {
+            "widgetTitle": "storyImageSitemap",
+            "target": "storyImageSitemap",
+            "customScript": "storyImageSitemap.customScript.js",
+            "language": "html\/text",
+            "returnsValue": false,
+            "cacheable": false,
+            "readAccess": "public"
         }
     }
 }
