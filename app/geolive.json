@@ -8888,7 +8888,7 @@
         "parameters": {
             "widgetTitle": "storyImageSitemap",
             "target": "storyImageSitemap",
-            "customScript": "",
+            "customScript": "storyImageSitemap.customScript.js",
             "language": "html\/text",
             "returnsValue": false,
             "cacheable": false,
