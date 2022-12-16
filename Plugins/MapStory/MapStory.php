@@ -168,6 +168,9 @@ class MapStory extends \core\extensions\Plugin implements
 	}
 
 
+	/**
+	 * these are only birth stories;
+	 */
 	public function listStories($limit=false){
 
 		GetPlugin('Maps');
