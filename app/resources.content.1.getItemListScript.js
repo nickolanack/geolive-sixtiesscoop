@@ -199,7 +199,10 @@ var links= [
         link:"https://newsinteractives.cbc.ca/longform/colleen-cardinal"        
     }),
     
-    
+     new MockDataTypeItem({
+        name:"Colleen Cardinal's path to healingl | CBC News", 
+        link:"https://www.cbc.ca/player/play/1461638211831"        
+    }),
     
     
    
