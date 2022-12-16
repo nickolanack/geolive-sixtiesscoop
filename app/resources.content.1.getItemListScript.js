@@ -189,6 +189,14 @@ var links= [
     }),
     
     
+    new MockDataTypeItem({
+        name:"Sixties Scoop Survivors Continue To Heal | Photographers Without Borders", 
+        link:"https://www.photographerswithoutborders.org/online-magazine/2022/6/22/60s-scoop-survivors-continue-to-heal"        
+    }),
+    
+    
+    
+    
    
    
    
