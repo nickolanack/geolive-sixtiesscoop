@@ -16,4 +16,36 @@
       <image:loc>https://example.com/picture.jpg</image:loc>
     </image:image>
   </url>
+
+
+   <?php 
+	
+	$root=HtmlDocument()->website();
+
+	 foreach(GetPlugin('MapStory')->listStories() as $story){
+	    
+	        $path=$root.'/story/'.$story['id'];
+	        
+	 
+	     ?>
+	        
+	        <url>
+				<loc><?php echo $path?></loc>
+				<image:image>
+                    <image:loc>https://example.com/picture.jpg</image:loc>
+                </image:image>
+				<lastmod><?php echo $date;?></lastmod>
+			</url>
+	     <?php
+	     
+	     
+	     
+	     echo json_encode($story, JSON_PRETTY_PRINT)."\n\n";
+	     break;
+	 }
+
+
+	?>
+  
+  
 </urlset>
