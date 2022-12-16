@@ -286,7 +286,8 @@
                     "plugin": "UserInterface",
                     "pluginView": "widget",
                     "widget": "storySitemap",
-                    "sitemap": true
+                    "sitemap": true,
+                    "format": "raw"
                 }
             ],
             "useRemoteServerUI": false,
