@@ -194,6 +194,11 @@ var links= [
         link:"https://www.photographerswithoutborders.org/online-magazine/2022/6/22/60s-scoop-survivors-continue-to-heal"        
     }),
     
+    new MockDataTypeItem({
+        name:"Colleen Cardinal | CBC News", 
+        link:"https://newsinteractives.cbc.ca/longform/colleen-cardinal"        
+    }),
+    
     
     
     
