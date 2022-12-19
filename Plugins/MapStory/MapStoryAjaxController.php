@@ -118,10 +118,12 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			);
 
 			error_log(json_encode($geocode));
+
+
 		}
 
 
-		throw new \Exception('Not implemented yet, new story card');
+		//throw new \Exception('Not implemented yet, new story card');
 
 	}
 
