@@ -127,7 +127,10 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 			$feature = new \Marker();
 			$feature->setUserId($user);
+			
+			error_log($location);
 			$feature->setCoordinates($location->lat, $location->lng);
+
 
 			$layer = (new \spatial\LayerLoader())->fromName('Story Layer');
 			$feature->setLayerId($layer->getId());
@@ -136,7 +139,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		}
 
 
-		
+
 		//throw new \Exception('Not implemented yet, new story card');
 
 	}
