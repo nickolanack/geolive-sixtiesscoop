@@ -108,6 +108,19 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		
 		}
 
+
+		if(isset($storyData->address)){
+
+			GetPlugin('GoogleMaps');
+			$geocode = (new \GoogleMaps\Geocoder())->fromCoordinates(
+				$storyData->address,
+				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
+			);
+
+			error_log(json_encode($geocode);
+		}
+
+
 		throw new \Exception('Not implemented yet, new story card');
 
 	}
