@@ -53,9 +53,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 		return array(
 			'story'=>$stories[0],
-			'newStory'=>$json->storyData->birth,
-			//'user'=>$user,
-			'newUserData'=>$newUserData,
+			'newStory'=>$json->storyData->birth
 			
 		);
 	}
@@ -101,10 +99,16 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				throw new \Exception("did not find story with id: ".$storyData->id);
 			}
 
+			if(isset($storyData->Attribute_storyAttributes_Object)){
+				(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
+			}
 
-			
+
+			return;
 		
 		}
+
+		throw new \Exception('Not implemented yet, new story card');
 
 	}
 
