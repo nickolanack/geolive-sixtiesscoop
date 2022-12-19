@@ -273,7 +273,7 @@ $introTextColor:#4d8673;
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 550px){
     .site-heading {
         width: 200px;
         top:-20px;
