@@ -43,9 +43,11 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 		$this->updateUserStory($json->user, $json->storyData->birth, $stories);
 
-		foreach($json->stories as $story){
+		
+		foreach($json->storyData->stories as $story){
 			$this->updateUserStory($json->user, $story, $stories);
 		}
+		
 		
 		$this->updateUserStory($json->user, $json->storyData->repatriation, $stories);
 
