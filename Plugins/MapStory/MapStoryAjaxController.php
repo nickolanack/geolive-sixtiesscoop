@@ -114,7 +114,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		if(isset($storyData->address)){
 
 			GetPlugin('GoogleMaps');
-			$geocode = (new \GoogleMaps\Geocoder())->fromCoordinates(
+			$geocode = (new \GoogleMaps\Geocoder())->fromString(
 				$storyData->address,
 				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
 			);
