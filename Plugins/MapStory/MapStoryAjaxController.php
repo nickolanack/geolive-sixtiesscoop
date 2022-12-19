@@ -122,6 +122,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 		}
 
+		error_log(json_encode($storyData));
+
 
 		//throw new \Exception('Not implemented yet, new story card');
 
