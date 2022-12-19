@@ -119,6 +119,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 				GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false)
 			);
 
+			error_log(GetPlugin('Maps')->getParameter('googleMapsServerApiKey', false));
 			error_log(json_encode($geocode));
 
 
