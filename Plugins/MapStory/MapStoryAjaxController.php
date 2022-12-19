@@ -29,8 +29,17 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 	protected function saveStory($json){
 
 
+		if(!Auth('write', $json->user, 'user')){
+			return $this->setError('No access');
+		}
+
+		$stories=$this->getPlugin()->getUsersStoryMetadata($json->user);
+		$user=$this->getPlugin()->getUsersMetadata($json->user);
+
 
 		return array(
+			'stories'=>$stories,
+			'user'=>$user,
 			'echo'=>$json
 		);
 	}
