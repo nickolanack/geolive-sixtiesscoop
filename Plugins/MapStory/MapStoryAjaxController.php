@@ -63,7 +63,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 	private function updateUserProfile($user, $data){
 
 
-		$newUserProfile=array();
+		$newUserData=array();
 		foreach([$data->profile, $data->publishing] as $userData){
 			if(isset($userData->Attribute_profileAttributes_Object)){
 				$newUserData=array_merge($newUserData, get_object_vars($userData->Attribute_profileAttributes_Object));
@@ -75,7 +75,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		}
 
 
-		(new \attributes\Record('profileAttributes'))->setValues($user, "user", $newUserProfile);
+		(new \attributes\Record('profileAttributes'))->setValues($user, "user", $newUserData);
 
 
 	}
