@@ -250,6 +250,10 @@ $introTextColor:#4d8673;
 
     .site-heading {
         width: calc( 100% - 300px );
+        h1 {
+            font-size: 30px
+        }
+        
         h2 {
             display:none;
         }
