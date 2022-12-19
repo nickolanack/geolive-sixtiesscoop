@@ -37,10 +37,27 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		$user=$this->getPlugin()->getUsersMetadata($json->user);
 
 
+		$newUserProfile=array();
+		
+		
+
+		foreach([$json->storyData->profile, $json->storyData->publishing] as $userData){
+			if(isset($userData->Attribute_profileAttributes_Object)){
+				$newUserData=array_merge($newUserData, get_object_vars($userData->Attribute_profileAttributes_Object));
+			}
+		}
+
+
+
+
+
+
 		return array(
-			'stories'=>$stories,
-			'user'=>$user,
-			'echo'=>$json
+			'story'=>$stories[0],
+			'newStory'=>$json->storyData->birth,
+			//'user'=>$user,
+			'newUserData'=>$newUserData,
+			
 		);
 	}
 
