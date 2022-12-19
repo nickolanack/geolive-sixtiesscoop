@@ -37,18 +37,17 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		$user=$this->getPlugin()->getUsersMetadata($json->user);
 
 
-		$newUserProfile=array();
-		
+
+		$this->updateUserProfile($json->user, $json->storyData);
 		
 
-		foreach([$json->storyData->profile, $json->storyData->publishing] as $userData){
-			if(isset($userData->Attribute_profileAttributes_Object)){
-				$newUserData=array_merge($newUserData, get_object_vars($userData->Attribute_profileAttributes_Object));
-			}
+		$this->updateUserStory($json->user, $json->storyData->birth, $stories);
+
+		foreach($json->stories as $story){
+			$this->updateUserStory($json->user, $story, $stories);
 		}
-
-
-
+		
+		$this->updateUserStory($json->user, $json->storyData->repatriation, $stories);
 
 
 
@@ -61,6 +60,53 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		);
 	}
 
+
+
+	private function updateUserProfile($user, $data){
+
+
+		$newUserProfile=array();
+		foreach([$data->profile, $data->publishing] as $userData){
+			if(isset($userData->Attribute_profileAttributes_Object)){
+				$newUserData=array_merge($newUserData, get_object_vars($userData->Attribute_profileAttributes_Object));
+			}
+		}
+
+		if(empty($newUserData){
+			return;
+		}
+
+
+		(new \attributes\Record('profileAttributes'))->setValues($user, "user", $newUserProfile);
+
+
+	}
+
+
+	private function updateUserStory($user, $storyData, $currentStoriesData=null){
+
+		if(!$currentStoriesData){
+			$currentStoriesData=$this->getPlugin()->getUsersStoryMetadata($user);
+		}
+
+		if(isset($storyData->id)&&(intval($storyData->id))){
+			$currentStory=null;
+			foreach($currentStoriesData as $story){
+				if(intval($story->id)===intval($story->id)){
+					$currentStory=$story;
+				}
+			}
+
+			if(!$currentStory){
+				throw new \Exception("did not find story with id: ".$storyData->id);
+			}
+
+
+			
+		
+		}
+
+	}
 
 
 	protected function deleteStoryItem($json){
