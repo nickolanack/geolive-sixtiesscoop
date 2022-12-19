@@ -69,7 +69,7 @@ $introTextColor:#4d8673;
 
  @media only screen and (max-width: 1250px) {
 
-    .header-menu {
+    [data-view="headerMenuContent"] .header-menu {
         
         display: inline-block;
         width: min-content;
