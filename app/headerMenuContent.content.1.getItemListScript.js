@@ -25,7 +25,7 @@ var links= [
     new MockDataTypeItem({name:"About", link:"https://sixtiesscoopnetwork.org/" }), 
     new MockDataTypeItem({name:"Sign in", link:"/login", click:function(e){
                                             
-                                        
+                                            e.preventDefault();
         
                                              (new UIModalDialog(
 												application, 

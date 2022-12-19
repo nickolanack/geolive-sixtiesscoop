@@ -27,6 +27,10 @@ query.addEvent("success", function(storyResp) {
                   
                   //callback(new StoryUser(storyResp));
                    
+                   $$('title')[0].innerHTML=([storyResp.user.name,storyResp.user.birthName]).filter(function(name){
+                       return name.trim().length>0;
+                   }).join(' | ')+' | The Sixties Scoop';
+                   
                    
                    
                     (new AjaxControlQuery(CoreAjaxUrlRoot, "get_attribute_value_list", {

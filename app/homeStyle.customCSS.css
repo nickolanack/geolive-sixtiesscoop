@@ -23,7 +23,7 @@ $introTextColor:#4d8673;
 
 [data-view="headerMenuContent"] .header-menu {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 100px;    
 
     p{
@@ -69,7 +69,7 @@ $introTextColor:#4d8673;
 
  @media only screen and (max-width: 1250px) {
 
-    .header-menu {
+    [data-view="headerMenuContent"] .header-menu {
         
         display: inline-block;
         width: min-content;
@@ -237,12 +237,47 @@ $introTextColor:#4d8673;
     .site-heading {
         left:200px;
         top:-10px;
+        width: calc( 100% - 250px );
     }
 
     .ui-view.page-header{
         height:170px;
     }
 
+}
+
+@media only screen and (max-width: 650px){
+
+    .site-heading {
+        
+        width: calc( 100% - 300px );
+        left: 170px;
+        top: -5px;
+        
+        h1 {
+            font-size: 30px
+        }
+        
+        h2 {
+            display:none;
+        }
+        
+    }
+    
+    .ui-view.page-header:after {
+        width: 80px;
+        height: 80px;
+    }
+    .ui-view.page-header {
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .site-heading {
+        width: 200px;
+        top:-20px;
+    }
 }
 
 
