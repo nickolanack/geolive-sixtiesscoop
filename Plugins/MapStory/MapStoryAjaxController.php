@@ -72,7 +72,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			}
 		}
 
-		if(empty($newUserData){
+		if(empty($newUserData)){
 			return;
 		}
 
