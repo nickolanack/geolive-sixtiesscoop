@@ -102,11 +102,14 @@ var links= [
 ];
 
 
-if(AppClient.getUserType()!=="guest"){
-        
+if(AppClient.getUserType()==="guest"){
+    return;
+}
 
  
- if(AppClient.getUserType()=="admin"){
+if(AppClient.getUserType()!=="admin"){
+    return; 
+}
     
     
     var displayEditForm=function(){
@@ -161,11 +164,11 @@ if(AppClient.getUserType()!=="guest"){
         displayEditForm();
        
     }}));
- }
+ 
  
  
     
-}
+
 
 
 return links;
