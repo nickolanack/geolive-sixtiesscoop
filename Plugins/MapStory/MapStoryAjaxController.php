@@ -89,29 +89,12 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			$currentStoriesData=$this->getPlugin()->getUsersStoryMetadata($user);
 		}
 
-		if(isset($storyData->id)&&(intval($storyData->id))){
-			$currentStory=null;
-			foreach($currentStoriesData as $story){
-				if(intval($story->id)===intval($story->id)){
-					$currentStory=$story;
-				}
-			}
-
-			if(!$currentStory){
-				throw new \Exception("did not find story with id: ".$storyData->id);
-			}
-
-			if(isset($storyData->Attribute_storyAttributes_Object)){
-				(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
-			}
-
-
-			return;
+		if(!(isset($storyData->id)&&(intval($storyData->id)>0))){
 		
-		}
 
-
-		if(isset($storyData->address)){
+			if(!isset($storyData->address)){
+				throw new \Exception('Cannot create new story without address');
+			}
 
 			GetPlugin('GoogleMaps');
 			GetPlugin('Maps');
@@ -134,9 +117,36 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 			$layer = (new \spatial\LayerLoader())->fromName('Story Layer');
 			$feature->setLayerId($layer->getId());
-			(new \spatial\FeatureLoader())->save($feature);
+			
+			$storyData->id = (new \spatial\FeatureLoader())->save($feature);
 
+		
 		}
+
+
+
+
+		$currentStory=null;
+		foreach($currentStoriesData as $story){
+			if(intval($storyData->id)===intval($story->id)){
+				$currentStory=$story;
+			}
+		}
+
+		if(!$currentStory){
+			throw new \Exception("did not find story with id: ".$storyData->id);
+		}
+
+		if(isset($storyData->Attribute_storyAttributes_Object)){
+			(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
+		}
+
+
+		return;
+	
+		
+
+
 
 
 
