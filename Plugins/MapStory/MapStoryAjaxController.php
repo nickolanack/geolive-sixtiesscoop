@@ -140,7 +140,13 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			
 			$storyData->id = (new \spatial\FeatureLoader())->save($feature);
 
-		
+
+			if(isset($storyData->Attribute_storyAttributes_Object)){
+				(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
+			}
+
+			return;
+			
 		}
 
 
