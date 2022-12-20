@@ -84,11 +84,17 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 	
 	private function updateUserBirthStory($user, $storyData, $currentStoriesData=null){
+
+		
+
+		$storyData->icon='https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/7pW_da6_[ImAgE]_[G]_noG.png?thumb=>48>48';
 		$storyData->Attribute_storyAttributes_Object->isBirthStory=true;
 		return $this->updateUserStory($user, $storyData, $currentStoriesData);
 	}
 
 	private function updateUserRepatriationStory($user, $storyData, $currentStoriesData=null){
+
+		$storyData->icon='https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/VE4_dUd_[G]_bgL_[ImAgE].png?thumb=>48>48';
 		$storyData->Attribute_storyAttributes_Object->isRepatriationStory=true;
 		return $this->updateUserStory($user, $storyData, $currentStoriesData);
 	}
@@ -137,6 +143,8 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 			$layer = (new \spatial\LayerLoader())->fromName('Story Layer');
 			$feature->setLayerId($layer->getId());
+
+			$feature->setIcon(isset($storyData->icon)?$storyData->icon:'https://sixtiesscoop.geoforms.ca/php-core-app/users_files/user_files_1/Uploads/shv_[ImAgE]_d3r_[G]_g3M.png?thumb=>48>48');
 			
 			$storyData->id = (new \spatial\FeatureLoader())->save($feature);
 
