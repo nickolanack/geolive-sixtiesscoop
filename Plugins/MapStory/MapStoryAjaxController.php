@@ -89,6 +89,11 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			$currentStoriesData=$this->getPlugin()->getUsersStoryMetadata($user);
 		}
 
+
+		if(!isset($storyData->Attribute_storyAttributes_Object)){
+			throw new \Exception('Expects attributes');
+		}
+
 		if(!(isset($storyData->id)&&(intval($storyData->id)>0))){
 		
 
