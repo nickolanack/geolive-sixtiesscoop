@@ -162,6 +162,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 		$currentStory=null;
 		foreach($currentStoriesData as $story){
+			error_log(json_encode($story));
 			if(intval($storyData->id)===intval($story->id)){
 				$currentStory=$story;
 			}
