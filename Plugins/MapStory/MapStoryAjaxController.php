@@ -97,7 +97,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		if(!(isset($storyData->id)&&(intval($storyData->id)>0))){
 		
 
-			if(!isset($storyData->address)){
+			if(!(isset($storyData->address)&&!empty($storyData->address))){
 				throw new \Exception('Cannot create new story without address');
 			}
 
