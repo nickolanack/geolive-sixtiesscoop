@@ -41,7 +41,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		$this->updateUserProfile($json->user, $json->storyData);
 		
 
-		$this->updateUserStory($json->user, $json->storyData->birth, $stories);
+		$this->updateUserBirthStory($json->user, $json->storyData->birth, $stories);
 
 		
 		foreach($json->storyData->stories as $story){
@@ -49,7 +49,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		}
 		
 		
-		$this->updateUserStory($json->user, $json->storyData->repatriation, $stories);
+		$this->updateUserRepatriationStory($json->user, $json->storyData->repatriation, $stories);
 
 
 
@@ -82,6 +82,16 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 	}
 
+	
+	private function updateUserBirthStory($user, $storyData, $currentStoriesData=null){
+		$storyData->Attribute_storyAttributes_Object->isBirthStory=true;
+		return $this->updateUserStory($user, $storyData, $currentStoriesData);
+	}
+
+	private function updateUserRepatriationStory($user, $storyData, $currentStoriesData=null){
+		$storyData->Attribute_storyAttributes_Object->isRepatriationStory=true;
+		return $this->updateUserStory($user, $storyData, $currentStoriesData);
+	}
 
 	private function updateUserStory($user, $storyData, $currentStoriesData=null){
 
@@ -98,7 +108,12 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 		
 
 			if(!(isset($storyData->address)&&!empty($storyData->address))){
-				throw new \Exception('Cannot create new story without address');
+					
+				/**
+				 * Ignore empty story. Form will submit empty data for birth and repatriation story
+				 */
+
+				return;
 			}
 
 			GetPlugin('GoogleMaps');
