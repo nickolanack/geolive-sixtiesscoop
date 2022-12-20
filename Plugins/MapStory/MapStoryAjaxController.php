@@ -172,6 +172,12 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 			throw new \Exception("did not find story with id: ".$storyData->id);
 		}
 
+
+		if(!(isset($storyData->address)&&!empty($storyData->address))){
+			GetPlugin('Maps');
+			(new \spatial\FeatureLoader())->delete((new \spatial\FeatureLoader())->fromId($storyData->id));
+		}
+
 		if(isset($storyData->Attribute_storyAttributes_Object)){
 			(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
 		}
