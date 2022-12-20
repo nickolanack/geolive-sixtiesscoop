@@ -12,4 +12,7 @@
     
 })
     .setUpdateField('stories')
+    .setEmptyFn(function(data){
+        return !((data.id&&data.id>0)||(typeof data.address=='string')&&data.address.length>0);
+    })
     .enableDragOrdering();
