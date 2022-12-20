@@ -3156,16 +3156,16 @@
                             "createRepatriationStoryForm.metadata.children.1.fields.0.json"
                         ],
                         "_diagramState": {
-                            "x": 405,
-                            "y": 261
+                            "x": 415,
+                            "y": 271
                         },
                         "children": [
                             "createRepatriationStoryForm.metadata.children.1.children.0.json",
                             {
                                 "class": "InsertNode",
                                 "_diagramState": {
-                                    "x": 365,
-                                    "y": 474
+                                    "x": 375,
+                                    "y": 484
                                 }
                             }
                         ],
@@ -3180,10 +3180,23 @@
                                     "modules": [
                                         "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
                                         {
+                                            "type": "WizardGeocodeAddress",
+                                            "config": {
+                                                "label": "Where were you repatriated to?",
+                                                "message": "Search location",
+                                                "className": "css class name",
+                                                "maxChars": 0,
+                                                "textFormatScript": "",
+                                                "getValueScript": "return item.getAddress();",
+                                                "updateValueScript": " object.value=value; ",
+                                                "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.submitValueScript.js"
+                                            }
+                                        },
+                                        {
                                             "type": "plugin.Attributes.WizardTextAttribute",
                                             "config": {
                                                 "attributeFields": [
-                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.1.config.attributeFields.0.json"
+                                                    "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
                                                 ],
                                                 "className": "",
                                                 "label": "When were you repatriated?",
@@ -3199,24 +3212,11 @@
                                                 "autocomplete": true,
                                                 "inputOptions": [],
                                                 "onRenderTextFieldScript": "",
-                                                "formatdefaultScript": ""
+                                                "formatValueScript": ""
                                             }
                                         },
                                         {
-                                            "type": "WizardGeocodeAddress",
-                                            "config": {
-                                                "label": "When were you repatriated to?",
-                                                "message": "Search location",
-                                                "className": "css class name",
-                                                "maxChars": 0,
-                                                "textFormatScript": "",
-                                                "getValueScript": "return item.getAddress();",
-                                                "updateValueScript": " object.value=value; ",
-                                                "submitValueScript": "createRepatriationStoryForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.submitValueScript.js"
-                                            }
-                                        },
-                                        {
-                                            "type": "WizardDescriptionField",
+                                            "type": "FormTextDescriptionField",
                                             "config": {
                                                 "label": "If you would like to tell us more about your repatriation, please do so below.",
                                                 "message": "Add a description or additional info",
@@ -3265,7 +3265,7 @@
                                                 "autocomplete": true,
                                                 "inputOptions": "{\n    \n    \"listValues\":[\"Repatriation\", \"Cultural Healing resources\", \"Addiction\/Treatment\", \"Gatherings\", \"Obtaining Status\"]\n}",
                                                 "onRenderTextFieldScript": "",
-                                                "formatdefaultScript": ""
+                                                "formatValueScript": ""
                                             }
                                         }
                                     ]
