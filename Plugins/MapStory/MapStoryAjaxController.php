@@ -188,6 +188,9 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 
 		if(isset($storyData->Attribute_storyAttributes_Object)){
+
+			$storyData->Attribute_storyAttributes_Object->locationName=$storyData->address;
+
 			(new \attributes\Record('storyAttributes'))->setValues($storyData->id, "MapStory.card", $storyData->Attribute_storyAttributes_Object);
 		}
 
