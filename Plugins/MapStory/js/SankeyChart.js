@@ -760,7 +760,7 @@ var SankeyChart = (function() {
 
 
 		var mapLink='';
-		var resultsLink=;
+		var resultsLink='';
 
 
 		var viewIndex = chart.appendChild(new Element('button', {
