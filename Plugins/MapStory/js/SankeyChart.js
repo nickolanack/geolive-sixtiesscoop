@@ -771,7 +771,7 @@ var SankeyChart = (function() {
 					sources.push('or '+sources.pop());
 				}
 
-				filterLabels.push('origin location in:'+sources.join(', '));
+				filterLabels.push(''+sources.join(', ')+' as the origin location');
 			}
 
 			if(dests.length>0){
@@ -784,11 +784,11 @@ var SankeyChart = (function() {
 					dests.push('or '+dests.pop());
 				}
 
-				filterLabels.push('destination location in: '+dests.join(', '));
+				filterLabels.push(''+dests.join(', ')+' as the destination');
 
 			}
 
-			el.innerHTML='Showing filter results for stories with '+filterLabels.join(' or ')
+			el.innerHTML='Showing filter results for stories with '+filterLabels.join('; or ')
 
 		});
 
