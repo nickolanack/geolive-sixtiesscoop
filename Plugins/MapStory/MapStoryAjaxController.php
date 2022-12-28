@@ -38,7 +38,7 @@ class MapStoryAjaxController extends core\AjaxController implements \core\extens
 
 
 
-		$updater=(new \MapStory\StoryUpdater())
+		$updater=(new \MapStory\StoryUpdater());
 
 
 		$updater->updateUserProfile($json->user, $json->storyData);
