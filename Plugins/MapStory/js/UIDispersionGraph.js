@@ -326,7 +326,7 @@ var UIDispersionData = (function(){
 
 				var me=this;
 				var fullNames=Object.keys(this._provinces).filter(function(fullName){
-					return me._provinces[fullName]===code;
+					return me._provinces[fullName].toLowerCase()===code.toLowerCase();
 				});
 
 				if(fullNames.length>0){
