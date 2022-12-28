@@ -27,6 +27,9 @@ var SankeyChart = (function() {
 
 
 		},
+		getElement: function() {
+			return this._containerEl;
+		},
 		_init: function() {
 
 
@@ -354,8 +357,8 @@ var SankeyChart = (function() {
 				var sources = config.sources;
 				var dests = config.dests;
 
-				me._sources=sources;
-				me._dests=dests;
+				me._sources = sources;
+				me._dests = dests;
 
 				var matrix = config.matrix;
 				var Names = config.Names;
@@ -420,10 +423,10 @@ var SankeyChart = (function() {
 
 					var selection = [];
 
-					me._clearSelection=function(){
+					me._clearSelection = function() {
 
-						if(selection.length){
-							selection=[];
+						if (selection.length) {
+							selection = [];
 							me.fireEvent('selectionChanged', [selection.slice(0)]);
 						}
 
@@ -447,8 +450,6 @@ var SankeyChart = (function() {
 
 
 
-
-
 				me.on("selectionChanged", function(indexes) {
 
 
@@ -464,7 +465,7 @@ var SankeyChart = (function() {
 							.style('opacity', function(d, i) {
 								return 1;
 							})
-							
+
 
 						return;
 					}
@@ -491,7 +492,6 @@ var SankeyChart = (function() {
 								return 0.2;
 							}
 						})
-						
 
 
 
@@ -672,9 +672,9 @@ var SankeyChart = (function() {
 		},
 
 
-		clearSelection:function(){
+		clearSelection: function() {
 
-			if(this._clearSelection){
+			if (this._clearSelection) {
 				this._clearSelection();
 				return;
 			}
@@ -716,12 +716,12 @@ var SankeyChart = (function() {
 		},
 
 
-		isSource:function(index){
+		isSource: function(index) {
 			return !this.isDest(index);
 		},
 
-		isDest:function(index){
-			return this._dests.length>index;
+		isDest: function(index) {
+			return this._dests.length > index;
 		},
 
 
@@ -740,6 +740,87 @@ var SankeyChart = (function() {
 
 
 	});
+
+
+	SankeyChart.AddFilterLinks = function(sankey) {
+
+
+		var chart = sankey.getElement();
+
+		var resultsLink = null;
+		var reset = chart.appendChild(new Element('button', {
+			"class": "btn reset hidden",
+			html: "Reset",
+			events: {
+				click: function() {
+					sankey.clearSelection()
+				}
+			}
+		}));
+
+		sankey.on('selectionChanged', function(selection) {
+
+
+
+			if (resultsLink && selection.length == 0) {
+				resultsLink.parentNode.removeChild(resultsLink);
+				resultsLink = null;
+				reset.addClass("hidden");
+				return;
+			}
+
+			reset.removeClass("hidden");
+
+			if (!resultsLink) {
+				resultsLink = chart.appendChild(new Element('span', {
+					"class": "markdown template-content"
+				}));
+			}
+
+
+			var sources = selection.filter(function(i) {
+				return sankey.isSource(i);
+			}).map(function(i) {
+				return sankey.getNameAt(i);
+			})
+
+			var dests = selection.filter(function(i) {
+				return sankey.isDest(i);
+			}).map(function(i) {
+				return sankey.getNameAt(i);
+			});
+
+
+			var toStrong = function(name) {
+				return '<strong>' + name + '</strong>';
+			};
+
+			var toCodes = function(name) {
+				return UIDispersionData.Get().getProvinceCodeForName(name).split(' ').join('_');
+			};
+
+			var toCodeStubs = function(prefix, names) {
+				return names.length == 0 ? '' : prefix + names.map(toCodes).join('-').toLowerCase();
+			};
+
+			var str = [];
+			if (sources.length > 0) {
+				str.push("Selected origin province" + (sources.length === 1 ? "" : "s") + ": " + sources.map(toStrong).join(", ") + "");
+			}
+
+			if (dests.length > 0) {
+				str.push("Selected destination province" + (dests.length === 1 ? "" : "s") + ": " + dests.map(toStrong).join(", ") + "");
+			}
+
+			resultsLink.innerHTML = '<p>' + str.join("; ") + '<br/>' +
+				'<a href="/map/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests) + '"><strong>View selection on the map</strong></a>' +
+				'<br/>' +
+				'<a href="/story-index/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests) + '"><strong>List stories</strong></a></p>';
+
+		});
+
+	};
+
 
 	return SankeyChart;
 
