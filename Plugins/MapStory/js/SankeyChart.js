@@ -755,6 +755,11 @@ var SankeyChart = (function() {
 		var el=new Element('span');
 
 
+		var toLabel=function(code){
+			return '<strong>'+UIDispersionData.Get().getProvinceNameForCode(code)+'</strong>';
+		};
+
+
 		UIDispersionData.Get(function(){
 
 
@@ -763,9 +768,7 @@ var SankeyChart = (function() {
 
 			if(sources.length>0){
 
-				sources=sources.map(function(code){
-					return UIDispersionData.Get().getProvinceNameForCode(code);
-				});
+				sources=sources.map(toLabel);
 
 				if(sources.length>1){
 					sources.push('or '+sources.pop());
@@ -776,9 +779,7 @@ var SankeyChart = (function() {
 
 			if(dests.length>0){
 
-				dests=dests.map(function(code){
-					return UIDispersionData.Get().getProvinceNameForCode(code);
-				});
+				dests=dests.map(toLabel);
 
 				if(dests.length>1){
 					dests.push('or '+dests.pop());
