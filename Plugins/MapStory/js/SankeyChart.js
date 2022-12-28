@@ -757,11 +757,38 @@ var SankeyChart = (function() {
 
 		UIDispersionData.Get(function(){
 
-			el.innerHTML='Showing filter results for stories with location origin '+sources.map(function(code){
-				return UIDispersionData.Get().getProvinceNameForCode(code);
-			}).join(', ')+' or location destination '+dests.map(function(code){
-				return UIDispersionData.Get().getProvinceNameForCode(code);
-			}).join(', ');
+
+			var filterLabels=[];
+
+
+			if(sources.length>0){
+
+				sources=sources.map(function(code){
+					return UIDispersionData.Get().getProvinceNameForCode(code);
+				});
+
+				if(sources.length>1){
+					sources.push('or '+sources.pop());
+				}
+
+				filterLabels.push('origin location in:'+sources.join(', '));
+			}
+
+			if(dests.length>0){
+
+				dests=dests.map(function(code){
+					return UIDispersionData.Get().getProvinceNameForCode(code);
+				});
+
+				if(dests.length>1){
+					dests.push('or '+dests.pop());
+				}
+
+				filterLabels.push('destination location in: '+dests.join(', '));
+
+			}
+
+			el.innerHTML='Showing filter results for stories with '+filterLabels.join(' or ')
 
 		});
 
