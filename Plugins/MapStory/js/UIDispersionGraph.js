@@ -324,7 +324,7 @@ var UIDispersionData = (function(){
 
 			if(this._provinces){
 
-				var fullNames=Object.keys(this._provinces).filter(function(fullname){
+				var fullNames=Object.keys(this._provinces).filter(function(fullName){
 					return this._provinces[fullName]===code;
 				});
 
