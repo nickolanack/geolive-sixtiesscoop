@@ -15,6 +15,27 @@ var UIDispersionData = (function(){
 			})).addEvent("success", function(resp) {
 
 				me._data=resp.results;
+
+
+
+
+				var _name=function(data){
+			       if(me.getCountry(data.geocode)==='Canada'){
+			          me.getProvince(data.geocode);
+			       }
+			    };
+		
+			    me._data.forEach(function(res){
+			       
+			       _name(res.locationData);
+			       _name(res.nextLocationData);
+			      
+			    });
+
+
+
+
+
 				me._loaded=true;
 				me.fireEvent('load');
 
@@ -91,6 +112,32 @@ var UIDispersionData = (function(){
 
 		getCode: function(result) {
 			return this._getCode(result);
+		},
+
+		getCountry:function(locationData){
+			return locationData.address_components.filter(function(comp){
+	            return comp.types.indexOf('country')>=0
+	        }).shift().long_name;
+		},
+
+		getProvinceCode:function(locationData){
+			return locationData.address_components.filter(function(comp){
+	            return comp.types.indexOf('administrative_area_level_1')>=0
+	        }).shift().long_name;
+		},
+		
+		getProvince:function(locationData){
+			var p= locationData.address_components.filter(function(comp){
+	            return comp.types.indexOf('administrative_area_level_1')>=0
+	        }).shift();
+
+	        if(!this._provinces){
+				this._provinces={}
+			}
+	       
+	       this._provinces[p.long_name]=p.short_name;
+	       
+	       return p.long_name;
 		},
 
 		_getCode: function(result) {
@@ -313,6 +360,10 @@ var UIDispersionData = (function(){
 
         			    var countries={};
         			        
+        			    /*
+        			     * deprecated functions: use dispersion.getCountry, dispersion.getProvinceCode, dispersion.getProvince
+        			     */
+
         			    var _country=function(geo){
         			       return geo.address_components.filter(function(comp){
         			            return comp.types.indexOf('country')>=0
