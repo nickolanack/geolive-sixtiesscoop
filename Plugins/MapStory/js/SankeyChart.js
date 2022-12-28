@@ -758,6 +758,28 @@ var SankeyChart = (function() {
 			}
 		}));
 
+
+		var viewIndex = chart.appendChild(new Element('button', {
+			"class": "btn view-list hidden",
+			html: "View List",
+			events: {
+				click: function() {
+				
+				}
+			}
+		}));
+
+
+		var viewMap = chart.appendChild(new Element('button', {
+			"class": "btn view-map hidden",
+			html: "View Map",
+			events: {
+				click: function() {
+				
+				}
+			}
+		}));
+
 		sankey.on('selectionChanged', function(selection) {
 
 
@@ -766,10 +788,14 @@ var SankeyChart = (function() {
 				resultsLink.parentNode.removeChild(resultsLink);
 				resultsLink = null;
 				reset.addClass("hidden");
+				viewIndex.addClass("hidden");
+				viewMap.addClass("hidden");
 				return;
 			}
 
 			reset.removeClass("hidden");
+			viewIndex.removeClass("hidden");
+			viewMap.removeClass("hidden");
 
 			if (!resultsLink) {
 				resultsLink = chart.appendChild(new Element('span', {
