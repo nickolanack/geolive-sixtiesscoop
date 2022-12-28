@@ -744,8 +744,8 @@ var SankeyChart = (function() {
 
 	SankeyChart.FilterLabelFromUrl = function() {
 
-		var sources=window.location.pathname.split('source-').pop().split('/').shift().split('-');
-		var dests=window.location.pathname.split('dext-').pop().split('/').shift().split('-');
+		var sources=window.location.pathname.split('source-').pop().split('/').shift().split('-').filter(function(a){ return a&&a!=''; });
+		var dests=window.location.pathname.split('dest-').pop().split('/').shift().split('-').filter(function(a){ return a&&a!=''; });
 		
 		if(sources.length==0&&dests.length==0){
 			return null;
