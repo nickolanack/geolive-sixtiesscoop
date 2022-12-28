@@ -757,7 +757,11 @@ var SankeyChart = (function() {
 
 		UIDispersionData.Get(function(){
 
-			el.innerHTML='Showing filter results for stories with location origin '+sources.join(', ')+' and location destination '+dests.join(', ');
+			el.innerHTML='Showing filter results for stories with location origin '+sources.map(function(code){
+				return UIDispersionData.Get().getProvinceNameForCode(code);
+			}).join(', ')+' or location destination '+dests.map(function(code){
+				return UIDispersionData.Get().getProvinceNameForCode(code);
+			}).join(', ');
 
 		});
 
