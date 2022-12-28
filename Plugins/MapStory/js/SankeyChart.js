@@ -759,12 +759,16 @@ var SankeyChart = (function() {
 		}));
 
 
+		var mapLink='';
+		var resultsLink=;
+
+
 		var viewIndex = chart.appendChild(new Element('button', {
 			"class": "btn view-list hidden",
-			html: "View List",
+			html: "View Results",
 			events: {
 				click: function() {
-				
+					window.location=resultsLink;
 				}
 			}
 		}));
@@ -775,7 +779,7 @@ var SankeyChart = (function() {
 			html: "View Map",
 			events: {
 				click: function() {
-				
+					window.location=mapLink;
 				}
 			}
 		}));
@@ -838,10 +842,13 @@ var SankeyChart = (function() {
 				str.push("Selected destination province" + (dests.length === 1 ? "" : "s") + ": " + dests.map(toStrong).join(", ") + "");
 			}
 
+			mapLink='/map/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests);
+			resultsLink='/story-index/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests);
+
 			resultsLink.innerHTML = '<p>' + str.join("; ") + '<br/>' +
-				'<a href="/map/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests) + '"><strong>View selection on the map</strong></a>' +
+				'<a href="' + mapLink + '"><strong>View selection on the map</strong></a>' +
 				'<br/>' +
-				'<a href="/story-index/filter-any' + toCodeStubs('/source-', sources) + toCodeStubs('/dest-', dests) + '"><strong>List stories</strong></a></p>';
+				'<a href="' + resultsLink + '"><strong>List stories</strong></a></p>';
 
 		});
 
