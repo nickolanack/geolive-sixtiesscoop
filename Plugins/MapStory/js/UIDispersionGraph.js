@@ -125,7 +125,7 @@ var UIDispersionData = (function(){
 	            return comp.types.indexOf('administrative_area_level_1')>=0
 	        }).shift().long_name;
 		},
-		
+
 		getProvince:function(locationData){
 			var p= locationData.address_components.filter(function(comp){
 	            return comp.types.indexOf('administrative_area_level_1')>=0
@@ -324,8 +324,9 @@ var UIDispersionData = (function(){
 
 			if(this._provinces){
 
+				var me=this;
 				var fullNames=Object.keys(this._provinces).filter(function(fullName){
-					return this._provinces[fullName]===code;
+					return me._provinces[fullName]===code;
 				});
 
 				if(fullNames.length>0){
