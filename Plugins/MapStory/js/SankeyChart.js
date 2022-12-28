@@ -742,6 +742,16 @@ var SankeyChart = (function() {
 	});
 
 
+	SankeyChart.FilterLabelFromUrl = function() {
+
+		console.log('parse url');
+		return '';
+
+
+
+	};
+
+
 	SankeyChart.AddFilterLinks = function(sankey) {
 
 
