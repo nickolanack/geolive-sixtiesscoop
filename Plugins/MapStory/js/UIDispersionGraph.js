@@ -273,6 +273,22 @@ var UIDispersionData = (function(){
 
 		},
 
+		getProvinceNameForCode:function(code){
+
+			if(this._provinces){
+
+				var fullNames=Object.keys(this._provinces).filter(function(fullname){
+					return this._provinces[fullName]===code;
+				});
+
+				if(fullNames.length>0){
+					return fullNames.shift();
+				}
+			}
+			return code;
+
+		},
+
 
 		getCordDiagramMatrix:function(){
 

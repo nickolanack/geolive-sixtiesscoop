@@ -744,10 +744,24 @@ var SankeyChart = (function() {
 
 	SankeyChart.FilterLabelFromUrl = function() {
 
-		console.log('parse url');
-		return '';
+		var sources=window.location.pathname.split('source-').pop().split('/').shift().split('-');
+		var dests=window.location.pathname.split('dext-').pop().split('/').shift().split('-');
+		
+		if(sources.length==0&&dests.length==0){
+			return null;
+		}
 
 
+		var el=new Element('span');
+
+
+		UIDispersionData.Get(function(){
+
+			el.innerHTML='Showing filter results for stories with location origin '+sources.join(', ')+' and location destination '+dests.join(', ');
+
+		});
+
+		return el;
 
 	};
 
