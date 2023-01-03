@@ -98,7 +98,8 @@ var StoryFilter=(function(){
 			if(sources.length>0||dests.length>0){
 				this._hasFilter=true;
 
-				var storyUsers=[];
+				this._filterStoryUsers=[];
+				var me=this
 
 				this._initFilter=function(cb){
 
@@ -111,7 +112,7 @@ var StoryFilter=(function(){
 						}
 					})).addEvent("success", function(resp) {
 
-						storyUsers=resp.results;
+						me._filterStoryUsers=resp.results;
 						cb();
 
 					}).addEvent("failure", function(resp) {
@@ -133,7 +134,7 @@ var StoryFilter=(function(){
 
 					return result.features.filter(function(feature){
 
-						return storyUsers.indexOf(parseInt(feature.uid))>=0;
+						return me._filterStoryUsers.indexOf(parseInt(feature.uid))>=0;
 
 					}).length>0; //if any feature in story passes filter, return story
 
@@ -159,6 +160,14 @@ var StoryFilter=(function(){
 			}
 
 			cb(list);
+		},
+
+		getFilterResults:function(cb){
+			var me=this;
+			this._initFilter(function(){
+				cb(me._filterStoryUsers);
+			});
+
 		}
 
 

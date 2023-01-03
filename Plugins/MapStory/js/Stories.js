@@ -855,6 +855,15 @@ var StoryMapController = new Class({
 
         var filter=(new StoryFilter()).fromUrl();
 
+
+        if(filter.hasFilter()){
+            filter.getFilterResults(function(results){
+
+                
+
+            });
+        }
+
         map.getLayerManager().getLayers().forEach(function(layer) {
 
             layer.runOnceOnLoad(function() {
