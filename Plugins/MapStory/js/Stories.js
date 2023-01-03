@@ -886,7 +886,7 @@ var StoryMapController = new Class({
                 if(filterUsers.length>0){
                     if(item.tags.data){
                         var data=item.tags.data;
-                        if(typeof data==string&&data[0]==='{'){
+                        if(typeof data=='string'&&data[0]==='{'){
                             data=JSON.parse(data);
                         }
 
