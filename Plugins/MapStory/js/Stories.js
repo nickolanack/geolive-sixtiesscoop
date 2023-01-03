@@ -856,10 +856,11 @@ var StoryMapController = new Class({
         var filter=(new StoryFilter()).fromUrl();
 
 
+        var filterUsers=null;
         if(filter.hasFilter()){
             filter.getFilterResults(function(results){
 
-                
+                filterUsers=results;
 
             });
         }
@@ -880,7 +881,10 @@ var StoryMapController = new Class({
         });
         map.getLayerManager().addEvent('addLayer', function(layer) {
 
+            layer.addParserFilter(function(){
 
+                return true;
+            });
 
             layer.runOnceOnLoad(function() {
                 layer.getItems().forEach(function(marker) {
