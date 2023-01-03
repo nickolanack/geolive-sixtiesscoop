@@ -883,7 +883,7 @@ var StoryMapController = new Class({
 
             layer.addParserFilter(function(item){
 
-                if(filterUsers.length>0){
+                if(filterUsers&&filterUsers.length>0){
                     if(item.tags.data){
                         var data=item.tags.data;
                         if(typeof data=='string'&&data[0]==='{'){
