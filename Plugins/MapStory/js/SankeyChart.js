@@ -738,7 +738,6 @@ var SankeyChart = (function() {
 		}
 
 
-
 	});
 
 
