@@ -8,7 +8,7 @@ try{
 }
 
 try{
-    itemList.concat(item.getJourneyStories());
+    itemList=itemList.concat(item.getJourneyStories());
 }catch(e){
     
 }
