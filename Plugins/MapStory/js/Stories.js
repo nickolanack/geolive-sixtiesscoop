@@ -881,7 +881,23 @@ var StoryMapController = new Class({
         });
         map.getLayerManager().addEvent('addLayer', function(layer) {
 
-            layer.addParserFilter(function(){
+            layer.addParserFilter(function(item){
+
+                if(filterUsers.length>0){
+                    if(item.tags.data){
+                        var data=item.tags.data;
+                        if(typeof data==string&&data[0]==='{'){
+                            data=JSON.parse(data);
+                        }
+
+                        if(filterUsers.indexOf(parseInt(data.storyAttributes.storyUser))>=0){
+                            return true;
+                        }
+
+                    }
+                    return false;
+                }
+
 
                 return true;
             });
