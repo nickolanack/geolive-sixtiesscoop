@@ -107,7 +107,7 @@ if(AppClient.getUserType()==="guest"){
 }
 
  
-if(AppClient.getUserType()!=="admin"){
+if(!(AppClient.getUserType()=="admin"||item.getUserId()==AppClient.getId())){
     return; 
 }
     
