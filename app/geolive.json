@@ -6800,7 +6800,7 @@
                                     "getItemListScript": "storyPageContent.metadata.positions.content.modules.4.config.getItemListScript.js",
                                     "formatItemListScript": "return list;",
                                     "formatListItemModuleScript": "storyPageContent.metadata.positions.content.modules.4.config.formatListItemModuleScript.js",
-                                    "emptyNamedView": "emptyListView",
+                                    "emptyNamedView": "",
                                     "filterItemsScript": "return true;",
                                     "sortItemsScript": "",
                                     "maxItems": "-1"
