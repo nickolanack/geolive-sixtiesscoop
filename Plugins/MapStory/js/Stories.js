@@ -761,8 +761,8 @@ var StoryMapController = new Class({
 
 
         me.getApp(function(app) {
-            app.getDisplayConroller().display('sidePanelDetail', AppClient, sidePanelViewer, function(){    
-                
+            app.getDisplayController().display('sidePanelDetail', AppClient, sidePanelViewer, function(){    
+               
             });
         });
 
