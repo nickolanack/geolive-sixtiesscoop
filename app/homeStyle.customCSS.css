@@ -718,6 +718,7 @@ $introTextColor:#4d8673;
         font-size: 16px;
         padding: 6px 12px;
         float: left;
+        font-weight:400;
         
         &.hidden {
             visibility: hidden;
