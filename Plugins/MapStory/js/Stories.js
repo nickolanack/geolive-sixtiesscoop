@@ -479,7 +479,9 @@ var StoryMapController = new Class({
             }
             sidePanelTipTimeout = null;
             var toggle = $$(selector)[0];
-            toggle.removeClass('just-closed');
+            if(toggle){
+                toggle.removeClass('just-closed');
+            }
         }
 
 
