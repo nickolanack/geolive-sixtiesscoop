@@ -683,7 +683,7 @@ $introTextColor:#4d8673;
         
     }
     
-    .form-navigation-btns button, button.form-btn, .pagination-item button, .sankey-diagram button{
+    .form-navigation-btns button, button.form-btn, .pagination-item button, .sankey-diagram button, a.btn.view-map{
             display: inline-block;
             padding: 10px 20px;
             background-color: $buttonColor;
@@ -713,7 +713,7 @@ $introTextColor:#4d8673;
     }
     
     
-    .sankey-diagram button{
+    .sankey-diagram button, a.btn.view-map{
         
         font-size: 16px;
         padding: 6px 12px;
