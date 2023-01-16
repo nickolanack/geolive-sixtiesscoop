@@ -103,12 +103,12 @@ var links= [
 
 
 if(AppClient.getUserType()==="guest"){
-    return;
+    return null;
 }
 
  
 if(!(AppClient.getUserType()=="admin"||item.getUserId()==AppClient.getId())){
-    return; 
+    return null; 
 }
     
     
