@@ -7099,7 +7099,8 @@
                                     "getAggregatorsScript": "searchPageContent.metadata.positions.content.modules.1.config.getAggregatorsScript.js",
                                     "searchOptions": "{\n    \"focusResultsDisplay\":false\n}",
                                     "formatSearchModuleScript": "searchPageContent.metadata.positions.content.modules.1.config.formatSearchModuleScript.js",
-                                    "placeholder": "Search names, places and years"
+                                    "placeholder": "Search names, places and years",
+                                    "identifier": "searchBar"
                                 }
                             },
                             {

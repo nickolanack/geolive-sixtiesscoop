@@ -7,7 +7,7 @@ var SearchAggregator = new Class({
     initialize: function(search, options) {
         var me = this;
         this.parent(search, Object.append({
-
+            maxResults: 10,
             PreviousTemplate: UIListAggregator.PreviousTemplate,
             MoreTemplate: UIListAggregator.MoreTemplate,
             ResultTemplate: UIListAggregator.NamedViewTemplate(application, {
