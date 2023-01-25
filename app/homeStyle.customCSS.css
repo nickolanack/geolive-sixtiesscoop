@@ -1135,6 +1135,20 @@ button.inline-edit {
             background-size: cover;
             background-position: center;
         }
+        
+        
+        .video h2 {
+            position: absolute;
+            bottom: 0;
+            white-space: nowrap;
+            left: 8px;
+            width: 75%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
     }
     
     
