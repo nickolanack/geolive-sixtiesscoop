@@ -4385,10 +4385,18 @@
                         "modules": [
                             "sidePanelInfoDetail.metadata.positions.content.modules.0.json",
                             {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "return item.getMediaElement();",
+                                    "description": "Info about my custom script"
+                                }
+                            },
+                            {
                                 "type": "FormattedText",
                                 "config": {
-                                    "textValueScript": "sidePanelInfoDetail.metadata.positions.content.modules.1.config.textValueScript.js",
-                                    "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.1.config.formatModuleScript.js",
+                                    "textValueScript": "sidePanelInfoDetail.metadata.positions.content.modules.2.config.textValueScript.js",
+                                    "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.2.config.formatModuleScript.js",
                                     "className": "description-field",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
@@ -4442,7 +4450,7 @@
                                 "type": "FormattedText",
                                 "config": {
                                     "textValueScript": "return item.getYear();",
-                                    "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.3.config.formatModuleScript.js",
+                                    "formatModuleScript": "sidePanelInfoDetail.metadata.positions.content.modules.4.config.formatModuleScript.js",
                                     "className": "item-year",
                                     "imageWidth": 300,
                                     "imageHeight": 240,
@@ -4469,11 +4477,15 @@
                                 "type": "Template",
                                 "config": {
                                     "className": "icon",
+                                    "elementType": "span",
+                                    "elementOptions": "{}",
                                     "text": "icon",
                                     "template": "",
+                                    "templateNamespace": "",
                                     "templateVariablesScript": "",
                                     "formatTextScript": "",
                                     "formatVariablesScript": "",
+                                    "requestTemplateScript": "defaultBehaviour();",
                                     "ajaxRequestTemplate": false,
                                     "namedFormView": "",
                                     "formOptions": "{}",
@@ -4511,7 +4523,7 @@
                                 "type": "WizardScriptElement",
                                 "config": {
                                     "name": "My Custom Script",
-                                    "script": "sidePanelInfoDetail.metadata.positions.content.modules.6.config.script.js",
+                                    "script": "sidePanelInfoDetail.metadata.positions.content.modules.7.config.script.js",
                                     "description": "Info about my custom script"
                                 }
                             }
