@@ -1117,6 +1117,27 @@ button.inline-edit {
             content: "\0f104";
         }
     }
+    
+    
+    .featured-story .media-container {
+        position: relative;
+    
+    
+         .video svg {
+            position: relative;
+            transform: scale(.3);
+        }
+        
+         .video {
+            display: inline-block;
+            width: 100%;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    
 }
 
 
