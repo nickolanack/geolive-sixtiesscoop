@@ -6557,9 +6557,19 @@
                         "modules": [
                             "featuredStory.metadata.positions.content.modules.0.json",
                             {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "featuredStory.metadata.positions.content.modules.1.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
+                            },
+                            {
                                 "type": "UIView",
                                 "config": {
                                     "className": "",
+                                    "elementType": "div",
+                                    "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
                                     "namedView": "sidePanelInfoDetail",
@@ -6572,8 +6582,8 @@
                                     "deleteItemScript": "defaultBehaviorFn()",
                                     "initModuleScript": "",
                                     "formatModuleScript": "\n",
-                                    "resolveItemScript": "featuredStory.metadata.positions.content.modules.1.config.resolveItemScript.js",
-                                    "filterModulesScript": "featuredStory.metadata.positions.content.modules.1.config.filterModulesScript.js",
+                                    "resolveItemScript": "featuredStory.metadata.positions.content.modules.2.config.resolveItemScript.js",
+                                    "filterModulesScript": "featuredStory.metadata.positions.content.modules.2.config.filterModulesScript.js",
                                     "itemButtonsScript": "return [];",
                                     "insertAtTop": false,
                                     "targetName": ""
