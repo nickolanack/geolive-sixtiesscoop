@@ -338,7 +338,7 @@ var StoryUser = new Class({
 		});
 
 		return el;
-	}
+	},
 
 	getFirstJourneyStory: function() {
 		var me = this;
