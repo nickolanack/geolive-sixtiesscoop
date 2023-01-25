@@ -3,11 +3,11 @@
     "config": {
         "className": "",
         "elementType": "div",
-        "elementOptions": {},
+        "elementOptions": "{}",
         "identifier": "",
         "viewType": "view",
         "namedView": "placeholderLabelItem",
-        "shouldRender": true,
+        "shouldRender": false,
         "namedViewScript": "return namedView",
         "showInlineEdit": false,
         "namedFormView": "defaultView",
