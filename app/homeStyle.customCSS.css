@@ -1149,6 +1149,21 @@ button.inline-edit {
             font-size: 12px;
             font-weight: bold;
         }
+        
+        .image {
+            width: 100%;
+            height: 120px;
+            display: inline-block;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        &.has-img.has-video .image {
+            display:none;
+        }
+        
+        
+        
     }
     
     
