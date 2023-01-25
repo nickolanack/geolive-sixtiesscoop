@@ -6736,7 +6736,7 @@
                                 "type": "WizardScriptElement",
                                 "config": {
                                     "name": "My Custom Script",
-                                    "script": "storyPageContent.metadata.positions.content.modules.2.config.script.js",
+                                    "script": "return item.getMediaElement();",
                                     "description": "Info about my custom script"
                                 }
                             },
