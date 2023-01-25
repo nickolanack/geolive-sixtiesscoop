@@ -563,7 +563,7 @@ $introTextColor:#4d8673;
     }
     
     .ui-list-view.banner-btns {
-        text-align:right;
+        /* text-align: right; */
     }
 
 
