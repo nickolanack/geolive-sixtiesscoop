@@ -588,7 +588,7 @@ span.array-module.ui-list-view.story-list {
     cursor: pointer;
 }
 .profile-section  .primary-btn, .sort-card button, 
-.module-wizard .form-btn.register, .contact-btn, .upload-btns span.video:after, .upload-btns span.image:after, .clear.primary-btn{
+.module-wizard .form-btn.register, .contact-btn, .profile-link, .upload-btns span.video:after, .upload-btns span.image:after, .clear.primary-btn{
     background-color: #549ae6;
     border: none;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -602,10 +602,14 @@ span.array-module.ui-list-view.story-list {
     border-radius:3px;
 }
 
-.contact-btn{
-        padding: 10px 15px;
+.contact-btn, .profile-link{
+    padding: 10px 15px;
     font-size: unset;
     cursor:pointer;
+}
+
+.contact-btn, .profile-link{
+    
 }
 
 .flow-left {
