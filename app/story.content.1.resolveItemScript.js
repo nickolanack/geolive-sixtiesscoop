@@ -43,9 +43,12 @@ query.addEvent("success", function(storyResp) {
                              callback(new StoryUser(storyResp));
                              return;
                         }
+                       
+                       var entry=userResp.values[0].entries[0];
+                       entry.id=storyResp.user.id;
                       
                        callback(new StoryUser(ObjectAppend_(storyResp, {
-                            user:userResp.values[0].entries[0]
+                            user:entry
                         })));
                        
                     
