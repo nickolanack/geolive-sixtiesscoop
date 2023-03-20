@@ -68,7 +68,14 @@ var links= [
     }), 
     new MockDataTypeItem({name:"Contact", "className":"contact", click:function(){
         
-        
+        if(AppClient.getUserType()==="guest"){
+            (new UIModalDialog(application, AppClient, {
+                template: "form",
+                closable:true,
+                formName: "loginFormView"
+            })).show();
+            return;
+        }
      
         
         (new UIModalDialog(
