@@ -73,7 +73,7 @@ var links= [
         
         (new UIModalDialog(
 			application, 
-			AppClient, 
+			new UserContact(item), 
 			{
 				"formName": 'contactUserForm',
 				"formOptions": {
