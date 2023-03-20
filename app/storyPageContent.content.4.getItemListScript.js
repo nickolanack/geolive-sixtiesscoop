@@ -70,7 +70,7 @@ var links= [
         
         if(AppClient.getUserType()==="guest"){
             (new UIModalDialog(application, AppClient, {
-                formName: "loginFormView"
+                formName: "loginFormView",
                 formOptions:{
                     closable:true,
 					template: "form"
