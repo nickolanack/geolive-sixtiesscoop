@@ -14,7 +14,7 @@
         "beforeRenderModuleScript": "",
         "onRenderTextFieldScript": "inputElement.disabled=true; ",
         "formatValueScript": "",
-        "getValueScript": " try{\n    return item.options.metadata.email\n  }catch(e){\n     console.warn(e);\n     return 'unknown';\n }",
+        "getValueScript": " try{\n     if(item.getType()==='user'&&item.getId()==AppClient.getId()){\n         return AppClient.options.metadata.email;\n     }\n     \n    return item.options.metadata.email\n  }catch(e){\n     console.warn(e);\n     return 'unknown';\n }",
         "updateValueScript": " object.value=value ",
         "submitValueScript": "",
         "validateValueScript": " return defaultValidationFn() "
