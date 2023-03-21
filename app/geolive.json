@@ -9080,7 +9080,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "",
+            "contentTemplate": "module-removalPolicy-html-text.contentTemplate.html",
             "readAccess": "public"
         }
     }
