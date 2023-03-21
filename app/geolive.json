@@ -8958,7 +8958,7 @@
                                     "elementOptions": "{}",
                                     "identifier": "",
                                     "viewType": "view",
-                                    "namedView": "privacyPageContent",
+                                    "namedView": "removalPageContent",
                                     "shouldRender": true,
                                     "namedViewScript": "return namedView",
                                     "showInlineEdit": false,
