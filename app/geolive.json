@@ -8941,10 +8941,81 @@
             "formatModulesScript": "",
             "notifyViewer": false,
             "useRemote": "",
-            "saveViewAsData": false
+            "saveViewAsData": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "widget.DetailView.141.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "UIView",
+                                "config": []
+                            },
+                            {
+                                "type": "UIView",
+                                "config": {
+                                    "className": "page-header",
+                                    "elementType": "div",
+                                    "elementOptions": [],
+                                    "identifier": "",
+                                    "viewType": "view",
+                                    "namedView": "headerMenuContent",
+                                    "shouldRender": true,
+                                    "namedViewScript": "return namedView",
+                                    "showInlineEdit": false,
+                                    "namedFormView": "defaultView",
+                                    "formOptions": "\"{}\"",
+                                    "showDeleteButton": false,
+                                    "deleteItemScript": "defaultBehaviorFn()",
+                                    "initModuleScript": "",
+                                    "formatModuleScript": "",
+                                    "resolveItemScript": "return item",
+                                    "filterModulesScript": "return list",
+                                    "itemButtonsScript": "return [];",
+                                    "insertAtTop": false,
+                                    "targetName": ""
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
         }
     },
     "widget.142": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "templateName": "{target}",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "useRemote": "",
+            "saveViewAsData": false
+        }
+    },
+    "widget.143": {
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
