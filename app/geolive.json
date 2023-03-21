@@ -9035,17 +9035,9 @@
             "useRemote": "",
             "saveViewAsData": false,
             "metadata": {
-                "positionList": [
-                    "title",
-                    "content",
-                    "footer",
-                    "menu"
-                ],
                 "positions": {
                     "title": {
-                        "modules": [
-                            "removalPageContent.metadata.positions.title.modules.0.json"
-                        ]
+                        "modules": []
                     },
                     "content": {
                         "modules": [
@@ -9053,14 +9045,19 @@
                         ]
                     },
                     "footer": {
-                        "modules": [
-                            "removalPageContent.metadata.positions.footer.modules.0.json"
-                        ]
+                        "modules": []
                     },
                     "menu": {
                         "modules": []
                     }
-                }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
             },
             "readAccess": "public"
         }
