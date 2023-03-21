@@ -8942,7 +8942,7 @@
             "widgetTitle": "removal",
             "target": "removal",
             "templateName": "removal",
-            "requireTarget": true,
+            "requireTarget": false,
             "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
@@ -9067,6 +9067,20 @@
                 "_diagramState": []
             },
             "readAccess": "public"
+        }
+    },
+    "widget.144": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "module.removalPolicy-html.text",
+            "target": "module.removalPolicy-html.text",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
+            "contentTemplate": null
         }
     }
 }
