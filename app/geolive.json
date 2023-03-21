@@ -252,6 +252,13 @@
                     "widget": "privacy"
                 },
                 {
+                    "name": "removal",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "removal"
+                },
+                {
                     "name": "dnakit",
                     "view": "plugin",
                     "plugin": "UserInterface",
