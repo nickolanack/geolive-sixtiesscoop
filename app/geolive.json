@@ -13,7 +13,7 @@
         "name": "Email",
         "instance": "Email",
         "parameters": {
-            "fromEmail": "sixties.scoop.survivors@gmail.com",
+            "fromEmail": "geolivemap.ca+sixtiesscoop@gmail.com",
             "fromEmailName": "Sixties Scoop Survivors Map",
             "useSmtp": true,
             "smtpHost": "smtp.gmail.com",
