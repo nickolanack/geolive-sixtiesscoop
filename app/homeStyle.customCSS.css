@@ -1529,7 +1529,7 @@ button.inline-edit {
         
         
         
-        .map-view-link, .small-video {
+        .map-view-link, .small-video, .icon-only {
             width: calc( 100% - 44px);
             line-height: 83px;
             height: 100px;
