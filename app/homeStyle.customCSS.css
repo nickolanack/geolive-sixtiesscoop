@@ -1600,6 +1600,7 @@ button.inline-edit {
         }
         
         .icon-only {
+            position: unset;
             &:before {
                 content:none;
             }
