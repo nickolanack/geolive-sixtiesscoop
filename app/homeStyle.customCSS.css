@@ -1599,6 +1599,11 @@ button.inline-edit {
             
         }
         
+        .small-video.icon-only {
+            &:before {
+                content:none;
+            }
+        }
         
         .small-video {
             position: unset;  
