@@ -1770,6 +1770,11 @@ button.inline-edit {
 
 .target-mainMap{
     
+    span.media-container.has-video.has-img {
+        overflow: hidden;
+        display: block;
+    }
+        
     .media-container.has-video>.video{
         height: 400px;
         display: block;
