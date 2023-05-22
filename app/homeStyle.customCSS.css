@@ -1363,7 +1363,7 @@ button.inline-edit {
 
 
 
-.target-story, .target-storyIndex, .target-search, .target-mainMap{
+.target-story, .target-storyIndex, .target-search{
     
     
         
@@ -1767,6 +1767,51 @@ button.inline-edit {
     
     
 }
+
+.target-mainMap{
+    .small-video{
+        
+        .media-container.has-video > .video {
+            width: 150px;
+            height: 75px;
+            margin: 0;
+            left: -18px;
+            
+            
+            h2 {
+                white-space: nowrap;
+                font-size: 16.5px;
+                
+                display: block;
+                position: absolute;
+                top: 0px;
+                line-height: 51px;
+                left: 160px;
+                text-shadow: none;
+                color:#333333;
+            }
+            
+            
+            
+            svg{
+                width: 40px;
+                height: 30px;
+                top: calc(50% - 13px);
+                left: calc(50% - 20px);
+                opacity: 0.7;
+            }
+                
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+}
+
 
 .target-search{
 
