@@ -1599,7 +1599,7 @@ button.inline-edit {
             
         }
         
-        .small-video.icon-only {
+        .icon-only {
             &:before {
                 content:none;
             }
