@@ -1433,7 +1433,7 @@ button.inline-edit {
     }
 
 
-    .small-video{
+    .small-video, .icon-only{
         
         .media-container.has-video > .video {
             width: 150px;
@@ -1819,7 +1819,7 @@ button.inline-edit {
         }
     }
 
-    .small-video{
+    .small-video, .icon-only{
         
         .media-container.has-video > .video {
             width: 150px;
