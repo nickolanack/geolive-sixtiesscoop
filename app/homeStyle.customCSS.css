@@ -1769,6 +1769,51 @@ button.inline-edit {
 }
 
 .target-mainMap{
+    
+    .media-container.has-video>.video{
+        height: 400px;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        margin-left: 45px;
+        box-shadow: 0 0 3px rgb(0 0 0 / 30%);
+        filter: grayscale(0.4);
+        position: relative;
+        
+        border: 3px solid white;
+        
+        
+        h2 {
+            color: white;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            text-shadow: 0 0 3px #00000078, 0 0 5px #0000007a;
+        }
+        
+        
+        svg {
+            width: 70px;
+            position: absolute;
+            left: calc( 50% - 35px );
+            top: calc( 50% - 10px );
+            height: 50px;
+            transition: filter 0.1s;
+        }
+        
+        cursor:pointer;
+        
+        &:hover{
+            
+            filter: grayscale(0);
+            svg {
+                filter: hue-rotate(190deg);
+                transition: filter 1s;
+            }
+        }
+    }
+
     .small-video{
         
         .media-container.has-video > .video {
