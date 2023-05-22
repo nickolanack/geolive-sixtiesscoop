@@ -1,0 +1,1 @@
+return item.getMediaElement(['icon-only, small-video']);
