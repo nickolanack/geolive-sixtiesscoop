@@ -3,6 +3,9 @@
     "config": {
         "listClassName": "",
         "className": "",
+        "elementType": "div",
+        "elementOptions": "{}",
+        "identifier": "",
         "viewType": "view",
         "namedView": "sidePanelInfoDetail",
         "shouldRender": true,
@@ -21,7 +24,7 @@
         "targetName": "",
         "getItemListScript": "return ScoopStories.SidePanelStoryListItems(item)",
         "formatItemListScript": "return list;",
-        "formatListItemModuleScript": "\nif(item===child){\n     childView.getElement().addClass('active');\n}\n\nif(child.isBirthStory&&child.isBirthStory()){\n    childView.getElement().addClass('birth-card');\n    return;\n}\n\nif(child.isRepatriationStory&&child.isRepatriationStory()){\n    childView.getElement().addClass('repatriation-card');\n    return;\n}\n\n\n\nchildView.getElement().addClass('journey-card');",
+        "formatListItemModuleScript": "\nif(item===child){\n     childView.getElement().addClass('active');\n}else{\n    \n    if(child instanceof StoryCard){\n        childView.getElement().addClass('clickable');\n        childView.getElement().addEvent('click', function(){\n            \n            \n            \n        })\n    }\n}\n\n\n\nif(child.isBirthStory&&child.isBirthStory()){\n    childView.getElement().addClass('birth-card');\n    return;\n}\n\nif(child.isRepatriationStory&&child.isRepatriationStory()){\n    childView.getElement().addClass('repatriation-card');\n    return;\n}\n\n\n\nchildView.getElement().addClass('journey-card');",
         "emptyNamedView": "emptyListView",
         "filterItemsScript": "return true;",
         "sortItemsScript": "",
