@@ -43,7 +43,7 @@ if(is_numeric($url)){
     
     $description="";
     foreach($list as $feature){
-        if(strlen($feature->description))>strlen($description)){
+        if(strlen($feature->description)>strlen($description)){
             $descripion=$feature->description;
         }
     }
