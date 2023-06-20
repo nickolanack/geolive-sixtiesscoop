@@ -34,12 +34,15 @@ if(is_numeric($url)){
 		    array(
     		    'features'=>$list, 
     		    'story'=>$plugin->getUsersStoryMetadata($user), 
-    		    'user'=>$userData
+    		    'user'=>json_encode($userData)
     		    )
 		    ), 'og:data');
     
     \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'title');
     \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'og:title');
+    
+    
+    
 }
 
 // \HtmlDocument()->META($url, "title");
