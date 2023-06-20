@@ -41,8 +41,14 @@ if(is_numeric($url)){
     \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'title');
     \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'og:title');
     
-    
-    
+    $description="";
+    foreach($list as $feature){
+        if(strlen($feature->description))>strlen($description)){
+            $descripion=$feature->description;
+        }
+    }
+    \HtmlDocument()->META($description, 'description');
+    \HtmlDocument()->META($description, 'og:description');
 }
 
 // \HtmlDocument()->META($url, "title");
