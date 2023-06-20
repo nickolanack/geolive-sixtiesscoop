@@ -27,4 +27,4 @@ GetWidget('home')->renderDependencies($targetInstance);
 // <meta property="og:description"   content="Your description" />
 // <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 
-\HtmlDocument()->META("This story", "og:title");
+\HtmlDocument()->META("Blanks story", "title");
