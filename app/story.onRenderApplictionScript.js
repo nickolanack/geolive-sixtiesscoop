@@ -37,8 +37,8 @@ if(is_numeric($url)){
     		    )
 		    ), 'og:data');
     
-    \HtmlDocument()->META($user->name.' | Sixties Scoop Story', 'title');
-    \HtmlDocument()->META($user->name.' | Sixties Scoop Story', 'og:title');
+    \HtmlDocument()->META($user['name'].' | Sixties Scoop Story', 'title');
+    \HtmlDocument()->META($user['name'].' | Sixties Scoop Story', 'og:title');
 }
 
 // \HtmlDocument()->META($url, "title");
