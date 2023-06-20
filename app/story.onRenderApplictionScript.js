@@ -21,7 +21,7 @@ if(is_numeric($url)){
     
     $plugin=GetPlugin('MapStory');
     
-    $list=$plugin->getFeaturesMetadata($json->item);
+    $list=$plugin->getFeaturesMetadata($url);
 		$user=$list[0]['uid'];
 
 		if(!is_numeric($user)){
