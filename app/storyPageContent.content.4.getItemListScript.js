@@ -12,7 +12,9 @@ var links= [
         },
         formatModule:function(module){
             
-            (new SocialLinks()).linkElement(
+            (new SocialLinks({
+                fbid:"819950539309061"
+            })).linkElement(
                 module.getElement().appendChild(
                     new Element('a',{"class":"social-share fb-share", html:"Share on facebook", dataset:{
                         'share':"facebook"
