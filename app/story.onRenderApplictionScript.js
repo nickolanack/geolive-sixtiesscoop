@@ -23,6 +23,7 @@ if(is_numeric($url)){
     
     $list=$plugin->getFeaturesMetadata($url);
 		$user=$list[0]['uid'];
+		$userData=(is_numeric($user)?$plugin->getUsersMetadata($user):null);
 
 		if(!is_numeric($user)){
 
@@ -33,12 +34,12 @@ if(is_numeric($url)){
 		    array(
     		    'features'=>$list, 
     		    'story'=>$plugin->getUsersStoryMetadata($user), 
-    		    'user'=>(is_numeric($user)?$plugin->getUsersMetadata($user):null)
+    		    'user'=>$userData
     		    )
 		    ), 'og:data');
     
-    \HtmlDocument()->META($user['name'].' | Sixties Scoop Story', 'title');
-    \HtmlDocument()->META($user['name'].' | Sixties Scoop Story', 'og:title');
+    \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'title');
+    \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'og:title');
 }
 
 // \HtmlDocument()->META($url, "title");
