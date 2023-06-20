@@ -55,7 +55,10 @@ if(is_numeric($url)){
        return $s['attributes']['locationImages'];
    }, $story)));
     
-   \HtmlDocument()->META(json_encode($images), 'og:images');
+   if(count($images)>0){
+        \HtmlDocument()->META($images[0], 'og:image');
+   }
+  
     
 }
 
