@@ -51,9 +51,9 @@ if(is_numeric($url)){
     \HtmlDocument()->META($description, 'og:description');
     
     
-   $images = (new \core\WebMedia(implode(' ', array_map(function($s){
+   $images = (new \core\WebMedia()->parseImageUrls(implode(' ', array_map(function($s){
        return $s->attributes->locationImages;
-   }, $story))))->parseImageUrls();
+   }, $story))));
     
    \HtmlDocument()->META(json_encode($images), 'og:images');
     
