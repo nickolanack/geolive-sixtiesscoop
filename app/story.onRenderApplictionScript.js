@@ -28,12 +28,12 @@ if(is_numeric($url)){
 		if(!is_numeric($user)){
 
 		}
-
+        $story=$plugin->getUsersStoryMetadata($user);
 		//features is for debug
 		\HtmlDocument()->META(json_encode(
 		    array(
     		    'features'=>$list, 
-    		    'story'=>$plugin->getUsersStoryMetadata($user), 
+    		    'story'=>$story, 
     		    'user'=>json_encode($userData)
     		    )
 		    ), 'og:data');
@@ -42,7 +42,7 @@ if(is_numeric($url)){
     \HtmlDocument()->META($userData['name'].' | Sixties Scoop Story', 'og:title');
     
     $description="";
-    foreach($list as $feature){
+    foreach($story as $feature){
         if(strlen($feature['description'])>strlen($description)){
             $description=$feature['description'];
         }
