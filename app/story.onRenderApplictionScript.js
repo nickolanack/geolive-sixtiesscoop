@@ -37,7 +37,7 @@ if(is_numeric($url)){
     		    )
 		    ), 'og:data');
     
-    
+    \HtmlDocument()->META($user->name.' | Sixtiesscoop Story', 'og:title');
 }
 
 // \HtmlDocument()->META($url, "title");
