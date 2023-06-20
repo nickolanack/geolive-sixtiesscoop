@@ -44,7 +44,7 @@ if(is_numeric($url)){
     $description="";
     foreach($list as $feature){
         if(strlen($feature['description'])>strlen($description)){
-            $descripion=$feature['description'];
+            $description=$feature['description'];
         }
     }
     \HtmlDocument()->META($description, 'description');
