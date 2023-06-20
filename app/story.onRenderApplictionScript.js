@@ -29,7 +29,13 @@ if(is_numeric($url)){
 		}
 
 		//features is for debug
-		array('features'=>$list, 'story'=>$plugin->getUsersStoryMetadata($user), 'user'=>(is_numeric($user)?$plugin->getUsersMetadata($user):null));
+		\HtmlDocument()->META(json_encode(
+		    array(
+    		    'features'=>$list, 
+    		    'story'=>$plugin->getUsersStoryMetadata($user), 
+    		    'user'=>(is_numeric($user)?$plugin->getUsersMetadata($user):null)
+    		    )
+		    ), 'og:data');
     
     
 }
