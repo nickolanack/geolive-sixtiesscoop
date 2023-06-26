@@ -1,3 +1,3 @@
 if(document.location.href.indexOf('featured')>0){
-    module.options.maxItems=6;
+    module.options.maxItems=12;
 }
