@@ -29,7 +29,7 @@
 	       };
 	       
 	       
-	       var limit=3;
+	       var limit=listModule.options.maxItems;
 	    
 	      response.value.slice(0,limit).forEach(function(featured, i){
 	           
