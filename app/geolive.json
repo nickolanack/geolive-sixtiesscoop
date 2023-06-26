@@ -6019,8 +6019,8 @@
                                 "config": {
                                     "className": "view-index-link",
                                     "elementType": "a",
-                                    "elementOptions": "{\n    \"href\":\"\/story-index\"\n}",
-                                    "text": "Index",
+                                    "elementOptions": "{\n    \"href\":\"\/featured\"\n}",
+                                    "text": "All Featured",
                                     "template": "",
                                     "templateNamespace": "",
                                     "templateVariablesScript": "",
