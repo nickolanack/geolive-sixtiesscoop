@@ -9198,5 +9198,18 @@
             },
             "readAccess": "public"
         }
+    },
+    "widget.146": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "Some Template",
+            "target": "none",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false
+        }
     }
 }
