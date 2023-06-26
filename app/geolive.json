@@ -295,6 +295,19 @@
                     "widget": "storySitemap",
                     "sitemap": true,
                     "format": "raw"
+                },
+                {
+                    "name": "featured",
+                    "view": "plugin",
+                    "plugin": "UserInterface",
+                    "pluginView": "widget",
+                    "widget": "featured",
+                    "--cachable": false,
+                    "metadata": {
+                        "title": "Sixties Scoop | Featured Stories",
+                        "description": ""
+                    },
+                    "robots.txt": true
                 }
             ],
             "useRemoteServerUI": false,
