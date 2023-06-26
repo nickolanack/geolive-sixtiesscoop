@@ -1086,7 +1086,7 @@ button.inline-edit {
     
 }
 
-.page-content .ui-view.featured-stories{
+.page-content .ui-view.featured-stories, .ui-view.featured-stories{{
     span.pagination-item.next, span.pagination-item.previous {
         position: absolute;
         right: -30px;
