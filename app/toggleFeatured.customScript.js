@@ -25,6 +25,7 @@ $featured=array_filter($featured, function($f)use($story, &$shouldRemove){
         $remove=true;
         return false;
     }
+    return true;
     
 });
 
