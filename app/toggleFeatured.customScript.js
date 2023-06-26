@@ -31,7 +31,7 @@ $featured=array_values(array_filter($featured, function($f)use($story, &$shouldR
     
     if($story['features'][0]['id']===$f->id){
         error_log('remove: '.$json->item);
-        $remove=true;
+        $shouldRemove=true;
         return false;
     }
     return true;
