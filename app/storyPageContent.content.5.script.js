@@ -9,8 +9,14 @@ var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!==
 		'widget': "toggleFeatured",
 		'item':item.getFirstStory().getId(),
 	})).addEvent('success',function(response){
-	    console.log(response);
+	    
+	    if(el.hasClass('active')){
+	        el.removeClass('active');
+	        return;
+	    }
+	    el.addClass('active');
 	}).execute(); 
+    
     
     
 }}});
