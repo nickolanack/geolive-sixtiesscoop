@@ -29,12 +29,12 @@ $featured=array_values(array_filter($featured, function($f)use($story, &$shouldR
     
 }));
 
-//if(!$shouldRemove){
+if(!$shouldRemove){
     $featured[]=(object)array(
         "id"=>$story['features'][0]['id'],
         "name"=>$story['user']['name']
     );
-//}
+}
 
 $config->updateConfigurationParameter('featured', $featured);
 return array_values($featured);
