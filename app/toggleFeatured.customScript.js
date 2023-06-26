@@ -24,9 +24,13 @@ $list=$plugin->getFeaturesMetadata($json->item);
 		    );
 		    
 $shouldRemove=false;	    
+
+error_log('check: '.$json->item);
+
 $featured=array_values(array_filter($featured, function($f)use($story, &$shouldRemove){
     
     if($story['features'][0]['id']===$f->id){
+        error_log('remove: '.$json->item);
         $remove=true;
         return false;
     }
