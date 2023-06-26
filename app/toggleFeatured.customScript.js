@@ -27,7 +27,7 @@ $shouldRemove=false;
 
 error_log('check: '.$json->item);
 
-$featured=array_values(array_filter($featured, function($f)use($story, &$shouldRemove){
+$featured=array_values(array_filter($featured, function($f)use($story, &$shouldRemove, $json){
     
     if($story['features'][0]['id']===$f->id){
         error_log('remove: '.$json->item);
@@ -39,6 +39,7 @@ $featured=array_values(array_filter($featured, function($f)use($story, &$shouldR
 }));
 
 if(!$shouldRemove){
+    error_log('add: '.$json->item);
     $featured[]=(object)array(
         "id"=>$story['features'][0]['id'],
         "name"=>$story['user']['name']
