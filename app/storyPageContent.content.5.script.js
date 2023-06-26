@@ -2,6 +2,12 @@
 var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':' clickable'), "click":function(){
     
     
+    (new AjaxControlQuery(CoreAjaxUrlRoot, "user_function", {
+		'widget': "toggleFeatured",
+		'item':item.id,
+	})).addEvent('success',function(response){
+	    console.log(response);
+	}).execute(); 
     
     
 }});
