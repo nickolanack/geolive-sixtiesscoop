@@ -9220,7 +9220,7 @@
         "parameters": {
             "widgetTitle": "toggleFeatured",
             "target": "toggleFeatured",
-            "customScript": "return true;",
+            "customScript": "toggleFeatured.customScript.js",
             "requireCSRF": true,
             "readAccess": "public"
         }
