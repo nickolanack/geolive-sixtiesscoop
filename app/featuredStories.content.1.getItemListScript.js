@@ -28,8 +28,10 @@
 	           }
 	       };
 	       
+	       
+	       var limit=3;
 	    
-	      response.value.slice(0,3).forEach(function(featured, i){
+	      response.value.slice(0,limit).forEach(function(featured, i){
 	           
 	           //if(data.name){
 	           //    data.name='##'+data.name;
@@ -59,7 +61,7 @@
 	       });
 	       
 	       
-	       response.value.slice(3).forEach(function(featured, i){
+	       response.value.slice(limit).forEach(function(featured, i){
 	           
 	           i=i+3;
 	           
