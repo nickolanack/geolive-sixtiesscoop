@@ -7,7 +7,7 @@ var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!==
     
     (new AjaxControlQuery(CoreAjaxUrlRoot, "user_function", {
 		'widget': "toggleFeatured",
-		'item':item.id,
+		'item':item.getFirstStory().getId(),
 	})).addEvent('success',function(response){
 	    console.log(response);
 	}).execute(); 
