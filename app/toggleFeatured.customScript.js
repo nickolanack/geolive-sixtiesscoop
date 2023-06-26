@@ -1,5 +1,7 @@
 
-//return GetConfig('featuredStoriesItems')->getConfigurationValue('featured');
+$featured=GetConfig('featuredStoriesItems')->getConfigurationValue('featured');
+
+
 
 $plugin=GetPlugin('MapStory');
 $list=$plugin->getFeaturesMetadata($json->item);
@@ -10,12 +12,23 @@ $list=$plugin->getFeaturesMetadata($json->item);
 		}
 
 		//features is for debug
-		return  array(
+		$story=  array(
 		    'features'=>$list, 
 		    'story'=>$plugin->getUsersStoryMetadata($user), 
 		    'user'=>(is_numeric($user)?$plugin->getUsersMetadata($user):null)
 		    );
+		    
+$shouldRemove=false;	    
+$featured=array_filter($featured, function()use($story, &$shouldRemove){
+    
+    if($story['features'][0]->id===$featured->id){
+        $remove=true;
+        return false;
+    }
+    
+})
 
+return array_values($featured);
 
 
 return true;
