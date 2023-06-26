@@ -2467,7 +2467,13 @@ a.ui-view,.template-content a{
     }
 }
 
-
+.ui-view.featured-stories .featured-story span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
 
 
 
