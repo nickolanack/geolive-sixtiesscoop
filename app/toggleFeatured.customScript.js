@@ -19,7 +19,7 @@ $list=$plugin->getFeaturesMetadata($json->item);
 		    );
 		    
 $shouldRemove=false;	    
-$featured=array_filter($f, function()use($story, &$shouldRemove){
+$featured=array_filter($featured, function($f)use($story, &$shouldRemove){
     
     if($story['features'][0]['id']===$f['id']){
         $remove=true;
