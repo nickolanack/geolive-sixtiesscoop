@@ -1,6 +1,9 @@
 
-var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':' clickable'), "click":function(){
+var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!=='admin'?' hidden':' clickable'), events:{"click":function(){
     
+    if(AppClient.getUserType()!=='admin'){
+        return;
+    }
     
     (new AjaxControlQuery(CoreAjaxUrlRoot, "user_function", {
 		'widget': "toggleFeatured",
@@ -10,7 +13,7 @@ var el=new Element('button',{"class":"featured-link"+(AppClient.getUserType()!==
 	}).execute(); 
     
     
-}});
+}}});
 
 
 var p = new UIPopover(el, {
