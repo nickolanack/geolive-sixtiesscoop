@@ -1,2 +1,3 @@
-console.log(module);
-console.log('test');
+if(document.location.href.indexOf('featured')>0){
+    module.options.maxItems=-1;
+}
