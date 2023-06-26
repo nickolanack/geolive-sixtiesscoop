@@ -37,6 +37,7 @@
 	           //    data.name='##'+data.name;
 	           //}
 	           
+	           featured.card=featured.card||1;
 	           count++;
 	           
                 (new AjaxControlQuery(CoreAjaxUrlRoot, "get_story_with_item", {
