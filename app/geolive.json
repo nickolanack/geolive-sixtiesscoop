@@ -9210,7 +9210,7 @@
             "convertStylesToInline": false,
             "parseMarkdown": true,
             "saveTemplateAsData": false,
-            "contentTemplate": "",
+            "contentTemplate": "## Featured Stories",
             "readAccess": "public"
         }
     }
