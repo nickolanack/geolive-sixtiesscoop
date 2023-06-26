@@ -10,7 +10,7 @@
         "templateVariablesScript": "{}",
         "formatTextScript": "",
         "formatVariablesScript": "",
-        "requestTemplateScript": "console.log('test');\ndefaultBehaviour();",
+        "requestTemplateScript": "if(document.location.href.indexOf('\/featured')>0){\n    options.widget=\"module.featuredTextPage.text\";\n}\ndefaultBehaviour();",
         "ajaxRequestTemplate": true,
         "namedFormView": "genericParametersForm",
         "formOptions": "{}",
