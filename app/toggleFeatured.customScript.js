@@ -1,5 +1,5 @@
-
-$featured=GetConfig('featuredStoriesItems')->getConfigurationValue('featured');
+$config=GetConfig('featuredStoriesItems');
+$featured=$config->getConfigurationValue('featured');
 
 
 
@@ -36,6 +36,7 @@ $featured=array_filter($featured, function($f)use($story, &$shouldRemove){
     );
 //}
 
+$config->updateConfigurationParameter('featured', $featured);
 return array_values($featured);
 
 
