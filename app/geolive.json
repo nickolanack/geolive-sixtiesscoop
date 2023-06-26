@@ -5979,7 +5979,7 @@
                                     "formOptions": "\"{}\"",
                                     "showDeleteButton": false,
                                     "deleteItemScript": "defaultBehaviorFn()",
-                                    "initModuleScript": "",
+                                    "initModuleScript": "featuredStories.metadata.positions.content.modules.1.config.initModuleScript.js",
                                     "formatModuleScript": "",
                                     "resolveItemScript": "return item;",
                                     "filterModulesScript": "return list",
