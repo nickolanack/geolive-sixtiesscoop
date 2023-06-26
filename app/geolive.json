@@ -9203,13 +9203,15 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "widgetTitle": "Some Template",
-            "target": "none",
+            "widgetTitle": "module.featuredTextPage.text",
+            "target": "module.featuredTextPage.text",
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
-            "saveTemplateAsData": false
+            "saveTemplateAsData": false,
+            "contentTemplate": "",
+            "readAccess": "public"
         }
     }
 }
