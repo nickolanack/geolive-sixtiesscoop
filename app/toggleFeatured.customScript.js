@@ -1,3 +1,8 @@
+
+if(!Auth('memberof', 'special', 'group')){
+    return false;
+}
+
 $config=GetConfig('featuredStoriesItems');
 $featured=$config->getConfigurationValue('featured');
 
