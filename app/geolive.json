@@ -6017,20 +6017,20 @@
                             {
                                 "type": "Template",
                                 "config": {
-                                    "className": "",
-                                    "elementType": "span",
-                                    "elementOptions": "{}",
-                                    "text": "#Featured Stories\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                                    "template": "featuredText",
+                                    "className": "view-index-link",
+                                    "elementType": "a",
+                                    "elementOptions": "{\n    \"href\":\"\/story-index\"\n}",
+                                    "text": "Index",
+                                    "template": "",
                                     "templateNamespace": "",
-                                    "templateVariablesScript": "{}",
-                                    "formatTextScript": "",
+                                    "templateVariablesScript": "",
+                                    "formatTextScript": "featuredStories.metadata.positions.content.modules.3.config.formatTextScript.js",
                                     "formatVariablesScript": "",
-                                    "requestTemplateScript": "featuredStories.metadata.positions.content.modules.3.config.requestTemplateScript.html",
-                                    "ajaxRequestTemplate": true,
-                                    "namedFormView": "genericParametersForm",
+                                    "requestTemplateScript": "defaultBehaviour();",
+                                    "ajaxRequestTemplate": false,
+                                    "namedFormView": "",
                                     "formOptions": "{}",
-                                    "identifier": "htmlLabel"
+                                    "identifier": "stories-index-link"
                                 }
                             }
                         ]
