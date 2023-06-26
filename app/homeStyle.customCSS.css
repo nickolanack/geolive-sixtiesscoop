@@ -944,7 +944,7 @@ button.inline-edit {
 
 
 
-.page-content .ui-view.featured-stories .ui-view.featured-story, .intro-section .ui-view.featured-item {
+.page-content .ui-view.featured-stories .ui-view.featured-story, .ui-view.featured-stories .ui-view.featured-story, .intro-section .ui-view.featured-item {
     
     min-width: 250px;
     
