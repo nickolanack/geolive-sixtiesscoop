@@ -9213,5 +9213,15 @@
             "contentTemplate": "# Featured Stories",
             "readAccess": "public"
         }
+    },
+    "widget.147": {
+        "name": "Ajax Method",
+        "instance": "AjaxMethod",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "customScript": "return true;",
+            "requireCSRF": true
+        }
     }
 }
