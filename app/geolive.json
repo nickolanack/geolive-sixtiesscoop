@@ -9218,10 +9218,11 @@
         "name": "Ajax Method",
         "instance": "AjaxMethod",
         "parameters": {
-            "widgetTitle": "",
-            "target": "none",
+            "widgetTitle": "toggleFeatured",
+            "target": "toggleFeatured",
             "customScript": "return true;",
-            "requireCSRF": true
+            "requireCSRF": true,
+            "readAccess": "public"
         }
     }
 }
