@@ -26,7 +26,7 @@ $featured=array_filter($featured, function()use($story, &$shouldRemove){
         return false;
     }
     
-})
+});
 
 return array_values($featured);
 
