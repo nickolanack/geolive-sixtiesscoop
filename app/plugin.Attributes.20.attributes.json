@@ -868,7 +868,7 @@
                     "label": "movesOutOfCountry",
                     "description": "",
                     "fieldType": "boolean",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldBooleanOptions": {
@@ -886,11 +886,11 @@
                     "tableId": "2",
                     "tableName": "storyAttributes",
                     "tableSuffix": "_2497",
-                    "title": "hasVideos",
-                    "label": "Has Videos",
+                    "title": "hasStoryVideos",
+                    "label": "hasStoryVideos",
                     "description": "",
                     "fieldType": "boolean",
-                    "color": "rgb(undefined, undefined, undefined)",
+                    "color": "rgb(NaN, NaN, NaN)",
                     "searchability": "public",
                     "editability": "registered",
                     "fieldBooleanOptions": {

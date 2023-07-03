@@ -3094,7 +3094,7 @@
                         "label": "movesOutOfCountry",
                         "description": "",
                         "icon": [],
-                        "color": "rgb(undefined, undefined, undefined)",
+                        "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
                         "searchability": "public",
@@ -3128,17 +3128,17 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": false,
-                            "falseIcon": false
+                            "trueIcon": [],
+                            "falseIcon": []
                         }
                     },
                     {
                         "was": "",
-                        "title": "hasVideos",
-                        "label": "Has Videos",
+                        "title": "hasStoryVideos",
+                        "label": "hasStoryVideos",
                         "description": "",
                         "icon": [],
-                        "color": "rgb(undefined, undefined, undefined)",
+                        "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
                         "searchability": "public",
