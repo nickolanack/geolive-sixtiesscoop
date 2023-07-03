@@ -1087,6 +1087,17 @@ button.inline-edit {
 }
 
 .page-content .ui-view.featured-stories, .ui-view.featured-stories{
+    
+    
+    .item-year.empty {
+        display: none;
+    }
+    
+    .item-year {
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+    
     span.pagination-item.next, span.pagination-item.previous {
         position: absolute;
         right: -30px;
