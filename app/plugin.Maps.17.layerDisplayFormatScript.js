@@ -17,7 +17,7 @@ if( isset($feature['data']['storyAttributes']['isBirthStory'])&&
     $hasStoryVideos=$feature['data']['storyAttributes']['hasStoryVideos'];
     
     if(($birthStory==="true"||$birthStory===true)
-        &&($hasStoryVideos$feature==="true"||$hasStoryVideos$feature===true)){
+        &&($hasStoryVideos==="true"||$hasStoryVideos===true)){
         
          error_log(print_r($feature,true));
         
