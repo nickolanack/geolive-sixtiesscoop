@@ -2364,12 +2364,12 @@
             "metadata": {
                 "title": "storyAttributes",
                 "_tableDiagramState": {
-                    "x": 307,
-                    "y": 266
+                    "x": 322,
+                    "y": 275
                 },
                 "_diagramState": {
-                    "x": 307,
-                    "y": 266
+                    "x": 322,
+                    "y": 275
                 },
                 "appliesTo": [
                     "marker"
@@ -2688,8 +2688,8 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": [],
-                            "falseIcon": []
+                            "trueIcon": false,
+                            "falseIcon": false
                         }
                     },
                     {
@@ -2732,8 +2732,8 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": [],
-                            "falseIcon": []
+                            "trueIcon": false,
+                            "falseIcon": false
                         }
                     },
                     {
@@ -2776,8 +2776,8 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": [],
-                            "falseIcon": []
+                            "trueIcon": false,
+                            "falseIcon": false
                         }
                     },
                     {
@@ -2820,8 +2820,8 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": [],
-                            "falseIcon": []
+                            "trueIcon": false,
+                            "falseIcon": false
                         }
                     },
                     {
@@ -3084,14 +3084,58 @@
                             "trueLabel": "",
                             "falseLabel": "",
                             "useFieldIcon": false,
-                            "trueIcon": [],
-                            "falseIcon": []
+                            "trueIcon": false,
+                            "falseIcon": false
                         }
                     },
                     {
                         "was": "",
                         "title": "movesOutOfCountry",
                         "label": "movesOutOfCountry",
+                        "description": "",
+                        "icon": [],
+                        "color": "rgb(undefined, undefined, undefined)",
+                        "visibility": "public",
+                        "editability": "registered",
+                        "searchability": "public",
+                        "allowMultiple": false,
+                        "fieldType": "boolean",
+                        "fieldTextOptions": {
+                            "textType": "input",
+                            "inputOptions": {
+                                "buildAutocomplete": false,
+                                "requireModeration": false,
+                                "limitMaxChars": 0,
+                                "limitMaxWords": 0,
+                                "allowHtml": false,
+                                "allowMedia": true,
+                                "allowLinks": true
+                            },
+                            "listOptions": {
+                                "takeSugesstions": true,
+                                "buildTree": false,
+                                "iconize": false,
+                                "colorize": false
+                            }
+                        },
+                        "fieldNumberOptions": {
+                            "precision": 0,
+                            "limitMinValue": "",
+                            "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": false,
+                            "falseIcon": false
+                        }
+                    },
+                    {
+                        "was": "",
+                        "title": "hasVideos",
+                        "label": "Has Videos",
                         "description": "",
                         "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
