@@ -42,7 +42,7 @@
         "name": "Monolog Plugin",
         "instance": "Monolog",
         "parameters": {
-            "enabled": false,
+            "enabled": true,
             "logPath": "{log}",
             "logToSentry": false
         }
@@ -8016,23 +8016,24 @@
         "name": "Draggable Marker Tile",
         "instance": "MarkerTile",
         "parameters": {
+            "widgetTitle": "",
             "target": "forTheMap",
-            "customScript": "",
-            "controlColor": "rgb(48,84,107)",
+            "position": "RIGHT_CENTER",
+            "hoverTip": "",
+            "className": "",
             "markerIconset": [
                 "https:\/\/nickolanackbucket.s3.us-west-2.amazonaws.com\/sixties-scoop.geoforms.ca\/1\/Uploads\/z4r_juk_%5BImAgE%5D_%5BG%5D_9dy.png"
             ],
             "markerSize": 32,
-            "hoverTip": "",
-            "className": "",
-            "wizardName": "supportGroupForm",
+            "formatTipScript": "",
             "guestLoginDrag": false,
             "onDragEndScript": "widget.MarkerTile.116.onDragEndScript.js",
+            "wizardName": "supportGroupForm",
+            "formOptions": [],
+            "customScript": "",
+            "controlColor": "rgb(48,84,107)",
             "profileIcon": null,
-            "formatTipScript": "",
-            "widgetTitle": "",
-            "readAccess": "registered",
-            "position": "RIGHT_CENTER"
+            "readAccess": "registered"
         }
     },
     "widget.117": {
