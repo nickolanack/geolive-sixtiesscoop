@@ -523,6 +523,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module--text.contentTemplate.html"
         }
@@ -698,6 +699,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "site-error-html.contentTemplate.html",
             "readAccess": "public"
@@ -3816,6 +3818,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-VerifyEmailLink-subject.contentTemplate.html",
             "readAccess": "public"
@@ -3831,6 +3834,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-VerifyEmailLink-content.contentTemplate.html",
             "readAccess": "public"
@@ -5252,6 +5256,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-contact-message-subject.contentTemplate.html",
             "readAccess": "public"
@@ -5267,6 +5272,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-contact-message-content.contentTemplate.html",
             "readAccess": "public"
@@ -5497,6 +5503,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "#**Geoforms.** Story maps",
             "readAccess": "public"
@@ -5512,6 +5519,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-html-install1-text.contentTemplate.html",
             "readAccess": "public"
@@ -5527,6 +5535,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-html-install2-text.contentTemplate.html",
             "readAccess": "public"
@@ -5912,6 +5921,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "module-bannerText-text.contentTemplate.html",
             "readAccess": "public"
@@ -6107,6 +6117,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-featuredText-text.contentTemplate.html",
             "readAccess": "public"
@@ -6197,6 +6208,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-introText-text.contentTemplate.html",
             "readAccess": "public"
@@ -6329,6 +6341,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-siteHeaderText-text.contentTemplate.html",
             "readAccess": "public"
@@ -6344,6 +6357,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "{{name}}",
             "readAccess": "public"
@@ -7166,6 +7180,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "module-gettingStartedText-text.contentTemplate.html",
             "readAccess": "public"
@@ -7181,6 +7196,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "##{{story[0].name}}",
             "readAccess": "public"
@@ -7484,6 +7500,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "#Story Index",
             "readAccess": "public"
@@ -7499,6 +7516,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "#Search\n",
             "readAccess": "public"
@@ -7514,6 +7532,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Refine your search"
         }
@@ -7798,6 +7817,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Profile",
             "readAccess": "public"
@@ -7813,6 +7833,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Intro Story",
             "readAccess": "public"
@@ -7828,6 +7849,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Journey Stories",
             "readAccess": "public"
@@ -7843,6 +7865,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Final Story",
             "readAccess": "public"
@@ -7858,6 +7881,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Contact Form",
             "readAccess": "public"
@@ -8007,6 +8031,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "#Help",
             "readAccess": "public"
@@ -8171,6 +8196,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Add Support Group",
             "readAccess": "public"
@@ -8531,6 +8557,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-MagicLoginLink-subject.contentTemplate.html",
             "readAccess": "public"
@@ -8546,6 +8573,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-MagicLoginLink-content.contentTemplate.html",
             "readAccess": "public"
@@ -8695,6 +8723,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "module-privacyPolicy-html-text.contentTemplate.html",
             "readAccess": "public"
@@ -8844,6 +8873,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "DNA Kit",
             "readAccess": "public"
@@ -8859,6 +8889,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Login",
             "readAccess": "public"
@@ -8874,6 +8905,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "Register",
             "readAccess": "public"
@@ -8889,6 +8921,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "module-gettingStartedTextBottom-text.contentTemplate.html",
             "readAccess": "public"
@@ -8946,6 +8979,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "About the visualizations",
             "readAccess": "public"
@@ -8961,6 +8995,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "About the visualizations",
             "readAccess": "public"
@@ -8976,6 +9011,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": true,
             "contentTemplate": "About the visualizations",
             "readAccess": "public"
@@ -9004,6 +9040,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "readAccess": "public",
             "contentTemplate": "\n\n"
@@ -9166,6 +9203,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module-removalPolicy-html-text.contentTemplate.html",
             "readAccess": "public"
@@ -9273,6 +9311,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": true,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "# Featured Stories",
             "readAccess": "public"
