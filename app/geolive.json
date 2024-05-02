@@ -34,7 +34,7 @@
         "name": "Events",
         "instance": "Events",
         "parameters": {
-            "logEvents": true,
+            "logEvents": false,
             "logPath": "{log}"
         }
     },
