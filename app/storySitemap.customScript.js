@@ -8,7 +8,7 @@
 	 foreach(GetPlugin('MapStory')->listStories() as $story){
 	    
 	        $path=$root.'/story/'.$story['id'];
-	        $date=explode(' ',$story['features'][0][modificationDate])[0];
+	        $date=explode(' ',$story['features'][0]['modificationDate'])[0];
 	        if(empty($date)){
 	            continue;
 	        }
@@ -22,7 +22,7 @@
 	     <?php
 	     
 	     $path=$root.'/map/story/'.$story['id'];
-	        $date=explode(' ',$story['features'][0][modificationDate])[0];
+	        $date=explode(' ',$story['features'][0]['modificationDate'])[0];
 	 
 	     ?>
 	        
