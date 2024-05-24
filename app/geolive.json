@@ -42,7 +42,7 @@
         "name": "Monolog Plugin",
         "instance": "Monolog",
         "parameters": {
-            "enabled": true,
+            "enabled": false,
             "logPath": "{log}",
             "logToSentry": false
         }
