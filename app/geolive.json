@@ -59,7 +59,7 @@
         "name": "Filesystem",
         "instance": "Filesystem",
         "parameters": {
-            "enableFileMetadataCache": false,
+            "enableFileMetadataCache": true,
             "showDropboxImagePicker": false,
             "dropbox-app-key": "",
             "uploadViewInlineCss": "",
